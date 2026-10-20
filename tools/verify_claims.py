@@ -17,10 +17,18 @@ PDFS = {
  "lebena":   (ROOT+"source/1-s2.0-S2352914825000255-main.pdf", 0),
  "jaganathan": (ROOT+"source/1-s2.0-S235264832500025X-main.pdf", 0),
  "hou":      (ROOT+"source/1-s2.0-S0957417424003841-main.pdf", 0),
+ "wei":      (ROOT+"source/1-s2.0-S1532046426001097-main.pdf", 0),
+ "elvas":    (ROOT+"source/1-s2.0-S1386505625002667-main.pdf", 0),
+ "woo":      (ROOT+"source/1-s2.0-S0020748925003323-main.pdf", 0),
+ "kumar":    (ROOT+"source/1-s2.0-S2667305326000724-main.pdf", 0),
+ "luo":      (ROOT+"source/1-s2.0-S0933365724001465-main.pdf", 0),
+ "chen":     (ROOT+"source/1-s2.0-S1532046426000298-main.pdf", 0),
+ "olex":     (ROOT+"source/1-s2.0-S1532046421001131-main.pdf", 0),
+ "jafarpour": (ROOT+"source/1-s2.0-S0933365725002167-main.pdf", 0),
 }
 
 def norm(t):
-    t = t.replace("­", "").replace("ﬁ", "fi").replace("ﬂ", "fl")
+    t = re.sub("­\\s*", "", t).replace("ﬁ", "fi").replace("ﬂ", "fl")
     t = t.replace("’", "'").replace("‘", "'").replace("“", '"').replace("”", '"')
     t = re.sub(r"-\s*\n\s*", "", t)
     t = re.sub(r"\s+", " ", t)

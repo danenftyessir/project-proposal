@@ -15,7 +15,7 @@ OUT = REPO + "/bab2/Proposal-IF4091-Capstone-Utama-2026_Draft-Bab2.docx"
 # Subbab outline (titles after II.1 and II.2 are the agent's proposal; files override placeholders)
 OUTLINE = [
     ("II.1", "Dokumentasi Klinis dan Klaim JKN", REPO + "/bab2/II.1_Dokumentasi_Klinis_dan_Klaim_JKN.md"),
-    ("II.2", "NLP dan LLM pada Teks Klinis", None),
+    ("II.2", "NLP dan LLM pada Teks Klinis", REPO + "/bab2/II.2_NLP_dan_LLM_pada_Teks_Klinis.md"),
     ("II.3", "Audit Otomatis Dokumentasi Klinis dan Kode Diagnosis", REPO + "/bab2/II.3_Audit_Otomatis_Dokumentasi_dan_Kode_Diagnosis.md"),
 ]
 

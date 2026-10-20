@@ -34,7 +34,7 @@
  {"id":"U1","src":"du","p":3,"q":"48,492 patient records from 7,000 unique patients"},
  {"id":"U2","src":"du","p":3,"q":"using OCR for PDF sources"},
  {"id":"U3","src":"du","p":8,"q":"emerged as the topperforming model"},
- {"id":"U3b","src":"du","p":8,"q":"sum-F1-score of 0.7417"},
+ {"id":"U3b","src":"du","p":8,"q":"sum-F1: 0.7417"},
  {"id":"U4","src":"du","p":8,"q":"sum-F1-score of only 0.3785"},
  {"id":"U5a","src":"du","p":7,"q":"Low-risk cases (36.99%)"},
  {"id":"U5b","src":"du","p":7,"q":"Medium-risk cases (45.9%)"},
