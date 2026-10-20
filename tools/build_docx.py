@@ -13,10 +13,16 @@ S = tempfile.mkdtemp(prefix="bab2_build_")
 SK = os.environ.get("DOCX_SKILL_DIR", "/root/.claude/skills/synced/017185de-19fa-4709-a10a-3db50e5d500d_a2aeaf02-31ea-42d9-a648-645d5f31836f/docx")
 REPO = "/home/user/project-proposal"
 TEMPLATE = REPO + "/template/Template-Proposal-IF4091-Capstone-Individu-2026.docx"
-OUT = REPO + "/bab2/Proposal-IF4091-Capstone-Individu-2026_Draft-Bab2.docx"
+# MODE=editorial keeps every working marker (highlighted [SESUAIKAN ...] / [PERLU VERIFIKASI ...], editorial-only
+# sentences, the citation-format note); MODE=clean ("siap kumpul") drops all of them.
+# Markdown syntax: {{text}} = editorial-only text; {{editorial||clean}} = different text per version.
+MODE = os.environ.get("MODE", "editorial")
+assert MODE in ("editorial", "clean"), MODE
+OUT = REPO + "/bab2/Proposal-IF4091-Capstone-Individu-2026_Draft-Bab2_" + ("Editorial" if MODE == "editorial" else "SiapKumpul") + ".docx"
 OPEN = REPO + "/bab2/Pembuka_Bab_II.md"   # replaces the template guidance text at the start of Bab II; set to None to keep it
 
 # Identity (given by the user in chat; do not invent other names, dates, supervisors or teammates)
+BULAN_TAHUN = ("Oktober", "2026")   # cover date, as typed by the user in Word on main
 NAMA = "Danendra Shafi Athallah"
 NIM = "13523136"
 JUDUL_CAPSTONE = "Perancangan Antarmuka User-Centered untuk Sistem Pemeriksaan Resume Medis dalam Mendukung Kesiapan Klaim BPJS"
@@ -47,6 +53,15 @@ subprocess.run(["find", work, "-type", "l", "-delete"], check=True)
 subprocess.run(["python3", SK + "/scripts/merge_runs.py", work + "/"], check=True, capture_output=True)
 doc_path = work + "/word/document.xml"
 x = open(doc_path, encoding="utf8").read()
+
+def apply_mode(text):
+    def pick(m):
+        ed, _, cl = m.group(1).partition("||")
+        return ed if MODE == "editorial" else cl
+    text = re.sub(r"\{\{(.*?)\}\}", pick, text, flags=re.S)
+    if MODE == "clean":
+        text = re.sub(r"\s*\[(?:SESUAIKAN|PERLU VERIFIKASI|DATA BELUM)[^\]]*\]", "", text)
+    return text
 
 esc = lambda s: html.escape(s, quote=False)
 
@@ -133,8 +148,8 @@ for num, title, path in OUTLINE:
         new_bab2 += [heading(2, title), placeholder("[SUBBAB BELUM DITULIS. Judul ini usulan dan belum dikonfirmasi.]")]
         status.append((num, "placeholder")); continue
     md = open(path, encoding="utf8").read()
-    naskah = md.split("## Naskah")[1].split("## Daftar Pustaka")[0]
-    pustaka = md.split("## Daftar Pustaka (sementara)")[1].split("## Lampiran kerja")[0]
+    naskah = apply_mode(md.split("## Naskah")[1].split("## Daftar Pustaka")[0])
+    pustaka = apply_mode(md.split("## Daftar Pustaka (sementara)")[1].split("## Lampiran kerja")[0])
     nb = 0
     for chunk in re.split(r"\n\s*\n", naskah.strip()):
         chunk = chunk.strip()
@@ -163,14 +178,14 @@ if OPEN and os.path.exists(OPEN):
     g = x.index("Bab Kajian Pustaka digunakan", kp)
     intro_start = x.rfind("<w:p ", 0, g)
     assert intro_start < start
-    om = open(OPEN, encoding="utf8").read().split("## Naskah")[1]
+    om = apply_mode(open(OPEN, encoding="utf8").read().split("## Naskah")[1])
     open_xml = "".join(body_p(" ".join(c.split("\n"))) for c in re.split(r"\n\s*\n", om.strip()) if c.strip() and c.strip() != "---")
 x = x[:intro_start] + open_xml + "".join(new_bab2) + x[tail_end:]
 
 # replace example references
 b = x.index("Balabanovic"); rs = x.rfind("<w:p ", 0, b)
 pz = x.index("Pazzani"); re_ = x.index("</w:p>", pz) + len("</w:p>")
-note = placeholder("[Format sitasi sementara (penulis-tahun). Menunggu pedoman program studi. Hapus catatan ini setelah format ditetapkan.]")
+note = placeholder("[Format sitasi sementara (penulis-tahun). Menunggu pedoman program studi. Hapus catatan ini setelah format ditetapkan.]") if MODE == "editorial" else ""
 x = x[:rs] + note + "".join(ref_p(r) for r in refs) + x[re_:]
 
 # ---------- identity pages (cover, two approval pages, identity sheet) ----------
@@ -203,6 +218,8 @@ for pid in ("62456833", "09CBFD9C", "5C7E98D9"):                  # capstone tit
     x = rebuild_para(x, pid, no_color, title_runs(JUDUL_CAPSTONE))
 assert x.count("&lt;NAMA MAHASISWA&gt;") == 3 and x.count("&lt;NIM MAHASISWA&gt;") == 3
 x = x.replace("&lt;NAMA MAHASISWA&gt;", esc(NAMA)).replace("&lt;NIM MAHASISWA&gt;", esc(NIM))
+assert x.count("&lt;Bulan&gt;") == 1 and x.count("&lt;Tahun&gt;") == 1
+x = x.replace("&lt;Bulan&gt;", esc(BULAN_TAHUN[0])).replace("&lt;Tahun&gt;", esc(BULAN_TAHUN[1]))
 
 judul_runs = runs(JUDUL_CAPSTONE.replace("User-Centered", "*User-Centered*"))
 x = rebuild_para(x, "5EDC73B6", lambda ppr: '<w:pPr><w:tabs><w:tab w:val="left" w:pos="1800"/><w:tab w:val="left" w:pos="2000"/></w:tabs>'
@@ -282,7 +299,7 @@ open(doc_path, "w", encoding="utf8").write(x)
 
 cp = work + "/docProps/core.xml"
 c = open(cp, encoding="utf8").read()
-c = c.replace("<dc:title>DRAFT BUKU LAPORAN</dc:title>", "<dc:title>%s</dc:title>" % esc(JUDUL_INDIVIDU)).replace("<dc:creator>Shaggy</dc:creator>", "<dc:creator>%s</dc:creator>" % esc(NAMA))
+c = c.replace("<dc:title>DRAFT BUKU LAPORAN</dc:title>", "<dc:title>%s</dc:title>" % esc(JUDUL_INDIVIDU + (" (versi editorial)" if MODE == "editorial" else ""))).replace("<dc:creator>Shaggy</dc:creator>", "<dc:creator>%s</dc:creator>" % esc(NAMA))
 open(cp, "w", encoding="utf8").write(c)
 
 sp = work + "/word/settings.xml"

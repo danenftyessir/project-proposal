@@ -43,6 +43,9 @@ PDFS = {
  "barsasella": (ROOT+"source/1-s2.0-S1386505621001957-main.pdf", 0),
  "schwieger": (ROOT+"source/1-s2.0-S1386505624003174-main.pdf", 0),
  "mehri":    (ROOT+"source/1-s2.0-S2352396426001295-main.pdf", 0),
+ "kgace":    (ROOT+"source/1-s2.0-S0306457326004619-main.pdf", 0),
+ "syeda":    (ROOT+"source/1-s2.0-S0950705126013274-main.pdf", 0),
+ "ctkgr":    (ROOT+"source/1-s2.0-S1532046426000316-main.pdf", 0),
 }
 
 def norm(t):
