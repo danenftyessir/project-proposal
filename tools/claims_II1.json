@@ -160,5 +160,77 @@
   "src": "simbolon",
   "p": 77,
   "q": "koding yang tidak sesuai, kelengkapan"
+ },
+ {
+  "id": "BA1",
+  "src": "barsasella",
+  "p": 1,
+  "q": "insurance claims data of 4376 patients with T2DM or HTN"
+ },
+ {
+  "id": "BA2",
+  "src": "barsasella",
+  "p": 1,
+  "q": "tertiary referral hospital in Tasikmalaya, Indonesia, between 2016 and 2019"
+ },
+ {
+  "id": "BA3",
+  "src": "barsasella",
+  "p": 1,
+  "q": "to predict inpatient mortality"
+ },
+ {
+  "id": "BA4",
+  "src": "barsasella",
+  "p": 1,
+  "q": "machine-learning algorithms for LoS prediction"
+ },
+ {
+  "id": "BA5",
+  "src": "barsasella",
+  "p": 2,
+  "q": "regional public hospital"
+ },
+ {
+  "id": "BA6",
+  "src": "barsasella",
+  "p": 2,
+  "q": "diagnosis codes or the International Classification of Diseases, Tenth Revision, Clinical Modification"
+ },
+ {
+  "id": "BA7",
+  "src": "barsasella",
+  "p": 2,
+  "q": "INA-CBGs code (containing the code for the primary diagnosis)"
+ },
+ {
+  "id": "BA8",
+  "src": "barsasella",
+  "p": 2,
+  "q": "severity level, discharge status"
+ },
+ {
+  "id": "BA9",
+  "src": "barsasella",
+  "p": 2,
+  "q": "midwifery inpatient, or neonatal"
+ },
+ {
+  "id": "BA10",
+  "src": "barsasella",
+  "p": 1,
+  "q": "A Random forest best predicted inpatient LoS"
+ },
+ {
+  "id": "BA11",
+  "src": "barsasella",
+  "p": 1,
+  "q": "Linear regression model best predicted LoS"
+ },
+ {
+  "id": "BA12",
+  "src": "barsasella",
+  "p": 9,
+  "q": "the linear regression model best predicted inpatient LoS"
  }
 ]

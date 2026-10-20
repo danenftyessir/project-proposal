@@ -40,6 +40,9 @@ PDFS = {
  "tchouka":  (ROOT+"source/1-s2.0-S2667305324000905-main.pdf", 0),
  "becker":   (ROOT+"source/1-s2.0-S1386505625002266-main.pdf", 0),
  "koevorden": (ROOT+"source/1-s2.0-S2949820126000378-main.pdf", 0),
+ "barsasella": (ROOT+"source/1-s2.0-S1386505621001957-main.pdf", 0),
+ "schwieger": (ROOT+"source/1-s2.0-S1386505624003174-main.pdf", 0),
+ "mehri":    (ROOT+"source/1-s2.0-S2352396426001295-main.pdf", 0),
 }
 
 def norm(t):
