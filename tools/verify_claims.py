@@ -35,6 +35,9 @@ PDFS = {
  "zeba":     (ROOT+"source/1-s2.0-S0957417426018786-main.pdf", 0),
  "sun":      (ROOT+"source/1-s2.0-S1532046425000954-main.pdf", 0),
  "waqas":    (ROOT+"source/1-s2.0-S2949719126000361-main.pdf", 0),
+ "faustini": (ROOT+"source/1-s2.0-S1386505625004423-main.pdf", 0),
+ "azzam":    (ROOT+"source/1-s2.0-S0950705126007604-main.pdf", 0),
+ "tchouka":  (ROOT+"source/1-s2.0-S2667305324000905-main.pdf", 0),
 }
 
 def norm(t):

@@ -19,6 +19,7 @@ OUTLINE = [
     ("II.3", "Audit Otomatis Dokumentasi Klinis dan Kode Diagnosis", REPO + "/bab2/II.3_Audit_Otomatis_Dokumentasi_dan_Kode_Diagnosis.md"),
     ("II.4", "Pendekatan Hibrida Berbasis Aturan dan AI/NLP", REPO + "/bab2/II.4_Pendekatan_Hibrida_Berbasis_Aturan_dan_AI-NLP.md"),
     ("II.5", "RAG, Penjangkaran Bukti, dan Halusinasi", REPO + "/bab2/II.5_RAG_Penjangkaran_Bukti_dan_Halusinasi.md"),
+    ("II.6", "De-identifikasi untuk Layanan AI Eksternal", REPO + "/bab2/II.6_Deidentifikasi_untuk_Layanan_AI_Eksternal.md"),
 ]
 
 work = S + "/work"
