@@ -38,6 +38,8 @@ PDFS = {
  "faustini": (ROOT+"source/1-s2.0-S1386505625004423-main.pdf", 0),
  "azzam":    (ROOT+"source/1-s2.0-S0950705126007604-main.pdf", 0),
  "tchouka":  (ROOT+"source/1-s2.0-S2667305324000905-main.pdf", 0),
+ "becker":   (ROOT+"source/1-s2.0-S1386505625002266-main.pdf", 0),
+ "koevorden": (ROOT+"source/1-s2.0-S2949820126000378-main.pdf", 0),
 }
 
 def norm(t):

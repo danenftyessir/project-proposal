@@ -20,6 +20,8 @@ OUTLINE = [
     ("II.4", "Pendekatan Hibrida Berbasis Aturan dan AI/NLP", REPO + "/bab2/II.4_Pendekatan_Hibrida_Berbasis_Aturan_dan_AI-NLP.md"),
     ("II.5", "RAG, Penjangkaran Bukti, dan Halusinasi", REPO + "/bab2/II.5_RAG_Penjangkaran_Bukti_dan_Halusinasi.md"),
     ("II.6", "De-identifikasi untuk Layanan AI Eksternal", REPO + "/bab2/II.6_Deidentifikasi_untuk_Layanan_AI_Eksternal.md"),
+    ("II.7", "Evaluasi Sistem NLP Klinis", REPO + "/bab2/II.7_Evaluasi_Sistem_NLP_Klinis.md"),
+    ("II.8", "Perbandingan Karya Terdahulu dan Celah Penelitian", REPO + "/bab2/II.8_Perbandingan_Karya_Terdahulu_dan_Celah_Penelitian.md"),
 ]
 
 work = S + "/work"
@@ -56,6 +58,38 @@ def ref_p(text):
     return ('<w:p><w:pPr><w:spacing w:line="240" w:lineRule="auto"/><w:ind w:left="720" w:hanging="720"/>'
             '<w:rPr><w:noProof/><w:lang w:val="id-ID" w:eastAsia="en-US"/></w:rPr></w:pPr>' + runs(text, noproof=True) + "</w:p>")
 
+
+def cell_runs(text, bold=False):
+    out = []
+    for part in TOK.split(text):
+        if not part: continue
+        it = part.startswith("*") and part.endswith("*") and len(part) > 2
+        t = part[1:-1] if it else part
+        rpr = "<w:rPr>" + ("<w:b/>" if bold else "") + ("<w:i/>" if it else "") + "<w:sz w:val=\"20\"/><w:szCs w:val=\"20\"/><w:lang w:val=\"id-ID\"/></w:rPr>"
+        out.append(f'<w:r>{rpr}<w:t xml:space="preserve">{esc(t)}</w:t></w:r>')
+    return "".join(out)
+
+def caption_p(text):
+    return ('<w:p><w:pPr><w:pStyle w:val="Caption"/><w:keepNext/><w:spacing w:before="120" w:after="80"/><w:ind w:left="0" w:firstLine="0"/><w:jc w:val="left"/></w:pPr>'
+            '<w:r><w:rPr><w:b/><w:lang w:val="id-ID"/></w:rPr><w:t xml:space="preserve">' + esc(text) + '</w:t></w:r></w:p>')
+
+def table_xml(lines, widths=(1750, 2300, 2150, 2106)):
+    rows = [[c.strip() for c in ln.strip().strip("|").split("|")] for ln in lines if not re.match(r"^\s*\|[\s:|-]+\|\s*$", ln)]
+    grid = "".join(f'<w:gridCol w:w="{w}"/>' for w in widths)
+    tbl = ('<w:tbl><w:tblPr><w:tblStyle w:val="TableGrid"/><w:tblW w:w="%d" w:type="dxa"/><w:jc w:val="center"/><w:tblLayout w:type="fixed"/>'
+           '<w:tblCellMar><w:left w:w="70" w:type="dxa"/><w:right w:w="70" w:type="dxa"/></w:tblCellMar>'
+           '<w:tblLook w:val="04A0" w:firstRow="1" w:lastRow="0" w:firstColumn="1" w:lastColumn="0" w:noHBand="0" w:noVBand="1"/></w:tblPr><w:tblGrid>%s</w:tblGrid>') % (sum(widths), grid)
+    for i, r in enumerate(rows):
+        hdr = i == 0
+        tbl += "<w:tr><w:trPr><w:cantSplit/>" + ("<w:tblHeader/>" if hdr else "") + "</w:trPr>"
+        for w, c in zip(widths, r):
+            shade = '<w:shd w:val="clear" w:color="auto" w:fill="D9D9D9"/>' if hdr else ""
+            tbl += (f'<w:tc><w:tcPr><w:tcW w:w="{w}" w:type="dxa"/>{shade}</w:tcPr>'
+                    '<w:p><w:pPr><w:spacing w:before="20" w:after="20" w:line="240" w:lineRule="auto"/><w:jc w:val="left"/></w:pPr>'
+                    + cell_runs(c, bold=hdr) + "</w:p></w:tc>")
+        tbl += "</w:tr>"
+    return tbl + "</w:tbl>" + '<w:p><w:pPr><w:spacing w:before="0" w:after="0" w:line="120" w:lineRule="exact"/></w:pPr></w:p>'
+
 strip_num = lambda s: re.sub(r"^II\.\d+(\.\d+)?\s+", "", s)
 new_bab2, refs, status = [], [], []
 for num, title, path in OUTLINE:
@@ -69,7 +103,9 @@ for num, title, path in OUTLINE:
     for chunk in re.split(r"\n\s*\n", naskah.strip()):
         chunk = chunk.strip()
         if not chunk or chunk == "---": continue
-        if chunk.startswith("### "): new_bab2.append(heading(3, strip_num(chunk[4:])))
+        if chunk.startswith("|"): new_bab2.append(table_xml(chunk.split("\n")))
+        elif chunk.startswith("Tabel II."): new_bab2.append(caption_p(chunk))
+        elif chunk.startswith("### "): new_bab2.append(heading(3, strip_num(chunk[4:])))
         elif chunk.startswith("## "): new_bab2.append(heading(2, strip_num(chunk[3:])))
         else: new_bab2.append(body_p(" ".join(chunk.split("\n")))); nb += 1
     for line in pustaka.split("\n"):

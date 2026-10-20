@@ -1,6 +1,6 @@
 # CONTEXT TRANSFER
 
-> Berkas ini diperbarui di akhir setiap chat yang mengubah keputusan, progres, atau daftar referensi (instruksi pengguna). Pembaruan terakhir: sesi 1, 20 Oktober 2026 (draf II.3, II.1, II.2, II.4, II.5, dan II.6, semuanya dimasukkan ke `.docx` Utama). Letakkan isi berkas ini sebagai konteks awal chat berikutnya, bersama `CLAUDE.md` dan `RULES.md`.
+> Berkas ini diperbarui di akhir setiap chat yang mengubah keputusan, progres, atau daftar referensi (instruksi pengguna). Pembaruan terakhir: sesi 1, 20 Oktober 2026 (draf II.1–II.8 selesai semua, dimasukkan ke `.docx` Utama). Letakkan isi berkas ini sebagai konteks awal chat berikutnya, bersama `CLAUDE.md` dan `RULES.md`.
 
 ## 1. PROJECT / CONVERSATION OVERVIEW
 
@@ -57,8 +57,8 @@ Tenggat: slide "Tanggal-Tanggal Penting" (halaman 17 berkas `7_IF4091_PenulisanS
    - II.4 Pendekatan hibrida berbasis aturan dan AI/NLP (2)  ← **ditulis (II.4.1 Kekuatan dan Batas Sistem Berbasis Aturan; II.4.2 Pola Hibrida dan Bukti yang Tersedia; II.4.3 Sintesis dan Celah)**
    - II.5 RAG, penjangkaran bukti, halusinasi (4)  ← **ditulis, hanya ± 2,6 halaman (II.5.1 RAG pada Teks Klinis; II.5.2 Penjangkaran Bukti dan Pengecekan Keluaran; II.5.3 Sintesis dan Celah)**
    - II.6 De-identifikasi untuk layanan AI eksternal (1,5)  ← **ditulis, ± 1,72 halaman (II.6.1 Pendekatan De-identifikasi dan Bukti yang Tersedia; II.6.2 Sintesis dan Celah)**
-   - II.7 Evaluasi sistem NLP klinis (1,5)
-   - II.8 Tabel perbandingan karya terdahulu dan celah penelitian (2) — dikerjakan terakhir
+   - II.7 Evaluasi sistem NLP klinis (1,5)  ← **ditulis, ± 1,50 halaman (II.7.1 Acuan Penilaian dan Variabilitas Penilai; II.7.2 Sintesis dan Celah)**
+   - II.8 Tabel perbandingan karya terdahulu dan celah penelitian (2)  ← **ditulis, ± 1,58 halaman (II.8.1 Perbandingan Karya Terdahulu, Tabel II.1 sepuluh baris; II.8.2 Celah Penelitian)**
    Literatur *alert fatigue* dan *knowledge graph* sengaja dikeluarkan (lebih dekat ke antarmuka Abizzar atau eksploratif); dapat dibalik oleh pengguna. Penomoran heading memakai angka Romawi mengikuti templat (pengguna menulis "2.1" secara kasual). Judul II.1–II.3 sudah terisi di `.docx`; judulnya usulan dan belum dikonfirmasi.
 5. **Posisi sumber di II.3**: Lebeña dkk. (2025) hanya diberi porsi kecil dan disebut apa adanya (prediksi diagnosis berikutnya, bukan audit), karena klaim relevansi di `Sumber Literatur Bab 2.pdf` ("paling dekat dengan skenario CPPT→kode") tidak terdukung isi artikel.
 6. **Alur kerja (instruksi pengguna, chat 1 lanjutan): tulis dulu di Markdown, naskah final di `.docx` templat Utama.** Naskah ada di `bab2/*.md`; tabel verifikasi dan catatan peringatan dipisah di "Lampiran kerja" dan tidak ikut dihitung dalam 19 halaman. `.docx` dibangun otomatis dari Markdown ke salinan templat Utama di repo (gaya Heading 2/3, Normal, daftar pustaka, penomoran otomatis), disimpan sebagai berkas baru **tanpa menimpa templat**: `bab2/Proposal-IF4091-Capstone-Utama-2026_Draft-Bab2.docx`. Pengguna menyalin/menimpa ke berkas OneDrive-nya sendiri.
@@ -74,6 +74,8 @@ Tenggat: slide "Tanggal-Tanggal Penting" (halaman 17 berkas `7_IF4091_PenulisanS
 
 13. **Pengguna menjawab "lanjut" lagi tanpa memilih opsi anggaran.** Agent melanjutkan ke II.6 (urut). **Sumber II.6:** Faustini dkk. 2026, Azzam dkk. 2026, Tchouka dkk. 2024 (semuanya dari `source/`, dibaca terarah dari PDF). Tidak ada sumber dari `external/`.
 
+14. **Pengguna menjawab "lanjutkan" lagi tanpa memilih opsi anggaran.** Agent menulis II.7 (Becker dkk. 2025, van Koevorden dkk. 2026; rujukan silang Sun dkk. 2025) dan II.8 (dirangkum dari II.1–II.7, tanpa klaim baru dari PDF). `tools/build_docx.py` kini mendukung tabel Markdown dan keterangan "Tabel II.x." (huruf 10 pt, spasi tunggal, baris judul berulang; keterangan diketik manual, bukan bidang SEQ). Singh dkk. (JMIR 2025) tidak ada di repo.
+
 ## 6. PROGRESS STATUS
 
 ### Completed
@@ -85,12 +87,13 @@ Tenggat: slide "Tanggal-Tanggal Penting" (halaman 17 berkas `7_IF4091_PenulisanS
 - **Draf 1 subbab II.4 Pendekatan Hibrida Berbasis Aturan dan AI/NLP** (676 kata isi naskah; **terukur ± 2,18 halaman**, alokasi 2) ditulis dari dua PDF baru (Domingues; Ijadi Maghsoodi dkk.) ditambah dua bagian dari Kumar dan Chen; 35 klaim/halaman dicek otomatis (semua cocok; satu klaim Domingues melintasi halaman 3 dan 5 karena halaman 4 hanya gambar). Ketiga berkas klaim sebelumnya tetap lolos (27/27, 57/57, 83/83). `.docx` dibangun ulang dengan II.1–II.4 (21 entri pustaka), lolos validasi, render 30 halaman. **Bab II kini ± 11,5 halaman** (halaman 13–24 render) termasuk teks panduan templat ± 0,45 halaman.
 - **Draf 1 subbab II.5 RAG, Penjangkaran Bukti, dan Halusinasi** (867 kata isi naskah; **terukur ± 2,61 halaman**, alokasi 4) ditulis dari delapan PDF; 64 klaim/halaman dicek otomatis (semua cocok). Semua lima berkas klaim lolos penuh (27/27, 57/57, 83/83, 35/35, 64/64). `.docx` dibangun ulang dengan II.1–II.5 (29 entri pustaka), lolos validasi, render 34 halaman. **Bab II kini ± 14,1 halaman** (termasuk teks panduan templat ± 0,45 halaman); sisa ± 4,9 halaman untuk II.6–II.8 (alokasi 1,5 + 1,5 + 2).
 - **Draf 1 subbab II.6 De-identifikasi untuk Layanan AI Eksternal** (564 kata isi naskah; **terukur ± 1,72 halaman**, alokasi 1,5) ditulis dari tiga PDF; 37 klaim/halaman dicek otomatis (semua cocok). Enam berkas klaim lolos penuh (27, 57, 83, 35, 64, 37). `.docx` dibangun ulang dengan II.1–II.6 (32 entri pustaka), lolos validasi, render 35 halaman. **Bab II kini ± 15,9 halaman**; sisa ± 3,1 halaman untuk II.7 (1,5) dan II.8 (2,0) = 3,5, jadi kurang ± 0,4 halaman.
+- **Draf 1 subbab II.7 Evaluasi Sistem NLP Klinis** (492 kata; ± 1,50 halaman, alokasi 1,5; 33 klaim cocok) dan **II.8 Perbandingan Karya Terdahulu dan Celah Penelitian** (± 1,58 halaman, alokasi 2; tidak ada klaim baru; pemetaan ke subbab asal pada Lampiran A). Tujuh berkas klaim lolos penuh (27, 57, 83, 35, 64, 37, 33). `.docx` dibangun ulang dengan II.1–II.8 (34 entri pustaka), lolos validasi, render 39 halaman. **Seluruh draf 1 Bab II selesai: ± 19,03 halaman pada render LibreOffice** (termasuk teks panduan templat ± 0,45; halaman terakhir hanya tiga baris), tepat di batas 19 halaman.
 
 ### In Progress
-- Tidak ada. II.1–II.6 menunggu tinjauan pengguna.
+- Tidak ada. II.1–II.8 menunggu tinjauan pengguna.
 
 ### Not Started
-- II.7, II.8; paragraf pembuka Bab II (tujuan bab menurut templat); penyatuan daftar pustaka Bab II (sementara 32 entri hasil gabungan II.1–II.6); pemformatan akhir di Word (daftar isi, halaman).
+- Paragraf pembuka Bab II (pengganti teks panduan templat, belum ditulis; menunggu keputusan pengguna); pemangkasan agar ada ruang cadangan di bawah 19 halaman; pembaruan daftar isi, daftar gambar, dan daftar tabel di Word (keterangan Tabel II.1 manual); daftar pustaka gabungan sudah ada di `.docx` (34 entri, format akhir menunggu prodi); pengukuran halaman di Word.
 
 ### Blocked
 - Subbab yang membutuhkan PDF yang belum ada (lihat bagian 12).
@@ -115,15 +118,17 @@ Berkas di repo (semua di root kecuali dicatat):
 - `[REVISI] Breakdown Proposal (2).pdf` — rancangan TA (bukan proposal formal): RQ1–RQ4, ruang lingkup, rule-based vs AI/NLP, alur RAG, data/evaluasi, tim, pijakan literatur awal (bagian 15), daftar hal yang perlu dikonfirmasi (bagian 17–18).
 - `Sumber Literatur Bab 2.pdf` — daftar awal ± 60 sumber (hasil penelusuran ScienceDirect), 9 tema + kerangka 7 kelompok; belum diverifikasi penuh. Tanda "bold merah" pada daftar tidak terbawa ke PDF.
 - `Template-Proposal-IF4091-Capstone-Utama-2026.docx` (root repo; salinan identik `... - Copy.docx`) — **templat yang dipakai untuk naskah final**. `template/Template-Proposal-IF4091-Capstone-Individu-2026.docx` — templat individu (struktur Bab III–IV berbeda); tidak dipakai.
-- **`bab2/Proposal-IF4091-Capstone-Utama-2026_Draft-Bab2.docx`** — templat Utama berisi II.1–II.6, daftar pustaka Bab II (32 entri); bagian lain templat tidak diubah kecuali dua paragraf pemisah halaman ganda di akhir Bab II yang dihapus (menyebabkan halaman kosong) dan contoh gambar/tabel/pustaka yang diganti. Lolos validasi skema; render 35 halaman. **Daftar isi, daftar gambar, dan daftar tabel masih berisi hasil lama** sampai diperbarui di Word (berkas diatur agar Word menawarkan pembaruan saat dibuka; atau Ctrl+A lalu F9).
+- **`bab2/Proposal-IF4091-Capstone-Utama-2026_Draft-Bab2.docx`** — templat Utama berisi II.1–II.8, daftar pustaka Bab II (34 entri); bagian lain templat tidak diubah kecuali dua paragraf pemisah halaman ganda di akhir Bab II yang dihapus (menyebabkan halaman kosong) dan contoh gambar/tabel/pustaka yang diganti. Lolos validasi skema; render 39 halaman. **Daftar isi, daftar gambar, dan daftar tabel masih berisi hasil lama** sampai diperbarui di Word (berkas diatur agar Word menawarkan pembaruan saat dibuka; atau Ctrl+A lalu F9).
 - `7_IF4091_PenulisanStudiLiteratur_2026_Okt.pdf`, `3_IF4091_Informasi Umum TA_2026 Sept.pdf`, `9_IF4091_ProposalTA_Bab1_2026_Okt.pdf`, `5_...EfficientReading...`, `12_...Bahasa Indonesia...`, `1_...Pengantar Kuliah...` — materi kuliah.
 - **`bab2/II.1_Dokumentasi_Klinis_dan_Klaim_JKN.md`** — draf 1 II.1 (naskah, daftar pustaka sementara, Lampiran A tabel verifikasi, B matriks catatan literatur, C catatan peringatan).
 - **`bab2/II.2_NLP_dan_LLM_pada_Teks_Klinis.md`** — draf 1 II.2 (naskah, daftar pustaka sementara 8 entri, Lampiran A tabel verifikasi, B matriks catatan literatur, C 16 catatan peringatan).
+- **`bab2/II.8_Perbandingan_Karya_Terdahulu_dan_Celah_Penelitian.md`** — draf 1 II.8 (tabel 10 baris + celah; Lampiran A pemetaan ke subbab asal, C 5 catatan).
+- **`bab2/II.7_Evaluasi_Sistem_NLP_Klinis.md`** — draf 1 II.7 (naskah, daftar pustaka 2 entri baru, Lampiran A–C 8 catatan).
 - **`bab2/II.6_Deidentifikasi_untuk_Layanan_AI_Eksternal.md`** — draf 1 II.6 (naskah, daftar pustaka sementara 3 entri, Lampiran A tabel verifikasi, B matriks, C 8 catatan peringatan).
 - **`bab2/II.5_RAG_Penjangkaran_Bukti_dan_Halusinasi.md`** — draf 1 II.5 (naskah, daftar pustaka sementara 8 entri, Lampiran A tabel verifikasi, B matriks, C 12 catatan peringatan).
 - **`bab2/II.4_Pendekatan_Hibrida_Berbasis_Aturan_dan_AI-NLP.md`** — draf 1 II.4 (naskah, daftar pustaka sementara 2 entri baru, Lampiran A tabel verifikasi, B matriks, C 10 catatan peringatan).
 - **`bab2/II.3_Audit_Otomatis_Dokumentasi_dan_Kode_Diagnosis.md`** — draf 1 II.3 (naskah + daftar pustaka sementara + Lampiran A tabel verifikasi klaim, B matriks catatan literatur untuk II.8, C catatan peringatan).
-- `tools/` — `build_docx.py` (Markdown subbab → `.docx` templat Utama), `verify_claims.py` + `claims_II1.json`/`claims_II2.json`/`claims_II3.json`/`claims_II4.json`/`claims_II5.json`/`claims_II6.json` (cek frasa kutipan ke halaman PDF; kamus PDFS kini memuat 32 sumber). Setelah perbaikan `norm()` dan frasa U3b, berkas lolos penuh (27/27, 57/57, 83/83, 35/35, 64/64, 37/37); catatan lama tentang empat entri FAIL di `claims_II3.json` tidak berlaku lagi bila dijalankan ulang (nama yang dulu dicek manual: S2, U3b, U14, M2).
+- `tools/` — `build_docx.py` (Markdown subbab → `.docx` templat Utama), `verify_claims.py` + `claims_II1.json`/`claims_II2.json`/`claims_II3.json`/`claims_II4.json`/`claims_II5.json`/`claims_II6.json`/`claims_II7.json` (cek frasa kutipan ke halaman PDF; kamus PDFS kini memuat 34 sumber); `build_docx.py` kini mendukung tabel dan keterangan tabel. Setelah perbaikan `norm()` dan frasa U3b, berkas lolos penuh (27/27, 57/57, 83/83, 35/35, 64/64, 37/37, 33/33); catatan lama tentang empat entri FAIL di `claims_II3.json` tidak berlaku lagi bila dijalankan ulang (nama yang dulu dicek manual: S2, U3b, U14, M2).
 - `CONTEXT_TRANSFER.md` — berkas ini.
 
 Peta 46 PDF `source/` (`1-s2.0-<ID>-main.pdf`; judul dan tim dari metadata PDF, **tahun dari daftar kecuali tujuh artikel II.3 yang sudah diperiksa**):
@@ -163,6 +168,10 @@ Angka kunci tujuh sumber II.3 (semua sudah dicek ke halaman; rincian di Lampiran
 - Lebeña dkk. 2025: P@5 72,34%; P@20 77,49%; hingga 2% lebih baik daripada model terpisah; 46% muat 512 token; >95% tanpa pemotongan pada 1.024 token.
 - Jaganathan dkk. 2025: 3.372 catatan uji; kegagalan 70–81%; akronim 20 teratas 80,7%; hapus istilah gender 55,7%.
 DOI ketujuh artikel ada di Lampiran C berkas II.3.
+
+Angka kunci sumber II.7 (semua sudah dicek ke halaman; rincian di Lampiran A berkas II.7; bahasa Indonesia tidak muncul pada kedua PDF):
+- Becker dkk. 2025: CARDIO:DE 500 surat dokter Jerman; dua anotator; ambang alpha unitizing 0,85; IAA hingga 0,98; tujuh bulan; TinyLlama F1 makro 0,845 (hlm. 1–4).
+- van Koevorden dkk. 2026: 60 pasien, 1.482 halaman, 29 kategori, 2.555 nilai, enam penilai; akurasi 74–90%; disagreement dokter–dokter 29,0% dan LLM–konsensus 41,4% (pemetaan awal); 65 → 4 halusinasi terkonfirmasi; satu penilai menandai 61 dari 68 galat berdampak tinggi (hlm. 1, 4–8).
 
 Angka kunci sumber II.6 (semua sudah dicek ke halaman; rincian di Lampiran A berkas II.6; bahasa Indonesia tidak muncul pada ketiga PDF):
 - Faustini dkk. 2026: 83 dari 734 artikel (2015–2024); mayoritas bahasa Inggris; campur kode dan kelangkaan dataset; Presidio kesulitan nama Asia Tenggara dan F1 LLM 0,33 vs 0,98 adalah laporan studi lain (hlm. 1, 5, 6).
@@ -208,7 +217,7 @@ Angka kunci delapan sumber II.2 (semua sudah dicek ke halaman; rincian di Lampir
 - **Contradiction (dilaporkan):** `Sumber Literatur Bab 2.pdf` menyebut Lebeña dkk. (2025) "paling dekat dengan skenario CPPT→kode", sedangkan artikelnya memprediksi diagnosis berikutnya (hlm. 1). Naskah mengikuti artikel.
 - **Unverified information:** metadata ± 39 sumber lain di `source/` (tahun, penulis lengkap) hanya dari daftar dan judul PDF; belum diverifikasi sampai artikelnya dibaca.
 - **Unverified information:** bentuk baku `ansambel`, `penyandi`, `derau`, `metaanalisis` belum diverifikasi ke KBBI/pedoman resmi [PERLU VERIFIKASI BENTUK BAKU]; `de-identifikasi` vs `deidentifikasi` (Breakdown memakai tanda hubung) belum diputuskan, dihindari di II.3.
-- **Open question (anggaran halaman):** II.1 ± 1,54, II.2 ± 3,08, II.3 ± 4,28, II.4 ± 2,21, II.5 ± 2,64, II.6 ± 1,72 halaman. Bab II kini ± 15,9 halaman (termasuk teks panduan templat ± 0,45). Sisa untuk II.7 dan II.8 ≈ 19 − 15,9 ≈ 3,1 halaman, alokasi usulan 3,5 (1,5 + 2,0): kurang ± 0,4. Opsi: (a) pangkas II.3 sekitar 0,8 halaman (kandidat: paragraf Lebeña dkk. dan Jaganathan dkk.), (b) ganti teks panduan templat dengan paragraf pembuka singkat (hemat ± 0,2), (c) pangkas II.6 ± 0,2, atau (d) tulis II.7 dan II.8 lebih singkat (II.8 hampir seluruhnya tabel). Pengguna belum memutuskan; ukuran dari render LibreOffice, bukan Word.
+- **Open question (paling mendesak, anggaran halaman):** seluruh draf 1 Bab II kini ± 19,03 halaman pada render LibreOffice (II.1 1,54; II.2 3,08; II.3 4,28; II.4 2,21; II.5 2,64; II.6 1,81; II.7 1,50; II.8 1,58; ditambah judul bab dan teks panduan templat ± 0,45 halaman). Itu tepat di batas 19 halaman, tanpa ruang cadangan dan tanpa paragraf pembuka. Opsi: (a) pangkas II.3 sekitar 0,8 halaman (kandidat: paragraf Lebeña dkk. dan Jaganathan dkk.), (b) ganti teks panduan templat dengan paragraf pembuka singkat (hemat ± 0,2), (c) pangkas II.6 ± 0,2. Rekomendasi agent: (a) + (b) agar ada cadangan ± 1 halaman untuk perbedaan Word dan tambahan Maleki dkk. Pengguna belum memutuskan.
 - **Contradiction (dilaporkan, II.1):** `Sumber Literatur Bab 2.pdf` menyebut Nilasari & Soelistijanto "konteks persis TA" dan Rachmawaty dkk. "konteks ... sama persis". Setelah dibaca: Nilasari & Soelistijanto adalah rancangan tanpa hasil yang menangani kecurangan di sisi BPJS (hlm. 855, 857), dan Rachmawaty dkk. meneliti mutu layanan dan biaya satu RS ibu dan anak (hanya menyinggung audit rekam medis pada hlm. S617). Naskah mengikuti artikel.
 - **Unverified information:** Tabel 1 Simbolon & Gani memuat ketidakkonsistenan (baris 4 mencantumkan sampel primigravida untuk studi administrasi klaim, hlm. 75); angka Muroli dkk. bersifat sekunder. "RSAB" tidak diuraikan di artikelnya; naskah tidak mengklaim itu RS ibu dan anak [PERLU VERIFIKASI SUMBER].
 - **Unverified information:** berkas OneDrive pengguna belum tentu versi yang sama dengan salinan di repo (hanya diketahui sama dengan `... - Copy.docx` di repo).
@@ -223,23 +232,25 @@ Angka kunci delapan sumber II.2 (semua sudah dicek ke halaman; rincian di Lampir
 - **Assistant assumption:** penanda `[SESUAIKAN DENGAN BAB I]` di II.5.3 harus disamakan dengan rumusan Bab I final.
 - **Unverified information (II.6):** Lampiran C berkas II.6 memuat 8 catatan. Yang terpenting: (1) tidak ada sumber yang menguji teks Indonesia atau pengenal khas Indonesia; NIK dan nomor rekam medis adalah contoh penulis naskah; (2) temuan nama Asia Tenggara dan F1 0,33 vs 0,98 pada Faustini dkk. adalah laporan studi lain (sekunder); (3) Azzam dkk. memakai dataset sintetis buatan sendiri dan baseline perkakas NER umum, dan "98,6% bersih" bukan ukuran kebocoran PHI karena catatan MIMIC-III sudah dide-identifikasi; abstrak (recall 93,6%) dan Tabel 4 (0,971) tidak sama; (4) abstrak Tchouka dkk. menyebut jaminan matematis privasi tetapi kesimpulannya menyatakan dataset tidak kebal serangan; (5) bentuk baku `de-identifikasi`/`deidentifikasi` belum diputuskan [PERLU VERIFIKASI BENTUK BAKU].
 - **Assistant assumption:** penanda `[SESUAIKAN DENGAN BAB I]` di II.6.2 harus disamakan dengan rumusan Bab I final.
+- **Unverified information (II.7/II.8):** (1) keduanya mengevaluasi ekstraksi entitas atau nilai, bukan deteksi ketidaksesuaian, dan satu penilai (rancangan Breakdown) tidak dapat memperkirakan variabilitas antarpenilai; (2) 41,4% pada van Koevorden dkk. adalah disagreement pemetaan awal, bukan tingkat galat; (3) "34 sumber" = entri unik daftar pustaka gabungan, sebagian dibaca terarah; (4) tabel II.1 hanya 10 baris terdekat, banyak baris lain dihilangkan demi ruang (Lampiran C II.8); (5) keterangan tabel diketik manual.
+- **Assistant assumption:** penanda `[SESUAIKAN DENGAN BAB I]` di II.7.2 dan II.8.2 harus disamakan dengan rumusan Bab I final.
 - **Open question:** apakah subbab yang butuh PDF yang belum ada (mis. II.4 sudah ditulis tanpa Maleki; bisa diperbarui bila PDF diunggah) ditunda atau dikerjakan tanpa sumber itu?
 
 ## 13. CURRENT STATE — WHERE WE LEFT OFF
 
-- Aksi terakhir yang selesai: pengguna menjawab "lanjut" (tanpa memilih opsi anggaran halaman); agent menulis dan memverifikasi draf 1 II.6 (37 klaim cocok), membangun ulang `.docx` (II.1–II.6), mengukur halaman (II.6 ± 1,72; Bab II ± 15,9), dan memperbarui berkas ini (dikomit ke branch `claude/determined-davinci-ueb8i9`, tanpa PR).
-- Permintaan pengguna terakhir: "lanjut" (kelima kali secara total). Agent tidak memangkas apa pun karena pengguna belum memilih.
-- Respons agent terakhir: melaporkan II.6 selesai sebagai draf (sedikit di atas alokasi; anggaran kurang ± 0,4 halaman untuk II.7 dan II.8) dan menanyakan satu keputusan.
-- Belum ada tinjauan pengguna terhadap II.1–II.6.
+- Aksi terakhir yang selesai: pengguna menjawab "lanjutkan" (keenam kali secara total); agent menulis dan memverifikasi draf 1 II.7 (33 klaim cocok) dan II.8 (rangkuman dengan tabel), menambah dukungan tabel pada `build_docx.py`, membangun ulang `.docx` (II.1–II.8), mengukur halaman (Bab II ± 19,03), dan memperbarui berkas ini (dikomit ke branch `claude/determined-davinci-ueb8i9`, tanpa PR).
+- Permintaan pengguna terakhir: "lanjutkan". Agent tidak memangkas apa pun karena pengguna belum memilih.
+- Respons agent terakhir: melaporkan seluruh draf 1 Bab II selesai, Bab II ± 19,03 halaman (tepat di batas), dan menanyakan satu keputusan pemangkasan.
+- Belum ada tinjauan pengguna terhadap II.1–II.8.
 
 ## 14. NEXT STEPS
 
 ### Immediate Next Step
-Ikuti pilihan pengguna untuk **cara menutup selisih anggaran halaman** (lihat bagian 12) dan **subbab berikutnya**. Jika pengguna tidak menentukan, kerjakan **II.7 (evaluasi sistem NLP klinis; alokasi 1,5; sumber: Becker dkk. 2025 CARDIO:DE, van Koevorden dkk. 2026; periksa juga Sun dkk. dan Zeba dkk. yang sudah dipakai di II.5)**, lalu II.8 paling akhir (tabel perbandingan karya terdahulu dari Lampiran B semua subbab dan celah penelitian; hampir seluruhnya tabel). Jaga II.7 ≤ 1,5 halaman dan II.8 ≤ 2 halaman; anggaran sisa ± 3,1 halaman. Baca penuh PDF, jalankan pemeriksaan halaman otomatis, tulis naskah, bangun ulang `.docx` dari Markdown (skrip `tools/build_docx.py`; tambahkan berkas subbab baru pada daftar OUTLINE di dalamnya; pemeriksa halaman: `tools/verify_claims.py` dengan contoh klaim `tools/claims_II1.json`, `tools/claims_II2.json`, dan `tools/claims_II3.json`, offset halaman per sumber ada di kamus PDFS; butuh skrip skill docx, atur `DOCX_SKILL_DIR` bila lokasinya berbeda), dan ukur halaman.
+Tunggu keputusan pengguna tentang **pemangkasan** (rekomendasi: II.3 ± 0,8 halaman dan ganti teks panduan templat dengan paragraf pembuka singkat), lalu terapkan, bangun ulang `.docx` (`python3 tools/build_docx.py`, validasi dengan skrip skill docx, render dengan soffice, ukur halaman dengan `pdftotext -bbox`), dan jalankan ulang seluruh berkas klaim (`python3 -I tools/verify_claims.py tools/claims_IIx.json`). Jika pengguna mengunggah PDF yang belum ada (terutama Maleki dkk.), perbarui II.4.3 dan, bila relevan, II.5/II.7. Jika pengguna meminta tinjauan kualitas, jalankan pemeriksaan RULES.md bagian 8.5 (pola AI slop) dan sepuluh prinsip bagian 8 pada seluruh Bab II. Jangan menulis Bab I atau Bab III kecuali diminta.
 
 ### Follow-up Steps
 - Setiap subbab: baca penuh PDF sumber, catat halaman, jalankan pemeriksaan halaman otomatis, tulis naskah ≤ alokasi halaman, tambah Lampiran A/B/C, perbarui berkas ini, komit dan dorong ke branch.
-- Kerjakan II.8 (tabel perbandingan dan celah penelitian) paling akhir dari matriks Lampiran B tiap subbab.
+- (Selesai) II.1–II.8 telah ditulis; sisa pekerjaan: paragraf pembuka Bab II, pemangkasan, penyelarasan penanda `[SESUAIKAN DENGAN BAB I]` setelah Bab I ada, pembaruan daftar isi dan daftar tabel di Word, dan tinjauan pembimbing.
 - Tulis paragraf pembuka Bab II sesuai fungsi bab menurut templat (di `.docx` masih teks panduan templat); satukan daftar pustaka; perbarui daftar isi di Word; ukur halaman Bab II secara keseluruhan di Word (bukan hanya render LibreOffice).
 
 ### Waiting for User
