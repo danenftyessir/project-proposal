@@ -11,6 +11,7 @@ S = tempfile.mkdtemp(prefix="bab2_build_")
 SK = os.environ.get("DOCX_SKILL_DIR", "/root/.claude/skills/synced/017185de-19fa-4709-a10a-3db50e5d500d_a2aeaf02-31ea-42d9-a648-645d5f31836f/docx")
 REPO = "/home/user/project-proposal"
 OUT = REPO + "/bab2/Proposal-IF4091-Capstone-Utama-2026_Draft-Bab2.docx"
+OPEN = REPO + "/bab2/Pembuka_Bab_II.md"   # replaces the template guidance text at the start of Bab II; set to None to keep it
 
 # Subbab outline (titles after II.1 and II.2 are the agent's proposal; files override placeholders)
 OUTLINE = [
@@ -121,7 +122,15 @@ start = x.rfind("<w:p ", 0, h2)
 end = x.index('<w:p w14:paraId="1E7576B4"')
 tail_end = x.index('<w:p w14:paraId="08EFFE65"')            # Heading 1 'ANALISIS MASALAH ...'
 assert x[end:tail_end].count("<w:p ") == 2                   # redundant empty + page-break paragraphs: dropped
-x = x[:start] + "".join(new_bab2) + x[tail_end:]
+open_xml = ""
+intro_start = start
+if OPEN and os.path.exists(OPEN):
+    g = x.index("Bab Kajian Pustaka digunakan", kp)
+    intro_start = x.rfind("<w:p ", 0, g)
+    assert intro_start < start
+    om = open(OPEN, encoding="utf8").read().split("## Naskah")[1]
+    open_xml = "".join(body_p(" ".join(c.split("\n"))) for c in re.split(r"\n\s*\n", om.strip()) if c.strip() and c.strip() != "---")
+x = x[:intro_start] + open_xml + "".join(new_bab2) + x[tail_end:]
 
 # replace example references
 b = x.index("Balabanovic"); rs = x.rfind("<w:p ", 0, b)
