@@ -1,455 +1,473 @@
 [
-{
-"id": "D1",
-"src": "dietrich",
-"p": 95,
-"q": "A total of 600 ED discharge notes"
-},
-{
-"id": "D2",
-"src": "dietrich",
-"p": 95,
-"q": "100 error-free reference notes"
-},
-{
-"id": "D3",
-"src": "dietrich",
-"p": 97,
-"q": "All models received an identical system prompt"
-},
-{
-"id": "D4",
-"src": "dietrich",
-"p": 98,
-"q": "ranged from 93.2% to 94.2% across models"
-},
-{
-"id": "D5",
-"src": "dietrich",
-"p": 98,
-"q": "ranging from 98.3% to 99.1%"
-},
-{
-"id": "D6",
-"src": "dietrich",
-"p": 98,
-"q": "Specificity ranged from 92.0% to 96.0% across models"
-},
-{
-"id": "D7",
-"src": "dietrich",
-"p": 98,
-"q": "F1 scores ranging from 0.75 to 0.84"
-},
-{
-"id": "D7b",
-"src": "dietrich",
-"p": 98,
-"q": "driven primarily by reduced recall"
-},
-{
-"id": "D8",
-"src": "dietrich",
-"p": 98,
-"q": "F1 scores ≥0.96"
-},
-{
-"id": "D9",
-"src": "dietrich",
-"p": 100,
-"q": "Documentation errors were systematically injected into discharge notes rather than occurring naturally"
-},
-{
-"id": "D10",
-"src": "dietrich",
-"p": 100,
-"q": "the dataset was derived from a single institution"
-},
-{
-"id": "D11",
-"src": "dietrich",
-"p": 100,
-"q": "agentic auditing frameworks incorporating guideline retrieval and cross document consistency checks"
-},
-{
-"id": "D12",
-"src": "dietrich",
-"p": 96,
-"q": "each note containing only one error"
-},
-{
-"id": "D13",
-"src": "dietrich",
-"p": 96,
-"q": "used to derive standardized ED documentation"
-},
-{
-"id": "D14",
-"src": "dietrich",
-"p": 96,
-"q": "injected into 500 discharge notes"
-},
-{
-"id": "D15",
-"src": "dietrich",
-"p": 95,
-"q": "500 notes with a single injected documentation error across five predefined categories"
-},
-{
-"id": "S1",
-"src": "skrabic",
-"p": 2,
-"q": "99 (97.1%) were deliberately inserted"
-},
-{
-"id": "S2",
-"src": "skrabic",
-"p": 3,
-"q": "No tool-calling, retrieval, or function-calling features were enabled"
-},
-{
-"id": "S3a",
-"src": "skrabic",
-"p": 4,
-"q": "72.5% (74/102"
-},
-{
-"id": "S3b",
-"src": "skrabic",
-"p": 4,
-"q": "79.2% (80/101"
-},
-{
-"id": "S3c",
-"src": "skrabic",
-"p": 4,
-"q": "65.7% (67/102"
-},
-{
-"id": "S4",
-"src": "skrabic",
-"p": 4,
-"q": "overall human detection rate of 48.0% (49/102"
-},
-{
-"id": "S5",
-"src": "skrabic",
-"p": 4,
-"q": "Three clinicians each reviewed one-third of the dataset"
-},
-{
-"id": "S6",
-"src": "skrabic",
-"p": 4,
-"q": "diagnostic/investigation-related omissions were the most difficult class"
-},
-{
-"id": "S7a",
-"src": "skrabic",
-"p": 4,
-"q": "median = 7"
-},
-{
-"id": "S7b",
-"src": "skrabic",
-"p": 4,
-"q": "up to 17 issues in a single report"
-},
-{
-"id": "S8",
-"src": "skrabic",
-"p": 5,
-"q": "raises the risk of alert fatigue"
-},
-{
-"id": "S9a",
-"src": "skrabic",
-"p": 6,
-"q": "we did not include error-free notes"
-},
-{
-"id": "S9b",
-"src": "skrabic",
-"p": 6,
-"q": "the study was single-center"
-},
-{
-"id": "S10",
-"src": "skrabic",
-"p": 1,
-"q": "(≥99% of reports)"
-},
-{
-"id": "S12",
-"src": "skrabic",
-"p": [
-5,
-6
-],
-"q": "were accessed via cloud APIs"
-},
-{
-"id": "S13",
-"src": "skrabic",
-"p": 1,
-"q": "102 real-world Emergency Internal Medicine reports"
-},
-{
-"id": "U1",
-"src": "du",
-"p": 3,
-"q": "48,492 patient records from 7,000 unique patients"
-},
-{
-"id": "U2",
-"src": "du",
-"p": 3,
-"q": "using OCR for PDF sources"
-},
-{
-"id": "U3",
-"src": "du",
-"p": 8,
-"q": "emerged as the topperforming model"
-},
-{
-"id": "U3b",
-"src": "du",
-"p": 8,
-"q": "sum-F1: 0.7417"
-},
-{
-"id": "U4",
-"src": "du",
-"p": 8,
-"q": "sum-F1-score of only 0.3785"
-},
-{
-"id": "U5a",
-"src": "du",
-"p": 7,
-"q": "Low-risk cases (36.99%)"
-},
-{
-"id": "U5b",
-"src": "du",
-"p": 7,
-"q": "Medium-risk cases (45.9%)"
-},
-{
-"id": "U5c",
-"src": "du",
-"p": 7,
-"q": "High-risk cases (17.11%)"
-},
-{
-"id": "U6",
-"src": "du",
-"p": 7,
-"q": "ground truth diagnostic codes were derived from clinicians"
-},
-{
-"id": "U7",
-"src": "du",
-"p": 12,
-"q": "Clinician-entered diagnoses can be noisy, temporally unstable, and influenced by billing/documentation constraints"
-},
-{
-"id": "U8",
-"src": "du",
-"p": 13,
-"q": "we did not test explanation faithfulness"
-},
-{
-"id": "U9",
-"src": "du",
-"p": 13,
-"q": "tuned on a development split without psychiatrist co-design"
-},
-{
-"id": "U10",
-"src": "du",
-"p": 5,
-"q": "fixed-order inventory F0"
-},
-{
-"id": "U11",
-"src": "du",
-"p": 1,
-"q": "insurance claim validation"
-},
-{
-"id": "U12",
-"src": "du",
-"p": 5,
-"q": "implemented using a BART-based sequence-to-sequence model"
-},
-{
-"id": "U13",
-"src": "du",
-"p": 12,
-"q": "The dataset comes from a single psychiatric clinic"
-},
-{
-"id": "U14",
-"src": "du",
-"p": 13,
-"q": "did not assess confidence calibration or implement abstention"
-},
-{
-"id": "U15",
-"src": "du",
-"p": 8,
-"q": "lowest precision failure rate (0.1567)"
-},
-{
-"id": "U16",
-"src": "du",
-"p": 13,
-"q": "this was a retrospective study"
-},
-{
-"id": "M1",
-"src": "mwogosi",
-"p": 1,
-"q": "Seventeen validation studies met the inclusion criteria"
-},
-{
-"id": "M2",
-"src": "mwogosi",
-"p": 1,
-"q": "mean sensitivity of ICD-coded diagnoses was 64.5%"
-},
-{
-"id": "M3",
-"src": "mwogosi",
-"p": 1,
-"q": "specificity and positive predictive value were consistently high, often exceeding 90%"
-},
-{
-"id": "M4",
-"src": "mwogosi",
-"p": 4,
-"q": "all conducted in high-income countries"
-},
-{
-"id": "M5",
-"src": "mwogosi",
-"p": 5,
-"q": "documentation practices, coding workflows, and EHR maturity in low- and middle-income countries"
-},
-{
-"id": "M6a",
-"src": "mwogosi",
-"p": 10,
-"q": "76.5% of patients received appropriate bone-targeting agents"
-},
-{
-"id": "M6b",
-"src": "mwogosi",
-"p": 10,
-"q": "falsely inflated this to 89.2%"
-},
-{
-"id": "M7",
-"src": "mwogosi",
-"p": 1,
-"q": "narrative documentation are necessary"
-},
-{
-"id": "M8",
-"src": "mwogosi",
-"p": 11,
-"q": "copy-and-paste practices"
-},
-{
-"id": "M9",
-"src": "mwogosi",
-"p": 1,
-"q": "coding prevalence was used as a proxy for sensitivity"
-},
-{
-"id": "M10",
-"src": "mwogosi",
-"p": 1,
-"q": "reliance on codes alone frequently overestimated apparent adherence to treatment"
-},
-{
-"id": "J1",
-"src": "jaganathan",
-"p": 3,
-"q": "we could only use PLM-ICD"
-},
-{
-"id": "J2",
-"src": "jaganathan",
-"p": 4,
-"q": "3372 clinical notes"
-},
-{
-"id": "J3",
-"src": "jaganathan",
-"p": 4,
-"q": "ranging from 70% to 81%"
-},
-{
-"id": "J4",
-"src": "jaganathan",
-"p": 4,
-"q": "an MR is failed if the"
-},
-{
-"id": "J5",
-"src": "jaganathan",
-"p": 5,
-"q": "peak of 80.7%"
-},
-{
-"id": "J6",
-"src": "jaganathan",
-"p": 5,
-"q": "55.7%"
-},
-{
-"id": "H1",
-"src": "hou",
-"p": 2,
-"q": "macro-F1 and micro-F1 of 0.688 and 0.727"
-},
-{
-"id": "H2a",
-"src": "hou",
-"p": 2,
-"q": "less flexible or portable"
-},
-{
-"id": "H2b",
-"src": "hou",
-"p": 2,
-"q": "conflicts between various rules are likely to occur"
-},
-{
-"id": "H3",
-"src": "hou",
-"p": 2,
-"q": "up to 4,096 tokens"
-},
-{
-"id": "H4",
-"src": "hou",
-"p": 2,
-"q": "auxiliary tool to help coders"
-},
-{
-"id": "H5",
-"src": "hou",
-"p": 1,
-"q": "label-wise attention mechanism provides the interpretability of prediction"
-},
-{
-"id": "H6",
-"src": "hou",
-"p": 2,
-"q": "usually lead to information loss"
-}
+ {
+  "id": "D1",
+  "src": "dietrich",
+  "p": 95,
+  "q": "A total of 600 ED discharge notes"
+ },
+ {
+  "id": "D2",
+  "src": "dietrich",
+  "p": 95,
+  "q": "100 error-free reference notes"
+ },
+ {
+  "id": "D3",
+  "src": "dietrich",
+  "p": 97,
+  "q": "All models received an identical system prompt"
+ },
+ {
+  "id": "D4",
+  "src": "dietrich",
+  "p": 98,
+  "q": "ranged from 93.2% to 94.2% across models"
+ },
+ {
+  "id": "D5",
+  "src": "dietrich",
+  "p": 98,
+  "q": "ranging from 98.3% to 99.1%"
+ },
+ {
+  "id": "D6",
+  "src": "dietrich",
+  "p": 98,
+  "q": "Specificity ranged from 92.0% to 96.0% across models"
+ },
+ {
+  "id": "D7",
+  "src": "dietrich",
+  "p": 98,
+  "q": "F1 scores ranging from 0.75 to 0.84"
+ },
+ {
+  "id": "D7b",
+  "src": "dietrich",
+  "p": 98,
+  "q": "driven primarily by reduced recall"
+ },
+ {
+  "id": "D8",
+  "src": "dietrich",
+  "p": 98,
+  "q": "F1 scores ≥0.96"
+ },
+ {
+  "id": "D9",
+  "src": "dietrich",
+  "p": 100,
+  "q": "Documentation errors were systematically injected into discharge notes rather than occurring naturally"
+ },
+ {
+  "id": "D10",
+  "src": "dietrich",
+  "p": 100,
+  "q": "the dataset was derived from a single institution"
+ },
+ {
+  "id": "D11",
+  "src": "dietrich",
+  "p": 100,
+  "q": "agentic auditing frameworks incorporating guideline retrieval and cross document consistency checks"
+ },
+ {
+  "id": "D12",
+  "src": "dietrich",
+  "p": 96,
+  "q": "each note containing only one error"
+ },
+ {
+  "id": "D13",
+  "src": "dietrich",
+  "p": 96,
+  "q": "used to derive standardized ED documentation"
+ },
+ {
+  "id": "D14",
+  "src": "dietrich",
+  "p": 96,
+  "q": "injected into 500 discharge notes"
+ },
+ {
+  "id": "D15",
+  "src": "dietrich",
+  "p": 95,
+  "q": "500 notes with a single injected documentation error across five predefined categories"
+ },
+ {
+  "id": "S1",
+  "src": "skrabic",
+  "p": 2,
+  "q": "99 (97.1%) were deliberately inserted"
+ },
+ {
+  "id": "S2",
+  "src": "skrabic",
+  "p": 3,
+  "q": "No tool-calling, retrieval, or function-calling features were enabled"
+ },
+ {
+  "id": "S3a",
+  "src": "skrabic",
+  "p": 4,
+  "q": "72.5% (74/102"
+ },
+ {
+  "id": "S3b",
+  "src": "skrabic",
+  "p": 4,
+  "q": "79.2% (80/101"
+ },
+ {
+  "id": "S3c",
+  "src": "skrabic",
+  "p": 4,
+  "q": "65.7% (67/102"
+ },
+ {
+  "id": "S4",
+  "src": "skrabic",
+  "p": 4,
+  "q": "overall human detection rate of 48.0% (49/102"
+ },
+ {
+  "id": "S5",
+  "src": "skrabic",
+  "p": 4,
+  "q": "Three clinicians each reviewed one-third of the dataset"
+ },
+ {
+  "id": "S6",
+  "src": "skrabic",
+  "p": 4,
+  "q": "diagnostic/investigation-related omissions were the most difficult class"
+ },
+ {
+  "id": "S7a",
+  "src": "skrabic",
+  "p": 4,
+  "q": "median = 7"
+ },
+ {
+  "id": "S7b",
+  "src": "skrabic",
+  "p": 4,
+  "q": "up to 17 issues in a single report"
+ },
+ {
+  "id": "S8",
+  "src": "skrabic",
+  "p": 5,
+  "q": "raises the risk of alert fatigue"
+ },
+ {
+  "id": "S9a",
+  "src": "skrabic",
+  "p": 6,
+  "q": "we did not include error-free notes"
+ },
+ {
+  "id": "S9b",
+  "src": "skrabic",
+  "p": 6,
+  "q": "the study was single-center"
+ },
+ {
+  "id": "S10",
+  "src": "skrabic",
+  "p": 1,
+  "q": "(≥99% of reports)"
+ },
+ {
+  "id": "S12",
+  "src": "skrabic",
+  "p": [
+   5,
+   6
+  ],
+  "q": "were accessed via cloud APIs"
+ },
+ {
+  "id": "S13",
+  "src": "skrabic",
+  "p": 1,
+  "q": "102 real-world Emergency Internal Medicine reports"
+ },
+ {
+  "id": "U1",
+  "src": "du",
+  "p": 3,
+  "q": "48,492 patient records from 7,000 unique patients"
+ },
+ {
+  "id": "U2",
+  "src": "du",
+  "p": 3,
+  "q": "using OCR for PDF sources"
+ },
+ {
+  "id": "U3",
+  "src": "du",
+  "p": 8,
+  "q": "emerged as the topperforming model"
+ },
+ {
+  "id": "U3b",
+  "src": "du",
+  "p": 8,
+  "q": "sum-F1: 0.7417"
+ },
+ {
+  "id": "U4",
+  "src": "du",
+  "p": 8,
+  "q": "sum-F1-score of only 0.3785"
+ },
+ {
+  "id": "U5a",
+  "src": "du",
+  "p": 7,
+  "q": "Low-risk cases (36.99%)"
+ },
+ {
+  "id": "U5b",
+  "src": "du",
+  "p": 7,
+  "q": "Medium-risk cases (45.9%)"
+ },
+ {
+  "id": "U5c",
+  "src": "du",
+  "p": 7,
+  "q": "High-risk cases (17.11%)"
+ },
+ {
+  "id": "U6",
+  "src": "du",
+  "p": 7,
+  "q": "ground truth diagnostic codes were derived from clinicians"
+ },
+ {
+  "id": "U7",
+  "src": "du",
+  "p": 12,
+  "q": "Clinician-entered diagnoses can be noisy, temporally unstable, and influenced by billing/documentation constraints"
+ },
+ {
+  "id": "U8",
+  "src": "du",
+  "p": 13,
+  "q": "we did not test explanation faithfulness"
+ },
+ {
+  "id": "U9",
+  "src": "du",
+  "p": 13,
+  "q": "tuned on a development split without psychiatrist co-design"
+ },
+ {
+  "id": "U10",
+  "src": "du",
+  "p": 5,
+  "q": "fixed-order inventory F0"
+ },
+ {
+  "id": "U11",
+  "src": "du",
+  "p": 1,
+  "q": "insurance claim validation"
+ },
+ {
+  "id": "U12",
+  "src": "du",
+  "p": 5,
+  "q": "implemented using a BART-based sequence-to-sequence model"
+ },
+ {
+  "id": "U13",
+  "src": "du",
+  "p": 12,
+  "q": "The dataset comes from a single psychiatric clinic"
+ },
+ {
+  "id": "U14",
+  "src": "du",
+  "p": 13,
+  "q": "did not assess confidence calibration or implement abstention"
+ },
+ {
+  "id": "U15",
+  "src": "du",
+  "p": 8,
+  "q": "lowest precision failure rate (0.1567)"
+ },
+ {
+  "id": "U16",
+  "src": "du",
+  "p": 13,
+  "q": "this was a retrospective study"
+ },
+ {
+  "id": "M1",
+  "src": "mwogosi",
+  "p": 1,
+  "q": "Seventeen validation studies met the inclusion criteria"
+ },
+ {
+  "id": "M2",
+  "src": "mwogosi",
+  "p": 1,
+  "q": "mean sensitivity of ICD-coded diagnoses was 64.5%"
+ },
+ {
+  "id": "M3",
+  "src": "mwogosi",
+  "p": 1,
+  "q": "specificity and positive predictive value were consistently high, often exceeding 90%"
+ },
+ {
+  "id": "M4",
+  "src": "mwogosi",
+  "p": 4,
+  "q": "all conducted in high-income countries"
+ },
+ {
+  "id": "M5",
+  "src": "mwogosi",
+  "p": 5,
+  "q": "documentation practices, coding workflows, and EHR maturity in low- and middle-income countries"
+ },
+ {
+  "id": "M6a",
+  "src": "mwogosi",
+  "p": 10,
+  "q": "76.5% of patients received appropriate bone-targeting agents"
+ },
+ {
+  "id": "M6b",
+  "src": "mwogosi",
+  "p": 10,
+  "q": "falsely inflated this to 89.2%"
+ },
+ {
+  "id": "M7",
+  "src": "mwogosi",
+  "p": 1,
+  "q": "narrative documentation are necessary"
+ },
+ {
+  "id": "M8",
+  "src": "mwogosi",
+  "p": 11,
+  "q": "copy-and-paste practices"
+ },
+ {
+  "id": "M9",
+  "src": "mwogosi",
+  "p": 1,
+  "q": "coding prevalence was used as a proxy for sensitivity"
+ },
+ {
+  "id": "M10",
+  "src": "mwogosi",
+  "p": 1,
+  "q": "reliance on codes alone frequently overestimated apparent adherence to treatment"
+ },
+ {
+  "id": "J1",
+  "src": "jaganathan",
+  "p": 3,
+  "q": "we could only use PLM-ICD"
+ },
+ {
+  "id": "J2",
+  "src": "jaganathan",
+  "p": 4,
+  "q": "3372 clinical notes"
+ },
+ {
+  "id": "J3",
+  "src": "jaganathan",
+  "p": 4,
+  "q": "ranging from 70% to 81%"
+ },
+ {
+  "id": "J4",
+  "src": "jaganathan",
+  "p": 4,
+  "q": "an MR is failed if the"
+ },
+ {
+  "id": "J5",
+  "src": "jaganathan",
+  "p": 5,
+  "q": "peak of 80.7%"
+ },
+ {
+  "id": "J6",
+  "src": "jaganathan",
+  "p": 5,
+  "q": "55.7%"
+ },
+ {
+  "id": "H1",
+  "src": "hou",
+  "p": 2,
+  "q": "macro-F1 and micro-F1 of 0.688 and 0.727"
+ },
+ {
+  "id": "H2a",
+  "src": "hou",
+  "p": 2,
+  "q": "less flexible or portable"
+ },
+ {
+  "id": "H2b",
+  "src": "hou",
+  "p": 2,
+  "q": "conflicts between various rules are likely to occur"
+ },
+ {
+  "id": "H3",
+  "src": "hou",
+  "p": 2,
+  "q": "up to 4,096 tokens"
+ },
+ {
+  "id": "H4",
+  "src": "hou",
+  "p": 2,
+  "q": "auxiliary tool to help coders"
+ },
+ {
+  "id": "H5",
+  "src": "hou",
+  "p": 1,
+  "q": "label-wise attention mechanism provides the interpretability of prediction"
+ },
+ {
+  "id": "H6",
+  "src": "hou",
+  "p": 2,
+  "q": "usually lead to information loss"
+ },
+ {
+  "id": "DC1",
+  "src": "dietrich",
+  "p": 97,
+  "q": "critical abnormal laboratory or imaging results that were either ignored, minimized, or directly contradicted"
+ },
+ {
+  "id": "DC2",
+  "src": "dietrich",
+  "p": 97,
+  "q": "logically inconsistent admission and discharge times within the same note"
+ },
+ {
+  "id": "DC3",
+  "src": "dietrich",
+  "p": 97,
+  "q": "The fifth category, disposition/follow-up errors"
+ }
 ]
