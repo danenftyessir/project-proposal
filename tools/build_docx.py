@@ -1,6 +1,8 @@
 import re, html, shutil, os, subprocess, tempfile
 
-"""Build the Bab II draft .docx from the Markdown subbab files and the Utama template.
+"""Build the Bab II draft .docx from the Markdown subbab files and the Individu template
+(template/Template-Proposal-IF4091-Capstone-Individu-2026.docx, byte-identical to the user's "... - Copy.docx").
+The Utama template (three-person team) is NOT used for this draft.
 
 Usage: python3 -I tools/build_docx.py
 Needs the docx skill scripts (merge_runs.py); set DOCX_SKILL_DIR if the default path differs.
@@ -10,7 +12,8 @@ Validate afterwards with the skill's scripts/office/validate.py and render with 
 S = tempfile.mkdtemp(prefix="bab2_build_")
 SK = os.environ.get("DOCX_SKILL_DIR", "/root/.claude/skills/synced/017185de-19fa-4709-a10a-3db50e5d500d_a2aeaf02-31ea-42d9-a648-645d5f31836f/docx")
 REPO = "/home/user/project-proposal"
-OUT = REPO + "/bab2/Proposal-IF4091-Capstone-Utama-2026_Draft-Bab2.docx"
+TEMPLATE = REPO + "/template/Template-Proposal-IF4091-Capstone-Individu-2026.docx"
+OUT = REPO + "/bab2/Proposal-IF4091-Capstone-Individu-2026_Draft-Bab2.docx"
 OPEN = REPO + "/bab2/Pembuka_Bab_II.md"   # replaces the template guidance text at the start of Bab II; set to None to keep it
 
 # Subbab outline (titles after II.1 and II.2 are the agent's proposal; files override placeholders)
@@ -27,7 +30,7 @@ OUTLINE = [
 
 work = S + "/work"
 shutil.rmtree(work, ignore_errors=True)
-subprocess.run(["unzip", "-q", REPO + "/Template-Proposal-IF4091-Capstone-Utama-2026.docx", "-d", work], check=True)
+subprocess.run(["unzip", "-q", TEMPLATE, "-d", work], check=True)
 subprocess.run(["find", work, "-type", "l", "-delete"], check=True)
 subprocess.run(["python3", SK + "/scripts/merge_runs.py", work + "/"], check=True, capture_output=True)
 doc_path = work + "/word/document.xml"
