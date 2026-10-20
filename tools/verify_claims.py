@@ -25,6 +25,8 @@ PDFS = {
  "chen":     (ROOT+"source/1-s2.0-S1532046426000298-main.pdf", 0),
  "olex":     (ROOT+"source/1-s2.0-S1532046421001131-main.pdf", 0),
  "jafarpour": (ROOT+"source/1-s2.0-S0933365725002167-main.pdf", 0),
+ "domingues": (ROOT+"source/1-s2.0-S1386505625003612-main.pdf", 0),
+ "ijadi":    (ROOT+"source/1-s2.0-S2211883726001401-main.pdf", 0),
 }
 
 def norm(t):
