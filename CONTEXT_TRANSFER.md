@@ -1,6 +1,6 @@
 # CONTEXT TRANSFER
 
-> Berkas ini diperbarui di akhir setiap chat yang mengubah keputusan, progres, atau daftar referensi (instruksi pengguna). Pembaruan terakhir: sesi 1, 20 Oktober 2026 (menulis draf II.3 dan memindahkannya ke `.docx` Utama). Letakkan isi berkas ini sebagai konteks awal chat berikutnya, bersama `CLAUDE.md` dan `RULES.md`.
+> Berkas ini diperbarui di akhir setiap chat yang mengubah keputusan, progres, atau daftar referensi (instruksi pengguna). Pembaruan terakhir: sesi 1, 20 Oktober 2026 (draf II.3 dan II.1, keduanya dimasukkan ke `.docx` Utama). Letakkan isi berkas ini sebagai konteks awal chat berikutnya, bersama `CLAUDE.md` dan `RULES.md`.
 
 ## 1. PROJECT / CONVERSATION OVERVIEW
 
@@ -49,7 +49,7 @@ Tenggat: slide "Tanggal-Tanggal Penting" (halaman 17 berkas `7_IF4091_PenulisanS
 
 1. **Konvensi sitasi sementara**: penulis-tahun, `dkk.` untuk tiga penulis atau lebih, nomor halaman `hlm.` pada klaim isi artikel. Untuk artikel Elsevier bernomor artikel, `hlm.` = halaman berkas PDF (halaman 1 = halaman pertama PDF). Untuk Dietrich dan Stubbert (2026), `hlm.` = nomor cetak jurnal (95–101). *Alasan:* artikel bernomor artikel tidak punya nomor halaman cetak. *Status:* sementara sampai pedoman prodi diketahui. Daftar pustaka memakai pola contoh templat dan ditandai `[FORMAT AKHIR PERLU DIKONFIRMASI]`.
 2. **Kebijakan sumber** (lihat bagian 4): hanya `source/` + artikel `external/` yang identik dengan yang tercantum di daftar atau Breakdown. *Final* (dari pengguna).
-3. **Subbab pertama = II.3**, dijalankan dari usulan agent karena pengguna tidak memilih subbab setelah ditanya satu pertanyaan. *Alasan:* inti kajian dan PDF-nya lengkap. *Status:* **terbuka**; pengguna belum mengonfirmasi pilihan itu.
+3. **Urutan penulisan sesi 1: II.3 lebih dulu, lalu II.1.** II.3 dijalankan dari usulan agent tanpa persetujuan pengguna (menyalahi aturan "jangan menebak"); pengguna mempertanyakannya, agent mengusulkan II.1 (urut), dan pengguna menjawab "lanjutkan" sehingga II.1 ditulis **di chat yang sama** (melonggarkan aturan satu subbab per chat atas kehendak pengguna). *Status:* kerangka II.1–II.8 tetap usulan agent, belum dikonfirmasi.
 4. **Kerangka Bab II (usulan agent, belum dikonfirmasi pengguna)**, total ≤ 19 halaman:
    - II.1 Dokumentasi klinis dan klaim JKN (1,5 hlm)
    - II.2 NLP/LLM pada teks klinis, singkatan lokal, penalaran temporal (3)
@@ -62,7 +62,7 @@ Tenggat: slide "Tanggal-Tanggal Penting" (halaman 17 berkas `7_IF4091_PenulisanS
    Literatur *alert fatigue* dan *knowledge graph* sengaja dikeluarkan (lebih dekat ke antarmuka Abizzar atau eksploratif); dapat dibalik oleh pengguna. Penomoran heading memakai angka Romawi mengikuti templat (pengguna menulis "2.1" secara kasual). Judul II.1 dan II.2 di `.docx` adalah penampung bertanda kuning agar nomor II.3 benar; judulnya usulan dan belum dikonfirmasi.
 5. **Posisi sumber di II.3**: Lebeña dkk. (2025) hanya diberi porsi kecil dan disebut apa adanya (prediksi diagnosis berikutnya, bukan audit), karena klaim relevansi di `Sumber Literatur Bab 2.pdf` ("paling dekat dengan skenario CPPT→kode") tidak terdukung isi artikel.
 6. **Alur kerja (instruksi pengguna, chat 1 lanjutan): tulis dulu di Markdown, naskah final di `.docx` templat Utama.** Naskah ada di `bab2/*.md`; tabel verifikasi dan catatan peringatan dipisah di "Lampiran kerja" dan tidak ikut dihitung dalam 19 halaman. `.docx` dibangun otomatis dari Markdown ke salinan templat Utama di repo (gaya Heading 2/3, Normal, daftar pustaka, penomoran otomatis), disimpan sebagai berkas baru **tanpa menimpa templat**: `bab2/Proposal-IF4091-Capstone-Utama-2026_Draft-Bab2.docx`. Pengguna menyalin/menimpa ke berkas OneDrive-nya sendiri.
-7. **Urutan penulisan**: agent mengerjakan II.3 lebih dahulu tanpa persetujuan pengguna (menyalahi aturan "jangan menebak"). Pengguna mempertanyakannya. Isi II.3 tetap berlaku, tetapi subbab berikutnya mengikuti pilihan pengguna; bila tidak ada pilihan, usulan berikutnya adalah **II.1** (urut).
+7. **Sumber II.1 (keputusan agent, dalam batas aturan pengguna):** hanya Susilo dkk. 2025, Rachmawaty dkk. 2021, Nilasari & Soelistijanto 2026 (dari `source/`) dan Simbolon & Gani 2023 (dari `source/external/`, karena dirujuk Breakdown bagian 15). Septiono dkk. 2026, Sambodo dkk. 2023, dan Barsasella dkk. 2021 tidak dipakai (tidak relevan dengan dokumentasi/klaim; dua yang terakhir tidak dibaca). Permenkes di `external/` tidak dipakai tanpa persetujuan. Muroli dkk. (2020) hanya disebut sebagai kutipan sekunder dari Simbolon & Gani (PDF aslinya tidak ada) dan tidak masuk daftar pustaka.
 
 ## 6. PROGRESS STATUS
 
@@ -70,12 +70,13 @@ Tenggat: slide "Tanggal-Tanggal Penting" (halaman 17 berkas `7_IF4091_PenulisanS
 - Membaca `CLAUDE.md`, `RULES.md` (seluruhnya), Breakdown (11 hlm), `Sumber Literatur Bab 2.pdf` (12 hlm), templat individu, panduan studi literatur, informasi umum TA, panduan Bab I.
 - Memetakan 46 PDF di `source/` ke daftar literatur (lihat bagian 8) dan memeriksa bahwa semuanya berteks penuh (bukan hanya abstrak).
 - **Draf 1 subbab II.3** (1.365 kata isi naskah; **terukur ± 4,3 halaman** pada templat Utama dari render LibreOffice dengan Liberation Serif yang metrik-kompatibel dengan Times New Roman, melebihi alokasi 3,5; bukan ukuran Word) ditulis dari tujuh PDF yang dibaca penuh; 100 klaim/halaman dicek otomatis ke teks halaman PDF (empat awalnya gagal karena pemenggalan kata hasil ekstraksi, lalu dicek manual dan benar).
+- **Draf 1 subbab II.1 Dokumentasi Klinis dan Klaim JKN** (514 kata; **terukur ± 1,54 halaman**, sesuai alokasi 1,5) ditulis dari empat PDF yang dibaca penuh (Simbolon & Gani dibaca juga dari gambar halaman karena teks PDF tercampur dua kolom); 27 klaim/halaman dicek otomatis ke teks halaman PDF (lima awalnya gagal karena offset halaman dan pemenggalan kata; halaman dikoreksi dan dicek ulang, semuanya cocok). `.docx` dibangun ulang dengan II.1 dan II.3 (II.2 penampung), lolos validasi, render 25 halaman. Bab II terisi ± 6,38 halaman termasuk judul bab, teks panduan templat, dan penampung II.2; isi II.1 + II.3 = ± 5,84 halaman.
 
 ### In Progress
-- Tidak ada. II.3 menunggu tinjauan pengguna.
+- Tidak ada. II.1 dan II.3 menunggu tinjauan pengguna.
 
 ### Not Started
-- II.1, II.2, II.4, II.5, II.6, II.7, II.8; paragraf pembuka Bab II (tujuan bab menurut templat); penyatuan daftar pustaka Bab II; pemformatan ke `.docx`.
+- II.2, II.4, II.5, II.6, II.7, II.8; paragraf pembuka Bab II (tujuan bab menurut templat); penyatuan daftar pustaka Bab II (sementara 11 entri hasil gabungan II.1 dan II.3); pemformatan akhir di Word (daftar isi, halaman).
 
 ### Blocked
 - Subbab yang membutuhkan PDF yang belum ada (lihat bagian 12).
@@ -102,7 +103,9 @@ Berkas di repo (semua di root kecuali dicatat):
 - `Template-Proposal-IF4091-Capstone-Utama-2026.docx` (root repo; salinan identik `... - Copy.docx`) — **templat yang dipakai untuk naskah final**. `template/Template-Proposal-IF4091-Capstone-Individu-2026.docx` — templat individu (struktur Bab III–IV berbeda); tidak dipakai.
 - **`bab2/Proposal-IF4091-Capstone-Utama-2026_Draft-Bab2.docx`** — templat Utama berisi II.3 (dan penampung II.1, II.2), daftar pustaka Bab II; bagian lain templat tidak diubah kecuali dua paragraf pemisah halaman ganda di akhir Bab II yang dihapus (menyebabkan halaman kosong) dan contoh gambar/tabel/pustaka yang diganti. Lolos validasi skema; render 22 halaman. **Daftar isi, daftar gambar, dan daftar tabel masih berisi hasil lama** sampai diperbarui di Word (berkas diatur agar Word menawarkan pembaruan saat dibuka; atau Ctrl+A lalu F9).
 - `7_IF4091_PenulisanStudiLiteratur_2026_Okt.pdf`, `3_IF4091_Informasi Umum TA_2026 Sept.pdf`, `9_IF4091_ProposalTA_Bab1_2026_Okt.pdf`, `5_...EfficientReading...`, `12_...Bahasa Indonesia...`, `1_...Pengantar Kuliah...` — materi kuliah.
+- **`bab2/II.1_Dokumentasi_Klinis_dan_Klaim_JKN.md`** — draf 1 II.1 (naskah, daftar pustaka sementara, Lampiran A tabel verifikasi, B matriks catatan literatur, C catatan peringatan).
 - **`bab2/II.3_Audit_Otomatis_Dokumentasi_dan_Kode_Diagnosis.md`** — draf 1 II.3 (naskah + daftar pustaka sementara + Lampiran A tabel verifikasi klaim, B matriks catatan literatur untuk II.8, C catatan peringatan).
+- `tools/` — `build_docx.py` (Markdown subbab → `.docx` templat Utama), `verify_claims.py` + `claims_II1.json`/`claims_II3.json` (cek frasa kutipan ke halaman PDF). Catatan: pada `claims_II3.json` empat entri berstatus FAIL otomatis karena pemenggalan kata di teks PDF (sudah dicek manual dan benar: S2, U3b, U14, M2); `claims_II1.json` sudah memuat halaman/frasa yang dikoreksi (semua lolos).
 - `CONTEXT_TRANSFER.md` — berkas ini.
 
 Peta 46 PDF `source/` (`1-s2.0-<ID>-main.pdf`; judul dan tim dari metadata PDF, **tahun dari daftar kecuali tujuh artikel II.3 yang sudah diperiksa**):
@@ -159,7 +162,9 @@ DOI ketujuh artikel ada di Lampiran C berkas II.3.
 - **Contradiction (dilaporkan):** `Sumber Literatur Bab 2.pdf` menyebut Lebeña dkk. (2025) "paling dekat dengan skenario CPPT→kode", sedangkan artikelnya memprediksi diagnosis berikutnya (hlm. 1). Naskah mengikuti artikel.
 - **Unverified information:** metadata ± 39 sumber lain di `source/` (tahun, penulis lengkap) hanya dari daftar dan judul PDF; belum diverifikasi sampai artikelnya dibaca.
 - **Unverified information:** bentuk baku `ansambel`, `penyandi`, `derau`, `metaanalisis` belum diverifikasi ke KBBI/pedoman resmi [PERLU VERIFIKASI BENTUK BAKU]; `de-identifikasi` vs `deidentifikasi` (Breakdown memakai tanda hubung) belum diputuskan, dihindari di II.3.
-- **Open question:** II.3 terukur ± 4,3 halaman (alokasi 3,5). Jika semua subbab melebihi alokasi sebesar itu, total Bab II melewati 19 halaman. Pilihan: memangkas II.3 (kandidat: paragraf Lebeña dkk. dan Jaganathan dkk., ± 0,6 halaman), atau menyesuaikan alokasi subbab lain. Pengguna belum memutuskan.
+- **Open question:** II.3 terukur ± 4,30 halaman (alokasi 3,5) dan II.1 ± 1,54 (alokasi 1,5). Sisa anggaran untuk II.2 dan II.4–II.8 = 19 − 5,84 ≈ 13,2 halaman, sedangkan alokasi usulan untuk keenamnya 14 halaman, belum termasuk paragraf pembuka Bab II. Pilihan: memangkas II.3 sekitar 0,8 halaman (kandidat: paragraf Lebeña dkk. dan Jaganathan dkk.), atau menyesuaikan alokasi subbab lain. Pengguna belum memutuskan.
+- **Contradiction (dilaporkan, II.1):** `Sumber Literatur Bab 2.pdf` menyebut Nilasari & Soelistijanto "konteks persis TA" dan Rachmawaty dkk. "konteks ... sama persis". Setelah dibaca: Nilasari & Soelistijanto adalah rancangan tanpa hasil yang menangani kecurangan di sisi BPJS (hlm. 855, 857), dan Rachmawaty dkk. meneliti mutu layanan dan biaya satu RS ibu dan anak (hanya menyinggung audit rekam medis pada hlm. S617). Naskah mengikuti artikel.
+- **Unverified information:** Tabel 1 Simbolon & Gani memuat ketidakkonsistenan (baris 4 mencantumkan sampel primigravida untuk studi administrasi klaim, hlm. 75); angka Muroli dkk. bersifat sekunder. "RSAB" tidak diuraikan di artikelnya; naskah tidak mengklaim itu RS ibu dan anak [PERLU VERIFIKASI SUMBER].
 - **Unverified information:** berkas OneDrive pengguna belum tentu versi yang sama dengan salinan di repo (hanya diketahui sama dengan `... - Copy.docx` di repo).
 - **Assistant assumption:** penanda `[SESUAIKAN DENGAN BAB I]` di II.3.4 (pembagian jalur AI/NLP) harus disamakan dengan rumusan Bab I final.
 - **Unverified information:** arah penggantian akronim pada Jaganathan dkk. tidak jelas dalam artikelnya (hlm. 2, 4, 5), sehingga naskah tidak menyebut arah. Kriteria kegagalan mereka ketat (setiap perbedaan pada lima kode teratas, hlm. 4), jadi 70–81% adalah ketidakstabilan, bukan akurasi.
@@ -168,15 +173,15 @@ DOI ketujuh artikel ada di Lampiran C berkas II.3.
 
 ## 13. CURRENT STATE — WHERE WE LEFT OFF
 
-- Aksi terakhir yang selesai: draf 1 II.3 ditulis dan diverifikasi ke halaman PDF (dikomit); pengguna lalu bertanya mengapa mulai dari subbab 3 dan mengapa tidak mengedit templat Utama; agent menjawab, membangun `.docx` dari templat Utama di repo, memvalidasi, merender, mengukur halaman, dan memperbarui berkas ini (dikomit ke branch `claude/determined-davinci-ueb8i9`, tanpa PR).
-- Permintaan pengguna terakhir: (1) koreksi tentang arti project knowledge dan `source/` vs `external/`; sebelumnya (2) kerjakan satu subbab Bab II dengan aturan di atas dan perbarui Context Transfer di akhir chat.
-- Respons agent terakhir: mengakui urutan II.3 dilakukan tanpa persetujuan, menjelaskan kendala jalur `C:\` dan koreksi pemilihan templat, melaporkan hasil `.docx` dan panjang II.3 terukur ± 4,3 halaman.
-- Belum ada tinjauan pengguna terhadap II.3.
+- Aksi terakhir yang selesai: pengguna menjawab "lanjutkan" setelah agent mengusulkan II.1; agent membaca empat PDF, menulis dan memverifikasi draf 1 II.1, membangun ulang `.docx` (II.1 + penampung II.2 + II.3), mengukur halaman, dan memperbarui berkas ini (dikomit ke branch `claude/determined-davinci-ueb8i9`, tanpa PR).
+- Permintaan pengguna terakhir: "lanjutkan" (mengerjakan II.1, usulan agent). Sebelumnya: pertanyaan alasan mulai dari II.3 dan perintah memakai `.docx` templat Utama (markdown dulu, final di docx).
+- Respons agent terakhir: melaporkan II.1 selesai sebagai draf (panjang, temuan peringatan, sisa anggaran halaman) dan menanyakan keputusan panjang II.3 serta subbab berikutnya.
+- Belum ada tinjauan pengguna terhadap II.1 maupun II.3.
 
 ## 14. NEXT STEPS
 
 ### Immediate Next Step
-Ikuti pilihan pengguna untuk **subbab berikutnya** atau revisi II.3 (mis. pemangkasan ke ± 3,5 halaman) bila diminta. Jika pengguna tidak menentukan, usulkan **II.1** (urut), bukan lompat ke subbab lain; PDF II.1 sebagian ada (Rachmawaty dkk., Nilasari & Soelistijanto, Susilo dkk.; Simbolon & Gani di `external/` karena dirujuk Breakdown), dan Permenkes tidak boleh dipakai tanpa persetujuan. Setelah menulis, bangun ulang `.docx` dari Markdown ke templat Utama dan ukur halaman.
+Ikuti pilihan pengguna untuk **subbab berikutnya** atau revisi (mis. pemangkasan II.3). Jika pengguna tidak menentukan, usulkan **II.2 (NLP dan LLM pada teks klinis)** karena urut; PDF-nya ada (Kumar, Woo, Elvas, Luo; singkatan lokal: Wei, Chen; temporal: Olex & McInnes) kecuali Kayira dkk. (belum diunggah). Baca penuh PDF, jalankan pemeriksaan halaman otomatis, tulis naskah, bangun ulang `.docx` dari Markdown (skrip `tools/build_docx.py`; tambahkan berkas subbab baru pada daftar OUTLINE di dalamnya; pemeriksa halaman: `tools/verify_claims.py` dengan contoh klaim `tools/claims_II1.json` dan `tools/claims_II3.json`, offset halaman per sumber ada di kamus PDFS; butuh skrip skill docx, atur `DOCX_SKILL_DIR` bila lokasinya berbeda), dan ukur halaman.
 
 ### Follow-up Steps
 - Setiap subbab: baca penuh PDF sumber, catat halaman, jalankan pemeriksaan halaman otomatis, tulis naskah ≤ alokasi halaman, tambah Lampiran A/B/C, perbarui berkas ini, komit dan dorong ke branch.
@@ -188,7 +193,7 @@ Ikuti pilihan pengguna untuk **subbab berikutnya** atau revisi II.3 (mis. pemang
 - Unggahan PDF yang belum ada (bagian 8) sesuai subbab yang dipilih.
 - Konfirmasi gaya sitasi final dan struktur Bab II dari prodi/pembimbing bila sudah ada.
 - Tinjauan terhadap draf II.3, termasuk penanda `[SESUAIKAN DENGAN BAB I]`.
-- Keputusan tentang panjang II.3 (± 4,3 halaman vs alokasi 3,5): pangkas atau sesuaikan alokasi.
+- Keputusan tentang panjang II.3 (± 4,30 halaman vs alokasi 3,5) dan penyesuaian alokasi subbab sisa: pangkas atau sesuaikan.
 - Salinan `.docx` hasil harus diambil dari repo dan ditempatkan sendiri ke folder OneDrive (agent tidak dapat menulis ke `C:\`).
 
 ## 15. CONTINUATION INSTRUCTION
