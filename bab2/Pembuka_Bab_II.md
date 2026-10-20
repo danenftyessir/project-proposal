@@ -6,4 +6,4 @@
 
 ## Naskah
 
-Bab ini menelaah literatur yang terkait langsung dengan peran penulis dalam tim, yaitu komponen AI/NLP untuk memeriksa dokumentasi klaim rawat inap kasus kebidanan dan anak sebelum diajukan ke BPJS Kesehatan. Subbab II.1 membahas dokumentasi klinis dan klaim JKN. Subbab II.2 sampai II.7 membahas NLP dan LLM pada teks klinis, audit otomatis dokumentasi dan kode diagnosis, pendekatan hibrida berbasis aturan dan AI/NLP, RAG dan halusinasi, de-identifikasi, serta evaluasi. Subbab II.8 membandingkan karya terdahulu yang terdekat dan menyatakan celah yang menjadi sasaran penelitian ini.
+Bab ini menelaah literatur yang terkait langsung dengan peran penulis dalam tim, yaitu komponen AI/NLP untuk memeriksa dokumentasi klaim rawat inap kasus kebidanan dan anak sebelum diajukan ke BPJS Kesehatan. Telaah bergerak dari konteks klaim JKN (II.1) ke pemrosesan teks klinis dan LLM (II.2), audit otomatis, pendekatan hibrida, RAG, de-identifikasi, dan evaluasi (II.3 sampai II.7), lalu membandingkan karya terdekat dan menyatakan celah yang menjadi sasaran penelitian ini (II.8).
