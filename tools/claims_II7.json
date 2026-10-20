@@ -1,0 +1,200 @@
+[
+{
+"id": "B1",
+"src": "becker",
+"p": 2,
+"q": "500 clinical routine doctor’s letters"
+},
+{
+"id": "B2",
+"src": "becker",
+"p": 1,
+"q": "Diagnostic, Diagnosis, Drug, Medical_Finding, Therapy"
+},
+{
+"id": "B3",
+"src": "becker",
+"p": 2,
+"q": "about 15 % of the corpus was annotated by two experts"
+},
+{
+"id": "B4",
+"src": "becker",
+"p": 2,
+"q": "one a pharmacist with extensive clinical experience, the other a health economist"
+},
+{
+"id": "B5",
+"src": "becker",
+"p": 2,
+"q": "A threshold of 0.85 was set"
+},
+{
+"id": "B6",
+"src": "becker",
+"p": 2,
+"q": "an additional 5 % of the corpus was annotated with overlap"
+},
+{
+"id": "B7",
+"src": "becker",
+"p": 2,
+"q": "Krippendorff’s Alpha unitizing"
+},
+{
+"id": "B8",
+"src": "becker",
+"p": 1,
+"q": "reaching up to 0.98 for certain subsets"
+},
+{
+"id": "B9",
+"src": "becker",
+"p": 2,
+"q": "The entire annotation process took seven months"
+},
+{
+"id": "B10",
+"src": "becker",
+"p": 2,
+"q": "ranged from 10 to 40 min"
+},
+{
+"id": "B11",
+"src": "becker",
+"p": 4,
+"q": "high emphasis on the correct recognition of entity boundaries"
+},
+{
+"id": "B12",
+"src": "becker",
+"p": 1,
+"q": "macro-average F1 score of 0.845"
+},
+{
+"id": "B13",
+"src": "becker",
+"p": 4,
+"q": "commonly confuse MEDICAL_FINDING and DIAGNOSIS"
+},
+{
+"id": "B14",
+"src": "becker",
+"p": 3,
+"q": "80 % main stem stenosis"
+},
+{
+"id": "K1",
+"src": "koevorden",
+"p": 1,
+"q": "Clinical documentation from 60 patients (1482 pages) was analyzed"
+},
+{
+"id": "K2",
+"src": "koevorden",
+"p": 1,
+"q": "Data were extracted for 29 clinically relevant categories by two physicians and a pretrained open-source LLM"
+},
+{
+"id": "K3",
+"src": "koevorden",
+"p": 1,
+"q": "Six clinical experts evaluated 2555 extracted values in a two-step procedure"
+},
+{
+"id": "K4",
+"src": "koevorden",
+"p": 1,
+"q": "accuracies between 74%"
+},
+{
+"id": "K5",
+"src": "koevorden",
+"p": 4,
+"q": "should therefore be interpreted as expert-assigned evaluation metrics"
+},
+{
+"id": "K6",
+"src": "koevorden",
+"p": 4,
+"q": "overall human—human disagreement rate of 29.0%"
+},
+{
+"id": "K7",
+"src": "koevorden",
+"p": 4,
+"q": "disagreement rate of 41.4%"
+},
+{
+"id": "K8",
+"src": "koevorden",
+"p": 5,
+"q": "more than half of the LLM outputs initially scored as discrepant or partially overlapping were ultimately reclassified as valid matches"
+},
+{
+"id": "K9",
+"src": "koevorden",
+"p": 6,
+"q": "65 model responses were classified as hallucinations"
+},
+{
+"id": "K10",
+"src": "koevorden",
+"p": 6,
+"q": "only four were confirmed as genuine hallucinations"
+},
+{
+"id": "K11",
+"src": "koevorden",
+"p": 5,
+"q": "classifying errors as high-impact 61 of 68 times"
+},
+{
+"id": "K12",
+"src": "koevorden",
+"p": 5,
+"q": "insufficient to gauge the potential clinical consequences of extraction errors"
+},
+{
+"id": "K13",
+"src": "koevorden",
+"p": 7,
+"q": "The small number of human extractors limited our ability to statistically assess interobserver variability"
+},
+{
+"id": "K14",
+"src": "koevorden",
+"p": 7,
+"q": "capable of processing Dutch clinical documents effectively"
+},
+{
+"id": "K15",
+"src": "koevorden",
+"p": 8,
+"q": "Finally, a weakness of this study is the question of generalizability"
+},
+{
+"id": "K16",
+"src": "koevorden",
+"p": 1,
+"q": "Head and neck oncology"
+},
+{
+"id": "S1",
+"src": "sun",
+"p": 18,
+"q": "Evaluation of hallucination often relies heavily on expert judgment"
+},
+{
+"id": "S2",
+"src": "sun",
+"p": 18,
+"q": "these evaluations can be subjective and vary depending on the individual’s expertise"
+},
+{
+"id": "B15",
+"src": "becker",
+"p": 3,
+"q": "not directly comparable with scores determined via F1 score calculation for IAA"
+}
+]

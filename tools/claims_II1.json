@@ -1,0 +1,236 @@
+[
+ {
+  "id": "SU1",
+  "src": "susilo",
+  "p": 2,
+  "q": "cessing claims"
+ },
+ {
+  "id": "SU2",
+  "src": "susilo",
+  "p": 2,
+  "q": "on a case-by-case basis according to approved tariffs"
+ },
+ {
+  "id": "SU3",
+  "src": "susilo",
+  "p": 2,
+  "q": "Indonesian Case Base Groups (INA-CBG) for both inpatient and outpatient services"
+ },
+ {
+  "id": "SU4",
+  "src": "susilo",
+  "p": 6,
+  "q": "pending claims, different administrative procedures across BPJS branches, and retrospective claim reviews"
+ },
+ {
+  "id": "SU5",
+  "src": "susilo",
+  "p": 1,
+  "q": "20 in-depth interviews and a focus group discussion"
+ },
+ {
+  "id": "SU6",
+  "src": "susilo",
+  "p": 2,
+  "q": "were conducted in 2020, followed by a focus group discussion in August 2023"
+ },
+ {
+  "id": "SU7",
+  "src": "susilo",
+  "p": 7,
+  "q": "interviews conducted in 2020 and focus group discussions in 2023"
+ },
+ {
+  "id": "SU8",
+  "src": "susilo",
+  "p": 7,
+  "q": "conducted in three provinces"
+ },
+ {
+  "id": "R1",
+  "src": "rachmawaty",
+  "p": 613,
+  "q": "since 2014 the national health insurance of Indonesia"
+ },
+ {
+  "id": "R2",
+  "src": "rachmawaty",
+  "p": 613,
+  "q": "Total inpatient unit admissions were 2870 in 2019 and 1533 in 2020"
+ },
+ {
+  "id": "R3",
+  "src": "rachmawaty",
+  "p": 613,
+  "q": "about 42.9% in 2019 and 61.3% in 2020 were found causing hospital financial losses"
+ },
+ {
+  "id": "R4",
+  "src": "rachmawaty",
+  "p": 613,
+  "q": "mother and child hospitals located in Makassar city"
+ },
+ {
+  "id": "R5",
+  "src": "rachmawaty",
+  "p": 617,
+  "q": "patient health record audits"
+ },
+ {
+  "id": "R6",
+  "src": "rachmawaty",
+  "p": 617,
+  "q": "were higher than the BPJS health insurance tariffs"
+ },
+ {
+  "id": "R7",
+  "src": "rachmawaty",
+  "p": 617,
+  "q": "did not provide breakdown for the hospital costs"
+ },
+ {
+  "id": "R8",
+  "src": "rachmawaty",
+  "p": 613,
+  "q": "January 1 to June 30, 2020"
+ },
+ {
+  "id": "N1",
+  "src": "nilasari",
+  "p": 852,
+  "q": "eight main types of healthcare fraud"
+ },
+ {
+  "id": "N2",
+  "src": "nilasari",
+  "p": 852,
+  "q": "altering a patient"
+ },
+ {
+  "id": "N3",
+  "src": "nilasari",
+  "p": 851,
+  "q": "choose claims that are suspicious for human review"
+ },
+ {
+  "id": "N4",
+  "src": "nilasari",
+  "p": 855,
+  "q": "empirical simulations are still ongoing but not yet done"
+ },
+ {
+  "id": "N5",
+  "src": "nilasari",
+  "p": 857,
+  "q": "No data was used for the research described in this article"
+ },
+ {
+  "id": "B1",
+  "src": "simbolon",
+  "p": 75,
+  "q": "41,8%"
+ },
+ {
+  "id": "B2",
+  "src": "simbolon",
+  "p": 75,
+  "q": "48,4%"
+ },
+ {
+  "id": "B3",
+  "src": "simbolon",
+  "p": 75,
+  "q": "29,7%"
+ },
+ {
+  "id": "B4",
+  "src": "simbolon",
+  "p": 72,
+  "q": "koding yang tidak sesuai, kelengkapan berkas, serta perbedaan"
+ },
+ {
+  "id": "B5",
+  "src": "simbolon",
+  "p": 72,
+  "q": "5 jurnal untuk review dari tahun 2020-2022"
+ },
+ {
+  "id": "B6",
+  "src": "simbolon",
+  "p": 77,
+  "q": "koding yang tidak sesuai, kelengkapan"
+ },
+ {
+  "id": "BA1",
+  "src": "barsasella",
+  "p": 1,
+  "q": "insurance claims data of 4376 patients with T2DM or HTN"
+ },
+ {
+  "id": "BA2",
+  "src": "barsasella",
+  "p": 1,
+  "q": "tertiary referral hospital in Tasikmalaya, Indonesia, between 2016 and 2019"
+ },
+ {
+  "id": "BA3",
+  "src": "barsasella",
+  "p": 1,
+  "q": "to predict inpatient mortality"
+ },
+ {
+  "id": "BA4",
+  "src": "barsasella",
+  "p": 1,
+  "q": "machine-learning algorithms for LoS prediction"
+ },
+ {
+  "id": "BA5",
+  "src": "barsasella",
+  "p": 2,
+  "q": "regional public hospital"
+ },
+ {
+  "id": "BA6",
+  "src": "barsasella",
+  "p": 2,
+  "q": "diagnosis codes or the International Classification of Diseases, Tenth Revision, Clinical Modification"
+ },
+ {
+  "id": "BA7",
+  "src": "barsasella",
+  "p": 2,
+  "q": "INA-CBGs code (containing the code for the primary diagnosis)"
+ },
+ {
+  "id": "BA8",
+  "src": "barsasella",
+  "p": 2,
+  "q": "severity level, discharge status"
+ },
+ {
+  "id": "BA9",
+  "src": "barsasella",
+  "p": 2,
+  "q": "midwifery inpatient, or neonatal"
+ },
+ {
+  "id": "BA10",
+  "src": "barsasella",
+  "p": 1,
+  "q": "A Random forest best predicted inpatient LoS"
+ },
+ {
+  "id": "BA11",
+  "src": "barsasella",
+  "p": 1,
+  "q": "Linear regression model best predicted LoS"
+ },
+ {
+  "id": "BA12",
+  "src": "barsasella",
+  "p": 9,
+  "q": "the linear regression model best predicted inpatient LoS"
+ }
+]

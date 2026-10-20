@@ -1,0 +1,386 @@
+[
+{
+"id": "Y1",
+"src": "yang",
+"p": 1,
+"q": "review 251 studies"
+},
+{
+"id": "Y2",
+"src": "yang",
+"p": 2,
+"q": "RAG applications are concentrated on question answering, report generation, text summarization, and information extraction"
+},
+{
+"id": "Y3",
+"src": "yang",
+"p": 3,
+"q": "a total of 251 studies being analyzed"
+},
+{
+"id": "Y4",
+"src": "yang",
+"p": 3,
+"q": "biomedical scientific corpora constitute the main data source"
+},
+{
+"id": "Y5",
+"src": "yang",
+"p": 3,
+"q": "Clinical guidelines follow closely, adopted in 67 studies"
+},
+{
+"id": "Y6",
+"src": "yang",
+"p": 3,
+"q": "electronic health records (EHRs) (33 studies)"
+},
+{
+"id": "Y7",
+"src": "yang",
+"p": 3,
+"q": "188 studies (83.93%) adopting this approach"
+},
+{
+"id": "Y8",
+"src": "yang",
+"p": 4,
+"q": "only 24 explicitly employed multilingual embed"
+},
+{
+"id": "Y9",
+"src": "yang",
+"p": 4,
+"q": "remaining studies relied on English-centric embedding models"
+},
+{
+"id": "Y10",
+"src": "yang",
+"p": 2,
+"q": "medical RAG remains at an early stage, requiring advances in clinical validation, cross-linguistic adaptation"
+},
+{
+"id": "LA2",
+"src": "landolsi",
+"p": 6,
+"q": "57 papers across 10 medical fields"
+},
+{
+"id": "LA3",
+"src": "landolsi",
+"p": 19,
+"q": "only 6 of the 57 studies draw on explicitly non-Western or non-English-language"
+},
+{
+"id": "LA4",
+"src": "landolsi",
+"p": 19,
+"q": "only 4 studies explicitly validate across more than one institution"
+},
+{
+"id": "Z1",
+"src": "zhang",
+"p": 1,
+"q": "Australian aged care facilities"
+},
+{
+"id": "Z2",
+"src": "zhang",
+"p": 1,
+"q": "we systematically compare six retrieval methods"
+},
+{
+"id": "Z3",
+"src": "zhang",
+"p": 5,
+"q": "Llama3.1.8 B to generate responses"
+},
+{
+"id": "Z4",
+"src": "zhang",
+"p": 4,
+"q": "Each Gold-standard test dataset contains 208 records"
+},
+{
+"id": "Z5",
+"src": "zhang",
+"p": 6,
+"q": "Without RAG, the LLM achieved Answer F1 scores of 0.702 for agitation symptom extraction and 0.722 for malnutrition risk factor extraction"
+},
+{
+"id": "Z6",
+"src": "zhang",
+"p": 6,
+"q": "achieving F1 scores of 0.946 and 0.953, respectively"
+},
+{
+"id": "Z7",
+"src": "zhang",
+"p": 3,
+"q": "BERTScore, which embeds both texts into contextualised vector representations"
+},
+{
+"id": "Z8",
+"src": "zhang",
+"p": 8,
+"q": "Intrinsic fabrications occur when the model misrepresents information that is present in the source text"
+},
+{
+"id": "Z9",
+"src": "zhang",
+"p": 9,
+"q": "intrinsic fabrications were the most prevalent error type across all retrieval methods, followed by extrinsic fabrications, whereas false negatives occurred less frequently"
+},
+{
+"id": "Z10",
+"src": "zhang",
+"p": 11,
+"q": "did not evaluate tasks involving relation extraction, temporal reasoning, or open-ended clinical question"
+},
+{
+"id": "J1",
+"src": "jia",
+"p": 2,
+"q": "82.98% on the United States Medical Licensing Examination"
+},
+{
+"id": "J2",
+"src": "jia",
+"p": 2,
+"q": "surpassing GPT-4's 80.67%"
+},
+{
+"id": "J3",
+"src": "jia",
+"p": 2,
+"q": "Our system features a lightweight retrieval-augmented generation pipeline for efficient evidence retrieval and reranking"
+},
+{
+"id": "W1",
+"src": "waqas",
+"p": 4,
+"q": "factual hallucination, where an assertion is contradicted by world"
+},
+{
+"id": "W2",
+"src": "waqas",
+"p": 4,
+"q": "faithful hallucination, where an assertion is inconsistent with the"
+},
+{
+"id": "W3",
+"src": "waqas",
+"p": 4,
+"q": "temporal hallucination, where date information is inaccurate"
+},
+{
+"id": "W4",
+"src": "waqas",
+"p": 4,
+"q": "90 retained publications"
+},
+{
+"id": "W5",
+"src": "waqas",
+"p": 4,
+"q": "No formal meta-analysis or risk-of-bias score"
+},
+{
+"id": "W6",
+"src": "waqas",
+"p": 10,
+"q": "proved that the hallucinations still happen when the context is ambiguous or retrieval fails to identify all relevant evidence"
+},
+{
+"id": "W7",
+"src": "waqas",
+"p": 18,
+"q": "very low false positives rates are needed"
+},
+{
+"id": "S1",
+"src": "sun",
+"p": 4,
+"q": "55 articles were included in our final review"
+},
+{
+"id": "S2",
+"src": "sun",
+"p": 15,
+"q": "Fifteen articles about hallucination detection and mitigation"
+},
+{
+"id": "S3",
+"src": "sun",
+"p": 15,
+"q": "Current research on hallucination mitigation mainly focuses on QA tasks"
+},
+{
+"id": "S4",
+"src": "sun",
+"p": 15,
+"q": "there were few datasets and studies directly related to hallucination detection"
+},
+{
+"id": "S5",
+"src": "sun",
+"p": 18,
+"q": "Evaluation of hallucination often relies heavily on expert judgment"
+},
+{
+"id": "S6",
+"src": "sun",
+"p": 18,
+"q": "The absence of standardized, objective, and scalable evaluation frameworks"
+},
+{
+"id": "LI1",
+"src": "li",
+"p": 3,
+"q": "Cron Job every six months"
+},
+{
+"id": "LI2",
+"src": "li",
+"p": 4,
+"q": "unique literature ID, source (e.g., NASS guidelines), publication year, and evidence level"
+},
+{
+"id": "LI3",
+"src": "li",
+"p": 4,
+"q": "top-4 most relevant"
+},
+{
+"id": "LI4",
+"src": "li",
+"p": 4,
+"q": "recommendation + cited paragraph"
+},
+{
+"id": "LI5",
+"src": "li",
+"p": 4,
+"q": "no clear conclusions available"
+},
+{
+"id": "LI6",
+"src": "li",
+"p": 1,
+"q": "200 real-world spinal cases"
+},
+{
+"id": "LI7",
+"src": "li",
+"p": 1,
+"q": "Five spine surgeons independently evaluated model outputs using an 11-dimen"
+},
+{
+"id": "LI8",
+"src": "li",
+"p": 5,
+"q": "Accuracy and precision of cited"
+},
+{
+"id": "LI9",
+"src": "li",
+"p": 9,
+"q": "single-center context"
+},
+{
+"id": "LI10",
+"src": "li",
+"p": 9,
+"q": "relative performance of different LLM agents within a unified RAG framework"
+},
+{
+"id": "ZE1",
+"src": "zeba",
+"p": 1,
+"q": "fact-checking module that operates independently of any LLM"
+},
+{
+"id": "ZE2",
+"src": "zeba",
+"p": 7,
+"q": "atomic propositions"
+},
+{
+"id": "ZE3",
+"src": "zeba",
+"p": 6,
+"q": "Supported or Not Supported"
+},
+{
+"id": "ZE4",
+"src": "zeba",
+"p": 14,
+"q": "negation, implication, temporal, mutual exclusiveness, numerical, and presence checks"
+},
+{
+"id": "ZE5",
+"src": "zeba",
+"p": 1,
+"q": "we sampled 104 summaries, extracted them into 3786 propositions"
+},
+{
+"id": "ZE6",
+"src": "zeba",
+"p": 1,
+"q": "precision of 0.8904, a recall of 0.8234, and an F1-score of 0.8556"
+},
+{
+"id": "ZE7",
+"src": "zeba",
+"p": 14,
+"q": "drop exceeding 8% in precision"
+},
+{
+"id": "ZE8",
+"src": "zeba",
+"p": 10,
+"q": "collected from intensive care units"
+},
+{
+"id": "ZE9",
+"src": "zeba",
+"p": 15,
+"q": "pediatric metabolic"
+},
+{
+"id": "ZE10",
+"src": "zeba",
+"p": 15,
+"q": "binary gate"
+},
+{
+"id": "ZE11",
+"src": "zeba",
+"p": 10,
+"q": "proposition-level annotation by clinicians"
+},
+{
+"id": "Z11",
+"src": "zhang",
+"p": 1,
+"q": "agitation symptoms in dementia (n = 208) and identifying malnutrition risk factors (n = 208)"
+},
+{
+"id": "Z12",
+"src": "zhang",
+"p": 5,
+"q": "transform unstructured clinical notes into machine-readable knowledge representations"
+},
+{
+"id": "Z13",
+"src": "zhang",
+"p": 5,
+"q": "using prompting alone, without any retrieved context"
+},
+{
+"id": "LA5",
+"src": "landolsi",
+"p": 13,
+"q": "35.41% of the selected"
+}
+]

@@ -1,0 +1,224 @@
+[
+{
+"id": "F1",
+"src": "faustini",
+"p": 1,
+"q": "From a set of 734 papers, 83 articles were deemed relevant"
+},
+{
+"id": "F2",
+"src": "faustini",
+"p": 1,
+"q": "articles published from January 2015 to December 2024"
+},
+{
+"id": "F3",
+"src": "faustini",
+"p": 2,
+"q": "adopt de-identification for detection, replacement or removal of Protected Health Information"
+},
+{
+"id": "F4",
+"src": "faustini",
+"p": 1,
+"q": "increased use of Language Models"
+},
+{
+"id": "F5",
+"src": "faustini",
+"p": 1,
+"q": "Off-the-shelf tools often require customisation for optimal performance"
+},
+{
+"id": "F6",
+"src": "faustini",
+"p": 1,
+"q": "Most studies de-identify English content, supported by the prevalence of English datasets"
+},
+{
+"id": "F7",
+"src": "faustini",
+"p": 6,
+"q": "Rule-based methods remain common outside of English"
+},
+{
+"id": "F8",
+"src": "faustini",
+"p": 1,
+"q": "the phenomenon of code-mixing"
+},
+{
+"id": "F9",
+"src": "faustini",
+"p": 1,
+"q": "the scarcity of available datasets for reproducibility"
+},
+{
+"id": "F10",
+"src": "faustini",
+"p": 5,
+"q": "struggled to identify Slavic, as well as Central and Southeast Asian names, compared to English names"
+},
+{
+"id": "F11",
+"src": "faustini",
+"p": 6,
+"q": "goes as low as.33"
+},
+{
+"id": "F12",
+"src": "faustini",
+"p": 6,
+"q": "compared to.98 with a detailed prompt"
+},
+{
+"id": "A1",
+"src": "azzam",
+"p": 1,
+"q": "Locally hosted LLMs handle all privacy-sensitive steps"
+},
+{
+"id": "A2",
+"src": "azzam",
+"p": 1,
+"q": "public LLMs are used exclusively for reasoning on pre-anonymized inputs"
+},
+{
+"id": "A3",
+"src": "azzam",
+"p": 10,
+"q": "secure local mapping"
+},
+{
+"id": "A4",
+"src": "azzam",
+"p": 12,
+"q": "0.329 0.342 0.515 0.350 0.405 1.000"
+},
+{
+"id": "A5",
+"src": "azzam",
+"p": 12,
+"q": "0.893 0.893 0.397 0.495 0.896 0.936"
+},
+{
+"id": "A6",
+"src": "azzam",
+"p": 1,
+"q": "We evaluate our system on a synthetic clinical dataset"
+},
+{
+"id": "A7",
+"src": "azzam",
+"p": 1,
+"q": "achieving a clean transformation rate of 98.6%"
+},
+{
+"id": "A8",
+"src": "azzam",
+"p": 15,
+"q": "These placeholders were treated as proxy ground"
+},
+{
+"id": "A9",
+"src": "azzam",
+"p": 15,
+"q": "since the dataset is already de-identified"
+},
+{
+"id": "A10",
+"src": "azzam",
+"p": 12,
+"q": "medication mentions remain largely intact (0.974"
+},
+{
+"id": "A11",
+"src": "azzam",
+"p": 12,
+"q": "Dosage information shows a lower preservation rate (0.769"
+},
+{
+"id": "A12",
+"src": "azzam",
+"p": 19,
+"q": "Currently, the system supports only English-language inputs"
+},
+{
+"id": "T1",
+"src": "tchouka",
+"p": 2,
+"q": "all experiments were conducted on-site, and no data was extracted from"
+},
+{
+"id": "T2",
+"src": "tchouka",
+"p": 1,
+"q": "sensitive entities in French medical data"
+},
+{
+"id": "T3",
+"src": "tchouka",
+"p": 7,
+"q": "replacing location and date entities with random ones may lead to"
+},
+{
+"id": "T4",
+"src": "tchouka",
+"p": 7,
+"q": "loss of geographic epidemiological data for the former and chronological aspect for the latter"
+},
+{
+"id": "T5",
+"src": "tchouka",
+"p": 2,
+"q": "helps reduce the loss of utility (6.8%) compared to a traditional de-identification method (12%"
+},
+{
+"id": "T6",
+"src": "tchouka",
+"p": 13,
+"q": "decreased by 12% (in terms of a classification score) when replacing each entity with its TAG"
+},
+{
+"id": "T7",
+"src": "tchouka",
+"p": 13,
+"q": "not immune from a re-identification or membership attack"
+},
+{
+"id": "T8",
+"src": "tchouka",
+"p": 13,
+"q": "even de-identified datasets cannot be disseminated"
+},
+{
+"id": "T9",
+"src": "tchouka",
+"p": 1,
+"q": "Local differential privacy"
+},
+{
+"id": "T10",
+"src": "tchouka",
+"p": 2,
+"q": "a French public health center"
+},
+{
+"id": "T11",
+"src": "tchouka",
+"p": 12,
+"q": "This de-identification approach is the most robust against potential re-identification attacks"
+},
+{
+"id": "T12",
+"src": "tchouka",
+"p": 12,
+"q": "by removing the values of the entities, they cannot be exploited for classification"
+},
+{
+"id": "T13",
+"src": "tchouka",
+"p": 12,
+"q": "The percentage gap between the original corpus ICD-10-HNFC and the de-identified corpus ICD-10-TAG-HNFC is approximately 12%"
+}
+]

@@ -1,0 +1,377 @@
+[
+{
+"id": "O1",
+"src": "olex",
+"p": 1,
+"q": "Clinical Natural Language Processing (NLP) is an area of research that aims to build computational methods to automatically extract medically relevant information from unstructured clinical texts"
+},
+{
+"id": "L1",
+"src": "luo",
+"p": 1,
+"q": "text summarisation, question-answering, machine translation, sentiment analysis, named entity recognition, information extraction"
+},
+{
+"id": "L2",
+"src": "luo",
+"p": 1,
+"q": "pre-trained (unsupervised) on large text corpora"
+},
+{
+"id": "E1",
+"src": "elvas",
+"p": 1,
+"q": "Of 67 initial records, 31 studies were ultimately included"
+},
+{
+"id": "E2",
+"src": "elvas",
+"p": 1,
+"q": "consistently achieving F1-scores above 85 %"
+},
+{
+"id": "E3",
+"src": "elvas",
+"p": 2,
+"q": "we did not perform a formal quality appraisal"
+},
+{
+"id": "E4",
+"src": "elvas",
+"p": 2,
+"q": "We decided to exclude large language models (LLMs) from our"
+},
+{
+"id": "E5",
+"src": "elvas",
+"p": 4,
+"q": "Reviewed articles by their data languages"
+},
+{
+"id": "K1",
+"src": "kumar",
+"p": 3,
+"q": "153 studies were eligible"
+},
+{
+"id": "K2",
+"src": "kumar",
+"p": 21,
+"q": "concentrated primarily in English and other high-resource languages"
+},
+{
+"id": "K3",
+"src": "kumar",
+"p": 21,
+"q": "code-switching, transliteration, and non-standard orthography"
+},
+{
+"id": "K4",
+"src": "kumar",
+"p": 21,
+"q": "further complicate tokenization and parsing"
+},
+{
+"id": "W1",
+"src": "woo",
+"p": 1,
+"q": "Forty-one studies met inclusion criteria"
+},
+{
+"id": "W2",
+"src": "woo",
+"p": 1,
+"q": "clinical note generation, discharge summaries, and provider-patient encounter documentation"
+},
+{
+"id": "W3",
+"src": "woo",
+"p": 1,
+"q": "up to 40 % time savings"
+},
+{
+"id": "W4",
+"src": "woo",
+"p": 1,
+"q": "factual inaccuracies, hallucinations, and reduced performance in complex cases were common"
+},
+{
+"id": "W5",
+"src": "woo",
+"p": 9,
+"q": "ChatGPT introduced erroneous information in 36 % of documents"
+},
+{
+"id": "W6",
+"src": "woo",
+"p": 9,
+"q": "sourced only 61 % of their content from inpatient records"
+},
+{
+"id": "W7",
+"src": "woo",
+"p": 4,
+"q": "originated from the United States (US) (n = 17)"
+},
+{
+"id": "W8",
+"src": "woo",
+"p": 11,
+"q": "most studies were conducted in controlled or simulated environments"
+},
+{
+"id": "W9",
+"src": "woo",
+"p": 11,
+"q": "non-English studies were excluded"
+},
+{
+"id": "W10",
+"src": "woo",
+"p": 9,
+"q": "struggled with temporally complex patient trajectories"
+},
+{
+"id": "W11",
+"src": "woo",
+"p": 9,
+"q": "GPT-4o performed reliably for neurovascular consultations"
+},
+{
+"id": "J1",
+"src": "jafarpour",
+"p": 1,
+"q": "grammatically incorrect sentences, abbreviations, frequent acronyms, specialized characters with particular meanings, negation expressions, and sporadic misspellings"
+},
+{
+"id": "J2",
+"src": "jafarpour",
+"p": 4,
+"q": "composed in the English language"
+},
+{
+"id": "J3",
+"src": "jafarpour",
+"p": 1,
+"q": "hospital adverse events"
+},
+{
+"id": "J4",
+"src": "jafarpour",
+"p": 9,
+"q": "which can process a maximum of 512 words"
+},
+{
+"id": "J5",
+"src": "jafarpour",
+"p": 9,
+"q": "differentiate between past events and current occurrences"
+},
+{
+"id": "J6",
+"src": "jafarpour",
+"p": 9,
+"q": "potentially resulting in the omission or fragmentation of critical"
+},
+{
+"id": "WE1",
+"src": "wei",
+"p": 1,
+"q": "shifts the paradigm from generation to constrained selection"
+},
+{
+"id": "WE2",
+"src": "wei",
+"p": 1,
+"q": "Discriminative selection from the resulting 7-option pool"
+},
+{
+"id": "WE3",
+"src": "wei",
+"p": 1,
+"q": "accuracy: 0.9228, Macro-F1: 0.9279"
+},
+{
+"id": "WE4",
+"src": "wei",
+"p": 1,
+"q": "accuracy: 0.7585"
+},
+{
+"id": "WE5",
+"src": "wei",
+"p": [
+7,
+8
+],
+"q": "performs substantially lower at 0.6304"
+},
+{
+"id": "WE6",
+"src": "wei",
+"p": 5,
+"q": "defined as a shortened form consisting of capital letters"
+},
+{
+"id": "WE7",
+"src": "wei",
+"p": 9,
+"q": "intrinsically tied to the retrieval inventory"
+},
+{
+"id": "WE8",
+"src": "wei",
+"p": 9,
+"q": "struggle with outof-vocabulary terms or evolving medical neologisms"
+},
+{
+"id": "WE9",
+"src": "wei",
+"p": 9,
+"q": "selection mechanism is sensitive to context quality"
+},
+{
+"id": "WE10",
+"src": "wei",
+"p": 9,
+"q": "anchored to the CASI benchmark"
+},
+{
+"id": "WE11",
+"src": "wei",
+"p": 9,
+"q": "non-English clinical corpora"
+},
+{
+"id": "C1",
+"src": "chen",
+"p": 1,
+"q": "mapping informal medical terms or phrases to standardized medical concepts"
+},
+{
+"id": "C2",
+"src": "chen",
+"p": 4,
+"q": "the target medical databases include the Unified Medical Language System"
+},
+{
+"id": "C3",
+"src": "chen",
+"p": 6,
+"q": "over 200 source vocabularies across 29 languages, including ICD, SNOMED-CT, and MeSH"
+},
+{
+"id": "C4",
+"src": "chen",
+"p": 13,
+"q": "where explicit rules and lexicons are reliable"
+},
+{
+"id": "C5",
+"src": "chen",
+"p": 8,
+"q": "English corpora currently dominate MCN research"
+},
+{
+"id": "C6",
+"src": "chen",
+"p": 8,
+"q": "Annotation guidelines diverge across languages, ontologies differ in conceptual granularity"
+},
+{
+"id": "C7",
+"src": "chen",
+"p": 8,
+"q": "literal term translations often lose language-specific"
+},
+{
+"id": "O2",
+"src": "olex",
+"p": 2,
+"q": "five ways temporal information can be conveyed in text: explicit, implicit, relative, vague, and non-consuming"
+},
+{
+"id": "O3",
+"src": "olex",
+"p": 2,
+"q": "may be relative to the document creation time"
+},
+{
+"id": "O4",
+"src": "olex",
+"p": 2,
+"q": "are relative to when the event"
+},
+{
+"id": "O5",
+"src": "olex",
+"p": 1,
+"q": "the current state-of-the-art still has a ways to go before practical application in the clinical setting will be possible"
+},
+{
+"id": "O6",
+"src": "olex",
+"p": 1,
+"q": "handling relative and implicit temporal expressions"
+},
+{
+"id": "O7",
+"src": "olex",
+"p": 2,
+"q": "rule-based systems that expanded the top general-domain temporal taggers"
+},
+{
+"id": "O8",
+"src": "olex",
+"p": 2,
+"q": "statistical machine learning methods outperformed rule-based methods for event"
+},
+{
+"id": "WE12",
+"src": "wei",
+"p": 5,
+"q": "two versions of the English CASI dataset"
+},
+{
+"id": "WE13",
+"src": "wei",
+"p": 5,
+"q": "While the original dataset contains noise"
+},
+{
+"id": "O9",
+"src": "olex",
+"p": 1,
+"q": "understanding a patient's medical history relies heavily on the ability to identify, assimilate, and reason over temporal information"
+},
+{"id": "SC1", "src": "schwieger", "p": 1, "q": "compared 20 inpatient DS, written by residents"},
+{"id": "SC2", "src": "schwieger", "p": 1, "q": "pseudonymized residents"},
+{"id": "SC3", "src": "schwieger", "p": 1, "q": "8 blinded psychiatry specialists"},
+{"id": "SC4", "src": "schwieger", "p": 1, "q": "mean ratings: human 3.78, AI 3.12"},
+{"id": "SC5", "src": "schwieger", "p": 1, "q": "Hallucinations were present in 40 % of AI-DS"},
+{"id": "SC6", "src": "schwieger", "p": 2, "q": "unblinded case-based review, comparing both DS versions qualitatively with their respective EHRs"},
+{"id": "SC7", "src": "schwieger", "p": 8, "q": "the small sample size, the token restriction, the low to moderate inter-rater agreement, the use of a non-specialized LLM, and no formal evaluation of information"},
+{"id": "SC8", "src": "schwieger", "p": 3, "q": "manually pseudonymized"},
+{"id": "SC9", "src": "schwieger", "p": 2, "q": "randomly selected 10 cases to develop the custom prompt"},
+{"id": "SC10", "src": "schwieger", "p": 1, "q": "Hallucinations were present in 40 % of AI-DS, with 37.5 % deemed highly clinically relevant"},
+{"id": "ME1", "src": "mehri", "p": 1, "q": "A total of 292 paired discharge summaries"},
+{"id": "ME2", "src": "mehri", "p": 1, "q": "EHR-integrated"},
+{"id": "ME3", "src": "mehri", "p": 1, "q": "Dutch academic hospital"},
+{"id": "ME4", "src": "mehri", "p": 5, "q": "originated from 16 clinical departments"},
+{"id": "ME5", "src": "mehri", "p": 6, "q": "median completeness score of 4.5"},
+{"id": "ME6", "src": "mehri", "p": 6, "q": "(p = 0.14)"},
+{"id": "ME7", "src": "mehri", "p": 6, "q": "The total score was 14.0"},
+{"id": "ME8", "src": "mehri", "p": 6, "q": "trusted by both reviewers in 249 (85.3%) cases"},
+{"id": "ME9", "src": "mehri", "p": 6, "q": "rejected by both in 9"},
+{"id": "ME10", "src": "mehri", "p": 6, "q": "trusted by both reviewers in 279 (95.5%) of 292 cases"},
+{"id": "ME11", "src": "mehri", "p": 6, "q": "Pediatrics (n=29)"},
+{"id": "ME12", "src": "mehri", "p": 6, "q": "Obstetrics and Gynecology (n=12)"},
+{"id": "ME13", "src": "mehri", "p": 9, "q": "no hallucinated or clinically implausible information was identified by the clinician raters"},
+{"id": "ME14", "src": "mehri", "p": 9, "q": "not scored as a separate domain"},
+{"id": "ME15", "src": "mehri", "p": 9, "q": "single Dutch academic hospital and limited to Dutch-language summaries"},
+{"id": "ME16", "src": "mehri", "p": 10, "q": "clustered near the upper end of the Likert scale, indicating a ceiling effect"},
+{"id": "ME17", "src": "mehri", "p": 3, "q": "hospital course section of the discharge summary"},
+{"id": "ME18", "src": "mehri", "p": 4, "q": "independently rated by two clinicians selected from a pool of eight reviewers"},
+{"id": "ME19", "src": "mehri", "p": 10, "q": "limiting transparency into the underlying prompt"},
+{"id": "ME20", "src": "mehri", "p": 3, "q": "conducted by the vendor"}
+]

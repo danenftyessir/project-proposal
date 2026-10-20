@@ -1,0 +1,212 @@
+[
+{
+"id": "K1",
+"src": "kumar",
+"p": 12,
+"q": "Transparency and interpretability make rule-based and hybrid NLP"
+},
+{
+"id": "K2",
+"src": "kumar",
+"p": 12,
+"q": "Their main advantage is that they are predictable and readily validated, especially in regulated clinical conditions"
+},
+{
+"id": "K3",
+"src": "kumar",
+"p": 12,
+"q": "not scalable across institutions and specialties"
+},
+{
+"id": "K4",
+"src": "kumar",
+"p": 12,
+"q": "poor performance when used with new data sets or changing documentation habits"
+},
+{
+"id": "K5",
+"src": "kumar",
+"p": 12,
+"q": "best suited to small scope endeavors or elements of hybrid pipelines"
+},
+{
+"id": "C1",
+"src": "chen",
+"p": 13,
+"q": "Rule-oriented normalization remains effective for constrained subproblems"
+},
+{
+"id": "C2",
+"src": "chen",
+"p": 13,
+"q": "where explicit rules and lexicons are reliable"
+},
+{
+"id": "D1",
+"src": "domingues",
+"p": 1,
+"q": "Evidence from 23 international guidelines was formalized into a JSON-based rule base"
+},
+{
+"id": "D2",
+"src": "domingues",
+"p": 2,
+"q": "The resulting rule base comprised 1,236 discrete rules"
+},
+{
+"id": "D3",
+"src": "domingues",
+"p": 2,
+"q": "justification trace that cites the specific rules and guideline sources activated during reasoning"
+},
+{
+"id": "D4",
+"src": "domingues",
+"p": 1,
+"q": "Feasibility was tested using ten published case reports"
+},
+{
+"id": "D5",
+"src": "domingues",
+"p": 3,
+"q": "This study is a technical feasibility evaluation using ten"
+},
+{
+"id": "D6",
+"src": "domingues",
+"p": 1,
+"q": "Divergences primarily reflected simplified life-expectancy modeling and incomplete case data"
+},
+{
+"id": "D7",
+"src": "domingues",
+"p": 7,
+"q": "these can bias recommendations in unpredictable ways"
+},
+{
+"id": "D8",
+"src": "domingues",
+"p": 7,
+"q": "manual updating risks lagging behind clinical practice"
+},
+{
+"id": "D9",
+"src": "domingues",
+"p": 2,
+"q": "hybrid-ready rather than hybrid-implemented"
+},
+{
+"id": "D10",
+"src": "domingues",
+"p": 2,
+"q": "The current implementation represents the deterministic rule-based phase of a broader hybrid architecture"
+},
+{
+"id": "D11",
+"src": "domingues",
+"p": 1,
+"q": "A hybrid decision support system using rule-based and AI methods"
+},
+{
+"id": "I1",
+"src": "ijadi",
+"p": 1,
+"q": "screening 3,892 de-duplicated records to 101 sources retained"
+},
+{
+"id": "I2",
+"src": "ijadi",
+"p": 4,
+"q": "three conditions are met"
+},
+{
+"id": "I3",
+"src": "ijadi",
+"p": 4,
+"q": "at least five recurring hybrid design patterns"
+},
+{
+"id": "I4",
+"src": "ijadi",
+"p": 5,
+"q": "Neural extraction plus symbolic validation"
+},
+{
+"id": "I5",
+"src": "ijadi",
+"p": 5,
+"q": "Report abstraction, coding, registry capture"
+},
+{
+"id": "I6",
+"src": "ijadi",
+"p": 1,
+"q": "Hybrid designs appear most credible in rule-bound, audit-sensitive, and workflow-dependent settings, including documentation validation"
+},
+{
+"id": "I7",
+"src": "ijadi",
+"p": 7,
+"q": "The empirical base is stronger for bounded tasks such as report validation, information extraction, and constrained recommendation"
+},
+{
+"id": "I8",
+"src": "ijadi",
+"p": 7,
+"q": "Hybrid validation is therefore especially compelling here, since it can enforce required elements, detect inconsistencies"
+},
+{
+"id": "I9",
+"src": "ijadi",
+"p": 1,
+"q": "the empirical base remains limited; prospective evidence is sparse"
+},
+{
+"id": "I10",
+"src": "ijadi",
+"p": 6,
+"q": "should be read as hypothesis-generating rather than confirmatory"
+},
+{
+"id": "I11",
+"src": "ijadi",
+"p": 1,
+"q": "knowledge acquisition, ontology misalignment, rule conflict, and maintenance overhead"
+},
+{
+"id": "I12",
+"src": "ijadi",
+"p": 9,
+"q": "Symbolic layers require curation, versioning, adjudication, and retirement"
+},
+{
+"id": "I13",
+"src": "ijadi",
+"p": 2,
+"q": "non-English records"
+},
+{
+"id": "I14",
+"src": "ijadi",
+"p": 9,
+"q": "high-income, digitally mature health systems"
+},
+{
+"id": "D5b",
+"src": "domingues",
+"p": 5,
+"q": "it is not a clinical validation"
+},
+{
+"id": "I15",
+"src": "ijadi",
+"p": 9,
+"q": "does not provide the exhaustive capture or quantitative synthesis of a systematic review"
+},
+{
+"id": "I16",
+"src": "ijadi",
+"p": 4,
+"q": "improved the auditability and accuracy of entity recognition and linking"
+}
+]
