@@ -27,6 +27,14 @@ PDFS = {
  "jafarpour": (ROOT+"source/1-s2.0-S0933365725002167-main.pdf", 0),
  "domingues": (ROOT+"source/1-s2.0-S1386505625003612-main.pdf", 0),
  "ijadi":    (ROOT+"source/1-s2.0-S2211883726001401-main.pdf", 0),
+ "landolsi": (ROOT+"source/1-s2.0-S0952197626021962-main.pdf", 0),
+ "yang":     (ROOT+"source/1-s2.0-S2666379126003447-main.pdf", 0),
+ "zhang":    (ROOT+"source/1-s2.0-S1532046426000778-main.pdf", 0),
+ "jia":      (ROOT+"source/1-s2.0-S1386505626000791-main.pdf", 0),
+ "li":       (ROOT+"source/1-s2.0-S0720048X26000823-main.pdf", 0),
+ "zeba":     (ROOT+"source/1-s2.0-S0957417426018786-main.pdf", 0),
+ "sun":      (ROOT+"source/1-s2.0-S1532046425000954-main.pdf", 0),
+ "waqas":    (ROOT+"source/1-s2.0-S2949719126000361-main.pdf", 0),
 }
 
 def norm(t):
