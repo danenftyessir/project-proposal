@@ -484,5 +484,35 @@
   "src": "kgace",
   "p": 4,
   "q": "drug interactions, contraindications, causal relations, mutual exclusions, and temporal orderings"
+ },
+ {
+  "id": "EV1",
+  "src": "landolsi",
+  "p": 5,
+  "q": "Recall@k evaluates whether relevant documents appear within the top-k retrieved results"
+ },
+ {
+  "id": "EV2",
+  "src": "landolsi",
+  "p": 5,
+  "q": "generation quality depends on the correctness and ordering"
+ },
+ {
+  "id": "EV3",
+  "src": "yang",
+  "p": 7,
+  "q": "independent quantitative evaluation of retrieval accuracy"
+ },
+ {
+  "id": "EV4",
+  "src": "yang",
+  "p": 7,
+  "q": "identify the sources of system errors"
+ },
+ {
+  "id": "EV5",
+  "src": "hou",
+  "p": 6,
+  "q": "indicates the proportion of the real labels in the top-K predicted labels"
  }
 ]

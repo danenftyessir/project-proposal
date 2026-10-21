@@ -196,5 +196,29 @@
 "src": "becker",
 "p": 3,
 "q": "not directly comparable with scores determined via F1 score calculation for IAA"
+},
+{
+"id": "EV6",
+"src": "domingues",
+"p": 3,
+"q": "Quantified accuracy and completeness of recommendations"
+},
+{
+"id": "EV7",
+"src": "domingues",
+"p": 3,
+"q": "where TP, FP, and FN denote true positives, false positives, and false negat"
+},
+{
+"id": "EV8",
+"src": "hou",
+"p": 6,
+"q": "is the simple average of label-wise metrics"
+},
+{
+"id": "EV9",
+"src": "hou",
+"p": 6,
+"q": "macro-average values can better reflect the performance of rare labels"
 }
 ]
