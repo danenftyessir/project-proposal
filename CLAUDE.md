@@ -528,3 +528,143 @@ Materi ini melengkapi instruksi operasional pada Bagian 4 dan 9. Terapkan saran 
 * **Strategi Pemanfaatan LLM dan Model Terstruktur untuk Riset Kode (Menit 56:40 & 1:20:30–1:22:30):**
   * **Masalah Biaya Inferensi LLM & Pembuatan *Ground Truth*:** Menggunakan LLM berukuran besar secara langsung untuk mengklasifikasi kode memang lebih fleksibel dibanding aturan *heuristic* kaku, tetapi biaya inferensinya mahal. Salah satu hipotesis riset yang menarik adalah menggunakan konsensus dari beberapa model LLM berbeda (misalnya 5 model) untuk melabeli dataset dan membangun *ground truth* berkualitas tinggi (jika 5 model sepakat, label dianggap valid; jika terbelah, menjadi kasus menarik untuk dianalisis), lalu menggunakan *ground truth* tersebut untuk melatih model khusus yang lebih kecil dan hemat biaya inferensi.
   * **Eksplorasi Model Generatif Terstruktur (seperti JEPA) & *Tools* Analisis Kode (Spoon):** Untuk analisis kode sumber Java, *library* **Spoon** (buatan tim riset di Prancis) direkomendasikan untuk memproses AST/struktur kode. Selain itu, model AI yang menerima input berupa struktur data/graf dan menghasilkan prediksi terstruktur (bukan sekadar teks bahasa alami) layak dieksplorasi untuk klasifikasi komponen perangkat lunak.
+
+---
+
+## 11. Prosedur operasional tambahan: validasi klaim, revisi, dan koordinasi Capstone
+
+Bagian ini melengkapi prosedur yang sudah ada; seluruh aturan sebelumnya tetap berlaku.
+
+### 11.1 Klarifikasi cakupan larangan akses sumber
+
+Larangan pada Bagian 1 tentang membuka atau meminta berkas yang dahulu digunakan untuk menyusun `CLAUDE.md`/`RULES.md` hanya berlaku pada **materi historis pembentukan kedua dokumen instruksi tersebut**. Larangan itu tidak boleh ditafsirkan sebagai larangan memeriksa paper asli, data, lampiran, pedoman resmi, catatan bimbingan, atau berkas lain yang relevan dengan penelitian/proposal yang sedang dikerjakan, apabila pengguna telah menyediakannya atau aksesnya diizinkan. Untuk klaim penelitian yang membutuhkan verifikasi sumber, tetap periksa sumber primer yang relevan; jangan menyatakan verifikasi telah dilakukan jika sumbernya tidak dapat diakses.
+
+### 11.2 Claim–Evidence Log untuk klaim penting
+
+Saat menulis, merevisi, atau mengaudit proposal, buat atau perbarui **Claim–Evidence Log** untuk klaim substantif yang memengaruhi problem statement, research gap, pilihan metode/desain, data/angka, perbandingan, hasil penelitian terdahulu, kebutuhan sistem, metrik, dan kontribusi. Tidak perlu mencatat setiap kalimat transisi atau pernyataan umum.
+
+Setiap entri sekurang-kurangnya mencatat:
+
+- ID/lokasi klaim dalam dokumen dan rumusan klaimnya.
+- Referensi yang diklaim mendukungnya serta lokasi bukti yang dapat ditemukan (halaman, bagian, tabel, gambar, atau lokasi lain yang tersedia).
+- Ringkasan bukti dalam konteks aslinya, termasuk data, metode, sampel, kondisi eksperimen, dan batasan yang relevan.
+- Status: `TERVERIFIKASI`, `DIDUKUNG SEBAGIAN`, `TIDAK DIDUKUNG`, `BERTENTANGAN`, atau `BELUM DIVERIFIKASI`.
+- Tindakan berikutnya: pertahankan dengan batas yang tepat, lunakkan klaim, perbaiki sitasi, cari bukti tambahan, atau tandai untuk keputusan pengguna/tim/pembimbing.
+
+Jangan menganggap sebuah klaim terverifikasi hanya karena sitasi tercantum atau judul paper tampak relevan. Cocokkan klaim dengan isi sumber asli dan jangan memperluas hasil melampaui populasi, dataset, metode, atau kondisi yang diteliti. Istilah seperti *signifikan*, *lebih baik*, *efektif*, dan *akurat* harus sesuai dengan bukti serta metrik yang benar-benar dilaporkan.
+
+### 11.3 Kendalikan siklus generasi–pemeriksaan–revisi
+
+- Jangan menganggap teks siap hanya karena terdengar akademis, strukturnya lengkap, atau sudah memiliki sitasi.
+- Sebelum revisi besar, kenali masalah spesifik yang hendak diperbaiki: ketepatan sumber, kekuatan argumen, kedalaman teknis, relevansi konteks, repetisi, bahasa, atau konsistensi.
+- Setelah mengubah sebuah klaim, periksa kembali bukti dan semua bagian yang bergantung padanya. Hindari menghasilkan ulang bagian panjang tanpa alasan yang jelas jika perubahan terarah sudah memadai.
+- Bedakan fakta dari sumber, interpretasi penulis, inferensi yang masih perlu diuji, asumsi kerja, dan informasi yang belum tersedia. Gunakan penanda eksplisit untuk hal yang belum dipastikan.
+- Setelah revisi substansial, baca kembali paragraf sebelum dan sesudah perubahan serta cek dampaknya terhadap rumusan masalah, tujuan, metode, metrik, batasan, dan simpulan.
+
+### 11.4 Pemeriksaan konsistensi dalam satu proposal
+
+Untuk perubahan yang memengaruhi substansi, periksa keterkaitan antara judul, problem statement, rumusan masalah, tujuan, ruang lingkup, metode, data, metrik keberhasilan, rancangan solusi, jadwal, risiko, serta klaim kontribusi. Pastikan pula istilah teknis, akronim, nama komponen, angka, sitasi, nomor gambar/tabel, dan rujukan silang digunakan secara konsisten. Jika satu bagian berubah, identifikasi bagian turunan yang mungkin perlu diperbarui; jangan hanya memperbaiki kalimat yang langsung diedit.
+
+### 11.5 Cross-Proposal Consistency Checklist untuk tiga tugas akhir Capstone
+
+Untuk Capstone dengan beberapa proposal individual, gunakan satu acuan bersama yang sekurang-kurangnya meliputi:
+
+- Problem statement dan tujuan Capstone yang disepakati.
+- Batas sistem, ruang lingkup bersama, serta hal yang secara eksplisit berada di luar ruang lingkup.
+- Arsitektur tingkat tinggi, diagram komponen, istilah, alur data, dan asumsi yang digunakan bersama.
+- Pemilik/PIC setiap komponen serta pembeda kontribusi individual tiap anggota.
+- Kontrak antarkomponen: tanggung jawab, masukan, keluaran, format/struktur data, dependensi, asumsi, dan penanganan kegagalan yang perlu disepakati.
+- Data, kebutuhan, batasan, metrik evaluasi, dan keputusan yang digunakan lintas proposal.
+
+Saat sebuah proposal berubah, tanyakan apakah perubahan tersebut berdampak pada dua proposal lain, artefak bersama, kontrak antarkomponen, diagram, atau pembagian tanggung jawab. Catat dampaknya dan minta tinjauan pihak terkait; jangan mengasumsikan anggota lain telah mengadopsi perubahan. Bedakan dengan jelas narasi/proyek yang memang boleh sama sebagai konteks bersama dan rumusan masalah, metode, analisis, serta kontribusi yang harus menunjukkan pekerjaan individual. Jika dokumen anggota lain belum tersedia, tandai pemeriksaan lintas dokumen sebagai `BELUM DAPAT DIVERIFIKASI`, bukan `KONSISTEN`.
+
+### 11.6 Open Issues & Decision Log
+
+Pisahkan **isu yang belum selesai** dari **keputusan yang sudah disepakati**. Gunakan log yang mudah ditinjau sebelum rapat, sesudah rapat, dan sebelum menyerahkan draf.
+
+Untuk isu terbuka, catat sekurang-kurangnya: ID, pertanyaan/masalah, alasan penting, pihak atau komponen terdampak, PIC, pihak yang perlu dimintai jawaban, tenggat, status, dan bukti/informasi yang dibutuhkan. Untuk keputusan, catat: keputusan yang disepakati, tanggal, pihak yang menyetujui, alasan, alternatif yang dipertimbangkan bila relevan, konsekuensi, serta bagian/berkas yang harus diperbarui.
+
+Jangan mengubah dugaan, saran AI, atau pendapat satu anggota menjadi keputusan tim tanpa dasar persetujuan. Status isu dapat berupa `TERBUKA`, `MENUNGGU DATA`, `MENUNGGU ANGGOTA`, `MENUNGGU PEMBIMBING`, `DIPUTUSKAN`, atau `DITUTUP DENGAN ALASAN`. Sebelum rapat, prioritaskan isu yang menghambat keputusan metode, ruang lingkup, data, kontribusi, atau integrasi; jangan biarkan pembahasan redaksional menyingkirkan persoalan substantif.
+
+### 11.7 Melacak komentar pembimbing dan tindakan revisi
+
+Untuk tiap komentar pembimbing atau reviewer, catat komentar asli, maksud/masalah yang perlu dijawab, tindakan revisi yang konkret, bukti atau materi yang perlu ditambahkan, lokasi yang berubah, bagian lain yang terdampak, PIC, status, dan cara memverifikasi bahwa komentar telah ditangani. Komentar abstrak seperti “perkuat novelty” atau “perdalam metodologi” harus diterjemahkan menjadi langkah yang dapat diperiksa, bukan ditandai selesai hanya karena redaksi telah diubah.
+
+Jika satu revisi menyelesaikan satu komentar tetapi menimbulkan konsekuensi lain, catat konsekuensi tersebut dan tinjau ulang bagian terdampak. Jangan mengarang maksud pembimbing bila komentarnya ambigu; tuliskan interpretasi sementara dan tandai untuk klarifikasi.
+
+### 11.8 Pemeriksaan plagiarisme dan laporan kemiripan
+
+Perlakukan skor kemiripan sebagai **sinyal untuk diperiksa**, bukan keputusan otomatis bahwa sebuah tulisan plagiat atau bebas plagiarisme. Tinjau bagian yang cocok dengan sumbernya dan kategorikan secara kontekstual, misalnya kutipan langsung yang sudah diatribusikan, istilah teknis/nama metode, frasa baku, teks template, parafrasa yang terlalu dekat, ide yang belum diatribusikan, atau bagian yang memerlukan pemeriksaan lebih lanjut.
+
+Prioritaskan ketepatan atribusi, pemahaman dan perumusan mandiri atas gagasan, penggunaan kutipan yang sesuai, serta kejelasan kontribusi individual. Jangan sekadar mengejar skor rendah, menyamarkan sumber, atau mengubah kata-kata untuk menghindari alat pemeriksa. Jika aturan kampus atau alat pemeriksa memiliki ketentuan tertentu, ikuti ketentuan itu dan laporkan batas interpretasi skor secara jujur. Dalam tiga proposal Capstone, bandingkan bagian yang tumpang tindih dan pastikan konteks bersama dibedakan dari kontribusi individual; kemiripan teks sendiri tidak cukup untuk menyimpulkan pelanggaran tanpa menelaah konteks dan atribusinya.
+
+### 11.9 Status kesiapan dan pemeriksaan sebelum menyatakan selesai
+
+Gunakan status yang eksplisit bila relevan:
+
+- `DRAF`: struktur atau substansi masih dibangun.
+- `PERLU VERIFIKASI SUMBER`: ada klaim atau metadata yang belum diperiksa ke sumber yang sesuai.
+- `MENUNGGU KEPUTUSAN TIM`: ada isu kolaborasi atau integrasi yang belum disepakati.
+- `MENUNGGU KONFIRMASI PEMBIMBING`: ada keputusan akademik yang memang perlu arahan pembimbing.
+- `SIAP DITINJAU`: pemeriksaan dalam lingkup tugas telah dilakukan dan sisa ketidakpastian dinyatakan secara terbuka.
+- `SELESAI`: kriteria yang relevan sudah dipenuhi, tidak ada masalah terbuka yang disamarkan, dan semua dependensi yang diwajibkan untuk tugas tersebut telah diperiksa.
+
+Jangan menyatakan dokumen “selesai” apabila klaim penting belum terverifikasi, keputusan tim belum dibuat tetapi ditulis seolah-olah sudah disepakati, atau dampak perubahan lintas bab/proposal belum ditinjau. Bila bukti atau dokumen yang dibutuhkan tidak tersedia, laporkan batas pemeriksaan secara spesifik.
+
+### 11.10 Ringkasan audit yang perlu diberikan kepada pengguna
+
+Saat diminta memeriksa kelengkapan atau memperbarui aturan/dokumen, laporkan secara terpisah: (1) hal yang sudah tercakup pada dokumen awal, (2) ketentuan yang ditambahkan, (3) konflik atau ambiguitas yang ditemukan beserta cara penanganannya, dan (4) hal yang tetap belum dapat diverifikasi. Jangan mengklaim bahwa seluruh proposal Capstone konsisten jika hanya satu dokumen yang diperiksa.
+
+## 12. Prosedur operasional dari notulensi bimbingan: fokus masalah, tujuan, batasan, dan metodologi
+
+Bagian ini menambahkan cara kerja praktis saat menulis atau mengaudit Bab I. Terapkan bersama Bagian 4, Bagian 8, Bagian 11, dan ketentuan terkait di `RULES.md`. Jangan menghapus atau mengesampingkan pedoman resmi maupun instruksi pembimbing yang lebih spesifik; jika ada perbedaan, catat dan jelaskan konflik sebelum menentukan struktur final.
+
+### 12.1 Menulis latar belakang dengan cakupan yang tepat
+
+1. Mulai dari rancangan/gambaran global yang cukup untuk mengenalkan konteks, lalu arahkan pembaca ke kondisi *existing* dan persoalan konkret yang benar-benar menjadi fokus penelitian.
+2. Jaga agar konteks tetap dekat dengan pokok masalah. Jika penelitian berfokus pada basis data, misalnya, uraikan kondisi, kendala, atau kebutuhan terkait basis data. Konteks bisnis boleh diberikan bila membantu menjelaskan alasan masalah itu penting, tetapi jangan sampai pembahasan bisnis yang luas mengambil alih penjelasan teknis yang menjadi fokus.
+3. Bangun alur yang mudah diikuti: konteks seperlunya → kondisi saat ini → persoalan yang dapat ditunjukkan → kekurangan/gap → alasan penelitian diperlukan. Jangan mengarang kondisi *existing*; gunakan data, dokumen, observasi, atau informasi yang tersedia dan tandai hal yang belum dikonfirmasi.
+4. Perlakukan pendahuluan sebagai titik masuk pembaca. Periksa kejelasan, relevansi, alur argumen, dan ketepatan bukti secara khusus; jangan mengandalkan kalimat pembuka yang megah tetapi tidak membantu menjelaskan masalah.
+
+### 12.2 Merumuskan masalah, bukan menuliskan urutan pengerjaan
+
+1. Rumusan masalah harus menjelaskan persoalan atau pertanyaan yang belum terjawab, bukan daftar cara membuat solusi atau urutan langkah pelaksanaan. Tahapan seperti pengumpulan data, pembersihan data, pembangunan komponen, integrasi, dan pengujian ditempatkan pada metodologi apabila memang relevan.
+2. Identifikasi dan perjelas kondisi saat ini, kekurangan yang hendak ditangani, serta aspek yang perlu diketahui atau dijelaskan. Jangan menjadikan nama teknologi atau rencana implementasi sebagai pengganti persoalan penelitian.
+3. Untuk persoalan yang memerlukan model formal atau persamaan, identifikasi lebih dahulu *research gap*, variabel yang relevan, serta aturan, asumsi, atau hubungan yang mengatur variabel tersebut. Baru susun persamaan/formulasi yang diperlukan, dan jelaskan makna setiap unsur serta sumber justifikasinya. Jangan menciptakan rumus hanya agar proposal terlihat teknis.
+4. Bila rumusan masalah, variabel, aturan, atau *research gap* masih belum pasti, tandai sebagai isu terbuka dan jangan menyajikannya seolah-olah telah disepakati. Pastikan rumusan masalah dapat dijawab oleh data, metode, dan evaluasi yang direncanakan.
+
+### 12.3 Menulis tujuan dan ukuran keberhasilan
+
+1. Mulai tujuan dengan satu pernyataan utama yang spesifik tentang hasil akhir yang akan dibuat, dikembangkan, dianalisis, atau dievaluasi. Tambahkan kalimat penjelas hanya jika diperlukan untuk memperjelas hasil tersebut.
+2. Cantumkan ukuran keberhasilan yang dapat diperiksa dan selaras dengan rumusan masalah. Tentukan metrik, objek pengukuran, prosedur evaluasi, dan target/baseline bila memang tersedia serta dapat dipertanggungjawabkan. Jangan mengarang angka target yang belum disepakati.
+3. Hindari tujuan berupa dampak luas atau janji yang tidak dapat diuji dalam ruang lingkup TA, misalnya sekadar “meningkatkan produktivitas” tanpa definisi operasional dan cara mengukurnya. Bila produktivitas memang relevan, jelaskan indikator dan rancangan pengukurannya atau rumuskan tujuan pada artefak/hasil yang benar-benar akan dievaluasi.
+4. Jangan menggunakan bagian tujuan untuk mengulang daftar batasan masalah. Tujuan menjawab “hasil apa yang hendak dicapai/dibuat?”, sedangkan batasan menjawab “aspek kajian apa yang termasuk dalam cakupan?”.
+
+### 12.4 Membedakan batasan kajian dari batasan implementasi
+
+1. Rumuskan batasan masalah sebagai pembatas **kajian**: aspek atau fenomena yang dipelajari, konteks/objek penelitian, jenis dan cakupan data, kondisi yang dianalisis, asumsi, serta hal yang berada di luar pembahasan jika diperlukan.
+2. Jangan menjadikan daftar keterbatasan implementasi saja sebagai batasan masalah. Detail seperti platform, bahasa pemrograman, infrastruktur, atau fitur yang tidak dibangun hanya dicantumkan bila benar-benar menentukan cakupan kajian; detail teknis implementasi dapat dijelaskan pada bagian rancangan atau metode yang sesuai.
+3. Pastikan tujuan, rumusan masalah, dan batasan saling mendukung tetapi menjalankan fungsi berbeda. Jangan menambahkan batasan yang tidak diperlukan hanya untuk mengisi bagian, dan jangan menghapus batasan yang penting bagi validitas klaim.
+
+### 12.5 Memilih dan mengadaptasi metodologi
+
+1. Jelaskan karakteristik atau pola dasar metodologi yang dipilih, alasan kecocokannya dengan masalah, serta keterbatasannya. Jangan hanya mencantumkan nama metodologi atau menerjemahkan daftar tahap bakunya.
+2. Turunkan setiap tahap menjadi kegiatan spesifik untuk kasus penelitian ini. Jelaskan seperlunya masukan, kegiatan/keputusan yang dilakukan, keluaran, dan bagaimana keluaran itu digunakan pada tahap berikutnya.
+3. Metodologi boleh disesuaikan atau dikembangkan untuk kebutuhan kasus, sepanjang perubahan dijelaskan dan dijustifikasi. Bedakan kerangka dasar dari modifikasi yang dilakukan; jangan mengklaim mengikuti metodologi secara penuh jika tahap atau prosedurnya diubah secara material.
+4. Jangan menambahkan “melakukan kajian pustaka” sebagai satu tahapan metodologi di Bab I. Kajian literatur berkembang sepanjang penyusunan proposal dan pelaksanaan TA; sumber baru dapat ditambahkan dan sintesisnya diperbarui ketika diperlukan. Ini tidak berarti studi literatur boleh diabaikan, melainkan tidak perlu diperlakukan sebagai satu tahap metode yang terpisah di Bab I.
+5. Pastikan tahapan metode menjawab rumusan masalah dan menghasilkan bukti yang dibutuhkan untuk menilai ukuran keberhasilan. Jika suatu tahap tidak memiliki fungsi yang jelas bagi penelitian, tinjau apakah tahap tersebut memang diperlukan.
+
+### 12.6 Pemeriksaan silang sebelum Bab I dinyatakan siap ditinjau
+
+Sebelum menyerahkan Bab I atau menyatakan revisi selesai, periksa bahwa:
+
+- Latar belakang menjelaskan konteks global seperlunya, kondisi *existing*, dan masalah yang dekat dengan fokus penelitian.
+- Rumusan masalah menyatakan persoalan/pertanyaan, bukan daftar langkah pengerjaan.
+- *Research gap*, variabel, aturan/asumsi, dan hubungan yang diperlukan telah diperiksa sebelum persamaan atau model formal dirumuskan.
+- Tujuan dimulai dengan hasil akhir yang spesifik serta memiliki ukuran keberhasilan yang dapat diperiksa.
+- Tujuan tidak berupa janji dampak yang tidak terukur dan tidak mengulang batasan masalah.
+- Batasan menjelaskan cakupan kajian, bukan hanya pilihan implementasi.
+- Metodologi dipilih dengan alasan yang jelas, karakteristik dasarnya dipahami, dan tahapnya telah disesuaikan terhadap kasus penelitian.
+- Kajian pustaka tidak dicantumkan sebagai satu tahap metodologi Bab I, tetapi tetap diperlakukan sebagai pekerjaan berkelanjutan.
+- Semua asumsi, target, variabel, dan keputusan yang belum pasti ditandai untuk verifikasi atau pembahasan dengan tim/pembimbing.
+

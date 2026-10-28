@@ -11,7 +11,7 @@
 3. Tuliskan informasi secukupnya untuk membantu pembaca memahami pokok bahasan. Hindari detail yang tidak diperlukan, terutama dalam studi literatur.
 4. Jelaskan dan berikan justifikasi untuk metode serta proses yang dipilih. Metodologi harus sesuai dengan persoalan yang hendak diselesaikan, bukan sekadar daftar aktivitas generik.
 5. Lakukan evaluasi kritis terhadap bacaan. Jangan langsung menganggap penulis sumber selalu benar; periksa asumsi, metode, statistik, alasan, hasil, dan kesimpulannya.
-6. Jaga integritas akademik: jangan melakukan plagiarisme, jangan menyajikan pendapat atau temuan orang lain sebagai milik sendiri, dan jangan mengarang referensi atau hasil.
+6. Jangan melakukan plagiarisme, jangan menyajikan pendapat atau temuan orang lain sebagai milik sendiri, dan jangan mengarang referensi atau hasil.
 
 ## 2. Tentukan struktur dokumen yang benar
 
@@ -147,19 +147,17 @@ Bab studi literatur harus:
 - Istilah asing yang sudah memiliki padanan baku dapat menggunakan padanan Indonesia. Jika padanannya belum baku, gunakan istilah asingnya dan tulis miring.
 - Contoh tidak menetapkan satu gaya sitasi bibliografis secara lengkap. **Jangan mengarang format sitasi**; terapkan panduan penulisan TA yang ditetapkan untuk tugas tersebut ketika panduan itu tersedia.
 
-## 5. Integritas akademik dan penggunaan AI
+## 5. Penggunaan AI
 
-- AI boleh digunakan sebagai asisten untuk menyaring, memetakan, dan membantu memahami referensi akademis yang kompleks serta membantu mengeksplorasi kemungkinan *research gap*.
+- AI wajib digunakan sebagai asisten untuk menyaring, memetakan, dan membantu memahami referensi akademis yang kompleks serta membantu mengeksplorasi kemungkinan *research gap*.
 - **Verifikasi manual wajib:** buka sumber asli dan cocokkan interpretasi AI, angka statistik, hasil, judul, penulis, nama jurnal, dan rincian bibliografi.
 - Jangan memperlakukan ringkasan AI sebagai pengganti pembacaan sumber asli.
-- Jangan menyalin langsung hasil parafrasa AI ke naskah akhir. Gunakan bantuan AI untuk memahami konsep, kemudian susun penjelasan melalui analisis dan gaya bahasa penulis sendiri.
 - Jangan pernah membuat-buat sumber, kutipan, hasil penelitian, statistik, atau rincian yang belum dapat diverifikasi.
 - Bila informasi penting tidak tersedia pada materi atau sumber yang diberikan, tandai sebagai hal yang perlu diverifikasi atau minta sumber tambahan; jangan mengisi kekosongan dengan dugaan yang ditulis sebagai fakta.
 - Bedakan **AI-generated** (dibuat atau dibantu AI), **AI slop** (tulisan berkualitas/substansi rendah yang diproduksi dengan mudah dalam jumlah besar), dan **AI-like writing** (memiliki ciri gaya yang diasosiasikan dengan keluaran AI, tetapi belum tentu dibuat AI). Ketiganya bukan istilah yang saling menggantikan.
 - Gunakan daftar 50 ciri pada Bagian 8.5 sebagai **alat diagnosis kualitas**, bukan alat untuk memastikan asal tulisan. Satu atau dua ciri tidak membuktikan bahwa teks dibuat AI; tulisan manusia juga dapat memiliki ciri tersebut, dan tulisan AI tidak otomatis berkualitas rendah.
 - Audit tulisan berdasarkan isi dan konteks. Prioritaskan klaim tanpa bukti, penjelasan generik, pengulangan gagasan, tidak adanya mekanisme/penalaran, hilangnya *trade-off*, ketidakakuratan istilah, sumber yang tidak mendukung klaim, dan tidak digunakannya data/konteks yang sudah tersedia.
 - Jangan mengubah semua kalimat menjadi pendek, melarang tanda baca tertentu, memaksakan variasi ritme, atau mengganti semua frasa yang masuk daftar secara otomatis. Perbaiki pola hanya bila pola tersebut membuat naskah berulang, kabur, berlebihan, bombastis, atau tidak sesuai audiens. Pertahankan pilihan gaya yang memang sengaja digunakan dan fungsional.
-- Tujuan anti-AI-slop adalah meningkatkan ketepatan, kekhususan, substansi, dan keterlacakan penalaran; **bukan** menyamarkan penggunaan AI, menciptakan jejak pengalaman palsu, atau mengarang detail agar tulisan terlihat lebih manusiawi.
 
 ## 6. Kaidah bahasa Indonesia ilmiah
 
@@ -180,8 +178,6 @@ Materi *Ejaan 2025* mengelompokkan ejaan ke dalam pemakaian huruf, penulisan kat
 - **Huruf miring** digunakan untuk judul buku, nama majalah atau surat kabar yang disebut dalam kalimat; menegaskan atau mengkhususkan huruf/kata/kelompok kata; dan menuliskan kata atau istilah asing/daerah yang belum diperlakukan sebagai nama diri. Contoh materi: *Space Force* dan *Zea mays*. Nama diri, organisasi, atau lembaga yang menggunakan bahasa daerah/asing tidak otomatis ditulis miring.
 - **Huruf tebal**, menurut materi, dapat digunakan untuk menegaskan bagian tulisan yang sudah miring dan menegaskan bagian-bagian karangan seperti judul buku, bab, atau subbab. Terapkan format ini hanya jika sesuai fungsi dan pedoman dokumen; jangan memakai tebal sebagai dekorasi berlebihan.
 - **Jangan menyimpulkan semua kaidah kapitalisasi dari beberapa contoh.** Untuk kasus yang tidak tercakup jelas, periksa EYD V dan pertahankan konsistensi dalam dokumen. Jangan mengubah kapitalisasi pada nama resmi, kutipan, judul sumber, kode, atau data tanpa memeriksa konteksnya.
-
-
 - **Huruf kapital:** gunakan sesuai fungsi nama diri/nama resmi; jangan mengapitalisasi kata umum tanpa alasan. Contoh pada contoh: “Rektor Institut Teknologi Bandung”, “para rektor”, “Gedung Labtek V”, dan “sebuah gedung”.
 - **Penulisan kata:** periksa bentuk seperti `dilampirkan`, `di atas`, `terima kasih`, `menandatangani`, `subbab`, `apa pun`, dan `walaupun`.
 - **Unsur serapan/bentukan kata:** gunakan bentuk baku, antara lain `efektivitas`, `kualitas`, `November`, `praktik`, `apotek`, `analisis`, `persentase`, `memengaruhi`, `memesona`, `menerjemahkan`, `menyukseskan`, `diubah`, dan `mengubah`.
@@ -250,13 +246,13 @@ Materi *Ejaan—Penulisan Kata: Unsur Terikat* (2025) memperluas aturan bentuk t
 
 Materi *Bentukan Kata* memperinci pola bentuk awalan `me(N)-` yang ditampilkan dalam tabel pada contoh. Gunakan tabel ini sebagai **petunjuk pemeriksaan bentuk**, bukan algoritme mekanis yang menggantikan pemeriksaan kata dasar, gugus konsonan, pengecualian, dan makna.
 
-| Bentuk awalan yang ditampilkan | Lingkungan huruf awal pada kata dasar yang dicontohkan | Contoh yang terlihat pada contoh |
-|---|---|---|
-| `me-` | `l`, `m`, `n`, `r`, `w`, `y` | `melebarkan`, `memakan`, `menafkahi`, `merawat`, `mewariskan`, `meyakinkan` |
-| `mem-` | `b`, `p`, `f`, `v` | `membasmi`, `memeluk*`, `memproduksi*`, `memfitnah`, `memvaksin` |
-| `men-` | `c`, `d`, `t`, `j`, `z` | `mencintai`, `menduakan`, `meneruskan*`, `mentransfer*`, `menjawab`, `menzalimi` |
-| `meny-` | `s` | `menyalin*`; contoh juga memuat `mensyukuri*` dengan tanda bintang |
-| `meng-` | vokal, `g`, `h`, `k`, `q`, `x` | `mengabaikan`, `mengundang`, `mengintip`, `mengelak`, `mengobati`, `menggali`, `menghantui`, `mengonsumsi*`, `mengkritik*`, `mengqada`; tabel juga menampilkan `mengxenorasi-`, yang bentuk/ketepatannya tidak dijelaskan lebih lanjut |
+| Bentuk awalan yang ditampilkan | Lingkungan huruf awal pada kata dasar yang dicontohkan | Contoh yang terlihat pada contoh                                                                                                                                                                                                                             |
+| ------------------------------ | ------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `me-`                        | `l`, `m`, `n`, `r`, `w`, `y`               | `melebarkan`, `memakan`, `menafkahi`, `merawat`, `mewariskan`, `meyakinkan`                                                                                                                                                                      |
+| `mem-`                       | `b`, `p`, `f`, `v`                             | `membasmi`, `memeluk*`, `memproduksi*`, `memfitnah`, `memvaksin`                                                                                                                                                                                   |
+| `men-`                       | `c`, `d`, `t`, `j`, `z`                      | `mencintai`, `menduakan`, `meneruskan*`, `mentransfer*`, `menjawab`, `menzalimi`                                                                                                                                                                 |
+| `meny-`                      | `s`                                                  | `menyalin*`; contoh juga memuat `mensyukuri*` dengan tanda bintang                                                                                                                                                                                       |
+| `meng-`                      | vokal, `g`, `h`, `k`, `q`, `x`               | `mengabaikan`, `mengundang`, `mengintip`, `mengelak`, `mengobati`, `menggali`, `menghantui`, `mengonsumsi*`, `mengkritik*`, `mengqada`; tabel juga menampilkan `mengxenorasi-`, yang bentuk/ketepatannya tidak dijelaskan lebih lanjut |
 
 Tanda bintang pada beberapa bentuk dalam tabel asli tidak dijelaskan di contoh. Karena itu, jangan menebak makna tanda bintang atau menggunakan contoh bertanda tersebut untuk membuat aturan tambahan. Periksa kasus khusus berdasarkan kata dasar dan konteksnya. Khusus gugus konsonan, jangan menganggap huruf awal selalu luluh: contoh memberi contoh `menstabilkan`, `mengkritik`, `mentransformasikan`, `mengklasifikasikan`, dan `memproduksi`. Bentuk `memproduksi` harus dibedakan dari bentuk nominal `pemroduksi` dan `pemroduksian` yang juga dicantumkan pada contoh.
 
@@ -386,7 +382,6 @@ Ketika menyunting petikan langsung, pertahankan kata-kata kutipan dan letakkan t
 7. **Hindari penggantian tanda baca massal.** Jangan mengganti semua koma menjadi titik koma, semua kurung menjadi tanda pisah, atau semua petik tunggal menjadi ganda tanpa analisis fungsi setiap kemunculan.
 8. **Lakukan pemeriksaan akhir berbasis konteks.** Baca ulang kalimat sebelum dan sesudah perubahan; pastikan tanda baca tidak mengubah makna, lingkup keterangan, hubungan klausa, atau atribusi ujaran.
 
-
 ### 6.6 Tata kalimat dan pengaruh struktur bahasa daerah/bahasa asing
 
 Bagian ini membahas pengaruh struktur bahasa daerah dan bahasa asing terhadap tata kalimat Bahasa Indonesia. Terapkan aturannya saat membuat, menyunting, memindahkan, memendekkan, atau menghapus teks. Tujuannya bukan sekadar membuat kalimat tampak formal, melainkan menjaga struktur kalimat Bahasa Indonesia, ketepatan makna, dan kelancaran ragam ilmiah.
@@ -402,17 +397,17 @@ Bagian ini membahas pengaruh struktur bahasa daerah dan bahasa asing terhadap ta
 
 Materi mencontohkan sejumlah kalimat yang perlu disusun kembali agar mengikuti struktur Bahasa Indonesia. Gunakan contoh ini sebagai pola diagnosis, bukan sebagai perintah untuk mengganti setiap kata yang mirip dalam seluruh dokumen.
 
-| Pola pada contoh materi | Bentuk yang dicontohkan sebagai perbaikan | Hal yang harus diperiksa |
-|---|---|---|
-| `Teknologinya Jepang jauh lebih maju dari kita.` | `Teknologi Jepang jauh lebih maju daripada kita.` | Periksa penempelan `-nya` dan pemilihan pembanding `daripada` dalam konstruksi perbandingan. |
-| `Rumahnya Pak David di Bandung.` | `Rumah Pak David di Bandung.` | Hindari klitik/penanda posesif yang tidak sesuai dengan konstruksi nama pemilik pada contoh ini; jangan melarang `-nya` dalam konteks lain. |
-| `Semua barang sudah dikegudangin.` | `Semua barang sudah dibawa ke gudang.` | Ganti bentuk percakapan atau bentukan yang tidak sesuai dengan verba formal dan hubungan makna yang jelas. |
-| `Kita punya kemampuan, terbaik.` | `Kemampuan kita terbaik.` | Hilangkan pemenggalan atau susunan yang merusak relasi antarkata. |
-| `Pengendara motor dilarang lewat jalan ini kecuali yang pake helm.` | `Pengendara motor dilarang melewati jalan ini kecuali yang memakai helm.` | Gunakan diksi formal dan pastikan klausa pengecualian berhubungan jelas dengan unsur yang dijelaskan. |
-| `Permintaan para langganan belum ada yang terpenuhi karena persediaannya sudah pada habis.` | `Permintaan para pelanggan belum ada yang terpenuhi karena persediaannya sudah habis.` | Gunakan pilihan kata yang sesuai dengan makna dan hilangkan unsur percakapan/mubazir. |
-| `Bab II yang sudah dikerjakan oleh saya.` | `Bab II yang sudah saya kerjakan.` | Susun kembali bentuk pasif/persona pertama sesuai pola yang dicontohkan dalam materi. |
-| `Buku itu sudah dikembalikan oleh saya.` | `Buku itu sudah saya kembalikan.` | Jangan mempertahankan bentuk pasif berpelaku yang terasa janggal jika konstruksi persona pertama yang lebih wajar dapat menyampaikan makna yang sama. |
-| `Laporan keuangan saya sudah kirimkan.` | `Laporan keuangan sudah saya kirimkan.` | Periksa posisi penanda waktu/aspek, pelaku, dan verba dalam konstruksi yang dicontohkan. |
+| Pola pada contoh materi                                                                       | Bentuk yang dicontohkan sebagai perbaikan                                                | Hal yang harus diperiksa                                                                                                                              |
+| --------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `Teknologinya Jepang jauh lebih maju dari kita.`                                            | `Teknologi Jepang jauh lebih maju daripada kita.`                                      | Periksa penempelan `-nya` dan pemilihan pembanding `daripada` dalam konstruksi perbandingan.                                                      |
+| `Rumahnya Pak David di Bandung.`                                                            | `Rumah Pak David di Bandung.`                                                          | Hindari klitik/penanda posesif yang tidak sesuai dengan konstruksi nama pemilik pada contoh ini; jangan melarang `-nya` dalam konteks lain.         |
+| `Semua barang sudah dikegudangin.`                                                          | `Semua barang sudah dibawa ke gudang.`                                                 | Ganti bentuk percakapan atau bentukan yang tidak sesuai dengan verba formal dan hubungan makna yang jelas.                                            |
+| `Kita punya kemampuan, terbaik.`                                                            | `Kemampuan kita terbaik.`                                                              | Hilangkan pemenggalan atau susunan yang merusak relasi antarkata.                                                                                     |
+| `Pengendara motor dilarang lewat jalan ini kecuali yang pake helm.`                         | `Pengendara motor dilarang melewati jalan ini kecuali yang memakai helm.`              | Gunakan diksi formal dan pastikan klausa pengecualian berhubungan jelas dengan unsur yang dijelaskan.                                                 |
+| `Permintaan para langganan belum ada yang terpenuhi karena persediaannya sudah pada habis.` | `Permintaan para pelanggan belum ada yang terpenuhi karena persediaannya sudah habis.` | Gunakan pilihan kata yang sesuai dengan makna dan hilangkan unsur percakapan/mubazir.                                                                 |
+| `Bab II yang sudah dikerjakan oleh saya.`                                                   | `Bab II yang sudah saya kerjakan.`                                                     | Susun kembali bentuk pasif/persona pertama sesuai pola yang dicontohkan dalam materi.                                                                 |
+| `Buku itu sudah dikembalikan oleh saya.`                                                    | `Buku itu sudah saya kembalikan.`                                                      | Jangan mempertahankan bentuk pasif berpelaku yang terasa janggal jika konstruksi persona pertama yang lebih wajar dapat menyampaikan makna yang sama. |
+| `Laporan keuangan saya sudah kirimkan.`                                                     | `Laporan keuangan sudah saya kirimkan.`                                                | Periksa posisi penanda waktu/aspek, pelaku, dan verba dalam konstruksi yang dicontohkan.                                                              |
 
 Contoh 5 juga membandingkan susunan berikut:
 
@@ -455,7 +450,6 @@ Materi juga memperlihatkan `Atas perhatian Saudara kami ucapkan terima kasih` se
 
 - **Ketepatan lebih penting daripada kesan asing.** Jangan menggunakan bahasa asing untuk memberi kesan ilmiah bila padanan Bahasa Indonesia yang tepat tersedia dan tidak mengurangi presisi. Gunakan daftar sepuluh ciri kalimat ragam ilmiah dan lima ciri kalimat efektif pada Bagian 6.7 sebagai checklist.
 - Aturan unsur serapan dirangkum secara khusus pada Bagian 6.9. Jika rincian ejaan tidak jelas, jangan menebak atau membuat aturan baru; verifikasi melalui pedoman ejaan resmi.
-
 
 ### 6.7 Pengantar tata kalimat, kalimat efektif, dan ragam ilmiah
 
@@ -655,7 +649,6 @@ Materi yang sama menyatakan bahwa susunan kalimat yang baik perlu memiliki unsur
 - Contoh 13–16 menampilkan sepuluh ciri kalimat ragam ilmiah, dan contoh 17 mengilustrasikan lima ciri kalimat efektif. Karena daftar ciri kini terbaca pada materi ini, gunakan daftar yang tertulis di atas; jangan lagi menandainya sebagai daftar yang tidak tersedia.
 - Kaidah unsur serapan dirangkum pada Bagian 6.9. Verifikasi melalui pedoman ejaan resmi jika keputusan tentang bentuk tertentu belum jelas.
 
-
 ### 6.8 Kalimat taksa/ambigu dan kalimat rancu
 
 Bagian ini membahas kalimat taksa dan rancu melalui definisi, contoh, dan prosedur pemeriksaan kontekstual. Gunakan bersama Bagian 6.5 (tanda baca) dan Bagian 6.7 (kalimat efektif/ragam ilmiah).
@@ -707,7 +700,6 @@ Materi mendefinisikan kalimat rancu sebagai kalimat yang terjadi ketika **dua be
 6. Pertahankan contoh salah, kutipan, dialog, dan data bahasa secara autentik jika sedang dianalisis; tampilkan koreksinya secara terpisah.
 7. Bila contoh contoh tidak cukup untuk memastikan aturan ejaan atau sintaksis umum, jangan memperluasnya menjadi aturan universal. Tandai batas sumber dan rujuk pedoman resmi bila keputusan normatif dibutuhkan.
 
-
 ### 6.9 Penulisan unsur serapan dan pemilihan kata baku
 
 Bagian ini mengintegrasikan tiga materi *Penulisan Unsur Serapan* (2025) oleh Dr. Tri Sulistyaningtyas, M.Hum. Materi menjelaskan jalur penyerapan kata, contoh unsur serapan dari berbagai bahasa, serta pasangan bentuk baku dan bentuk yang dalam contoh ditandai tidak baku. Gunakan bagian ini ketika memilih diksi, membakukan ejaan, menyunting unsur serapan, atau menentukan apakah istilah asing perlu dipertahankan.
@@ -756,82 +748,82 @@ Materi menunjukkan bahwa bentuk serapan dan padanan Indonesia dapat berasal dari
 
 Daftar di bawah mempertahankan contoh pasangan kata yang perlu diperiksa. Gunakan sebagai pengingat pemeriksaan, lalu verifikasi jika bentuk tersebut krusial, dipertentangkan oleh rujukan lain, atau tidak sesuai konteks. Bentuk yang perlu diperiksa ditulis di kiri dan bentuk pembanding di kanan.
 
-| Bentuk yang perlu diperiksa | Bentuk yang ditandai baku dalam materi |
-|---|---|
-| `cemilan` | `camilan` |
-| `orisinil` | `orisinal` |
-| `detil` | `detail` |
-| `sekedar` | `sekadar` |
-| `balsem` | `balsam` |
-| `rido` | `rida` |
-| `solat` | `salat` |
-| `seksama` | `saksama` |
-| `afdol` | `afdal` |
-| `rubuh` | `roboh` |
-| `kharisma` | `karisma` |
-| `kaos` | `kaus` |
-| `kadaluarsa` | `kedaluwarsa` |
-| `ksatria` | `kesatria` |
-| `kuatir` | `khawatir` |
-| `komoditi` | `komoditas` |
-| `komplit` | `komplet` |
-| `kongkrit` | `konkret` |
-| `kreatifitas` | `kreativitas` |
-| `kwitansi` | `kuitansi` |
-| `administratur` | `administrator` |
-| `kameramen` | `kamerawan` |
-| `disain` | `desain` |
-| `produktifitas` | `produktivitas` |
-| `selebritis` | `selebritas` |
-| `rapih` | `rapi` |
-| `cidera` | `cedera` |
-| `intisari` | `inti sari` |
-| `religiusitas` | `religiositas` |
-| `itikad` | `iktikad` |
-| `seprei` | `seprai` |
-| `sariawan` | `seriawan` |
-| `suka ria` | `sukaria` |
-| `switer` | `sweter` |
-| `sempoa` | `swipoa` |
-| `atlit` | `atlet` |
-| `nahkoda` | `nakhoda` |
-| `feminim` | `feminin` |
-| `fikir` | `pikir` |
-| `koordinir` | `koordinasi` |
-| `blangkon` | `belangkon` |
-| `jerigen` | `jeriken` |
-| `motto` | `moto` |
-| `seksama` | `saksama` |
-| `jadual` | `jadwal` |
-| `ijin` | `izin` |
-| `sertipikat` | `sertifikat` |
-| `naas` | `nahas` |
-| `horisontal` | `horizontal` |
-| `kasat mata` | `kasatmata` |
-| `kaca mata` | `kacamata` |
-| `kakatua` (penulisan terpisah) | `kakaktua` |
-| `qasidah` | `kasidah` |
-| `kraton` | `keraton` |
-| `marmut` | `marmot` |
-| `goa` | `gua` |
-| `memerhatikan` (bentuk yang pada gambar dipertentangkan) | `memperhatikan` |
-| `punggawa` | `penggawa` |
-| `Jum'at` | `Jumat` |
-| `seterika` | `setrika` |
-| `syariah` | `syariat` |
-| `tauladan` | `teladan` |
-| `rapot` | `rapor` |
-| `wassalam` | `wasalam` |
-| `Perancis` | `Prancis` |
-| `sholawat` | `selawat` |
-| `ashar` | `asar` |
-| `kasat mata` | `kasatmata` |
-| `kaca mata` | `kacamata` |
-| `kraton` | `keraton` |
-| `marmut` | `marmot` |
-| `goa` | `gua` |
-| `memerhatikan` | `memperhatikan` |
-| `motto` | `moto` |
+| Bentuk yang perlu diperiksa                                | Bentuk yang ditandai baku dalam materi |
+| ---------------------------------------------------------- | -------------------------------------- |
+| `cemilan`                                                | `camilan`                            |
+| `orisinil`                                               | `orisinal`                           |
+| `detil`                                                  | `detail`                             |
+| `sekedar`                                                | `sekadar`                            |
+| `balsem`                                                 | `balsam`                             |
+| `rido`                                                   | `rida`                               |
+| `solat`                                                  | `salat`                              |
+| `seksama`                                                | `saksama`                            |
+| `afdol`                                                  | `afdal`                              |
+| `rubuh`                                                  | `roboh`                              |
+| `kharisma`                                               | `karisma`                            |
+| `kaos`                                                   | `kaus`                               |
+| `kadaluarsa`                                             | `kedaluwarsa`                        |
+| `ksatria`                                                | `kesatria`                           |
+| `kuatir`                                                 | `khawatir`                           |
+| `komoditi`                                               | `komoditas`                          |
+| `komplit`                                                | `komplet`                            |
+| `kongkrit`                                               | `konkret`                            |
+| `kreatifitas`                                            | `kreativitas`                        |
+| `kwitansi`                                               | `kuitansi`                           |
+| `administratur`                                          | `administrator`                      |
+| `kameramen`                                              | `kamerawan`                          |
+| `disain`                                                 | `desain`                             |
+| `produktifitas`                                          | `produktivitas`                      |
+| `selebritis`                                             | `selebritas`                         |
+| `rapih`                                                  | `rapi`                               |
+| `cidera`                                                 | `cedera`                             |
+| `intisari`                                               | `inti sari`                          |
+| `religiusitas`                                           | `religiositas`                       |
+| `itikad`                                                 | `iktikad`                            |
+| `seprei`                                                 | `seprai`                             |
+| `sariawan`                                               | `seriawan`                           |
+| `suka ria`                                               | `sukaria`                            |
+| `switer`                                                 | `sweter`                             |
+| `sempoa`                                                 | `swipoa`                             |
+| `atlit`                                                  | `atlet`                              |
+| `nahkoda`                                                | `nakhoda`                            |
+| `feminim`                                                | `feminin`                            |
+| `fikir`                                                  | `pikir`                              |
+| `koordinir`                                              | `koordinasi`                         |
+| `blangkon`                                               | `belangkon`                          |
+| `jerigen`                                                | `jeriken`                            |
+| `motto`                                                  | `moto`                               |
+| `seksama`                                                | `saksama`                            |
+| `jadual`                                                 | `jadwal`                             |
+| `ijin`                                                   | `izin`                               |
+| `sertipikat`                                             | `sertifikat`                         |
+| `naas`                                                   | `nahas`                              |
+| `horisontal`                                             | `horizontal`                         |
+| `kasat mata`                                             | `kasatmata`                          |
+| `kaca mata`                                              | `kacamata`                           |
+| `kakatua` (penulisan terpisah)                           | `kakaktua`                           |
+| `qasidah`                                                | `kasidah`                            |
+| `kraton`                                                 | `keraton`                            |
+| `marmut`                                                 | `marmot`                             |
+| `goa`                                                    | `gua`                                |
+| `memerhatikan` (bentuk yang pada gambar dipertentangkan) | `memperhatikan`                      |
+| `punggawa`                                               | `penggawa`                           |
+| `Jum'at`                                                 | `Jumat`                              |
+| `seterika`                                               | `setrika`                            |
+| `syariah`                                                | `syariat`                            |
+| `tauladan`                                               | `teladan`                            |
+| `rapot`                                                  | `rapor`                              |
+| `wassalam`                                               | `wasalam`                            |
+| `Perancis`                                               | `Prancis`                            |
+| `sholawat`                                               | `selawat`                            |
+| `ashar`                                                  | `asar`                               |
+| `kasat mata`                                             | `kasatmata`                          |
+| `kaca mata`                                              | `kacamata`                           |
+| `kraton`                                                 | `keraton`                            |
+| `marmut`                                                 | `marmot`                             |
+| `goa`                                                    | `gua`                                |
+| `memerhatikan`                                           | `memperhatikan`                      |
+| `motto`                                                  | `moto`                               |
 
 **Catatan pembacaan daftar:** sebagian contoh di atas berasal dari poster visual. Ejaan tertentu dapat berkaitan dengan perbedaan arti, nama diri, atau penyajian yang kurang jelas pada gambar. Jika contoh tampak janggal, berulang, atau membandingkan kata yang sebenarnya tidak sepadan secara makna, jangan menormalkannya secara membabi buta; periksa KBBI/pedoman ejaan resmi bila verifikasi tersedia. Daftar tidak berarti bahwa semua bentuk di kiri dapat diganti ke bentuk kanan tanpa memahami kalimatnya.
 
@@ -861,7 +853,6 @@ Saat membuat, menyunting, memindahkan, memendekkan, atau menghapus teks:
 6. **Jangan merusak bukti.** Pertahankan ejaan asli pada kutipan, nama resmi, dan data penelitian; jika perlu, tambahkan koreksi atau penjelasan di luar kutipan.
 7. **Tinjau kembali kalimat.** Pastikan perbaikan tidak mengubah klaim, hubungan sebab-akibat, negasi, kuantitas, atau maksud teknis.
 8. **Catat ketidakpastian.** Jika materi hanya memberi gambar yang samar atau pasangan yang tidak jelas, jangan menebak. Tandai untuk verifikasi sebelum menjadikannya aturan final.
-
 
 ### 6.10 Kata depan (*preposisi*) dan imbuhan `di-`
 
@@ -940,13 +931,12 @@ Beberapa contoh visual tentang `keluar`/`ke luar`, `ke mari`/`kemari`, serta `di
 - [ ] Jadwal sesuai metodologi.
 - [ ] Lima risiko utama dan mitigasinya dijelaskan.
 
-### Sumber dan integritas
+### Sumber 
 
 - [ ] Semua kutipan dan gagasan yang disadur memiliki referensi.
 - [ ] Sumber dan klaim bibliografis sudah dicek ke dokumen asli.
 - [ ] Angka, hasil, dan kesimpulan yang diambil dari sumber telah diverifikasi.
 - [ ] Tidak ada referensi, data, atau hasil yang dibuat-buat.
-- [ ] Teks bukan salinan langsung dari parafrasa AI.
 
 ### Bahasa dan keterbacaan
 
@@ -1474,7 +1464,6 @@ Untuk proyek yang belum memiliki struktur mapan, gunakan proses bertahap berikut
 - Saat menambah atau memindahkan subbab, periksa kembali penomoran, rujukan silang, daftar isi, dan alur dari teori menuju data/analisis.
 - Gunakan struktur sebagai alat berpikir, bukan sekadar daftar judul. Urutan subbab harus membantu pembaca mengikuti penjelasan dan melihat bagaimana bukti mendukung simpulan.
 
-
 ### 11.6 Komponen pelengkap awal dan pelengkap akhir
 
 Bagian ini membedakan komponen utama naskah dari pelengkap awal dan pelengkap akhir. Susunan aktual harus mengikuti pedoman institusi, jenis karya, dan template yang berlaku; daftar berikut adalah panduan pemeriksaan, bukan alasan untuk menambahkan komponen yang tidak diwajibkan.
@@ -1552,3 +1541,177 @@ Sebelum menulis atau mengubah struktur naskah, agent harus:
 5. Menyesuaikan komponen pelengkap awal/akhir, jumlah paragraf, jumlah aspek, sistem penomoran, dan format sitasi terhadap pedoman yang berlaku; jangan menjadikan contoh sebagai aturan universal bila tidak sesuai.
 6. Setelah perubahan, memperbarui penomoran heading, daftar isi, daftar gambar/tabel/lampiran, rujukan silang, sitasi, dan daftar pustaka.
 7. Melakukan pemeriksaan konsistensi akhir: judul sesuai isi; abstrak sesuai hasil yang benar-benar tersedia; simpulan menjawab pertanyaan; saran berasal dari temuan; semua sumber teratribusi; dan tidak ada bagian yang hanya menjadi pengulangan.
+
+---
+
+## 12. Kontrol proses penulisan, verifikasi bukti, dan koordinasi Capstone
+
+Bagian ini **menambahkan kontrol proses** yang melengkapi kaidah penulisan, kademik, checklist Bagian 7, serta prosedur integrasi struktur yang sudah ada. Bagian dan ketentuan sebelumnya tetap dipertahankan.
+
+### 12.1 Claim–Evidence Log: menautkan klaim dengan bukti
+
+Untuk klaim substantif yang berpengaruh terhadap latar belakang, problem statement, research gap, teori, perbandingan metode, angka, desain, data, metrik, kebutuhan sistem, atau kontribusi, gunakan **Claim–Evidence Log**. Tujuannya bukan menambah administrasi pada setiap kalimat, melainkan memastikan klaim penting dapat ditelusuri dan diperiksa.
+
+Setiap entri sekurang-kurangnya mencatat:
+
+| Kolom             | Isi yang dicatat                                                                                                 |
+| ----------------- | ---------------------------------------------------------------------------------------------------------------- |
+| ID/lokasi         | ID klaim dan bab/subbab/paragraf tempat klaim muncul                                                             |
+| Rumusan klaim     | Isi klaim sebagaimana ditulis atau direncanakan                                                                  |
+| Sumber pendukung  | Metadata referensi dan tautan/identitas sumber yang tersedia                                                     |
+| Lokasi bukti      | Halaman, bagian, tabel, gambar, atau lokasi spesifik lain yang mendukung klaim                                   |
+| Konteks bukti     | Metode, data/sampel, kondisi, hasil, asumsi, dan batasan yang relevan                                            |
+| Status verifikasi | `TERVERIFIKASI`, `DIDUKUNG SEBAGIAN`, `TIDAK DIDUKUNG`, `BERTENTANGAN`, atau `BELUM DIVERIFIKASI`      |
+| Tindak lanjut     | Pertahankan dengan batas yang tepat, revisi klaim, perbaiki atribusi, cari sumber tambahan, atau minta keputusan |
+
+**Aturan penggunaan:**
+
+1. Sitasi yang valid secara bibliografis belum tentu mendukung kalimat tempat sitasi itu dipakai. Periksa isi dan konteks sumber asli, bukan hanya judul, abstrak, atau ringkasan AI.
+2. Pastikan kekuatan klaim sepadan dengan sumber. Jangan mengubah hasil pada satu dataset, sampel, versi, bahasa, atau kondisi tertentu menjadi klaim universal.
+3. Klaim tentang peningkatan, efektivitas, akurasi, signifikansi, kebaruan, atau keunggulan harus menjelaskan pembanding, metrik, kondisi, serta batas bukti sesuai kebutuhan klaim.
+4. Jika lokasi bukti tidak ditemukan, sumber tidak dapat diakses, atau dukungan hanya sebagian, jangan menandai klaim sebagai terverifikasi. Lunakkan atau batasi pernyataannya, tandai untuk verifikasi, atau hilangkan hanya bila memang tidak diperlukan.
+5. Pisahkan fakta yang dinyatakan sumber, interpretasi penulis, inferensi, asumsi kerja, dan pertanyaan terbuka. Jangan menulis inferensi sebagai temuan yang dilaporkan langsung oleh paper.
+
+### 12.2 Menangani generasi AI dan revisi berulang
+
+Keluaran AI merupakan draf/bantuan berpikir, bukan bukti bahwa suatu klaim benar. Saat memperbaiki keluaran AI:
+
+- Identifikasi terlebih dahulu jenis masalahnya: klaim tanpa bukti, interpretasi berlebihan, kedalaman teknis kurang, tidak sesuai konteks, repetisi, inkonsistensi istilah, struktur argumen, atau bahasa.
+- Jangan melakukan generasi ulang secara luas tanpa tujuan koreksi yang jelas. Pilih revisi terarah dan perubahan minimum yang memadai.
+- Setelah revisi substansial, cocokkan ulang klaim dengan sumber dan telusuri bagian lain yang bergantung padanya.
+- Jangan mengisi kekosongan dengan asumsi yang disajikan sebagai fakta. Tandai `PERLU VERIFIKASI`, `ASUMSI KERJA`, atau `DATA BELUM TERSEDIA` sesuai maksudnya.
+- Teks yang rapi, lengkap secara struktur, dan memiliki sitasi belum tentu siap. Kesiapan juga mensyaratkan kecocokan bukti, konsistensi internal, dan pengungkapan ketidakpastian yang relevan.
+
+### 12.3 Pemeriksaan perubahan dan konsistensi antarbab
+
+Anggap proposal sebagai sistem argumen yang saling bergantung. Perubahan pada judul, masalah, tujuan, ruang lingkup, metode, data, metrik, rancangan, risiko, atau kontribusi dapat berdampak pada bagian lain. Sebelum menyelesaikan perubahan substansial:
+
+1. Identifikasi bagian asal dan klaim/keputusan yang berubah.
+2. Telusuri ketergantungannya pada rumusan masalah, tujuan, metodologi, kebutuhan data, ukuran keberhasilan, rancangan solusi, jadwal, risiko, dan simpulan yang relevan.
+3. Periksa istilah teknis, singkatan, angka, diagram, tabel, sitasi, nomor, dan rujukan silang yang menggunakan informasi tersebut.
+4. Catat bagian yang sudah diperbarui dan bagian yang masih menunggu keputusan atau verifikasi.
+
+Jangan menganggap perubahan lokal selesai jika menimbulkan kontradiksi pada bagian lain. Periksa kembali teks sebelum dan sesudah lokasi perubahan agar alur argumen tetap utuh.
+
+### 12.4 Cross-Proposal Consistency Checklist untuk Capstone tiga tugas akhir
+
+Untuk Capstone yang ditulis melalui tiga proposal individual, buat satu **acuan bersama** dan periksa konsistensi lintas dokumen. Acuan setidaknya mencatat:
+
+- Problem statement, tujuan umum, ruang lingkup Capstone, serta batas yang disepakati.
+- Arsitektur tingkat tinggi, diagram komponen, istilah dan definisi, alur data, serta asumsi bersama.
+- Komponen dan tanggung jawab/PIC tiap anggota, dependensi antarkomponen, serta kontribusi individual yang dibedakan dengan jelas.
+- Kontrak integrasi antarkomponen: tanggung jawab, input/output, format data, prasyarat, dependensi, dan penanganan kegagalan yang perlu disepakati.
+- Data, sumber, batasan, kebutuhan sistem, metrik evaluasi, dan keputusan yang berpengaruh lintas proposal.
+
+Sebelum suatu proposal dinyatakan konsisten dengan proposal lain, periksa apakah terminologi, diagram, scope, dependensi, dan pembagian kontribusi cocok dengan acuan bersama serta dokumen rekan yang relevan. Materi latar belakang atau arsitektur boleh menjadi konteks bersama sejauh memang disepakati, tetapi tumpang tindih tersebut tidak boleh mengaburkan perbedaan rumusan masalah, tujuan individual, metode, evaluasi, atau kontribusi.
+
+Setiap perubahan scope, desain, metode, asumsi, data, interface, atau kepemilikan komponen harus melalui **impact check**: dokumen/komponen mana yang terdampak, siapa yang perlu menyetujui, serta diagram atau bagian apa yang harus diperbarui. Jangan berasumsi perubahan sudah diketahui semua anggota. Jika proposal lain belum tersedia untuk diperiksa, nyatakan `BELUM DAPAT DIVERIFIKASI`; jangan melabelinya konsisten berdasarkan dugaan.
+
+### 12.5 Open Issues & Decision Log
+
+Pisahkan daftar isu yang belum terselesaikan dari catatan keputusan yang telah disepakati. Keduanya dapat berupa satu berkas dengan dua bagian, selama statusnya tidak tercampur.
+
+**Open Issues Log** setidaknya memuat: ID, pertanyaan/masalah, alasan penting, pihak/komponen terdampak, PIC, orang yang perlu memberi jawaban, informasi/bukti yang dibutuhkan, tenggat, dan status. Gunakan status yang jelas, misalnya `TERBUKA`, `MENUNGGU DATA`, `MENUNGGU ANGGOTA`, `MENUNGGU PEMBIMBING`, atau `DITUTUP DENGAN ALASAN`.
+
+**Decision Log** setidaknya memuat: keputusan, tanggal, pihak yang menyetujui, alasan dan bukti pendukung, alternatif yang dipertimbangkan bila relevan, konsekuensi, serta dokumen/diagram/komponen yang harus diperbarui.
+
+Jangan menafsirkan usulan AI, pendapat individu, atau asumsi sebagai keputusan tim. Tandai siapa yang berwenang memutuskan, dan jangan mengubah status isu menjadi selesai jika keputusan atau bukti yang diperlukan belum tersedia. Tinjau daftar sebelum dan sesudah rapat agar isu penting tidak terlupakan atau terus dibahas ulang tanpa keputusan.
+
+### 12.6 Agenda diskusi dan penerjemahan umpan balik pembimbing
+
+Agenda diskusi sebaiknya memprioritaskan isu yang dapat mengubah arah penelitian atau integrasi, seperti masalah penelitian, kontribusi/novelty, metode, data, metrik, ruang lingkup, asumsi penting, kontrak antarkomponen, dan dependensi. Detail redaksional dibahas setelah isu substantif yang lebih mendesak teridentifikasi.
+
+Untuk tiap komentar pembimbing/reviewer, catat komentar aslinya, interpretasi masalah, tindakan konkret yang diusulkan, bukti atau literatur yang perlu ditambahkan, lokasi yang akan direvisi, bagian lain yang terdampak, PIC, status, dan cara mengecek penyelesaiannya. Komentar seperti “perkuat novelty” harus diturunkan menjadi pemeriksaan pekerjaan terkait, pembandingan yang spesifik, dan rumusan kontribusi yang didukung bukti. Komentar seperti “metodologi perlu diperdalam” harus diuraikan menjadi detail metode, alasan pemilihan, tahapan, data, metrik, atau validasi yang memang kurang.
+
+Jika maksud komentar ambigu, catat interpretasi sementara dan pertanyaan untuk klarifikasi; jangan berpura-pura mengetahui maksud pembimbing. Setelah revisi, pastikan tindakan benar-benar menangani substansi komentar dan tidak sekadar mengubah redaksi.
+
+### 12.7 Pemeriksaan plagiarisme, kemiripan teks, dan kontribusi individual
+
+Skor kemiripan adalah indikator untuk diperiksa, bukan bukti tunggal plagiarisme maupun jaminan keaslian. Periksa potongan yang cocok dan sumbernya. Bedakan antara kutipan yang diatribusikan dengan benar, istilah/nama metode atau frasa baku, teks template, pengulangan konteks bersama, parafrasa yang terlalu dekat, gagasan yang belum diatribusikan, dan kemiripan yang perlu dianalisis lebih lanjut.
+
+Fokus pemeriksaan pada atribusi, ketepatan kutipan, parafrasa mandiri yang mempertahankan makna, dan kejelasan kontribusi penulis. Jangan menjadikan penurunan angka kemiripan sebagai satu-satunya target; jangan menghapus atribusi atau mengganti sinonim hanya untuk menghindari pemeriksaan. Terapkan juga ketentuan akademik dan alat pemeriksa yang benar-benar diwajibkan kampus bila tersedia.
+
+Dalam Capstone, identifikasi bagian yang menjadi konteks atau artefak bersama dan bagian yang merupakan kontribusi individual. Tinjau kemiripan teks bersama konteks, atribusi, peran masing-masing anggota, dan isi analisis; jangan menyimpulkan pelanggaran semata-mata dari skor atau menganggap seluruh teks serupa otomatis wajar.
+
+### 12.8 Status kesiapan dokumen
+
+Gunakan status eksplisit saat status pekerjaan berpengaruh terhadap keputusan atau penyerahan:
+
+- `DRAF`: isi masih dibangun.
+- `PERLU VERIFIKASI SUMBER`: klaim atau metadata penting belum diperiksa.
+- `MENUNGGU KEPUTUSAN TIM`: isu dependensi/integrasi belum disepakati.
+- `MENUNGGU KONFIRMASI PEMBIMBING`: arahan akademik penting belum diperoleh.
+- `SIAP DITINJAU`: pemeriksaan dalam lingkup tugas sudah dilakukan dan sisa ketidakpastian disebutkan.
+- `SELESAI`: kriteria yang relevan sudah dipenuhi dan tidak ada isu penting yang disamarkan.
+
+Jangan menyatakan sebuah bagian siap atau selesai hanya karena kalimat lengkap. Periksa klaim dan sumber, kecocokan sitasi, kesinambungan antarbab, konsistensi dokumen, status isu/keputusan, serta dampak lintas proposal bila konteksnya Capstone. Bila sumber, artefak, atau proposal lain tidak tersedia, laporkan keterbatasan pemeriksaan secara spesifik.
+
+### 12.9 Checklist tambahan sebelum menyelesaikan revisi
+
+- [ ] Klaim substantif yang perlu diperiksa tercatat dalam Claim–Evidence Log dan memiliki lokasi bukti atau status verifikasi yang jujur.
+- [ ] Klaim yang hanya didukung sebagian telah dibatasi atau ditandai, bukan dinyatakan sebagai fakta pasti.
+- [ ] Revisi AI tidak menambah asumsi, mengubah tingkat kepastian, atau melebih-lebihkan sumber.
+- [ ] Dampak revisi terhadap bab lain, angka, istilah, sitasi, gambar/tabel, dan rujukan silang telah diperiksa.
+- [ ] Untuk Capstone, acuan bersama, kontrak antarkomponen, dependensi, tanggung jawab, dan kontribusi individual telah diperiksa sejauh dokumennya tersedia.
+- [ ] Isu terbuka dibedakan dari keputusan yang disepakati dan memiliki PIC/tindak lanjut bila diperlukan.
+- [ ] Komentar pembimbing/reviewer ditautkan ke tindakan dan bukti yang konkret.
+- [ ] Kemiripan teks ditelaah berdasarkan konteks serta atribusi, bukan hanya skor.
+- [ ] Status kesiapan dokumen mencerminkan pemeriksaan yang benar-benar dilakukan dan keterbatasannya dinyatakan.
+
+## 13. Pedoman tambahan dari notulensi bimbingan: fokus latar belakang, rumusan masalah, tujuan, batasan, dan metodologi
+
+Bagian ini memperjelas penerapan aturan per bagian dalam Bab I. Ketentuan ini melengkapi, bukan mengganti, aturan sebelumnya. Jika pedoman resmi program studi atau arahan pembimbing yang spesifik menetapkan format berbeda, ikuti ketentuan yang berlaku dan catat konflik yang perlu dipastikan.
+
+### 13.1 Latar belakang: gambaran global yang tetap dekat dengan masalah
+
+1. Berikan rancangan atau gambaran global secukupnya agar pembaca memahami konteks, kemudian arahkan pembahasan ke kondisi *existing* dan persoalan konkret yang menjadi fokus penelitian.
+2. Jaga kedekatan konteks dengan masalah utama. Jika pokok penelitian adalah basis data, misalnya, utamakan kondisi, kendala, kebutuhan, atau persoalan yang terkait dengan basis data. Konteks bisnis boleh dipakai jika membantu menjelaskan kebutuhan atau urgensi, tetapi jangan memperluasnya hingga menggeser fokus teknis penelitian.
+3. Susun alur dari konteks yang relevan menuju keadaan saat ini, persoalan yang dapat ditunjukkan, kekurangan/gap, dan alasan penelitian diperlukan. Hindari uraian luas yang tidak mendukung argumen utama atau kondisi *existing* yang hanya diasumsikan.
+4. Pendahuluan merupakan landasan awal bagi pembaca untuk menilai keseluruhan proposal. Karena itu, periksa secara khusus ketepatan konteks, keterlacakan klaim, kejelasan alur, relevansi tiap paragraf, dan hubungan masalah dengan penelitian yang diusulkan.
+5. Jangan membuat narasi konteks lebih luas daripada bukti yang tersedia. Jika kondisi *existing* baru berasal dari dugaan, tandai sebagai asumsi atau kebutuhan validasi, bukan sebagai fakta.
+
+### 13.2 Rumusan masalah: persoalan yang harus dijawab, bukan langkah pengerjaan
+
+1. Rumusan masalah menjelaskan persoalan, kekurangan, atau pertanyaan yang belum terjawab. Rumusan masalah bukan daftar langkah untuk membuat atau mengimplementasikan solusi; langkah operasional diletakkan pada metodologi.
+2. Terangkan kondisi saat ini dan kekurangan spesifik yang menjadi dasar pertanyaan. Jangan mengganti persoalan dengan deskripsi teknologi atau pernyataan bahwa sistem akan dibuat.
+3. Untuk penelitian yang memerlukan formulasi formal, identifikasi terlebih dahulu *research gap*, variabel yang relevan, dan aturan/asumsi/hubungan yang mengatur variabel tersebut. Setelah dasar konseptual itu jelas, susun rumus atau persamaan jika memang dibutuhkan oleh pendekatan penelitian. Definisikan setiap variabel dan jelaskan dasar relasi yang digunakan; jangan menambahkan rumus hanya untuk memberi kesan teknis.
+4. Bedakan informasi yang telah didukung sumber atau data, asumsi kerja yang masih perlu diuji, dan keputusan yang harus disepakati. Jika *research gap*, variabel, atau aturan belum jelas, tandai sebagai isu terbuka.
+5. Rumusan masalah harus dapat dijawab oleh metode yang diusulkan dan dievaluasi melalui data atau bukti yang tersedia. Pastikan tidak ada pertanyaan yang tidak memiliki rencana pengumpulan bukti atau analisis.
+
+### 13.3 Tujuan: hasil akhir yang spesifik dan terukur
+
+1. Mulai tujuan dengan satu pernyataan utama yang spesifik tentang apa yang akan dibuat, dikembangkan, dianalisis, atau dievaluasi pada akhir penelitian. Kalimat penjelas boleh ditambahkan bila dibutuhkan untuk menjelaskan hasil tersebut.
+2. Tuliskan ukuran keberhasilan pencapaian yang dapat diperiksa. Hubungkan metrik atau kriteria dengan masalah dan tujuan; jelaskan objek dan cara pengukuran, serta target atau pembanding hanya jika memiliki dasar yang dapat dipertanggungjawabkan.
+3. Hindari tujuan yang hanya menyatakan dampak luas tanpa ukuran operasional, seperti “meningkatkan produktivitas”, apabila produktivitas tidak didefinisikan dan cara pengukurannya tidak dirancang. Rumuskan tujuan berdasarkan hasil yang benar-benar menjadi lingkup penelitian, bukan janji manfaat yang belum dapat dibuktikan.
+4. Tujuan tidak boleh mengulang batasan masalah. Tujuan menyatakan hasil yang hendak dicapai, sedangkan batasan masalah menjelaskan bagian kajian yang dicakup dan dibatasi.
+5. Jangan mengarang target numerik atau ukuran keberhasilan hanya untuk membuat tujuan tampak terukur. Jika target belum tersedia, tandai sebagai keputusan yang perlu dibahas atau tentukan prosedur untuk memilihnya berdasarkan dasar yang sah.
+
+### 13.4 Batasan masalah: batasan kajian, bukan sekadar batasan implementasi
+
+1. Definisikan cakupan kajian yang benar-benar dianalisis, misalnya fenomena/aspek yang diperiksa, objek atau konteks penelitian, cakupan data, kondisi penggunaan, asumsi, dan aspek yang dikecualikan jika pengecualian itu penting.
+2. Jangan menjadikan pilihan implementasi semata—seperti bahasa pemrograman, platform, infrastruktur, atau daftar fitur—sebagai pengganti batasan kajian. Detail implementasi tetap dapat dijelaskan pada bagian rancangan/metode jika relevan, tetapi harus dibedakan dari cakupan ilmiah penelitian.
+3. Pastikan batasan masalah memperjelas validitas klaim dan ekspektasi pembaca. Semua tujuan dan pertanyaan penelitian harus berada di dalam cakupan yang dinyatakan.
+4. Jangan menambahkan batasan yang tidak diperlukan hanya untuk melengkapi struktur. Sebaliknya, jangan menghilangkan batasan yang menentukan interpretasi hasil atau generalisasi temuan.
+
+### 13.5 Metodologi: pahami kerangka dasar, lalu sesuaikan dengan kasus
+
+1. Jelaskan karakteristik, struktur, atau pola umum metodologi yang dipilih—termasuk apa yang dikerjakan, keluaran yang dihasilkan, dan alasan pemilihannya—sebelum menjelaskan penerapannya.
+2. Jangan sekadar menerjemahkan tahapan metodologi generik. Rincikan tahapan yang sungguh-sungguh akan dilakukan dalam kasus penelitian ini, dengan keluaran atau hasil antara yang jelas dan hubungan dengan tahap berikutnya.
+3. Metodologi dapat diadaptasi atau ditingkatkan agar sesuai dengan karakteristik masalah. Jelaskan tahap apa yang disesuaikan, alasan perubahan, konsekuensinya, dan cara menjaga agar proses tetap valid. Jangan menyatakan penerapan sepenuhnya sesuai kerangka asli jika ada perubahan material yang tidak dijelaskan.
+4. Untuk setiap tahap penting, pastikan fungsi dan keterkaitannya jelas: masukan yang diperlukan, aktivitas atau keputusan, keluaran, dan bukti/evaluasi yang akan digunakan. Tahapan harus menjawab rumusan masalah, bukan sekadar mencerminkan urutan implementasi tanpa justifikasi.
+5. Jangan menuliskan “melakukan kajian pustaka” sebagai satu tahap metodologi di Bab I. Kajian pustaka merupakan proses yang berkelanjutan dan dapat berkembang sepanjang penyusunan proposal maupun pelaksanaan TA. Literatur tetap perlu dicari, diverifikasi, disintesis, dan diperbarui; yang tidak diperlukan adalah memperlakukannya sebagai satu langkah metode terpisah dalam daftar metodologi Bab I.
+
+### 13.6 Checklist keterpaduan Bab I
+
+Sebelum Bab I dianggap siap ditinjau, pastikan:
+
+- Latar belakang bergerak dari konteks global yang relevan ke kondisi *existing* dan persoalan yang dekat dengan fokus.
+- Rumusan masalah berbentuk persoalan atau pertanyaan, bukan urutan aktivitas pengerjaan.
+- *Research gap*, variabel, aturan/asumsi, dan hubungan konseptual telah diperiksa sebelum rumus atau persamaan dibuat jika memang diperlukan.
+- Tujuan utama menyatakan hasil akhir spesifik dan dilengkapi ukuran keberhasilan yang dapat diperiksa.
+- Klaim dampak tidak menggantikan tujuan terukur; target numerik tidak direka-reka.
+- Tujuan dan batasan masalah tidak mengulang fungsi satu sama lain.
+- Batasan masalah menjelaskan batas kajian, bukan hanya konfigurasi implementasi.
+- Metodologi dipilih dengan alasan, pola dasarnya dipahami, dan tahap-tahapnya dirancang khusus untuk persoalan penelitian.
+- Kajian pustaka tetap diperlakukan sebagai aktivitas yang terus berkembang, bukan satu tahap metodologi Bab I.
+- Asumsi, variabel, aturan, target, atau keputusan yang belum dikonfirmasi diberi status yang jelas.
