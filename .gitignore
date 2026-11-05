@@ -1,0 +1,12 @@
+# Data RSIA mitra: berkas pasien (RANAP/RAJAL), contoh CPPT/resume terisi, dan data klaim pending.
+# Jangan pernah di-commit ke GitHub, baik repository public maupun private.
+RSIA-source/
+
+# Lokasi kerja lokal agent: data turunan RSIA, hasil ekstraksi, render, log akses (D-17 R-3).
+.scratch/
+
+# Pengaturan Claude Code khusus mesin ini (claudeMdExcludes, izin lokal).
+.claude/settings.local.json
+
+# Cache bytecode Python dari scripts/.
+__pycache__/

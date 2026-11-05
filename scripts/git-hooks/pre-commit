@@ -1,0 +1,10 @@
+#!/bin/sh
+# Pre-commit hook (D-12). Aktif hanya setelah: git config --local core.hooksPath scripts/git-hooks
+# Kembalikan dengan: git config --local --unset core.hooksPath
+for py in python python3 py; do
+  if command -v "$py" >/dev/null 2>&1; then
+    exec "$py" "$(git rev-parse --show-toplevel)/scripts/check_staged.py"
+  fi
+done
+echo "pre-commit: Python tidak ditemukan; commit ditolak agar check_staged.py tidak terlewati." >&2
+exit 1

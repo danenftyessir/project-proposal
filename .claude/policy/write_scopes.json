@@ -1,0 +1,242 @@
+{
+  "version": 2,
+  "global": {
+    "protect_paths": [
+      "RSIA-source/**"
+    ],
+    "audit_read_paths": [
+      "RSIA-source/**"
+    ],
+    "restricted_read": {
+      "material/**": [
+        "a10-qa-structure"
+      ]
+    },
+    "safe_bash": [
+      "cd",
+      "ls",
+      "cat",
+      "head",
+      "tail",
+      "wc",
+      "grep",
+      "sort",
+      "uniq",
+      "cut",
+      "tr",
+      "echo",
+      "printf",
+      "true"
+    ],
+    "deny_write_paths": [
+      "RSIA-source/**",
+      "capstone-teammate-propose/**",
+      "template/**",
+      "material/**",
+      "source/**",
+      "**/*.docx",
+      "Penyelarasan Pemahaman Capstone.md"
+    ],
+    "deny_stage_paths": [
+      "RSIA-source/**",
+      ".scratch/**",
+      "Penyelarasan Pemahaman Capstone.md",
+      ".claude/settings.local.json"
+    ],
+    "deny_bash_patterns": [
+      "git add -A",
+      "git add --all",
+      "git add .",
+      "git add -u",
+      "git add -f",
+      "git add --force",
+      "git commit -a",
+      "git commit --no-verify",
+      "git commit -n",
+      "git push --delete",
+      "git push --mirror",
+      "git push --force",
+      "git push -f",
+      "git push --force-with-lease",
+      "git push origin +",
+      "git reset --hard",
+      "git clean",
+      "git stash",
+      "git checkout --",
+      "git rebase",
+      "git worktree remove --force",
+      "tools/build_docx.py",
+      "tools/build_with_toc.py"
+    ],
+    "protect_paths_bash_rule": "tolak perintah yang menyebut path protect_paths bersama rm|mv|cp (tujuan di dalamnya)|>|>>|tee|sed -i|touch|chmod|icacls|attrib|git add; unzip hanya dengan -l, -p, atau -d .scratch/rsia/",
+    "ask_bash_patterns": [
+      "git commit",
+      "git push",
+      "python -I tools/build_modular.py"
+    ],
+    "ask_tools": [
+      "WebSearch",
+      "WebFetch"
+    ]
+  },
+  "agents": {
+    "a01-orchestrator": {
+      "write": [],
+      "bash": [
+        "git status",
+        "git log",
+        "git diff --stat",
+        "git diff --name-only",
+        "python scripts/check_memory.py",
+        "python scripts/check_agents.py",
+        "git show",
+        "git rev-parse",
+        "git ls-tree",
+        "git ls-files",
+        "git cat-file",
+        "git merge-base",
+        "git show-ref",
+        "git describe",
+        "git worktree list",
+        "git branch --show-current"
+      ]
+    },
+    "a02-research-evidence": {
+      "write": [
+        "tools/claims_*.json",
+        ".scratch/**"
+      ],
+      "web": true,
+      "bash": [
+        "pdftotext",
+        "pdfinfo",
+        "python scripts/extract_text.py",
+        "python -I tools/verify_claims.py",
+        "unzip -l",
+        "unzip -p",
+        "unzip -o -d .scratch/rsia/",
+        "sha256sum",
+        "python <SKILL_DIR:pdf>/scripts/convert_pdf_to_images.py"
+      ]
+    },
+    "a03-academic-writer": {
+      "write": [
+        "bab1/**/*.md",
+        "bab2/**/*.md",
+        "bab3/**/*.md",
+        "bab4/**/*.md",
+        ".scratch/**"
+      ],
+      "bash": [
+        "python -I tools/build_modular.py"
+      ]
+    },
+    "a04-supervisor": {
+      "write": [],
+      "bash": []
+    },
+    "a05-critical-reviewer": {
+      "write": [],
+      "bash": []
+    },
+    "a06-cross-proposal": {
+      "write": [
+        ".scratch/**"
+      ],
+      "bash": [
+        "python scripts/extract_text.py",
+        "pdftotext",
+        "pdfinfo"
+      ]
+    },
+    "a07-qa-academic": {
+      "write": [],
+      "bash": []
+    },
+    "a08-qa-citation": {
+      "write": [
+        ".scratch/**"
+      ],
+      "web": true,
+      "bash": [
+        "pdftotext",
+        "pdfinfo",
+        "python scripts/extract_text.py",
+        "python -I tools/verify_claims.py",
+        "unzip -l",
+        "unzip -p"
+      ]
+    },
+    "a09-qa-editorial": {
+      "write": [],
+      "bash": []
+    },
+    "a10-qa-structure": {
+      "write": [
+        ".scratch/**"
+      ],
+      "bash": [
+        "python scripts/extract_text.py",
+        "pdftotext",
+        "pdfinfo"
+      ]
+    },
+    "a11-qa-technical": {
+      "write": [],
+      "bash": []
+    },
+    "a12-qa-integrity": {
+      "write": [
+        ".scratch/**"
+      ],
+      "bash": [
+        "python scripts/extract_text.py",
+        "pdftotext",
+        "pdfinfo",
+        "soffice --headless --convert-to pdf --outdir .scratch",
+        "python <SKILL_DIR:docx>/scripts/office/validate.py",
+        "python <SKILL_DIR:docx>/scripts/office/unpack.py",
+        "mkdir",
+        "cp"
+      ],
+      "bash_dest": [
+        ".scratch/**"
+      ],
+      "skill_scripts": [
+        "docx/scripts/office/validate.py",
+        "docx/scripts/office/unpack.py"
+      ]
+    },
+    "a13-memory-manager": {
+      "write": [
+        "memory/**",
+        ".scratch/**"
+      ],
+      "bash": [
+        "git status",
+        "git diff",
+        "git log",
+        "git show",
+        "git fetch",
+        "git ls-remote",
+        "git rev-parse",
+        "git merge-tree",
+        "git branch --show-current",
+        "git worktree list",
+        "git describe",
+        "git show-ref",
+        "git merge-base",
+        "git cat-file",
+        "git ls-files",
+        "git ls-tree",
+        "git hash-object",
+        "git add --",
+        "git commit -m",
+        "git push origin",
+        "python scripts/check_memory.py",
+        "python scripts/check_staged.py",
+        "sha256sum"
+      ]
+    }
+  }
+}
