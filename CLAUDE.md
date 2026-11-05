@@ -13,7 +13,6 @@ Sebelum menulis, merevisi, meringkas, menerjemahkan, atau mengevaluasi naskah pr
 5. **Tulis secara langsung dan terstruktur.** Gunakan Bahasa Indonesia ilmiah yang jelas, hemat, logis, tidak ambigu, dan tidak terlalu panjang. Terapkan aturan ejaan, pilihan kata, kalimat, dan paragraf dari `RULES.md`.
 6. **Lakukan pemeriksaan akhir.** Gunakan checklist yang relevan di bagian 7 `RULES.md` sebelum menyelesaikan hasil.
 
-
 ### Prosedur saat membuat, menyunting, menambah, memindahkan, atau menghapus teks
 
 - **Membuat teks:** sebelum memilih kata berimbuhan, identifikasi bentuk dasar, imbuhan, makna yang hendak disampaikan, dan fungsi kata dalam kalimat. Terapkan pemeriksaan morfologi pada `RULES.md` Bagian 6.4.
@@ -78,10 +77,10 @@ Pastikan jadwal mengikuti tahapan metodologi. Sertakan lima risiko utama dan mit
 
 Jika dokumen yang diminta adalah rangkuman utama Capstone, gunakan lima bagian yang ditentukan contoh: Latar Belakang, Rumusan Masalah, Tujuan, Batasan Masalah, dan Pembagian Peran Anggota Kelompok. Bagian pembagian peran harus mencakup seluruh komponen solusi, diagram komponen, dan penanggung jawab setiap komponen.
 
-
 ### 5.6 Pemeriksaan kapitalisasi, huruf miring, dan huruf tebal
 
 Saat membuat atau menyunting teks:
+
 1. Periksa kapitalisasi nama diri, nama geografi, nama peristiwa sejarah, nama bulan/hari/hari besar, nama jabatan yang diikuti nama, serta unsur nama yang berfungsi sebagai kata umum atau bentuk turunan.
 2. Bedakan nama geografi sebagai nama diri dari nama jenis (misalnya nama tempat dibandingkan nama jenis buah).
 3. Terapkan huruf miring sesuai fungsi: judul karya yang disebut dalam kalimat, kata/istilah asing atau daerah yang belum diserap, dan penegasan/pengkhususan yang memang diperlukan. Jangan memiringkan nama diri, organisasi, atau lembaga hanya karena namanya berbahasa asing.
@@ -92,6 +91,7 @@ Saat membuat atau menyunting teks:
 ### 5.7 Menyusun dan menyunting kerangka karangan formal
 
 Sebelum menulis atau merombak bagian proposal/laporan:
+
 1. Identifikasi topik, tema, judul, tujuan, rumusan masalah, aspek yang diteliti, dan metode; jangan menyatukan fungsi unsur-unsur tersebut.
 2. Periksa apakah judul relevan, ringkas, spesifik, tidak provokatif, dan tidak menyatakan kesimpulan yang belum dibuktikan. Gunakan anak judul bila perlu untuk membatasi ruang lingkup.
 3. Bila kerangka belum matang, lakukan inventarisasi ide terlebih dahulu, kemudian koreksi/lengkapi, kelompokkan ide sejenis, urutkan secara logis, dan petakan ke struktur bab.
@@ -100,10 +100,10 @@ Sebelum menulis atau merombak bagian proposal/laporan:
 6. Perlakukan struktur Bab II sebagai teori dan Bab III sebagai data/analisis hanya jika sesuai dengan pedoman tugas/TA yang berlaku. Format resmi dari program studi atau instruksi pengguna yang lebih spesifik harus didahulukan; bila bertentangan dengan contoh format dalam aturan ini, jelaskan konflik alih-alih mengubah struktur diam-diam.
 7. Saat menulis judul atau kerangka dari awal, pastikan urutan teori, metode, data, analisis, dan simpulan membantu pembaca mengikuti argumen, bukan sekadar mengikuti pola nomor.
 
-
 ### 5.8 Komponen pelengkap, abstrak, dan bagian awal/akhir
 
 Saat membuat atau merevisi komponen naskah:
+
 1. Periksa jenis karya, pedoman resmi, dan template terlebih dahulu. Jangan menerapkan contoh format dalam aturan ini sebagai ketentuan wajib jika template/pedoman berbeda.
 2. Cocokkan komponen pelengkap awal yang dibutuhkan: halaman judul, lembar pengesahan bila berlaku, abstrak/sari dan kata kunci, prakata, kata pengantar bila diminta, daftar isi, daftar gambar, daftar tabel, dan daftar lampiran.
 3. Jangan mengarang nama, NIM, tanggal, institusi, pengesahan, tanda tangan, atau kata pengantar dari pihak lain. Gunakan placeholder yang jelas atau minta informasi yang belum tersedia.
@@ -145,7 +145,6 @@ Saat membuat atau merevisi komponen naskah:
 - Usahakan paragraf tetap fokus dan tidak terlalu panjang; sedapat mungkin jangan hanya terdiri dari satu kalimat.
 - Hindari pola kalimat generik yang berulang dan klaim berlebihan. Utamakan ketepatan, kejelasan, dan informasi yang benar-benar didukung sumber.
 
-
 ### 5.1 Pemeriksaan tanda baca
 
 - Baca Bagian 6.5 `RULES.md` sebagai sumber aturan terperinci untuk tanda baca. Terapkan materi itu saat menulis dari nol maupun mengubah teks lama.
@@ -158,7 +157,6 @@ Saat membuat atau merevisi komponen naskah:
 - Periksa petikan langsung: pola pernyataan dapat berbentuk `“Saya ikut,” kata Budi.`, sedangkan petikan pertanyaan/seruan tidak diikuti koma tambahan, misalnya `“Bolehkah kita berfoto bersama?” tanya Roni.`
 - Setelah menghapus atau memindahkan klausa, lakukan pemeriksaan ulang terhadap tanda baca di awal/akhir kalimat, pasangan tanda sisipan, dan konjungsi antarkalimat yang mungkin kehilangan kaitan logis.
 - Beberapa contoh bertajuk `Tanda Titik` tidak menampilkan uraian aturan pada render statis yang tersedia. Jangan mengarang aturan lalu mengatribusikannya ke contoh; jika aturan terperinci dibutuhkan, minta/rujuk pedoman ejaan resmi yang relevan.
-
 
 ### 5.2 Pemeriksaan tata kalimat dan interferensi bahasa
 
@@ -175,9 +173,6 @@ Baca Bagian 6.6 `RULES.md` sebagai sumber terperinci. Saat menulis atau mengubah
 - **Setelah mengubah teks:** baca ulang kalimat lengkap dan kalimat di sekitarnya. Verifikasi subjek-predikat, pelaku, objek, pemilik, sumber, tempat, relasi klausa, paralelisme, tanda baca, dan kesinambungan logika. Saat menghapus satu bagian atau memindahkan klausa, cek ulang struktur sisa kalimat.
 - **Batas sumber tata kalimat:** Gunakan daftar sepuluh ciri kalimat ragam ilmiah dan lima ciri kalimat efektif pada `RULES.md` Bagian 6.7. Aturan unsur serapan dirangkum secara terpisah pada Bagian 6.9.
 - **Catat konflik sumber.** Pada contoh ucapan terima kasih, tampilan contoh dan catatan pembicara tidak konsisten antara `diucapkan` dan `dihaturkan`. Jangan mengunci salah satunya sebagai aturan universal berdasarkan sumber ini saja; pilih bentuk baku dengan konteks yang sesuai dan verifikasi bila perlu.
-
-
-
 
 #### Pemeriksaan kalimat mubazir dan penghematan kata
 
@@ -207,7 +202,6 @@ Gunakan pembahasan paralelisme pada Bagian 6.7 `RULES.md` saat membuat, menyunti
 
 Catatan sumber: contoh 8 memiliki salah ketik pada `kerusakaan barang`; gunakan `kerusakan barang` dalam penulisan biasa, tetapi jangan mengubah kutipan verbatim dari contoh tanpa memberi tanda koreksi.
 
-
 ### 5.3 Pemeriksaan kalimat taksa/ambigu dan rancu
 
 Gunakan Bagian 6.8 `RULES.md` sebagai acuan saat membuat, memparafrasakan, menerjemahkan, atau menyunting kalimat. Jangan hanya memperbaiki kalimat yang terasa janggal; identifikasi dahulu makna yang mungkin terbaca dan konstruksi yang tercampur.
@@ -221,7 +215,6 @@ Gunakan Bagian 6.8 `RULES.md` sebagai acuan saat membuat, memparafrasakan, mener
 - **Hemat dan lengkap:** contoh materi menyoroti bentuk bercampur/berlebihan seperti `menyempatkan waktu`, `menceritakan tentang`, dan `dan lain sebagainya`. Pilih satu bentuk yang tepat menurut maksud; jangan menghapus unsur yang diperlukan untuk makna atau tata bahasa.
 - **Pertahankan data autentik:** jangan mengoreksi diam-diam kalimat salah yang sedang dijadikan objek analisis, kutipan, dialog, atau data korpus. Pisahkan teks asli dari usulan perbaikan.
 - **Batasi klaim kaidah:** jangan memperluas contoh menjadi aturan universal. Jika ketepatan ejaan, tanda hubung, atau struktur tertentu tidak ditetapkan jelas oleh materi, tandai ketidakpastian dan periksa pedoman resmi.
-
 
 #### Checklist kalimat efektif dan ragam ilmiah
 
@@ -667,4 +660,3 @@ Sebelum menyerahkan Bab I atau menyatakan revisi selesai, periksa bahwa:
 - Metodologi dipilih dengan alasan yang jelas, karakteristik dasarnya dipahami, dan tahapnya telah disesuaikan terhadap kasus penelitian.
 - Kajian pustaka tidak dicantumkan sebagai satu tahap metodologi Bab I, tetapi tetap diperlakukan sebagai pekerjaan berkelanjutan.
 - Semua asumsi, target, variabel, dan keputusan yang belum pasti ditandai untuk verifikasi atau pembahasan dengan tim/pembimbing.
-
