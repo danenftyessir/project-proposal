@@ -1,10 +1,10 @@
 ---
 file: OPEN_QUESTIONS
-revision: 18
+revision: 21
 status: CURRENT
 updated: 2026-11-07
 updated_by: a13-memory-manager
-based_on_commit: f3cb6ba
+based_on_commit: b05a2e3
 ---
 
 # Open Questions
@@ -741,9 +741,10 @@ question: Siapa yang boleh mengedit tools/build_modular.py? a03 hanya berwenang 
 affected: [tools/build_modular.py, write_scopes]
 class: L4
 pic: Pengguna
-status: TERBUKA
+status: DIPUTUSKAN → D-36
 updated: 2026-11-07
-refs: [D-35, P2-02]
+refs: [D-35, D-36, P2-02]
+note: D-36 (2026-11-07) memberi a03 wewenang edit khusus tools/build_modular.py; lingkup hanya siapa yang berwenang
 ```
 
 ```yaml
@@ -752,9 +753,11 @@ question: Bagaimana definisi tiga varian modular (editorial, formal, lengkap) da
 affected: [tools/build_modular.py, modular/]
 class: L3
 pic: Pengguna
-status: TERBUKA
+status: DIPUTUSKAN SEBAGIAN → D-38, D-39, D-40
 updated: 2026-11-07
-refs: [D-35]
+refs: [D-35, D-38, D-39, D-40, Q-B1-ao, Q-B1-ap, Q-B1-aq, Q-B1-ar]
+note: D-38 (2026-11-07) menetapkan nama dan makna tiga varian serta keluaran DOCX saja (Google Docs manual oleh pengguna). Sisa terbuka pada butir Q-B1-ao..ar (a-d).
+note_2: Progres 2026-11-07 - (b) PDF DIPUTUSKAN D-39 (Q-B1-ap); (d) perakitan varian Lengkap DIPUTUSKAN D-40 (Q-B1-ar). Sisa terbuka: (a) Q-B1-ao (templat dasar) dan (c) Q-B1-aq (penanda editorial).
 ```
 
 ```yaml
@@ -765,7 +768,9 @@ class: L4
 pic: Pengguna
 status: TERBUKA
 updated: 2026-11-07
-refs: [D-35, Q-B1-aj]
+refs: [D-35, D-36, Q-B1-aj, Q-B1-an]
+note: D-36 menjadikan perubahan AGENT_SPECIFICATIONS, ORCHESTRATION, hook guard, dan check_agents konsekuensi wajib; pelaksanaan dan jalur pengeditnya belum diputuskan (Q-B1-an); tetap TERBUKA
+note_2: D-37 (2026-11-07) memutuskan pelaksana perubahan = pengguna atau sesi Claude Code biasa di luar agent. Butir ini tetap TERBUKA sampai perubahan benar-benar diterapkan dan check_agents lolos (belum terjadi saat dicatat).
 ```
 
 ```yaml
@@ -777,4 +782,63 @@ pic: Pengguna
 status: TERBUKA
 updated: 2026-11-07
 refs: [D-35, D-16, P2-02]
+```
+
+```yaml
+id: Q-B1-an
+question: Siapa atau jalur mana yang mengedit docs/AGENT_SPECIFICATIONS.md, docs/ORCHESTRATION_ARCHITECTURE.md, scripts/guard.py (kebijakan), scripts/check_agents.py, dan definisi agent a03, sebagai konsekuensi wajib D-36? Berkas-berkas itu di luar write_scope A01 dan A13; belum ada agent yang berwenang atasnya.
+affected: [docs/, scripts/, .claude/]
+class: L4
+pic: Pengguna
+status: DIPUTUSKAN → D-37
+updated: 2026-11-07
+refs: [D-36, D-37, Q-B1-al, Q-B1-aj]
+note: D-37 (2026-11-07) memutuskan perubahan dikerjakan pengguna atau sesi Claude Code biasa di luar agent; lingkup hanya jalur pelaksanaan. Q-B1-al tetap TERBUKA.
+```
+
+```yaml
+id: Q-B1-ao
+question: Apakah "Template-Proposal-IF4091-Capstone-Individu-2026 - Copy.docx" di root identik dengan template/Template-Proposal-IF4091-Capstone-Individu-2026.docx, dan mana yang menjadi dasar skrip (varian Lengkap)?
+affected: [tools/build_modular.py, template/]
+class: L3
+pic: Pengguna
+status: TERBUKA
+updated: 2026-11-07
+refs: [D-38, Q-B1-ak]
+note: A13 menghitung hash sha256 kedua berkas pada 2026-11-07 dan keduanya SAMA (awalan a76030913c40); itu hanya fakta byte, bukan keputusan mana yang menjadi dasar skrip. Isi templat tidak dibaca.
+```
+
+```yaml
+id: Q-B1-ap
+question: Apakah PDF termasuk keluaran skrip? Bab I dan II sudah punya pdf dari migrasi di luar sistem; D-38 hanya menetapkan DOCX.
+affected: [tools/build_modular.py, bab1/, bab2/]
+class: L3
+pic: Pengguna
+status: DIPUTUSKAN → D-39
+updated: 2026-11-07
+refs: [D-38, D-39, Q-B1-ak]
+note: D-39 (2026-11-07) - Editorial DOCX saja; Formal dan Lengkap DOCX dan PDF. Cara konversi PDF, izin Bash a03 (Q-B1-al/D-37), dan kriteria audit a12 untuk PDF belum diputuskan.
+```
+
+```yaml
+id: Q-B1-aq
+question: Apa isi tepat penanda atau catatan editorial yang dibawa varian Editorial, dan apa yang harus hilang dari varian Formal?
+affected: [tools/build_modular.py, modular/]
+class: L3
+pic: Pengguna
+status: TERBUKA
+updated: 2026-11-07
+refs: [D-38, Q-B1-ak]
+```
+
+```yaml
+id: Q-B1-ar
+question: Bagaimana varian Lengkap menggabungkan Bab I-IV dan komponen pelengkap (halaman judul, abstrak, daftar isi, daftar pustaka) sesuai templat?
+affected: [tools/build_modular.py, template/]
+class: L3
+pic: Pengguna
+status: DIPUTUSKAN → D-40
+updated: 2026-11-07
+refs: [D-38, D-40, Q-B1-ak, Q-B1-ao]
+note: D-40 (2026-11-07) - isi Bab I-IV dari Markdown bab1/-bab4/, pelengkap berplaceholder jelas; a12 memastikan tidak ada placeholder lolos ke berkas kumpul. Isi tiap komponen pelengkap dan templat acuan (Q-B1-ao) belum diputuskan.
 ```

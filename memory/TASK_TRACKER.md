@@ -1,10 +1,10 @@
 ---
 file: TASK_TRACKER
-revision: 29
+revision: 32
 status: CURRENT
 updated: 2026-11-07
 updated_by: a13-memory-manager
-based_on_commit: f3cb6ba
+based_on_commit: b05a2e3
 ---
 
 # Task Tracker
@@ -78,6 +78,9 @@ Tugas memakai ID `TSK-xxx` (berbeda dari ID uji teknis `T-xx`). Status: `TODO` Â
 | TSK-063 | task_close A13: koreksi TSK-061 (FAILED), Q-B1-ah dan Q-B1-ai, PROJECT_STATE | DONE | A13 | 0 | `memory/TASK_TRACKER.md`, `memory/OPEN_QUESTIONS.md`, `memory/PROJECT_STATE.md` | Brief A01 | Tidak ada keputusan baru; naskah tidak diubah; tidak ada Git |
 | TSK-062 | task_close A13: TSK-059/061, Q-B1-ad..ag, PROJECT_STATE Bab I | DONE | A13 | 0 | `memory/TASK_TRACKER.md`, `memory/OPEN_QUESTIONS.md`, `memory/PROJECT_STATE.md` | Brief A01 | Tidak ada keputusan baru; naskah tidak diubah; tidak ada Git |
 | TSK-064 | memory_op A13: rekonsiliasi R9 (diagnosis S7, S2) + record_decision D-35 + Q-B1-aj..am | DONE | A13 | 0 | `memory/DECISION_LOG.md`, `memory/OPEN_QUESTIONS.md`, `memory/PROJECT_STATE.md`, `memory/CONTEXT_TRANSFER.md`, `memory/TASK_TRACKER.md` | Brief A01 (approval_evidence lengkap) | D-35 APPROVED L3 (lingkup: penempatan peran). Tidak ada commit/push; usulan G3 diajukan ke A01. Naskah dan tools tidak diubah |
+| TSK-065 | memory_op A13: record_decision D-36 (a03 berwenang edit tools/build_modular.py) + tutup Q-B1-aj + catatan Q-B1-al + Q-B1-an baru | DONE | A13 | 0 | `memory/DECISION_LOG.md`, `memory/OPEN_QUESTIONS.md`, `memory/PROJECT_STATE.md`, `memory/CONTEXT_TRANSFER.md`, `memory/TASK_TRACKER.md` | Brief A01 (approval_evidence lengkap) | D-36 APPROVED L3 (lingkup: siapa berwenang). Wewenang belum berlaku operasional sampai spesifikasi, hook, dan check_agents diubah (Q-B1-al, Q-B1-an). Tidak ada commit/push/staging; tools dan naskah tidak diubah |
+| TSK-066 | memory_op A13: record_decision D-37 (pelaksana perubahan spesifikasi/hook = pengguna atau sesi biasa) dan D-38 (tiga varian, keluaran DOCX saja) + Q-B1-an ditutup, Q-B1-ak DIPUTUSKAN SEBAGIAN, Q-B1-ao..ar baru + koreksi HEAD b05a2e3 | DONE | A13 | 0 | `memory/DECISION_LOG.md`, `memory/OPEN_QUESTIONS.md`, `memory/PROJECT_STATE.md`, `memory/CONTEXT_TRANSFER.md`, `memory/TASK_TRACKER.md` | Brief A01 (approval_evidence lengkap) | D-37 dan D-38 APPROVED L3 (lingkup terbatas). D-35 hanya diberi catatan rujukan ke D-38. Q-B1-al tetap TERBUKA. Hash sha256 template/ dan templat root "- Copy" sama (fakta, dicatat di Q-B1-ao; belum keputusan). Tidak ada commit/push/staging; tools, docs, hook, dan naskah tidak diubah |
+| TSK-067 | memory_op A13: record_decision D-39 (PDF untuk varian Formal dan Lengkap) dan D-40 (varian Lengkap dari Markdown bab, pelengkap placeholder) + Q-B1-ap dan Q-B1-ar DIPUTUSKAN, Q-B1-ak progres | DONE | A13 | 0 | `memory/DECISION_LOG.md`, `memory/OPEN_QUESTIONS.md`, `memory/PROJECT_STATE.md`, `memory/CONTEXT_TRANSFER.md`, `memory/TASK_TRACKER.md` | Brief A01 (approval_evidence lengkap) | D-39 dan D-40 APPROVED L3 (lingkup terbatas). D-38 hanya diberi catatan rujukan. Sisa Q-B1-ak: Q-B1-ao dan Q-B1-aq terbuka. Cara konversi PDF, izin Bash a03, dan kriteria audit a12 untuk PDF tidak diputuskan. Tidak ada commit/push/staging; tools, docs, hook, dan naskah tidak diubah |
 
 Approval evidence TSK-061 (persetujuan operasional per eksekusi, P2-02):
 
@@ -187,6 +190,9 @@ Diisi A13 saat penutupan tugas dari Agent Report dan `.scratch/agent_runs.jsonl`
 | 2026-11-06 | TSK-061 | a03 | 0 | FAILED (ModuleNotFoundError lxml; tanpa retry) | NA | n/a | n/a | n/a | n/a |
 | 2026-11-06 | TSK-063 | a13 | 0 | COMPLETE | NA | 0/0/0/0 | n/a | n/a | n/a |
 | 2026-11-07 | TSK-064 | a13 | 0 | COMPLETE | NA | 0/0/0/0 | n/a | n/a | n/a |
+| 2026-11-07 | TSK-065 | a13 | 0 | COMPLETE | NA | 0/0/0/0 | n/a | n/a | n/a |
+| 2026-11-07 | TSK-066 | a13 | 0 | COMPLETE | NA | 0/0/0/0 | n/a | n/a | n/a |
+| 2026-11-07 | TSK-067 | a13 | 0 | COMPLETE | NA | 0/0/0/0 | n/a | n/a | n/a |
 
 Catatan: token = subagent_tokens menurut harness, mungkin kumulatif per instance.
 

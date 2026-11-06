@@ -1,10 +1,10 @@
 ---
 file: CONTEXT_TRANSFER
-revision: 15
+revision: 18
 status: CURRENT
 updated: 2026-11-07
 updated_by: a13-memory-manager
-based_on_commit: f3cb6ba
+based_on_commit: b05a2e3
 ---
 
 # Context Transfer
@@ -13,8 +13,8 @@ Handoff untuk sesi berikutnya. **Bukan** sumber keputusan: keputusan ada di `DEC
 
 ## Di mana kita berhenti
 
-- Repo: worktree `C:\Users\HYPE R Series\worktrees\project-proposal-setup`, branch `setup/orchestration`, HEAD `f3cb6ba` ("feat: bab 1.1-1.3"). Per 2026-11-07 working tree TIDAK bersih: `memory/**` (7 berkas) dan `bab1/Bab_I_Draft.md` berubah belum di-commit (penyebab NOT_READY S7), plus modular/*.docx berubah dan docx/pdf baru tak terlacak di `bab1/` dan `bab2/` (hasil migrasi oleh LLM lain di luar sistem, menurut brief A01; bukan keluaran agent). Commit f3cb6ba dibuat pengguna di luar A13; persetujuan G3 tidak tercatat sebagai approval_evidence. Pengguna menyatakan sudah push (2026-11-06); tidak terverifikasi.
-- Bab I terbaru: `bab1/Bab_I_Draft.md` DRAF 10 (39 penanda; I.5 ditulis tanpa kerangka bernama, D-34; belum diperiksa QA; hash belum dihitung ulang; Q-B1-ad..ag). Build modular TSK-061 GAGAL (lxml belum terpasang; Q-B1-ah, Q-B1-ai). Keputusan D-35 (2026-11-07): peran migrasi Markdown ke Docs/DOCX ditempatkan pada a03 dengan memperbaiki build_modular.py; rincian terbuka di Q-B1-aj..am. Catatan di bawah sampai butir berikut masih rincian DRAF 8.
+- Repo: worktree `C:\Users\HYPE R Series\worktrees\project-proposal-setup`, branch `setup/orchestration`, HEAD `b05a2e3` ("feat: migrate docs agent"; sebelumnya f3cb6ba "feat: bab 1.1-1.3"). Per 2026-11-07 (git status) working tree: hanya `memory/**` berubah belum di-commit; `bab1/Bab_I_Draft.md`, modular/*.docx, dan docx/pdf migrasi di `bab1/` dan `bab2/` sudah terlacak (migrasi oleh LLM lain di luar sistem, menurut brief A01; bukan keluaran agent). Commit f3cb6ba dibuat pengguna di luar A13; persetujuan G3 tidak tercatat sebagai approval_evidence. Pengguna menyatakan sudah push (2026-11-06); tidak terverifikasi.
+- Bab I terbaru: `bab1/Bab_I_Draft.md` DRAF 10 (39 penanda; I.5 ditulis tanpa kerangka bernama, D-34; belum diperiksa QA; hash belum dihitung ulang; Q-B1-ad..ag). Build modular TSK-061 GAGAL (lxml belum terpasang; Q-B1-ah, Q-B1-ai). Keputusan D-35 (2026-11-07): peran migrasi Markdown ke Docs/DOCX ditempatkan pada a03 dengan memperbaiki build_modular.py; rincian terbuka di Q-B1-ak..am. D-36 (2026-11-07): a03 diberi wewenang edit khusus tools/build_modular.py (approval per perubahan, audit a12); belum operasional sampai spesifikasi, hook, check_agents diubah (Q-B1-al, Q-B1-an). D-37 (2026-11-07): perubahan spesifikasi/hook/check_agents/definisi a03 dikerjakan pengguna atau sesi Claude Code biasa di luar agent (Q-B1-an DIPUTUSKAN; Q-B1-al tetap TERBUKA). D-38 (2026-11-07): tiga varian Editorial, Formal, Lengkap (templat Individu "- Copy" di root), keluaran DOCX saja, Google Docs manual oleh pengguna; Q-B1-ak DIPUTUSKAN SEBAGIAN, sisa Q-B1-ao..ar. D-39 (2026-11-07): PDF hanya untuk Formal dan Lengkap (Editorial DOCX saja; Q-B1-ap DIPUTUSKAN; cara konversi, izin Bash a03, kriteria audit a12 belum diputuskan). D-40 (2026-11-07): varian Lengkap dari Markdown bab1/-bab4/, pelengkap placeholder jelas, a12 memastikan tidak lolos (Q-B1-ar DIPUTUSKAN). Sisa terbuka: Q-B1-ao dan Q-B1-aq. Catatan di bawah sampai butir berikut masih rincian DRAF 8.
 - Bab I (DRAF 8): `bab1/Bab_I_Draft.md` DRAF 8 (status `DRAF`, belum SELESAI; sha256 `05b369128553`). 31 penanda. I.1 (16 paragraf, tanpa paragraf research gap), I.2 ditulis (D-28), I.3 ditulis (D-31, D-33), I.4 diselaraskan (D-29, D-30). I.5 dan paragraf research gap I.1 belum ditulis; judul individual menunggu K2. QA I.2/I.3/I.4 (DRAF 5-8): a07, a09, a10 PASS_WITH_NOTES, ditambah a05 (tinjauan kritis) dan a11 (teknis) pada rumusan/I.3; a08 belum memeriksa I.2/I.3/I.4 (sitasi belum diaudit untuk bagian baru; a08 PASS_WITH_NOTES hanya berlaku untuk Bab I DRAF 4, yaitu I.1 dan I.4 lama); itu bukan persetujuan Supervisor atau pengguna. I.2 dan I.3 belum SELESAI.
 - Keputusan baru sesi ini (bukti lengkap di `DECISION_LOG.md`): D-28 komposisi I.2; D-29 kriteria presisi dan recall; D-30 paragraf baru I.4; D-31 tujuan "mengevaluasi"; D-32 mekanisme kombinasi ditandai, D-29 dipertahankan; D-33 hasil = jawaban pertanyaan. Sebelumnya: D-21..D-27 (ruang lingkup Bab I). Angka klaim *pending* tetap ditahan (D-19).
 - Temuan terbuka (`FINDINGS_LOG.md`): F-A07-0048, F-A09-0103, F-A09-0104 (LOW). Tantangan a05 tetap OPEN: F-A05-0002, 0006, 0007, 0009, 0012; F-A05-0008 kini RESOLVED oleh a05 (tinjauan ulang, Wave 1; lihat FINDINGS_LOG rev 17).
@@ -34,7 +34,7 @@ Handoff untuk sesi berikutnya. **Bukan** sumber keputusan: keputusan ada di `DEC
 ## Yang menunggu pengguna
 
 - Q-B1-j sampai Q-B1-u, termasuk Q-B1-o (mekanisme kombinasi), Q-B1-p, Q-B1-q, Q-B1-r, Q-B1-t, Q-B1-u (rincian di `OPEN_QUESTIONS.md`).
-- Q-B1-ad..ai dan Q-B1-aj..am (siapa mengedit build_modular, tiga varian dan Google Docs, wewenang a03/hook, nasib D-16).
+- Q-B1-ad..ai, Q-B1-ak (sebagian, D-38), Q-B1-al, Q-B1-am, Q-B1-ao dan Q-B1-aq (dasar templat, penanda editorial); Q-B1-ap DIPUTUSKAN D-39, Q-B1-ar DIPUTUSKAN D-40. Q-B1-aj DIPUTUSKAN D-36; Q-B1-an DIPUTUSKAN D-37. Pengguna/sesi biasa perlu menerapkan perubahan spesifikasi/hook (D-37) sebelum wewenang a03 (D-36) operasional.
 - Q-A04-a, Q-A04-c, Q-A04-d, Q-A04-f.
 - K1 (gaya sitasi akhir dan terkait), K2 (judul capstone).
 - Lainnya: K3, K4, K6, K7, I-1, I-2, Q-P2-a..c, Q-TEAM, Q-RSIA-1, Q-B1-a..i (lihat `OPEN_QUESTIONS.md`).

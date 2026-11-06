@@ -1,10 +1,10 @@
 ---
 file: DECISION_LOG
-revision: 15
+revision: 18
 status: CURRENT
 updated: 2026-11-07
 updated_by: a13-memory-manager
-based_on_commit: f3cb6ba
+based_on_commit: b05a2e3
 ---
 
 # Decision Log
@@ -804,7 +804,7 @@ date: '2026-11-07'
 related: [D-16, Q-B1-ai, Q-B1-ah, Q-A04-a]
 basis: 'Jawaban pengguna atas pertanyaan penempatan peran migrasi Markdown final ke Docs'
 alternatives_considered: ['Agent ke-14 khusus', 'Skrip deterministik tanpa agent', 'Rancang dulu']
-consequences: 'a03 menjadi penulis sekaligus penerbit. Keputusan ini TIDAK menetapkan: (a) siapa yang boleh mengedit tools/build_modular.py (a03 hanya berwenang menulis bab*/ dan .scratch/**), (b) definisi tiga varian dan format keluaran Google Docs, (c) perubahan AGENT_SPECIFICATIONS/ORCHESTRATION, hook guard dan check_agents, (d) nasib D-16. Semua itu terbuka (Q-B1-aj..am). Tidak memberi persetujuan build apa pun; P2-02 tetap berlaku (skrip build lama tetap dilarang). Perbaikan build_modular belum dilakukan saat keputusan dicatat.'
+consequences: 'a03 menjadi penulis sekaligus penerbit. Keputusan ini TIDAK menetapkan: (a) siapa yang boleh mengedit tools/build_modular.py (a03 hanya berwenang menulis bab*/ dan .scratch/**), (b) definisi tiga varian dan format keluaran Google Docs, (c) perubahan AGENT_SPECIFICATIONS/ORCHESTRATION, hook guard dan check_agents, (d) nasib D-16. Semua itu terbuka (Q-B1-aj..am). Tidak memberi persetujuan build apa pun; P2-02 tetap berlaku (skrip build lama tetap dilarang). Perbaikan build_modular belum dilakukan saat keputusan dicatat. [Catatan rujukan 2026-11-07, ditambahkan A13: bagian jalur Google Docs pada keputusan ini dipersempit oleh D-38; teks keputusan asli tidak diubah.]'
 approval_evidence:
   question: 'Bagaimana peran migrasi Markdown final ke Docs (versi modular editorial, formal, dan lengkap) ditempatkan di sistem agent?'
   options_offered: ['Perluas a03 + perbaiki build_modular', 'Agent ke-14 khusus', 'Skrip deterministik tanpa agent', 'Rancang dulu']
@@ -812,4 +812,110 @@ approval_evidence:
   answered_at: '2026-11-07'
   session_ref: 'Brief A01 memory_op (pertanyaan penempatan peran migrasi); tanggal = hari pencatatan, tidak tercantum di brief'
   scope: 'Hanya penempatan peran migrasi: a03 diperluas dan build_modular.py diperbaiki untuk tiga varian dan jalur Google Docs; tidak ada agent baru; persetujuan per eksekusi (P2-02) tetap'
+```
+
+## D-36
+
+```yaml
+id: D-36
+decision: 'a03 diberi wewenang edit khusus atas satu berkas, tools/build_modular.py, dengan persetujuan pengguna per perubahan dan audit hasil oleh a12. Lingkup terbatas pada siapa yang berwenang mengedit berkas itu'
+class: L3
+status: APPROVED
+date: '2026-11-07'
+related: [D-35, D-16, Q-B1-aj, Q-B1-al, Q-B1-an, P2-02]
+basis: 'Jawaban pengguna atas pertanyaan Q-B1-aj (siapa mengedit tools/build_modular.py)'
+alternatives_considered: ['Pengguna atau sesi terpisah di luar agent mengedit skrip', 'Tunda; putuskan definisi varian dulu']
+consequences: 'Wewenang ini mensyaratkan perubahan AGENT_SPECIFICATIONS, hook guard, dan check_agents (konsekuensi wajib, dicatat di Q-B1-al) serta audit a12 atas hasil. Keputusan ini TIDAK menetapkan: (a) definisi tiga varian dan format Google Docs (Q-B1-ak tetap terbuka), (b) isi perubahan skrip, (c) nasib D-16 (Q-B1-am tetap terbuka), (d) pelaksanaan perubahan pada docs/, hook, dan konfigurasi agent, (e) jalur atau agent yang mengedit berkas-berkas itu (Q-B1-an terbuka). Sebelum perubahan tersebut dilaksanakan, a03 tetap TIDAK berwenang menulis di tools/. Tidak memberi persetujuan build apa pun; P2-02 tetap berlaku (skrip build lama tetap dilarang).'
+approval_evidence:
+  question: 'Siapa yang mengedit tools/build_modular.py untuk mendukung tiga varian (editorial, formal, lengkap) dan jalur Google Docs? a03 saat ini hanya berwenang menulis di bab1/–bab4/ dan .scratch/**, jadi tidak bisa mengedit skrip di tools/.'
+  options_offered: ['Anda/sesi terpisah di luar agent', 'Beri a03 wewenang edit khusus tools/build_modular.py, dengan approval per perubahan, memerlukan perubahan AGENT_SPECIFICATIONS, hook guard, dan check_agents, serta a12 mengaudit hasilnya', 'Tunda, putuskan definisi varian dulu']
+  user_answer: 'Beri a03 wewenang edit khusus tools/build_modular.py'
+  answered_at: '2026-11-07'
+  session_ref: 'Brief A01 memory_op R9 (pertanyaan Q-B1-aj), sesi 2026-11-07'
+  scope: 'HANYA siapa yang berwenang mengedit tools/build_modular.py (a03, satu berkas itu). Tidak mencakup definisi tiga varian/format Google Docs (Q-B1-ak), isi perubahan skrip, nasib D-16 (Q-B1-am), maupun pelaksanaan perubahan pada docs/, hook, dan konfigurasi agent'
+```
+
+## D-37
+
+```yaml
+id: D-37
+decision: 'Perubahan AGENT_SPECIFICATIONS, ORCHESTRATION_ARCHITECTURE, scripts/guard.py, scripts/check_agents.py, dan definisi agent a03 (konsekuensi wajib D-36) dikerjakan oleh pengguna atau sesi Claude Code biasa di luar agent. Lingkup terbatas pada jalur pelaksanaan perubahan itu'
+class: L3
+status: APPROVED
+date: '2026-11-07'
+related: [D-36, D-35, Q-B1-al, Q-B1-an, P2-02]
+basis: 'Jawaban pengguna atas pertanyaan Q-B1-an (siapa mengerjakan perubahan spesifikasi/hook)'
+alternatives_considered: ['Susun draf perubahan di .scratch/ untuk ditinjau dan diterapkan pengguna', 'Tunda sampai definisi varian jelas']
+consequences: 'Q-B1-an ditutup (DIPUTUSKAN). Q-B1-al tetap TERBUKA sampai perubahan benar-benar diterapkan dan check_agents lolos; sebelum itu wewenang a03 menurut D-36 belum operasional dan a03 tetap TIDAK berwenang menulis di tools/. Daftar lokasi perubahan yang disampaikan A01 ke pengguna: AGENT_SPECIFICATIONS (tabel agent baris A03; blok write_scopes dan daftar skrip terlarang; tes T-26 dan T-29; P2-02), ORCHESTRATION_ARCHITECTURE (R5), scripts/guard.py, scripts/check_agents.py, .claude/agents/a03-academic-writer.md. Keputusan ini TIDAK menetapkan isi perubahan, tidak memberi persetujuan build apa pun, dan tidak mengubah D-36. A13 tidak berwenang menulis berkas-berkas itu.'
+approval_evidence:
+  question: 'Wewenang edit a03 atas tools/build_modular.py hanya efektif bila spesifikasi dan kebijakan hook diubah (AGENT_SPECIFICATIONS, ORCHESTRATION_ARCHITECTURE, scripts/guard.py, scripts/check_agents.py, definisi agent a03). Tidak ada agent yang berwenang menulis berkas-berkas itu, dan saya sendiri tidak punya akses tulis. Siapa yang mengerjakan perubahan tersebut?'
+  options_offered: ['Anda/sesi Claude Code biasa', 'Susun draf perubahan di .scratch/ untuk ditinjau dan diterapkan pengguna', 'Tunda sampai definisi varian jelas']
+  user_answer: 'Anda/sesi Claude Code biasa (Recommended)'
+  answered_at: '2026-11-07'
+  session_ref: 'Brief A01 memory_op R9 (pertanyaan Q-B1-an), sesi 2026-11-07'
+  scope: 'HANYA jalur pelaksanaan perubahan spesifikasi/hook/check_agents/definisi a03: dikerjakan pengguna atau sesi Claude Code biasa di luar agent. Tidak mencakup isi perubahan, definisi varian, maupun penutupan Q-B1-al'
+```
+
+## D-38
+
+```yaml
+id: D-38
+decision: 'Tiga varian keluaran build_modular didefinisikan: (i) Editorial = satu docx per bab memuat catatan editorial, pola nama ...-Modular-Bab-{I-IV}_Editorial.docx; (ii) Formal = satu docx per bab, siap kumpul meski masih ada celah, pola ...-Modular-Bab-{I-IV}.docx; (iii) Lengkap = proposal utuh mengikuti templat Individu IF4091, acuan berkas "Template-Proposal-IF4091-Capstone-Individu-2026 - Copy.docx" di root repo. Keluaran skrip hanya DOCX; pengguna mengunggah ke Google Docs secara manual; tidak ada jalur Google Docs otomatis dan tidak ada agent yang memakai konektor Google Docs'
+class: L3
+status: APPROVED
+date: '2026-11-07'
+related: [D-35, D-36, D-37, Q-B1-ak, P2-02]
+basis: 'Pesan pengguna yang mendefinisikan varian (contoh pada folder modular/ dan templat di root) dan jawaban pengguna atas pertanyaan jalur Google Docs'
+alternatives_considered: ['DOCX dulu, Google Docs lewat sesi terpisah', 'DOCX dan PDF saja, Google Docs tidak diperlukan']
+consequences: 'MENYEMPITKAN lingkup D-35 (yang menyebut jalur Google Docs): jalur Google Docs otomatis tidak ada; D-35 tidak diubah selain catatan rujukan. Q-B1-ak ditandai DIPUTUSKAN SEBAGIAN. Keputusan ini TIDAK menetapkan dan tidak boleh dianggap disetujui: (a) apakah "Template-... Individu-2026 - Copy.docx" di root identik dengan template/Template-Proposal-IF4091-Capstone-Individu-2026.docx dan mana yang menjadi dasar skrip; (b) apakah PDF termasuk keluaran skrip; (c) isi tepat penanda/catatan editorial yang dibawa varian Editorial dan yang harus hilang dari Formal; (d) cara varian Lengkap menggabungkan Bab I-IV dan komponen pelengkap (halaman judul, abstrak, daftar isi, daftar pustaka) sesuai templat. Tidak memberi persetujuan build apa pun; P2-02 tetap berlaku (skrip build lama tetap dilarang). Q-B1-am (nasib skrip lama) tidak diubah. [Catatan rujukan 2026-11-07, ditambahkan A13: butir (b) dijawab D-39 (PDF untuk Formal dan Lengkap; D-38 diperluas untuk dua varian itu) dan butir (d) dijawab D-40 (sumber isi varian Lengkap); teks keputusan asli tidak diubah.]'
+approval_evidence:
+  question: 'Bagaimana jalur ke Google Docs ditangani setelah Markdown final dibuat menjadi DOCX oleh build_modular.py?'
+  options_offered: ['DOCX saja, unggah ke Google Docs manual', 'DOCX dulu, Google Docs lewat sesi terpisah', 'DOCX dan PDF saja, Google Docs tidak diperlukan']
+  user_answer: 'DOCX saja, unggah ke Google Docs manual (Recommended)'
+  user_message_definisi_varian: 'bedanya bisa dilihat di C:\Users\HYPE R Series\worktrees\project-proposal-setup\modular untuk modular yang tiap bab ada 2 jenis yaitu editorial (ada catatannya) dan formal (siap kumpul walau masih ada celah/kekurangan) dan C:\Users\HYPE R Series\worktrees\project-proposal-setup\Template-Proposal-IF4091-Capstone-Individu-2026 - Copy.docx untuk lengkap'
+  answered_at: '2026-11-07'
+  session_ref: 'Brief A01 memory_op R9 (definisi varian dan pertanyaan Google Docs), sesi 2026-11-07'
+  scope: 'Definisi tiga varian (nama, pola nama berkas, makna) dan keluaran hanya DOCX tanpa jalur Google Docs otomatis. Tidak mencakup butir (a)-(d) pada consequences'
+```
+
+## D-39
+
+```yaml
+id: D-39
+decision: 'Keluaran build_modular.py: varian Editorial = DOCX saja; varian Formal dan Lengkap = DOCX dan PDF. Lingkup terbatas pada format keluaran per varian'
+class: L3
+status: APPROVED
+date: '2026-11-07'
+related: [D-38, D-35, D-36, D-37, Q-B1-ap, Q-B1-ak, Q-B1-al, P2-02]
+basis: 'Jawaban pengguna atas pertanyaan Q-B1-ap (apakah PDF termasuk keluaran skrip)'
+alternatives_considered: ['DOCX saja untuk skrip', 'DOCX dan PDF otomatis (semua varian)']
+consequences: 'MEMPERLUAS D-38 untuk varian Formal dan Lengkap (D-38 menyebut keluaran DOCX saja; teks D-38 tidak diubah). Q-B1-ap ditutup (DIPUTUSKAN). Konsekuensi yang diketahui A01 dari deskripsi opsi: konversi PDF memerlukan LibreOffice/soffice di mesin, skrip lebih kompleks, dan a03 memerlukan izin Bash baru. Keputusan ini TIDAK menetapkan dan tidak boleh dianggap disetujui: (a) cara konversi PDF; (b) perubahan izin Bash a03 (bagian Q-B1-al/D-37, dikerjakan pengguna atau sesi biasa); (c) kriteria audit a12 untuk PDF. Tidak memberi persetujuan build apa pun; P2-02 tetap berlaku (skrip build lama tetap dilarang).'
+approval_evidence:
+  question: 'Apakah PDF termasuk keluaran build_modular.py, selain DOCX (tiga varian: Editorial, Formal, Lengkap)? Bab I dan II saat ini sudah punya PDF hasil migrasi di luar sistem.'
+  options_offered: ['DOCX saja untuk skrip', 'DOCX dan PDF otomatis', 'PDF hanya untuk varian Formal dan Lengkap']
+  user_answer: 'PDF hanya untuk varian Formal dan Lengkap'
+  answered_at: '2026-11-07'
+  session_ref: 'Brief A01 memory_op R9 (pertanyaan Q-B1-ap), sesi 2026-11-07'
+  scope: 'HANYA format keluaran per varian: Editorial DOCX saja; Formal dan Lengkap DOCX dan PDF. Tidak mencakup cara konversi PDF, perubahan izin Bash a03, kriteria audit a12 untuk PDF, maupun persetujuan build'
+```
+
+## D-40
+
+```yaml
+id: D-40
+decision: 'Varian Lengkap mengisi templat Individu dengan teks Bab I-IV langsung dari Markdown bab1/-bab4/ (bukan dari docx Formal); komponen pelengkap yang datanya belum ada diberi placeholder yang jelas (mis. [DATA BELUM TERSEDIA]) sesuai aturan CLAUDE.md; daftar isi berupa field Word yang diperbarui saat dibuka (bagian dari opsi yang dipilih, menurut deskripsi opsi). Lingkup terbatas pada sumber isi dan penanganan komponen pelengkap'
+class: L3
+status: APPROVED
+date: '2026-11-07'
+related: [D-38, D-39, D-35, Q-B1-ar, Q-B1-ak, Q-B1-ao, P2-02]
+basis: 'Jawaban pengguna atas pertanyaan Q-B1-ar (perakitan varian Lengkap)'
+alternatives_considered: ['Isi dari docx Formal per bab', 'Kerangka templat saja dulu']
+consequences: 'Q-B1-ar ditutup (DIPUTUSKAN). Konsekuensi: a12 harus memastikan tidak ada placeholder yang lolos ke berkas yang dikumpulkan. Keputusan ini TIDAK menetapkan dan tidak boleh dianggap disetujui: (a) isi tiap komponen pelengkap (halaman judul, abstrak, daftar isi, daftar pustaka); (b) templat acuan (Q-B1-ao tetap terbuka; fakta hash identik antara templat di template/ dan templat root "- Copy" sudah tercatat, bukan keputusan). Tidak memberi persetujuan build apa pun; P2-02 tetap berlaku (skrip build lama tetap dilarang).'
+approval_evidence:
+  question: 'Bagaimana varian Lengkap dirakit dari Markdown final: dari mana isi Bab I–IV diambil, dan bagaimana komponen pelengkap (halaman judul, abstrak, daftar isi, daftar pustaka) yang datanya belum ada ditangani?'
+  options_offered: ['Isi dari Markdown bab, pelengkap placeholder', 'Isi dari docx Formal per bab', 'Kerangka templat saja dulu']
+  user_answer: 'Isi dari Markdown bab, pelengkap placeholder (Recommended)'
+  answered_at: '2026-11-07'
+  session_ref: 'Brief A01 memory_op R9 (pertanyaan Q-B1-ar), sesi 2026-11-07'
+  scope: 'HANYA sumber isi varian Lengkap (Markdown bab1/-bab4/) dan penanganan komponen pelengkap dengan placeholder jelas. Tidak mencakup isi tiap komponen pelengkap, templat acuan (Q-B1-ao), maupun persetujuan build'
 ```
