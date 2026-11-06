@@ -1,10 +1,10 @@
 ---
 file: OPEN_QUESTIONS
-revision: 1
+revision: 6
 status: CURRENT
-updated: 2026-11-05
-updated_by: setup Phase 3 (sesi utama; A13 belum aktif)
-based_on_commit: 7d59b85
+updated: 2026-11-06
+updated_by: a13-memory-manager
+based_on_commit: fee9a61
 ---
 
 # Open Questions
@@ -22,8 +22,9 @@ class: L3
 pic: Pengguna
 ask_to: Tim / pembimbing
 status: TERBUKA
-updated: 2026-11-05
-refs: [D-11]
+updated: 2026-11-06
+refs: [D-11, F-A08-0004, F-A08-0005, F-A08-0013]
+extended: 'Per 2026-11-06 K1 juga menaungi: (1) bentuk sitasi sekunder untuk Muroli dkk. (2020); (2) atribusi dokumen tim Penyelarasan di daftar pustaka; (3) salinan acuan halaman PMK 24/2022 (usulan agent, bukan keputusan: Berita Negara).'
 ```
 
 ```yaml
@@ -73,9 +74,10 @@ affected: [Bab I, A07, A11]
 class: L3
 pic: Pengguna
 ask_to: Tim
-status: TERBUKA
-updated: 2026-11-05
-refs: []
+status: DIPUTUSKAN → D-21
+updated: 2026-11-06
+refs: [D-21, D-19]
+follow_up: 'TERBUKA: selaraskan pembuka Bab II (bab2/Bab_II_Revisi_Notulensi.md:15) dan II.1 Rekam Medis Rawat Inap; bentuk dokumen rawat jalan di RSIA belum dipastikan (Q-TEAM butir 4); dasar kuantitatif tertahan D-19. Naskah belum diubah.'
 ```
 
 ```yaml
@@ -208,7 +210,174 @@ affected: [A01, TASK_TRACKER]
 class: L4
 pic: Pengguna
 ask_to: Pengguna
+status: DITUTUP DENGAN ALASAN (dijawab pengguna 2026-11-06; fakta jadwal, bukan keputusan akademik)
+updated: 2026-11-06
+refs: [TSK-017]
+answer: >
+  Ada dua tenggat untuk Bab I dan Bab II: 6 November 2026 = tenggat lunak ke dosen pembimbing;
+  10 November 2026 = tenggat final ke pusat. Tenggat 10 November di work-state claude-mem
+  hanya benar sebagai tenggat final, bukan satu-satunya tenggat.
+approval_evidence:
+  question: "Untuk mencatat Q-08, saya menafsirkan 6 November sebagai tenggat lunak ke dosen pembimbing dan 10 November sebagai tenggat final ke pusat, keduanya untuk Bab I dan Bab II. Apakah pemetaan ini benar?"
+  options_offered: ["Ya, benar", "Terbalik"]
+  user_answer: "Ya, benar (didahului pernyataan pengguna: 'tenggatnya ada 2, tanggal 6 nov dan 10 nov' dan 'bab 1 dan 2 dan itu soft deadline untuk dosen pembimbing sebelum dikirim ke pusat finalnya')"
+  answered_at: 2026-11-06
+  session_ref: "sesi /sesi-mulai 2026-11-06, jawaban AskUserQuestion Tenggat"
+  scope: "Hanya fakta tenggat: 6 Nov 2026 = tenggat lunak Bab I dan II ke dosen pembimbing; 10 Nov 2026 = tenggat final Bab I dan II ke pusat"
+```
+
+## Pertanyaan tersisa wawancara a04 (TSK-018, menunggu jawaban pengguna)
+
+```yaml
+id: Q-A04-a
+question: Apakah graf pengetahuan Bab II (II.4.2) bagian dari metode Bab I?
+affected: [Bab I, Bab II]
+class: L3
+pic: Pengguna
 status: TERBUKA
-updated: 2026-11-05
+updated: 2026-11-06
+refs: [F-A04-0007]
+```
+
+```yaml
+id: Q-A04-b
+question: Apakah rumusan individual mengambil bagian rumusan 4 (kejelasan alasan dan rujukan)?
+affected: [Bab I]
+class: L3
+pic: Pengguna
+status: TERBUKA
+updated: 2026-11-06
 refs: []
+```
+
+```yaml
+id: Q-A04-c
+question: Berapa jumlah kasus di balik "jumlah kasusnya mencukupi" (Penyelarasan Pemahaman Capstone.md:61)?
+affected: [Bab I, A11]
+class: L3
+pic: Pengguna
+status: TERBUKA
+updated: 2026-11-06
+refs: [D-19]
+```
+
+```yaml
+id: Q-A04-d
+question: Satuan hitung presisi/recall: per temuan, per jenis, atau per episode?
+affected: [Bab I, A11]
+class: L3
+pic: Pengguna
+ask_to: Tim
+status: TERBUKA
+updated: 2026-11-06
+refs: [F-A04-0008, Q-TEAM]
+```
+
+```yaml
+id: Q-A04-e
+question: Apakah isi kualitatif wawancara Direktur RSIA boleh diparafrasakan di latar belakang (D-19 hanya mengatur angka)?
+affected: [Bab I]
+class: L3
+pic: Pengguna
+status: DIPUTUSKAN → D-24
+updated: 2026-11-06
+refs: [D-19, D-23, D-24]
+```
+
+```yaml
+id: Q-A04-f
+question: Judul individual Bab I apa yang dipakai?
+affected: [Bab I]
+class: L3
+pic: Pengguna
+status: TERBUKA
+updated: 2026-11-06
+refs: [K2, F-A04-0009]
+```
+
+## Butir baru dari QA Bab I DRAF 4 (TSK-030, 2026-11-06)
+
+Semua butir berikut TERBUKA; tidak ada yang diputuskan.
+
+```yaml
+id: Q-B1-a
+question: Bentuk baku menurut KBBI untuk capstone (tegak/miring), diinput/penginputan, dan deidentifikasi/de-identifikasi?
+affected: [Bab I, Bab II]
+class: L4
+pic: Pengguna
+status: TERBUKA
+updated: 2026-11-06
+refs: [F-A09-0006, F-A09-0017, F-A09-0018]
+```
+
+```yaml
+id: Q-B1-b
+question: Bagaimana F-A07-0001 (masalah konkret CPPT lawan resume di RSIA belum ditunjukkan) diselesaikan, mengingat angka tertahan D-19?
+affected: [Bab I]
+class: L3
+pic: Pengguna
+ask_to: Tim
+status: MENUNGGU ANGGOTA
+updated: 2026-11-06
+refs: [F-A07-0001, D-19]
+```
+
+```yaml
+id: Q-B1-c
+question: Siapa pemilik di tim untuk penautan ibu-bayi (Penyelarasan:43) setelah lingkup I.4 diputuskan di luar kajian individu?
+affected: [Bab I, A06]
+class: L3
+pic: Pengguna
+ask_to: Tim
+status: MENUNGGU ANGGOTA
+updated: 2026-11-06
+refs: [D-25, F-A07-0005]
+```
+
+```yaml
+id: Q-B1-d
+question: Konfirmasi pembimbing atas urutan paragraf 1 I.1 (masalah dulu, rujukan capstone kemudian) dibanding templat
+affected: [Bab I]
+class: L3
+pic: Pengguna
+ask_to: Pembimbing
+status: MENUNGGU PEMBIMBING
+updated: 2026-11-06
+refs: []
+```
+
+```yaml
+id: Q-B1-e
+question: Judul Bab II mana yang berlaku, "Studi Literatur" (naskah) atau "Kajian Pustaka" (templat)?
+affected: [Bab II]
+class: L3
+pic: Pengguna
+ask_to: Pembimbing
+status: TERBUKA
+updated: 2026-11-06
+refs: [F-A10-0010]
+```
+
+```yaml
+id: Q-B1-f
+question: Apa definisi "rawat jalan terbatas" dan bentuk dokumen rawat jalan di RSIA (Q-TEAM butir 4)?
+affected: [Bab I, Bab II]
+class: L3
+pic: Pengguna
+ask_to: Tim / RSIA mitra
+status: MENUNGGU ANGGOTA
+updated: 2026-11-06
+refs: [D-21, Q-TEAM, F-A07-0019]
+```
+
+```yaml
+id: Q-B1-g
+question: "Laporan utama capstone" yang dirujuk Bab I tidak ada di repo; di mana berkasnya, atau rujukan diganti Penyelarasan?
+affected: [Bab I]
+class: L3
+pic: Pengguna
+ask_to: Tim
+status: TERBUKA
+updated: 2026-11-06
+refs: [F-A08-0005]
 ```

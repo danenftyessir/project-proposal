@@ -1,10 +1,10 @@
 ---
 file: DECISION_LOG
-revision: 2
+revision: 7
 status: CURRENT
-updated: 2026-11-05
+updated: 2026-11-06
 updated_by: a13-memory-manager
-based_on_commit: 7d59b85
+based_on_commit: fee9a61
 ---
 
 # Decision Log
@@ -495,4 +495,153 @@ approval_evidence:
   answered_at: '2026-11-05'
   session_ref: 'Sesi Claude Code 2026-11-05, AskUserQuestion (channel); rujukan pesan tidak diberikan dalam brief TSK-013'
   scope: 'Perluasan sempit allowlist Bash a12/a13 dan perbaikan placeholder <SKILL_DIR:...> sebagaimana pada decision; bukan perluasan lain'
+```
+
+## D-21
+
+```yaml
+id: D-21
+decision: 'Cakupan perawatan Bab I individu Danendra (K5): rawat inap dan rawat jalan terbatas, sesuai keputusan tim 30 Oktober 2026'
+class: L3
+status: APPROVED
+date: '2026-11-06'
+related: [D-19, K5]
+basis: 'K5 (konflik CONTEXT_TRANSFER vs Penyelarasan, docs/ORCHESTRATION_ARCHITECTURE.md Lampiran A); P1 antrean wawancara a04 TSK-018'
+alternatives_considered: ['Rawat inap saja']
+consequences: 'Tindak lanjut TERBUKA (tidak ada naskah diubah): (1) pembuka Bab II (bab2/Bab_II_Revisi_Notulensi.md:15, "klaim rawat inap") dan II.1 "Rekam Medis Rawat Inap" perlu diselaraskan; (2) bentuk dokumen rawat jalan di RSIA belum dipastikan (Q-TEAM butir 4); (3) dasar kuantitatif tertahan D-19. Keputusan ini tidak menyentuh angka, ambang, atau cakupan lain.'
+approval_evidence:
+  question: 'Cakupan perawatan (K5): Apakah Bab I Anda mencakup rawat inap saja, atau rawat inap dan rawat jalan terbatas seperti keputusan tim 30 Oktober?'
+  options_offered: ['Rawat inap dan rawat jalan terbatas', 'Rawat inap saja']
+  user_answer: 'Rawat inap dan rawat jalan terbatas'
+  answered_at: '2026-11-06'
+  session_ref: 'sesi /sesi-mulai 2026-11-06, AskUserQuestion Cakupan (P1 antrean a04 TSK-018)'
+  scope: 'Cakupan perawatan Bab I individu: rawat inap dan rawat jalan terbatas'
+```
+
+## D-22
+
+```yaml
+id: D-22
+decision: 'Pembanding kombinasi pada rumusan masalah 1 Bab I individu Danendra (P2): kombinasi rule-based dan AI/NLP dibandingkan dengan tiap komponen sendiri-sendiri (rule-based saja dan AI/NLP saja) pada data dan label yang sama'
+class: L3
+status: APPROVED
+date: '2026-11-06'
+related: [D-19, D-21, F-A04-0003]
+basis: 'P2 antrean wawancara a04 TSK-018; F-A04-0003 (rumusan 1 menguji kombinasi tanpa pembanding)'
+alternatives_considered: ['Pemeriksaan manual koder', 'Tanpa pembanding, hanya ambang']
+consequences: 'Keputusan ini tidak menetapkan metrik, ambang, angka, atau metodologi rinci. Konsekuensi: (1) diperlukan label tenaga ahli per jenis ketidaksesuaian dan rancangan uji di metodologi; (2) Penyelarasan Pemahaman Capstone.md:35 saat ini tanpa pembanding sehingga perlu diselaraskan dengan tim (dampak lintas proposal, belum dikonfirmasi tim). Naskah belum diubah.'
+approval_evidence:
+  question: 'Pembanding untuk "kombinasi" (rumusan masalah 1): Kalau rumusan Anda menyebut kombinasi rule-based dan AI/NLP, dengan apa kombinasi itu dibandingkan?'
+  options_offered: ['Tiap komponen sendiri-sendiri', 'Pemeriksaan manual koder', 'Tanpa pembanding, hanya ambang']
+  user_answer: 'Tiap komponen sendiri-sendiri'
+  answered_at: '2026-11-06'
+  session_ref: 'sesi /sesi-mulai 2026-11-06, AskUserQuestion Pembanding (P2 antrean a04 TSK-018)'
+  scope: 'Pembanding kombinasi rule-based dan AI/NLP pada rumusan masalah 1 Bab I individu: tiap komponen sendiri-sendiri'
+```
+
+## D-23
+
+```yaml
+id: D-23
+decision: 'Dasar bukti kerugian dan premis penghubung pada latar belakang Bab I individu Danendra (P3): hubungan antara ketidaksesuaian CPPT-resume dan kerugian ditunjukkan dari wawancara pihak RSIA (keterangan kualitatif narasumber). Klaim dibatasi pada apa yang dinyatakan narasumber'
+class: L3
+status: SUPERSEDED by D-24
+date: '2026-11-06'
+superseded_scope: 'Sebagian: hanya bagian sumber ("wawancara pihak RSIA") dan atribusinya, digantikan D-24. Pembatasan klaim (tanpa klaim penurunan pending/percepatan koder, angka tertahan D-19) tetap berlaku dan diteruskan D-24'
+related: [D-19, D-21, D-22, F-A04-0006]
+basis: 'P3 antrean wawancara a04 TSK-018; F-A04-0006 (premis tersembunyi bahwa ketidaksesuaian CPPT-resume menyebabkan pending)'
+alternatives_considered: ['Dari data/alasan pending RSIA', 'Asumsi kerja yang ditandai']
+consequences: 'Keputusan ini tidak membolehkan klaim penurunan pending atau percepatan kerja koder (Penyelarasan Pemahaman Capstone.md:98); angka tetap tertahan D-19. Tindak lanjut TERBUKA: (1) belum dikonfirmasi apakah isi kualitatif wawancara boleh diparafrasakan di naskah (Q-A04-e); (2) narasumber dan lokasi catatan wawancara belum diidentifikasi; (3) premis tetap ditulis eksplisit dengan status buktinya (CLAUDE.md sec. 8 no. 8). Naskah belum diubah.'
+approval_evidence:
+  question: 'Siapa yang dirugikan dan premis penghubungnya: Kerugian apa yang Anda tunjukkan di latar belakang, dan bukti apa yang menghubungkan ketidaksesuaian CPPT-resume dengan kerugian itu?'
+  options_offered: ['Dari data/alasan pending RSIA', 'Dari wawancara pihak RSIA', 'Asumsi kerja yang ditandai']
+  user_answer: 'Dari wawancara pihak RSIA'
+  answered_at: '2026-11-06'
+  session_ref: 'sesi /sesi-mulai 2026-11-06, AskUserQuestion Premis (P3 antrean a04 TSK-018)'
+  scope: 'Dasar bukti kerugian dan premis penghubung pada latar belakang Bab I individu: wawancara pihak RSIA'
+```
+
+## D-24
+
+```yaml
+id: D-24
+decision: 'Sumber dan atribusi keterangan kerugian pada latar belakang Bab I individu Danendra: bersandar pada dokumen Penyelarasan Pemahaman Capstone.md (keputusan tim), dengan atribusi ke dokumen itu, bukan wawancara langsung. Menggantikan sebagian D-23 (bagian sumber wawancara)'
+class: L3
+status: APPROVED
+date: '2026-11-06'
+supersedes_partially: D-23
+related: [D-17, D-19, D-21, D-22, D-23, Q-A04-e, F-A04-0006]
+basis: 'Lanjutan P3 antrean wawancara a04 TSK-018; pengguna menyatakan konteks: klien mengajukan topik ke salah satu anggota tim, lalu anggota itu mengajak pengguna untuk capstone (konteks, bukan keputusan; identitas anggota tidak dicatat)'
+alternatives_considered: ['Wawancara, boleh diparafrasakan tanpa angka', 'Belum, bahas dulu dengan tim']
+consequences: 'Klaim dibatasi pada isi Penyelarasan Pemahaman Capstone.md; angka tetap tertahan D-19; tidak ada klaim penurunan pending atau percepatan kerja koder (Penyelarasan:98); pengenal kunjungan/pasien dari Penyelarasan tidak boleh masuk naskah (D-17 R-4). Isi wawancara langsung tidak dipakai kecuali lewat Penyelarasan. Premis tetap ditulis eksplisit dengan status buktinya. Naskah belum diubah.'
+approval_evidence:
+  question: 'Dari mana keterangan tentang kerugian di latar belakang Bab I boleh diambil, dan dengan atribusi apa?'
+  options_offered: ['Wawancara, boleh diparafrasakan tanpa angka', 'Lewat Penyelarasan tim saja', 'Belum, bahas dulu dengan tim']
+  user_answer: 'Lewat Penyelarasan tim saja (pilihan ini menyebut bahwa D-23 ''kerugian dari wawancara'' perlu disesuaikan; didahului pernyataan pengguna: ''Jadi intinya client mengajukan ke salah satu anggota kami, lalu anggota tersebut mengajak saya untuk capstone proposal tugas akhir'')'
+  answered_at: '2026-11-06'
+  session_ref: 'sesi /sesi-mulai 2026-11-06, AskUserQuestion Sumber (lanjutan P3, antrean a04 TSK-018)'
+  scope: 'Sumber dan atribusi keterangan kerugian pada latar belakang Bab I individu: Penyelarasan tim'
+```
+
+## D-25
+
+```yaml
+id: D-25
+decision: 'Lingkup kajian individu Bab I (I.4) hanya CPPT lawan resume dalam satu episode; konsistensi antar-entri CPPT dan penautan ibu-bayi berada di luar kajian individu'
+class: L3
+status: APPROVED
+date: '2026-11-06'
+related: [D-19, D-21, F-A07-0004, F-A07-0005]
+basis: 'Jawaban pengguna atas pertanyaan lingkup I.4 pada sesi 2026-11-06'
+alternatives_considered: ['Antar-CPPT masuk, ibu-bayi di luar', 'Ibu-bayi masuk terbatas, antar-CPPT di luar', 'Keduanya masuk']
+consequences: 'Penautan ibu-bayi tetap bagian tim (Penyelarasan:43); pemiliknya perlu dipastikan agar tidak ada celah antarproposal (tindak lanjut A06/A01). Naskah belum diubah.'
+approval_evidence:
+  question: 'Ruang lingkup I.4 (F-A07-0004, F-A07-0005): Apakah konsistensi antar-entri CPPT dan penautan ibu–bayi termasuk dalam kajian individu Anda, atau hanya dalam capstone?'
+  options_offered: ['Keduanya di luar kajian individu', 'Antar-CPPT masuk, ibu–bayi di luar', 'Ibu–bayi masuk terbatas, antar-CPPT di luar', 'Keduanya masuk']
+  user_answer: 'Keduanya di luar kajian individu'
+  answered_at: '2026-11-06'
+  session_ref: 'sesi /sesi-mulai 2026-11-06, AskUserQuestion Lingkup I.4'
+  scope: 'Lingkup kajian individu Bab I: hanya CPPT lawan resume dalam satu episode'
+```
+
+## D-26
+
+```yaml
+id: D-26
+decision: 'Subbab I.6 Sistematika Penulisan dihapus dari Bab I individu (mengikuti templat Individu I.1-I.5)'
+class: L3
+status: APPROVED
+date: '2026-11-06'
+related: [F-A10-0001, F-A10-0002]
+basis: 'Jawaban pengguna atas pertanyaan nasib I.6 pada sesi 2026-11-06'
+alternatives_considered: ['Pertahankan, konfirmasi pembimbing']
+consequences: 'Kriteria CLAUDE.md soal sistematika tidak terpenuhi; kalimat risiko Bab IV yang berada di I.6 hilang. Naskah belum diubah.'
+approval_evidence:
+  question: 'Nasib I.6 Sistematika Penulisan (F-A10-0001, F-A10-0002): Templat Individu hanya punya I.1–I.5 dan tidak mengatur sistematika. Apakah I.6 dipertahankan atau dihapus?'
+  options_offered: ['Hapus I.6', 'Pertahankan, konfirmasi pembimbing']
+  user_answer: 'Hapus I.6'
+  answered_at: '2026-11-06'
+  session_ref: 'sesi /sesi-mulai 2026-11-06, AskUserQuestion I.6'
+  scope: 'Struktur Bab I individu: tanpa subbab I.6'
+```
+
+## D-27
+
+```yaml
+id: D-27
+decision: 'Atribusi kondisi RSIA di I.1 Bab I individu ke dokumen Penyelarasan saja, tanpa menyebut wawancara. Dicatat sebagai entri tersendiri karena memperjelas bentuk atribusi di I.1; selaras dengan D-24, tidak menggantikannya'
+class: L3
+status: APPROVED
+date: '2026-11-06'
+related: [D-17, D-19, D-24, F-A07-0010]
+basis: 'Jawaban pengguna atas pertanyaan atribusi I.1 pada sesi 2026-11-06'
+alternatives_considered: ['Boleh, sebut sebagai catatan wawancara']
+consequences: 'Naskah tidak boleh menyebut bahwa dokumen tim merekam wawancara; atribusi hanya ke dokumen Penyelarasan. Naskah belum diubah.'
+approval_evidence:
+  question: 'Atribusi di I.1 (F-A07-0010): Dokumen Penyelarasan mencatat kondisi RSIA berdasarkan wawancara Direktur RSIA (September 2026). Bolehkah naskah menyebut bahwa dokumen tim itu merekam suatu wawancara?'
+  options_offered: ['Boleh, sebut sebagai catatan wawancara', 'Tidak, atribusi ke dokumen saja']
+  user_answer: 'Tidak, atribusi ke dokumen saja'
+  answered_at: '2026-11-06'
+  session_ref: 'sesi /sesi-mulai 2026-11-06, AskUserQuestion Atribusi'
+  scope: 'Bentuk atribusi kondisi RSIA di I.1: dokumen Penyelarasan saja'
 ```

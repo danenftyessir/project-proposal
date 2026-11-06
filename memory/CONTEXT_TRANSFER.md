@@ -1,10 +1,10 @@
 ---
 file: CONTEXT_TRANSFER
-revision: 4
+revision: 6
 status: CURRENT
-updated: 2026-11-05
+updated: 2026-11-06
 updated_by: a13-memory-manager
-based_on_commit: 7d59b85
+based_on_commit: fee9a61
 ---
 
 # Context Transfer
@@ -13,27 +13,26 @@ Handoff untuk sesi berikutnya. **Bukan** sumber keputusan: keputusan ada di `DEC
 
 ## Di mana kita berhenti
 
-- Sistem orkestrasi 13 agent sedang diimplementasikan di worktree `C:\Users\HYPE R Series\worktrees\project-proposal-setup`, branch `setup/orchestration`, dari `7d59b85` (TSK-004). Belum ada commit (HEAD tetap `7d59b85`; `.claude/`, `.gitignore`, `docs/`, `memory/`, `scripts/` untracked).
-- Readiness NOT_READY: S7 (setup belum di-commit) dan 11 WARN (berasal dari berkas yang hanya ada di checkout utama; F-A13-0001). Atas pertanyaan langkah sesi ini pengguna menjawab "Tunda commit, uji dulu"; ini keputusan operasional sesi, bukan keputusan proyek. G3 khusus uji T-14 (satu commit uji pada index kosong) hanya bukti uji.
-- Dokumen desain: header artefak menyatakan `docs/ORCHESTRATION_ARCHITECTURE.md` v0.6 dan `docs/AGENT_SPECIFICATIONS.md` v0.4 (kanonik di worktree). Salinan beku v0.5/v0.3, bersama `.gitignore` versi awal, masih untracked di checkout utama (§A-15.3).
-- Uji deterministik: catatan rev 3 menyebut `python scripts/selftest.py` 102/102 lulus di worktree, tetapi angka ini BELUM FINAL: `docs/TESTING_CHECKLIST.md` menyebut 114/114 (lihat temuan F-A13-0003). Selftest belum dijalankan ulang oleh a13. Uji runtime (TSK-005), kelompok yang dipilih pengguna (isolasi konteks, kelanjutan instance, prompt persetujuan, tool khusus): LULUS T-03, T-07b, T-08, T-09, T-14, T-17 (search tanpa filter project tercampur proyek lain), T-28b, T-29b. SEBAGIAN T-26 (`tools/build_modular.py` tidak ada di worktree, daftar 8 berkas modular/ tidak diverifikasi dari skrip). BLOCKED T-19 (menunggu TSK-014). T-15 tidak menguji hook (a04 tanpa tool tulis). T-16 tidak sahih (A01 membaca agent-contract/SKILL.md sebelum uji).
-- D-20 tercatat; implementasinya TSK-014 (belum dikerjakan). Temuan terbuka: F-A13-0001, F-A12-0001 sampai F-A12-0003.
-- Konflik versi dokumen desain: laporan A01 menyebut tracker TSK-002/003 memakai v0.5/v0.3, tetapi baris tracker itu (rev 3) menyebut kanonik v0.6/v0.4 di worktree dan v0.5/v0.3 hanya sebagai salinan beku di checkout utama; header docs/*.md (v0.6 dan v0.4) cocok dengan CONTEXT_TRANSFER. Tidak ada pertentangan yang saya temukan di worktree; versi salinan beku di checkout utama tidak diperiksa.
-- Pekerjaan proposal pengguna (Bab I, revisi Bab II DRAFT 6) berlangsung di checkout utama dan tidak tersentuh setup.
+- Repo: worktree `C:\Users\HYPE R Series\worktrees\project-proposal-setup`, branch `setup/orchestration`, HEAD `fee9a61` (sistem orkestrasi sudah ter-commit). Belum ter-commit sampai penutupan sesi: perubahan `memory/**` dan `bab1/Bab_I_Draft.md` (baru). Status commit sesi ini: lihat G3 yang diajukan A01.
+- Bab I: `bab1/Bab_I_Draft.md` DRAF 4 (status `DRAF`, belum SELESAI). I.1 16 paragraf dan I.4 6 paragraf; I.2, I.3, I.5 dan paragraf gap belum ditulis; 18 penanda [MENUNGGU KEPUTUSAN]/[PERLU VERIFIKASI…]; judul individual menunggu K2. QA keempat auditor (a07, a08, a09, a10) terakhir PASS_WITH_NOTES pada pemeriksaan terarah DRAF 4; itu bukan persetujuan Supervisor atau pengguna. Temuan terbuka di `FINDINGS_LOG.md`.
+- Keputusan sesi 2026-11-06 (bukti lengkap di `DECISION_LOG.md`): D-21 cakupan rawat inap dan rawat jalan terbatas; D-22 pembanding kombinasi; D-23 sebagian digantikan D-24; D-24 sumber keterangan kerugian = dokumen Penyelarasan tim; D-25 lingkup I.4 di luar kajian individu; D-26 subbab I.6 dihapus; D-27 atribusi kondisi RSIA di I.1 ke Penyelarasan saja. Angka klaim *pending* tetap ditahan (D-19).
+- `PROJECT_STATE.md` rev 6 memuat Artifact Map (hash Bab I `d2391ed67af3`) dan Efisiensi sesi ini.
+- Bukti: `EVIDENCE_REGISTRY.md` rev 2 mencatat E-01..E-20 dan P-1..P-7 untuk Bab I. Premis P-6 (ketidaksesuaian CPPT–resume menyebabkan kerugian) BELUM DIVERIFIKASI; tidak ada sumber di `source/`.
+- Tenggat (jawaban pengguna 2026-11-06): 6 November 2026 tenggat lunak ke dosen pembimbing (hari ini, DRAF 4 belum selesai) dan 10 November 2026 tenggat final ke pusat, untuk Bab I dan Bab II.
+- Setup orkestrasi masih punya sisa: TSK-014 (D-20), T-19 BLOCKED, T-15/T-16 perlu diulang, TSK-006 rekonsiliasi dari checkout utama, merge TSK-007. `check_memory.py` memberi WARN S1 untuk `CLAUDE.md`, `source/INDEKS.md`, `tools/verify_claims.py` (hash worktree berbeda dari checkout utama) dan S7 selama `memory/**` belum ter-commit.
 
 ## Langkah berikutnya
 
-1. Sesi setup: kerjakan TSK-014 (D-20), perbarui kolom hasil di `docs/TESTING_CHECKLIST.md` (di luar write scope A13), tinjau T-26 (tools/build_modular.py tidak ada di worktree).
-2. Ulang T-19 dan init_reconcile; rancang ulang T-15 dengan agent ber-Write di luar scope; ulang T-16 di sesi baru tanpa A01 membaca agent-contract/SKILL.md sebelumnya.
-3. Pengguna memberi atau menolak persetujuan commit setup (G3); commit pertama perlu memuat salinan beku bila disetujui. Uji runtime lain (TSK-005) sebagian setelah merge.
-4. Tidak ada kerja proposal sampai merge dan rekonsiliasi.
-5. Merge ke `main` adalah gate tersendiri (TSK-007), disusul TSK-008, TSK-009, TSK-011, dan rekonsiliasi pertama A13 (TSK-006).
+1. Tunggu keputusan pengguna atas butir di bawah; setelah itu a03 menulis I.2, I.3, I.5 dan paragraf gap, lalu QA ulang.
+2. Selaraskan pembuka Bab II (`bab2/Bab_II_Revisi_Notulensi.md:15`) dan judul II.1 dengan D-21 bila pengguna meminta (tindak lanjut K5).
+3. Kirim ke dosen pembimbing (tenggat lunak 6 Nov) hanya setelah pengguna memutuskan; tenggat final 10 Nov.
+4. Sesi setup: TSK-014, ulang T-19 dan init_reconcile, lalu TSK-006/TSK-007.
 
 ## Yang menunggu pengguna
 
-- Persetujuan commit setup (G3). G3 penutupan sesi 2026-11-05 DITOLAK. Pertanyaan: "G3: commit 40 berkas setup (.gitignore, .claude/ 19 berkas, docs/ 4, memory/ 7, scripts/ 9) ke branch setup/orchestration, tanpa push. Pesannya \"feat: tambah sistem orkestrasi 13 agent (setup/orchestration)\". check_staged OK; check_memory --strict exit 1 (11 WARN S1/S8 dari checkout utama). Salinan beku docs v0.5/v0.3 tidak ikut. Apakah commit ini disetujui?" Jawaban verbatim: "Tolak, tutup tanpa commit". Sesi ditutup tanpa commit; ini bukti penolakan operasional, bukan keputusan proyek.
-- Koreksi untuk G3 berikutnya, menurut A01: (a) baris atribusi commit harus "Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>", bukan versi Sonnet di usulan A13 (catatan: atribusi dalam system-reminder A13 saat ini menyebut Sonnet 5.5; A01 perlu mengonfirmasi saat G3). (b) Salinan beku docs v0.5/v0.3 di checkout utama tidak ikut kandidat, jadi rencana §A-15.3/T-27 perlu ditinjau sebelum G3 berikutnya.
-- Catatan jumlah berkas: G3 menyebut `.claude/` 19 berkas; daftar kandidat A13 memuat 19 berkas di bawah `.claude/` ditambah `.gitignore` = 20, jadi total 40 sudah sesuai.
-
-- I-1, I-2 (penafsiran P2-04).
-- K1–K7, Q-P2-a sampai Q-P2-c, Q-TEAM, Q-RSIA-1, Q-08 (lihat `OPEN_QUESTIONS.md`).
+- Q-A04-a (graf pengetahuan II.4.2 bagian metode Bab I?), Q-A04-b (rumusan 4 bagian individual?), Q-A04-c (jumlah kasus; terkait D-19), Q-A04-d (satuan hitung presisi/recall), Q-A04-f (judul individual Bab I; terkait K2).
+- F-A07-0001 dan D-19: bagaimana masalah konkret CPPT lawan resume ditunjukkan tanpa angka (Q-B1-b).
+- K1 diperluas: gaya sitasi akhir; bentuk sitasi sekunder Muroli dkk. (2020); atribusi Penyelarasan di daftar pustaka; acuan halaman PMK 24/2022 (usulan agent: Berita Negara, bukan keputusan).
+- Q-B1-a bentuk baku KBBI (capstone, diinput/penginputan, deidentifikasi); Q-B1-e judul Bab II ("Studi Literatur" atau "Kajian Pustaka"); Q-B1-c pemilik penautan ibu-bayi; Q-B1-d konfirmasi pembimbing atas pembuka I.1; Q-B1-f definisi rawat jalan terbatas; Q-B1-g "laporan utama capstone" tidak ada di repo.
+- K2 judul capstone; K3, K4, K6, K7, I-1, I-2, Q-P2-a..c, Q-TEAM, Q-RSIA-1 (lihat `OPEN_QUESTIONS.md`).
+- G3 commit sesi ini diajukan A01 kepada pengguna; belum disetujui saat berkas ini ditulis. G3 sesi 2026-11-05 ditolak ("Tolak, tutup tanpa commit"); berkas setup kini terlacak git (HEAD `fee9a61`), tetapi persetujuan G3 yang melandasinya tidak saya temukan di memory (belum diverifikasi). Penolakan itu hanya bukti operasional.
