@@ -1,10 +1,10 @@
 ---
 file: DECISION_LOG
-revision: 7
+revision: 13
 status: CURRENT
 updated: 2026-11-06
 updated_by: a13-memory-manager
-based_on_commit: fee9a61
+based_on_commit: b005ff0
 ---
 
 # Decision Log
@@ -644,4 +644,130 @@ approval_evidence:
   answered_at: '2026-11-06'
   session_ref: 'sesi /sesi-mulai 2026-11-06, AskUserQuestion Atribusi'
   scope: 'Bentuk atribusi kondisi RSIA di I.1: dokumen Penyelarasan saja'
+```
+
+## D-28
+
+```yaml
+id: D-28
+decision: 'Rumusan masalah individual Bab I (I.2) Danendra terdiri atas rumusan 1 capstone (pembentukan temuan; presisi dan recall) dan bagian rumusan 4 capstone yang menjadi bagiannya (kejelasan alasan dan rujukan temuan), sesuai Penyelarasan Pemahaman Capstone.md:176'
+class: L3
+status: APPROVED
+date: '2026-11-06'
+related: [D-19, D-21, D-22, D-25, Q-A04-b, F-A04-0004]
+basis: 'Jawaban pengguna atas pertanyaan komposisi rumusan I.2 pada sesi 2026-11-06'
+alternatives_considered: ['Hanya rumusan 1', 'Tunda I.2, bahas dengan tim dulu']
+consequences: 'Tidak menetapkan angka ambang (D-19; Q-TEAM butir 8), satuan presisi/recall (Q-A04-d), atau jumlah kasus (Q-A04-c). Konsekuensi: I.3, I.5, dan paragraf research gap harus memuat ukuran kejelasan alasan dan rujukan; irisan dengan rumusan 4 Abizzar perlu diperiksa A06 (dampak lintas proposal, belum dikonfirmasi tim).'
+approval_evidence:
+  question: 'Untuk menulis I.2 (Rumusan Masalah), bagian mana dari rumusan capstone yang menjadi rumusan masalah individual Anda? Penyelarasan:176 menyebut Anda mengukur rumusan 1 serta bagian kejelasan alasan dan rujukan pada rumusan 4 (Q-A04-b masih terbuka). Pembanding sudah diputuskan di D-22; ambang tetap berupa "di atas ambang yang ditetapkan sebelum pengujian" tanpa angka (D-19, Q-TEAM butir 8).'
+  options_offered: ['Rumusan 1 + bagian rumusan 4 (Recommended)', 'Hanya rumusan 1', 'Tunda I.2, bahas dengan tim dulu']
+  user_answer: 'Rumusan 1 + bagian rumusan 4 (Recommended)'
+  answered_at: '2026-11-06'
+  session_ref: 'sesi /sesi-mulai 2026-11-06, AskUserQuestion Rumusan I.2'
+  scope: 'Komposisi rumusan masalah individual I.2: rumusan 1 + bagian kejelasan alasan dan rujukan dari rumusan 4'
+```
+
+## D-29
+
+```yaml
+id: D-29
+decision: 'Kriteria keunggulan kombinasi pada rumusan 1 Bab I individu (I.2): presisi dan recall kombinasi rule-based + AI/NLP sama-sama harus lebih tinggi daripada presisi dan recall masing-masing komponen (rule-based saja dan AI/NLP saja) pada data dan label yang sama; jawaban "tidak" bila salah satu metrik tidak lebih tinggi daripada salah satu komponen. Selisih minimum, ambang numerik, dan satuan hitung tetap belum ditetapkan'
+class: L3
+status: APPROVED
+date: '2026-11-06'
+related: [D-19, D-22, D-28, F-A07-0021, F-A09-0041]
+basis: 'Jawaban pengguna atas pertanyaan kriteria keunggulan kombinasi pada sesi 2026-11-06'
+alternatives_considered: ['Belum ditetapkan, netralkan teks', 'Recall lebih tinggi, presisi tidak turun di bawah ambang']
+consequences: 'Penanda "kriteria keunggulan" di I.2 dihapus; selisih minimum tetap bermarker (Q-TEAM butir 8). Kriteria ketat sehingga kelayakannya perlu dinilai a11. Penyelarasan:35 belum memuat pembanding atau kriteria ini (dampak lintas proposal, belum dikonfirmasi tim; perlu a06). Tidak menetapkan metrik lain, ambang, angka. Naskah belum diubah.'
+approval_evidence:
+  question: 'a07 menilai I.2 FAIL (0 HIGH, 5 MEDIUM) karena rumusan 1 sudah memuat aturan "tidak" (kombinasi harus lebih tinggi daripada tiap komponen), sementara penanda di dekatnya mengatakan kriteria itu belum diputuskan (F-A07-0021). D-22 hanya menetapkan pembanding, bukan cara kombinasi dinyatakan lebih baik. Bagaimana kriteria keunggulan kombinasi atas rule-based saja dan AI/NLP saja ditetapkan?'
+  options_offered: ['Presisi dan recall sama-sama lebih tinggi (Recommended)', 'Belum ditetapkan, netralkan teks', 'Recall lebih tinggi, presisi tidak turun di bawah ambang']
+  user_answer: 'Presisi dan recall sama-sama lebih tinggi (Recommended)'
+  answered_at: '2026-11-06'
+  session_ref: 'sesi /sesi-mulai 2026-11-06, AskUserQuestion Kriteria Q1'
+  scope: 'Kriteria keunggulan kombinasi atas tiap komponen pada rumusan 1 (I.2): presisi dan recall sama-sama lebih tinggi'
+```
+
+## D-30
+
+```yaml
+id: D-30
+decision: 'Lingkup I.4 Bab I individu diselaraskan dengan rumusan 2 I.2: I.4 memuat satu paragraf bahwa kajian juga menilai kejelasan alasan dan rujukan temuan oleh tenaga ahli dan pengguna proksi, tanpa mencakup alur penilaian, skor SUS, atau tingkat penyelesaian tugas (bagian rumusan 4 milik Abizzar)'
+class: L3
+status: APPROVED
+date: '2026-11-06'
+related: [D-25, D-28, F-A07-0022]
+basis: 'Jawaban pengguna atas pertanyaan lingkup I.4 pada sesi 2026-11-06'
+alternatives_considered: ['Ubah klaim di I.2, I.4 tetap']
+consequences: 'I.4 (yang sudah lolos QA siklus 2) berubah dan perlu QA ulang; siapa penilainya menunggu Q-TEAM butir 7; irisan dengan rumusan 4 Abizzar perlu dicek a06. Tidak menetapkan angka, ambang, atau skala penilaian. Naskah belum diubah saat keputusan dicatat.'
+approval_evidence:
+  question: 'Kedua QA menilai I.2 FAIL (a07: 5 MEDIUM; a09: 3 MEDIUM). Satu butir lagi perlu keputusan Anda (F-A07-0022): rumusan 2 I.2 mengukur kejelasan alasan dan rujukan temuan oleh tenaga ahli dan pengguna proksi, tetapi I.4 hanya menyebut sumber data CPPT dan resume medis, sedangkan I.2 mengklaim kedua pertanyaan berada dalam batas I.4. Bagaimana menyelaraskannya?'
+  options_offered: ['Tambah satu paragraf di I.4 (Recommended)', 'Ubah klaim di I.2, I.4 tetap']
+  user_answer: 'Tambah satu paragraf di I.4 (Recommended)'
+  answered_at: '2026-11-06'
+  session_ref: 'sesi /sesi-mulai 2026-11-06, AskUserQuestion Lingkup I.4'
+  scope: 'Penambahan satu paragraf di I.4 tentang penilaian kejelasan alasan dan rujukan temuan oleh tenaga ahli dan pengguna proksi'
+```
+
+## D-31
+
+```yaml
+id: D-31
+decision: 'Redaksi tujuan utama I.3 Bab I individu tetap berupa "mengevaluasi kombinasi pemeriksaan rule-based dan AI/NLP berbasis RAG dari dua sisi: ketepatan deteksi ketidaksesuaian CPPT-resume medis dalam satu episode, dan kejelasan alasan dan rujukan pada temuan", sepadan 1:1 dengan dua rumusan I.2; pengembangan komponen oleh penulis tidak dimasukkan ke tujuan'
+class: L3
+status: APPROVED
+date: '2026-11-06'
+related: [D-28, D-29, D-30, F-A10-0105]
+basis: 'Jawaban pengguna atas pertanyaan redaksi tujuan utama I.3 pada sesi 2026-11-06'
+alternatives_considered: ['Mengembangkan dan mengevaluasi']
+consequences: 'Pengembangan aturan rule-based dan pemeriksaan AI/NLP berbasis RAG oleh penulis (Penyelarasan:55, :169) harus dijelaskan di paragraf research gap I.1 atau I.5 (Q-B1-n); kontribusi individual tidak tampak di tujuan. Tidak menetapkan angka, ambang, atau skala.'
+approval_evidence:
+  question: 'a03 sudah menulis I.3 (DRAF 7), sepadan dengan dua rumusan I.2 dan tanpa angka. Tujuan utamanya berbunyi: "Tujuan utama penelitian ini ialah mengevaluasi kombinasi pemeriksaan rule-based dan AI/NLP berbasis RAG dari dua sisi: ketepatannya dalam mendeteksi ketidaksesuaian antara CPPT dan resume medis dalam satu episode serta kejelasan alasan dan rujukan pada temuannya." Penyelarasan:55 dan :169 mencatat bahwa Anda menyusun aturan rule-based dan membangun pemeriksaan AI/NLP berbasis RAG, tetapi tujuan ini hanya menyebut "mengevaluasi". Bagaimana redaksi tujuan utamanya?'
+  options_offered: ['Mengembangkan dan mengevaluasi (Recommended)', 'Mengevaluasi saja (teks sekarang)']
+  user_answer: 'Mengevaluasi saja (teks sekarang)'
+  answered_at: '2026-11-06'
+  session_ref: 'sesi /sesi-mulai 2026-11-06, AskUserQuestion Tujuan I.3'
+  scope: 'Redaksi tujuan utama I.3: mengevaluasi saja'
+```
+
+## D-32
+
+```yaml
+id: D-32
+decision: 'Kriteria D-29 dipertahankan. Mekanisme kombinasi rule-based dan AI/NLP berbasis RAG belum ditetapkan dan ditandai di I.2 dan I.3 sebagai keputusan yang harus ditetapkan sebelum pengujian, dengan syarat mekanisme itu memungkinkan kedua arah hasil (kombinasi dapat lebih tinggi maupun tidak lebih tinggi daripada komponen). Dibawa ke tim sebagai butir terbuka, bersama titik ukur kombinasi terhadap rekonsiliasi antarpemeriksaan milik Abizzar'
+class: L3
+status: APPROVED
+date: '2026-11-06'
+related: [D-22, D-29, F-A05-0001, F-A05-0002, F-A11-0001, F-A11-0002, F-A11-0003]
+basis: 'Jawaban pengguna atas pertanyaan kriteria D-29 pada sesi 2026-11-06'
+alternatives_considered: ['Tinjau D-29: recall lebih tinggi, presisi tidak turun di bawah ambang', 'Tunda ke tim dan pembimbing']
+consequences: 'Penanda baru di I.2 dan I.3 (jumlah penanda Bab I bertambah). Risiko jawaban "tidak" tak informatif karena aritmetika tetap terbuka sampai tim menetapkan mekanisme (union, irisan, penyaringan, atau pembentukan bertahap; menurut a11, irisan tidak pernah menaikkan recall dan union atas komponen dengan cakupan jenis terpisah tidak pernah menaikkan presisi di atas keduanya). D-29 tidak diubah. Perlu dicek A06 untuk dampak ke Abizzar (rekonsiliasi, Penyelarasan:183). Naskah belum diubah saat keputusan dicatat.'
+approval_evidence:
+  question: 'Dua auditor independen (a05 kritis, a11 teknis) sepakat bahwa kriteria D-29 (presisi dan recall kombinasi sama-sama lebih tinggi daripada tiap komponen) tidak layak diuji bila mekanisme kombinasi tidak ditetapkan. Naskah hanya menyebut "gabungan kedua komponen" (I.2 baris 83). Menurut a11, irisan tidak pernah dapat menaikkan recall di atas komponen, dan union atas komponen dengan cakupan jenis terpisah (Penyelarasan:69, :76) tidak pernah dapat menaikkan presisi di atas keduanya, sehingga jawaban "tidak" sudah pasti. Hanya penyaringan atas union atau irisan cakupan yang besar yang mungkin lolos. Mekanisme kombinasi belum ada di daftar tim, dan ini tidak menyatakan D-29 salah. Bagaimana menanganinya?'
+  options_offered: ['Pertahankan D-29, tandai mekanismenya (Recommended)', 'Tinjau D-29: recall lebih tinggi, presisi tidak turun di bawah ambang', 'Tunda ke tim dan pembimbing']
+  user_answer: 'Pertahankan D-29, tandai mekanismenya (Recommended)'
+  answered_at: '2026-11-06'
+  session_ref: 'sesi /sesi-mulai 2026-11-06, AskUserQuestion Kriteria D-29'
+  scope: 'Mekanisme kombinasi dan status D-29: D-29 dipertahankan, mekanisme ditandai dan dibawa ke tim'
+```
+
+## D-33
+
+```yaml
+id: D-33
+decision: 'Syarat keberhasilan I.3 Bab I individu dirumuskan sebagai hasil yang dituju = jawaban atas dua pertanyaan I.2 (bukan "tujuan tercapai/tidak tercapai"); tujuan tetap "mengevaluasi" (D-31 utuh). I.3 menyatakan kapan kombinasi pemeriksaan dinyatakan memenuhi atau tidak memenuhi syarat pada tiap sisi dengan merujuk I.2; jawaban "tidak" adalah hasil yang sah; tidak ada aturan status gabungan antarsisi'
+class: L3
+status: APPROVED
+date: '2026-11-06'
+related: [D-28, D-29, D-31, F-A07-0038, F-A10-0112, F-A05-0008]
+basis: 'Jawaban pengguna atas pertanyaan rumusan syarat paragraf 2-3 I.3 pada sesi 2026-11-06'
+alternatives_considered: ['Tujuan sebagai hasil yang dituju (menunjukkan kombinasi memenuhi kedua syarat)']
+consequences: 'Kalimat "tujuan tercapai/tidak tercapai" dihapus dari I.3; kebutuhan templat "tercapai atau tidak" dipenuhi lewat jawaban pertanyaan. Tidak menetapkan angka, ambang, atau skala. D-31 dan D-29 tidak diubah.'
+approval_evidence:
+  question: 'Tiga auditor (a07, a10, a05) menemukan hal yang sama pada I.3: tujuan utama berbunyi "mengevaluasi" (D-31), tetapi paragraf 2-3 menyatakan "Tujuan tidak tercapai pada sisi itu bila jawaban pertanyaan ... ''tidak''". Akibatnya, jawaban "tidak" yang sah terbaca sebagai penelitian yang gagal, dan tidak ada aturan status tujuan bila hanya satu sisi terpenuhi. Redaksi "mengevaluasi" sendiri tidak dipersoalkan. Bagaimana syarat di paragraf 2-3 dirumuskan?'
+  options_offered: ['Hasil = jawaban pertanyaan, bukan tercapai/tidak (Recommended)', 'Tujuan sebagai hasil yang dituju']
+  user_answer: 'Hasil = jawaban pertanyaan, bukan tercapai/tidak (Recommended)'
+  answered_at: '2026-11-06'
+  session_ref: 'sesi /sesi-mulai 2026-11-06, AskUserQuestion Tujuan vs ukuran'
+  scope: 'Rumusan syarat keberhasilan I.3: hasil = jawaban pertanyaan'
 ```

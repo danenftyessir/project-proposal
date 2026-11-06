@@ -1,10 +1,10 @@
 ---
 file: PROJECT_STATE
-revision: 6
+revision: 10
 status: PENDING_VERIFICATION
 updated: 2026-11-06
 updated_by: a13-memory-manager
-based_on_commit: fee9a61
+based_on_commit: b005ff0
 ---
 
 # Project State
@@ -14,18 +14,18 @@ Ringkasan kondisi aktual. Bila bertentangan dengan artefak repository, artefak y
 ## Ringkasan
 
 - Proposal Tugas Akhir Capstone IF4091 (individu), Danendra Shafi Athallah (13523136), bidang *AI/NLP Semantic Claim Intelligence*. Acuan tim: `Penyelarasan Pemahaman Capstone.md` (keputusan tim 30 Oktober 2026).
-- Bab I: `bab1/Bab_I_Draft.md` DRAF 4 per 2026-11-06 (untracked; status `DRAF`, belum dinyatakan SELESAI). Memuat 18 penanda [MENUNGGU KEPUTUSAN]/[PERLU VERIFIKASI…]; I.1 16 paragraf, I.4 6 paragraf; I.2, I.3, I.5 dan paragraf gap belum ditulis; judul individual menunggu K2. QA: siklus 0 keempat auditor FAIL; siklus 1 a10 dan a08 PASS_WITH_NOTES, a07 dan a09 FAIL; siklus 2 keempatnya PASS_WITH_NOTES; setelah satu perbaikan terarah tambahan atas izin pengguna ("Satu perbaikan terarah (Recommended)", 2026-11-06) pemeriksaan terarah DRAF 4: a10, a08, a07, a09 PASS_WITH_NOTES. PASS_WITH_NOTES bukan persetujuan Supervisor/pengguna. Temuan terbuka di `FINDINGS_LOG.md`; butir terbuka baru Q-B1-a..g dan K1 diperluas di `OPEN_QUESTIONS.md`.
+- Bab I: `bab1/Bab_I_Draft.md` DRAF 8 per 2026-11-06 (berkas ter-commit di b005ff0; perubahan DRAF 5-8 belum ter-commit; status `DRAF`, belum dinyatakan SELESAI). Memuat 31 penanda (cocok dengan header, diperiksa a10); I.2 ditulis (D-28), I.3 ditulis (D-31, D-33), I.4 diselaraskan (D-29, D-30); paragraf research gap I.1 dan I.5 belum ditulis; judul individual menunggu K2. QA I.3 DRAF 8 (TSK-042..045): a07 (S0 FAIL, S1 PASS_WITH_NOTES, S2 FAIL F-A07-0047, terarah PASS_WITH_NOTES), a09 dan a10 (S0, S1, S2, terarah PASS_WITH_NOTES); satu perbaikan terarah di luar batas siklus D-06 atas jawaban pengguna "Satu perbaikan terarah (Recommended)" (2026-11-06; konteks, bukan keputusan). Semua auditor PASS_WITH_NOTES; sisa LOW/INFO di FINDINGS_LOG (F-A07-0048, F-A09-0103, F-A09-0104); bukan persetujuan Supervisor/pengguna. Tantangan a05 F-A05-0002, 0006, 0007, 0009, 0012 tetap OPEN; F-A05-0008 IN_PROGRESS; Q-B1-t dan Q-B1-u baru. Catatan sebelumnya (DRAF 6):  QA I.2/I.4 DRAF 6: TSK-034 (a03) siklus 0, 1, 2 selesai; a07 (S0 FAIL, S1 dan S2 PASS_WITH_NOTES), a09 (S0 FAIL, S1 dan S2 PASS_WITH_NOTES), a10 (S1 dan terarah S2 PASS_WITH_NOTES). Siklus otomatis (maks 2, D-06) habis; satu perbaikan terarah tambahan hanya I.2 paragraf 1 (F-A07-0036) dilakukan atas izin pengguna 2026-11-06. Kondisi akhir QA I.2/I.4 DRAF 6: semua auditor PASS_WITH_NOTES, sisa temuan LOW/INFO di FINDINGS_LOG, bukan persetujuan Supervisor/pengguna. PASS_WITH_NOTES bukan persetujuan Supervisor/pengguna. QA DRAF 4 sebelumnya: keempat auditor PASS_WITH_NOTES setelah satu perbaikan terarah atas izin pengguna ("Satu perbaikan terarah (Recommended)", 2026-11-06). Temuan terbuka di `FINDINGS_LOG.md`; butir terbuka Q-B1-a..k dan K1 di `OPEN_QUESTIONS.md`.
 - Keputusan ruang lingkup Bab I (ringkasan; rujuk `DECISION_LOG.md` untuk teks dan bukti): D-21 cakupan rawat inap dan rawat jalan terbatas (K5); D-22 pembanding kombinasi (P2); D-23 dasar bukti kerugian/premis (P3), sebagian digantikan D-24; D-24 sumber keterangan kerugian = dokumen Penyelarasan tim; D-25 lingkup I.4 (di luar kajian individu); D-26 subbab I.6 dihapus; D-27 atribusi kondisi RSIA di I.1 ke dokumen Penyelarasan saja.
-- Tenggat (jawaban pengguna 2026-11-06, Q-08 ditutup): Bab I dan Bab II memiliki dua tenggat, yaitu 6 November 2026 sebagai tenggat lunak ke dosen pembimbing dan 10 November 2026 sebagai tenggat final ke pusat. Per 2026-11-06 (hari ini) tenggat lunak jatuh hari ini, `bab1/Bab_I_Draft.md` berstatus DRAF 4 (belum selesai), K1 dan K2 masih TERBUKA, dan K5 DIPUTUSKAN D-21.
+- Tenggat (jawaban pengguna 2026-11-06, Q-08 ditutup): Bab I dan Bab II memiliki dua tenggat, yaitu 6 November 2026 sebagai tenggat lunak ke dosen pembimbing dan 10 November 2026 sebagai tenggat final ke pusat. Per 2026-11-06 (hari ini) tenggat lunak jatuh hari ini, `bab1/Bab_I_Draft.md` berstatus DRAF 8 (belum selesai), K1 dan K2 masih TERBUKA, dan K5 DIPUTUSKAN D-21.
 - Bab II: DRAFT 6 di `bab2/Bab_II_Revisi_Notulensi.md` (`DRAF`, belum ditinjau pembimbing). Berkas II.1–II.8 lama masih ada dan digantikan DRAFT 6.
 - Bab III: bahan pindahan di `bab3/Bahan_Pindahan_dari_Bab_II.md` (`DRAF`, bahan mentah).
-- Sistem orkestrasi: implementasi Phase 3 di worktree `setup/orchestration` (HEAD `fee9a61`, berkas setup terlacak git); belum di-merge ke `main` (TSK-004, TSK-007). Perubahan `memory/**` sesi 2026-11-06 dan `bab1/Bab_I_Draft.md` belum ter-commit sampai G3 disetujui.
+- Sistem orkestrasi: implementasi Phase 3 di worktree `setup/orchestration` (HEAD `b005ff0`, berkas setup terlacak git); belum di-merge ke `main` (TSK-004, TSK-007). Perubahan `memory/**` sesi 2026-11-06 dan `bab1/Bab_I_Draft.md` belum ter-commit sampai G3 disetujui.
 
 ## Status per bab
 
 | Bab | Berkas utama | Status | Catatan |
 |---|---|---|---|
-| I | `bab1/Bab_I_Draft.md` (sha256 `d2391ed67af3`, dihitung 2026-11-06 dengan `sha256sum`; berkas tanpa CR sehingga sama dengan hash normalisasi LF) | `DRAF` (DRAF 4) | QA PASS_WITH_NOTES (4 auditor, bukan persetujuan); 18 penanda; I.2, I.3, I.5 dan paragraf gap belum ditulis; judul menunggu K2; tenggat lunak 6 Nov, final 10 Nov 2026 |
+| I | `bab1/Bab_I_Draft.md` (sha256 `05b369128553`, dihitung 2026-11-06 dengan `sha256sum`; berkas tanpa CR sehingga sama dengan hash normalisasi LF) | `DRAF` (DRAF 8) | QA PASS_WITH_NOTES (a07, a09, a10; bukan persetujuan); 31 penanda; I.2, I.3 ditulis, I.4 diselaraskan; paragraf gap I.1 dan I.5 belum ditulis; judul menunggu K2; tenggat lunak 6 Nov, final 10 Nov 2026 |
 | II | `bab2/Bab_II_Revisi_Notulensi.md` | `DRAF` (DRAFT 6) | Docx resmi `bab2/13523136-…-Draft-Bab2.docx` memuat suntingan tangan; tidak disentuh agent |
 | III | `bab3/Bahan_Pindahan_dari_Bab_II.md` | Bahan mentah | — |
 | IV | — | Belum ada | — |
@@ -43,7 +43,7 @@ Hash dihitung dari checkout utama pada 2026-11-05 (read-only), dengan line endin
 | `[REVISI] Breakdown Proposal (2).pdf` | Rancangan TA; angka pending menunggu pembahasan tim (D-11, D-19) | P0 | Pengguna | `442ec77e18a6` | 2026-11-05 |
 | `Sumber Literatur Bab 2.pdf` | Daftar literatur awal | P0 | Pengguna | `cfd6dd5183d7` | 2026-11-05 |
 | `source/INDEKS.md` | Indeks sumber tingkat berkas (hash dari checkout utama; worktree 7d59b85 dapat berbeda; hash worktree belum dihitung, menunggu TSK-014) | P0 | Pengguna | `4eadbada866f` | 2026-11-05 |
-| `bab1/Bab_I_Draft.md` | Bab I DRAF 4 (untracked sampai G3; status DRAF) | P1 | A03 | `d2391ed67af3` | 2026-11-06 |
+| `bab1/Bab_I_Draft.md` | Bab I DRAF 8 (ter-commit di b005ff0; perubahan DRAF 5-8 belum ter-commit; hash DRAF 8 dihitung 2026-11-06 dengan `sha256sum`, tanpa CR; status DRAF) | P1 | A03 | `05b369128553` | 2026-11-06 |
 | `bab2/Bab_II_Revisi_Notulensi.md` | Bab II DRAFT 6 | P1 | A03 | `8cd97bed5345` | 2026-11-05 |
 | `bab2/Kebutuhan_Literatur_Revisi_Bab_II.md` | Kebutuhan literatur revisi Bab II | P1 | A03 | `a6a8171c0704` | 2026-11-05 |
 | `bab3/Bahan_Pindahan_dari_Bab_II.md` | Bahan pindahan Bab II ke Bab I/III | P1 | A03 | `0f8adb3f6b7f` | 2026-11-05 |
@@ -80,4 +80,4 @@ Pemilik ditulis menurut nama berkas dan wajib dikonfirmasi pengguna (Q-P2-a); ti
 
 Run Log sesi 2026-11-05: 14 eksekusi agent (TSK-005, TSK-012, TSK-013); durasi total sekitar 458,7 s; token yang dilaporkan harness berjumlah 238.971 (mungkin kumulatif per instance, jadi bukan angka pasti). Dua eksekusi PARTIAL, dua BLOCKED (T-19). Data lengkap di `TASK_TRACKER.md` Run Log.
 
-Sesi 2026-11-06 (`check_memory.py --metrics`, kumulatif seluruh log): 45 pemanggilan dari 44 tugas; per agent a02=2, a03=5, a04=4, a05=1, a07=5, a08=4, a09=4, a10=4, a12=2, a13=14; rata-rata siklus maksimum per tugas 0,41; 5 tugas mencapai batas 2 siklus; QA FAIL pada siklus 0: 4 dari 27; Skill tercatat n/a untuk 45. Eksekusi Bab I (TSK-023..028) siklus 0: a02 571,6 s / 177.917 token; a03 437,4 s / 131.150; empat auditor FAIL siklus 0 (a09 218,3 s, a08 234,4 s, a07 172,7 s, a10 75,1 s). Siklus berikutnya lewat SendMessage tanpa token tercatat (n/a). Satu retry setelah HTTP 429.
+Sesi 2026-11-06 (`check_memory.py --metrics`, kumulatif seluruh log, per penutupan TSK-052): 76 pemanggilan dari 75 tugas; per agent a02=2, a03=11, a04=4, a05=2, a07=10, a08=4, a09=9, a10=7, a11=1, a12=2, a13=24; rata-rata siklus maksimum per tugas 0,25; 5 tugas mencapai batas 2 siklus; QA FAIL pada siklus 0: 8 dari 46; Skill tercatat n/a untuk 76. Eksekusi Bab I (TSK-023..028) siklus 0: a02 571,6 s / 177.917 token; a03 437,4 s / 131.150; empat auditor FAIL siklus 0 (a09 218,3 s, a08 234,4 s, a07 172,7 s, a10 75,1 s). Siklus berikutnya lewat SendMessage tanpa token tercatat (n/a). Satu retry setelah HTTP 429.

@@ -1,10 +1,10 @@
 ---
 file: OPEN_QUESTIONS
-revision: 6
+revision: 12
 status: CURRENT
 updated: 2026-11-06
 updated_by: a13-memory-manager
-based_on_commit: fee9a61
+based_on_commit: b005ff0
 ---
 
 # Open Questions
@@ -245,9 +245,9 @@ question: Apakah rumusan individual mengambil bagian rumusan 4 (kejelasan alasan
 affected: [Bab I]
 class: L3
 pic: Pengguna
-status: TERBUKA
+status: DIPUTUSKAN → D-28
 updated: 2026-11-06
-refs: []
+refs: [D-28, F-A04-0004]
 ```
 
 ```yaml
@@ -380,4 +380,179 @@ ask_to: Tim
 status: TERBUKA
 updated: 2026-11-06
 refs: [F-A08-0005]
+```
+
+```yaml
+id: Q-B1-h
+question: Apakah satuan keputusan Q2 (rumusan 2 I.2, kejelasan alasan dan rujukan) ditetapkan per kelompok penilai (tenaga ahli dan pengguna proksi terpisah) atau gabungan, dan siapa yang menilai (Q-TEAM butir 7)?
+affected: [Bab I, A06, A11]
+class: L3
+pic: Pengguna
+ask_to: Tim
+status: MENUNGGU ANGGOTA
+updated: 2026-11-06
+refs: [D-30, D-28, Q-TEAM, F-A07-0022]
+```
+
+## Butir baru dari QA I.2/I.4 DRAF 6 (TSK-040, 2026-11-06)
+
+Semua butir berikut TERBUKA/menunggu; tidak ada yang diputuskan. Sumber: laporan QA TSK-034..039 melalui A01; penggantian F-A07-0037 (INFO).
+
+```yaml
+id: Q-B1-i
+question: Susunan Bab II mana yang berlaku, DRAFT 6 (bab2/Bab_II_Revisi_Notulensi.md) atau berkas modular II.1-II.8? Asumsi kerja A01 saat ini "DRAFT 6 yang berlaku" (menurut PROJECT_STATE); menunggu konfirmasi pengguna
+affected: [Bab II]
+class: L4
+pic: Pengguna
+status: TERBUKA
+updated: 2026-11-06
+refs: [Q-B1-e]
+```
+
+```yaml
+id: Q-B1-j
+question: Selisih minimum presisi dan recall kombinasi atas masing-masing komponen (D-29) belum ada di daftar Q-TEAM Penyelarasan (butir 8 hanya memuat angka ambang 13 ukuran); perlu diusulkan ke tim
+affected: [Bab I, A06]
+class: L3
+pic: Pengguna
+ask_to: Tim
+status: MENUNGGU ANGGOTA
+updated: 2026-11-06
+refs: [D-29, D-22, F-A07-0032, F-A07-0037, F-A09-0075]
+```
+
+```yaml
+id: Q-B1-k
+question: Dampak lintas proposal yang belum diperiksa: (1) Penyelarasan:35 belum memuat pembanding D-22 maupun kriteria D-29 (A06 belum dijalankan); (2) irisan I.4 paragraf 5 / rumusan 2 dengan rumusan 4 Abizzar belum diperiksa. Perlu A06 dan konfirmasi tim
+affected: [Bab I, A06]
+class: L3
+pic: Pengguna
+ask_to: Tim
+status: MENUNGGU ANGGOTA
+updated: 2026-11-06
+refs: [D-22, D-29, D-30, Q-B1-j]
+```
+
+## Butir baru dari penulisan I.3 DRAF 7 (TSK-047, 2026-11-06)
+
+Semua butir TERBUKA/menunggu. D-31 hanya memutuskan redaksi tujuan utama; ketiga butir ini tidak diputuskan olehnya.
+
+```yaml
+id: Q-B1-l
+question: Skala penilaian kejelasan alasan dan rujukan serta cara merangkum nilainya belum diputuskan; Penyelarasan:339 hanya menyebut skala sebagai usulan dalam ambang Q-TEAM butir 8
+affected: [Bab I]
+class: L3
+pic: Pengguna
+ask_to: Tim
+status: MENUNGGU ANGGOTA
+updated: 2026-11-06
+refs: [D-30, Q-B1-j]
+marker: I.3 paragraf 3
+```
+
+```yaml
+id: Q-B1-m
+question: Rujukan maju I.3 paragraf 1 "prosedur pengukurannya diuraikan pada Subbab I.5" harus dipenuhi saat I.5 ditulis atau dihapus
+affected: [Bab I]
+class: L4
+pic: Pengguna
+status: TERBUKA
+updated: 2026-11-06
+refs: [D-31]
+```
+
+```yaml
+id: Q-B1-n
+question: Di mana pengembangan komponen (aturan rule-based dan pemeriksaan AI/NLP berbasis RAG) oleh penulis dijelaskan: paragraf research gap I.1 atau I.5?
+affected: [Bab I]
+class: L3
+pic: Pengguna
+status: TERBUKA
+updated: 2026-11-06
+refs: [D-31, F-A10-0105]
+```
+
+## Butir baru dari QA dan tinjauan kritis I.3 DRAF 7 (TSK-049, 2026-11-06)
+
+D-32 hanya memutuskan bahwa D-29 dipertahankan dan mekanisme ditandai; kelima butir ini tidak diputuskan olehnya.
+
+```yaml
+id: Q-B1-o
+question: Mekanisme kombinasi rule-based dan AI/NLP berbasis RAG (union, irisan, penyaringan, atau pembentukan bertahap) belum ditetapkan; harus ditetapkan sebelum pengujian dan harus memungkinkan kedua arah hasil (kombinasi lebih tinggi maupun tidak lebih tinggi daripada komponen)
+affected: [Bab I, I.2, I.3]
+class: L3
+pic: Pengguna
+ask_to: Tim
+status: MENUNGGU ANGGOTA
+updated: 2026-11-06
+refs: [D-32, D-29, F-A11-0001, F-A05-0001]
+```
+
+```yaml
+id: Q-B1-p
+question: Titik ukur kombinasi terhadap rekonsiliasi antarpemeriksaan milik Abizzar (Penyelarasan:183) dan perlakuan temuan ganda
+affected: [Bab I, A06]
+class: L3
+pic: Pengguna
+ask_to: Tim
+status: MENUNGGU ANGGOTA
+updated: 2026-11-06
+refs: [D-32, F-A11-0003]
+```
+
+```yaml
+id: Q-B1-q
+question: Operator ambang ">" (naskah) atau ">=" (tabel Penyelarasan:327-339)
+affected: [Bab I, I.2]
+class: L3
+pic: Pengguna
+ask_to: Tim / pembimbing
+status: MENUNGGU ANGGOTA
+updated: 2026-11-06
+refs: [F-A11-0010]
+```
+
+```yaml
+id: Q-B1-r
+question: Aturan pencocokan temuan-label, agregasi mikro atau makro, dan perlakuan nilai 0/0 pada presisi dan recall
+affected: [Bab I, I.2]
+class: L3
+pic: Pengguna
+ask_to: Tim
+status: MENUNGGU ANGGOTA
+updated: 2026-11-06
+refs: [F-A11-0005, F-A05-0003, Q-A04-d]
+```
+
+```yaml
+id: Q-B1-s
+question: Adakah ringkasan agregat jumlah episode dan sebaran jenis di luar .scratch/rsia/agregat/ yang dapat dirujuk tanpa membuka data RSIA?
+affected: [Bab I]
+class: L4
+pic: Pengguna
+status: TERBUKA
+updated: 2026-11-06
+refs: [Q-A04-c]
+```
+
+```yaml
+id: Q-B1-t
+question: Bagaimana hasil rawat inap dan rawat jalan dilaporkan (terpisah atau gabungan), dan apakah pembanding berupa kondisi saat ini (tanpa sistem) dimasukkan? Sengaja tidak masuk penanda I.5; menunggu keputusan pengguna.
+affected: [Bab I]
+class: L3
+pic: Pengguna
+status: TERBUKA
+updated: 2026-11-06
+refs: [F-A05-0007, F-A05-0014, F-A10-0119]
+```
+
+```yaml
+id: Q-B1-u
+question: Apa arti "temuan ganda" (definisi tim; metrik rumusan 3 Abizzar di Penyelarasan) untuk dipakai di I.3? Perlu pengecekan A06 terhadap definisi rumusan a03 yang tanpa atribusi.
+affected: [Bab I]
+class: L3
+pic: Tim
+status: MENUNGGU ANGGOTA
+updated: 2026-11-06
+refs: [F-A07-0048, Q-B1-p]
 ```
