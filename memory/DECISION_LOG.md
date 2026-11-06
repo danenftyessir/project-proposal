@@ -1,10 +1,10 @@
 ---
 file: DECISION_LOG
-revision: 18
+revision: 20
 status: CURRENT
 updated: 2026-11-07
 updated_by: a13-memory-manager
-based_on_commit: b05a2e3
+based_on_commit: ecf15cf
 ---
 
 # Decision Log
@@ -867,7 +867,7 @@ date: '2026-11-07'
 related: [D-35, D-36, D-37, Q-B1-ak, P2-02]
 basis: 'Pesan pengguna yang mendefinisikan varian (contoh pada folder modular/ dan templat di root) dan jawaban pengguna atas pertanyaan jalur Google Docs'
 alternatives_considered: ['DOCX dulu, Google Docs lewat sesi terpisah', 'DOCX dan PDF saja, Google Docs tidak diperlukan']
-consequences: 'MENYEMPITKAN lingkup D-35 (yang menyebut jalur Google Docs): jalur Google Docs otomatis tidak ada; D-35 tidak diubah selain catatan rujukan. Q-B1-ak ditandai DIPUTUSKAN SEBAGIAN. Keputusan ini TIDAK menetapkan dan tidak boleh dianggap disetujui: (a) apakah "Template-... Individu-2026 - Copy.docx" di root identik dengan template/Template-Proposal-IF4091-Capstone-Individu-2026.docx dan mana yang menjadi dasar skrip; (b) apakah PDF termasuk keluaran skrip; (c) isi tepat penanda/catatan editorial yang dibawa varian Editorial dan yang harus hilang dari Formal; (d) cara varian Lengkap menggabungkan Bab I-IV dan komponen pelengkap (halaman judul, abstrak, daftar isi, daftar pustaka) sesuai templat. Tidak memberi persetujuan build apa pun; P2-02 tetap berlaku (skrip build lama tetap dilarang). Q-B1-am (nasib skrip lama) tidak diubah. [Catatan rujukan 2026-11-07, ditambahkan A13: butir (b) dijawab D-39 (PDF untuk Formal dan Lengkap; D-38 diperluas untuk dua varian itu) dan butir (d) dijawab D-40 (sumber isi varian Lengkap); teks keputusan asli tidak diubah.]'
+consequences: 'MENYEMPITKAN lingkup D-35 (yang menyebut jalur Google Docs): jalur Google Docs otomatis tidak ada; D-35 tidak diubah selain catatan rujukan. Q-B1-ak ditandai DIPUTUSKAN SEBAGIAN. Keputusan ini TIDAK menetapkan dan tidak boleh dianggap disetujui: (a) apakah "Template-... Individu-2026 - Copy.docx" di root identik dengan template/Template-Proposal-IF4091-Capstone-Individu-2026.docx dan mana yang menjadi dasar skrip; (b) apakah PDF termasuk keluaran skrip; (c) isi tepat penanda/catatan editorial yang dibawa varian Editorial dan yang harus hilang dari Formal; (d) cara varian Lengkap menggabungkan Bab I-IV dan komponen pelengkap (halaman judul, abstrak, daftar isi, daftar pustaka) sesuai templat. Tidak memberi persetujuan build apa pun; P2-02 tetap berlaku (skrip build lama tetap dilarang). Q-B1-am (nasib skrip lama) tidak diubah. [Catatan rujukan 2026-11-07, ditambahkan A13: butir (b) dijawab D-39 (PDF untuk Formal dan Lengkap; D-38 diperluas untuk dua varian itu) dan butir (d) dijawab D-40 (sumber isi varian Lengkap); teks keputusan asli tidak diubah. Butir (a) dijawab D-42: penunjukan berkas "- Copy" di root pada poin (iii) digantikan oleh template/ sebatas penunjukan berkas templat.]'
 approval_evidence:
   question: 'Bagaimana jalur ke Google Docs ditangani setelah Markdown final dibuat menjadi DOCX oleh build_modular.py?'
   options_offered: ['DOCX saja, unggah ke Google Docs manual', 'DOCX dulu, Google Docs lewat sesi terpisah', 'DOCX dan PDF saja, Google Docs tidak diperlukan']
@@ -918,4 +918,46 @@ approval_evidence:
   answered_at: '2026-11-07'
   session_ref: 'Brief A01 memory_op R9 (pertanyaan Q-B1-ar), sesi 2026-11-07'
   scope: 'HANYA sumber isi varian Lengkap (Markdown bab1/-bab4/) dan penanganan komponen pelengkap dengan placeholder jelas. Tidak mencakup isi tiap komponen pelengkap, templat acuan (Q-B1-ao), maupun persetujuan build'
+```
+
+## D-41
+
+```yaml
+id: D-41
+decision: 'Varian Formal diturunkan dari Editorial dengan menghapus teks tersorot dan penanda berkurung, tanpa teks pengganti. Tidak ada sintaks penanda baru di Markdown dan tidak ada dua sumber Markdown. Lingkup terbatas pada cara skrip membedakan Editorial dan Formal dari satu sumber'
+class: L3
+status: APPROVED
+date: '2026-11-07'
+related: [D-38, D-40, D-35, Q-B1-aq, Q-B1-ak, Q-B1-ao, P2-02]
+basis: 'Jawaban pengguna atas pertanyaan Q-B1-aq (pembedaan Editorial dan Formal dari satu sumber Markdown)'
+alternatives_considered: ['Satu sumber + sintaks penanda baku', 'Dua Markdown terpisah per bab']
+consequences: 'Q-B1-aq ditutup (DIPUTUSKAN). Konsekuensi yang diketahui (dari deskripsi opsi dan temuan a12 TSK R5-Q-B1-aq; dicatat sebagai konsekuensi, BUKAN persetujuan atas hal-hal ini): kasus seperti entri Yang et al. (Formal sekarang "Yang, R., dkk. (2026)..." vs Editorial "Yang, R., [PERLU VERIFIKASI SUMBER: ...], & Liu, N. (2026)...") akan terhapus tanpa pengganti sehingga entri dapat tidak lengkap di Formal; teks Formal hasil skrip akan berbeda dari Formal yang ada sekarang di modular/. Keputusan ini TIDAK menetapkan dan tidak boleh dianggap disetujui: (a) apakah penghapusan tanpa pengganti dapat menyisakan kalimat tidak utuh atau entri daftar pustaka tidak lengkap di Formal, dan siapa/bagaimana memeriksanya (usul belum disetujui: a12 memeriksa hasil Formal, a09 bila teks berubah) - Q-B1-as; (b) apakah placeholder templat di Formal (tanggal sampul, "<jika diperlukan>", lampiran contoh, teks panduan templat) termasuk "siap kumpul" (terkait D-40) - Q-B1-at; (c) aturan deteksi catatan tak berkurung seperti "Format sitasi sementara" agar ikut terhapus - Q-B1-au; (d) apakah Formal yang ada sekarang di modular/ dibangun ulang atau dibiarkan - Q-B1-av. Tidak memberi persetujuan build apa pun; P2-02 tetap berlaku (skrip build lama tetap dilarang).'
+approval_evidence:
+  question: 'Bagaimana skrip membedakan Editorial dan Formal dari satu sumber Markdown, khususnya untuk bagian bertanda seperti entri Yang et al. yang isinya berbeda di Formal ("dkk.") dan Editorial (penulis lengkap + penanda)?'
+  options_offered: ['Satu sumber + sintaks penanda baku', 'Dua Markdown terpisah per bab', 'Formal = Editorial tanpa sorotan (hapus penanda saja)']
+  user_answer: 'Formal = Editorial tanpa sorotan (hapus penanda saja)'
+  answered_at: '2026-11-07'
+  session_ref: 'Brief A01 memory_op R9 (pertanyaan Q-B1-aq), sesi 2026-11-07'
+  scope: 'HANYA cara pembedaan Editorial dan Formal: Formal diturunkan dari Editorial dengan menghapus teks tersorot dan penanda berkurung tanpa teks pengganti; tanpa sintaks penanda baru dan tanpa dua sumber. Tidak mencakup pemeriksaan kelengkapan hasil Formal, status placeholder templat, deteksi catatan tak berkurung, nasib Formal yang ada, maupun persetujuan build'
+```
+
+## D-42
+
+```yaml
+id: D-42
+decision: 'Varian Lengkap merujuk template/Template-Proposal-IF4091-Capstone-Individu-2026.docx sebagai dasar templat. Berkas "Template-Proposal-IF4091-Capstone-Individu-2026 - Copy.docx" di root tidak dirujuk skrip. Lingkup terbatas pada penunjukan berkas templat dasar varian Lengkap'
+class: L3
+status: APPROVED
+date: '2026-11-07'
+related: [D-38, D-40, Q-B1-ao, Q-B1-ak, P2-02]
+basis: 'Jawaban pengguna atas pertanyaan Q-B1-ao (berkas templat yang dirujuk skrip untuk varian Lengkap)'
+alternatives_considered: ['Berkas "- Copy" di root', 'Salin templat ke lokasi tetap baru']
+consequences: 'Q-B1-ao ditutup (DIPUTUSKAN). Penunjukan awal pengguna atas berkas "- Copy" di root (pesan definisi varian yang dikutip pada D-38) DIGANTIKAN, sebatas penunjukan berkas templat, oleh pilihan ini; bagian lain D-38 tidak berubah. Fakta (dari catatan sebelumnya di Q-B1-ao, bukan keputusan): sha256 kedua berkas identik (awalan a76030913c40). Keputusan ini TIDAK menetapkan dan tidak boleh dianggap disetujui: penghapusan atau pembiaran berkas "- Copy" di root (pengguna memutuskan di luar sistem; bukan bagian persetujuan ini), isi komponen pelengkap, maupun persetujuan build. P2-02 tetap berlaku (skrip build lama tetap dilarang).'
+approval_evidence:
+  question: 'Berkas templat mana yang dirujuk skrip untuk varian Lengkap? Kedua berkas identik menurut hash sha256 (awalan a76030913c40).'
+  options_offered: ['template/', 'Berkas "- Copy" di root', 'Salin templat ke lokasi tetap baru']
+  user_answer: 'template/ (Recommended)'
+  answered_at: '2026-11-07'
+  session_ref: 'Brief A01 memory_op R9 (pertanyaan Q-B1-ao), sesi 2026-11-07'
+  scope: 'HANYA berkas templat dasar varian Lengkap = template/Template-Proposal-IF4091-Capstone-Individu-2026.docx; berkas "- Copy" di root tidak dirujuk skrip. Tidak mencakup nasib berkas "- Copy", isi komponen pelengkap, maupun persetujuan build'
 ```

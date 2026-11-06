@@ -1,10 +1,10 @@
 ---
 file: OPEN_QUESTIONS
-revision: 21
+revision: 23
 status: CURRENT
 updated: 2026-11-07
 updated_by: a13-memory-manager
-based_on_commit: b05a2e3
+based_on_commit: ecf15cf
 ---
 
 # Open Questions
@@ -753,11 +753,13 @@ question: Bagaimana definisi tiga varian modular (editorial, formal, lengkap) da
 affected: [tools/build_modular.py, modular/]
 class: L3
 pic: Pengguna
-status: DIPUTUSKAN SEBAGIAN → D-38, D-39, D-40
+status: DIPUTUSKAN → D-38, D-39, D-40, D-41, D-42
 updated: 2026-11-07
-refs: [D-35, D-38, D-39, D-40, Q-B1-ao, Q-B1-ap, Q-B1-aq, Q-B1-ar]
+refs: [D-35, D-38, D-39, D-40, D-41, D-42, Q-B1-ao, Q-B1-ap, Q-B1-aq, Q-B1-ar]
 note: D-38 (2026-11-07) menetapkan nama dan makna tiga varian serta keluaran DOCX saja (Google Docs manual oleh pengguna). Sisa terbuka pada butir Q-B1-ao..ar (a-d).
 note_2: Progres 2026-11-07 - (b) PDF DIPUTUSKAN D-39 (Q-B1-ap); (d) perakitan varian Lengkap DIPUTUSKAN D-40 (Q-B1-ar). Sisa terbuka: (a) Q-B1-ao (templat dasar) dan (c) Q-B1-aq (penanda editorial).
+note_3: Progres 2026-11-07 - (c) Q-B1-aq DIPUTUSKAN D-41. Dari butir (a)-(d) pembuka hanya Q-B1-ao yang tersisa (kedua templat hash identik; dasar templat belum dipilih pengguna). Butir turunan baru dari D-41: Q-B1-as..av.
+note_4: Progres 2026-11-07 - (a) Q-B1-ao DIPUTUSKAN D-42. Seluruh butir pembuka (a)-(d) kini terjawab (D-38..D-42); butir ini DIPUTUSKAN. Butir turunan Q-B1-as..av, Q-B1-al, dan Q-B1-am tetap berdiri sendiri dan tidak berubah.
 ```
 
 ```yaml
@@ -802,9 +804,10 @@ question: Apakah "Template-Proposal-IF4091-Capstone-Individu-2026 - Copy.docx" d
 affected: [tools/build_modular.py, template/]
 class: L3
 pic: Pengguna
-status: TERBUKA
+status: DIPUTUSKAN → D-42
 updated: 2026-11-07
-refs: [D-38, Q-B1-ak]
+refs: [D-38, D-42, Q-B1-ak]
+note_2: D-42 (2026-11-07) - varian Lengkap merujuk template/Template-Proposal-IF4091-Capstone-Individu-2026.docx; berkas "- Copy" di root tidak dirujuk skrip (nasibnya di luar persetujuan; pengguna memutuskan di luar sistem).
 note: A13 menghitung hash sha256 kedua berkas pada 2026-11-07 dan keduanya SAMA (awalan a76030913c40); itu hanya fakta byte, bukan keputusan mana yang menjadi dasar skrip. Isi templat tidak dibaca.
 ```
 
@@ -826,9 +829,10 @@ question: Apa isi tepat penanda atau catatan editorial yang dibawa varian Editor
 affected: [tools/build_modular.py, modular/]
 class: L3
 pic: Pengguna
-status: TERBUKA
+status: DIPUTUSKAN → D-41
 updated: 2026-11-07
-refs: [D-38, Q-B1-ak]
+refs: [D-38, D-41, Q-B1-ak, Q-B1-as, Q-B1-at, Q-B1-au, Q-B1-av]
+note: D-41 (2026-11-07) - Formal diturunkan dari Editorial dengan menghapus teks tersorot dan penanda berkurung tanpa pengganti; tanpa sintaks baru, satu sumber. Fakta a12 (TSK R5-Q-B1-aq, pengamatan): Editorial memuat 17 catatan tersorot kuning (Bab I:1, II:14 termasuk catatan sitasi, III:1, IV:1) = 3 DATA BELUM TERSEDIA + 9 SESUAIKAN DENGAN BAB I + 4 PERLU VERIFIKASI SUMBER + 1 catatan "Format sitasi sementara" (tak berkurung); Formal tanpa highlight dan tanpa penanda berpola; struktur identik; diff baris-per-baris belum dilakukan. Bukti kerja di .scratch/ed/ dan .scratch/render/.
 ```
 
 ```yaml
@@ -841,4 +845,52 @@ status: DIPUTUSKAN → D-40
 updated: 2026-11-07
 refs: [D-38, D-40, Q-B1-ak, Q-B1-ao]
 note: D-40 (2026-11-07) - isi Bab I-IV dari Markdown bab1/-bab4/, pelengkap berplaceholder jelas; a12 memastikan tidak ada placeholder lolos ke berkas kumpul. Isi tiap komponen pelengkap dan templat acuan (Q-B1-ao) belum diputuskan.
+```
+
+```yaml
+id: Q-B1-as
+question: Apakah penghapusan penanda tanpa pengganti (D-41) dapat menyisakan kalimat tidak utuh atau entri daftar pustaka tidak lengkap di Formal (mis. entri Yang et al., Formal sekarang "dkk." vs Editorial penulis lengkap + penanda), dan siapa serta bagaimana memeriksanya?
+affected: [tools/build_modular.py, modular/]
+class: L3
+pic: Pengguna
+status: TERBUKA
+updated: 2026-11-07
+refs: [D-41, Q-B1-aq, Q-B1-ak]
+note: Usul A01 (belum disetujui): a12 memeriksa hasil Formal; a09 bila teks berubah. Entri bisa tidak lengkap karena penanda dihapus tanpa pengganti.
+```
+
+```yaml
+id: Q-B1-at
+question: Apakah placeholder templat yang ada di Formal (tanggal sampul "Bandung, <tanggal>", "<jika diperlukan>", "<diisi sesuai sumber yang dirujuk pada bab ini>", "Lampiran A. Contoh Judul Lampiran", teks panduan templat di Bab I dan III) termasuk "siap kumpul" menurut D-38 dan D-40?
+affected: [tools/build_modular.py, modular/, template/]
+class: L3
+pic: Pengguna
+status: TERBUKA
+updated: 2026-11-07
+refs: [D-38, D-40, D-41, Q-B1-aq]
+note: Fakta a12 (pengamatan): placeholder itu ada di KEDUA varian (Editorial dan Formal) yang ada sekarang.
+```
+
+```yaml
+id: Q-B1-au
+question: Apa aturan deteksi catatan editorial tak berkurung seperti "Format sitasi sementara" agar ikut terhapus dari Formal (pencarian penanda berpola tidak menjaringnya)?
+affected: [tools/build_modular.py, modular/]
+class: L3
+pic: Pengguna
+status: TERBUKA
+updated: 2026-11-07
+refs: [D-41, Q-B1-aq]
+note: Catatan sitasi itu tersorot kuning di Editorial; D-41 menyebut teks tersorot dan penanda berkurung dihapus, tetapi aturan deteksi untuk kasus tak berkurung belum ditetapkan.
+```
+
+```yaml
+id: Q-B1-av
+question: Apakah berkas Formal yang ada sekarang di modular/ dibangun ulang dengan skrip (D-41) atau dibiarkan?
+affected: [modular/, tools/build_modular.py]
+class: L3
+pic: Pengguna
+status: TERBUKA
+updated: 2026-11-07
+refs: [D-41, Q-B1-aq, P2-02]
+note: Teks Formal hasil skrip akan berbeda dari Formal yang ada sekarang (konsekuensi D-41). Membangun ulang tetap memerlukan persetujuan operasional P2-02 per eksekusi.
 ```

@@ -1,10 +1,10 @@
 ---
 file: TASK_TRACKER
-revision: 32
+revision: 34
 status: CURRENT
 updated: 2026-11-07
 updated_by: a13-memory-manager
-based_on_commit: b05a2e3
+based_on_commit: ecf15cf
 ---
 
 # Task Tracker
@@ -81,6 +81,8 @@ Tugas memakai ID `TSK-xxx` (berbeda dari ID uji teknis `T-xx`). Status: `TODO` Â
 | TSK-065 | memory_op A13: record_decision D-36 (a03 berwenang edit tools/build_modular.py) + tutup Q-B1-aj + catatan Q-B1-al + Q-B1-an baru | DONE | A13 | 0 | `memory/DECISION_LOG.md`, `memory/OPEN_QUESTIONS.md`, `memory/PROJECT_STATE.md`, `memory/CONTEXT_TRANSFER.md`, `memory/TASK_TRACKER.md` | Brief A01 (approval_evidence lengkap) | D-36 APPROVED L3 (lingkup: siapa berwenang). Wewenang belum berlaku operasional sampai spesifikasi, hook, dan check_agents diubah (Q-B1-al, Q-B1-an). Tidak ada commit/push/staging; tools dan naskah tidak diubah |
 | TSK-066 | memory_op A13: record_decision D-37 (pelaksana perubahan spesifikasi/hook = pengguna atau sesi biasa) dan D-38 (tiga varian, keluaran DOCX saja) + Q-B1-an ditutup, Q-B1-ak DIPUTUSKAN SEBAGIAN, Q-B1-ao..ar baru + koreksi HEAD b05a2e3 | DONE | A13 | 0 | `memory/DECISION_LOG.md`, `memory/OPEN_QUESTIONS.md`, `memory/PROJECT_STATE.md`, `memory/CONTEXT_TRANSFER.md`, `memory/TASK_TRACKER.md` | Brief A01 (approval_evidence lengkap) | D-37 dan D-38 APPROVED L3 (lingkup terbatas). D-35 hanya diberi catatan rujukan ke D-38. Q-B1-al tetap TERBUKA. Hash sha256 template/ dan templat root "- Copy" sama (fakta, dicatat di Q-B1-ao; belum keputusan). Tidak ada commit/push/staging; tools, docs, hook, dan naskah tidak diubah |
 | TSK-067 | memory_op A13: record_decision D-39 (PDF untuk varian Formal dan Lengkap) dan D-40 (varian Lengkap dari Markdown bab, pelengkap placeholder) + Q-B1-ap dan Q-B1-ar DIPUTUSKAN, Q-B1-ak progres | DONE | A13 | 0 | `memory/DECISION_LOG.md`, `memory/OPEN_QUESTIONS.md`, `memory/PROJECT_STATE.md`, `memory/CONTEXT_TRANSFER.md`, `memory/TASK_TRACKER.md` | Brief A01 (approval_evidence lengkap) | D-39 dan D-40 APPROVED L3 (lingkup terbatas). D-38 hanya diberi catatan rujukan. Sisa Q-B1-ak: Q-B1-ao dan Q-B1-aq terbuka. Cara konversi PDF, izin Bash a03, dan kriteria audit a12 untuk PDF tidak diputuskan. Tidak ada commit/push/staging; tools, docs, hook, dan naskah tidak diubah |
+| TSK-068 | memory_op A13: record_decision D-41 (Formal = Editorial tanpa sorotan, hapus penanda saja) + Q-B1-aq DIPUTUSKAN, Q-B1-as..av baru, Q-B1-ak progres | DONE | A13 | 0 | `memory/DECISION_LOG.md`, `memory/OPEN_QUESTIONS.md`, `memory/PROJECT_STATE.md`, `memory/CONTEXT_TRANSFER.md`, `memory/TASK_TRACKER.md` | Brief A01 (approval_evidence lengkap) | D-41 APPROVED L3 (lingkup terbatas). Dari butir pembuka Q-B1-ak hanya Q-B1-ao yang tersisa. Fakta a12 R5-Q-B1-aq dicatat sebagai pengamatan, bukan keputusan. Tidak ada commit/push/staging; tools, docs, hook, modular/, dan naskah tidak diubah |
+| TSK-069 | memory_op A13: record_decision D-42 (varian Lengkap merujuk template/, bukan "- Copy" di root) + Q-B1-ao DIPUTUSKAN, Q-B1-ak DIPUTUSKAN + daftar "Yang menunggu pengguna" | DONE | A13 | 0 | `memory/DECISION_LOG.md`, `memory/OPEN_QUESTIONS.md`, `memory/PROJECT_STATE.md`, `memory/CONTEXT_TRANSFER.md`, `memory/TASK_TRACKER.md` | Brief A01 (approval_evidence lengkap) | D-42 APPROVED L3 (lingkup terbatas: berkas templat dasar). Penunjukan awal "- Copy" digantikan sebatas penunjukan berkas; nasib berkas "- Copy" tidak diputuskan. Q-B1-as..av, Q-B1-al, Q-B1-am tidak diubah. Tidak ada commit/push/staging; tools, docs, hook, template/, dan naskah tidak diubah |
 
 Approval evidence TSK-061 (persetujuan operasional per eksekusi, P2-02):
 
@@ -193,6 +195,8 @@ Diisi A13 saat penutupan tugas dari Agent Report dan `.scratch/agent_runs.jsonl`
 | 2026-11-07 | TSK-065 | a13 | 0 | COMPLETE | NA | 0/0/0/0 | n/a | n/a | n/a |
 | 2026-11-07 | TSK-066 | a13 | 0 | COMPLETE | NA | 0/0/0/0 | n/a | n/a | n/a |
 | 2026-11-07 | TSK-067 | a13 | 0 | COMPLETE | NA | 0/0/0/0 | n/a | n/a | n/a |
+| 2026-11-07 | TSK-068 | a13 | 0 | COMPLETE | NA | 0/0/0/0 | n/a | n/a | n/a |
+| 2026-11-07 | TSK-069 | a13 | 0 | COMPLETE | NA | 0/0/0/0 | n/a | n/a | n/a |
 
 Catatan: token = subagent_tokens menurut harness, mungkin kumulatif per instance.
 
