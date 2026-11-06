@@ -1,10 +1,10 @@
 ---
 file: OPEN_QUESTIONS
-revision: 12
+revision: 18
 status: CURRENT
-updated: 2026-11-06
+updated: 2026-11-07
 updated_by: a13-memory-manager
-based_on_commit: b005ff0
+based_on_commit: f3cb6ba
 ---
 
 # Open Questions
@@ -146,8 +146,8 @@ class: L3
 pic: Pengguna
 ask_to: Pengguna
 status: TERBUKA
-updated: 2026-11-05
-refs: []
+updated: 2026-11-06
+refs: [F-A06-0006, F-A06-0014, Q-B1-aa]
 ```
 
 ```yaml
@@ -172,8 +172,8 @@ class: L3
 pic: Pengguna
 ask_to: Tim
 status: MENUNGGU ANGGOTA
-updated: 2026-11-05
-refs: []
+updated: 2026-11-06
+refs: [F-A06-0014, Q-B1-aa]
 ```
 
 ```yaml
@@ -236,7 +236,7 @@ class: L3
 pic: Pengguna
 status: TERBUKA
 updated: 2026-11-06
-refs: [F-A04-0007]
+refs: [F-A04-0007, D-34]
 ```
 
 ```yaml
@@ -430,7 +430,7 @@ pic: Pengguna
 ask_to: Tim
 status: MENUNGGU ANGGOTA
 updated: 2026-11-06
-refs: [D-22, D-29, D-30, Q-B1-j]
+refs: [D-22, D-29, D-30, Q-B1-j, F-A06-0001]
 ```
 
 ## Butir baru dari penulisan I.3 DRAF 7 (TSK-047, 2026-11-06)
@@ -469,7 +469,7 @@ class: L3
 pic: Pengguna
 status: TERBUKA
 updated: 2026-11-06
-refs: [D-31, F-A10-0105]
+refs: [D-31, F-A10-0105, D-34]
 ```
 
 ## Butir baru dari QA dan tinjauan kritis I.3 DRAF 7 (TSK-049, 2026-11-06)
@@ -485,7 +485,7 @@ pic: Pengguna
 ask_to: Tim
 status: MENUNGGU ANGGOTA
 updated: 2026-11-06
-refs: [D-32, D-29, F-A11-0001, F-A05-0001]
+refs: [D-32, D-29, F-A11-0001, F-A05-0001, F-A06-0006]
 ```
 
 ```yaml
@@ -497,7 +497,7 @@ pic: Pengguna
 ask_to: Tim
 status: MENUNGGU ANGGOTA
 updated: 2026-11-06
-refs: [D-32, F-A11-0003]
+refs: [D-32, F-A11-0003, F-A06-0006, F-A05-0018]
 ```
 
 ```yaml
@@ -509,7 +509,7 @@ pic: Pengguna
 ask_to: Tim / pembimbing
 status: MENUNGGU ANGGOTA
 updated: 2026-11-06
-refs: [F-A11-0010]
+refs: [F-A11-0010, F-A06-0007]
 ```
 
 ```yaml
@@ -554,5 +554,227 @@ class: L3
 pic: Tim
 status: MENUNGGU ANGGOTA
 updated: 2026-11-06
-refs: [F-A07-0048, Q-B1-p]
+refs: [F-A07-0048, Q-B1-p, F-A06-0005]
+```
+
+## Butir baru dari tinjauan ulang a05/a11, A06 lintas proposal, dan a02 Bab II (TSK-058, 2026-11-06)
+
+Semua butir TERBUKA/menunggu; tidak ada yang diputuskan. Pemilik dokumen anggota belum dikonfirmasi (Q-P2-a); nama anggota di bawah mengikuti Penyelarasan atau nama berkas, bukan fakta terkonfirmasi.
+
+```yaml
+id: Q-B1-v
+question: Siapa pemilik kejelasan bukti/relevansi, bagaimana peran tenaga ahli versus pengguna proksi (penilai), dan di mana skor kejelasan disimpan (ada tabrakan istilah "penilaian")?
+affected: [Bab I, A06]
+class: L3
+pic: Abizzar
+ask_to: Tim
+status: MENUNGGU ANGGOTA
+updated: 2026-11-06
+refs: [F-A06-0003, F-A06-0004, Q-B1-l]
+```
+
+```yaml
+id: Q-B1-w
+question: Siapa pemilik konsistensi antar-entri CPPT di tingkat tim (Penyelarasan:53 tanpa pemilik, rumusan, atau jenis ketidaksesuaian)?
+affected: [Bab I, A06]
+class: L3
+pic: Pengguna
+ask_to: Tim
+status: MENUNGGU ANGGOTA
+updated: 2026-11-06
+refs: [F-A06-0010, F-A05-0021, D-25]
+```
+
+```yaml
+id: Q-B1-x
+question: Di mana batas antara penautan ibu-bayi (di luar kajian, D-25) dan aturan pemeriksaan pasangan ibu-bayi yang tercatat milik Danen? Tergantung Q-TEAM butir 1
+affected: [Bab I, A06]
+class: L3
+pic: Pengguna
+ask_to: Tim
+status: MENUNGGU ANGGOTA
+updated: 2026-11-06
+refs: [F-A06-0009, D-25, Q-TEAM]
+```
+
+```yaml
+id: Q-B1-y
+question: Bagaimana jawaban "tidak" ditafsirkan mengingat plafon presisi/recall = 1 (D-29 menjadi pasti "tidak") dan apa kondisi keabsahan jawaban (termasuk opsi "tidak dapat disimpulkan")?
+affected: [Bab I, I.2, I.3]
+class: L3
+pic: Pengguna
+ask_to: Tim
+status: TERBUKA
+updated: 2026-11-06
+refs: [F-A11-0012, F-A05-0017, F-A05-0020, D-29, D-33]
+```
+
+```yaml
+id: Q-B1-z
+question: Nuansa klaim "tidak ada resource CPPT" pada SATUSEHAT di Bab II:87 (narasi perkembangan penyakit dikirim lewat ClinicalImpression, Bab 6 panduan); bagaimana dipakai di Bab I/III?
+affected: [Bab I, Bab II, Bab III]
+class: L3
+pic: Pengguna
+status: TERBUKA
+updated: 2026-11-06
+refs: [B2-48, EVIDENCE_REGISTRY]
+```
+
+```yaml
+id: Q-B1-aa
+question: Konfirmasi pemilik Draft Bab 1 (1) dan apakah ada versi anggota yang lebih baru (dua dokumen anggota tampak usang; tanggal manifest Raihaan Bab I "± 2026-10-20" tidak cocok isinya karena sampul memakai judul baru 30 Okt)
+affected: [A06, PROJECT_STATE Team Docs Manifest]
+class: L3
+pic: Pengguna
+ask_to: Tim
+status: MENUNGGU ANGGOTA
+updated: 2026-11-06
+refs: [Q-P2-a, Q-P2-c, F-A06-0014]
+```
+
+```yaml
+id: Q-B1-ab
+question: source/INDEKS.md usang (menyebut folder 01-12, sedangkan struktur kini 01-17); perbarui atau abaikan?
+affected: [source/INDEKS.md]
+class: L4
+pic: A13/Pengguna
+status: TERBUKA
+updated: 2026-11-06
+refs: [TSK-055]
+```
+
+## Butir baru dari keputusan D-34 (TSK-060, 2026-11-06)
+
+```yaml
+id: Q-B1-ac
+question: Permintaan versi modular Bab I dan II (empat berkas di modular/: Bab-I_Editorial, Bab-I, Bab-II_Editorial, Bab-II). build_modular.py membaca master docx resmi bab2/...-Draft-Bab2.docx, BUKAN bab1/Bab_I_Draft.md maupun Markdown Bab II terbaru, sehingga hasil build tidak memuat naskah Bab I DRAF terbaru. Bagaimana dilanjutkan, dan apakah Approval Request build_modular (P2-02) disetujui?
+affected: [modular/, bab1, bab2]
+class: L2/L3
+pic: Pengguna
+status: DITUTUP DENGAN ALASAN (disetujui untuk satu eksekusi; keterbatasan sumber tetap berlaku untuk eksekusi berikutnya; jalur docx dari Markdown Bab I belum ada)
+updated: 2026-11-06
+refs: [P2-02, D-34, TSK-061]
+note: Persetujuan operasional P2-02 untuk satu eksekusi dan empat berkas (bukti di TASK_TRACKER TSK-061); bukan keputusan DECISION_LOG dan bukan DIPUTUSKAN.
+```
+
+## Butir baru dari penulisan I.5 (TSK-059, 2026-11-06)
+
+```yaml
+id: Q-B1-ad
+question: Bagaimana cara menilai "lebih tinggi" (I.5) dan apa kondisi keabsahan jawaban? Sebagian (tafsir "tidak" dan keabsahan jawaban) beririsan dengan Q-B1-y; butir ini mencakup cara menilai "lebih tinggi" pada I.5.
+affected: [Bab I, I.5]
+class: L3
+pic: Pengguna
+ask_to: Tim
+status: MENUNGGU ANGGOTA
+updated: 2026-11-06
+refs: [F-A11-0006, F-A11-0012, F-A05-0017, Q-B1-y]
+```
+
+```yaml
+id: Q-B1-ae
+question: Versi dokumen mana yang dilabeli dan diuji, dan apakah mode AI/NLP penuh atau inkremental?
+affected: [Bab I, I.5]
+class: L3
+pic: Pengguna
+ask_to: Tim
+status: MENUNGGU ANGGOTA
+updated: 2026-11-06
+refs: [F-A11-0004]
+```
+
+```yaml
+id: Q-B1-af
+question: Dua inferensi penulis baru di I.5 perlu dinilai pengguna apakah merupakan keputusan metodologi. (1) Paragraf 4, "data uji tidak dipakai menyusun/menyesuaikan pemeriksaan": turunan Penyelarasan:297 tetapi tidak eksplisit di sana. (2) Paragraf 7.
+affected: [Bab I, I.5]
+class: L3
+pic: Pengguna
+status: TERBUKA
+updated: 2026-11-06
+refs: [TSK-059, D-34]
+note: Inferensi penulis (a03), belum disetujui; bukan keputusan.
+```
+
+```yaml
+id: Q-B1-ag
+question: Apakah penilaian kejelasan oleh pengguna proksi berlangsung dalam sesi uji peninjauan yang sama (Penyelarasan:304, :312)?
+affected: [Bab I, I.5, A06]
+class: L3
+pic: Pengguna
+ask_to: Tim
+status: MENUNGGU ANGGOTA
+updated: 2026-11-06
+refs: [TSK-059, Penyelarasan:304, Penyelarasan:312, A06]
+```
+
+## Butir baru dari kegagalan build modular (TSK-061/063, 2026-11-06)
+
+```yaml
+id: Q-B1-ah
+question: lxml, LibreOffice, dan pdftotext belum tersedia untuk build_modular (build gagal ModuleNotFoundError lxml, build_modular.py baris 29). Apakah pengguna akan memasangnya (lxml; LibreOffice di C:\Program Files\LibreOffice\program\soffice.exe atau env SOFFICE; pdftotext dan pdfinfo di PATH), dan apakah build diulang dengan Approval Request baru (persetujuan P2-02 untuk satu eksekusi sudah terpakai)?
+affected: [modular/, tools/build_modular.py]
+class: L4
+pic: Pengguna
+status: TERBUKA
+updated: 2026-11-06
+refs: [TSK-061, TSK-063, P2-02, Q-B1-ac]
+note: Pemasangan paket dilakukan pengguna, bukan agent. Keempat berkas modular tidak tersentuh.
+```
+
+```yaml
+id: Q-B1-ai
+question: Jalur pembuatan docx modular dari Markdown Bab I belum ada (build_modular tidak membacanya; build_docx.py dan build_with_toc.py dilarang P2-02). Bagaimana jalur itu disediakan?
+affected: [modular/, bab1, tools/]
+class: L3
+pic: Pengguna
+status: TERBUKA
+updated: 2026-11-07
+refs: [TSK-061, P2-02, Q-B1-ac, D-35]
+note: D-35 menetapkan penempatan peran (a03 + perbaikan build_modular) tetapi belum menjawab rincian teknis jalur Markdown; tetap TERBUKA (lihat Q-B1-aj..am)
+```
+
+## Butir baru dari keputusan D-35 (penempatan peran migrasi ke Docs, 2026-11-07)
+
+```yaml
+id: Q-B1-aj
+question: Siapa yang boleh mengedit tools/build_modular.py? a03 hanya berwenang menulis bab*/ dan .scratch/**, sedangkan D-35 menugaskan perbaikan skrip itu.
+affected: [tools/build_modular.py, write_scopes]
+class: L4
+pic: Pengguna
+status: TERBUKA
+updated: 2026-11-07
+refs: [D-35, P2-02]
+```
+
+```yaml
+id: Q-B1-ak
+question: Bagaimana definisi tiga varian modular (editorial, formal, lengkap) dan format keluaran Google Docs (mis. impor DOCX atau pembuatan langsung)?
+affected: [tools/build_modular.py, modular/]
+class: L3
+pic: Pengguna
+status: TERBUKA
+updated: 2026-11-07
+refs: [D-35]
+```
+
+```yaml
+id: Q-B1-al
+question: Apakah AGENT_SPECIFICATIONS/ORCHESTRATION serta hook guard dan check_agents perlu diubah untuk memberi a03 wewenang tambahan sesuai D-35?
+affected: [docs/, .claude/]
+class: L4
+pic: Pengguna
+status: TERBUKA
+updated: 2026-11-07
+refs: [D-35, Q-B1-aj]
+```
+
+```yaml
+id: Q-B1-am
+question: Bagaimana nasib D-16 (perbaikan skrip build lama untuk path /home/user/project-proposal dan outline Bab II lama II.1-II.8) setelah D-35 memusatkan build pada build_modular.py?
+affected: [tools/, D-16]
+class: L3
+pic: Pengguna
+status: TERBUKA
+updated: 2026-11-07
+refs: [D-35, D-16, P2-02]
 ```

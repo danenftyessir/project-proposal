@@ -1,10 +1,10 @@
 ---
 file: DECISION_LOG
-revision: 13
+revision: 15
 status: CURRENT
-updated: 2026-11-06
+updated: 2026-11-07
 updated_by: a13-memory-manager
-based_on_commit: b005ff0
+based_on_commit: f3cb6ba
 ---
 
 # Decision Log
@@ -770,4 +770,46 @@ approval_evidence:
   answered_at: '2026-11-06'
   session_ref: 'sesi /sesi-mulai 2026-11-06, AskUserQuestion Tujuan vs ukuran'
   scope: 'Rumusan syarat keberhasilan I.3: hasil = jawaban pertanyaan'
+```
+
+## D-34
+
+```yaml
+id: D-34
+decision: 'I.5 Metodologi Bab I individu disusun tanpa kerangka metodologi bernama: tahapan khusus penelitian ini (masukan, kegiatan, keluaran), bersumber dari keputusan APPROVED dan bagian Data dan Evaluasi Penyelarasan, dengan pernyataan bahwa tidak ada kerangka baku yang diklaim diikuti; hal yang menunggu tim tetap berupa penanda'
+class: L3
+status: APPROVED
+date: '2026-11-06'
+related: [D-19, D-22, D-29, D-31, D-32, D-33]
+basis: 'Jawaban pengguna atas pertanyaan kerangka I.5 pada sesi 2026-11-06 (lanjutan)'
+alternatives_considered: ['Pengguna menyebutkan kerangka metodologi', 'Tunda I.5 sampai keputusan tim']
+consequences: 'Pembimbing mungkin menuntut kerangka bernama; dapat ditambahkan kemudian. Tidak menetapkan mekanisme kombinasi, angka, ambang, atau satuan. Tidak memasukkan kajian pustaka sebagai tahap.'
+approval_evidence:
+  question: 'Sebelum menulis I.5 (Metodologi), perlu satu keputusan Anda: Penyelarasan tidak menyebut kerangka metodologi dan belum ada keputusan APPROVED soal itu. Penyelarasan hanya menetapkan prinsip evaluasi (label tenaga ahli buta terhadap keluaran sistem, pembagian data per pasien, pembandingan tiga konfigurasi, penilaian kejelasan oleh tenaga ahli dan pengguna proksi). Aturan proposal juga melarang sekadar menyebut nama kerangka tanpa menjelaskan penerapannya. Bagaimana I.5 disusun?'
+  options_offered: ['Tanpa kerangka bernama (Recommended)', 'Saya sebutkan kerangkanya', 'Tunda I.5 sampai keputusan tim']
+  user_answer: 'Tanpa kerangka bernama, tapi kan current session sudah 82%, Silahkan segera buat versi modularnya di C:\Users\HYPE R Series\worktrees\project-proposal-setup\modular\13523136-Proposal-IF4091-Capstone-Individu-2026-Modular-Bab-I_Editorial.docx (dan tiga berkas modular lain: Bab-I.docx, Bab-II_Editorial.docx, Bab-II.docx di folder yang sama)'
+  answered_at: '2026-11-06'
+  session_ref: 'sesi /sesi-mulai 2026-11-06 (lanjutan), AskUserQuestion Kerangka I.5'
+  scope: 'Hanya bentuk I.5: tanpa kerangka bernama. Permintaan membuat versi modular dalam jawaban yang sama BUKAN bagian keputusan ini dan belum disetujui (menunggu Approval Request build_modular per P2-02)'
+```
+
+## D-35
+
+```yaml
+id: D-35
+decision: 'Peran migrasi Markdown final ke Docs/DOCX (varian modular editorial, formal, dan lengkap) ditempatkan pada a03 dengan memperbaiki tools/build_modular.py agar mendukung tiga varian dan jalur Google Docs; tidak ada agent baru; a03 menjalankannya dengan persetujuan per eksekusi seperti sekarang (P2-02). Lingkup terbatas pada penempatan peran ini'
+class: L3
+status: APPROVED
+date: '2026-11-07'
+related: [D-16, Q-B1-ai, Q-B1-ah, Q-A04-a]
+basis: 'Jawaban pengguna atas pertanyaan penempatan peran migrasi Markdown final ke Docs'
+alternatives_considered: ['Agent ke-14 khusus', 'Skrip deterministik tanpa agent', 'Rancang dulu']
+consequences: 'a03 menjadi penulis sekaligus penerbit. Keputusan ini TIDAK menetapkan: (a) siapa yang boleh mengedit tools/build_modular.py (a03 hanya berwenang menulis bab*/ dan .scratch/**), (b) definisi tiga varian dan format keluaran Google Docs, (c) perubahan AGENT_SPECIFICATIONS/ORCHESTRATION, hook guard dan check_agents, (d) nasib D-16. Semua itu terbuka (Q-B1-aj..am). Tidak memberi persetujuan build apa pun; P2-02 tetap berlaku (skrip build lama tetap dilarang). Perbaikan build_modular belum dilakukan saat keputusan dicatat.'
+approval_evidence:
+  question: 'Bagaimana peran migrasi Markdown final ke Docs (versi modular editorial, formal, dan lengkap) ditempatkan di sistem agent?'
+  options_offered: ['Perluas a03 + perbaiki build_modular', 'Agent ke-14 khusus', 'Skrip deterministik tanpa agent', 'Rancang dulu']
+  user_answer: 'Perluas a03 + perbaiki build_modular'
+  answered_at: '2026-11-07'
+  session_ref: 'Brief A01 memory_op (pertanyaan penempatan peran migrasi); tanggal = hari pencatatan, tidak tercantum di brief'
+  scope: 'Hanya penempatan peran migrasi: a03 diperluas dan build_modular.py diperbaiki untuk tiga varian dan jalur Google Docs; tidak ada agent baru; persetujuan per eksekusi (P2-02) tetap'
 ```

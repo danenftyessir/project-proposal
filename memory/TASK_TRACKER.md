@@ -1,10 +1,10 @@
 ---
 file: TASK_TRACKER
-revision: 23
+revision: 29
 status: CURRENT
-updated: 2026-11-06
+updated: 2026-11-07
 updated_by: a13-memory-manager
-based_on_commit: b005ff0
+based_on_commit: f3cb6ba
 ---
 
 # Task Tracker
@@ -67,6 +67,29 @@ Tugas memakai ID `TSK-xxx` (berbeda dari ID uji teknis `T-xx`). Status: `TODO` �
 | TSK-051 | record_findings hasil QA I.3 DRAF 8 (TSK-042..045) + Q-B1-t/u + baris Bab I PROJECT_STATE | DONE | A13 | 0 | `memory/FINDINGS_LOG.md`, `memory/OPEN_QUESTIONS.md`, `memory/TASK_TRACKER.md`, `memory/PROJECT_STATE.md` | Brief A01 (bukan keputusan); jawaban pengguna 2026-11-06 "Satu perbaikan terarah (Recommended)" sebagai konteks izin satu perbaikan terarah (F-A07-0047 dan LOW terkait) | Tidak ada keputusan baru; G2 tidak dinyatakan diterima; naskah tidak diubah; tidak ada Git. F-A05-0008 tetap IN_PROGRESS (belum diperiksa ulang a05); F-A05-0002, 0006, 0007, 0009, 0012 tetap OPEN. Hash Artifact Map DRAF 8 belum dihitung. Bash heredoc python ditolak guard (substitusi perintah); pengubahan dilakukan lewat Edit |
 | TSK-052 | session_close 2026-11-06: CONTEXT_TRANSFER rev 10 (revisi disamakan dengan PROJECT_STATE agar S2 tidak WARN; rev 7-9 dilewati), PROJECT_STATE rev 10 (hash Bab I DRAF 8 `05b369128553`, Efisiensi), TASK_TRACKER rev 22; verifikasi D-28..D-33, OPEN_QUESTIONS, FINDINGS_LOG, EVIDENCE_REGISTRY | DONE | A13 | 0 | `memory/CONTEXT_TRANSFER.md`, `memory/PROJECT_STATE.md`, `memory/TASK_TRACKER.md` | Brief A01 (/sesi-tutup); pilihan pengguna "Tutup sesi dan ajukan G3" hanya arahan alur, bukan keputusan | Tidak ada keputusan baru; D-28..D-33 ada dengan approval_evidence; EVIDENCE_REGISTRY tidak ada perubahan (tidak ada bukti baru sesi ini); naskah tidak diubah; tidak ada Git. Dilanjutkan setelah batas pemakaian API (satu retry) |
 | TSK-053 | koreksi CONTEXT_TRANSFER baris 17: klaim "a08 pada I.2/I.4" salah; a08 tidak dijalankan pada I.2/I.3/I.4 DRAF 5-8 (a08 PASS_WITH_NOTES hanya Bab I DRAF 4). PROJECT_STATE diperiksa: tidak ada klaim serupa, tidak diubah | DONE | A13 | 0 | `memory/CONTEXT_TRANSFER.md`, `memory/TASK_TRACKER.md` | Brief A01 (koreksi catatan; bukan keputusan) | Tidak ada keputusan baru; naskah tidak diubah; tidak ada Git. Sitasi I.2/I.3/I.4 belum diaudit a08 (usulan A01: pertimbangkan TSK a08 untuk bagian baru) |
+| TSK-054 | apply_reconcile: koreksi klaim usang "DRAF 5-8 belum ter-commit" dan based_on_commit b005ff0 menjadi f3cb6ba pada PROJECT_STATE, CONTEXT_TRANSFER, TASK_TRACKER, FINDINGS_LOG, OPEN_QUESTIONS | DONE | A13 | 0 | `memory/PROJECT_STATE.md`, `memory/CONTEXT_TRANSFER.md`, `memory/TASK_TRACKER.md`, `memory/FINDINGS_LOG.md`, `memory/OPEN_QUESTIONS.md` | Brief A01 (koreksi faktual; bukan keputusan) | Commit f3cb6ba dibuat pengguna di luar A13; tidak ada approval_evidence G3 (fakta operasional). Push: pernyataan pengguna, tidak terverifikasi. Hash Bab I `05b369128553` dan Bab II `8cd97bed5345` cocok dengan berkas. Tidak ada keputusan baru; naskah tidak diubah; tidak ada Git oleh A13 |
+| TSK-055 | Pemeriksaan bukti Bab II DRAFT 6 (a02) | DONE | A02 | 0 | `.scratch/bab2_evidence.md`; `memory/EVIDENCE_REGISTRY.md` | Wave 1 (sesi orkestrasi tunggal atas arahan pengguna) | DONE hanya eksekusi; execution_status PARTIAL. 47 klaim: 39 TERVERIFIKASI, 5 DIDUKUNG SEBAGIAN, 1 BERTENTANGAN (B2-40), 2 BELUM DIVERIFIKASI (B2-30, B2-31), 0 TIDAK DIDUKUNG. Sisa scope: II.3.2, II.4.1 (Gao), II.4.2, II.6, II.7.1 (Fitriasari), II.7.2 dan Tabel II.2, II.8, II.9, halaman Skrabic/Zeba/Jaganathan/n2c2, metadata Daftar Pustaka. Naskah tidak diubah. Paket bukti tidak di-commit |
+| TSK-056 | Pemeriksaan lintas proposal Bab I DRAF 8 (a06) | DONE | A06 | 0 | `.scratch/cross_proposal_report.md` | Wave 1 | F-A06-0001..0016 (2 HIGH, 9 MEDIUM, 2 LOW, 3 INFO); semua OPEN; pemilik dokumen anggota belum dikonfirmasi (Q-P2-a) sehingga tidak ada sel antaranggota dinyatakan KONSISTEN. Naskah tidak diubah |
+| TSK-057 | Tugas a03 Wave 2a (lingkup rinci menurut brief A01; tidak diberikan ke A13) | DONE | A03 | 0 | — | Wave 2a | DONE hanya eksekusi (menurut brief A01); keluaran tidak dilaporkan ke A13; belum ada QA |
+| TSK-058 | record_findings Wave 1 (tinjauan ulang a05 TSK-046, a11 TSK-048, A06 TSK-056, a02 TSK-055) + EVIDENCE_REGISTRY Bab II + Q-B1-v..ab + PROJECT_STATE/CONTEXT_TRANSFER | DONE | A13 | 0 | `memory/FINDINGS_LOG.md`, `memory/OPEN_QUESTIONS.md`, `memory/EVIDENCE_REGISTRY.md`, `memory/TASK_TRACKER.md`, `memory/PROJECT_STATE.md`, `memory/CONTEXT_TRANSFER.md` | Brief A01 (bukan keputusan) | Tidak ada keputusan baru; tidak ada approval; tidak ada RESOLVED selain yang dinyatakan auditor penemu (a05: F-A05-0008; a11: sebagai masalah naskah); naskah tidak diubah; tidak ada Git; RSIA-source tidak dibuka |
+| TSK-059 | Penulisan I.5 Metodologi (a03, tanpa kerangka bernama, D-34) | DONE | A03 | 0 | `bab1/Bab_I_Draft.md` | Wave 2 | DONE hanya eksekusi. Bab I kini DRAF 10, 39 penanda (I.1 12, I.2 8, I.3 7, I.4 4, I.5 8). Paragraf research gap I.1 belum ditulis. I.5 BELUM diperiksa QA. Hash belum dihitung ulang. Rincian keluaran menurut laporan A01, tidak diverifikasi A13 |
+| TSK-060 | record_decision D-34 (I.5 tanpa kerangka bernama) + Q-B1-ac (permintaan versi modular) + refs Q-A04-a dan Q-B1-n | DONE | A13 | 0 | `memory/DECISION_LOG.md`, `memory/OPEN_QUESTIONS.md`, `memory/TASK_TRACKER.md` | Brief A01 (approval_evidence lengkap) | D-34 APPROVED L3. Permintaan build modular dicatat terpisah (Q-B1-ac), bukan persetujuan build. Naskah tidak diubah; tidak ada Git |
+| TSK-061 | Build modular `python -I tools/build_modular.py --only I II` (a03) | FAILED | A03 | 0 | — (tidak ada docx dibuat; keempat berkas di modular/ tidak tersentuh, `git status --porcelain` tidak menampilkan perubahan di modular/) | Persetujuan operasional P2-02 (bukan DECISION_LOG), bukti di bawah | Dijalankan SATU kali, exit code 1: `ModuleNotFoundError: No module named 'lxml'` pada `tools/build_modular.py` baris 29 (gagal saat impor, sebelum build). Retry: tidak dilakukan karena penyebabnya lingkungan, bukan sementara; dibawa ke pengguna (Q-B1-ah). Persetujuan P2-02 untuk satu eksekusi itu sudah terpakai; eksekusi berikutnya perlu Approval Request baru. Syarat lingkungan (belum dipenuhi/terverifikasi): lxml terpasang, LibreOffice di `C:\Program Files\LibreOffice\program\soffice.exe` atau env SOFFICE, pdftotext dan pdfinfo di PATH; pemasangan oleh pengguna, bukan agent. Walau build berhasil, sumbernya docx resmi `bab2/...-Draft-Bab2.docx`, BUKAN `bab1/Bab_I_Draft.md` DRAF 10 dan bukan Markdown Bab II DRAFT 6 (Q-B1-ai). Sumber: laporan a03 dan verifikasi A01 |
+| TSK-063 | task_close A13: koreksi TSK-061 (FAILED), Q-B1-ah dan Q-B1-ai, PROJECT_STATE | DONE | A13 | 0 | `memory/TASK_TRACKER.md`, `memory/OPEN_QUESTIONS.md`, `memory/PROJECT_STATE.md` | Brief A01 | Tidak ada keputusan baru; naskah tidak diubah; tidak ada Git |
+| TSK-062 | task_close A13: TSK-059/061, Q-B1-ad..ag, PROJECT_STATE Bab I | DONE | A13 | 0 | `memory/TASK_TRACKER.md`, `memory/OPEN_QUESTIONS.md`, `memory/PROJECT_STATE.md` | Brief A01 | Tidak ada keputusan baru; naskah tidak diubah; tidak ada Git |
+| TSK-064 | memory_op A13: rekonsiliasi R9 (diagnosis S7, S2) + record_decision D-35 + Q-B1-aj..am | DONE | A13 | 0 | `memory/DECISION_LOG.md`, `memory/OPEN_QUESTIONS.md`, `memory/PROJECT_STATE.md`, `memory/CONTEXT_TRANSFER.md`, `memory/TASK_TRACKER.md` | Brief A01 (approval_evidence lengkap) | D-35 APPROVED L3 (lingkup: penempatan peran). Tidak ada commit/push; usulan G3 diajukan ke A01. Naskah dan tools tidak diubah |
+
+Approval evidence TSK-061 (persetujuan operasional per eksekusi, P2-02):
+
+```yaml
+approval_evidence:
+  question: "Approval Request (P2-02) untuk `python -I tools/build_modular.py --only I II`. Berkas di modular/ yang akan DITIMPA (keempatnya sudah ada): (1) ...Modular-Bab-I.docx, (2) ...Modular-Bab-I_Editorial.docx, (3) ...Modular-Bab-II.docx, (4) ...Modular-Bab-II_Editorial.docx. Bab III dan IV tidak tersentuh. Keterbatasan: alat membangun dari docx resmi bab2/...-Draft-Bab2.docx, BUKAN dari bab1/Bab_I_Draft.md (DRAF 10, 39 penanda, I.5 baru) dan BUKAN dari Markdown Bab II DRAFT 6 ..."   # elipsis sesuai brief A01; teks lengkap tidak diterima A13
+  options_offered: ['Jangan build sekarang (Recommended)', 'Build I dan II, terima keterbatasan', 'Build Bab II saja']
+  user_answer: "Build I dan II, terima keterbatasan"
+  answered_at: 2026-11-06
+  session_ref: "sesi /sesi-mulai 2026-11-06 (lanjutan), AskUserQuestion Build modular"
+  scope: "SATU eksekusi dan empat berkas di atas"
+```
 
 ## Run Log
 
@@ -152,6 +175,18 @@ Diisi A13 saat penutupan tugas dari Agent Report dan `.scratch/agent_runs.jsonl`
 | 2026-11-06 | TSK-051 | a13 | 0 | COMPLETE | NA | 0/0/0/0 | n/a | n/a | n/a |
 | 2026-11-06 | TSK-052 | a13 | 0 | COMPLETE | NA | 0/0/0/0 | n/a | n/a | n/a |
 | 2026-11-06 | TSK-053 | a13 | 0 | COMPLETE | NA | 0/0/0/0 | n/a | n/a | n/a |
+| 2026-11-06 | TSK-054 | a13 | 0 | COMPLETE | NA | 0/0/0/0 | n/a | n/a | n/a |
+| 2026-11-06 | TSK-046 (tinjauan ulang DRAF 8) | a05 | 1 | COMPLETE | NA | 0/0/6/0 (baru F-A05-0017..0022) | n/a | n/a | n/a |
+| 2026-11-06 | TSK-048 (tinjauan ulang DRAF 8) | a11 | 1 | COMPLETE | PASS_WITH_NOTES | 0/0/1/2 (baru F-A11-0012..0014) | n/a | n/a | n/a |
+| 2026-11-06 | TSK-055 | a02 | 0 | PARTIAL | NA | n/a (temuan Bab II tanpa ID F-A02; 1 BERTENTANGAN, 5 DIDUKUNG SEBAGIAN) | n/a | n/a | n/a |
+| 2026-11-06 | TSK-056 | a06 | 0 | COMPLETE | NA | 0/2/9/2 (+3 INFO) | n/a | n/a | n/a |
+| 2026-11-06 | TSK-058 | a13 | 0 | COMPLETE | NA | 0/0/0/0 | n/a | n/a | n/a |
+| 2026-11-06 | TSK-059 | a03 | 0 | COMPLETE (menurut A01) | NA | n/a | n/a | n/a | n/a |
+| 2026-11-06 | TSK-060 | a13 | 0 | COMPLETE | NA | 0/0/0/0 | n/a | n/a | n/a |
+| 2026-11-06 | TSK-062 | a13 | 0 | COMPLETE | NA | 0/0/0/0 | n/a | n/a | n/a |
+| 2026-11-06 | TSK-061 | a03 | 0 | FAILED (ModuleNotFoundError lxml; tanpa retry) | NA | n/a | n/a | n/a | n/a |
+| 2026-11-06 | TSK-063 | a13 | 0 | COMPLETE | NA | 0/0/0/0 | n/a | n/a | n/a |
+| 2026-11-07 | TSK-064 | a13 | 0 | COMPLETE | NA | 0/0/0/0 | n/a | n/a | n/a |
 
 Catatan: token = subagent_tokens menurut harness, mungkin kumulatif per instance.
 
