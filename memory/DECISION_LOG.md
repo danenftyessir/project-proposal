@@ -1,10 +1,10 @@
 ---
 file: DECISION_LOG
-revision: 20
+revision: 23
 status: CURRENT
 updated: 2026-11-07
 updated_by: a13-memory-manager
-based_on_commit: ecf15cf
+based_on_commit: 126ad83
 ---
 
 # Decision Log
@@ -299,6 +299,7 @@ approval_evidence:
   answered_at: '2026-11-05'
   session_ref: Sesi Claude Code 2026-11-05, pesan tinjauan pengguna ke-2 (atas ORCHESTRATION_ARCHITECTURE.md v0.1)
   scope: Perbaikan ROOT tools/verify_claims.py ditunda; tidak ada commit atas berkas sensitif atau belum disetujui
+catatan_rujukan: '[Ditambahkan A13 2026-11-07; teks dan status D-16 di atas tidak diubah] D-35 dan Q-B1-am menyebut D-16 sebagai perbaikan skrip build lama; teks asli D-16 hanya menyebut tools/verify_claims.py. Pilihan A01 atas delegasi pengguna D-44 (build_docx.py dan build_with_toc.py tidak diperbaiki, tetap dilarang) merujuk D-16 hanya sebatas catatan ini. Perbedaan cakupan dilaporkan ke A01 sebagai konflik, tidak diselesaikan.'
 ```
 
 ## D-17
@@ -926,7 +927,8 @@ approval_evidence:
 id: D-41
 decision: 'Varian Formal diturunkan dari Editorial dengan menghapus teks tersorot dan penanda berkurung, tanpa teks pengganti. Tidak ada sintaks penanda baru di Markdown dan tidak ada dua sumber Markdown. Lingkup terbatas pada cara skrip membedakan Editorial dan Formal dari satu sumber'
 class: L3
-status: APPROVED
+status: SUPERSEDED by D-43
+superseded_scope: 'Sebagian: hanya bagian "tanpa teks pengganti" (penanda dihapus tanpa pengganti), digantikan D-43 (Formal memakai teks pengganti Y dari sintaks {{ed:X||cl:Y}} bila ditulis). Bagian lain tetap berlaku: Formal diturunkan dari Editorial, teks tersorot dan penanda berkurung tanpa pengganti dihapus, satu sumber Markdown. Teks keputusan asli di bawah tidak diubah. Rujukan: D-43, D-38'
 date: '2026-11-07'
 related: [D-38, D-40, D-35, Q-B1-aq, Q-B1-ak, Q-B1-ao, P2-02]
 basis: 'Jawaban pengguna atas pertanyaan Q-B1-aq (pembedaan Editorial dan Formal dari satu sumber Markdown)'
@@ -960,4 +962,256 @@ approval_evidence:
   answered_at: '2026-11-07'
   session_ref: 'Brief A01 memory_op R9 (pertanyaan Q-B1-ao), sesi 2026-11-07'
   scope: 'HANYA berkas templat dasar varian Lengkap = template/Template-Proposal-IF4091-Capstone-Individu-2026.docx; berkas "- Copy" di root tidak dirujuk skrip. Tidak mencakup nasib berkas "- Copy", isi komponen pelengkap, maupun persetujuan build'
+```
+
+## D-43
+
+```yaml
+id: D-43
+decision: 'Varian Formal memakai teks pengganti Y dari sintaks {{ed:X||cl:Y}} di Markdown bila ditulis penulis (Editorial menampilkan X, Formal menampilkan Y, mis. "dkk."), dan menghapus penanda berkurung serta teks tersorot yang tidak punya pengganti. Lingkup terbatas pada perlakuan Formal terhadap sintaks pengganti di sumber Markdown Bab II'
+class: L3
+status: APPROVED
+date: '2026-11-07'
+related: [D-41, D-38, D-40, Q-B1-aq, Q-B1-as, Q-B1-au, P2-02]
+basis: 'Sumber Markdown Bab II sudah memakai sintaks {{ed:X||cl:Y}} dan perilaku tools/build_modular.py yang ada memakai Y; D-41 mengasumsikan sintaks pengganti tidak ada (menurut brief A01)'
+alternatives_considered: ['Tetap D-41: hapus penanda saja dan abaikan Y', 'Tunda sampai hasil pemeriksaan a12']
+consequences: 'MENGUBAH keputusan APPROVED D-41 sebagian: D-41 ditandai SUPERSEDED by D-43 (sebagian, hanya bagian "tanpa teks pengganti"); teks D-41 tidak dihapus dan tidak diubah. Rujukan: D-41, D-38 (butir (c) D-38, isi penanda yang dibawa Editorial dan yang hilang dari Formal, tidak berubah selain yang dinyatakan di sini). Keputusan ini TIDAK menetapkan: cakupan sintaks di Bab I, III, IV (menurut brief A01 belum ada sintaks itu di bab-bab tersebut), dan tidak memberi persetujuan build apa pun; P2-02 tetap berlaku (skrip build lama tetap dilarang).'
+approval_evidence:
+  question: 'Sumber Markdown Bab II sudah memakai sintaks {{ed:X||cl:Y}}: Editorial menampilkan X dan Formal menampilkan teks pengganti Y yang ditulis penulis (mis. "dkk."). D-41 menetapkan Formal = Editorial tanpa sorotan, hapus penanda tanpa pengganti. Mana yang berlaku untuk Formal?'
+  options_offered: ['Pakai Y bila ada, hapus penanda bila tidak (Recommended)', 'Tetap D-41, hapus penanda saja dan abaikan Y', 'Tunda sampai hasil pemeriksaan a12']
+  user_answer: 'Pakai Y bila ada, hapus penanda bila tidak (Recommended)'
+  answered_at: '2026-11-07'
+  session_ref: 'Brief A01 memory_op R9 (perubahan D-41), sesi 2026-11-07'
+  scope: 'HANYA perlakuan Formal: pakai Y dari {{ed:X||cl:Y}} bila ada; hapus penanda berkurung dan teks tersorot tanpa pengganti. Tidak mencakup cakupan sintaks di Bab I/III/IV maupun persetujuan build'
+```
+
+## D-44
+
+```yaml
+id: D-44
+decision: 'Skrip tools/build_docx.py dan tools/build_with_toc.py tidak diperbaiki dan tetap dilarang (P2-02); tools/build_modular.py adalah satu-satunya jalur build; penghapusan kedua berkas dilakukan pengguna di luar sistem. Lingkup terbatas pada nasib dua skrip build lama (Q-B1-am)'
+class: L3
+status: APPROVED (lingkup terbatas; pilihan A01 atas delegasi pengguna, dapat dibatalkan pengguna kapan saja)
+date: '2026-11-07'
+related: [D-35, D-16, Q-B1-am, P2-02]
+basis: 'Pesan delegasi pengguna (lihat approval_evidence) dan pilihan A01; Q-B1-am dijawab'
+alternatives_considered: ['Memperbaiki build_docx.py dan build_with_toc.py (path Linux, outline Bab II lama)']
+consequences: 'Q-B1-am DIPUTUSKAN → D-44. Teks asli D-16 TIDAK diubah; D-16 hanya diberi catatan rujukan (lihat catatan_rujukan pada D-16). Ketidaksesuaian dicatat, tidak diselesaikan: teks D-16 mengenai tools/verify_claims.py, bukan skrip build lama. Keputusan ini bukan jawaban pengguna atas opsi spesifik: pengguna mendelegasikan dan tidak menyebut opsi. Tidak memberi persetujuan build apa pun; P2-02 tetap berlaku.'
+approval_evidence:
+  question: 'Tidak diajukan per butir. Pertanyaan terbuka yang dijawab (OPEN_QUESTIONS Q-B1-am): Bagaimana nasib D-16 (perbaikan skrip build lama untuk path /home/user/project-proposal dan outline Bab II lama II.1-II.8) setelah D-35 memusatkan build pada build_modular.py?'
+  options_offered: []
+  user_answer: '2-4. lakukan sesuai preferensi anda'
+  answered_at: '2026-11-07'
+  session_ref: 'Brief A01 memory_op R9; pesan delegasi pengguna sesi 2026-11-07. Konteks menurut A01: pengguna merujuk daftar yang menunggu mereka, butir 2 Q-B1-al, butir 3 Q-B1-am, butir 4 Q-B1-as..av; butir "5." (dua docx bab2) ditanggapi terpisah'
+  scope: 'Penafsiran A01 atas delegasi (pengguna tidak menyebut opsi spesifik): HANYA pilihan A01 untuk Q-B1-am, build_docx.py dan build_with_toc.py tidak diperbaiki dan tetap dilarang, build_modular.py satu-satunya jalur, penghapusan dilakukan pengguna di luar sistem. Q-B1-al TIDAK tercakup'
+```
+
+## D-45
+
+```yaml
+id: D-45
+decision: 'Hasil build Formal diperiksa a12 (kalimat dan entri daftar pustaka utuh, tidak ada penanda tersisa); a09 ikut memeriksa bila teks berubah. Lingkup terbatas pada siapa dan apa yang diperiksa pada Formal (Q-B1-as)'
+class: L3
+status: APPROVED (lingkup terbatas; pilihan A01 atas delegasi pengguna, dapat dibatalkan pengguna kapan saja)
+date: '2026-11-07'
+related: [D-41, D-43, Q-B1-as, Q-B1-aq]
+basis: 'Pesan delegasi pengguna (lihat approval_evidence) dan pilihan A01; Q-B1-as dijawab'
+alternatives_considered: []
+consequences: 'Q-B1-as DIPUTUSKAN → D-45. Pengguna tidak menyebut opsi spesifik. Tidak memberi persetujuan build apa pun; P2-02 tetap berlaku.'
+approval_evidence:
+  question: 'Tidak diajukan per butir. Pertanyaan terbuka yang dijawab (OPEN_QUESTIONS Q-B1-as): Apakah penghapusan penanda tanpa pengganti (D-41) dapat menyisakan kalimat tidak utuh atau entri daftar pustaka tidak lengkap di Formal (mis. entri Yang et al., Formal sekarang "dkk." vs Editorial penulis lengkap + penanda), dan siapa serta bagaimana memeriksanya?'
+  options_offered: []
+  user_answer: '2-4. lakukan sesuai preferensi anda'
+  answered_at: '2026-11-07'
+  session_ref: 'Brief A01 memory_op R9; pesan delegasi pengguna sesi 2026-11-07 (konteks menurut A01: butir 4 = Q-B1-as..av)'
+  scope: 'Penafsiran A01 atas delegasi: HANYA pilihan A01 untuk Q-B1-as, a12 memeriksa Formal hasil build (kalimat/entri pustaka utuh, tak ada penanda tersisa), a09 ikut bila teks berubah'
+```
+
+## D-46
+
+```yaml
+id: D-46
+decision: 'Placeholder templat di Formal (tanggal sampul, "<jika diperlukan>", lampiran contoh, teks panduan templat) dilaporkan a12 sebagai temuan ringan dan tidak memblokir; hanya varian Lengkap dinyatakan gagal bila placeholder tersisa (D-40). Lingkup terbatas pada perlakuan placeholder templat di Formal (Q-B1-at)'
+class: L3
+status: APPROVED (lingkup terbatas; pilihan A01 atas delegasi pengguna, dapat dibatalkan pengguna kapan saja)
+date: '2026-11-07'
+related: [D-38, D-40, D-41, Q-B1-at]
+basis: 'Pesan delegasi pengguna (lihat approval_evidence) dan pilihan A01; Q-B1-at dijawab'
+alternatives_considered: []
+consequences: 'Q-B1-at DIPUTUSKAN → D-46. Pengguna tidak menyebut opsi spesifik. Tidak memberi persetujuan build apa pun; P2-02 tetap berlaku.'
+approval_evidence:
+  question: 'Tidak diajukan per butir. Pertanyaan terbuka yang dijawab (OPEN_QUESTIONS Q-B1-at): Apakah placeholder templat yang ada di Formal (tanggal sampul "Bandung, <tanggal>", "<jika diperlukan>", "<diisi sesuai sumber yang dirujuk pada bab ini>", "Lampiran A. Contoh Judul Lampiran", teks panduan templat di Bab I dan III) termasuk "siap kumpul" menurut D-38 dan D-40?'
+  options_offered: []
+  user_answer: '2-4. lakukan sesuai preferensi anda'
+  answered_at: '2026-11-07'
+  session_ref: 'Brief A01 memory_op R9; pesan delegasi pengguna sesi 2026-11-07 (konteks menurut A01: butir 4 = Q-B1-as..av)'
+  scope: 'Penafsiran A01 atas delegasi: HANYA pilihan A01 untuk Q-B1-at, placeholder templat di Formal = temuan ringan a12 tanpa memblokir; Lengkap gagal bila placeholder tersisa'
+```
+
+## D-47
+
+```yaml
+id: D-47
+decision: 'Skrip menghapus teks tersorot dan catatan "Format sitasi sementara" secara eksplisit; a12 memeriksa tidak ada sorotan atau kata kunci itu di Formal. Lingkup terbatas pada deteksi catatan editorial tak berkurung (Q-B1-au)'
+class: L3
+status: APPROVED (lingkup terbatas; pilihan A01 atas delegasi pengguna, dapat dibatalkan pengguna kapan saja)
+date: '2026-11-07'
+related: [D-41, D-43, Q-B1-au, Q-B1-aq]
+basis: 'Pesan delegasi pengguna (lihat approval_evidence) dan pilihan A01; Q-B1-au dijawab'
+alternatives_considered: []
+consequences: 'Q-B1-au DIPUTUSKAN → D-47. Pengguna tidak menyebut opsi spesifik. Tidak memberi persetujuan build apa pun; P2-02 tetap berlaku.'
+approval_evidence:
+  question: 'Tidak diajukan per butir. Pertanyaan terbuka yang dijawab (OPEN_QUESTIONS Q-B1-au): Apa aturan deteksi catatan editorial tak berkurung seperti "Format sitasi sementara" agar ikut terhapus dari Formal (pencarian penanda berpola tidak menjaringnya)?'
+  options_offered: []
+  user_answer: '2-4. lakukan sesuai preferensi anda'
+  answered_at: '2026-11-07'
+  session_ref: 'Brief A01 memory_op R9; pesan delegasi pengguna sesi 2026-11-07 (konteks menurut A01: butir 4 = Q-B1-as..av)'
+  scope: 'Penafsiran A01 atas delegasi: HANYA pilihan A01 untuk Q-B1-au, penghapusan eksplisit teks tersorot dan catatan "Format sitasi sementara"; a12 memeriksa tak ada sorotan/kata kunci itu di Formal'
+```
+
+## D-48
+
+```yaml
+id: D-48
+decision: 'Berkas Formal yang ada di modular/ dibangun ulang bila skrip siap, dengan Approval Request P2-02 per eksekusi yang menyebut berkas modular/ yang ditimpa. Lingkup terbatas pada nasib Formal yang ada (Q-B1-av)'
+class: L3
+status: APPROVED (lingkup terbatas; pilihan A01 atas delegasi pengguna, dapat dibatalkan pengguna kapan saja)
+date: '2026-11-07'
+related: [D-41, D-43, Q-B1-av, Q-B1-aw, P2-02]
+basis: 'Pesan delegasi pengguna (lihat approval_evidence) dan pilihan A01; Q-B1-av dijawab'
+alternatives_considered: ['Dibiarkan']
+consequences: 'Q-B1-av DIPUTUSKAN → D-48. Skrip belum siap menurut pengamatan A01 (Q-B1-aw), sehingga pembangunan ulang belum dapat dilakukan. Pengguna tidak menyebut opsi spesifik. Tidak memberi persetujuan build apa pun; persetujuan P2-02 tetap per eksekusi.'
+approval_evidence:
+  question: 'Tidak diajukan per butir. Pertanyaan terbuka yang dijawab (OPEN_QUESTIONS Q-B1-av): Apakah berkas Formal yang ada sekarang di modular/ dibangun ulang dengan skrip (D-41) atau dibiarkan?'
+  options_offered: []
+  user_answer: '2-4. lakukan sesuai preferensi anda'
+  answered_at: '2026-11-07'
+  session_ref: 'Brief A01 memory_op R9; pesan delegasi pengguna sesi 2026-11-07 (konteks menurut A01: butir 4 = Q-B1-as..av)'
+  scope: 'Penafsiran A01 atas delegasi: HANYA pilihan A01 untuk Q-B1-av, Formal yang ada dibangun ulang bila skrip siap dengan Approval Request P2-02 per eksekusi'
+```
+
+## D-49
+
+```yaml
+id: D-49
+decision: 'Markdown bab1/Bab_I_Draft.md (DRAF 10) adalah sumber kebenaran Bab I untuk modular/. Docx/pdf sementara bab1/Bab1_Revisi1_IF4091.* (hasil migrasi LLM lain) tidak dipakai sebagai sumber; modular/ Bab I dibangun dari Markdown lewat skrip (setelah Q-B1-aw/al). Lingkup: hanya penentuan sumber Bab I; tidak mencakup isi naskah, penghapusan berkas sementara, atau Bab II'
+class: L3
+status: APPROVED
+date: '2026-11-07'
+related: [D-29, D-30, Q-B1-ax, Q-B1-aw]
+basis: 'Jawaban pengguna (approval_evidence) atas pertanyaan sumber Bab I (bagian dari Q-B1-ax); audit a12 TSK R5-migrasi-docx-vs-md (F-A12-0001..0004)'
+alternatives_considered: ['Docx sementara', 'Sebagian diubah pengguna sendiri di docx']
+consequences: 'Q-B1-ax: bagian sumber Bab I diputuskan; butir tetap TERBUKA (Bab II dan waktu pemindahan). Pengamatan a12 (bukan keputusan): sekitar 25-30 kalimat Bab I ditulis ulang di docx; atribusi "dokumen penyelarasan tim" dihapus atau diganti "informasi awal"; tanggal 29-30 Oktober hilang; paragraf diubah menjadi daftar bernomor; 38 penanda editorial (hitungan perlu diverifikasi) bocor sebagai teks biasa; Bab II docx setia pada Markdown (0 paragraf berbeda) tetapi 12 penanda editorial tercetak, plus backtick literal dan satu baris sampul tambahan; front matter docx memuat placeholder templat dan glosarium tak sesuai. Audit a12 itu PARTIAL (pembandingan dengan modular/, sitasi, sebagian docx-vs-pdf belum diperiksa). Bukti kerja: .scratch/a12/.'
+approval_evidence:
+  question: 'Untuk Bab I, versi mana yang otoritatif untuk dipindahkan ke modular/? Docx sementara menulis ulang puluhan kalimat dan menghapus atribusi "dokumen penyelarasan tim", sedangkan bab1/Bab_I_Draft.md (DRAF 10) mengikuti aturan atribusi D-29–D-30.'
+  options_offered: ['Bab_I_Draft.md', 'Docx sementara', 'Ada sebagian yang saya ubah sendiri di docx']
+  user_answer: 'Bab_I_Draft.md (Recommended)'
+  answered_at: '2026-11-07'
+  session_ref: 'Brief A01 memory_op R9, sesi 2026-11-07'
+  scope: 'Hanya penentuan sumber Bab I untuk modular/'
+```
+
+## D-50
+
+```yaml
+id: D-50
+decision: 'PDF varian Formal dan Lengkap dibuat di dalam tools/build_modular.py (skrip sudah memanggil soffice), tanpa izin Bash baru untuk a03 dan tanpa perubahan allowlist guard; satu persetujuan per eksekusi P2-02 mencakup DOCX dan PDF. Syarat yang diketahui: LibreOffice terpasang di mesin pengguna'
+class: L3
+status: APPROVED
+date: '2026-11-07'
+related: [D-39, Q-B1-al, Q-B1-aw, P2-02]
+basis: 'Jawaban pengguna atas bagian [PERLU KEPUTUSAN PENGGUNA] di draf patch a03'
+alternatives_considered: ['P-B perintah soffice terpisah untuk a03', 'P-C pengguna mengonversi sendiri']
+consequences: 'Melengkapi D-39. Menutup bagian jalur PDF dari Q-B1-al; Q-B1-al sendiri tetap TERBUKA.'
+approval_evidence:
+  question: 'Lewat jalur mana PDF untuk varian Formal dan Lengkap (D-39) dibuat?'
+  options_offered: ['P-A di dalam build_modular.py', 'P-B perintah soffice terpisah untuk a03', 'P-C pengguna mengonversi sendiri']
+  user_answer: 'P-A: di dalam build_modular.py (Recommended)'
+  answered_at: '2026-11-07'
+  session_ref: 'Brief A01 memory_op R9, sesi 2026-11-07'
+  scope: 'Hanya jalur pembuatan PDF Formal dan Lengkap'
+```
+
+## D-51
+
+```yaml
+id: D-51
+decision: 'Draf patch boleh memuat aturan ask untuk Edit(./tools/build_modular.py) di .claude/settings.json; pelaksana tetap pengguna/sesi biasa (D-37). Memperluas daftar berkas D-37 dengan satu berkas konfigurasi tersebut saja'
+class: L3
+status: APPROVED
+date: '2026-11-07'
+related: [D-36, D-37, Q-B1-al]
+basis: 'Jawaban pengguna atas pertanyaan perluasan daftar berkas D-37'
+alternatives_considered: ['Tidak, hanya berkas daftar D-37', 'Tidak, dan batalkan izin edit a03']
+consequences: 'Efektivitas prompt bergantung pada hasil uji T-14 (ask di auto mode). Tidak diputuskan: perubahan scripts/selftest.py (usulan a03 di luar daftar D-37; butir terbuka Q-B1-ay) dan cakupan audit a12 atas D-36 terhadap diff skrip (kartu A12 tidak memuat tools/ dalam akses bacanya; butir terbuka Q-B1-az). Pengamatan a03: DECISION_LOG hanya memuat satu entri D-41 dan revisinya lewat D-43 (D-41 SUPERSEDED sebagian), sehingga patch tidak bergantung pada D-41.'
+approval_evidence:
+  question: 'Apakah patch juga boleh menambah aturan ask untuk Edit(./tools/build_modular.py) di .claude/settings.json (berkas ini tidak ada di daftar D-37)? Tanpa aturan ini, guard hanya bisa menolak sehingga persetujuan per perubahan (D-36) tidak ditegakkan oleh sistem.'
+  options_offered: ['Ya, tambah aturan ask', 'Tidak, hanya berkas daftar D-37', 'Tidak, dan batalkan izin edit a03']
+  user_answer: 'Ya, tambah aturan ask (Recommended)'
+  answered_at: '2026-11-07'
+  session_ref: 'Brief A01 memory_op R9, sesi 2026-11-07'
+  scope: 'Hanya aturan ask Edit(./tools/build_modular.py) di .claude/settings.json'
+```
+
+## D-52
+
+```yaml
+id: D-52
+decision: 'scripts/selftest.py tidak diubah sekarang; cukup uji manual T-14 dan T-30 setelah patch diterapkan. Kasus uji tiruan dapat menyusul bila pengguna meminta. Lingkup terbatas pada Q-B1-ay'
+class: L3
+status: APPROVED (lingkup terbatas; pilihan A01 atas delegasi pengguna, dapat dibatalkan pengguna kapan saja)
+date: '2026-11-07'
+related: [D-37, D-51, Q-B1-ay, Q-B1-al]
+basis: 'Pesan delegasi pengguna (lihat approval_evidence) dan pilihan A01; Q-B1-ay dijawab'
+alternatives_considered: []
+consequences: 'Q-B1-ay DIPUTUSKAN → D-52. Pengguna tidak menyebut opsi spesifik. Tidak menerapkan patch Q-B1-al dan tidak menyetujui butir OPSIONAL di patch. Q-B1-al tetap TERBUKA.'
+approval_evidence:
+  question: 'Tidak diajukan per butir. Pertanyaan terbuka yang dijawab (OPEN_QUESTIONS Q-B1-ay): Apakah scripts/selftest.py boleh diubah sebagai bagian patch a03 (usulan a03, di luar daftar berkas D-37)?'
+  options_offered: []
+  user_answer: 'lakukan sesuai preferensi anda'
+  answered_at: '2026-11-07'
+  session_ref: 'Brief A01 memory_op R9, sesi 2026-11-07 (konteks menurut A01: A01 baru menyerahkan patch final .scratch/patch_Q-B1-al.md dan mendaftar butir terbuka; pengguna tidak menyebut opsi spesifik)'
+  scope: 'Penafsiran A01 atas delegasi: HANYA pilihan A01 untuk Q-B1-ay (selftest.py tidak diubah sekarang). BUKAN penerapan patch dan BUKAN persetujuan butir OPSIONAL di patch'
+```
+
+## D-53
+
+```yaml
+id: D-53
+decision: 'Audit a12 atas perubahan D-36 hanya mencakup berkas hasil build. Diff tools/build_modular.py ditinjau pengguna melalui prompt ask per edit (D-51). Akses baca a12 tidak diperluas ke tools/. Lingkup terbatas pada Q-B1-az'
+class: L3
+status: APPROVED (lingkup terbatas; pilihan A01 atas delegasi pengguna, dapat dibatalkan pengguna kapan saja)
+date: '2026-11-07'
+related: [D-36, D-51, Q-B1-az, Q-B1-al]
+basis: 'Pesan delegasi pengguna (lihat approval_evidence) dan pilihan A01; Q-B1-az dijawab'
+alternatives_considered: []
+consequences: 'Q-B1-az DIPUTUSKAN → D-53. Pengguna tidak menyebut opsi spesifik. Pengamatan A01 (bukan keputusan): tinjauan diff skrip bergantung pada prompt ask D-51 yang efektivitasnya diuji T-14. Q-B1-al tetap TERBUKA.'
+approval_evidence:
+  question: 'Tidak diajukan per butir. Pertanyaan terbuka yang dijawab (OPEN_QUESTIONS Q-B1-az): Apakah audit a12 atas perubahan D-36 mencakup diff tools/build_modular.py (kartu A12 tidak memuat tools/ dalam akses bacanya)?'
+  options_offered: []
+  user_answer: 'lakukan sesuai preferensi anda'
+  answered_at: '2026-11-07'
+  session_ref: 'Brief A01 memory_op R9, sesi 2026-11-07 (konteks menurut A01: patch final .scratch/patch_Q-B1-al.md diserahkan; pengguna tidak menyebut opsi spesifik)'
+  scope: 'Penafsiran A01 atas delegasi: HANYA pilihan A01 untuk Q-B1-az. BUKAN penerapan patch dan BUKAN persetujuan butir OPSIONAL di patch'
+```
+
+## D-54
+
+```yaml
+id: D-54
+decision: 'Kriteria audit PDF oleh a12 (D-39 butir c): a12 membandingkan teks dan jumlah halaman PDF terhadap DOCX dengan pdftotext dan pdfinfo (sudah di allowlist), tanpa izin baru. Lingkup terbatas pada kriteria audit PDF'
+class: L3
+status: APPROVED (lingkup terbatas; pilihan A01 atas delegasi pengguna, dapat dibatalkan pengguna kapan saja)
+date: '2026-11-07'
+related: [D-39, D-50, D-36, Q-B1-ap]
+basis: 'Pesan delegasi pengguna (lihat approval_evidence) dan pilihan A01; melengkapi D-39 yang menyisakan kriteria audit a12 untuk PDF'
+alternatives_considered: []
+consequences: 'Tidak ada butir OPEN_QUESTIONS terbuka khusus untuk hal ini (Q-B1-ap sudah DIPUTUSKAN D-39), sehingga dicatat langsung sebagai keputusan tanpa butir baru. Pengguna tidak menyebut opsi spesifik. Tidak ada perubahan allowlist.'
+approval_evidence:
+  question: 'Tidak diajukan per butir. Hal yang dijawab: kriteria audit a12 untuk PDF (sisa D-39 butir c, catatan pada OPEN_QUESTIONS Q-B1-ap).'
+  options_offered: []
+  user_answer: 'lakukan sesuai preferensi anda'
+  answered_at: '2026-11-07'
+  session_ref: 'Brief A01 memory_op R9, sesi 2026-11-07 (konteks menurut A01: patch final .scratch/patch_Q-B1-al.md diserahkan; pengguna tidak menyebut opsi spesifik)'
+  scope: 'Penafsiran A01 atas delegasi: HANYA pilihan A01 untuk kriteria audit PDF a12. BUKAN penerapan patch dan BUKAN persetujuan butir OPSIONAL di patch'
 ```

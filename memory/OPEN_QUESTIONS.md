@@ -1,10 +1,10 @@
 ---
 file: OPEN_QUESTIONS
-revision: 23
+revision: 26
 status: CURRENT
 updated: 2026-11-07
 updated_by: a13-memory-manager
-based_on_commit: ecf15cf
+based_on_commit: 126ad83
 ---
 
 # Open Questions
@@ -773,6 +773,8 @@ updated: 2026-11-07
 refs: [D-35, D-36, Q-B1-aj, Q-B1-an]
 note: D-36 menjadikan perubahan AGENT_SPECIFICATIONS, ORCHESTRATION, hook guard, dan check_agents konsekuensi wajib; pelaksanaan dan jalur pengeditnya belum diputuskan (Q-B1-an); tetap TERBUKA
 note_2: D-37 (2026-11-07) memutuskan pelaksana perubahan = pengguna atau sesi Claude Code biasa di luar agent. Butir ini tetap TERBUKA sampai perubahan benar-benar diterapkan dan check_agents lolos (belum terjadi saat dicatat).
+note_3: D-50 (2026-11-07) menetapkan jalur PDF Formal/Lengkap = di dalam tools/build_modular.py (tanpa izin Bash baru, tanpa perubahan allowlist guard). D-51 membolehkan draf patch memuat aturan ask Edit(./tools/build_modular.py) di .claude/settings.json. Butir tetap TERBUKA sampai perubahan diterapkan; lihat Q-B1-ay dan Q-B1-az.
+note_4: Progres 2026-11-07 (TSK-072) - patch final disusun a03 di .scratch/patch_Q-B1-al.md (32 perubahan: 25 SIAP DITERAPKAN, 7 OPSIONAL-BELUM DIKONFIRMASI) tetapi BELUM diterapkan pengguna. Butir OPSIONAL belum dikonfirmasi pengguna. Q-B1-ay DIPUTUSKAN D-52, Q-B1-az DIPUTUSKAN D-53, kriteria audit PDF a12 D-54 (rujuk D-39). Urutan penerapan usulan a03: guard, settings.json, write_scopes.json + AGENT_SPECIFICATIONS §4 serentak lalu check_agents, dokumen dan definisi agent, opsional, check_agents lagi, uji manual T-14/T-30, pencatatan a13. Saran A01 (bukan keputusan): terapkan 25 butir SIAP dulu, pertimbangkan tiga perubahan check_agents belakangan. Tetap TERBUKA.
 ```
 
 ```yaml
@@ -781,9 +783,10 @@ question: Bagaimana nasib D-16 (perbaikan skrip build lama untuk path /home/user
 affected: [tools/, D-16]
 class: L3
 pic: Pengguna
-status: TERBUKA
+status: DIPUTUSKAN → D-44
 updated: 2026-11-07
-refs: [D-35, D-16, P2-02]
+refs: [D-35, D-16, D-44, P2-02]
+note: D-44 (2026-11-07) - pilihan A01 atas delegasi pengguna ("2-4. lakukan sesuai preferensi anda"; pengguna tidak menyebut opsi), dapat dibatalkan pengguna kapan saja - build_docx.py dan build_with_toc.py tidak diperbaiki, tetap dilarang (P2-02); build_modular.py satu-satunya jalur; penghapusan kedua berkas oleh pengguna di luar sistem. Teks D-16 sebenarnya tentang tools/verify_claims.py (konflik cakupan dicatat, tidak diselesaikan).
 ```
 
 ```yaml
@@ -831,7 +834,8 @@ class: L3
 pic: Pengguna
 status: DIPUTUSKAN → D-41
 updated: 2026-11-07
-refs: [D-38, D-41, Q-B1-ak, Q-B1-as, Q-B1-at, Q-B1-au, Q-B1-av]
+refs: [D-38, D-41, D-43, Q-B1-ak, Q-B1-as, Q-B1-at, Q-B1-au, Q-B1-av]
+note_d43: D-43 (2026-11-07) mengubah sebagian D-41 - Formal memakai teks pengganti Y dari {{ed:X||cl:Y}} bila ditulis; penanda tanpa pengganti tetap dihapus.
 note: D-41 (2026-11-07) - Formal diturunkan dari Editorial dengan menghapus teks tersorot dan penanda berkurung tanpa pengganti; tanpa sintaks baru, satu sumber. Fakta a12 (TSK R5-Q-B1-aq, pengamatan): Editorial memuat 17 catatan tersorot kuning (Bab I:1, II:14 termasuk catatan sitasi, III:1, IV:1) = 3 DATA BELUM TERSEDIA + 9 SESUAIKAN DENGAN BAB I + 4 PERLU VERIFIKASI SUMBER + 1 catatan "Format sitasi sementara" (tak berkurung); Formal tanpa highlight dan tanpa penanda berpola; struktur identik; diff baris-per-baris belum dilakukan. Bukti kerja di .scratch/ed/ dan .scratch/render/.
 ```
 
@@ -853,10 +857,11 @@ question: Apakah penghapusan penanda tanpa pengganti (D-41) dapat menyisakan kal
 affected: [tools/build_modular.py, modular/]
 class: L3
 pic: Pengguna
-status: TERBUKA
+status: DIPUTUSKAN → D-45
 updated: 2026-11-07
-refs: [D-41, Q-B1-aq, Q-B1-ak]
-note: Usul A01 (belum disetujui): a12 memeriksa hasil Formal; a09 bila teks berubah. Entri bisa tidak lengkap karena penanda dihapus tanpa pengganti.
+refs: [D-41, D-43, D-45, Q-B1-aq, Q-B1-ak]
+note: Usul A01 sebelumnya: a12 memeriksa hasil Formal; a09 bila teks berubah. Entri bisa tidak lengkap karena penanda dihapus tanpa pengganti.
+note_2: D-45 (2026-11-07) - pilihan A01 atas delegasi pengguna (tanpa opsi spesifik; dapat dibatalkan): a12 memeriksa Formal hasil build (kalimat dan entri pustaka utuh, tak ada penanda tersisa); a09 ikut bila teks berubah. D-43 (Y dipakai bila ada) mengurangi kasus entri tidak lengkap seperti Yang et al.
 ```
 
 ```yaml
@@ -865,10 +870,11 @@ question: Apakah placeholder templat yang ada di Formal (tanggal sampul "Bandung
 affected: [tools/build_modular.py, modular/, template/]
 class: L3
 pic: Pengguna
-status: TERBUKA
+status: DIPUTUSKAN → D-46
 updated: 2026-11-07
-refs: [D-38, D-40, D-41, Q-B1-aq]
+refs: [D-38, D-40, D-41, D-46, Q-B1-aq]
 note: Fakta a12 (pengamatan): placeholder itu ada di KEDUA varian (Editorial dan Formal) yang ada sekarang.
+note_2: D-46 (2026-11-07) - pilihan A01 atas delegasi pengguna (tanpa opsi spesifik; dapat dibatalkan): placeholder templat di Formal dilaporkan a12 sebagai temuan ringan, tidak memblokir; hanya Lengkap gagal bila placeholder tersisa (D-40).
 ```
 
 ```yaml
@@ -877,10 +883,11 @@ question: Apa aturan deteksi catatan editorial tak berkurung seperti "Format sit
 affected: [tools/build_modular.py, modular/]
 class: L3
 pic: Pengguna
-status: TERBUKA
+status: DIPUTUSKAN → D-47
 updated: 2026-11-07
-refs: [D-41, Q-B1-aq]
+refs: [D-41, D-47, Q-B1-aq]
 note: Catatan sitasi itu tersorot kuning di Editorial; D-41 menyebut teks tersorot dan penanda berkurung dihapus, tetapi aturan deteksi untuk kasus tak berkurung belum ditetapkan.
+note_2: D-47 (2026-11-07) - pilihan A01 atas delegasi pengguna (tanpa opsi spesifik; dapat dibatalkan): skrip menghapus teks tersorot dan catatan "Format sitasi sementara" secara eksplisit; a12 memeriksa tak ada sorotan atau kata kunci itu di Formal.
 ```
 
 ```yaml
@@ -889,8 +896,59 @@ question: Apakah berkas Formal yang ada sekarang di modular/ dibangun ulang deng
 affected: [modular/, tools/build_modular.py]
 class: L3
 pic: Pengguna
+status: DIPUTUSKAN → D-48
+updated: 2026-11-07
+refs: [D-41, D-48, Q-B1-aq, Q-B1-aw, P2-02]
+note: Teks Formal hasil skrip akan berbeda dari Formal yang ada sekarang (konsekuensi D-41). Membangun ulang tetap memerlukan persetujuan operasional P2-02 per eksekusi.
+note_2: D-48 (2026-11-07) - pilihan A01 atas delegasi pengguna (tanpa opsi spesifik; dapat dibatalkan): Formal yang ada dibangun ulang bila skrip siap, dengan Approval Request P2-02 per eksekusi menyebut berkas modular/ yang ditimpa. Skrip belum siap (Q-B1-aw).
+```
+
+```yaml
+id: Q-B1-aw
+question: Skrip tools/build_modular.py perlu disesuaikan: (i) sumber MASTER, (ii) input Markdown Bab II DRAFT 6 (bab2/Bab_II_Revisi_Notulensi.md) dan Bab I (bab1/Bab_I_Draft.md), (iii) varian Lengkap dari template/, (iv) PDF untuk Formal dan Lengkap. Bagaimana dan oleh siapa?
+affected: [tools/build_modular.py, modular/, bab1/, bab2/]
+class: L3
+pic: Pengguna
 status: TERBUKA
 updated: 2026-11-07
-refs: [D-41, Q-B1-aq, P2-02]
-note: Teks Formal hasil skrip akan berbeda dari Formal yang ada sekarang (konsekuensi D-41). Membangun ulang tetap memerlukan persetujuan operasional P2-02 per eksekusi.
+refs: [D-35, D-36, D-37, D-39, D-40, D-42, D-43, Q-B1-al, Q-B1-ai, Q-B1-ax]
+note: Pengamatan A01 dari pembacaan tools/build_modular.py (bukan keputusan; belum diverifikasi A13): (i) skrip bergantung pada MASTER bab2/13523136-...-Draft-Bab2.docx yang tidak ada lagi di disk, jadi belum dapat dijalankan; (ii) skrip hanya membaca Markdown Bab II lama (bab2/Pembuka_Bab_II.md dan II.[0-9]_*.md; outline II.1-II.8), belum Bab_II_Revisi_Notulensi.md (DRAFT 6) dan belum Bab_I_Draft.md; (iii) modular/ Bab II karena itu masih berasal dari outline lama. Wewenang edit a03 (D-36) belum operasional sampai Q-B1-al diterapkan.
+note_2: Kemajuan 2026-11-07: D-49 menetapkan input Bab I = bab1/Bab_I_Draft.md; D-50 menetapkan PDF Formal/Lengkap dibuat di dalam skrip. Perlu mencakup: sumber MASTER yang hilang, input DRAFT 6 dan Bab I Markdown, varian Lengkap dari template/, PDF Formal/Lengkap. Tetap TERBUKA.
+```
+
+```yaml
+id: Q-B1-ax
+question: Apakah isi docx sementara di bab1/ dan bab2/ (hasil migrasi LLM lain) dipindahkan ke modular/, dan kapan?
+affected: [bab1/, bab2/, modular/]
+class: L3
+pic: Pengguna
+status: TERBUKA
+updated: 2026-11-07
+refs: [Q-B1-aw, D-48]
+note: Bergantung pada hasil audit a12 TSK R5 yang sedang berjalan dan pada Q-B1-aw. Pernyataan pengguna 2026-11-07 (verbatim, konteks dua docx bab2/ yang tidak ditemukan): "semua itu di modular/, yang bab1/ dan bab2/ itu baru sementaranya aja docx dan pdf nya". Artefak resmi ada di modular/; docx/pdf bab1/ dan bab2/ sementara hasil migrasi LLM lain.
+note_2: Kemajuan 2026-11-07: D-49 memutuskan sumber Bab I = bab1/Bab_I_Draft.md (DRAF 10). Belum diputuskan: pemindahan Bab II, waktu pemindahan, dan nasib berkas sementara. Tetap TERBUKA.
+```
+
+```yaml
+id: Q-B1-ay
+question: Apakah scripts/selftest.py boleh diubah sebagai bagian patch a03 (usulan a03, di luar daftar berkas D-37)?
+affected: [scripts/selftest.py]
+class: L3
+pic: Pengguna
+status: DIPUTUSKAN → D-52
+updated: 2026-11-07
+refs: [D-37, D-51, D-52, Q-B1-al]
+note: Disebut sebagai tidak diputuskan di D-51. D-52 (2026-11-07) - pilihan A01 atas delegasi pengguna ("lakukan sesuai preferensi anda"; tanpa opsi spesifik; dapat dibatalkan): selftest.py tidak diubah sekarang; uji manual T-14 dan T-30 setelah patch diterapkan.
+```
+
+```yaml
+id: Q-B1-az
+question: Apakah audit a12 atas perubahan D-36 mencakup diff tools/build_modular.py (kartu A12 tidak memuat tools/ dalam akses bacanya)?
+affected: [.claude/agents/, tools/build_modular.py]
+class: L3
+pic: Pengguna
+status: DIPUTUSKAN → D-53
+updated: 2026-11-07
+refs: [D-36, D-51, D-53, Q-B1-al]
+note: Disebut sebagai tidak diputuskan di D-51. D-53 (2026-11-07) - pilihan A01 atas delegasi pengguna ("lakukan sesuai preferensi anda"; tanpa opsi spesifik; dapat dibatalkan): a12 hanya mengaudit berkas hasil build; diff skrip ditinjau pengguna lewat prompt ask per edit (D-51); akses baca a12 tidak diperluas ke tools/.
 ```

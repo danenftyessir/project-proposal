@@ -1,10 +1,10 @@
 ---
 file: TASK_TRACKER
-revision: 34
+revision: 38
 status: CURRENT
 updated: 2026-11-07
 updated_by: a13-memory-manager
-based_on_commit: ecf15cf
+based_on_commit: 126ad83
 ---
 
 # Task Tracker
@@ -83,6 +83,10 @@ Tugas memakai ID `TSK-xxx` (berbeda dari ID uji teknis `T-xx`). Status: `TODO` Â
 | TSK-067 | memory_op A13: record_decision D-39 (PDF untuk varian Formal dan Lengkap) dan D-40 (varian Lengkap dari Markdown bab, pelengkap placeholder) + Q-B1-ap dan Q-B1-ar DIPUTUSKAN, Q-B1-ak progres | DONE | A13 | 0 | `memory/DECISION_LOG.md`, `memory/OPEN_QUESTIONS.md`, `memory/PROJECT_STATE.md`, `memory/CONTEXT_TRANSFER.md`, `memory/TASK_TRACKER.md` | Brief A01 (approval_evidence lengkap) | D-39 dan D-40 APPROVED L3 (lingkup terbatas). D-38 hanya diberi catatan rujukan. Sisa Q-B1-ak: Q-B1-ao dan Q-B1-aq terbuka. Cara konversi PDF, izin Bash a03, dan kriteria audit a12 untuk PDF tidak diputuskan. Tidak ada commit/push/staging; tools, docs, hook, dan naskah tidak diubah |
 | TSK-068 | memory_op A13: record_decision D-41 (Formal = Editorial tanpa sorotan, hapus penanda saja) + Q-B1-aq DIPUTUSKAN, Q-B1-as..av baru, Q-B1-ak progres | DONE | A13 | 0 | `memory/DECISION_LOG.md`, `memory/OPEN_QUESTIONS.md`, `memory/PROJECT_STATE.md`, `memory/CONTEXT_TRANSFER.md`, `memory/TASK_TRACKER.md` | Brief A01 (approval_evidence lengkap) | D-41 APPROVED L3 (lingkup terbatas). Dari butir pembuka Q-B1-ak hanya Q-B1-ao yang tersisa. Fakta a12 R5-Q-B1-aq dicatat sebagai pengamatan, bukan keputusan. Tidak ada commit/push/staging; tools, docs, hook, modular/, dan naskah tidak diubah |
 | TSK-069 | memory_op A13: record_decision D-42 (varian Lengkap merujuk template/, bukan "- Copy" di root) + Q-B1-ao DIPUTUSKAN, Q-B1-ak DIPUTUSKAN + daftar "Yang menunggu pengguna" | DONE | A13 | 0 | `memory/DECISION_LOG.md`, `memory/OPEN_QUESTIONS.md`, `memory/PROJECT_STATE.md`, `memory/CONTEXT_TRANSFER.md`, `memory/TASK_TRACKER.md` | Brief A01 (approval_evidence lengkap) | D-42 APPROVED L3 (lingkup terbatas: berkas templat dasar). Penunjukan awal "- Copy" digantikan sebatas penunjukan berkas; nasib berkas "- Copy" tidak diputuskan. Q-B1-as..av, Q-B1-al, Q-B1-am tidak diubah. Tidak ada commit/push/staging; tools, docs, hook, template/, dan naskah tidak diubah |
+| TSK-070 | memory_op A13: record_decision D-43 (Formal memakai teks pengganti Y dari sintaks ed/cl; D-41 SUPERSEDED sebagian) + D-44..D-48 (pilihan A01 atas delegasi pengguna untuk Q-B1-am, as, at, au, av) + Q-B1-aw, Q-B1-ax baru + Artifact Map | DONE | A13 | 0 | `memory/DECISION_LOG.md`, `memory/OPEN_QUESTIONS.md`, `memory/PROJECT_STATE.md`, `memory/CONTEXT_TRANSFER.md`, `memory/TASK_TRACKER.md` | Brief A01; D-43 dengan approval_evidence lengkap; D-44..D-48 berdasar delegasi "2-4. lakukan sesuai preferensi anda" tanpa opsi spesifik | D-43 APPROVED L3. D-44..D-48 dicatat APPROVED lingkup terbatas atas instruksi A01, ditandai pilihan A01 yang dapat dibatalkan pengguna; delegasi tanpa opsi spesifik tidak memenuhi bentuk bukti baku, dilaporkan ke A01. Q-B1-al TIDAK diputuskan (tetap TERBUKA). Artifact Map: dua entri docx bab2/ yang hilang dihapus dan docx/pdf sementara bab1/ bab2/ didaftarkan SEMENTARA/belum diverifikasi atas pernyataan pengguna; hash S1 lain tidak diperbarui. Tidak ada commit/push/staging; tools, modular/, dan naskah tidak diubah |
+| TSK-071 | memory_op A13: record_decision D-49 (sumber Bab I = Bab_I_Draft.md), D-50 (PDF Formal/Lengkap di dalam build_modular.py), D-51 (aturan ask Edit build_modular.py di settings.json) + Q-B1-ay, Q-B1-az baru + kemajuan Q-B1-al/aw/ax | DONE | A13 | 0 | `memory/DECISION_LOG.md`, `memory/OPEN_QUESTIONS.md`, `memory/PROJECT_STATE.md`, `memory/CONTEXT_TRANSFER.md`, `memory/TASK_TRACKER.md` | Brief A01 (approval_evidence verbatim lengkap) | D-49..D-51 APPROVED L3 (lingkup terbatas). Q-B1-al, aw, ax tetap TERBUKA. Pengamatan a12 R5 (PARTIAL) dan a03 dicatat sebagai pengamatan, bukan keputusan. Sesi sempat terhenti batas API, dilanjutkan tanpa duplikasi. Tidak ada commit/push/staging; tools, docs, hook, settings, naskah tidak diubah |
+| TSK-072 | memory_op A13: record_decision D-52 (selftest.py tidak diubah, Q-B1-ay), D-53 (cakupan audit a12 = berkas hasil build, Q-B1-az), D-54 (kriteria audit PDF a12: pdftotext/pdfinfo, rujuk D-39) + status patch Q-B1-al | DONE | A13 | 0 | `memory/DECISION_LOG.md`, `memory/OPEN_QUESTIONS.md`, `memory/PROJECT_STATE.md`, `memory/CONTEXT_TRANSFER.md`, `memory/TASK_TRACKER.md` | Brief A01; delegasi "lakukan sesuai preferensi anda" tanpa opsi spesifik | D-52..D-54 APPROVED lingkup terbatas (pilihan A01 atas delegasi; dapat dibatalkan). Patch .scratch/patch_Q-B1-al.md (32 perubahan: 25 SIAP, 7 OPSIONAL-BELUM DIKONFIRMASI) disusun a03 tetapi BELUM diterapkan; Q-B1-al tetap TERBUKA; butir OPSIONAL belum dikonfirmasi. Tidak ada commit/push/staging; tools, docs, hook, settings, scripts, naskah tidak diubah |
+| TSK-073 | apply_reconcile butir 1-2: koreksi HEAD ke 126ad83 (CONTEXT_TRANSFER, PROJECT_STATE) dan hash S1 (Bab_I_Draft DRAF 10 dicatat; sisa 9 artefak PENDING_VERIFICATION) | DONE | A13 | 0 | `memory/PROJECT_STATE.md`, `memory/CONTEXT_TRANSFER.md`, `memory/TASK_TRACKER.md` | Jawaban pengguna "Rekonsiliasi saja, tanpa commit (Recommended)" (2026-11-07; lingkup butir 1-2, bukan commit, bukan manifest RSIA) | Hash baru: `bab1/Bab_I_Draft.md` `e63d253b71cf` (dasar TSK-059). Tanpa dasar tugas: CLAUDE.md, source/INDEKS.md, tools/verify_claims.py, bab1/Bab1_Revisi1_IF4091.docx/.pdf, bab2/Bab_II_Migrasi.docx/.pdf, dua modul modular/ Bab II. Tidak ada commit/staging/push; manifest RSIA tidak dibuat; S7 tetap karena G3 tidak disetujui |
 
 Approval evidence TSK-061 (persetujuan operasional per eksekusi, P2-02):
 
@@ -197,6 +201,10 @@ Diisi A13 saat penutupan tugas dari Agent Report dan `.scratch/agent_runs.jsonl`
 | 2026-11-07 | TSK-067 | a13 | 0 | COMPLETE | NA | 0/0/0/0 | n/a | n/a | n/a |
 | 2026-11-07 | TSK-068 | a13 | 0 | COMPLETE | NA | 0/0/0/0 | n/a | n/a | n/a |
 | 2026-11-07 | TSK-069 | a13 | 0 | COMPLETE | NA | 0/0/0/0 | n/a | n/a | n/a |
+| 2026-11-07 | TSK-070 | a13 | 0 | COMPLETE | NA | 0/0/0/0 | n/a | n/a | n/a |
+| 2026-11-07 | TSK-071 | a13 | 0 | COMPLETE | NA | 0/0/0/0 | n/a | n/a | n/a |
+| 2026-11-07 | TSK-072 | a13 | 0 | COMPLETE | NA | 0/0/0/0 | n/a | n/a | n/a |
+| 2026-11-07 | TSK-073 | a13 | 1 | COMPLETE | NA | 0/0/0/0 | n/a | n/a | n/a |
 
 Catatan: token = subagent_tokens menurut harness, mungkin kumulatif per instance.
 
