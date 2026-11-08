@@ -1,10 +1,10 @@
 ---
 file: OPEN_QUESTIONS
-revision: 26
+revision: 32
 status: CURRENT
-updated: 2026-11-07
+updated: 2026-11-08
 updated_by: a13-memory-manager
-based_on_commit: 126ad83
+based_on_commit: c875468
 ---
 
 # Open Questions
@@ -257,8 +257,9 @@ affected: [Bab I, A11]
 class: L3
 pic: Pengguna
 status: TERBUKA
-updated: 2026-11-06
-refs: [D-19]
+updated: 2026-11-08
+refs: [D-19, F-A05-0034, F-A11-0016, F-A11-0018]
+note: Kemajuan 2026-11-08 (siklus 2 DRAF 13): jumlah episode per jenis perawatan tidak dapat dinilai; data agregat (`.scratch/rsia/agregat/`) tidak ada. Relevan untuk kelayakan stratum rawat jalan. Tetap TERBUKA.
 ```
 
 ```yaml
@@ -366,8 +367,9 @@ class: L3
 pic: Pengguna
 ask_to: Tim / RSIA mitra
 status: MENUNGGU ANGGOTA
-updated: 2026-11-06
-refs: [D-21, Q-TEAM, F-A07-0019]
+updated: 2026-11-08
+refs: [D-21, Q-TEAM, F-A07-0019, F-A04-0010, F-A04-0011]
+note: 'Pernyataan pengguna 2026-11-08 (BUKAN keputusan; premis, belum diverifikasi ke aturan atau RSIA). Pertanyaan a04 P1 (verbatim): "Pertanyaan a04 (P1 dari 3), diteruskan verbatim. Konteks (ringkas): I.4 paragraf 2 membatasi dokumen pada \"CPPT dan resume medis\"; paragraf 4 hanya memuat penanda #28 tanpa batas rawat jalan; I.1 paragraf 4 menyebut resume medis belum tentu ada pada setiap episode rawat jalan; Penyelarasan:279 memakai frasa \"atau padanannya\" yang tidak ada di I.4; I.2 menyatakan kedua pertanyaan berlaku pada rawat inap dan rawat jalan. Pertanyaan: Dalam kajian Anda, apakah episode rawat jalan yang tidak memiliki resume medis berada di luar kajian, ataukah dokumen padanannya dikaji sebagai pengganti resume medis? Jawaban \"belum dapat diputuskan sebelum tim atau RSIA menjawab butir 4\" juga sah." Opsi: Di luar kajian | Dokumen padanan dikaji | Belum dapat diputuskan. Jawaban teks bebas pengguna (verbatim, bukan salah satu opsi): "Rawat jalan juga semua harusnya ada resume medisnya karena jika tidak tidak bisa klaim bpjs". Tidak menetapkan batas operasional rawat jalan: penanda #28 tetap [MENUNGGU KEPUTUSAN]; Q-TEAM butir 4 dan butir ini tetap terbuka.'
 ```
 
 ```yaml
@@ -537,13 +539,13 @@ refs: [Q-A04-c]
 
 ```yaml
 id: Q-B1-t
-question: Bagaimana hasil rawat inap dan rawat jalan dilaporkan (terpisah atau gabungan), dan apakah pembanding berupa kondisi saat ini (tanpa sistem) dimasukkan? Sengaja tidak masuk penanda I.5; menunggu keputusan pengguna.
+question: Bagaimana hasil rawat inap dan rawat jalan dilaporkan (terpisah atau gabungan), dan apakah pembanding berupa kondisi saat ini (tanpa sistem) dimasukkan? Sengaja tidak masuk penanda I.5; menunggu keputusan pengguna. Bagian pelaporan (terpisah atau gabungan) DIPUTUSKAN → D-56 (terpisah, 2026-11-08). Bagian pembanding tidak dibahas D-56 (lihat D-22).
 affected: [Bab I]
 class: L3
 pic: Pengguna
-status: TERBUKA
-updated: 2026-11-06
-refs: [F-A05-0007, F-A05-0014, F-A10-0119]
+status: DIPUTUSKAN → D-56 (bagian pelaporan)
+updated: 2026-11-08
+refs: [F-A05-0007, F-A05-0014, F-A10-0119, D-56, D-22]
 ```
 
 ```yaml
@@ -606,7 +608,7 @@ pic: Pengguna
 ask_to: Tim
 status: TERBUKA
 updated: 2026-11-06
-refs: [F-A11-0012, F-A05-0017, F-A05-0020, D-29, D-33]
+refs: [F-A11-0012, F-A05-0017, F-A05-0020, D-29, D-33, F-A11-0015, Q-B1-bj]
 ```
 
 ```yaml
@@ -951,4 +953,140 @@ status: DIPUTUSKAN → D-53
 updated: 2026-11-07
 refs: [D-36, D-51, D-53, Q-B1-al]
 note: Disebut sebagai tidak diputuskan di D-51. D-53 (2026-11-07) - pilihan A01 atas delegasi pengguna ("lakukan sesuai preferensi anda"; tanpa opsi spesifik; dapat dibatalkan): a12 hanya mengaudit berkas hasil build; diff skrip ditinjau pengguna lewat prompt ask per edit (D-51); akses baca a12 tidak diperluas ke tools/.
+```
+
+## Butir baru dari revisi I.4 DRAF 11, QA siklus 0, dan pernyataan pengguna (TSK-075..077, 2026-11-08)
+
+```yaml
+id: Q-B1-ba
+question: Bagaimana konflik sumber tentang penguncian CPPT dan resume medis diselesaikan? Penyelarasan (baris 17, 84; Q-TEAM butir 5) dan naskah (I.1 p12, p14; I.4 p6 "kedua dokumen dikunci") mengandaikan keduanya terkunci, sedangkan klarifikasi RSIA yang disampaikan pengguna 2026-11-08 menyatakan CPPT tidak dapat diubah, resume medis masih dapat diubah (koreksi langsung jarang), dan melarang asumsi keduanya terkunci permanen.
+affected: [Bab I, I.1, I.4, Penyelarasan]
+class: L3
+pic: Pengguna
+ask_to: Tim / RSIA mitra
+status: MENUNGGU ANGGOTA
+updated: 2026-11-08
+refs: [D-55, D-56, D-57, D-21, D-24, D-27, F-A05-0024, F-A07-0051, F-A11-0004, Q-B1-ae, Q-TEAM butir 5, Q-B1-bb, Q-B1-bc]
+note: KONFLIK SUMBER, tidak diselesaikan A13. Status pernyataan pengguna 2026-11-08 (jawaban teks bebas atas AskUserQuestion "I.4 paragraf 6"; pengguna TIDAK memilih satu pun dari tiga opsi A01: kembalikan ke batas kesimpulan saja / pertahankan batas kajian dan putuskan / tunda dengan penanda): klarifikasi pihak RSIA yang disampaikan tidak langsung (sumber dan waktu tidak disebut; belum ada di dokumen Penyelarasan). BUKAN keputusan; tidak mengubah D-55, D-56, D-21; paragraf 6 I.4 tidak diputuskan; tidak boleh diatribusikan di naskah (D-24, D-27) tanpa keputusan baru. Pengguna sendiri meminta "jangan langsung mengubah keputusan atau memperluas ruang lingkup proposal".
+user_statement_verbatim: "Teman-teman, ada klarifikasi tambahan dari pihak RSIA terkait alur dokumentasi medis yang perlu kita perhatikan dalam penyelarasan proposal.Beberapa hal yang sudah dikonfirmasi:1. **CPPT tidak dapat diubah setelah dicatat.** Informasi ini sudah diklarifikasi sebelumnya, sehingga tidak perlu ditanyakan kembali.2. **Resume medis masih dapat diubah.** Namun, koreksi langsung terhadap resume relatif jarang dilakukan. Jika ditemukan ketidaksesuaian, pihak rumah sakit biasanya memberikan klarifikasi atau penjelasan mengenai dokumentasi tersebut.Implikasinya, kita perlu membedakan antara temuan audit yang membutuhkan klarifikasi dan temuan yang memang memerlukan koreksi. Tidak semua temuan harus otomatis dianggap sebagai kesalahan yang wajib diperbaiki.Untuk penyelarasan proposal, mohon perhatikan beberapa hal berikut:- Fokus penelitian tetap pada kesiapan dokumen sebelum klaim BPJS diajukan.- Audit perlu ditempatkan dalam alur penyusunan dan pemeriksaan resume medis sebelum pengajuan klaim.- Jangan menggunakan asumsi bahwa CPPT dan resume medis sama-sama terkunci secara permanen.- Informasi bahwa CPPT tidak dapat diubah, sedangkan resume medis masih dapat diubah, perlu tercermin secara tepat dalam uraian proses bisnis dan batasan penelitian.Masih ada beberapa hal yang perlu kita pastikan:1. Kapan resume medis pertama kali disusun dalam alur pelayanan?2. Pada tahap mana audit dilakukan?3. Bagaimana mekanisme tindak lanjut jika ditemukan ketidaksesuaian antara CPPT dan resume medis?4. Data historis apa yang tersedia untuk pengujian: resume versi pertama, versi akhir, atau riwayat perubahan?Explore juga C:\\Users\\HYPE R Series\\worktrees\\project-proposal-setup\\Penyelarasan Pemahaman Capstone.md karena itu dari client yang mungkin saja jawabannya terlampir disana.Mohon jangan langsung mengubah keputusan atau memperluas ruang lingkup proposal berdasarkan klarifikasi ini. Kita perlu menyelaraskan temuan tersebut dengan keputusan yang sudah disepakati dan mencatat hal-hal yang masih memerlukan konfirmasi."
+note_2: Pemeriksaan A01 (bukan A13) atas Penyelarasan terhadap konflik ini (dilaporkan A01; belum diverifikasi A13 ke berkas): baris 17 ("CPPT dan resume dikunci setelah layanan selesai"), baris 84 dan Q-TEAM butir 5 ("CPPT dan resume yang sudah terkunci") mengandaikan keduanya terkunci. Butir Q-TEAM 5 (prosedur membuka kembali CPPT dan resume terkunci) berstatus "Perlu ditanyakan". Kemajuan 2026-11-08 (siklus 1 DRAF 12, laporan A01/a05, belum diverifikasi A13 ke berkas): paragraf 6 sudah mengikuti D-57 dan memuat penanda #33 yang merujuk arti penguncian I.1 p14 (F-A07-0051 RESOLVED oleh a07), tetapi I.1 baris 75 dan 89 ("CPPT dan resume medis dikunci setelah pelayanan selesai"; premis kedua "sebelum CPPT dan resume medis dikunci") masih mengandaikan keduanya dikunci, bertentangan dengan arah klarifikasi RSIA; I.1 tidak diubah (menunggu keputusan). Status tetap MENUNGGU ANGGOTA. Konflik juga menyentuh F-A05-0024 (arti penguncian belum diketahui) dan F-A07-0051 (p6 belum dikaitkan dengan penanda arti penguncian di I.1 p14).
+```
+
+```yaml
+id: Q-B1-bb
+question: Bagaimana jawaban atas empat pertanyaan pengguna 2026-11-08 diperoleh? (1) Kapan resume medis pertama kali disusun dalam alur pelayanan? (2) Pada tahap mana audit dilakukan? (3) Bagaimana mekanisme tindak lanjut bila ditemukan ketidaksesuaian CPPT-resume? (4) Data historis apa yang tersedia untuk pengujian (resume versi pertama, versi akhir, atau riwayat perubahan)?
+affected: [Bab I, I.1, I.4, I.5]
+class: L3
+pic: Pengguna
+ask_to: Tim / RSIA mitra
+status: MENUNGGU ANGGOTA
+updated: 2026-11-08
+refs: [Q-B1-ba, Q-B1-ae, F-A11-0004, F-A07-0050, D-55, Q-TEAM butir 5]
+note: Satu butir untuk empat pertanyaan (bukan empat butir), karena jawabannya bersumber sama (tim/RSIA) dan saling bergantung. Hasil pemeriksaan A01 atas Penyelarasan (dibaca A01 2026-11-08; belum diverifikasi A13), hanya fakta teks: (1) TIDAK terjawab; hanya baris 17 (wawancara Direktur RSIA, September 2026) "resume medis disusun ulang secara manual pada akhir masa rawat" dan baris 280 "resume baru bermakna setelah resume ada". (2) TIDAK terjawab untuk RSIA; baris 17 menyebut pemeriksaan kesiapan dokumen masih manual; yang ada hanya jadwal pemeriksaan SISTEM (baris 56, 280). (3) TIDAK terjawab untuk RSIA; baris 21, 130, 142 hanya alur sistem; Q-TEAM butir 5 "Perlu ditanyakan". (4) TIDAK terjawab; baris 61, 290, 297 hanya "data terdeidentifikasi, izin diperoleh, jumlah kasusnya mencukupi, dibagi per pasien"; versi pertama/akhir/riwayat perubahan tidak disebut. Pertanyaan 4 beririsan dengan Q-B1-ae (versi dokumen pada data uji).
+```
+
+```yaml
+id: Q-B1-bc
+question: Bagaimana rumusan I.4 paragraf 6 diputuskan (kembali ke batas kesimpulan saja, pertahankan batas kajian, atau tunda dengan penanda)? Rumusan DRAF 11 ("batas kajian"; dokumen terkunci "tidak termasuk kajian") melampaui lingkup D-55 (hanya batas kesimpulan).
+affected: [Bab I, I.4 p6, I.5 p2]
+class: L3
+pic: Pengguna
+ask_to: Tim / RSIA mitra
+status: DIPUTUSKAN → D-57
+updated: 2026-11-08
+refs: [D-57, D-55, F-A07-0050, F-A05-0023, F-A05-0024, F-A07-0051, F-A04-0012, Q-B1-ba, Q-B1-ae]
+note: Rumusan p6 adalah akibat brief A01 pada R1, bukan keputusan pengguna; tetap dalam DRAF 11 sampai ada keputusan. Pengguna 2026-11-08 menjawab AskUserQuestion "I.4 paragraf 6" dengan teks bebas, tidak memilih opsi (lihat Q-B1-ba). Tidak ada keputusan baru dicatat pada saat itu.
+note_2: DIPUTUSKAN → D-57 (2026-11-08, pilihan "Batas kesimpulan saja (Rekomendasi)"), hanya untuk rumusan paragraf 6. Arti penguncian (Q-B1-ba), data uji (F-A11-0004, Q-B1-ae), dan Q-B1-bd tetap terbuka. F-A07-0050, F-A05-0023, F-A05-0024 tetap OPEN sampai auditor penemu menyatakan lain.
+```
+
+```yaml
+id: Q-B1-bd
+question: Bagaimana I.2 (aturan jawaban p6-p7), I.3, I.5, dan ringkasan batas I.2 p8 diselaraskan dengan D-56 (pelaporan rawat inap dan rawat jalan terpisah) dan D-55, termasuk syarat D-29/ambang per jenis perawatan?
+affected: [Bab I, I.2, I.3, I.5]
+class: L3
+pic: Pengguna
+ask_to: Tim / RSIA mitra
+status: DIPUTUSKAN → D-58 (hanya bentuk jawaban)
+updated: 2026-11-08
+refs: [D-58, D-56, D-55, D-29, D-21, F-A07-0049, F-A07-0053, F-A05-0025, F-A05-0026, F-A05-0027, F-A05-0028, F-A05-0029, F-A05-0032, F-A04-0013]
+note_2: Diperluas 2026-11-08 (siklus 1 DRAF 12): butir turunan F-A05-0032 (cakupan pertanyaan I.2 terikat batas kajian vs batas kesimpulan D-57/D-55 yang lebih sempit; lokasi I.4 p6, I.2 p8, I.5 p2). Status tetap terbuka.
+note: Auditor DRAF 11 siklus 0 melaporkan aturan jawaban I.2/I.3 masih tunggal sedangkan I.4 p7 sudah memisahkan kesimpulan per jenis perawatan; syarat D-29 per jenis perawatan belum diatur. F-A05-0026 bagian (b) bergantung pada kutipan Penyelarasan:279 yang a05 ambil dari konteks, belum diverifikasi a05. Belum ada keputusan; naskah I.2, I.3, I.5 tidak diubah pada R1.
+```
+
+```yaml
+id: Q-B1-be
+question: Apakah usulan a03 atas F-A04-0010 (batas dokumen "atau padanannya" pada I.4 p2 dan p4) dan F-A04-0013 (batas jenis ketidaksesuaian dan ketergantungan pada label tenaga ahli) diterapkan?
+affected: [Bab I, I.4]
+class: L3
+pic: Pengguna
+ask_to: Tim / RSIA mitra
+status: MENUNGGU ANGGOTA
+updated: 2026-11-08
+refs: [F-A04-0010, F-A04-0013, F-A07-0052, F-A05-0027, Q-B1-f, Q-TEAM butir 1, Q-TEAM butir 4]
+note: Usulan a03 belum diterapkan; menunggu keputusan. Terkait batas rawat jalan (Q-B1-f) dan daftar jenis ketidaksesuaian (Q-TEAM butir 1).
+```
+
+```yaml
+id: Q-B1-bf
+question: Verifikasi halaman Permenkes 26/2021 hlm. 48-54 yang dirujuk I.4 paragraf 3: siapa memeriksa (usul: a08, tugas baru)?
+affected: [Bab I, I.4 p3, source/01_Regulasi]
+class: L3
+pic: Pengguna
+ask_to: Tim / RSIA mitra
+status: MENUNGGU ANGGOTA
+updated: 2026-11-08
+refs: [F-A04-0015, F-A02-0002]
+note: Belum diverifikasi siapa pun: a04 (F-A04-0015, INFO), a05, dan a07 juga tidak memeriksa. Usul A01: tugas a08 (sumber PDF resmi tanpa lapisan teks, lihat F-A02-0002). Butir verifikasi, bukan keputusan akademik.
+```
+
+```yaml
+id: Q-B1-bg
+question: Berapa ambang per jenis perawatan (rawat inap, rawat jalan), apa kondisi keabsahan jawaban per stratum (mis. stratum kosong atau kecil), dan berapa selisih minimum pada kriteria D-29, setelah D-58?
+affected: [Bab I, I.2, I.3, I.5]
+class: L3
+pic: Pengguna
+ask_to: Tim / RSIA mitra
+status: MENUNGGU ANGGOTA
+updated: 2026-11-08
+refs: [D-58, D-29, D-56, Q-TEAM butir 8, Q-B1-y, Q-B1-ad, Q-B1-j, F-A05-0026, F-A11-0015, F-A05-0034, F-A11-0016, F-A11-0017, Q-A04-c, Q-B1-bj]
+note: Tidak diputuskan D-58. Menurut catatan A01, membutuhkan Approval Request lanjutan dan pembahasan tim. Butir turunan dari Q-B1-bd.
+```
+
+```yaml
+id: Q-B1-bh
+question: Apakah tim dan pembimbing menyetujui bahwa tiap pertanyaan penelitian menghasilkan dua jawaban terpisah (rawat inap dan rawat jalan), padahal rumusan 1 di Penyelarasan:35 memuat satu jawaban ya/tidak per rumusan capstone?
+affected: [Bab I, I.2, I.3, Penyelarasan]
+class: L3
+pic: Pengguna
+ask_to: Tim / Pembimbing
+status: MENUNGGU ANGGOTA
+updated: 2026-11-08
+refs: [D-58, D-56, D-22, F-A06-0001, Q-B1-k, F-A05-0037, F-A07-0054]
+note: D-58 mengubah arti jawaban rumusan capstone, sehingga perlu pembahasan dengan tim/pembimbing (catatan A01). Bukan keputusan; D-58 berlaku sebagai keputusan pengguna untuk proposal individu ini sampai ada hasil pembahasan.
+```
+
+```yaml
+id: Q-B1-bi
+question: Bagaimana cakupan pertanyaan I.2 (seluruh masa prapengajuan) diselaraskan dengan batas kesimpulan I.4 (sebelum penguncian) menurut D-57 dan D-55 (F-A05-0032)?
+affected: [Bab I, I.2 p8, I.4 p6, I.5 p2]
+class: L3
+pic: Pengguna
+ask_to: Tim / RSIA mitra
+status: MENUNGGU ANGGOTA
+updated: 2026-11-08
+refs: [F-A05-0032, F-A05-0028, D-57, D-55, D-58, Q-B1-bd, Q-B1-ba]
+note: TIDAK diputuskan D-58; butir turunan dari Q-B1-bd. F-A05-0032 tetap OPEN (diturunkan a05 ke LOW pada siklus 2; DRAF 13 menandai penanda Q-B1-bi di naskah).
+```
+
+```yaml
+id: Q-B1-bj
+question: Bagaimana syarat D-29 diberlakukan untuk rawat jalan bila rawat jalan hanya diperiksa dengan satu aturan (Penyelarasan:279), sehingga syarat itu bisa sudah pasti "tidak"? Opsi a11 (F-A11-0015) adalah (a) D-29 tetap dan kepastian "tidak" dinyatakan; (b) AI/NLP mencakup jenis rawat jalan; (c) hanya syarat pertama untuk rawat jalan (menantang D-29/D-58); (d) pertanyaan pertama rawat jalan dinyatakan tidak dapat diuji (menantang D-58).
+affected: [Bab I, I.2, I.3, I.5]
+class: L3
+pic: Pengguna
+ask_to: Tim / Pembimbing
+status: TERBUKA
+updated: 2026-11-08
+refs: [F-A11-0015, F-A05-0026, D-29, D-58, D-56, D-21, Q-B1-bg, Q-B1-y]
+note: Butir baru dari QA siklus 2 DRAF 13 (TSK-082). Opsi a-d adalah usulan a11, bukan opsi yang ditawarkan ke pengguna; bukan keputusan. Siklus otomatis D-06 habis, sehingga tidak ada revisi otomatis atas butir ini.
 ```

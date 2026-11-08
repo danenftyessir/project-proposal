@@ -1,10 +1,10 @@
 ---
 file: DECISION_LOG
-revision: 23
+revision: 26
 status: CURRENT
-updated: 2026-11-07
+updated: 2026-11-08
 updated_by: a13-memory-manager
-based_on_commit: 126ad83
+based_on_commit: c875468
 ---
 
 # Decision Log
@@ -1214,4 +1214,88 @@ approval_evidence:
   answered_at: '2026-11-07'
   session_ref: 'Brief A01 memory_op R9, sesi 2026-11-07 (konteks menurut A01: patch final .scratch/patch_Q-B1-al.md diserahkan; pengguna tidak menyebut opsi spesifik)'
   scope: 'Penafsiran A01 atas delegasi: HANYA pilihan A01 untuk kriteria audit PDF a12. BUKAN penerapan patch dan BUKAN persetujuan butir OPSIONAL di patch'
+```
+
+## D-55
+
+```yaml
+id: D-55
+decision: 'Batas kesimpulan penelitian pada I.4 (paragraf 6) = tahap dokumen SEBELUM penguncian CPPT dan resume medis. Lingkup terbatas pada tahap dokumen sebagai batas kesimpulan di I.4'
+class: L3
+status: APPROVED (lingkup terbatas)
+date: '2026-11-08'
+related: [D-30, D-25, D-56, Q-B1-f, F-A04-0012, F-A11-0004]
+basis: 'Jawaban pengguna atas pertanyaan a04 P2 (dari 3), diteruskan A01 verbatim'
+alternatives_considered: ['Sesudah penguncian', 'Keduanya']
+consequences: 'Menurut A01 (bukan keputusan tambahan): data uji harus berisi dokumen pada tahap sebelum penguncian; F-A11-0004 di I.5 tetap terbuka; I.4 paragraf 6 perlu diselaraskan (belum dilakukan, naskah tidak diubah A13). Tidak memutuskan versi dokumen pada data uji (F-A11-0004) maupun penyelesaian premis kedua I.1 paragraf 14. F-A04-0012 IN_PROGRESS.'
+approval_evidence:
+  question: 'Pertanyaan a04 (P2 dari 3), diteruskan verbatim. Konteks (ringkas): I.4 paragraf 6 menyatakan rentang yang dikaji "mencakup masa sebelum dan sesudah CPPT dan resume medis dikunci"; I.1 paragraf 14 (premis kedua) menyatakan ketidaksesuaian perlu diperiksa sebelum dokumen dikunci; I.5 masih memuat penanda tentang versi dan tahap dokumen pada data uji (F-A11-0004). Bila data uji hanya berisi dokumen versi akhir, hasilnya tidak dapat menjadi dasar kesimpulan tentang deteksi sebelum penguncian. Pertanyaan: Tahap dokumen mana yang Anda maksud sebagai batas kesimpulan penelitian: sebelum penguncian, sesudah penguncian, atau keduanya?'
+  options_offered: ['Sebelum penguncian', 'Sesudah penguncian', 'Keduanya']
+  user_answer: 'Sebelum penguncian'
+  answered_at: '2026-11-08'
+  session_ref: 'sesi /sesi-mulai 2026-11-08, AskUserQuestion P2 penguncian (a04, F-A04-0012)'
+  scope: 'Hanya tahap dokumen sebagai batas kesimpulan di I.4; tidak memutuskan versi dokumen pada data uji (F-A11-0004) maupun penyelesaian premis kedua I.1 paragraf 14'
+```
+
+## D-56
+
+```yaml
+id: D-56
+decision: 'Kesimpulan atas kedua pertanyaan penelitian dinyatakan TERPISAH untuk rawat inap dan rawat jalan. Lingkup terbatas pada cara pelaporan kesimpulan'
+class: L3
+status: APPROVED (lingkup terbatas)
+date: '2026-11-08'
+related: [D-21, D-22, D-29, D-55, Q-B1-t, Q-B1-f, F-A04-0013]
+basis: 'Jawaban pengguna atas pertanyaan a04 P3 (dari 3), diteruskan A01 verbatim'
+alternatives_considered: ['Gabungan', 'Belum diputuskan']
+consequences: 'Q-B1-t bagian pelaporan (terpisah atau gabungan) DIPUTUSKAN → D-56. Catatan (bukan keputusan): D-29 per jenis perawatan berimplikasi pada I.2, I.3, dan I.5; belum diperiksa. Tidak memutuskan perlu tidaknya pembanding kondisi saat ini (sudah D-22), angka ambang, atau mekanisme kombinasi. Naskah tidak diubah A13.'
+approval_evidence:
+  question: 'Pertanyaan a04 (P3 dari 3), diteruskan verbatim. Konteks (ringkas): I.4 paragraf 7 menyatakan kesimpulan berlaku untuk "kasus kebidanan dan anak di satu RSIA mitra" tanpa membedakan rawat inap dan rawat jalan; paragraf 4 menyebut cakupan rawat jalan terbatas; menurut Penyelarasan:279 rawat jalan cukup diperiksa dengan satu aturan; Q-B1-t belum dijawab. Bila cakupan jenis ketidaksesuaian rawat jalan jauh lebih sempit, presisi dan recall gabungan dapat menutupi perbedaan antarperawatan. Pertanyaan: Apakah kesimpulan atas kedua pertanyaan dinyatakan terpisah untuk rawat inap dan rawat jalan, atau gabungan?'
+  options_offered: ['Terpisah', 'Gabungan', 'Belum diputuskan']
+  user_answer: 'Terpisah'
+  answered_at: '2026-11-08'
+  session_ref: 'sesi /sesi-mulai 2026-11-08, AskUserQuestion P3 pelaporan (a04, F-A04-0013 terkait)'
+  scope: 'Hanya cara pelaporan kesimpulan (terpisah per jenis perawatan). Tidak memutuskan perlu tidaknya pembanding kondisi saat ini (sudah D-22), angka ambang, atau mekanisme kombinasi'
+```
+
+## D-57
+
+```yaml
+id: D-57
+decision: 'I.4 paragraf 6 dirumuskan sebagai batas KESIMPULAN saja sesuai D-55 (kesimpulan berlaku bagi dokumen pada tahap sebelum penguncian). Pengecualian dokumen terkunci dari "kajian" dan pengandaian bahwa CPPT dan resume sama-sama terkunci dihapus dari paragraf 6. Data uji tetap terbuka (F-A11-0004)'
+class: L3
+status: APPROVED (lingkup terbatas)
+date: '2026-11-08'
+related: [D-55, D-56, D-24, D-27, Q-B1-bc, Q-B1-ba, Q-B1-ae, F-A07-0050, F-A05-0023, F-A05-0024, F-A11-0004]
+basis: 'Jawaban pengguna atas AskUserQuestion I.4 paragraf 6 (kedua), diteruskan A01'
+alternatives_considered: ['Pertahankan batas kajian', 'Tunda dengan penanda keputusan']
+consequences: 'Menjelaskan dan menegaskan D-55 (tidak membatalkannya). Catatan A01 (bukan keputusan tambahan): F-A07-0050 dan F-A05-0023/0024 sebagian tertangani oleh pembatasan teks; tetap OPEN sampai auditor penemu menyatakan lain. Q-B1-bc DIPUTUSKAN → D-57 hanya untuk rumusan paragraf 6. Arti penguncian (Q-B1-ba), data uji (F-A11-0004, Q-B1-ae), dan penyelarasan I.2/I.3/I.5 dengan D-56 (Q-B1-bd) tetap terbuka. Naskah belum diubah A13.'
+approval_evidence:
+  question: 'a13 sudah mencatat semuanya (Q-B1-ba..bf), dan klarifikasi RSIA dari Anda dicatat sebagai pernyataan, bukan keputusan. Satu keputusan tersisa untuk I.4 paragraf 6 (F-A07-0050, F-A05-0023, F-A05-0024). Konteks: D-55 hanya memutuskan batas KESIMPULAN pada tahap sebelum penguncian. DRAF 11 menulis lebih jauh ("kajian terbatas pada tahap sebelum ... dikunci"; dokumen terkunci "tidak termasuk kajian") dan menyebut keduanya dikunci, sedangkan klarifikasi RSIA menyatakan CPPT tidak dapat diubah tetapi resume masih dapat diubah, dan melarang asumsi keduanya terkunci permanen. Klarifikasi itu belum ada di Penyelarasan, jadi tidak boleh dikutip di naskah (D-24, D-27). Anda juga meminta agar keputusan dan ruang lingkup tidak diperluas. Bagaimana paragraf 6 dirumuskan?'
+  options_offered: ['Batas kesimpulan saja (Rekomendasi)', 'Pertahankan batas kajian', 'Tunda dengan penanda keputusan']
+  user_answer: 'Batas kesimpulan saja (Rekomendasi)'
+  answered_at: '2026-11-08'
+  session_ref: 'sesi /sesi-mulai 2026-11-08, AskUserQuestion I.4 paragraf 6 (kedua)'
+  scope: 'Hanya rumusan I.4 paragraf 6 sebagai batas kesimpulan (tidak memutuskan versi dokumen pada data uji F-A11-0004, arti penguncian, atau penyelarasan I.2/I.3/I.5 dengan D-56)'
+```
+
+## D-58
+
+```yaml
+id: D-58
+decision: 'Aturan jawaban untuk D-56: tiap pertanyaan penelitian (I.2) dijawab SENDIRI untuk rawat inap dan untuk rawat jalan, tanpa aturan penggabungan; kriteria D-29 serta ambang berlaku per jenis perawatan. I.2, I.3, dan I.5 diselaraskan dengan rumusan ini. Tidak memutuskan angka ambang, kondisi keabsahan jawaban per stratum, atau selisih minimum'
+class: L3
+status: APPROVED (lingkup terbatas)
+date: '2026-11-08'
+related: [D-56, D-29, D-55, D-57, D-21, Q-B1-bd, Q-B1-bg, Q-B1-bh, Q-B1-bi, F-A07-0049, F-A05-0025, F-A05-0032, Q-TEAM butir 8, Q-B1-y, Q-B1-ad]
+basis: 'Jawaban pengguna atas AskUserQuestion Aturan D-56, diteruskan A01'
+alternatives_considered: ['Tandai saja, belum selaraskan (Rekomendasi)', 'Jawaban terpisah plus keseluruhan']
+consequences: 'Menindaklanjuti D-56. Catatan A01 (bukan keputusan tambahan): opsi yang dipilih memuat catatan bahwa ambang dan kondisi keabsahan per stratum membutuhkan Approval Request lanjutan dan pembahasan tim (Q-TEAM butir 8, Q-B1-y, Q-B1-ad). F-A05-0032 (cakupan pertanyaan I.2 vs batas kesimpulan I.4) TIDAK diputuskan oleh D-58 dan tetap OPEN; F-A07-0049 dan F-A05-0025 tetap OPEN sampai auditor penemu menyatakan lain. Q-B1-bd DIPUTUSKAN → D-58 hanya untuk bentuk jawaban. Perlu pembahasan dengan tim karena mengubah arti jawaban rumusan capstone (Penyelarasan:35, satu jawaban ya/tidak per rumusan): Q-B1-bh. Naskah belum diubah A13.'
+approval_evidence:
+  question: 'QA siklus 1 untuk I.4 selesai. Paragraf 6 sudah mengikuti D-57. Sisa yang menentukan adalah D-56 (kesimpulan terpisah rawat inap dan rawat jalan): paragraf 7 I.4 sudah menyatakannya, tetapi aturan jawaban "tidak" di I.2 (paragraf 6 dan 7) dan ukuran di I.3 masih satu jawaban ya/tidak per pertanyaan (F-A07-0049, F-A05-0025). Akibatnya jawaban tidak terdefinisi bila rawat inap "ya" dan rawat jalan "tidak". a05 juga mencatat (F-A05-0032) bahwa cakupan pertanyaan I.2 (seluruh masa prapengajuan) kini lebih luas daripada batas kesimpulan I.4 (sebelum penguncian). Ini menyentuh I.2, I.3, dan I.5, di luar I.4 yang Anda minta ditinjau, dan memakai sisa siklus otomatis (maksimal 2; siklus 1 sudah terpakai). Bagaimana Anda ingin menangani aturan jawaban untuk D-56?'
+  options_offered: ['Tandai saja, belum selaraskan (Rekomendasi)', 'Dua jawaban terpisah', 'Jawaban terpisah plus keseluruhan']
+  user_answer: 'Dua jawaban terpisah'
+  answered_at: '2026-11-08'
+  session_ref: 'sesi /sesi-mulai 2026-11-08, AskUserQuestion Aturan D-56'
+  scope: 'Hanya bentuk jawaban per pertanyaan (dua jawaban terpisah per jenis perawatan, tanpa penggabungan) dan penyelarasan I.2, I.3, I.5 dengan bentuk itu'
 ```

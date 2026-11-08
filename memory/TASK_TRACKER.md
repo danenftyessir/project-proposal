@@ -1,10 +1,10 @@
 ---
 file: TASK_TRACKER
-revision: 38
+revision: 42
 status: CURRENT
-updated: 2026-11-07
+updated: 2026-11-08
 updated_by: a13-memory-manager
-based_on_commit: 126ad83
+based_on_commit: c875468
 ---
 
 # Task Tracker
@@ -87,6 +87,16 @@ Tugas memakai ID `TSK-xxx` (berbeda dari ID uji teknis `T-xx`). Status: `TODO` �
 | TSK-071 | memory_op A13: record_decision D-49 (sumber Bab I = Bab_I_Draft.md), D-50 (PDF Formal/Lengkap di dalam build_modular.py), D-51 (aturan ask Edit build_modular.py di settings.json) + Q-B1-ay, Q-B1-az baru + kemajuan Q-B1-al/aw/ax | DONE | A13 | 0 | `memory/DECISION_LOG.md`, `memory/OPEN_QUESTIONS.md`, `memory/PROJECT_STATE.md`, `memory/CONTEXT_TRANSFER.md`, `memory/TASK_TRACKER.md` | Brief A01 (approval_evidence verbatim lengkap) | D-49..D-51 APPROVED L3 (lingkup terbatas). Q-B1-al, aw, ax tetap TERBUKA. Pengamatan a12 R5 (PARTIAL) dan a03 dicatat sebagai pengamatan, bukan keputusan. Sesi sempat terhenti batas API, dilanjutkan tanpa duplikasi. Tidak ada commit/push/staging; tools, docs, hook, settings, naskah tidak diubah |
 | TSK-072 | memory_op A13: record_decision D-52 (selftest.py tidak diubah, Q-B1-ay), D-53 (cakupan audit a12 = berkas hasil build, Q-B1-az), D-54 (kriteria audit PDF a12: pdftotext/pdfinfo, rujuk D-39) + status patch Q-B1-al | DONE | A13 | 0 | `memory/DECISION_LOG.md`, `memory/OPEN_QUESTIONS.md`, `memory/PROJECT_STATE.md`, `memory/CONTEXT_TRANSFER.md`, `memory/TASK_TRACKER.md` | Brief A01; delegasi "lakukan sesuai preferensi anda" tanpa opsi spesifik | D-52..D-54 APPROVED lingkup terbatas (pilihan A01 atas delegasi; dapat dibatalkan). Patch .scratch/patch_Q-B1-al.md (32 perubahan: 25 SIAP, 7 OPSIONAL-BELUM DIKONFIRMASI) disusun a03 tetapi BELUM diterapkan; Q-B1-al tetap TERBUKA; butir OPSIONAL belum dikonfirmasi. Tidak ada commit/push/staging; tools, docs, hook, settings, scripts, naskah tidak diubah |
 | TSK-073 | apply_reconcile butir 1-2: koreksi HEAD ke 126ad83 (CONTEXT_TRANSFER, PROJECT_STATE) dan hash S1 (Bab_I_Draft DRAF 10 dicatat; sisa 9 artefak PENDING_VERIFICATION) | DONE | A13 | 0 | `memory/PROJECT_STATE.md`, `memory/CONTEXT_TRANSFER.md`, `memory/TASK_TRACKER.md` | Jawaban pengguna "Rekonsiliasi saja, tanpa commit (Recommended)" (2026-11-07; lingkup butir 1-2, bukan commit, bukan manifest RSIA) | Hash baru: `bab1/Bab_I_Draft.md` `e63d253b71cf` (dasar TSK-059). Tanpa dasar tugas: CLAUDE.md, source/INDEKS.md, tools/verify_claims.py, bab1/Bab1_Revisi1_IF4091.docx/.pdf, bab2/Bab_II_Migrasi.docx/.pdf, dua modul modular/ Bab II. Tidak ada commit/staging/push; manifest RSIA tidak dibuat; S7 tetap karena G3 tidak disetujui |
+| TSK-074 | R3 wawancara I.4 oleh a04 (3 pertanyaan) + pencatatan A13 (D-55, D-56, F-A04-0010..0014, catatan Q-B1-f, Q-B1-t) | DONE | A04, A13 | R3 | `memory/DECISION_LOG.md`, `memory/FINDINGS_LOG.md`, `memory/OPEN_QUESTIONS.md`, `memory/TASK_TRACKER.md` | Jawaban pengguna 2026-11-08 (P2 penguncian, P3 pelaporan; approval_evidence lengkap di D-55, D-56) | a04 COMPLETE, qa NA: 0 HIGH, 4 MEDIUM, 1 LOW, 2 INFO (F-A04-0015, 0016 tidak dicatat). P1 (rawat jalan tanpa resume medis): jawaban teks bebas pengguna, BUKAN keputusan; dicatat di Q-B1-f. Q-B1-t bagian pelaporan DIPUTUSKAN → D-56. D-29 per jenis perawatan berimplikasi pada I.2/I.3/I.5 (belum diperiksa). Naskah tidak diubah; hash artefak tidak diperbarui; tidak ada Git. Berikutnya: R1 revisi oleh a03 |
+| TSK-075 | R1 revisi I.4 oleh a03 (DRAF 10 → DRAF 11): p3 kalimat akhir (rujukan kosong diganti penanda baru), p6 diselaraskan dengan D-55, p7 dengan D-56; penanda 39 → 40; indeks dinomori ulang; claims_changed true | DONE | A03 | 0 | `bab1/Bab_I_Draft.md` | Brief A01 R1 (D-55, D-56); laporan a03 | execution COMPLETE menurut laporan a03; qa NA. I.1, I.2, I.3, I.5 tidak diubah. a09 mengonfirmasi 40 penanda di Naskah cocok dengan header. sha256 DRAF 11 BELUM dihitung (hook menolak awk); hash Artifact Map tidak diperbarui. Catatan A01: rumusan p6 ("batas kajian", dokumen terkunci "tidak termasuk kajian") melampaui lingkup D-55 (hanya batas kesimpulan); akibat brief A01, bukan keputusan pengguna; tetap dalam DRAF 11 sampai ada keputusan (Q-B1-bc). Klaim a03 bahwa F-A04-0011 RESOLVED TIDAK diverifikasi (a04 belum menyatakannya); F-A04-0011 tetap OPEN. Usulan a03 atas F-A04-0010 dan F-A04-0013 belum diterapkan (Q-B1-be) |
+| TSK-076 | QA siklus 0 DRAF 11 I.4: a07, a09 (qa_audit) dan a05 (tinjauan kritis) | DONE | A07, A09, A05 | 0 | `memory/FINDINGS_LOG.md` | Brief A01 sesi 2026-11-08 | a07 FAIL (0/0/2/3); a09 PASS_WITH_NOTES (0/0/0/3, +7 INFO); a05 qa NA (0/2/6/1). Semua temuan OPEN; tidak ada RESOLVED. F-A07-0049, 0050 requires_decision. a05 menantang D-55, D-56, D-21, D-29 (ditandai di FINDINGS_LOG). Siklus 1 belum dijalankan; menunggu keputusan pengguna atas Q-B1-bc dan Q-B1-bd (tidak ada siklus otomatis atas butir requires_decision) |
+| TSK-077 | memory_op A13: record_findings (17 temuan) + task_close TSK-075/076 + catat pernyataan pengguna 2026-11-08 sebagai butir terbuka (BUKAN keputusan) + Q-B1-ba..bf | DONE | A13 | 0 | `memory/FINDINGS_LOG.md`, `memory/OPEN_QUESTIONS.md`, `memory/TASK_TRACKER.md` | Brief A01 (tanpa keputusan baru) | Q-B1-ba (konflik sumber penguncian + pernyataan verbatim), bb (empat pertanyaan), bc (I.4 p6), bd (selaras D-56), be (usulan a03), bf (verifikasi hlm. 48-54 Permenkes 26/2021). Tidak ada entri DECISION_LOG; hash artefak, PROJECT_STATE, CONTEXT_TRANSFER tidak diubah; tidak ada Git |
+| TSK-078 | R1 revisi siklus 1 oleh a03 (DRAF 11 → DRAF 12) I.4: p6 mengikuti D-57; penanda baru #33 merujuk arti penguncian I.1 p14; penanda 40 → 41; kalimat akhir p3 diringkas; claims_changed true | DONE | A03 | 1 | `bab1/Bab_I_Draft.md` | Brief A01 siklus 1; D-57 | execution COMPLETE menurut laporan a03; qa NA. I.1, I.2, I.3, I.5 tidak diubah. sha256 DRAF 12 BELUM dihitung; hash Artifact Map tidak diperbarui (S1 Bab_I_Draft.md tetap WARN). I.1 baris 75 dan 89 masih mengandaikan keduanya dikunci (Q-B1-ba) |
+| TSK-079 | QA siklus 1 DRAF 12 I.4: a07, a09 (qa_audit), a05 (tinjauan ulang) | DONE | A07, A09, A05 | 1 | `memory/FINDINGS_LOG.md` | Brief A01 siklus 1 | a07 FAIL hanya karena F-A07-0049 (requires_decision) menunggu keputusan (setara PASS_WITH_NOTES untuk I.4 saja menurut a07); a09 PASS_WITH_NOTES; a05 qa NA. RESOLVED dinyatakan auditor penemu: F-A07-0050, 0051 (a07); F-A09-0108, 0109 (a09). Baru: F-A09-0116 LOW, F-A05-0032 MEDIUM (requires_decision), F-A05-0033 LOW. F-A05-0023 tetap HIGH, F-A05-0024 turun ke LOW. Siklus 2 belum dijalankan |
+| TSK-080 | memory_op A13: record_findings + task_close TSK-078/079 + perluasan Q-B1-ba, Q-B1-bd | DONE | A13 | 0 | `memory/FINDINGS_LOG.md`, `memory/OPEN_QUESTIONS.md`, `memory/TASK_TRACKER.md` | Brief A01 (tanpa keputusan baru) | 3 temuan baru dicatat; 4 status RESOLVED dicatat sesuai pernyataan auditor penemu; F-A05-0024 severity LOW. Tidak ada Git, hash, atau entri DECISION_LOG |
+| TSK-081 | R1 revisi siklus 2 oleh a03 (DRAF 12 → DRAF 13): menyelaraskan I.2 p6-8, I.3 p1-3, I.5 p2/5/6/7 dengan D-58; redaksi I.4 p4/p6; penanda 41 → 44 (dua Q-B1-bg, satu Q-B1-bi); claims_changed true | DONE | A03 | 2 | `bab1/Bab_I_Draft.md` | Brief A01 siklus 2; D-58 | execution COMPLETE menurut laporan a03; qa NA. I.1 tidak diubah. sha256 DRAF 13 BELUM dihitung (S1 Bab_I_Draft.md tetap WARN). Siklus otomatis (D-06) HABIS; tidak ada revisi otomatis lagi |
+| TSK-082 | QA siklus 2 DRAF 13: a07, a09, a11 (qa_audit), a05 (tinjauan ulang) | DONE | A07, A09, A05, A11 | 2 | `memory/FINDINGS_LOG.md` | Brief A01 siklus 2 | a07 PASS_WITH_NOTES; a09 PASS_WITH_NOTES; a05 qa NA; a11 FAIL (0/1/2/2). RESOLVED dinyatakan auditor penemu: F-A07-0049, 0053; F-A09-0106, 0116; F-A05-0025, 0033; F-A11-0013, 0014. Baru 13 temuan (F-A07-0054; F-A09-0118, 0119; F-A05-0034..0037; F-A11-0015..0019); F-A11-0015 HIGH requires_decision. Semua auditor terhenti HTTP 429 sekali, dilanjutkan via SendMessage (retry pertama berhasil). Keputusan pengguna diperlukan: Q-B1-bj, Q-B1-bg, Q-B1-bh |
+| TSK-083 | memory_op A13: record_findings + task_close TSK-081/082 + rujukan Q + butir baru Q-B1-bj | DONE | A13 | 0 | `memory/FINDINGS_LOG.md`, `memory/OPEN_QUESTIONS.md`, `memory/TASK_TRACKER.md` | Brief A01 (tanpa keputusan baru) | Tidak ada Git, hash, atau entri DECISION_LOG |
 
 Approval evidence TSK-061 (persetujuan operasional per eksekusi, P2-02):
 
@@ -205,6 +215,24 @@ Diisi A13 saat penutupan tugas dari Agent Report dan `.scratch/agent_runs.jsonl`
 | 2026-11-07 | TSK-071 | a13 | 0 | COMPLETE | NA | 0/0/0/0 | n/a | n/a | n/a |
 | 2026-11-07 | TSK-072 | a13 | 0 | COMPLETE | NA | 0/0/0/0 | n/a | n/a | n/a |
 | 2026-11-07 | TSK-073 | a13 | 1 | COMPLETE | NA | 0/0/0/0 | n/a | n/a | n/a |
+| 2026-11-08 | TSK-074 (R3 I.4) | a04 | R3 | COMPLETE | NA | 0/0/4/1 (+2 INFO) | n/a | n/a | n/a |
+| 2026-11-08 | TSK-074 (memory_op) | a13 | 0 | COMPLETE | NA | 0/0/0/0 | n/a | n/a | n/a |
+| 2026-11-08 | TSK-075 (R1 I.4, DRAF 11) | a03 | 0 | COMPLETE (menurut laporan a03) | NA | n/a | n/a | n/a | n/a |
+| 2026-11-08 | TSK-076 (QA DRAF 11) | a07 | 0 | COMPLETE | FAIL | 0/0/2/3 | n/a | n/a | n/a |
+| 2026-11-08 | TSK-076 (QA DRAF 11) | a09 | 0 | COMPLETE | PASS_WITH_NOTES | 0/0/0/3 (+7 INFO) | n/a | n/a | n/a |
+| 2026-11-08 | TSK-076 (tinjauan kritis DRAF 11) | a05 | 0 | COMPLETE | NA | 0/2/6/1 | n/a | n/a | n/a |
+| 2026-11-08 | TSK-077 | a13 | 0 | COMPLETE | NA | 0/0/0/0 | n/a | n/a | n/a |
+| 2026-11-08 | TSK-078 (R1 I.4, DRAF 12) | a03 | 1 | COMPLETE (menurut laporan a03) | NA | n/a | n/a | n/a | n/a |
+| 2026-11-08 | TSK-079 (QA DRAF 12) | a07 | 1 | COMPLETE | FAIL (hanya F-A07-0049) | 0/0/1/2 OPEN, 0 baru | n/a | n/a | n/a |
+| 2026-11-08 | TSK-079 (QA DRAF 12) | a09 | 1 | COMPLETE | PASS_WITH_NOTES | 0/0/0/2 OPEN (0106, 0116 baru) | n/a | n/a | n/a |
+| 2026-11-08 | TSK-079 (tinjauan ulang DRAF 12) | a05 | 1 | COMPLETE | NA | baru 0/0/1/1 (F-A05-0032, 0033) | n/a | n/a | n/a |
+| 2026-11-08 | TSK-080 | a13 | 0 | COMPLETE | NA | 0/0/0/0 | n/a | n/a | n/a |
+| 2026-11-08 | TSK-081 (R1 I.2/I.3/I.5, DRAF 13) | a03 | 2 | COMPLETE (menurut laporan a03) | NA | n/a | n/a | n/a | n/a |
+| 2026-11-08 | TSK-082 (QA DRAF 13) | a07 | 2 | COMPLETE (setelah 1 retry HTTP 429) | PASS_WITH_NOTES | baru 0/0/0/1 | n/a | n/a | n/a |
+| 2026-11-08 | TSK-082 (QA DRAF 13) | a09 | 2 | COMPLETE (setelah 1 retry HTTP 429) | PASS_WITH_NOTES | baru 0/0/0/2 (+2 INFO) | n/a | n/a | n/a |
+| 2026-11-08 | TSK-082 (tinjauan ulang DRAF 13) | a05 | 2 | COMPLETE (setelah 1 retry HTTP 429) | NA | baru 0/0/4/0 | n/a | n/a | n/a |
+| 2026-11-08 | TSK-082 (QA DRAF 13) | a11 | 2 | COMPLETE (setelah 1 retry HTTP 429) | FAIL | 0/1/2/2 (+1 INFO) | n/a | n/a | n/a |
+| 2026-11-08 | TSK-083 | a13 | 0 | COMPLETE | NA | 0/0/0/0 | n/a | n/a | n/a |
 
 Catatan: token = subagent_tokens menurut harness, mungkin kumulatif per instance.
 
