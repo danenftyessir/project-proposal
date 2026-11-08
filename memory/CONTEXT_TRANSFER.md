@@ -1,10 +1,10 @@
 ---
 file: CONTEXT_TRANSFER
-revision: 24
+revision: 25
 status: CURRENT
-updated: 2026-11-07
+updated: 2026-11-08
 updated_by: a13-memory-manager
-based_on_commit: 126ad83
+based_on_commit: 4d76865
 ---
 
 # Context Transfer
@@ -13,35 +13,35 @@ Handoff untuk sesi berikutnya. **Bukan** sumber keputusan: keputusan ada di `DEC
 
 ## Di mana kita berhenti
 
-- Repo: worktree `C:\Users\HYPE R Series\worktrees\project-proposal-setup`, branch `setup/orchestration`, HEAD `126ad83` ("feat: project template"; sebelumnya ecf15cf "feat: convert pdf", b05a2e3 "feat: migrate docs agent", f3cb6ba "feat: bab 1.1-1.3"; koreksi HEAD per git log 2026-11-07, TSK-073). Per 2026-11-07 (git status) working tree: hanya `memory/**` berubah belum di-commit; `bab1/Bab_I_Draft.md`, modular/*.docx, dan docx/pdf migrasi di `bab1/` dan `bab2/` sudah terlacak (migrasi oleh LLM lain di luar sistem, menurut brief A01; bukan keluaran agent). Commit f3cb6ba dibuat pengguna di luar A13; persetujuan G3 tidak tercatat sebagai approval_evidence. Pengguna menyatakan sudah push (2026-11-06); tidak terverifikasi.
-- Bab I terbaru: `bab1/Bab_I_Draft.md` DRAF 10 (39 penanda; I.5 ditulis tanpa kerangka bernama, D-34; belum diperiksa QA; hash DRAF 10 `e63d253b71cf` dihitung 2026-11-07 dan dicatat di Artifact Map, TSK-073; Q-B1-ad..ag). Build modular TSK-061 GAGAL (lxml belum terpasang; Q-B1-ah, Q-B1-ai). Keputusan D-35 (2026-11-07): peran migrasi Markdown ke Docs/DOCX ditempatkan pada a03 dengan memperbaiki build_modular.py; rincian terbuka di Q-B1-ak..am. D-36 (2026-11-07): a03 diberi wewenang edit khusus tools/build_modular.py (approval per perubahan, audit a12); belum operasional sampai spesifikasi, hook, check_agents diubah (Q-B1-al, Q-B1-an). D-37 (2026-11-07): perubahan spesifikasi/hook/check_agents/definisi a03 dikerjakan pengguna atau sesi Claude Code biasa di luar agent (Q-B1-an DIPUTUSKAN; Q-B1-al tetap TERBUKA). D-38 (2026-11-07): tiga varian Editorial, Formal, Lengkap (templat Individu "- Copy" di root), keluaran DOCX saja, Google Docs manual oleh pengguna; Q-B1-ak DIPUTUSKAN SEBAGIAN, sisa Q-B1-ao..ar. D-39 (2026-11-07): PDF hanya untuk Formal dan Lengkap (Editorial DOCX saja; Q-B1-ap DIPUTUSKAN; cara konversi, izin Bash a03, kriteria audit a12 belum diputuskan). D-40 (2026-11-07): varian Lengkap dari Markdown bab1/-bab4/, pelengkap placeholder jelas, a12 memastikan tidak lolos (Q-B1-ar DIPUTUSKAN). D-41 (2026-11-07): Formal diturunkan dari Editorial dengan menghapus teks tersorot dan penanda berkurung tanpa pengganti, satu sumber (Q-B1-aq DIPUTUSKAN; turunan terbuka Q-B1-as..av). D-42 (2026-11-07): varian Lengkap merujuk template/Template-Proposal-IF4091-Capstone-Individu-2026.docx, bukan "- Copy" di root (Q-B1-ao DIPUTUSKAN; Q-B1-ak DIPUTUSKAN, butir (a)-(d) terjawab D-38..D-42). Catatan di bawah sampai butir berikut masih rincian DRAF 8.
-- Lanjutan 2026-11-07 (TSK-070): D-43 mengubah sebagian D-41 (Formal memakai teks pengganti Y dari {{ed:X||cl:Y}} bila ada; D-41 SUPERSEDED by D-43 sebagian). D-44..D-48 = pilihan A01 atas delegasi pengguna ("2-4. lakukan sesuai preferensi anda", tanpa opsi spesifik, dapat dibatalkan) untuk Q-B1-am, as, at, au, av. Q-B1-al TETAP TERBUKA. Baru: Q-B1-aw (build_modular.py perlu disesuaikan: MASTER docx bab2/ sudah tiada, input masih Markdown Bab II lama, belum DRAFT 6 dan Bab I; pengamatan A01) dan Q-B1-ax (pemindahan docx sementara bab1/ bab2/ ke modular/; menunggu audit a12 R5). Pengguna: artefak resmi di modular/, docx/pdf bab1/ dan bab2/ sementara; Artifact Map diperbarui.
-- Lanjutan 2026-11-07 (TSK-071): D-49 sumber Bab I untuk modular/ = bab1/Bab_I_Draft.md (DRAF 10), bukan docx sementara; D-50 PDF Formal/Lengkap dibuat di dalam tools/build_modular.py (butuh LibreOffice); D-51 draf patch boleh memuat aturan ask Edit(./tools/build_modular.py) di .claude/settings.json (uji T-14 menentukan efektivitas). Q-B1-al, aw, ax tetap TERBUKA; baru Q-B1-ay (scripts/selftest.py) dan Q-B1-az (cakupan audit a12 atas diff tools/). Audit a12 R5 PARTIAL; bukti kerja di .scratch/a12/.
-- Lanjutan 2026-11-07 (TSK-072): D-52 selftest.py tidak diubah (uji manual T-14/T-30 setelah patch; Q-B1-ay DIPUTUSKAN); D-53 a12 hanya audit berkas hasil build, diff skrip ditinjau pengguna lewat ask per edit (Q-B1-az DIPUTUSKAN); D-54 audit PDF a12 = pdftotext dan pdfinfo, tanpa izin baru (rujuk D-39). Semua pilihan A01 atas delegasi "lakukan sesuai preferensi anda" (tanpa opsi spesifik; dapat dibatalkan). Patch Q-B1-al (.scratch/patch_Q-B1-al.md, 32 perubahan: 25 SIAP, 7 OPSIONAL-BELUM DIKONFIRMASI) BELUM diterapkan; Q-B1-al tetap TERBUKA. Urutan usulan a03: guard, settings.json, write_scopes.json + AGENT_SPECIFICATIONS §4 serentak lalu check_agents, dokumen dan definisi agent, opsional, check_agents lagi, uji T-14/T-30, pencatatan a13. Saran A01 (bukan keputusan): terapkan 25 butir SIAP dulu, tiga perubahan check_agents belakangan.
-- Bab I (DRAF 8): `bab1/Bab_I_Draft.md` DRAF 8 (status `DRAF`, belum SELESAI; sha256 `05b369128553`). 31 penanda. I.1 (16 paragraf, tanpa paragraf research gap), I.2 ditulis (D-28), I.3 ditulis (D-31, D-33), I.4 diselaraskan (D-29, D-30). I.5 dan paragraf research gap I.1 belum ditulis; judul individual menunggu K2. QA I.2/I.3/I.4 (DRAF 5-8): a07, a09, a10 PASS_WITH_NOTES, ditambah a05 (tinjauan kritis) dan a11 (teknis) pada rumusan/I.3; a08 belum memeriksa I.2/I.3/I.4 (sitasi belum diaudit untuk bagian baru; a08 PASS_WITH_NOTES hanya berlaku untuk Bab I DRAF 4, yaitu I.1 dan I.4 lama); itu bukan persetujuan Supervisor atau pengguna. I.2 dan I.3 belum SELESAI.
-- Keputusan baru sesi ini (bukti lengkap di `DECISION_LOG.md`): D-28 komposisi I.2; D-29 kriteria presisi dan recall; D-30 paragraf baru I.4; D-31 tujuan "mengevaluasi"; D-32 mekanisme kombinasi ditandai, D-29 dipertahankan; D-33 hasil = jawaban pertanyaan. Sebelumnya: D-21..D-27 (ruang lingkup Bab I). Angka klaim *pending* tetap ditahan (D-19).
-- Temuan terbuka (`FINDINGS_LOG.md`): F-A07-0048, F-A09-0103, F-A09-0104 (LOW). Tantangan a05 tetap OPEN: F-A05-0002, 0006, 0007, 0009, 0012; F-A05-0008 kini RESOLVED oleh a05 (tinjauan ulang, Wave 1; lihat FINDINGS_LOG rev 17).
-- Bukti: `EVIDENCE_REGISTRY.md` rev 3 (E-01..E-20, P-1..P-7, plus B2-01..B2-55 klaim Bab II dari a02 TSK-055, PARTIAL; sisa scope belum ada barisnya). Premis P-6 BELUM DIVERIFIKASI.
-- Wave 1 (TSK-055..058, 2026-11-06): lihat PROJECT_STATE rev 12; temuan baru di FINDINGS_LOG rev 17 (F-A05-0017..0022, F-A11-0012..0014, F-A06-0001..0016); butir Q-B1-v..ab baru; TSK-057 (a03 Wave 2a) DOING.
-- Tenggat (jawaban pengguna 2026-11-06): tenggat lunak 6 November 2026 (hari ini, DRAF 8 belum selesai) dan final 10 November 2026 ke pusat, untuk Bab I dan Bab II.
-- Risiko: batas pemakaian API tercapai beberapa kali (HTTP 429); menurut pesan galat reset 10 Nov 04.00 WIB (tidak dapat diverifikasi; sesi ini sempat berlanjut setelah reset).
-- Setup orkestrasi masih punya sisa: TSK-014 (D-20; termasuk hash `CLAUDE.md`, `source/INDEKS.md`, `tools/verify_claims.py` di worktree), TSK-006 rekonsiliasi dari checkout utama, TSK-007 merge, TSK-011.
+- Repo: worktree `C:\Users\HYPE R Series\worktrees\project-proposal-setup`, branch `setup/orchestration`, HEAD `4d76865` ("fix: some opened question"; sebelumnya c875468 "fix: idk", 126ad83 "feat: project template", ecf15cf, b05a2e3, f3cb6ba). Commit 4d76865 dibuat pengguna sendiri di luar A13; memuat `bab1/Bab_I_Draft.md` (DRAF 13) dan empat berkas memory (DECISION_LOG, FINDINGS_LOG, OPEN_QUESTIONS, TASK_TRACKER). Persetujuan G3 untuk commit itu tidak ada approval_evidence (fakta operasional). Upstream tidak terlihat di `git status -sb`; push TIDAK terverifikasi (pengguna pernah menyatakan sudah push, 2026-11-06). Berkas memory yang diubah pada penutupan sesi 2026-11-08 (PROJECT_STATE, CONTEXT_TRANSFER, TASK_TRACKER) belum ter-commit sampai G3 disetujui.
+- Bab I: `bab1/Bab_I_Draft.md` DRAF 13 (status `DRAF`, belum SELESAI; 44 penanda menurut a03; sha256 `d25243687a08` dihitung 2026-11-08). I.4 ditinjau a04 (R3), direvisi a03 tiga putaran, QA a07/a09/a05/a11 sampai batas siklus; siklus otomatis D-06 HABIS. I.1 tidak diubah dan paragraf research gap I.1 belum ditulis. I.5 belum diperiksa QA tersendiri (a11 pada siklus 2 menemukan F-A11-0015..0019 yang menyentuh I.5).
+- Keputusan sesi 2026-11-08 (bukti lengkap di `DECISION_LOG.md`): D-55 batas kesimpulan = sebelum penguncian; D-56 kesimpulan terpisah rawat inap dan rawat jalan; D-57 I.4 p6 hanya batas kesimpulan; D-58 dua jawaban terpisah per jenis perawatan (ambang, kondisi keabsahan, selisih minimum TIDAK diputuskan). Sebelumnya: D-21..D-54 (ruang lingkup Bab I dan jalur build modular; rincian di PROJECT_STATE).
+- Pernyataan pengguna 2026-11-08 (klarifikasi RSIA via pengguna: CPPT tidak dapat diubah, resume masih dapat diubah) dicatat sebagai pernyataan, BUKAN keputusan, di Q-B1-ba; tidak boleh diatribusikan di naskah (D-24, D-27). Naskah (I.1 baris 75 dan 89) dan Penyelarasan masih mengandaikan keduanya dikunci: konflik sumber terbuka.
+- Temuan terbuka terpenting (`FINDINGS_LOG.md` rev 21): F-A05-0023 (HIGH), F-A11-0015 (HIGH, requires_decision); MEDIUM requires_decision F-A05-0034, 0035, 0036, 0037, F-A11-0016; F-A05-0026, F-A05-0032 (LOW), F-A11-0004, F-A11-0012; F-A07-0052 dan LOW lain. Semua RESOLVED dinyatakan auditor penemunya. PASS_WITH_NOTES bukan persetujuan Supervisor atau pengguna.
+- Butir baru sesi ini: Q-B1-ba..bj (`OPEN_QUESTIONS.md` rev 32). DIPUTUSKAN: Q-B1-bc (D-57), Q-B1-bd bagian bentuk jawaban (D-58). Terbuka: Q-B1-ba (konflik penguncian), bb (empat pertanyaan pengguna), be (usulan a03 atas F-A04-0010 dan 0013), bf (verifikasi hlm. 48-54 Permenkes 26/2021), bg (ambang, keabsahan, selisih minimum per jenis perawatan), bh (persetujuan tim/pembimbing atas dua jawaban terpisah), bi (F-A05-0032), bj (syarat D-29 rawat jalan, F-A11-0015).
+- Build modular: TSK-061 GAGAL (lxml); `tools/build_modular.py` belum disesuaikan (Q-B1-al, Q-B1-aw TERBUKA; patch `.scratch/patch_Q-B1-al.md` belum diterapkan); modul Bab I/II di `modular/` BUKAN DRAF 13. Q-B1-ax terbuka.
+- Tenggat (pengguna 2026-11-06): final 10 November 2026 ke pusat untuk Bab I dan Bab II; tenggat lunak 6 November 2026 sudah lewat.
+- Hash S1: hanya `bab1/Bab_I_Draft.md` diperbarui (DRAF 13). Peringatan S1 untuk CLAUDE.md, source/INDEKS.md, tools/verify_claims.py, docx/pdf sementara bab1/ dan bab2/, dan dua modul Bab II tetap WARN (tanpa tugas pendasar). Manifest RSIA belum dibuat (S12 INFO).
+- Risiko: batas pemakaian API (HTTP 429) tercapai berulang, termasuk pada QA siklus 2.
+- Setup orkestrasi masih punya sisa: TSK-014, TSK-006, TSK-007, TSK-011.
 
 ## Langkah berikutnya
 
-1. Pengecekan A06 sudah dijalankan (TSK-056, F-A06-0001..0016); tindak lanjut lewat Q-B1-v..ab dan butir Q yang ditautkan.
-2. Tulis paragraf research gap I.1 dan I.5 (a03) setelah butir pengguna terjawab; lalu QA ulang dan tinjauan a05 ulang untuk F-A05-0008.
-3. Kirim ke dosen pembimbing hanya setelah pengguna memutuskan; tenggat final 10 Nov.
-4. Sesi setup: TSK-014, TSK-006, TSK-007, TSK-011.
+1. Bawa ke tim/pembimbing: F-A11-0015 / Q-B1-bj (syarat D-29 untuk rawat jalan), Q-B1-bg, Q-B1-bh, Q-B1-ba (arti penguncian; Q-TEAM butir 5) dan empat pertanyaan di Q-B1-bb.
+2. Tugas a08: verifikasi Permenkes 26/2021 hlm. 48-54 (I.4 p3; Q-B1-bf; a08 belum dijalankan untuk Bab I terbaru).
+3. Tulis paragraf research gap I.1 (a03) setelah keputusan; QA I.5 dan a11 untuk I.5 (F-A11-0015..0019, F-A05-0034).
+4. Usulan a03 atas F-A04-0010 dan F-A04-0013 menunggu keputusan (Q-B1-be).
+5. Siklus otomatis habis: revisi lanjutan atas temuan requires_decision hanya setelah keputusan pengguna.
+6. Kirim ke dosen pembimbing hanya setelah pengguna memutuskan; tenggat final 10 Nov 2026.
+7. Hitung ulang sha256 setiap kali Bab I berubah; hash S1 lain tetap WARN sampai ada tugas pendasar.
+8. Sesi setup: TSK-014, TSK-006, TSK-007, TSK-011.
 
 ## Yang menunggu pengguna
 
-- Q-B1-j sampai Q-B1-u, termasuk Q-B1-o (mekanisme kombinasi), Q-B1-p, Q-B1-q, Q-B1-r, Q-B1-t, Q-B1-u (rincian di `OPEN_QUESTIONS.md`).
-- Q-B1-ad..ai (lihat `OPEN_QUESTIONS.md`).
-- [TSK-070] Dari daftar jalur build di bawah: Q-B1-am, as, at, au, av sudah dijawab D-44..D-48 (pilihan A01 atas delegasi; pengguna dapat membatalkan); tersisa Q-B1-al, Q-B1-aw, Q-B1-ax; pengguna menghapus build_docx.py dan build_with_toc.py di luar sistem (D-44).
-- [TSK-071] Q-B1-ay dan Q-B1-az baru; Q-B1-aw dan Q-B1-ax tetap terbuka dengan kemajuan D-49/D-50. [TSK-072] Q-B1-ay DIPUTUSKAN D-52 dan Q-B1-az DIPUTUSKAN D-53 (pilihan A01, dapat dibatalkan). Menunggu pengguna: menerapkan patch Q-B1-al (Q-B1-al TERBUKA) dan mengonfirmasi 7 butir OPSIONAL.
-- Jalur build modular (per 2026-11-07, sebelum TSK-070): Q-B1-al (perubahan spesifikasi/hook/check_agents/definisi a03 oleh pengguna atau sesi biasa, termasuk izin Bash a03 untuk konversi PDF bila D-39 dilaksanakan); Q-B1-am (nasib skrip lama); Q-B1-as..av (Formal setelah penanda dihapus, placeholder templat, deteksi catatan tak berkurung, nasib Formal yang ada); peringatan S1 dua docx bab2/ yang tidak ditemukan. Sudah DIPUTUSKAN: Q-B1-ak (D-38..D-42), Q-B1-ao (D-42), Q-B1-ap (D-39), Q-B1-aq (D-41), Q-B1-ar (D-40), Q-B1-aj (D-36), Q-B1-an (D-37). Pengguna/sesi biasa perlu menerapkan perubahan spesifikasi/hook (D-37) sebelum wewenang a03 (D-36) operasional.
+- Q-B1-ba, bb, be, bf, bg, bh, bi, bj (sesi 2026-11-08).
+- Q-B1-j sampai Q-B1-u (termasuk Q-B1-o, p, q, r, t bagian pembanding, u), Q-B1-y, Q-B1-ad..ai.
+- Jalur build modular: Q-B1-al, Q-B1-aw, Q-B1-ax (D-44..D-54 adalah pilihan A01 atas delegasi, dapat dibatalkan); pengguna menerapkan patch Q-B1-al dan mengonfirmasi 7 butir OPSIONAL.
 - Q-A04-a, Q-A04-c, Q-A04-d, Q-A04-f.
-- K1 (gaya sitasi akhir dan terkait), K2 (judul capstone).
+- K1 (gaya sitasi akhir), K2 (judul capstone).
 - Lainnya: K3, K4, K6, K7, I-1, I-2, Q-P2-a..c, Q-TEAM, Q-RSIA-1, Q-B1-a..i (lihat `OPEN_QUESTIONS.md`).
-- G3 untuk commit f3cb6ba: tidak ada approval_evidence; pengguna melakukan commit sendiri. Status push hanya pernyataan pengguna. Pilihan "Tutup sesi dan ajukan G3" dulu hanya arahan alur, bukan persetujuan commit.
+- G3 untuk commit f3cb6ba dan 4d76865: tidak ada approval_evidence; pengguna melakukan commit sendiri. G3 untuk berkas memory penutupan sesi 2026-11-08 diajukan A01 terpisah. Pilihan "Tutup sesi dan ajukan G3" hanya arahan alur, bukan persetujuan commit.

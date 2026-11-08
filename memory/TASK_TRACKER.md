@@ -1,6 +1,6 @@
 ---
 file: TASK_TRACKER
-revision: 42
+revision: 43
 status: CURRENT
 updated: 2026-11-08
 updated_by: a13-memory-manager
@@ -97,6 +97,7 @@ Tugas memakai ID `TSK-xxx` (berbeda dari ID uji teknis `T-xx`). Status: `TODO` �
 | TSK-081 | R1 revisi siklus 2 oleh a03 (DRAF 12 → DRAF 13): menyelaraskan I.2 p6-8, I.3 p1-3, I.5 p2/5/6/7 dengan D-58; redaksi I.4 p4/p6; penanda 41 → 44 (dua Q-B1-bg, satu Q-B1-bi); claims_changed true | DONE | A03 | 2 | `bab1/Bab_I_Draft.md` | Brief A01 siklus 2; D-58 | execution COMPLETE menurut laporan a03; qa NA. I.1 tidak diubah. sha256 DRAF 13 BELUM dihitung (S1 Bab_I_Draft.md tetap WARN). Siklus otomatis (D-06) HABIS; tidak ada revisi otomatis lagi |
 | TSK-082 | QA siklus 2 DRAF 13: a07, a09, a11 (qa_audit), a05 (tinjauan ulang) | DONE | A07, A09, A05, A11 | 2 | `memory/FINDINGS_LOG.md` | Brief A01 siklus 2 | a07 PASS_WITH_NOTES; a09 PASS_WITH_NOTES; a05 qa NA; a11 FAIL (0/1/2/2). RESOLVED dinyatakan auditor penemu: F-A07-0049, 0053; F-A09-0106, 0116; F-A05-0025, 0033; F-A11-0013, 0014. Baru 13 temuan (F-A07-0054; F-A09-0118, 0119; F-A05-0034..0037; F-A11-0015..0019); F-A11-0015 HIGH requires_decision. Semua auditor terhenti HTTP 429 sekali, dilanjutkan via SendMessage (retry pertama berhasil). Keputusan pengguna diperlukan: Q-B1-bj, Q-B1-bg, Q-B1-bh |
 | TSK-083 | memory_op A13: record_findings + task_close TSK-081/082 + rujukan Q + butir baru Q-B1-bj | DONE | A13 | 0 | `memory/FINDINGS_LOG.md`, `memory/OPEN_QUESTIONS.md`, `memory/TASK_TRACKER.md` | Brief A01 (tanpa keputusan baru) | Tidak ada Git, hash, atau entri DECISION_LOG |
+| TSK-084 | memory_op A13: session_close sesi 2026-11-08 (PROJECT_STATE, CONTEXT_TRANSFER, hash Bab I DRAF 13, Efisiensi, pemeriksaan check_memory/check_staged) | DONE | A13 | 0 | `memory/PROJECT_STATE.md`, `memory/CONTEXT_TRANSFER.md`, `memory/TASK_TRACKER.md` | Brief A01 /sesi-tutup (tanpa Git oleh A13) | Hash baru `bab1/Bab_I_Draft.md` `d25243687a08` (DRAF 13, dasar TSK-075, 078, 081); hash artefak lain TIDAK diperbarui (WARN tetap). EVIDENCE_REGISTRY tidak diubah (tidak ada bukti baru; a08 belum dijalankan). HEAD 4d76865 dibuat pengguna di luar A13; push tidak terverifikasi. Tugas lama TSK-004..011, 014 tidak ditutup (di luar sesi ini) |
 
 Approval evidence TSK-061 (persetujuan operasional per eksekusi, P2-02):
 
@@ -233,6 +234,7 @@ Diisi A13 saat penutupan tugas dari Agent Report dan `.scratch/agent_runs.jsonl`
 | 2026-11-08 | TSK-082 (tinjauan ulang DRAF 13) | a05 | 2 | COMPLETE (setelah 1 retry HTTP 429) | NA | baru 0/0/4/0 | n/a | n/a | n/a |
 | 2026-11-08 | TSK-082 (QA DRAF 13) | a11 | 2 | COMPLETE (setelah 1 retry HTTP 429) | FAIL | 0/1/2/2 (+1 INFO) | n/a | n/a | n/a |
 | 2026-11-08 | TSK-083 | a13 | 0 | COMPLETE | NA | 0/0/0/0 | n/a | n/a | n/a |
+| 2026-11-08 | TSK-084 (session_close) | a13 | 0 | COMPLETE | NA | 0/0/0/0 | n/a | n/a | n/a |
 
 Catatan: token = subagent_tokens menurut harness, mungkin kumulatif per instance.
 
