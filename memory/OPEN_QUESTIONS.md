@@ -1,10 +1,10 @@
 ---
 file: OPEN_QUESTIONS
-revision: 42
+revision: 48
 status: CURRENT
 updated: 2026-11-09
 updated_by: a13-memory-manager
-based_on_commit: 1d67d75
+based_on_commit: c056d20
 ---
 
 # Open Questions
@@ -21,9 +21,10 @@ affected: [A03, A08, bab2/Bab_II_Revisi_Notulensi.md]
 class: L3
 pic: Pengguna
 ask_to: Tim / pembimbing
-status: TERBUKA
-updated: 2026-11-06
-refs: [D-11, F-A08-0004, F-A08-0005, F-A08-0013]
+status: MENUNGGU ANGGOTA
+updated: 2026-11-09
+refs: [D-11, F-A08-0004, F-A08-0005, F-A08-0013, D-80]
+note_2026-11-09: 'USUL PENGGUNA APA (D-80, lingkup terbatas; BUKAN keputusan final): menunggu tim dan pembimbing; konfirmasi pedoman prodi tetap diperlukan; naskah belum diubah. Fakta (laporan A01/a10 TSK-115, PARTIAL, qa BLOCKED; belum diverifikasi A13 ke berkas): templat tidak menetapkan gaya sitasi/format Daftar Pustaka di teks badan, hanya empat contoh entri penulis-tahun alfabetis tanpa nomor, tidak dilabeli aturan; draf Bab II Abizzar (hlm. 8-9, 20-22, dibaca A01) memakai APA adaptasi Indonesia; draf Raihaan belum diperiksa; pedoman prodi di luar templat tidak dicari. Pengamatan a10: templat tidak konsisten internal (acuan "Gambar I.1/Tabel I.1" vs keterangan "II.1").'
 extended: 'Per 2026-11-06 K1 juga menaungi: (1) bentuk sitasi sekunder untuk Muroli dkk. (2020); (2) atribusi dokumen tim Penyelarasan di daftar pustaka; (3) salinan acuan halaman PMK 24/2022 (usulan agent, bukan keputusan: Berita Negara).'
 ```
 
@@ -36,8 +37,9 @@ class: L3
 pic: Abizzar (menurut Penyelarasan)
 ask_to: Pembimbing
 status: MENUNGGU PEMBIMBING
-updated: 2026-11-05
+updated: 2026-11-09
 refs: []
+note_2026-11-09: 'Fakta saja (tidak ditanyakan ke pengguna; pemutus resmi pembimbing, PIC Abizzar, Penyelarasan butir 9 "Belum dibahas"; dilaporkan A01, belum diverifikasi A13 ke berkas): Penyelarasan baris 15 dan 288 menetapkan judul baru "Pengembangan Sistem Pemeriksaan Kesesuaian CPPT dan Resume Medis Berbasis Aturan dan AI untuk Mendukung Kesiapan Klaim BPJS" (menunggu persetujuan pembimbing). Draf Abizzar 21 Oktober 2026 masih memakai judul capstone lama "Perancangan Antarmuka User-Centered untuk Sistem Pemeriksaan Resume Medis dalam Mendukung Kesiapan Klaim BPJS" dan judul individu Abizzar "Pengelolaan Siklus Hidup Temuan pada Sistem Pemeriksaan Resume Medis dalam Mendukung Kesiapan Klaim BPJS". Draf individu pengguna tidak diubah. Tetap MENUNGGU PEMBIMBING.'
 ```
 
 ```yaml
@@ -368,7 +370,8 @@ pic: Pengguna
 ask_to: Tim / RSIA mitra
 status: MENUNGGU ANGGOTA
 updated: 2026-11-08
-refs: [D-21, Q-TEAM, F-A07-0019, F-A04-0010, F-A04-0011]
+refs: [D-21, Q-TEAM, F-A07-0019, F-A04-0010, F-A04-0011, D-76]
+note_2026-11-09_TSK-116: 'Tetap terbuka (fakta RSIA via Abizzar/tim). A01 melaporkan Penyelarasan baris 51 dan 350 menyatakan bentuk dokumen rawat jalan belum dipastikan; baris 13, 49, 279 memasukkan rawat jalan terbatas pada CPPT dan resume atau padanannya (belum diverifikasi A13 ke berkas). Usulan pengguna D-76 bergantung pada butir ini.'
 note: 'Pernyataan pengguna 2026-11-08 (BUKAN keputusan; premis, belum diverifikasi ke aturan atau RSIA). Pertanyaan a04 P1 (verbatim): "Pertanyaan a04 (P1 dari 3), diteruskan verbatim. Konteks (ringkas): I.4 paragraf 2 membatasi dokumen pada \"CPPT dan resume medis\"; paragraf 4 hanya memuat penanda #28 tanpa batas rawat jalan; I.1 paragraf 4 menyebut resume medis belum tentu ada pada setiap episode rawat jalan; Penyelarasan:279 memakai frasa \"atau padanannya\" yang tidak ada di I.4; I.2 menyatakan kedua pertanyaan berlaku pada rawat inap dan rawat jalan. Pertanyaan: Dalam kajian Anda, apakah episode rawat jalan yang tidak memiliki resume medis berada di luar kajian, ataukah dokumen padanannya dikaji sebagai pengganti resume medis? Jawaban \"belum dapat diputuskan sebelum tim atau RSIA menjawab butir 4\" juga sah." Opsi: Di luar kajian | Dokumen padanan dikaji | Belum dapat diputuskan. Jawaban teks bebas pengguna (verbatim, bukan salah satu opsi): "Rawat jalan juga semua harusnya ada resume medisnya karena jika tidak tidak bisa klaim bpjs". Tidak menetapkan batas operasional rawat jalan: penanda #28 tetap [MENUNGGU KEPUTUSAN]; Q-TEAM butir 4 dan butir ini tetap terbuka.'
 ```
 
@@ -486,8 +489,9 @@ class: L3
 pic: Pengguna
 ask_to: Tim
 status: MENUNGGU ANGGOTA
-updated: 2026-11-06
-refs: [D-32, D-29, F-A11-0001, F-A05-0001, F-A06-0006]
+updated: 2026-11-09
+refs: [D-32, D-29, F-A11-0001, F-A05-0001, F-A06-0006, D-77]
+note_2026-11-09: 'USUL PENGGUNA: union (gabungan semua temuan), D-77 lingkup terbatas; BUKAN keputusan tim, tidak DIPUTUSKAN. Konsekuensi (A01): recall kombinasi tak di bawah komponen terbaik, presisi dapat turun. Menunggu tim.'
 ```
 
 ```yaml
@@ -510,8 +514,12 @@ class: L3
 pic: Pengguna
 ask_to: Tim / pembimbing
 status: MENUNGGU ANGGOTA
-updated: 2026-11-06
-refs: [F-A11-0010, F-A06-0007]
+updated: 2026-11-09
+refs: [F-A11-0010, F-A06-0007, D-78, F-A11-0036, F-A05-0155, F-A07-0079, F-A07-0085, F-A07-0086, F-A09-0229]
+note_2026-11-09: 'USUL PENGGUNA: ">=" (selaras tabel Penyelarasan), D-78 lingkup terbatas; BUKAN keputusan tim/pembimbing. Angka ambang tetap tertahan D-19 (dan Q-B1-bg). Naskah masih memakai ">".'
+note_TSK-131: 'Pembaruan 2026-11-09: butir ini kini juga memuat paket F-A11-0036 (operator batas selisih dan saat penetapan; requires_decision), F-A05-0155 (MEDIUM: selisih minimum tak terikat sebelum pengujian; penetap dan bentuk selisih), F-A07-0079 (I.2 tidak mengikat selisih minimum sebelum pengujian). Izin alur DRAF 22 (TSK-130) menyelaraskan I.2 p6 (empat selisih; selisih minimum ditetapkan sebelum pengujian, tanpa angka); itu penyelarasan teks, bukan keputusan operator. Operator dan penetap tetap menunggu tim/pembimbing. Bukan keputusan.'
+note_TSK-136: 'Pembaruan 2026-11-09: QA DRAF 22 menemukan bahwa rumusan "kurang dari selisih minimum" di I.2 p6 dan I.3 p2 menetapkan operator secara tersirat (selisih sama dengan minimum lolos), padahal penanda menyatakan operator belum ditetapkan (F-A09-0229 MEDIUM, F-A07-0085 LOW; requires_decision), dan DRAF 22 menjadikan penetap selisih minimum butir terbuka padahal D-82 menulis "setelah ditetapkan tim" (F-A07-0086). Ditangani izin alur DRAF 23 (TSK-135; rumusan netral operator, penetap dikembalikan "ditetapkan tim sebelum pengujian"; tanpa angka). Itu perbaikan teks, bukan keputusan operator: operator TIDAK diputuskan, tetap menunggu tim/pembimbing (usul pengguna D-78 tetap usul). Bukan keputusan.'
+note_TSK-139: 'Pembaruan 2026-11-09: DRAF 23 (TSK-135) memakai rumusan netral operator di I.2 p6 dan I.3 p2 ("tidak memenuhi selisih minimum"); penetap selisih minimum "ditetapkan tim sebelum pengujian" (sesuai D-82); penanda selisih minimum kini memuat bentuk (mutlak atau relatif) dan operator batas sebagai butir terbuka. F-A09-0229, F-A07-0085, F-A07-0086 RESOLVED menurut auditor penemu (TSK-137, TSK-138). Operator dan bentuk selisih TETAP tidak diputuskan; menunggu tim/pembimbing. Catatan a07: siapa memutuskan apakah selisih minimum dipakai tersirat pada tim. Bukan keputusan.'
 ```
 
 ```yaml
@@ -522,8 +530,9 @@ class: L3
 pic: Pengguna
 ask_to: Tim
 status: MENUNGGU ANGGOTA
-updated: 2026-11-06
-refs: [F-A11-0005, F-A05-0003, Q-A04-d]
+updated: 2026-11-09
+refs: [F-A11-0005, F-A05-0003, Q-A04-d, D-79]
+note_2026-11-09: 'USUL PENGGUNA: agregasi mikro, 0/0 dilaporkan tidak terdefinisi (D-79, lingkup terbatas); BUKAN keputusan tim. Rekomendasi berasal dari A01 (bukan temuan agent); RSIA-source tidak dibuka, tanpa sensitive_access. Bagian "aturan pencocokan temuan-label" dalam butir ini TIDAK dijawab. Menunggu tim.'
 ```
 
 ```yaml
@@ -967,6 +976,7 @@ ask_to: Tim / RSIA mitra
 status: MENUNGGU ANGGOTA
 updated: 2026-11-08
 refs: [D-55, D-56, D-57, D-21, D-24, D-27, F-A05-0024, F-A07-0051, F-A11-0004, Q-B1-ae, Q-TEAM butir 5, Q-B1-bb, Q-B1-bc]
+note_2026-11-09_TSK-116: 'Tetap terbuka (fakta RSIA via Abizzar/tim); tidak ada keputusan baru pada TSK-116.'
 note: KONFLIK SUMBER, tidak diselesaikan A13. Status pernyataan pengguna 2026-11-08 (jawaban teks bebas atas AskUserQuestion "I.4 paragraf 6"; pengguna TIDAK memilih satu pun dari tiga opsi A01: kembalikan ke batas kesimpulan saja / pertahankan batas kajian dan putuskan / tunda dengan penanda): klarifikasi pihak RSIA yang disampaikan tidak langsung (sumber dan waktu tidak disebut; belum ada di dokumen Penyelarasan). BUKAN keputusan; tidak mengubah D-55, D-56, D-21; paragraf 6 I.4 tidak diputuskan; tidak boleh diatribusikan di naskah (D-24, D-27) tanpa keputusan baru. Pengguna sendiri meminta "jangan langsung mengubah keputusan atau memperluas ruang lingkup proposal".
 user_statement_verbatim: "Teman-teman, ada klarifikasi tambahan dari pihak RSIA terkait alur dokumentasi medis yang perlu kita perhatikan dalam penyelarasan proposal.Beberapa hal yang sudah dikonfirmasi:1. **CPPT tidak dapat diubah setelah dicatat.** Informasi ini sudah diklarifikasi sebelumnya, sehingga tidak perlu ditanyakan kembali.2. **Resume medis masih dapat diubah.** Namun, koreksi langsung terhadap resume relatif jarang dilakukan. Jika ditemukan ketidaksesuaian, pihak rumah sakit biasanya memberikan klarifikasi atau penjelasan mengenai dokumentasi tersebut.Implikasinya, kita perlu membedakan antara temuan audit yang membutuhkan klarifikasi dan temuan yang memang memerlukan koreksi. Tidak semua temuan harus otomatis dianggap sebagai kesalahan yang wajib diperbaiki.Untuk penyelarasan proposal, mohon perhatikan beberapa hal berikut:- Fokus penelitian tetap pada kesiapan dokumen sebelum klaim BPJS diajukan.- Audit perlu ditempatkan dalam alur penyusunan dan pemeriksaan resume medis sebelum pengajuan klaim.- Jangan menggunakan asumsi bahwa CPPT dan resume medis sama-sama terkunci secara permanen.- Informasi bahwa CPPT tidak dapat diubah, sedangkan resume medis masih dapat diubah, perlu tercermin secara tepat dalam uraian proses bisnis dan batasan penelitian.Masih ada beberapa hal yang perlu kita pastikan:1. Kapan resume medis pertama kali disusun dalam alur pelayanan?2. Pada tahap mana audit dilakukan?3. Bagaimana mekanisme tindak lanjut jika ditemukan ketidaksesuaian antara CPPT dan resume medis?4. Data historis apa yang tersedia untuk pengujian: resume versi pertama, versi akhir, atau riwayat perubahan?Explore juga C:\\Users\\HYPE R Series\\worktrees\\project-proposal-setup\\Penyelarasan Pemahaman Capstone.md karena itu dari client yang mungkin saja jawabannya terlampir disana.Mohon jangan langsung mengubah keputusan atau memperluas ruang lingkup proposal berdasarkan klarifikasi ini. Kita perlu menyelaraskan temuan tersebut dengan keputusan yang sudah disepakati dan mencatat hal-hal yang masih memerlukan konfirmasi."
 note_2: Pemeriksaan A01 (bukan A13) atas Penyelarasan terhadap konflik ini (dilaporkan A01; belum diverifikasi A13 ke berkas): baris 17 ("CPPT dan resume dikunci setelah layanan selesai"), baris 84 dan Q-TEAM butir 5 ("CPPT dan resume yang sudah terkunci") mengandaikan keduanya terkunci. Butir Q-TEAM 5 (prosedur membuka kembali CPPT dan resume terkunci) berstatus "Perlu ditanyakan". Kemajuan 2026-11-08 (siklus 1 DRAF 12, laporan A01/a05, belum diverifikasi A13 ke berkas): paragraf 6 sudah mengikuti D-57 dan memuat penanda #33 yang merujuk arti penguncian I.1 p14 (F-A07-0051 RESOLVED oleh a07), tetapi I.1 baris 75 dan 89 ("CPPT dan resume medis dikunci setelah pelayanan selesai"; premis kedua "sebelum CPPT dan resume medis dikunci") masih mengandaikan keduanya dikunci, bertentangan dengan arah klarifikasi RSIA; I.1 tidak diubah (menunggu keputusan). Status tetap MENUNGGU ANGGOTA. Konflik juga menyentuh F-A05-0024 (arti penguncian belum diketahui) dan F-A07-0051 (p6 belum dikaitkan dengan penanda arti penguncian di I.1 p14).
@@ -1050,6 +1060,7 @@ status: MENUNGGU ANGGOTA
 updated: 2026-11-08
 refs: [D-58, D-29, D-56, Q-TEAM butir 8, Q-B1-y, Q-B1-ad, Q-B1-j, F-A05-0026, F-A11-0015, F-A05-0034, F-A11-0016, F-A11-0017, Q-A04-c, Q-B1-bj]
 note: Tidak diputuskan D-58. Menurut catatan A01, membutuhkan Approval Request lanjutan dan pembahasan tim. Butir turunan dari Q-B1-bd.
+note_2026-11-09_TSK-116: 'Tetap terbuka: tertahan D-19 dan belum adanya data agregat. Usulan pengguna D-78 (operator ">=") dan D-79 (mikro, 0/0 tidak terdefinisi) tidak menetapkan angka ambang, selisih minimum, atau kondisi keabsahan stratum.'
 ```
 
 ```yaml
@@ -1085,9 +1096,10 @@ affected: [Bab I, I.2, I.3, I.5]
 class: L3
 pic: Pengguna
 ask_to: Tim / Pembimbing
-status: TERBUKA
-updated: 2026-11-08
-refs: [F-A11-0015, F-A05-0026, D-29, D-58, D-56, D-21, Q-B1-bg, Q-B1-y, F-A07-0067, F-A05-0034]
+status: MENUNGGU ANGGOTA
+updated: 2026-11-09
+refs: [F-A11-0015, F-A05-0026, D-29, D-58, D-56, D-21, Q-B1-bg, Q-B1-y, F-A07-0067, F-A05-0034, D-76]
+note_2026-11-09_TSK-116: 'USUL PENGGUNA (D-76, lingkup terbatas; BUKAN keputusan tim/RSIA): rawat jalan tetap dijawab terpisah, bersyarat: bila dokumen setara resume terbukti ada dan memadai; bila tidak, dilaporkan "tidak dapat dinilai", bukan "tidak". Catatan A13: pertanyaan yang diajukan A01 (rawat jalan terpisah dari rawat inap) berbeda rumusan dari pertanyaan butir ini (syarat D-29 bila satu aturan); butir ini TIDAK dianggap terjawab sepenuhnya, opsi (d) a11 sebagian mirip tetapi tidak dipilih secara eksplisit. Q-B1-f dan Q-TEAM butir 4 tetap terbuka. Status diubah dari TERBUKA ke MENUNGGU ANGGOTA karena menunggu tim/RSIA.'
 note: Pembaruan TSK-107 (2026-11-09): QA I.5 DRAF 19 mencatat I.2/I.3/I.5 tidak memuat penanda Q-B1-bj (F-A11-0015 tetap OPEN HIGH; F-A07-0067; F-A05-0034 diperkuat I.1 p20); belum ada keputusan. Butir asli: butir baru dari QA siklus 2 DRAF 13 (TSK-082). Opsi a-d adalah usulan a11, bukan opsi yang ditawarkan ke pengguna; bukan keputusan. Siklus otomatis D-06 habis, sehingga tidak ada revisi otomatis atas butir ini. Pembaruan TSK-109 (2026-11-09): I.5 dibawa ke pembimbing dan tim tanpa revisi (TSK-108 DROPPED); status tetap TERBUKA.
 ```
 
@@ -1098,10 +1110,10 @@ affected: [Bab I, I.1 p16]
 class: L3
 pic: Pengguna
 ask_to: Pengguna
-status: TERBUKA
-updated: 2026-11-08
-refs: [D-59, F-A07-0062]
-note: Butir baru dari QA siklus 1 DRAF 15 (TSK-087..090, dicatat TSK-092). Tafsir D-59 menunggu pengguna; bukan keputusan.
+status: DIPUTUSKAN → D-67
+updated: 2026-11-09
+refs: [D-59, F-A07-0062, D-67, F-A02-0201, F-A02-0202, F-A02-0203]
+note: Butir baru dari QA siklus 1 DRAF 15 (TSK-087..090, dicatat TSK-092). Pembaruan TSK-114 (2026-11-09): setelah a02 membaca kedua PDF hibrida (TSK-113), pengguna memilih "Keterbatasan tetap, tanpa sumber hibrida" → D-67. Penanda hibrida diganti kalimat batas oleh penulis (BELUM dilakukan); Ijadi Maghsoodi dkk. tidak masuk telaah; kalimat "tidak satu pun sumber ..." dipertahankan. Koreksi referensi: penanda hibrida di naskah DRAF 19 ada di I.1 p20 (penanda 14), bukan #13 di p16. F-A02-0201 ditangani keputusan ini; status F-A07-0062 dan F-A02-0201 tidak diubah (hanya auditor penemu).
 ```
 
 ```yaml
@@ -1124,10 +1136,10 @@ affected: [Bab I, I.1, D-22]
 class: L3
 pic: Pengguna
 ask_to: Pengguna
-status: TERBUKA
-updated: 2026-11-08
-refs: [F-A05-0109, D-22, D-60]
-note: F-A05-0109 menantang D-22 (diperkuat II.5:152). D-60 tidak memutuskan butir ini. Bukan keputusan.
+status: DIPUTUSKAN → D-72 (menunggu pembimbing)
+updated: 2026-11-09
+refs: [F-A05-0109, D-22, D-60, D-72]
+note: F-A05-0109 menantang D-22 (diperkuat II.5:152). D-60 tidak memutuskan butir ini. Pembaruan TSK-114 (2026-11-09): pengguna memilih mempertahankan D-22 dengan catatan batas perbandingan dinyatakan eksplisit → D-72. D-22 tidak berubah. Persetujuan pembimbing BELUM ada. Status F-A05-0109 tidak diubah.
 ```
 
 ```yaml
@@ -1189,10 +1201,10 @@ affected: [Bab I, I.2 p2, I.5 p4]
 class: L2
 pic: Pengguna
 ask_to: Pengguna
-status: TERBUKA
+status: DIPUTUSKAN → D-68
 updated: 2026-11-09
-refs: [F-A09-0154, F-A09-0126, Q-B1-bo]
-note: Butir baru dari TSK-089 terarah DRAF 17 (dicatat TSK-096). LOW, lintas bagian. Bukan keputusan.
+refs: [F-A09-0154, F-A09-0126, Q-B1-bo, D-68]
+note: Butir baru dari TSK-089 terarah DRAF 17 (dicatat TSK-096). LOW, lintas bagian. Pembaruan TSK-114 (2026-11-09): pengguna memilih "Izinkan, hanya singkatan" → D-68 (izin a03 hanya untuk singkatan di I.2 p2 dan I.5 p4; belum dikerjakan). Q-B1-bo tetap TERBUKA.
 ```
 
 ```yaml
@@ -1228,10 +1240,10 @@ affected: [Bab I, I.1 p18-p19]
 class: L3
 pic: Pengguna
 ask_to: Pengguna
-status: TERBUKA
+status: DIPUTUSKAN → D-73 (menunggu pembimbing)
 updated: 2026-11-09
-refs: [F-A05-0130, D-63]
-note: Butir baru dari TSK-090 terarah keempat DRAF 19 (dicatat TSK-102). requires_decision true. Bukan keputusan.
+refs: [F-A05-0130, D-63, D-73]
+note: Butir baru dari TSK-090 terarah keempat DRAF 19 (dicatat TSK-102). requires_decision true. Pembaruan TSK-114 (2026-11-09): pengguna memilih "Bedakan istilah secara eksplisit" → D-73 (D-63 dipertahankan dan diperjelas). Persetujuan pembimbing BELUM ada; revisi belum dilakukan; status F-A05-0130 tidak diubah.
 ```
 
 ```yaml
@@ -1241,10 +1253,10 @@ affected: [Bab I, I.1 p18]
 class: L3
 pic: Pengguna
 ask_to: Pengguna
-status: TERBUKA
+status: DIPUTUSKAN → D-74 (menunggu pembimbing)
 updated: 2026-11-09
-refs: [F-A05-0131, D-65, D-29]
-note: Butir baru dari TSK-090 terarah keempat DRAF 19 (dicatat TSK-102). requires_decision true. Bukan keputusan.
+refs: [F-A05-0131, D-65, D-29, D-74, Q-B1-cc]
+note: Butir baru dari TSK-090 terarah keempat DRAF 19 (dicatat TSK-102). requires_decision true. Pembaruan TSK-114 (2026-11-09): pengguna memilih "Persempit makna 'saling melengkapi'" → D-74 (mengubah sebagian D-65; ditandai). Turunan terbuka: Q-B1-cc (keadaan ketiga di I.3). Persetujuan pembimbing BELUM ada; status F-A05-0131 tidak diubah.
 ```
 
 ```yaml
@@ -1254,10 +1266,10 @@ affected: [Bab I, I.1 p18-p19, Bab V]
 class: L3
 pic: Pengguna
 ask_to: Pembimbing
-status: TERBUKA
+status: DIPUTUSKAN → D-75 (menunggu pembimbing)
 updated: 2026-11-09
-refs: [F-A05-0132, D-62, D-63]
-note: Butir baru dari TSK-090 terarah keempat DRAF 19 (dicatat TSK-102). requires_decision true; pic Pengguna, ask_to Pembimbing menurut brief A01. Bukan keputusan.
+refs: [F-A05-0132, D-62, D-63, D-75]
+note: Butir baru dari TSK-090 terarah keempat DRAF 19 (dicatat TSK-102). requires_decision true; pic Pengguna, ask_to Pembimbing menurut brief A01. Pembaruan TSK-114 (2026-11-09): pengguna memilih "Nyatakan terbuka sebagai motivasi rancangan" → D-75. Persetujuan pembimbing BELUM ada; revisi belum dilakukan; status F-A05-0132 tidak diubah.
 ```
 
 ## Butir baru dari QA Subbab I.5 DRAF 19 (TSK-103..106, dicatat TSK-107, 2026-11-09)
@@ -1269,10 +1281,10 @@ affected: [Bab I, I.5]
 class: L3
 pic: Pengguna
 ask_to: Pengguna / Tim
-status: TERBUKA
+status: DIPUTUSKAN → D-69 (menunggu tim)
 updated: 2026-11-09
-refs: [F-A11-0021]
-note: Opsi a, b, c adalah usulan a11, bukan opsi yang ditawarkan ke pengguna. Bukan keputusan. Pembaruan TSK-109 (2026-11-09): I.5 dibawa ke pembimbing dan tim tanpa revisi (revisi TSK-108 DROPPED atas koreksi pengguna); status tetap TERBUKA, tidak ada yang diputuskan.
+refs: [F-A11-0021, D-69]
+note: Opsi a, b, c adalah usulan a11, bukan opsi yang ditawarkan ke pengguna. Pembaruan TSK-109 (2026-11-09): I.5 dibawa ke pembimbing dan tim tanpa revisi (revisi TSK-108 DROPPED atas koreksi pengguna). Pembaruan TSK-114 (2026-11-09): pengguna memilih "Label oleh penulis" → D-69 sebagai keputusan pengguna/penulis. Persetujuan tim BELUM ada; status F-A11-0021 tidak diubah.
 ```
 
 ```yaml
@@ -1282,10 +1294,10 @@ affected: [Bab I, I.5]
 class: L3
 pic: Pengguna
 ask_to: Pengguna / Tim
-status: TERBUKA
+status: DIPUTUSKAN → D-70 (sebagian; menunggu tim)
 updated: 2026-11-09
-refs: [F-A05-0136, F-A05-0138]
-note: Butir baru dari TSK-104 (dicatat TSK-107). requires_decision true. Bukan keputusan. Pembaruan TSK-109 (2026-11-09): I.5 dibawa ke pembimbing dan tim tanpa revisi; tetap TERBUKA.
+refs: [F-A05-0136, F-A05-0138, D-70, Q-B1-cb]
+note: Butir baru dari TSK-104 (dicatat TSK-107). requires_decision true. Pembaruan TSK-109 (2026-11-09): I.5 dibawa ke pembimbing dan tim tanpa revisi. Pembaruan TSK-114 (2026-11-09): pengguna memilih (1/2) "Acak, benih tetap, per jenis perawatan" dan (2/2) "Dihitung terpisah, tidak masuk presisi/recall utama" → D-70. Persetujuan tim BELUM ada. Bagian "apakah daftar jenis wajib memuat jenis konteks" (F-A05-0138) BELUM terjawab: dipindah ke butir baru Q-B1-cb (TERBUKA). Status F-A05-0136 dan F-A05-0138 tidak diubah.
 ```
 
 ```yaml
@@ -1295,10 +1307,10 @@ affected: [Bab I, I.5, I.2]
 class: L3
 pic: Pengguna
 ask_to: Pengguna / Tim
-status: TERBUKA
+status: DIPUTUSKAN → D-71 (menunggu tim)
 updated: 2026-11-09
-refs: [F-A05-0133, D-29, Q-TEAM butir 1]
-note: Butir baru dari TSK-104 (dicatat TSK-107); terkait Q-TEAM butir 1. requires_decision true. Bukan keputusan. Pembaruan TSK-109 (2026-11-09): I.5 dibawa ke pembimbing dan tim tanpa revisi; tetap TERBUKA.
+refs: [F-A05-0133, D-29, Q-TEAM butir 1, D-71]
+note: Butir baru dari TSK-104 (dicatat TSK-107); terkait Q-TEAM butir 1. requires_decision true. Pembaruan TSK-109 (2026-11-09): I.5 dibawa ke pembimbing dan tim tanpa revisi. Pembaruan TSK-114 (2026-11-09): pengguna memilih "Keduanya menyasar seluruh daftar jenis" → D-71 sebagai keputusan pengguna. Persetujuan tim BELUM ada (Q-TEAM butir 1 tetap menunggu tim); status F-A05-0133 tidak diubah.
 ```
 
 ```yaml
@@ -1308,8 +1320,180 @@ affected: [Bab I, I.5]
 class: L3
 pic: Pengguna
 ask_to: Pengguna
+status: DIPUTUSKAN → D-66
+updated: 2026-11-09
+refs: [F-A07-0070, D-66]
+note: Butir baru dari TSK-105 (dicatat TSK-107). requires_decision true. Pembaruan TSK-109 (2026-11-09): I.5 dibawa ke pembimbing dan tim tanpa revisi. Pembaruan TSK-114 (2026-11-09): pengguna memilih "Gabung ke tahap evaluasi" → D-66 (lima tahap tetap). Koreksi A01: label "(Rekomendasi agent a07)" pada opsi itu salah; F-A07-0070 tidak merekomendasikan opsi apa pun. Dampak ke I.3 dan penanda I.5 menunggu revisi; status F-A07-0070 tidak diubah.
+```
+
+## Butir baru dari keputusan 2026-11-09 (TSK-114)
+
+```yaml
+id: Q-B1-cb
+question: Apakah daftar jenis ketidaksesuaian wajib memuat jenis konteks (F-A05-0138)? Bagian ini tidak terjawab oleh D-70 (yang hanya memutuskan perlakuan temuan RAG di luar daftar).
+affected: [Bab I, I.5]
+class: L3
+pic: Pengguna
+ask_to: Pengguna / Tim
 status: TERBUKA
 updated: 2026-11-09
-refs: [F-A07-0070]
-note: Butir baru dari TSK-105 (dicatat TSK-107). requires_decision true. Bukan keputusan. Pembaruan TSK-109 (2026-11-09): I.5 dibawa ke pembimbing dan tim tanpa revisi; tetap TERBUKA.
+refs: [F-A05-0138, D-70, Q-B1-by]
+note: Butir baru dari TSK-114 (turunan Q-B1-by 2/2). requires_decision true. Bukan keputusan.
+```
+
+```yaml
+id: Q-B1-cc
+question: Keadaan ketiga yang berjawab "tidak" (komponen saling melengkapi menurut jenis pemeriksaan, tetapi kenaikan presisi/recall di bawah selisih minimum D-29) belum ditangani di I.3 dan I.5. Bagaimana kondisi itu dinyatakan setelah D-74 mempersempit makna "saling melengkapi"?
+affected: [Bab I, I.3, I.5, I.1 p18]
+class: L3
+pic: Pengguna
+ask_to: Penulis / Pembimbing
+status: MENUNGGU DATA
+updated: 2026-11-09
+refs: [F-A05-0131, D-74, D-65, D-29, D-33, Q-B1-bv, D-81, D-82, F-A07-0072, F-A07-0073, F-A07-0074, F-A07-0075, F-A11-0024, F-A05-0150]
+note: Butir baru dari TSK-114 (turunan D-74). Pembaruan TSK-124 (2026-11-09): bagian teks keadaan ketiga ditangani D-81 (kalimat p19 diselaraskan dengan D-74) dan D-82 (selisih minimum bersyarat masuk I.2 p6); pengerjaan naskah oleh a03 (TSK-123, DRAF 21); persetujuan pembimbing BELUM ada. Bagian yang TETAP TERBUKA: hasil kosong atau tidak terdefinisi (0/0) dan status "tidak dapat dinilai" belum dipetakan ke jawaban (F-A11-0024 MEDIUM, hanya dipicu dokumen rawat jalan; F-A05-0150), serta keabsahan I.3 p1 vs p2 (F-A07-0074, requires_decision) dan rujukan kondisi keabsahan dari I.5 p6/I.3 p3 (F-A07-0075). Bukan keputusan. Pembaruan TSK-131 (2026-11-09): a07 menyatakan F-A07-0072..0075 RESOLVED dan a11 F-A11-0030 RESOLVED (menurut auditor), tetapi bentuk baru terbuka: F-A11-0037 (LOW, requires_decision: keabsahan hanya dinyatakan untuk jawaban "tidak" di I.3 p1), F-A05-0156 (MEDIUM: keabsahan dan kategori ketiga tak terikat sebelum pengujian), F-A11-0024 (membaik sebagian), F-A05-0150 (bentuk berubah). Izin alur DRAF 22 menyelaraskan I.3 (keabsahan sebelum pengujian untuk "ya" maupun "tidak"); itu penyelarasan teks, bukan keputusan akademik.
+```
+
+```yaml
+id: Q-B1-cd
+question: Cakupan revisi a03 atas DRAF 20 (penerapan D-66..D-75 dan usulan D-76..D-80 ke Bab I) belum diputuskan
+affected: [Bab I]
+class: L3
+pic: Pengguna
+ask_to: Pengguna / tim / pembimbing
+status: DITUTUP DENGAN ALASAN (dijawab pengguna 2026-11-09; izin revisi terarah, bukan keputusan akademik; revisi dijalankan TSK-117 → DRAF 20)
+updated: 2026-11-09
+refs: [D-66, D-67, D-68, D-69, D-70, D-71, D-72, D-73, D-74, D-75, D-76, D-77, D-78, D-79, D-80, TSK-117, TSK-123]
+note: Butir baru dari TSK-116. Pengguna semula menjawab "Coba tanyakan ke saya terkait yang putusannya adalah tim" (verbatim; BUKAN persetujuan). Pembaruan TSK-124 (2026-11-09): pertanyaan "Setelah a13 selesai mencatat, apakah a03 dijalankan untuk revisi Bab I menjadi DRAF 20?" (opsi: "Jalankan, butir milik Anda saja (Recommended)" | "Jalankan, termasuk usulan tim sebagai penanda" | "Jangan revisi sekarang") dijawab "Jalankan, termasuk usulan tim sebagai penanda". Ini izin revisi terarah (TSK-117) di luar siklus D-06; usulan tim hanya sebagai penanda [MENUNGGU KEPUTUSAN TIM], bukan keputusan tim. Izin lanjutan DRAF 21 (TSK-123) dicatat di TASK_TRACKER. Ditutup karena dijawab; persetujuan tim dan pembimbing atas D-69..D-80 tetap BELUM ada.
+```
+
+```yaml
+id: Q-B1-ce
+question: Kriteria pemilihan kombinasi (D-61) tidak membedakan pasangan aturan+RAG dari pasangan lain; bagaimana kriteria dibuat spesifik pada pasangan yang diuji?
+affected: [Bab I, I.1 p18]
+class: L3
+pic: Pengguna
+ask_to: Pengguna / pembimbing
+status: TERBUKA
+updated: 2026-11-09
+refs: [F-A05-0142, D-61, D-73]
+note: Butir baru dari TSK-124 (QA DRAF 20, a05 TSK-122). requires_decision true. Dalam cakupan "tidak disentuh" DRAF 21. Bukan keputusan.
+```
+
+```yaml
+id: Q-B1-cf
+question: Kata "pertimbangan" Dietrich di I.1 p20 tanpa fungsi dan kategori kontradiksi tidak disebut; apa fungsi rujukan itu?
+affected: [Bab I, I.1 p20]
+class: L3
+pic: Pengguna
+ask_to: Pengguna / pembimbing
+status: TERBUKA
+updated: 2026-11-09
+refs: [F-A05-0144]
+note: Butir baru dari TSK-124 (a05 TSK-122). MEDIUM. Dalam cakupan "tidak disentuh" DRAF 21. Bukan keputusan.
+```
+
+```yaml
+id: Q-B1-cg
+question: Apakah "sumber yang ditelaah" pada kalimat batas I.1 p20 mencakup Bab II DRAFT 6 saja, lima studi p16, atau juga II.4 lama? Dan apakah Zeba (aturan + encoder, dua tahap) perlu disebut agar tidak terbaca sebagai kontra-contoh?
+affected: [Bab I, I.1 p20, Bab II]
+class: L3
+pic: Pengguna
+ask_to: Pengguna / a05 / a08
+status: TERBUKA
+updated: 2026-11-09
+refs: [F-A05-0146, F-A08-0101, F-A08-0102, D-67, D-85, F-A09-0235, F-A07-0087]
+note: Butir baru dari TSK-124. Pertanyaan a05 (TSK-122); D-85 menetapkan cakupan dan sifat tidak sistematis harus dinyatakan, tetapi isi cakupan belum ditetapkan. Pembaruan TSK-131 (2026-11-09): D-85 dan kalimat batas p22 DRAF 21 sudah menyatakan cakupan (a08 TSK-127: konsisten dengan H-01..H-03, D-67, D-85), tetapi himpunan rujukan literatur belum diseragamkan (F-A05-0154 LOW; F-A07-0083 INFO: ungkapan cakupan literatur berbeda-beda; F-A08-0108 INFO: cakupan "Bab II"). Bagian itu TETAP TERBUKA; DRAF 22 (TSK-130) tidak mencakupnya. Bukan keputusan.
+note_TSK-136: 'Pembaruan 2026-11-09 (QA DRAF 22): F-A09-0235 (LOW, requires_decision): "studi lain pada Bab II" di I.1 p19 vs "kelima studi"/Zhang; bentuk berasal dari keputusan pengguna D-86. F-A07-0087 (LOW): alasan Zhang tidak dihitung sebagai dukungan p21 setelah kalimat penutup p19 dikeluarkan; alasan harus ditulis tanpa menafsirkan D-61, bila tidak bisa ke pengguna. a08 TSK-134: kalimat penutup p19 DIDUKUNG sumber; F-A08-0112 (INFO): Gao dkk. dan Ali dkk. di batas klaim kekosongan dinilai dari teks Bab II. Bagian himpunan rujukan literatur tetap TERBUKA; DRAF 23 (TSK-135) tidak mencakupnya. Bukan keputusan.'
+```
+
+```yaml
+id: Q-B1-ch
+question: Jawaban pertanyaan 1 bergantung pada tahap 5 (pengguna proksi); apakah ketergantungan itu dinyatakan di Bab I (menantang D-66)?
+affected: [Bab I, I.5]
+class: L3
+pic: Pengguna
+ask_to: Pengguna
+status: TERBUKA
+updated: 2026-11-09
+refs: [F-A05-0148, F-A11-0032, D-66]
+note: Butir baru dari TSK-124 (a05 F-A05-0148 LOW, challenges D-66; a11 F-A11-0032 INFO: jawaban menunggu tahap 5, risiko ke mitigasi). Dalam cakupan "tidak disentuh" DRAF 21. Bukan keputusan.
+```
+
+```yaml
+id: Q-B1-ci
+question: Satuan pengacakan dan ukuran stratum untuk pengacakan per jenis perawatan: acak memilih per episode, sedangkan data dibagi per pasien. Bagaimana satuannya ditetapkan?
+affected: [Bab I, I.5]
+class: L3
+pic: Pengguna
+ask_to: Tim / pembimbing
+status: MENUNGGU DATA
+updated: 2026-11-09
+refs: [F-A11-0025, F-A11-0016, Q-B1-bg, Q-A04-c]
+note: Butir baru dari TSK-124 (a11 TSK-121, MEDIUM). Data agregat tidak ada, sehingga ukuran stratum tidak dapat dinilai. Bukan keputusan.
+```
+
+```yaml
+id: Q-B1-cj
+question: D-71 bertentangan dengan pembagian jenis tersirat di Penyelarasan (:69, :76); bagaimana keduanya diselaraskan? Juga: agregasi mikro (D-79) mendahului Q-A04-d.
+affected: [Bab I, I.5, Penyelarasan]
+class: L3
+pic: Pengguna
+ask_to: Tim
+status: TERBUKA
+updated: 2026-11-09
+refs: [F-A11-0026, F-A11-0027, D-71, D-79, Q-A04-d]
+note: Butir baru dari TSK-124 (a11 TSK-121: F-A11-0026 MEDIUM, F-A11-0027 LOW). Terkait juga F-A11-0023 (union hanya formal memenuhi D-32; uji D-29 asimetris; bergantung aturan temuan ganda; ke tim) dan F-A07-0076 (INFO). Bukan keputusan.
+```
+
+```yaml
+id: Q-B1-ck
+question: Arti "memadai" pada usulan Q-B1-bj tidak terdefinisi, dan rumusan usulan Q-B1-bj ("terpisah") berbeda dari pertanyaan yang diajukan A01 serta taksa; bagaimana dirumuskan ulang?
+affected: [Bab I, I.5, OPEN_QUESTIONS Q-B1-bj]
+class: L3
+pic: Pengguna
+ask_to: Tim
+status: TERBUKA
+updated: 2026-11-09
+refs: [F-A05-0149, F-A05-0151, F-A09-0184, F-A09-0194, Q-B1-bj, D-76, D-78]
+note: Butir baru dari TSK-124. F-A05-0149 (MEDIUM, ke tim), F-A05-0151 (LOW; dasar usulan ">=" bertentangan dengan kalimat sebelumnya), F-A09-0184 (cakupan selisih I.5 p6 taksa), F-A09-0194 (requires_decision). Pengamatan A01: Q-B1-bj di OPEN_QUESTIONS memiliki rumusan berbeda dari pertanyaan yang diajukan A01 (belum direkonsiliasi; tidak diubah A13). Bukan keputusan.
+```
+
+```yaml
+id: Q-B1-cl
+question: Berkas Bab II mana yang aktif? Berkas lama II.4/II.7/II.8 masih mengutip Domingues dan Ijadi, sedangkan DRAFT 6 dan I.1 p20 tidak menelaahnya.
+affected: [Bab II, I.1 p20]
+class: L3
+pic: Pengguna
+ask_to: Pengguna
+status: TERBUKA
+updated: 2026-11-09
+refs: [F-A08-0103, F-A05-0146, Q-B1-bn, D-67]
+note: Butir baru dari TSK-124 (a08 TSK-120, LOW). Bukan keputusan.
+```
+
+```yaml
+id: Q-B1-cm
+question: Apa arti "saling melengkapi" dan "tidak memberi informasi" bagi jawaban "tidak" setelah D-74/D-81: definisi D-74 memuat bagian empiris, sikap terhadap jawaban "ya" belum dinyatakan, dan dengan union recall jawaban "tidak" memberi informasi teramati tentang kontribusi unik?
+affected: [Bab I, I.1 p18-19, I.3, I.5]
+class: L3
+pic: Pengguna
+ask_to: Pembimbing / tim
+status: TERBUKA
+updated: 2026-11-09
+refs: [F-A05-0152, F-A11-0038, D-74, D-81, D-65, D-32, F-A11-0023]
+note: Butir baru dari TSK-131 (a05 TSK-129: F-A05-0152 MEDIUM, menantang D-74/D-81, requires_decision; a11 TSK-128: F-A11-0038 LOW, requires_decision, ke tim). Di luar cakupan DRAF 22 (TSK-130 tidak menyentuh F-A05-0152/F-A11-0038). Bukan keputusan.
+```
+
+```yaml
+id: Q-B1-cn
+question: Bagaimana ketersediaan dokumen rawat jalan dinilai (kriteria "tersedia" vs "ada dan memadai", satuan, pelaku), mengingat ketergantungan melingkar dengan I.4?
+affected: [Bab I, I.4, I.5]
+class: L3
+pic: Pengguna
+ask_to: Tim
+status: TERBUKA
+updated: 2026-11-09
+refs: [F-A05-0157, F-A11-0033, Q-B1-ba, Q-B1-bj, Q-B1-ck]
+note: Butir baru dari TSK-131 (a05 F-A05-0157 MEDIUM, requires_decision, ke tim; a11 F-A11-0033 LOW). Di luar cakupan DRAF 22 (TSK-130 tidak menyentuh F-A05-0157). Bukan keputusan.
 ```

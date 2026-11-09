@@ -1,10 +1,10 @@
 ---
 file: DECISION_LOG
-revision: 32
+revision: 36
 status: CURRENT
 updated: 2026-11-09
 updated_by: a13-memory-manager
-based_on_commit: 4351fe5
+based_on_commit: c056d20
 ---
 
 # Decision Log
@@ -1456,4 +1456,452 @@ approval_evidence:
   answered_at: '2026-11-09'
   session_ref: 'sesi /sesi-mulai 2026-11-08 (lanjutan, 2026-11-09), AskUserQuestion Jawaban "tidak"'
   scope: 'Hanya kalimat alasan jawaban "tidak" di I.1 paragraf 18: diperluas dengan struktur syarat D-29 dan ketergantungan pada mekanisme kombinasi (D-32) tanpa memilih mekanisme; D-29, D-32, D-33 tidak berubah'
+```
+
+Catatan A13 untuk D-66 sampai D-75 (brief TSK-114, jawaban pengguna 2026-11-09 lewat AskUserQuestion): (1) [Diperbarui TSK-116: A01 melengkapi `options_offered` D-66..D-75 dengan opsi penuh; frasa "opsi lain tidak diterima A13" pada `alternatives_considered` dan `consequences` kini usang untuk daftar opsi.] (2) Keputusan yang pemutusnya "Anda dan tim" atau "Anda dan pembimbing" dicatat sebagai keputusan PENGGUNA; persetujuan tim atau pembimbing BELUM ada dan tidak dicatat sebagai telah diberikan. (3) Revisi naskah atas keputusan ini BELUM dilakukan; naskah tidak diubah pada pencatatan ini. (4) Status temuan terkait tidak diubah oleh A13; RESOLVED hanya oleh auditor penemu, REJECTED dan WAIVED hanya oleh pengguna.
+
+## D-66
+
+```yaml
+id: D-66
+decision: 'Penyusunan jawaban rumusan masalah (mengubah hasil uji menjadi jawaban "ya"/"tidak" per jenis perawatan) di I.5 digabung ke tahap evaluasi; bukan tahap tersendiri; kelima tahap I.5 tetap'
+class: L3
+status: APPROVED (lingkup terbatas)
+date: '2026-11-09'
+related: [Q-B1-ca, F-A07-0070, D-33, D-29]
+basis: 'Jawaban pengguna atas AskUserQuestion Q-B1-ca, diteruskan A01 (brief TSK-114)'
+alternatives_considered: ['Tahap tersendiri (tidak dipilih; daftar opsi lengkap tidak diterima A13)']
+consequences: 'KOREKSI A01 atas label opsi: label "(Rekomendasi agent a07)" pada opsi yang dipilih SALAH; F-A07-0070 tidak merekomendasikan opsi apa pun (hanya requires_decision). Pilihan pengguna ditetapkan menurut isinya (digabung ke tahap evaluasi), bukan menurut label itu. Dampak yang disebut dalam pertanyaan: I.3 (syarat keberhasilan = jawaban, D-33) dan penanda di I.5 ikut terpengaruh; revisi I.5 BELUM dilakukan. Status F-A07-0070 tidak diubah (hanya auditor penemu).'
+approval_evidence:
+  question: 'Q-B1-ca (L3, pemutus: Anda): Apakah penyusunan jawaban rumusan masalah dijadikan tahap tersendiri di metodologi I.5? Tahap itu mengubah hasil uji menjadi jawaban ''ya''/''tidak'' per jenis perawatan (F-A07-0070). Dampak: I.3 (syarat keberhasilan = jawaban, D-33) dan penanda di I.5 ikut terpengaruh.'
+  options_offered: ['Jadikan tahap tersendiri', 'Gabung ke tahap evaluasi (Rekomendasi agent a07) [opsi terpilih; label rekomendasi dikoreksi A01 sebagai salah, lihat consequences]', 'Tidak diubah, bawa ke pembimbing']
+  user_answer: 'Gabung ke tahap evaluasi (Rekomendasi agent a07)'
+  answered_at: '2026-11-09'
+  session_ref: 'sesi 2026-11-09, AskUserQuestion Q-B1-ca, diteruskan A01 (brief TSK-114)'
+  scope: 'Hanya penempatan penyusunan jawaban di I.5: digabung ke tahap evaluasi (lima tahap tetap), bukan tahap tersendiri; tanpa perubahan rumusan masalah, D-29, D-33'
+```
+
+## D-67
+
+```yaml
+id: D-67
+decision: 'Penanda hibrida di I.1 paragraf 20 diperlakukan sebagai keterbatasan tetap tanpa sumber hibrida: penanda diganti kalimat batas oleh penulis (BELUM dilakukan); Ijadi Maghsoodi dkk. tidak dimasukkan ke telaah; kalimat "tidak satu pun sumber yang ditelaah menyatakan bahwa satu komponen saja tidak cukup" dipertahankan'
+class: L3
+status: APPROVED (lingkup terbatas)
+date: '2026-11-09'
+related: [Q-B1-bk, D-59, F-A07-0062, F-A02-0201, F-A02-0202, F-A02-0203]
+basis: 'Jawaban pengguna atas dua AskUserQuestion Q-B1-bk, diteruskan A01 (brief TSK-114)'
+alternatives_considered: ['Pertanyaan 1: opsi lain tidak diterima A13', 'Pertanyaan 2: opsi lain tidak diterima A13']
+consequences: 'Pertanyaan 1 ("Panggil a02 baca kedua PDF dulu (Recommended)") adalah izin tugas a02 (TSK-113), BUKAN keputusan substantif. Pertanyaan 2 memutuskan Q-B1-bk. Hasil a02 (TSK-113): tidak ada sumber yang menguji kombinasi aturan+LLM; Ijadi Maghsoodi dkk. (tinjauan naratif) hanya memberi argumen konseptual dan trade-off dengan rumusan "might" (hlm. 2, 7, 9, 10). F-A02-0201 ditangani keputusan ini (status mengikuti jawaban pengguna; tidak ditandai RESOLVED tanpa a07/a08). Rekonsiliasi referensi: penanda hibrida di naskah ada di I.1 p20 (penanda 14 dalam daftar penanda), sedangkan Q-B1-bk dan F-A07-0062 menyebut #13 di p16 (DRAF 15, lama). Penggantian penanda belum dilakukan. Menjawab tafsir D-59 untuk penanda ini (keterbatasan permanen, bukan tugas tertunda).'
+approval_evidence:
+  question: 'Pertanyaan 2 (pemutus: Anda): Q-B1-bk (pemutus: Anda): Setelah a02 membaca kedua PDF, tidak ada sumber yang menguji kombinasi aturan+LLM; Ijadi Maghsoodi dkk. (tinjauan naratif, hlm. 2, 7, 9, 10) hanya memberi argumen konseptual dan trade-off, dengan rumusan ''might''. Bagaimana penanda hibrida di I.1 p20 diperlakukan? | Pertanyaan 1 (izin tugas a02): Q-B1-bk: kedua PDF hibrida ada di source/16_Sistem_Hibrida_Aturan_dan_AI/ tetapi belum pernah dibaca. Bagaimana kita lanjut?'
+  options_offered: ['Pertanyaan 2 (Q-B1-bk): "Keterbatasan tetap, tanpa sumber hibrida" [terpilih] | "Pakai Ijadi sebagai alasan konseptual berlabel" | "Bawa ke pembimbing, penanda tetap"', 'Pertanyaan 1 (izin a02): "Panggil a02 baca kedua PDF dulu (Recommended)" [terpilih] | "Putuskan sekarang: keterbatasan tetap" | "Putuskan sekarang: tugas belum dikerjakan"']
+  user_answer: 'Pertanyaan 2: "Keterbatasan tetap, tanpa sumber hibrida". Pertanyaan 1 (izin tugas): "Panggil a02 baca kedua PDF dulu (Recommended)"'
+  answered_at: '2026-11-09'
+  session_ref: 'sesi 2026-11-09, AskUserQuestion Q-B1-bk (dua pertanyaan berurutan), diteruskan A01 (brief TSK-114)'
+  scope: 'Hanya perlakuan penanda hibrida di I.1 p20: keterbatasan tetap tanpa sumber hibrida; penanda diganti kalimat batas oleh penulis; Ijadi Maghsoodi dkk. tidak masuk telaah; kalimat "tidak satu pun sumber ..." dipertahankan; tanpa sumber baru di daftar referensi'
+```
+
+## D-68
+
+```yaml
+id: D-68
+decision: 'a03 diberi izin menyunting I.2 paragraf 2 dan I.5 paragraf 4 hanya untuk menyelaraskan singkatan AI, NLP, RAG, dan LLM dengan cara I.1 memperkenalkannya; tidak ada perubahan klaim atau keputusan'
+class: L2
+status: APPROVED (lingkup terbatas)
+date: '2026-11-09'
+related: [Q-B1-br, F-A09-0154, F-A09-0126, Q-B1-bo]
+basis: 'Jawaban pengguna atas AskUserQuestion Q-B1-br, diteruskan A01 (brief TSK-114)'
+alternatives_considered: ['Opsi lain tidak diterima A13']
+consequences: 'Izin write a03 terbatas pada singkatan di dua paragraf itu; perubahan BELUM dilakukan. I.5 paragraf 4 juga menyangkut Q-B1-bo (tetap TERBUKA; D-68 tidak memutuskannya). Status F-A09-0154 dan F-A09-0126 tidak diubah (hanya auditor penemu).'
+approval_evidence:
+  question: 'Q-B1-br (L2, pemutus: Anda): Apakah a03 (penulis) diberi izin menyunting I.2 paragraf 2 dan I.5 paragraf 4 untuk menyelaraskan singkatan AI, NLP, RAG, dan LLM dengan cara I.1 memperkenalkannya? Perubahan terbatas pada singkatan; tidak ada perubahan klaim atau keputusan. Catatan: I.5 paragraf 4 juga menyangkut Q-B1-bo.'
+  options_offered: ['Izinkan, hanya singkatan [terpilih]', 'Jangan izinkan sekarang']
+  user_answer: 'Izinkan, hanya singkatan'
+  answered_at: '2026-11-09'
+  session_ref: 'sesi 2026-11-09, AskUserQuestion Q-B1-br, diteruskan A01 (brief TSK-114)'
+  scope: 'Hanya penyelarasan singkatan AI, NLP, RAG, LLM di I.2 paragraf 2 dan I.5 paragraf 4 oleh a03; tanpa perubahan klaim atau keputusan'
+```
+
+## D-69
+
+```yaml
+id: D-69
+decision: 'Data pengembangan di I.5 diberi label oleh penulis'
+class: L3
+status: APPROVED (keputusan pengguna; persetujuan tim BELUM ada)
+date: '2026-11-09'
+related: [Q-B1-bx, F-A11-0021]
+basis: 'Jawaban pengguna atas AskUserQuestion Q-B1-bx, diteruskan A01 (brief TSK-114)'
+alternatives_considered: ['Opsi lain tidak diterima A13 (usulan a11: tanpa label; label sebagian oleh pakar)']
+consequences: 'Pemutus yang tertulis: pengguna dan tim. Pilihan ini dicatat sebagai keputusan PENGGUNA/penulis; persetujuan tim BELUM ada dan tidak boleh dianggap ada. Menjawab arah F-A11-0021 (tahap 3 tanpa acuan), tetapi rancangan I.5 BELUM direvisi dan status F-A11-0021 tidak diubah.'
+approval_evidence:
+  question: 'Q-B1-bx (L3; pemutus: Anda dan tim, jadi pilihan Anda tercatat sebagai keputusan penulis dan perlu disepakati tim): Bagaimana data pengembangan diberi label di I.5? Saat ini hanya data uji yang dilabeli, sehingga tahap 3 (pengembangan) tidak punya acuan (F-A11-0021).'
+  options_offered: ['Tanpa label', 'Label oleh penulis [terpilih]', 'Sebagian label oleh pakar']
+  user_answer: 'Label oleh penulis'
+  answered_at: '2026-11-09'
+  session_ref: 'sesi 2026-11-09, AskUserQuestion Q-B1-bx, diteruskan A01 (brief TSK-114)'
+  scope: 'Hanya pelabelan data pengembangan di I.5 oleh penulis, sebagai keputusan pengguna; persetujuan tim tertunda'
+```
+
+## D-70
+
+```yaml
+id: D-70
+decision: 'Dua bagian Q-B1-by. (1/2) Kasus uji dipilih secara acak dengan benih tetap yang dicatat, terpisah untuk rawat inap dan rawat jalan (per jenis perawatan). (2/2) Temuan komponen AI (RAG) yang berada di luar daftar jenis ketidaksesuaian dihitung terpisah dan tidak masuk presisi/recall utama'
+class: L3
+status: APPROVED (keputusan pengguna, sebagian; persetujuan tim BELUM ada)
+date: '2026-11-09'
+related: [Q-B1-by, F-A05-0136, F-A05-0138, D-29]
+basis: 'Jawaban pengguna atas dua AskUserQuestion Q-B1-by (1/2) dan (2/2), diteruskan A01 (brief TSK-114)'
+alternatives_considered: ['Opsi lain tidak diterima A13']
+consequences: 'Pemutus yang tertulis: pengguna dan tim; pilihan dicatat sebagai keputusan PENGGUNA, persetujuan tim BELUM ada. CATATAN LINGKUP: jawaban (2/2) hanya menjawab perlakuan temuan di luar daftar; bagian "apakah daftar jenis wajib memuat jenis konteks" (F-A05-0138) BELUM terjawab dan tetap TERBUKA (butir baru Q-B1-cb). Pada (1/2), kalimat "Rekomendasi saya (bukan temuan agent)" berasal dari penanya (A01), bukan temuan agent; label "(Recommended)" bukan bukti persetujuan lebih kuat. Revisi I.5 belum dilakukan. Status F-A05-0136 dan F-A05-0138 tidak diubah.'
+approval_evidence:
+  question: 'Q-B1-by (1/2): Bagaimana kasus uji dipilih (F-A05-0136)? Rekomendasi saya (bukan temuan agent): acak dengan benih tetap yang dicatat, terpisah untuk rawat inap dan rawat jalan. | Q-B1-by (2/2): Bagaimana temuan komponen AI (RAG) yang berada di luar daftar jenis ketidaksesuaian diperlakukan, dan apakah daftar jenis wajib memuat jenis konteks (F-A05-0136, F-A05-0138)?'
+  options_offered: ['(1/2) "Acak, benih tetap, per jenis perawatan (Recommended)" [terpilih] | "Acak berstrata per jenis ketidaksesuaian" | "Berurutan". Catatan: pertanyaan awal tanpa label rekomendasi diajukan lebih dulu; pengguna bertanya "Kalau berdasarkan keadaan saat ini ...RSIA-source anda merekomendasikan apa?" (bukan keputusan), lalu dijawab pada pertanyaan berlabel ini', '(2/2) "Dihitung terpisah, tidak masuk presisi/recall utama" [terpilih] | "Dinilai penilai; yang valid dihitung benar" | "Dihitung salah (di luar daftar = tidak sah)"']
+  user_answer: '(1/2) "Acak, benih tetap, per jenis perawatan (Recommended)"; (2/2) "Dihitung terpisah, tidak masuk presisi/recall utama"'
+  answered_at: '2026-11-09'
+  session_ref: 'sesi 2026-11-09, AskUserQuestion Q-B1-by (1/2) dan (2/2), diteruskan A01 (brief TSK-114)'
+  scope: '(1/2) pemilihan kasus uji: acak, benih tetap dicatat, per jenis perawatan; (2/2) HANYA perlakuan temuan RAG di luar daftar jenis: dihitung terpisah, di luar presisi/recall utama; TIDAK mencakup apakah daftar jenis wajib memuat jenis konteks (tetap terbuka); persetujuan tim tertunda'
+```
+
+## D-71
+
+```yaml
+id: D-71
+decision: 'Tiap komponen (rule-based dan RAG) menyasar seluruh daftar jenis ketidaksesuaian; jenis tidak dibagi per komponen'
+class: L3
+status: APPROVED (keputusan pengguna; persetujuan tim BELUM ada)
+date: '2026-11-09'
+related: [Q-B1-bz, F-A05-0133, D-29, Q-TEAM butir 1]
+basis: 'Jawaban pengguna atas AskUserQuestion Q-B1-bz, diteruskan A01 (brief TSK-114)'
+alternatives_considered: ['Dibagi per komponen (tidak dipilih; daftar opsi lengkap tidak diterima A13)']
+consequences: 'Pemutus yang tertulis: pengguna dan tim (Q-TEAM butir 1). Pilihan dicatat sebagai keputusan PENGGUNA; persetujuan tim BELUM ada. Menghindari hasil uji D-29 yang mudah ditebak menurut a05 (F-A05-0133) bila jenis dibagi per komponen. Revisi I.5 dan I.2 BELUM dilakukan. Status F-A05-0133 tidak diubah.'
+approval_evidence:
+  question: 'Q-B1-bz (L3; Anda dan tim, Q-TEAM butir 1): Apakah tiap komponen (rule-based dan RAG) menyasar seluruh daftar jenis ketidaksesuaian, atau jenisnya dibagi per komponen? a05 (F-A05-0133) menilai bila dibagi per jenis, uji recall D-29 hampir pasti ''ya'' dan uji presisi union hampir pasti ''tidak'', jadi hasil mudah ditebak sebelum diuji.'
+  options_offered: ['Keduanya menyasar seluruh daftar jenis [terpilih]', 'Dibagi per jenis (rule-based untuk jenis eksplisit, RAG untuk jenis kontekstual)', 'Bawa ke tim tanpa memilih']
+  user_answer: 'Keduanya menyasar seluruh daftar jenis'
+  answered_at: '2026-11-09'
+  session_ref: 'sesi 2026-11-09, AskUserQuestion Q-B1-bz, diteruskan A01 (brief TSK-114)'
+  scope: 'Hanya cakupan jenis per komponen: keduanya menyasar seluruh daftar jenis ketidaksesuaian; keputusan pengguna, persetujuan tim tertunda'
+```
+
+## D-72
+
+```yaml
+id: D-72
+decision: 'D-22 dipertahankan (pembanding hanya masing-masing komponen: rule-based dan RAG), dengan syarat tambahan bahwa batas perbandingan dinyatakan eksplisit dalam proposal: penelitian tidak menyimpulkan kombinasi lebih baik dari pemeriksaan manual'
+class: L3
+status: APPROVED (keputusan pengguna; persetujuan pembimbing BELUM ada)
+date: '2026-11-09'
+related: [Q-B1-bm, F-A05-0109, D-22, D-60]
+basis: 'Jawaban pengguna atas AskUserQuestion Q-B1-bm, diteruskan A01 (brief TSK-114)'
+alternatives_considered: ['Tinjau ulang D-22 (tidak dipilih; daftar opsi lengkap tidak diterima A13)']
+consequences: 'D-22 TIDAK berubah. Pemutus yang tertulis: pengguna dan pembimbing; persetujuan pembimbing BELUM ada. Syarat tambahan: pernyataan eksplisit batas perbandingan (tidak menyimpulkan lebih baik dari pemeriksaan manual) belum ditulis di naskah. Status F-A05-0109 tidak diubah (hanya auditor penemu).'
+approval_evidence:
+  question: 'Q-B1-bm (L3; Anda dan pembimbing): Masalah di I.1 adalah pemeriksaan manual, tetapi D-22 memilih pembanding hanya masing-masing komponen (rule-based, RAG). a05 (F-A05-0109) menantang ini, dan Skrabic dkk. (II.5:152) membandingkan dengan dokter. Apakah D-22 dipertahankan atau ditinjau ulang?'
+  options_offered: ['Pertahankan D-22 [pilihan 1, terpilih dengan catatan pengguna]', 'Tinjau ulang: tambah pemeriksaan manual sebagai pembanding', 'Bawa ke pembimbing tanpa memilih']
+  user_answer: 'pilihan 1 — Pertahankan D-22, dengan catatan bahwa batas perbandingan harus dinyatakan secara eksplisit dalam proposal.'
+  answered_at: '2026-11-09'
+  session_ref: 'sesi 2026-11-09, AskUserQuestion Q-B1-bm, diteruskan A01 (brief TSK-114)'
+  scope: 'Hanya Q-B1-bm: D-22 dipertahankan; batas perbandingan (tidak menyimpulkan lebih baik dari pemeriksaan manual) dinyatakan eksplisit; persetujuan pembimbing tertunda'
+```
+
+## D-73
+
+```yaml
+id: D-73
+decision: 'Istilah Dietrich "penafsiran kontekstual" (hlm. 100) dibedakan secara eksplisit dari kriteria yang dipakai Bab I di I.1 paragraf 18-19; D-63 dipertahankan dan diperjelas'
+class: L3
+status: APPROVED (keputusan pengguna; persetujuan pembimbing BELUM ada)
+date: '2026-11-09'
+amends: 'D-63 (klarifikasi tambahan; D-63 dipertahankan)'
+related: [Q-B1-bu, F-A05-0130, D-63, D-61]
+basis: 'Jawaban pengguna atas AskUserQuestion Q-B1-bu, diteruskan A01 (brief TSK-114)'
+alternatives_considered: ['Opsi lain tidak diterima A13']
+consequences: 'Pemutus yang tertulis: pengguna, lalu pembimbing; persetujuan pembimbing BELUM ada. Pernyataan "perbandingan hati-hati" yang diumumkan tetapi tidak dijalankan (F-A05-0130) harus ditangani oleh revisi; revisi BELUM dilakukan. Kriteria D-61 tetap tidak diubah dan tidak ditafsirkan. Status F-A05-0130 tidak diubah.'
+approval_evidence:
+  question: 'Q-B1-bu (L3; Anda, lalu pembimbing): a05 (F-A05-0130) menantang D-63 di I.1 p18–19. Istilah Dietrich ''penafsiran kontekstual'' (hlm. 100) tidak dibedakan dari kriteria yang dipakai Bab I, dan ''perbandingan hati-hati'' diumumkan tetapi tidak dijalankan. Bagaimana ditangani?'
+  options_offered: ['Bedakan istilah secara eksplisit [terpilih]', 'Hapus janji "perbandingan hati-hati" saja', 'Tinjau ulang D-63']
+  user_answer: 'Bedakan istilah secara eksplisit'
+  answered_at: '2026-11-09'
+  session_ref: 'sesi 2026-11-09, AskUserQuestion Q-B1-bu, diteruskan A01 (brief TSK-114)'
+  scope: 'Hanya perbedaan istilah "penafsiran kontekstual" (Dietrich hlm. 100) dari kriteria Bab I di I.1 p18-19; D-63 dipertahankan dan diperjelas; persetujuan pembimbing tertunda'
+```
+
+## D-74
+
+```yaml
+id: D-74
+decision: 'Makna "saling melengkapi" di I.1 paragraf 18 dipersempit pada jenis pemeriksaan yang berbeda (bukan hasil presisi/recall); keadaan ketiga yang juga berjawab "tidak" (komponen saling melengkapi tetapi kenaikan presisi/recall di bawah selisih minimum D-29) harus ditangani di I.3'
+class: L3
+status: APPROVED (keputusan pengguna; persetujuan pembimbing BELUM ada)
+date: '2026-11-09'
+amends: 'D-65 (sebagian: makna "saling melengkapi"; ditandai, D-65 tidak SUPERSEDED)'
+related: [Q-B1-bv, F-A05-0131, D-65, D-29, D-62]
+basis: 'Jawaban pengguna atas AskUserQuestion Q-B1-bv, diteruskan A01 (brief TSK-114)'
+alternatives_considered: ['Opsi lain tidak diterima A13']
+consequences: 'Pemutus yang tertulis: pengguna, lalu pembimbing; persetujuan pembimbing BELUM ada. Hubungan dengan D-65: mengubah/melengkapi sebagian (makna istilah), D-65 tidak dicabut. Turunan terbuka: penanganan keadaan ketiga di I.3 belum dikerjakan (butir baru Q-B1-cc). Revisi naskah BELUM dilakukan. Status F-A05-0131 tidak diubah.'
+approval_evidence:
+  question: 'Q-B1-bv (L3; Anda, lalu pembimbing): a05 (F-A05-0131) menantang D-65 di I.1 p18. Ada keadaan ketiga yang juga berjawab ''tidak'': komponen saling melengkapi, tetapi kenaikan presisi/recall di bawah selisih minimum D-29. Makna ''saling melengkapi'' bergeser dari jenis pemeriksaan ke hasil presisi/recall. Bagaimana ditangani?'
+  options_offered: ['Nyatakan keadaan ketiga eksplisit', 'Persempit makna ''saling melengkapi'' [terpilih]', 'Bawa ke pembimbing tanpa memilih']
+  user_answer: 'Persempit makna ''saling melengkapi'''
+  answered_at: '2026-11-09'
+  session_ref: 'sesi 2026-11-09, AskUserQuestion Q-B1-bv, diteruskan A01 (brief TSK-114)'
+  scope: 'Hanya makna "saling melengkapi" di I.1 p18: dibatasi pada jenis pemeriksaan yang berbeda; keadaan ketiga ditangani di I.3 (belum dikerjakan); persetujuan pembimbing tertunda'
+```
+
+## D-75
+
+```yaml
+id: D-75
+decision: 'Kenyataan bahwa kriteria pemilihan kombinasi tidak dapat diperiksa oleh penelitian maupun literatur (setelah D-62 dan D-63) dinyatakan terbuka sebagai motivasi rancangan'
+class: L3
+status: APPROVED (keputusan pengguna; persetujuan pembimbing BELUM ada)
+date: '2026-11-09'
+related: [Q-B1-bw, F-A05-0132, D-62, D-63, D-61]
+basis: 'Jawaban pengguna atas AskUserQuestion Q-B1-bw, diteruskan A01 (brief TSK-114)'
+alternatives_considered: ['Opsi lain tidak diterima A13']
+consequences: 'Pemutus yang tertulis: pengguna, lalu pembimbing; persetujuan pembimbing BELUM ada. Pernyataan terbuka ini mencakup konsekuensi bagi simpulan (Bab V) menurut pertanyaan; rumusan tidak ditulis A13; revisi BELUM dilakukan. Status F-A05-0132 tidak diubah.'
+approval_evidence:
+  question: 'Q-B1-bw (L3; Anda, lalu pembimbing): Setelah D-62 dan D-63, kriteria pemilihan kombinasi tidak dapat diperiksa oleh penelitian maupun literatur (F-A05-0132). Apa konsekuensinya bagi simpulan, dan apakah hal itu dinyatakan terbuka sebagai motivasi rancangan?'
+  options_offered: ['Nyatakan terbuka sebagai motivasi rancangan [terpilih]', 'Tidak dinyatakan, bawa ke pembimbing']
+  user_answer: 'Nyatakan terbuka sebagai motivasi rancangan'
+  answered_at: '2026-11-09'
+  session_ref: 'sesi 2026-11-09, AskUserQuestion Q-B1-bw, diteruskan A01 (brief TSK-114)'
+  scope: 'Hanya Q-B1-bw: ketidakterujian kriteria pemilihan kombinasi dinyatakan terbuka sebagai motivasi rancangan; persetujuan pembimbing tertunda'
+```
+
+Catatan A13 untuk D-76 sampai D-80 (brief TSK-116, jawaban pengguna 2026-11-09 lewat AskUserQuestion): pemutus resmi butir-butir ini adalah TIM (dan RSIA/pembimbing). Setiap blok dicatat sebagai USUL/keputusan PENGGUNA; persetujuan tim, RSIA, atau pembimbing BELUM ada dan tidak boleh dianggap ada. Q terkait di OPEN_QUESTIONS TIDAK ditandai DIPUTUSKAN. Naskah tidak diubah. Pertanyaan balik pengguna (bukan keputusan) dicatat di `question` sebagai konteks.
+
+## D-76
+
+```yaml
+id: D-76
+decision: 'USUL PENGGUNA: rawat jalan dijawab terpisah dari rawat inap, bersyarat: hanya bila dokumen setara resume rawat jalan terbukti ada dan memadai; bila tidak, dilaporkan "tidak dapat dinilai", bukan "tidak"'
+class: L3
+status: APPROVED (lingkup terbatas, hanya sebagai keputusan pengguna; menunggu tim dan RSIA)
+date: '2026-11-09'
+related: [Q-B1-bj, Q-B1-f, Q-TEAM butir 4, D-29]
+basis: 'Jawaban pengguna atas AskUserQuestion Q-B1-bj, diteruskan A01 (brief TSK-116)'
+alternatives_considered: ['Rawat inap saja', 'Tunggu info RSIA']
+consequences: 'Pemutus resmi: tim dan RSIA. Ini usulan pengguna, bukan keputusan tim; persetujuan tim dan RSIA BELUM ada. Q-B1-f dan Q-TEAM butir 4 (bentuk dokumen rawat jalan RSIA, "Perlu ditanyakan") tetap TERBUKA. Konteks dari A01: Penyelarasan baris 13, 49, 279 memasukkan rawat jalan ke lingkup, terbatas pada CPPT dan resume atau padanannya; baris 51 dan 350 menyatakan bentuk dokumen rawat jalan belum dipastikan. Naskah BELUM diubah.'
+approval_evidence:
+  question: 'Q-B1-bj (pemutus resmi: tim dan RSIA; jawaban Anda dicatat sebagai usulan pengguna, bukan keputusan tim). Penyelarasan baris 279 memasukkan rawat jalan ke lingkup tetapi bentuk dokumen rawat jalan RSIA belum dipastikan (butir 4, ''Perlu ditanyakan''). Apakah rawat jalan tetap dijawab terpisah dari rawat inap? (Konteks: pengguna lebih dulu menanyakan apakah Penyelarasan menjawab; A01 melaporkan baris 13, 49, 279 dan baris 51, 350.)'
+  options_offered: ['Tetap terpisah, bersyarat (Recommended) [terpilih]', 'Rawat inap saja', 'Tunggu info RSIA']
+  user_answer: 'Tetap terpisah, bersyarat (Recommended)'
+  answered_at: '2026-11-09'
+  session_ref: 'sesi 2026-11-09, AskUserQuestion Q-B1-bj, diteruskan A01 (brief TSK-116)'
+  scope: 'Hanya usulan pengguna untuk Q-B1-bj: rawat jalan dijawab terpisah secara bersyarat (tidak dapat dinilai bila dokumen setara resume tidak terbukti ada dan memadai); menunggu tim dan RSIA'
+```
+
+## D-77
+
+```yaml
+id: D-77
+decision: 'USUL PENGGUNA: kombinasi rule-based dan AI berbasis RAG dibentuk sebagai union (gabungan semua temuan kedua komponen)'
+class: L3
+status: APPROVED (lingkup terbatas, hanya sebagai keputusan pengguna; menunggu tim)
+date: '2026-11-09'
+related: [Q-B1-o, D-29, D-32, D-65, D-74]
+basis: 'Jawaban pengguna atas AskUserQuestion Q-B1-o, diteruskan A01 (brief TSK-116)'
+alternatives_considered: ['Irisan', 'Penyaringan bertahap', 'Bawa ke tim']
+consequences: 'Pemutus resmi: tim. Usulan pengguna; persetujuan tim BELUM ada. Konsekuensi yang disampaikan A01: recall kombinasi tidak mungkin di bawah komponen terbaik (jawaban recall condong "ya"), presisi dapat turun. Perlu dicek terhadap penyataan D-65/D-32 (tanpa memilih mekanisme) dan syarat D-29 (kedua arah hasil harus mungkin); A13 tidak menyelesaikan. Naskah BELUM diubah.'
+approval_evidence:
+  question: 'Q-B1-o (L3; pemutus resmi: tim; jawaban Anda dicatat sebagai usulan pengguna): Bagaimana kombinasi rule-based dan AI berbasis RAG dibentuk? Harus ditetapkan sebelum pengujian dan harus memungkinkan kedua arah hasil (kombinasi lebih tinggi maupun tidak daripada komponen). Kriteria D-29 sudah menyebut uji presisi/recall untuk kombinasi, sehingga cara kombinasi menentukan angka yang diuji.'
+  options_offered: ['Union [terpilih]', 'Irisan', 'Penyaringan bertahap', 'Bawa ke tim']
+  user_answer: 'Union (gabungan semua temuan)'
+  answered_at: '2026-11-09'
+  session_ref: 'sesi 2026-11-09, AskUserQuestion Q-B1-o, diteruskan A01 (brief TSK-116)'
+  scope: 'Hanya usulan pengguna untuk Q-B1-o: kombinasi = union; menunggu tim'
+```
+
+## D-78
+
+```yaml
+id: D-78
+decision: 'USUL PENGGUNA: operator ambang memakai ">=" (selaras dengan tabel Penyelarasan baris 327-339), bukan ">" seperti di naskah; angka ambang tidak ditetapkan di sini'
+class: L3
+status: APPROVED (lingkup terbatas, hanya sebagai keputusan pengguna; menunggu tim/pembimbing)
+date: '2026-11-09'
+related: [Q-B1-q, D-19, D-29]
+basis: 'Jawaban pengguna atas AskUserQuestion Q-B1-q, diteruskan A01 (brief TSK-116)'
+alternatives_considered: ['">"', 'Bawa ke tim']
+consequences: 'Pemutus resmi: tim/pembimbing. Usulan pengguna; persetujuan BELUM ada. Angka ambang tetap tertahan D-19. Naskah (memakai ">") BELUM diubah; ketidaksesuaian operator naskah vs tabel Penyelarasan tetap ada sampai revisi.'
+approval_evidence:
+  question: 'Q-B1-q (L3; pemutus resmi: tim/pembimbing; jawaban Anda dicatat sebagai usulan): Operator ambang di naskah memakai ''>'' sedangkan tabel Penyelarasan (baris 327-339) memakai ''>=''. Operator mana yang dipakai? Angka ambangnya sendiri tidak ditetapkan di sini (tertahan D-19).'
+  options_offered: ['''>='' (selaras dengan tabel Penyelarasan) [terpilih]', '''>''', 'Bawa ke tim']
+  user_answer: '''>='' (selaras dengan tabel Penyelarasan)'
+  answered_at: '2026-11-09'
+  session_ref: 'sesi 2026-11-09, AskUserQuestion Q-B1-q, diteruskan A01 (brief TSK-116)'
+  scope: 'Hanya usulan pengguna untuk operator ambang (>=); angka ambang tetap tertahan D-19; menunggu tim/pembimbing'
+```
+
+## D-79
+
+```yaml
+id: D-79
+decision: 'USUL PENGGUNA: presisi dan recall dihitung dengan agregasi mikro (gabung semua temuan lintas kasus); nilai 0/0 dilaporkan tidak terdefinisi'
+class: L3
+status: APPROVED (lingkup terbatas, hanya sebagai keputusan pengguna; menunggu tim)
+date: '2026-11-09'
+related: [Q-B1-r, Q-B1-bg, D-19, D-29]
+basis: 'Jawaban pengguna atas AskUserQuestion Q-B1-r (pertanyaan lanjutan), diteruskan A01 (brief TSK-116)'
+alternatives_considered: ['Makro per jenis ketidaksesuaian', 'Minta a02 buat ringkasan agregat dulu (izin sensitive_access)']
+consequences: 'Pemutus resmi: tim. Usulan pengguna; persetujuan tim BELUM ada. Rekomendasi pada pertanyaan berasal dari A01 (bukan temuan agent), berdasar Penyelarasan baris 279 (31 klaim rawat jalan satu alasan) dan belum adanya data agregat; isi RSIA-source TIDAK dibuka dan tidak ada sensitive_access diberikan. Q-B1-bg tetap terbuka (tertahan D-19 dan data agregat). Naskah BELUM diubah.'
+approval_evidence:
+  question: 'Pertanyaan awal: "Q-B1-r (L3; pemutus resmi: tim; jawaban Anda dicatat sebagai usulan): Cara menghitung presisi dan recall: agregasi mikro (gabung semua temuan lintas kasus) atau makro (rata-rata per kasus/jenis), dan perlakuan nilai 0/0. Bagaimana?" Jawaban pengguna berupa pertanyaan balik (bukan keputusan): "Kalau berdasarkan data C:\Users\HYPE R Series\worktrees\project-proposal-setup\RSIA-source anda merekomendasikan apa?". Pertanyaan lanjutan: "Q-B1-r (pemutus resmi: tim; jawaban Anda dicatat sebagai usulan): Cara menghitung presisi dan recall. Rekomendasi saya (bukan temuan agent): mikro, 0/0 dilaporkan tidak terdefinisi, berdasarkan Penyelarasan baris 279 (31 klaim rawat jalan satu alasan) dan belum adanya data agregat."'
+  options_offered: ['Mikro; 0/0 tidak terdefinisi (Recommended) [terpilih]', 'Makro per jenis ketidaksesuaian', 'Minta a02 buat ringkasan agregat dulu (izin sensitive_access)']
+  user_answer: 'Mikro; 0/0 tidak terdefinisi (Recommended)'
+  answered_at: '2026-11-09'
+  session_ref: 'sesi 2026-11-09, AskUserQuestion Q-B1-r (dua putaran), diteruskan A01 (brief TSK-116)'
+  scope: 'Hanya usulan pengguna untuk Q-B1-r: agregasi mikro, 0/0 tidak terdefinisi; menunggu tim; tanpa sensitive_access'
+```
+
+## D-80
+
+```yaml
+id: D-80
+decision: 'USUL PENGGUNA: gaya sitasi akhir (K1) adalah APA (adaptasi Indonesia), selaras dengan draf Bab II Abizzar; naskah belum diubah dan format akhir tetap "perlu dikonfirmasi"'
+class: L3
+status: APPROVED (lingkup terbatas, hanya sebagai keputusan pengguna; menunggu tim dan pembimbing, konfirmasi pedoman prodi tetap diperlukan)
+date: '2026-11-09'
+related: [K1, TSK-115, F-A10 (tidak ada temuan baru)]
+basis: 'Jawaban pengguna atas AskUserQuestion K1 (putaran ketiga), diteruskan A01 (brief TSK-116)'
+alternatives_considered: ['Penulis-tahun sementara, tunggu pedoman', 'Numerik (IEEE)']
+consequences: 'Pemutus resmi: tim dan pembimbing. Usulan pengguna; persetujuan BELUM ada. Fakta pendukung (dari laporan A01/a10, perlu verifikasi): templat TIDAK menetapkan gaya sitasi/format Daftar Pustaka pada teks badan; hanya empat contoh entri (Balabanovic, McKusick, Mitchell, Pazzani) penulis-tahun alfabetis tanpa nomor, tidak dilabeli aturan. A01 membaca hlm. 8-9 dan 20-22 PDF draf Bab II Abizzar: APA adaptasi Indonesia (di teks (Penulis, tahun), "dkk.", "&"; daftar pustaka alfabetis, indentasi menggantung, tahun dalam kurung, jurnal dan volume miring, DOI sebagai URL, "(t.t.)", "Dalam ... (Ed.)", "hlm."). Itu hanya draf satu anggota; draf Raihaan belum diperiksa. Pedoman prodi di luar templat tidak dicari. Aturan skill if4091-rules-map ("gaya sitasi akhir belum diputuskan, ikuti konvensi naskah") tetap berlaku sampai tim/pembimbing menyetujui.'
+approval_evidence:
+  question: 'Putaran 1: "K1 (pemutus resmi: tim dan pembimbing; jawaban Anda dicatat sebagai usulan): Gaya sitasi akhir apa yang dipakai? ..." -> pengguna: "kalau berdasarkan ...Template-Proposal-IF4091-Capstone-Individu-2026 - Copy.docx itu apa?" (bukan keputusan). Putaran 2: "K1 (...): Templat tidak menetapkan gaya sitasi; hanya empat contoh entri penulis-tahun alfabetis. Gaya sitasi apa yang Anda usulkan?" -> pengguna: "Kalau dari teman saya pada ...capstone-teammate-propose\Draft Proposal TA BAB 2 M. Abizzar Gamadrian.pdf itu gayanya apa" (bukan keputusan). Putaran 3 (menentukan): "K1 (pemutus resmi: tim dan pembimbing; jawaban Anda dicatat sebagai usulan). Draf Bab II Abizzar memakai APA adaptasi Indonesia, dan templat hanya memberi contoh penulis-tahun alfabetis tanpa menyebut gaya. Gaya sitasi apa yang Anda usulkan?"'
+  options_offered: ['APA (selaras dengan Abizzar) (Recommended) [terpilih]', 'Penulis-tahun sementara, tunggu pedoman', 'Numerik (IEEE)']
+  user_answer: 'APA (selaras dengan Abizzar) (Recommended)'
+  answered_at: '2026-11-09'
+  session_ref: 'sesi 2026-11-09, AskUserQuestion K1 (tiga putaran), diteruskan A01 (brief TSK-116)'
+  scope: 'Hanya usulan pengguna untuk K1: APA; menunggu tim dan pembimbing; konfirmasi pedoman prodi tetap diperlukan; naskah tidak diubah'
+```
+
+## D-81
+
+```yaml
+id: D-81
+decision: 'Kalimat D-65 di I.1 p19 ("jawaban tidak tidak membedakan dua keadaan: tidak saling melengkapi, atau saling melengkapi tetapi hanya presisi/recall yang lebih tinggi") diselaraskan dengan definisi sempit "saling melengkapi" pada p18 (D-74) dan dengan keadaan ketiga (selisih di bawah minimum, I.3 p2)'
+class: L3
+status: APPROVED (keputusan pengguna lingkup terbatas; persetujuan pembimbing BELUM ada)
+date: '2026-11-09'
+amends: 'D-65 (sebagian: kalimat p19; ditandai, D-65 tidak SUPERSEDED); D-74 tetap berlaku'
+related: [F-A07-0072, F-A11-0029, F-A05-0141, D-65, D-74, D-29]
+basis: 'Jawaban pengguna atas AskUserQuestion F-A07-0072/F-A11-0029/F-A05-0141, diteruskan A01 (brief TSK-124)'
+alternatives_considered: ['Pulihkan makna lama dan batalkan D-74', 'Biarkan, bawa ke pembimbing']
+consequences: 'Rekomendasi pada opsi berasal dari A01, bukan temuan agent. Pembimbing BELUM menyetujui D-65/D-74 maupun keputusan ini. Naskah dikerjakan a03 (TSK-123, DRAF 21; belum selesai saat dicatat). Status temuan tidak diubah A13; RESOLVED hanya oleh auditor penemu.'
+approval_evidence:
+  question: 'F-A07-0072 / F-A11-0029 / F-A05-0141 (HIGH menurut a05; temuan sama dari tiga auditor): Kalimat D-65 di I.1 p19 ("jawaban "tidak" tidak membedakan dua keadaan: tidak saling melengkapi, atau saling melengkapi tetapi hanya presisi/recall yang lebih tinggi") bertentangan dengan definisi sempit "saling melengkapi" pada p18 (D-74) dan tidak memuat keadaan ketiga (selisih di bawah minimum, I.3 p2). Apa yang dilakukan dengan kalimat itu?'
+  options_offered: ['Selaraskan p19 dengan D-74 (Recommended) [terpilih]', 'Pulihkan makna lama dan batalkan D-74', 'Biarkan, bawa ke pembimbing']
+  user_answer: 'Selaraskan p19 dengan D-74 (Recommended)'
+  answered_at: '2026-11-09'
+  session_ref: 'sesi 2026-11-09, AskUserQuestion F-A07-0072/F-A11-0029/F-A05-0141, diteruskan A01 (brief TSK-124)'
+  scope: 'Hanya penyelarasan kalimat D-65 di I.1 p19 dengan D-74; D-74 tetap; pembimbing belum menyetujui'
+```
+
+## D-82
+
+```yaml
+id: D-82
+decision: 'I.2 p6 memuat selisih minimum (setelah ditetapkan tim) secara bersyarat sebagai bagian syarat kedua jawaban "tidak"; I.2 menjadi satu-satunya daftar ketentuan jawaban "tidak" yang berwenang'
+class: L3
+status: APPROVED (keputusan pengguna lingkup terbatas; persetujuan pembimbing/tim BELUM ada)
+date: '2026-11-09'
+related: [F-A07-0073, F-A11-0030, F-A05-0147, D-19, D-29, D-74]
+basis: 'Jawaban pengguna atas AskUserQuestion F-A07-0073/F-A11-0030/F-A05-0147, diteruskan A01 (brief TSK-124)'
+alternatives_considered: ['Ubah I.3/I.5, I.2 tidak disentuh', 'Biarkan, bawa ke pembimbing']
+consequences: 'Menyentuh rumusan masalah (I.2). Selisih minimum tetap tertahan D-19 (tanpa angka). Rekomendasi pada opsi dari A01, bukan temuan agent. Naskah dikerjakan a03 (TSK-123, DRAF 21). Status temuan tidak diubah A13.'
+approval_evidence:
+  question: 'F-A07-0073 / F-A11-0030 / F-A05-0147 (MEDIUM): Di mana daftar ketentuan jawaban "tidak" yang berwenang berada? I.2 p6 tidak memuat "selisih di bawah minimum", sedangkan I.3 p1 menyatakan ketentuan "tidak" mengikuti I.2 dan I.3 p2/I.5 p6 menambah kondisi itu secara bersyarat ("bila ditetapkan").'
+  options_offered: ['Tambahkan ke I.2 p6 secara bersyarat (Recommended) [terpilih]', 'Ubah I.3/I.5, I.2 tidak disentuh', 'Biarkan, bawa ke pembimbing']
+  user_answer: 'Tambahkan ke I.2 p6 secara bersyarat (Recommended)'
+  answered_at: '2026-11-09'
+  session_ref: 'sesi 2026-11-09, AskUserQuestion F-A07-0073/F-A11-0030/F-A05-0147, diteruskan A01 (brief TSK-124)'
+  scope: 'Hanya penambahan selisih minimum bersyarat ke I.2 p6 sebagai satu-satunya daftar "tidak"; tanpa angka (D-19)'
+```
+
+## D-83
+
+```yaml
+id: D-83
+decision: 'Pembedaan "penafsiran kontekstual" Dietrich di I.1 p19 ditulis tanpa menafsirkan kriteria D-61 ("dalam dokumen"); istilah sumber dan kriteria dinyatakan berbeda rumusan tanpa frasa "antara dua dokumen"'
+class: L3
+status: APPROVED (keputusan pengguna lingkup terbatas; persetujuan pembimbing BELUM ada)
+date: '2026-11-09'
+related: [F-A05-0143, D-61, D-73]
+basis: 'Jawaban pengguna atas AskUserQuestion F-A05-0143, diteruskan A01 (brief TSK-124)'
+alternatives_considered: ['Tetapkan tafsir: "dalam dokumen" = antara dua dokumen', 'Bawa ke pembimbing, kalimat dihapus sementara']
+consequences: 'D-73 dipertahankan; kriteria D-61 tidak ditafsirkan. Rekomendasi pada opsi dari A01, bukan temuan agent. Naskah dikerjakan a03 (TSK-123, DRAF 21). Status F-A05-0143 tidak diubah A13.'
+approval_evidence:
+  question: 'F-A05-0143 (HIGH): Pembedaan "penafsiran kontekstual" Dietrich di I.1 p19 menafsirkan kriteria D-61 ("dalam dokumen") sebagai "antara dua dokumen", padahal D-73 menyatakan D-61 tidak ditafsirkan. Bagaimana pembedaan itu ditulis?'
+  options_offered: ['Tanpa menafsirkan D-61 (Recommended) [terpilih]', 'Tetapkan tafsir: "dalam dokumen" = antara dua dokumen', 'Bawa ke pembimbing, kalimat dihapus sementara']
+  user_answer: 'Tanpa menafsirkan D-61 (Recommended)'
+  answered_at: '2026-11-09'
+  session_ref: 'sesi 2026-11-09, AskUserQuestion F-A05-0143, diteruskan A01 (brief TSK-124)'
+  scope: 'Hanya cara menulis pembedaan Dietrich di I.1 p19 tanpa menafsirkan D-61'
+```
+
+## D-84
+
+```yaml
+id: D-84
+decision: 'Simpulan I.1 p21 dibatasi ke konfigurasi yang diuji (tiga konfigurasi) sehingga "terbaik" memiliki pembanding yang disebut; tingkat dukungan literatur terhadap kriteria dinyatakan satu tingkat yang konsisten'
+class: L3
+status: APPROVED (keputusan pengguna lingkup terbatas; persetujuan pembimbing BELUM ada)
+date: '2026-11-09'
+related: [F-A05-0145, D-75, D-61]
+basis: 'Jawaban pengguna atas AskUserQuestion F-A05-0145, diteruskan A01 (brief TSK-124)'
+alternatives_considered: ['Biarkan, bawa ke pembimbing']
+consequences: 'D-75 dipertahankan dan diperjelas. Rekomendasi pada opsi dari A01, bukan temuan agent. Naskah dikerjakan a03 (TSK-123, DRAF 21). Status F-A05-0145 tidak diubah A13.'
+approval_evidence:
+  question: 'F-A05-0145 (MEDIUM): I.1 p21 menyatakan simpulan "tidak akan menyatakan kombinasi merupakan pilihan terbaik", tetapi jawaban "ya" pertanyaan 1 berarti kombinasi lebih tinggi daripada kedua komponen, yaitu terbaik di antara tiga konfigurasi. Pembandingnya juga tidak disebut, dan tingkat dukungan literatur terhadap kriteria dinyatakan tidak konsisten ("terbatas" di p18, "tidak diperiksa/tidak didukung" di p19 dan p21). Bagaimana ditangani?'
+  options_offered: ['Batasi ke konfigurasi yang diuji (Recommended) [terpilih]', 'Biarkan, bawa ke pembimbing']
+  user_answer: 'Batasi ke konfigurasi yang diuji (Recommended)'
+  answered_at: '2026-11-09'
+  session_ref: 'sesi 2026-11-09, AskUserQuestion F-A05-0145, diteruskan A01 (brief TSK-124)'
+  scope: 'Hanya pembatasan simpulan p21 ke konfigurasi yang diuji dan satu tingkat dukungan literatur'
+```
+
+## D-85
+
+```yaml
+id: D-85
+decision: 'Kalimat batas di I.1 p20 ("Tidak satu pun sumber yang ditelaah menguji kombinasi pemeriksaan berbasis aturan dan model bahasa besar pada pemeriksaan dokumen") dinyatakan dengan cakupan "sumber yang ditelaah" dan sifat penelusuran yang tidak sistematis'
+class: L3
+status: APPROVED (keputusan pengguna lingkup terbatas; persetujuan pembimbing BELUM ada)
+date: '2026-11-09'
+related: [F-A05-0146, F-A08-0102, D-67]
+basis: 'Jawaban pengguna atas AskUserQuestion F-A05-0146, diteruskan A01 (brief TSK-124)'
+alternatives_considered: ['Biarkan seperti DRAF 20']
+consequences: 'Menyentuh D-67 (dipertahankan dan diperjelas). Menurut a08 klaim tidak terbantahkan oleh sumber yang dikutip, tetapi bukan negatif terverifikasi; istilah "model bahasa besar" membuat Zeba (aturan + encoder) tidak tercakup (F-A08-0101). Rekomendasi pada opsi dari A01, bukan temuan agent. Pertanyaan a05 tentang cakupan "sumber yang ditelaah" (Bab II DRAFT 6 saja, lima studi p16, atau juga II.4 lama) dicatat di Q-B1-cg. Naskah dikerjakan a03 (TSK-123, DRAF 21). Status temuan tidak diubah A13.'
+approval_evidence:
+  question: 'F-A05-0146 (MEDIUM; menyentuh D-67): Kalimat batas di I.1 p20 ("Tidak satu pun sumber yang ditelaah menguji kombinasi pemeriksaan berbasis aturan dan model bahasa besar pada pemeriksaan dokumen") mencerminkan cara sumber dipilih. Cakupan "sumber yang ditelaah" tidak didefinisikan, penelusurannya tidak sistematis, dan istilah "model bahasa besar" membuat Zeba (aturan + encoder) tidak tercakup. a08 menilai klaimnya tidak terbantahkan oleh sumber yang dikutip, tetapi bukan negatif yang terverifikasi. Bagaimana ditangani?'
+  options_offered: ['Nyatakan cakupan dan sifat tidak sistematis (Recommended) [terpilih]', 'Biarkan seperti DRAF 20']
+  user_answer: 'Nyatakan cakupan dan sifat tidak sistematis (Recommended)'
+  answered_at: '2026-11-09'
+  session_ref: 'sesi 2026-11-09, AskUserQuestion F-A05-0146, diteruskan A01 (brief TSK-124)'
+  scope: 'Hanya pernyataan cakupan dan sifat tidak sistematis pada kalimat batas I.1 p20'
+```
+
+## D-86
+
+```yaml
+id: D-86
+decision: 'Kalimat penutup I.1 p19 ("Tidak satu pun studi yang ditelaah menguji model bahasa besar atau RAG untuk menelaah konteks antara dua dokumen yang ditulis tenaga kesehatan") berfungsi sebagai pengulangan celah pertama, bukan sebagai batas dukungan kriteria D-61 dan bukan dasar p21'
+class: L3
+status: APPROVED (keputusan pengguna lingkup terbatas; persetujuan pembimbing BELUM ada)
+date: '2026-11-09'
+related: [F-A07-0077, F-A05-0153, F-A09-0211, D-61, D-83]
+basis: 'Jawaban pengguna atas AskUserQuestion F-A07-0077 / F-A05-0153, diteruskan A01 (brief TSK-131)'
+alternatives_considered: ['Hapus kalimat itu', 'Tetapkan tafsir: dalam dokumen mencakup antara dua dokumen']
+consequences: 'Kalimat berfungsi sebagai pernyataan celah pertama, tidak dipakai sebagai batas dukungan kriteria D-61 dan tidak menjadi dasar p21; D-61 tidak ditafsirkan; D-83 dipertahankan. Rekomendasi pada opsi terpilih dari A01, bukan temuan agent. Menurut a08 klaim kalimat itu benar menurut sumber. Naskah dikerjakan a03 (TSK-130, DRAF 22); status F-A07-0077, F-A05-0153, F-A09-0211 tidak diubah A13.'
+approval_evidence:
+  question: 'F-A07-0077 / F-A05-0153 (MEDIUM; temuan sama dari a07 dan a05): Kalimat penutup I.1 p19 ("Tidak satu pun studi yang ditelaah menguji model bahasa besar atau RAG untuk menelaah konteks antara dua dokumen yang ditulis tenaga kesehatan") berada di bawah topik "Untuk penelaahan konteks" dan menjadi dasar p21, sehingga tersirat memetakan "dalam dokumen" (D-61) ke "antara dua dokumen", tafsir yang ditolak D-83. Menurut a08, klaimnya sendiri benar menurut sumber. Apa fungsi kalimat itu?'
+  options_offered: ['Pengulangan celah pertama, bukan batas dukungan (Recommended) [terpilih]', 'Hapus kalimat itu', 'Tetapkan tafsir: dalam dokumen mencakup antara dua dokumen']
+  user_answer: 'Pengulangan celah pertama, bukan batas dukungan (Recommended)'
+  answered_at: '2026-11-09'
+  session_ref: 'sesi 2026-11-09, AskUserQuestion F-A07-0077 / F-A05-0153, diteruskan A01 (brief TSK-131)'
+  scope: 'Hanya fungsi kalimat penutup I.1 p19 (pengulangan celah pertama; bukan batas dukungan D-61, bukan dasar p21)'
 ```

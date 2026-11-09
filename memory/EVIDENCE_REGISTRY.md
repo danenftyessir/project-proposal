@@ -1,10 +1,10 @@
 ---
 file: EVIDENCE_REGISTRY
-revision: 3
+revision: 4
 status: PENDING_VERIFICATION
-updated: 2026-11-06
+updated: 2026-11-09
 updated_by: a13-memory-manager
-based_on_commit: f3cb6ba
+based_on_commit: c056d20
 ---
 
 # Evidence Registry
@@ -112,4 +112,14 @@ Sumber: `.scratch/bab2_evidence.md`. "Lokasi" mengacu ke `bab2/Bab_II_Revisi_Not
 | B2-54 | :156 | Jaganathan: 3.372 catatan uji; 80,7% pada top-20 akronim | Jaganathan (path tidak dicatat di berkas bukti) | 4/5 belum dicocokkan | TERVERIFIKASI (angka); halaman BELUM DIVERIFIKASI | Cek halaman |
 | B2-55 | II.4.1 :116 | n2c2 Track 3: delapan tim; Macro-F1 terbaik 0,8212; Indirect rata-rata 0,6713 | SD14 (path tidak dicatat di berkas bukti) | — | TERVERIFIKASI (angka); halaman BELUM DIVERIFIKASI | Cek hlm. 4–5 dan ukuran sampel (hlm. 7) |
 
-Bahan paragraf *research gap* Bab I (a02, TSK-055; hanya sumber yang diperiksa a02). Didukung: (1) pemeriksaan konsistensi lintas dokumen disebut Dietrich & Stubbert (hlm. 100) sebagai arah lanjutan, bukan hasil yang ada; (2) pemeriksaan ringkasan terhadap rekam medis sumber sudah ada untuk ringkasan buatan LLM (Zeba dkk., hlm. 1), tidak untuk resume dokter terhadap catatan perkembangan; (3) kinerja tidak seragam antarkategori (Dietrich hlm. 98; NPV 72,5–77,3%); (4) KMK1596 tidak menetapkan format CPPT (B2-14), KMK1423 tidak memuat variabel CPPT (B2-22), SATUSEHAT tidak punya *resource* bernama CPPT tetapi punya Riwayat Perjalanan Penyakit lewat ClinicalImpression (B2-48, wajib dinuansakan); (5) pengkajian rekam medis menurut MRMIK 12 berkala dan berbasis sampel, tidak menyebut kesesuaian CPPT–resume (= E-08). Tidak didukung sumber yang diperiksa: tidak ada sumber yang memeriksa kesesuaian CPPT dengan resume sebelum klaim (jangan ditulis "belum pernah diteliti"); tidak ada sumber yang menyatakan satu komponen tidak cukup; sumber hibrida (Domingues; Ijadi Maghsoodi) tidak dibaca; P-6 tetap BELUM DIVERIFIKASI.
+Bahan paragraf *research gap* Bab I (a02, TSK-055; hanya sumber yang diperiksa a02). Didukung: (1) pemeriksaan konsistensi lintas dokumen disebut Dietrich & Stubbert (hlm. 100) sebagai arah lanjutan, bukan hasil yang ada; (2) pemeriksaan ringkasan terhadap rekam medis sumber sudah ada untuk ringkasan buatan LLM (Zeba dkk., hlm. 1), tidak untuk resume dokter terhadap catatan perkembangan; (3) kinerja tidak seragam antarkategori (Dietrich hlm. 98; NPV 72,5–77,3%); (4) KMK1596 tidak menetapkan format CPPT (B2-14), KMK1423 tidak memuat variabel CPPT (B2-22), SATUSEHAT tidak punya *resource* bernama CPPT tetapi punya Riwayat Perjalanan Penyakit lewat ClinicalImpression (B2-48, wajib dinuansakan); (5) pengkajian rekam medis menurut MRMIK 12 berkala dan berbasis sampel, tidak menyebut kesesuaian CPPT–resume (= E-08). Tidak didukung sumber yang diperiksa: tidak ada sumber yang memeriksa kesesuaian CPPT dengan resume sebelum klaim (jangan ditulis "belum pernah diteliti"); tidak ada sumber yang menyatakan satu komponen tidak cukup; sumber hibrida (Domingues; Ijadi Maghsoodi) tidak dibaca (pembaruan TSK-113/114: kini dibaca a02, lihat bagian "Sumber hibrida" di bawah); P-6 tetap BELUM DIVERIFIKASI.
+
+## Sumber hibrida (a02, TSK-113, 2026-11-09; hanya a02, belum diuji ulang a08)
+
+Dibaca dari `source/16_Sistem_Hibrida_Aturan_dan_AI/`. Halaman = halaman cetak. Keputusan penggunaannya: D-67 (keterbatasan tetap tanpa sumber hibrida; Ijadi tidak dimasukkan telaah; belum ada penanda yang diganti di naskah).
+
+| ID | Lokasi | Klaim | Sumber | Halaman | Status | Catatan |
+|---|---|---|---|---|---|---|
+| H-01 | I.1 p20 (penanda hibrida) | Domingues (Nuno Soares Domingues, IJMI 206 (2026) 106144, doi:10.1016/j.ijmedinf.2025.106144): sistem berbasis aturan, "hybrid-ready rather than hybrid-implemented"; 1.236 aturan IF-THEN; n=10 laporan kasus; tanpa LLM; tidak menguji kombinasi | PDF di folder 16 (nama berkas tidak dicatat) | 2 (kutipan); lainnya lihat catatan | TERVERIFIKASI (a02 saja) | Tidak ditemukan konsistensi dokumen medis. Angka hasil tidak konsisten antarhalaman (hlm. 1 konkordansi 0,80 / F1 0,80; hlm. 5 lulus 4 dari 10 (40%), 6 dari 10 gagal; hlm. 7 80%; hlm. 5 §3.4 60% (3 dari 10)); jangan kutip angka tanpa menyebut inkonsistensi (F-A02-0203, INFO) |
+| H-02 | I.1 p20 | Ijadi Maghsoodi dkk. (Health Policy and Technology 15 (2026) 101292, doi:10.1016/j.hlpt.2026.101292): tinjauan naratif kritis 101 sumber; argumen konseptual dan trade-off hibrida; tanpa metrik sendiri | PDF di folder 16 (nama berkas tidak dicatat) | 2, 4, 5, 6, 7, 9, 10 | TERVERIFIKASI (a02 saja); sebagai argumen tinjauan, bukan bukti uji | Rumusan "might" (hlm. 2 "neither approach might be sufficient"; hlm. 9 "symbolic structure is not optional"). Hlm. 10 menegaskan perbandingan hibrida vs asisten tanpa batasan belum ada. Tidak dimasukkan telaah menurut D-67 |
+| H-03 | I.1 p20; P-6 | Tidak ada sumber (di antara yang dibaca a02) yang menguji kombinasi aturan+LLM pada pemeriksaan dokumen | tidak ada di `source/` | — | TIDAK DIDUKUNG (kekosongan) | P-6 tetap BELUM DIVERIFIKASI. F-A02-0201 (kalimat "tidak satu pun sumber ..."), F-A02-0202 (path INDEKS keliru) |
