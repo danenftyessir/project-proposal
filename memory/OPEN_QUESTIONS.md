@@ -1,10 +1,10 @@
 ---
 file: OPEN_QUESTIONS
-revision: 48
+revision: 50
 status: CURRENT
-updated: 2026-11-09
+updated: 2026-11-10
 updated_by: a13-memory-manager
-based_on_commit: c056d20
+based_on_commit: fd87b6d
 ---
 
 # Open Questions
@@ -40,6 +40,7 @@ status: MENUNGGU PEMBIMBING
 updated: 2026-11-09
 refs: []
 note_2026-11-09: 'Fakta saja (tidak ditanyakan ke pengguna; pemutus resmi pembimbing, PIC Abizzar, Penyelarasan butir 9 "Belum dibahas"; dilaporkan A01, belum diverifikasi A13 ke berkas): Penyelarasan baris 15 dan 288 menetapkan judul baru "Pengembangan Sistem Pemeriksaan Kesesuaian CPPT dan Resume Medis Berbasis Aturan dan AI untuk Mendukung Kesiapan Klaim BPJS" (menunggu persetujuan pembimbing). Draf Abizzar 21 Oktober 2026 masih memakai judul capstone lama "Perancangan Antarmuka User-Centered untuk Sistem Pemeriksaan Resume Medis dalam Mendukung Kesiapan Klaim BPJS" dan judul individu Abizzar "Pengelolaan Siklus Hidup Temuan pada Sistem Pemeriksaan Resume Medis dalam Mendukung Kesiapan Klaim BPJS". Draf individu pengguna tidak diubah. Tetap MENUNGGU PEMBIMBING.'
+note_D-92: 'Pembaruan 2026-11-09 (TSK-142): pengguna memilih "Pakai judul baru dari dokumen penyelarasan, ditandai usulan" → D-92 (lingkup terbatas; BUKAN persetujuan pembimbing). Bab I memakai judul baru sebagai usulan; K2 TETAP MENUNGGU PEMBIMBING (tidak diputuskan).'
 ```
 
 ```yaml
@@ -187,8 +188,9 @@ class: L3
 pic: Abizzar (menurut Penyelarasan)
 ask_to: Tim / RSIA mitra / pembimbing
 status: MENUNGGU ANGGOTA
-updated: 2026-11-05
-refs: []
+updated: 2026-11-09
+refs: [D-90, D-91, D-92, D-94, D-97]
+note_D-87_97: 'Pembaruan 2026-11-09 (TSK-142): pengguna memutuskan (lingkup terbatas; BUKAN keputusan tim/pembimbing/RSIA) pada beberapa butir yang menyentuh Q-TEAM: butir 4 → D-91 (rawat jalan terbatas = cakupan bersyarat; definisi tetap tidak ada); butir 5 → D-90 (penguncian, satuan episode rawat inap; keterangan RSIA belum terverifikasi); butir 6 → D-97 (satu episode = satu unit, pasangan ibu-bayi tidak dipisah); butir 9 → D-92 (judul baru, ditandai usulan); butir tim lain (F-A11-0023..0027, F-A05-0150) → D-94 (paket usulan penulis). Q-TEAM TETAP MENUNGGU ANGGOTA: tim belum menjawab.'
 ```
 
 ```yaml
@@ -372,6 +374,7 @@ status: MENUNGGU ANGGOTA
 updated: 2026-11-08
 refs: [D-21, Q-TEAM, F-A07-0019, F-A04-0010, F-A04-0011, D-76]
 note_2026-11-09_TSK-116: 'Tetap terbuka (fakta RSIA via Abizzar/tim). A01 melaporkan Penyelarasan baris 51 dan 350 menyatakan bentuk dokumen rawat jalan belum dipastikan; baris 13, 49, 279 memasukkan rawat jalan terbatas pada CPPT dan resume atau padanannya (belum diverifikasi A13 ke berkas). Usulan pengguna D-76 bergantung pada butir ini.'
+note_D-91: 'Pembaruan 2026-11-09 (TSK-142): D-91 (pengguna, lingkup terbatas; BUKAN keputusan tim/RSIA): "rawat jalan terbatas" di I.4 dinyatakan sebagai cakupan bersyarat tanpa definisi baru; terkait D-88 (penilaian ketersediaan). Batas operasional dan bentuk dokumen rawat jalan RSIA tetap tidak diketahui; Q-TEAM butir 4 dan butir ini TETAP MENUNGGU ANGGOTA.'
 note: 'Pernyataan pengguna 2026-11-08 (BUKAN keputusan; premis, belum diverifikasi ke aturan atau RSIA). Pertanyaan a04 P1 (verbatim): "Pertanyaan a04 (P1 dari 3), diteruskan verbatim. Konteks (ringkas): I.4 paragraf 2 membatasi dokumen pada \"CPPT dan resume medis\"; paragraf 4 hanya memuat penanda #28 tanpa batas rawat jalan; I.1 paragraf 4 menyebut resume medis belum tentu ada pada setiap episode rawat jalan; Penyelarasan:279 memakai frasa \"atau padanannya\" yang tidak ada di I.4; I.2 menyatakan kedua pertanyaan berlaku pada rawat inap dan rawat jalan. Pertanyaan: Dalam kajian Anda, apakah episode rawat jalan yang tidak memiliki resume medis berada di luar kajian, ataukah dokumen padanannya dikaji sebagai pengganti resume medis? Jawaban \"belum dapat diputuskan sebelum tim atau RSIA menjawab butir 4\" juga sah." Opsi: Di luar kajian | Dokumen padanan dikaji | Belum dapat diputuskan. Jawaban teks bebas pengguna (verbatim, bukan salah satu opsi): "Rawat jalan juga semua harusnya ada resume medisnya karena jika tidak tidak bisa klaim bpjs". Tidak menetapkan batas operasional rawat jalan: penanda #28 tetap [MENUNGGU KEPUTUSAN]; Q-TEAM butir 4 dan butir ini tetap terbuka.'
 ```
 
@@ -520,6 +523,7 @@ note_2026-11-09: 'USUL PENGGUNA: ">=" (selaras tabel Penyelarasan), D-78 lingkup
 note_TSK-131: 'Pembaruan 2026-11-09: butir ini kini juga memuat paket F-A11-0036 (operator batas selisih dan saat penetapan; requires_decision), F-A05-0155 (MEDIUM: selisih minimum tak terikat sebelum pengujian; penetap dan bentuk selisih), F-A07-0079 (I.2 tidak mengikat selisih minimum sebelum pengujian). Izin alur DRAF 22 (TSK-130) menyelaraskan I.2 p6 (empat selisih; selisih minimum ditetapkan sebelum pengujian, tanpa angka); itu penyelarasan teks, bukan keputusan operator. Operator dan penetap tetap menunggu tim/pembimbing. Bukan keputusan.'
 note_TSK-136: 'Pembaruan 2026-11-09: QA DRAF 22 menemukan bahwa rumusan "kurang dari selisih minimum" di I.2 p6 dan I.3 p2 menetapkan operator secara tersirat (selisih sama dengan minimum lolos), padahal penanda menyatakan operator belum ditetapkan (F-A09-0229 MEDIUM, F-A07-0085 LOW; requires_decision), dan DRAF 22 menjadikan penetap selisih minimum butir terbuka padahal D-82 menulis "setelah ditetapkan tim" (F-A07-0086). Ditangani izin alur DRAF 23 (TSK-135; rumusan netral operator, penetap dikembalikan "ditetapkan tim sebelum pengujian"; tanpa angka). Itu perbaikan teks, bukan keputusan operator: operator TIDAK diputuskan, tetap menunggu tim/pembimbing (usul pengguna D-78 tetap usul). Bukan keputusan.'
 note_TSK-139: 'Pembaruan 2026-11-09: DRAF 23 (TSK-135) memakai rumusan netral operator di I.2 p6 dan I.3 p2 ("tidak memenuhi selisih minimum"); penetap selisih minimum "ditetapkan tim sebelum pengujian" (sesuai D-82); penanda selisih minimum kini memuat bentuk (mutlak atau relatif) dan operator batas sebagai butir terbuka. F-A09-0229, F-A07-0085, F-A07-0086 RESOLVED menurut auditor penemu (TSK-137, TSK-138). Operator dan bentuk selisih TETAP tidak diputuskan; menunggu tim/pembimbing. Catatan a07: siapa memutuskan apakah selisih minimum dipakai tersirat pada tim. Bukan keputusan.'
+note_D-89: 'Pembaruan 2026-11-09 (TSK-142): D-89 (pengguna, lingkup terbatas): ambang, selisih minimum, dan satuan hitung di I.2/I.3 dinyatakan sebagai prosedur tanpa angka, ditetapkan sebelum pengujian. Operator dan bentuk selisih tidak diputuskan; D-78 tetap usul; BUKAN keputusan tim/pembimbing.'
 ```
 
 ```yaml
@@ -977,6 +981,7 @@ status: MENUNGGU ANGGOTA
 updated: 2026-11-08
 refs: [D-55, D-56, D-57, D-21, D-24, D-27, F-A05-0024, F-A07-0051, F-A11-0004, Q-B1-ae, Q-TEAM butir 5, Q-B1-bb, Q-B1-bc]
 note_2026-11-09_TSK-116: 'Tetap terbuka (fakta RSIA via Abizzar/tim); tidak ada keputusan baru pada TSK-116.'
+note_D-90: 'Pembaruan 2026-11-09 (TSK-142): pengguna menjawab dengan teks bebas (bukan memilih opsi) → D-90 (lingkup terbatas; BUKAN keputusan tim/pembimbing/RSIA): naskah tidak mengasumsikan keduanya terkunci; menurut keterangan lisan RSIA via penulis (BELUM terverifikasi) CPPT tidak dapat diubah dan resume medis masih dapat direvisi; satuan hitung rawat inap = satu episode (masuk hingga keluar dan resume diajukan; resume episode sebelumnya tidak dihitung kembali). Konflik dengan dokumen tim TIDAK diselesaikan A13; konfirmasi RSIA/tim tetap diperlukan; status TETAP MENUNGGU ANGGOTA. Naskah (I.1 baris 75/89, I.4 p6) belum diselaraskan pada pencatatan ini.'
 note: KONFLIK SUMBER, tidak diselesaikan A13. Status pernyataan pengguna 2026-11-08 (jawaban teks bebas atas AskUserQuestion "I.4 paragraf 6"; pengguna TIDAK memilih satu pun dari tiga opsi A01: kembalikan ke batas kesimpulan saja / pertahankan batas kajian dan putuskan / tunda dengan penanda): klarifikasi pihak RSIA yang disampaikan tidak langsung (sumber dan waktu tidak disebut; belum ada di dokumen Penyelarasan). BUKAN keputusan; tidak mengubah D-55, D-56, D-21; paragraf 6 I.4 tidak diputuskan; tidak boleh diatribusikan di naskah (D-24, D-27) tanpa keputusan baru. Pengguna sendiri meminta "jangan langsung mengubah keputusan atau memperluas ruang lingkup proposal".
 user_statement_verbatim: "Teman-teman, ada klarifikasi tambahan dari pihak RSIA terkait alur dokumentasi medis yang perlu kita perhatikan dalam penyelarasan proposal.Beberapa hal yang sudah dikonfirmasi:1. **CPPT tidak dapat diubah setelah dicatat.** Informasi ini sudah diklarifikasi sebelumnya, sehingga tidak perlu ditanyakan kembali.2. **Resume medis masih dapat diubah.** Namun, koreksi langsung terhadap resume relatif jarang dilakukan. Jika ditemukan ketidaksesuaian, pihak rumah sakit biasanya memberikan klarifikasi atau penjelasan mengenai dokumentasi tersebut.Implikasinya, kita perlu membedakan antara temuan audit yang membutuhkan klarifikasi dan temuan yang memang memerlukan koreksi. Tidak semua temuan harus otomatis dianggap sebagai kesalahan yang wajib diperbaiki.Untuk penyelarasan proposal, mohon perhatikan beberapa hal berikut:- Fokus penelitian tetap pada kesiapan dokumen sebelum klaim BPJS diajukan.- Audit perlu ditempatkan dalam alur penyusunan dan pemeriksaan resume medis sebelum pengajuan klaim.- Jangan menggunakan asumsi bahwa CPPT dan resume medis sama-sama terkunci secara permanen.- Informasi bahwa CPPT tidak dapat diubah, sedangkan resume medis masih dapat diubah, perlu tercermin secara tepat dalam uraian proses bisnis dan batasan penelitian.Masih ada beberapa hal yang perlu kita pastikan:1. Kapan resume medis pertama kali disusun dalam alur pelayanan?2. Pada tahap mana audit dilakukan?3. Bagaimana mekanisme tindak lanjut jika ditemukan ketidaksesuaian antara CPPT dan resume medis?4. Data historis apa yang tersedia untuk pengujian: resume versi pertama, versi akhir, atau riwayat perubahan?Explore juga C:\\Users\\HYPE R Series\\worktrees\\project-proposal-setup\\Penyelarasan Pemahaman Capstone.md karena itu dari client yang mungkin saja jawabannya terlampir disana.Mohon jangan langsung mengubah keputusan atau memperluas ruang lingkup proposal berdasarkan klarifikasi ini. Kita perlu menyelaraskan temuan tersebut dengan keputusan yang sudah disepakati dan mencatat hal-hal yang masih memerlukan konfirmasi."
 note_2: Pemeriksaan A01 (bukan A13) atas Penyelarasan terhadap konflik ini (dilaporkan A01; belum diverifikasi A13 ke berkas): baris 17 ("CPPT dan resume dikunci setelah layanan selesai"), baris 84 dan Q-TEAM butir 5 ("CPPT dan resume yang sudah terkunci") mengandaikan keduanya terkunci. Butir Q-TEAM 5 (prosedur membuka kembali CPPT dan resume terkunci) berstatus "Perlu ditanyakan". Kemajuan 2026-11-08 (siklus 1 DRAF 12, laporan A01/a05, belum diverifikasi A13 ke berkas): paragraf 6 sudah mengikuti D-57 dan memuat penanda #33 yang merujuk arti penguncian I.1 p14 (F-A07-0051 RESOLVED oleh a07), tetapi I.1 baris 75 dan 89 ("CPPT dan resume medis dikunci setelah pelayanan selesai"; premis kedua "sebelum CPPT dan resume medis dikunci") masih mengandaikan keduanya dikunci, bertentangan dengan arah klarifikasi RSIA; I.1 tidak diubah (menunggu keputusan). Status tetap MENUNGGU ANGGOTA. Konflik juga menyentuh F-A05-0024 (arti penguncian belum diketahui) dan F-A07-0051 (p6 belum dikaitkan dengan penanda arti penguncian di I.1 p14).
@@ -1061,6 +1066,7 @@ updated: 2026-11-08
 refs: [D-58, D-29, D-56, Q-TEAM butir 8, Q-B1-y, Q-B1-ad, Q-B1-j, F-A05-0026, F-A11-0015, F-A05-0034, F-A11-0016, F-A11-0017, Q-A04-c, Q-B1-bj]
 note: Tidak diputuskan D-58. Menurut catatan A01, membutuhkan Approval Request lanjutan dan pembahasan tim. Butir turunan dari Q-B1-bd.
 note_2026-11-09_TSK-116: 'Tetap terbuka: tertahan D-19 dan belum adanya data agregat. Usulan pengguna D-78 (operator ">=") dan D-79 (mikro, 0/0 tidak terdefinisi) tidak menetapkan angka ambang, selisih minimum, atau kondisi keabsahan stratum.'
+note_D-89_D-93: 'Pembaruan 2026-11-09 (TSK-142): D-89 (pengguna: ambang, selisih minimum, satuan hitung dinyatakan sebagai prosedur tanpa angka, ditetapkan sebelum pengujian) dan D-93 (plafon → hasil "tidak dapat dinilai", aturan sebelum uji; F-A11-0015 HIGH, F-A11-0016). Keduanya keputusan pengguna lingkup terbatas, BUKAN tim/pembimbing. Angka tetap tertahan D-19; status butir TETAP MENUNGGU ANGGOTA. Konfirmasi pengguna atas isian a03 di TO DO.md (pemutus butir 7 dan 10) BELUM ada.'
 ```
 
 ```yaml
@@ -1378,6 +1384,7 @@ status: TERBUKA
 updated: 2026-11-09
 refs: [F-A05-0142, D-61, D-73]
 note: Butir baru dari TSK-124 (QA DRAF 20, a05 TSK-122). requires_decision true. Dalam cakupan "tidak disentuh" DRAF 21. Bukan keputusan.
+note_D-95: 'Pembaruan 2026-11-09 (TSK-142): D-95 (pengguna, lingkup terbatas; BUKAN keputusan pembimbing): kriteria tetap umum, urutan dinyatakan (opsi "dibedakan per pasangan" tidak dipilih). Status butir TETAP TERBUKA sampai naskah dan auditor; D-61 tidak diubah.'
 ```
 
 ```yaml
@@ -1391,6 +1398,7 @@ status: TERBUKA
 updated: 2026-11-09
 refs: [F-A05-0144]
 note: Butir baru dari TSK-124 (a05 TSK-122). MEDIUM. Dalam cakupan "tidak disentuh" DRAF 21. Bukan keputusan.
+note_D-95: 'Pembaruan 2026-11-09 (TSK-142): D-95 (pengguna, lingkup terbatas; BUKAN keputusan pembimbing): temuan Dietrich hanya latar. Status butir TETAP TERBUKA sampai naskah dan auditor.'
 ```
 
 ```yaml
@@ -1405,6 +1413,7 @@ updated: 2026-11-09
 refs: [F-A05-0146, F-A08-0101, F-A08-0102, D-67, D-85, F-A09-0235, F-A07-0087]
 note: Butir baru dari TSK-124. Pertanyaan a05 (TSK-122); D-85 menetapkan cakupan dan sifat tidak sistematis harus dinyatakan, tetapi isi cakupan belum ditetapkan. Pembaruan TSK-131 (2026-11-09): D-85 dan kalimat batas p22 DRAF 21 sudah menyatakan cakupan (a08 TSK-127: konsisten dengan H-01..H-03, D-67, D-85), tetapi himpunan rujukan literatur belum diseragamkan (F-A05-0154 LOW; F-A07-0083 INFO: ungkapan cakupan literatur berbeda-beda; F-A08-0108 INFO: cakupan "Bab II"). Bagian itu TETAP TERBUKA; DRAF 22 (TSK-130) tidak mencakupnya. Bukan keputusan.
 note_TSK-136: 'Pembaruan 2026-11-09 (QA DRAF 22): F-A09-0235 (LOW, requires_decision): "studi lain pada Bab II" di I.1 p19 vs "kelima studi"/Zhang; bentuk berasal dari keputusan pengguna D-86. F-A07-0087 (LOW): alasan Zhang tidak dihitung sebagai dukungan p21 setelah kalimat penutup p19 dikeluarkan; alasan harus ditulis tanpa menafsirkan D-61, bila tidak bisa ke pengguna. a08 TSK-134: kalimat penutup p19 DIDUKUNG sumber; F-A08-0112 (INFO): Gao dkk. dan Ali dkk. di batas klaim kekosongan dinilai dari teks Bab II. Bagian himpunan rujukan literatur tetap TERBUKA; DRAF 23 (TSK-135) tidak mencakupnya. Bukan keputusan.'
+note_D-96: 'Pembaruan 2026-11-09 (TSK-142): D-96 (pengguna, lingkup terbatas; BUKAN keputusan pembimbing): satu istilah cakupan, definisi sekali di I.1, alasan Zhang satu kalimat (menjawab F-A09-0235, F-A07-0087 sebagai arah; status temuan tidak diubah A13). Isi definisi belum ditulis; naskah belum diubah. Konfirmasi pengguna atas isian a03 di TO DO.md (pemutus butir 7 dan 10) BELUM ada; butir tetap TERBUKA sampai naskah dan auditor.'
 ```
 
 ```yaml
@@ -1483,6 +1492,7 @@ status: TERBUKA
 updated: 2026-11-09
 refs: [F-A05-0152, F-A11-0038, D-74, D-81, D-65, D-32, F-A11-0023]
 note: Butir baru dari TSK-131 (a05 TSK-129: F-A05-0152 MEDIUM, menantang D-74/D-81, requires_decision; a11 TSK-128: F-A11-0038 LOW, requires_decision, ke tim). Di luar cakupan DRAF 22 (TSK-130 tidak menyentuh F-A05-0152/F-A11-0038). Bukan keputusan.
+note_D-87: 'Pembaruan 2026-11-09 (TSK-142): pengguna memilih "Pertahankan D-74, nyatakan keberatan sebagai keterbatasan" → D-87 (lingkup terbatas; BUKAN keputusan tim/pembimbing). Dijawab penulis; D-74/D-81 tetap menunggu pembimbing. Status F-A05-0152 dan F-A11-0038 tidak diubah A13 (RESOLVED hanya oleh auditor penemu); naskah belum diubah.'
 ```
 
 ```yaml
@@ -1496,4 +1506,18 @@ status: TERBUKA
 updated: 2026-11-09
 refs: [F-A05-0157, F-A11-0033, Q-B1-ba, Q-B1-bj, Q-B1-ck]
 note: Butir baru dari TSK-131 (a05 F-A05-0157 MEDIUM, requires_decision, ke tim; a11 F-A11-0033 LOW). Di luar cakupan DRAF 22 (TSK-130 tidak menyentuh F-A05-0157). Bukan keputusan.
+note_D-88: 'Pembaruan 2026-11-09 (TSK-142): pengguna memilih "Penulis menilai dengan kriteria tertulis, hasil ke tim" → D-88 (lingkup terbatas; BUKAN keputusan tim/RSIA). Kriteria tertulis belum dirumuskan; bentuk dokumen rawat jalan RSIA tetap tidak diketahui (Q-B1-f). Status F-A05-0157 tidak diubah A13.'
+```
+
+```yaml
+id: Q-B1-co
+question: Butir yang masih menunggu pengguna setelah D-98..D-100 - (1) dampak D-98 (syarat pertama dinilai lebih dulu, 0/0 = syarat pertama gagal) pada stratum tanpa label; (2) konfirmasi interpretasi A01 atas "keputusan editorial terkait D-83" (Dietrich/Stubbert hanya latar, tidak mengualifikasi komponen capstone, tanpa menafsirkan D-61); (3) jalur DOCX (build_modular.py membangun dari master docx Bab II); (4) temuan paket usulan A01 yang tidak dipilih (plafon satu komponen, satuan unit, episode tanpa dokumen, batas kesimpulan, "tidak diuji")?
+affected: [Bab I, I.1, I.2, I.3, I.5, DOCX]
+class: L3
+pic: Pengguna
+ask_to: Pengguna / tim / pembimbing
+status: TERBUKA
+updated: 2026-11-10
+refs: [D-98, D-99, D-100, D-83, D-95, F-A11-0048, F-A11-0049, F-A07-0099, F-A07-0101, Q-B1-aw, Q-B1-al, Q-B1-ax, Q-B1-cj]
+note: Butir baru dari TSK-152. Bukan keputusan. D-98 menjawab F-A11-0048 sebagai keputusan pengguna, tetapi status F-A11-0048 tetap OPEN sampai a11 memeriksa ulang. D-99: union tetap usulan penulis (Q-B1-cj tetap TERBUKA untuk tim); D-29 tidak berubah. Siklus otomatis D-06 habis; revisi lanjutan butuh izin pengguna.
 ```

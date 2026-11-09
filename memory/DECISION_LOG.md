@@ -1,10 +1,10 @@
 ---
 file: DECISION_LOG
-revision: 36
+revision: 38
 status: CURRENT
-updated: 2026-11-09
+updated: 2026-11-10
 updated_by: a13-memory-manager
-based_on_commit: c056d20
+based_on_commit: fd87b6d
 ---
 
 # Decision Log
@@ -1904,4 +1904,302 @@ approval_evidence:
   answered_at: '2026-11-09'
   session_ref: 'sesi 2026-11-09, AskUserQuestion F-A07-0077 / F-A05-0153, diteruskan A01 (brief TSK-131)'
   scope: 'Hanya fungsi kalimat penutup I.1 p19 (pengulangan celah pertama; bukan batas dukungan D-61, bukan dasar p21)'
+```
+
+Catatan D-87..D-97 (2026-11-09, brief A01 memory_op record_decisions): semua adalah keputusan PENGGUNA berlingkup terbatas melalui AskUserQuestion, BUKAN persetujuan tim, pembimbing, atau RSIA. Pertanyaan yang di brief A01 diringkas dengan tanda "..." dicatat apa adanya (kutipan A01, bukan teks penuh). Keterangan lisan RSIA pada D-90 adalah pernyataan yang belum terverifikasi. Rekomendasi pada opsi (bila ada) berasal dari A01, bukan temuan agent.
+
+## D-87
+
+```yaml
+id: D-87
+decision: 'D-74 dipertahankan; keberatan auditor tentang istilah "saling melengkapi" (bagian empiris dan hasil bergantung pada cara kombinasi) dinyatakan di Bab I sebagai keterbatasan'
+class: L3
+status: APPROVED (keputusan pengguna lingkup terbatas; persetujuan tim/pembimbing BELUM ada)
+date: '2026-11-09'
+related: [Q-B1-cm, F-A05-0152, F-A11-0038, D-74, D-81, D-65]
+basis: 'Jawaban pengguna atas AskUserQuestion butir 1 dari 2.3, diteruskan A01'
+alternatives_considered: ['Hapus istilah "saling melengkapi" dari naskah', 'Jadikan bagian empiris yang diukur']
+consequences: 'Q-B1-cm: F-A05-0152 dan F-A11-0038 dijawab penulis; D-74 dan D-81 tetap MENUNGGU PEMBIMBING. Status temuan tidak diubah A13 (RESOLVED hanya oleh auditor penemu). Naskah belum diubah pada pencatatan ini.'
+approval_evidence:
+  question: 'Butir 1 dari 2.3. Auditor a05 (F-A05-0152) dan a11 (F-A11-0038) keberatan: "saling melengkapi" juga punya bagian empiris dan hasilnya bergantung pada cara kombinasi, padahal naskah (D-74, D-81) menyebutnya sifat rancangan yang tidak diukur. Bagaimana istilah itu diperlakukan di Bab I?'
+  options_offered: ['Pertahankan D-74, nyatakan keberatan sebagai keterbatasan [terpilih]', 'Hapus istilah "saling melengkapi" dari naskah', 'Jadikan bagian empiris yang diukur']
+  user_answer: 'Pertahankan D-74, nyatakan keberatan sebagai keterbatasan'
+  answered_at: '2026-11-09'
+  session_ref: 'sesi 2026-11-09, AskUserQuestion butir 1 dari 2.3, diteruskan A01 (brief memory_op record_decisions)'
+  scope: 'Hanya perlakuan istilah "saling melengkapi" di Bab I (D-74 dipertahankan; keberatan menjadi keterbatasan)'
+```
+
+## D-88
+
+```yaml
+id: D-88
+decision: 'Pada tahap pertama, ketersediaan dokumen rawat jalan yang setara resume medis dinilai "ada dan memadai" oleh penulis dengan kriteria tertulis; hasil penilaian dilaporkan ke tim'
+class: L3
+status: APPROVED (keputusan pengguna lingkup terbatas; persetujuan tim/pembimbing/RSIA BELUM ada)
+date: '2026-11-09'
+related: [Q-B1-cn, F-A05-0157, F-A11-0033, D-76, Q-B1-f]
+basis: 'Jawaban pengguna atas AskUserQuestion butir 2 dari 2.3, diteruskan A01'
+alternatives_considered: ['Tetap penanda: ditetapkan tim dan RSIA', 'Tanpa penilaian memadai; cukup "ada"']
+consequences: 'Isi kriteria tertulis belum ditetapkan (harus dirumuskan penulis, tidak dikarang A13). Tidak menetapkan bentuk dokumen rawat jalan RSIA (Q-B1-f tetap terbuka). Status temuan tidak diubah A13.'
+approval_evidence:
+  question: 'Butir 2 dari 2.3 (Q-B1-cn, F-A05-0157). Di tahap pertama, bagaimana ketersediaan dokumen rawat jalan yang setara resume medis dinilai "ada dan memadai"?'
+  options_offered: ['Penulis menilai dengan kriteria tertulis, hasil ke tim [terpilih]', 'Tetap penanda: ditetapkan tim dan RSIA', 'Tanpa penilaian memadai; cukup "ada"']
+  user_answer: 'Penulis menilai dengan kriteria tertulis, hasil ke tim'
+  answered_at: '2026-11-09'
+  session_ref: 'sesi 2026-11-09, AskUserQuestion butir 2 dari 2.3, diteruskan A01'
+  scope: 'Hanya pelaku dan cara penilaian ketersediaan dokumen rawat jalan di tahap pertama'
+```
+
+## D-89
+
+```yaml
+id: D-89
+decision: 'Ambang, selisih minimum, dan satuan hitung dinyatakan di I.2/I.3 sebagai prosedur tanpa angka: ditetapkan sebelum pengujian'
+class: L3
+status: APPROVED (keputusan pengguna lingkup terbatas; persetujuan tim/pembimbing BELUM ada)
+date: '2026-11-09'
+related: [D-19, Q-B1-bg, Q-B1-q, Q-B1-cc, D-82, D-78]
+basis: 'Jawaban pengguna atas AskUserQuestion butir 3 dari 2.3, diteruskan A01'
+alternatives_considered: ['Saya (pengguna) tetapkan angka sekarang', 'Pembanding relatif saja: tanpa ambang absolut']
+consequences: 'Tidak ada angka ditetapkan; D-19 (angka klaim pending) tidak diubah. Operator dan bentuk selisih tidak diputuskan. Q-B1-bg dan Q-B1-q tetap menunggu tim/pembimbing untuk angka.'
+approval_evidence:
+  question: 'Butir 3 dari 2.3 (D-19; Q-B1-bg, q, cc). Bagaimana ambang, selisih minimum, dan satuan hitung dinyatakan di I.2/I.3 supaya rumusan masalah dapat dijawab? ... (teks diringkas pada brief A01)'
+  options_offered: ['Prosedur tanpa angka: ditetapkan sebelum pengujian [terpilih]', 'Saya (pengguna) tetapkan angka sekarang', 'Pembanding relatif saja: tanpa ambang absolut']
+  user_answer: 'Prosedur tanpa angka: ditetapkan sebelum pengujian'
+  answered_at: '2026-11-09'
+  session_ref: 'sesi 2026-11-09, AskUserQuestion butir 3 dari 2.3, diteruskan A01'
+  scope: 'Hanya bentuk pernyataan ambang, selisih minimum, dan satuan hitung di I.2/I.3 (prosedur tanpa angka)'
+```
+
+## D-90
+
+```yaml
+id: D-90
+decision: 'Naskah tidak mengasumsikan CPPT dan resume medis sama-sama dikunci setelah pelayanan selesai; berdasarkan keterangan lisan RSIA (disampaikan lewat penulis, belum terkonfirmasi) CPPT yang tercatat tidak dapat diubah dan resume medis masih dapat direvisi; satuan hitung rawat inap adalah satu episode (masuk hingga keluar dan resume episode itu diajukan), resume episode sebelumnya tidak dihitung kembali'
+class: L3
+status: APPROVED (keputusan pengguna lingkup terbatas; persetujuan tim/pembimbing BELUM ada; keterangan RSIA belum terverifikasi)
+date: '2026-11-09'
+related: [Q-B1-ba, D-55, D-56, D-57, D-21, F-A05-0024, F-A11-0004, Q-TEAM butir 5]
+basis: 'Jawaban teks bebas pengguna atas AskUserQuestion butir 4 dari 2.3, diteruskan A01'
+alternatives_considered: ['Nyatakan dua tafsir, kesimpulan dibatasi', 'Ikuti dokumen tim', 'Ikuti keterangan RSIA']
+consequences: 'Pengguna menjawab dengan teks bebas, bukan memilih salah satu opsi. Keterangan RSIA tetap pernyataan yang perlu dikonfirmasi, bukan fakta RSIA terverifikasi. Berlaku untuk rawat inap saja. Konflik sumber Q-B1-ba dengan dokumen tim tidak diselesaikan A13; naskah (I.1 baris 75/89 dan I.4 p6) perlu diselaraskan penulis. Konfirmasi RSIA tetap diperlukan.'
+approval_evidence:
+  question: 'Butir 4 dari 2.3 (Q-B1-ba). Dokumen tim mengandaikan CPPT dan resume medis dikunci setelah pelayanan selesai, sedangkan keterangan lisan RSIA (lewat Anda, belum terverifikasi) berbeda. Bagaimana Bab I menyatakannya?'
+  options_offered: ['Nyatakan dua tafsir, kesimpulan dibatasi', 'Ikuti dokumen tim', 'Ikuti keterangan RSIA']
+  user_answer: 'Naskah tidak mengasumsikan bahwa CPPT dan resume medis sama-sama dikunci setelah pelayanan selesai. Berdasarkan keterangan lisan RSIA yang disampaikan melalui penulis dan masih perlu dikonfirmasi, CPPT yang telah tercatat tidak dapat diubah, sedangkan resume medis masih dapat direvisi. Penghitungan dilakukan berdasarkan satu episode rawat inap, sejak pasien masuk hingga pasien keluar dan resume medis untuk episode tersebut diajukan. Resume dari episode sebelumnya tidak dihitung kembali sebagai bagian dari episode yang sedang dievaluasi.'
+  answered_at: '2026-11-09'
+  session_ref: 'sesi 2026-11-09, AskUserQuestion butir 4 dari 2.3 (jawaban teks bebas), diteruskan A01'
+  scope: 'Hanya cara Bab I menyatakan penguncian CPPT/resume medis dan satuan hitung episode rawat inap'
+```
+
+## D-91
+
+```yaml
+id: D-91
+decision: '"Rawat jalan terbatas" di I.4 dinyatakan sebagai cakupan bersyarat, tanpa definisi baru'
+class: L3
+status: APPROVED (keputusan pengguna lingkup terbatas; persetujuan tim/RSIA BELUM ada)
+date: '2026-11-09'
+related: [Q-B1-f, Q-TEAM butir 4, D-21, D-76, D-88]
+basis: 'Jawaban pengguna atas AskUserQuestion butir 5 dari 2.3, diteruskan A01'
+alternatives_considered: ['Samakan satuan dengan rawat inap', 'Keluarkan rawat jalan dari Bab I']
+consequences: 'Batas operasional dan bentuk dokumen rawat jalan RSIA tetap tidak ditetapkan; Q-B1-f dan Q-TEAM butir 4 tetap terbuka.'
+approval_evidence:
+  question: 'Butir 5 dari 2.3 (Q-B1-f, Q-TEAM butir 4). ... Apa batas "rawat jalan terbatas" di I.4 dan bentuk dokumen rawat jalan di RSIA? (teks diringkas pada brief A01)'
+  options_offered: ['Nyatakan sebagai cakupan bersyarat, tanpa definisi baru [terpilih]', 'Samakan satuan dengan rawat inap', 'Keluarkan rawat jalan dari Bab I']
+  user_answer: 'Nyatakan sebagai cakupan bersyarat, tanpa definisi baru'
+  answered_at: '2026-11-09'
+  session_ref: 'sesi 2026-11-09, AskUserQuestion butir 5 dari 2.3, diteruskan A01'
+  scope: 'Hanya cara I.4 menyatakan "rawat jalan terbatas" (cakupan bersyarat tanpa definisi baru)'
+```
+
+## D-92
+
+```yaml
+id: D-92
+decision: 'Bab I memakai judul baru dari dokumen penyelarasan tim (30 Oktober), ditandai sebagai usulan; K2 tetap menunggu persetujuan pembimbing'
+class: L3
+status: APPROVED (keputusan pengguna lingkup terbatas; persetujuan pembimbing BELUM ada)
+date: '2026-11-09'
+related: [K2, Q-TEAM butir 9]
+basis: 'Jawaban pengguna atas AskUserQuestion butir 6 dari 2.3, diteruskan A01'
+alternatives_considered: ['Pakai judul yang berlaku di naskah, K2 tetap terbuka']
+consequences: 'K2 tetap MENUNGGU PEMBIMBING; judul dan empat rumusan masalah capstone belum disetujui pembimbing. Draf individu pengguna tidak diubah.'
+approval_evidence:
+  question: 'Butir 6 dari 2.3 (K2, Q-TEAM butir 9). Judul baru di dokumen penyelarasan tim (30 Oktober) dan empat rumusan masalah capstone menunggu persetujuan pembimbing ... Apa yang dipakai Bab I sekarang? (teks diringkas pada brief A01)'
+  options_offered: ['Pakai judul yang berlaku di naskah, K2 tetap terbuka', 'Pakai judul baru dari dokumen penyelarasan, ditandai usulan [terpilih]']
+  user_answer: 'Pakai judul baru dari dokumen penyelarasan, ditandai usulan'
+  answered_at: '2026-11-09'
+  session_ref: 'sesi 2026-11-09, AskUserQuestion butir 6 dari 2.3, diteruskan A01'
+  scope: 'Hanya judul yang dipakai Bab I sekarang (judul baru, ditandai usulan); K2 tidak diputuskan'
+```
+
+## D-93
+
+```yaml
+id: D-93
+decision: 'Aturan sebelum uji: bila plafon menghalangi pembedaan, hasil dinyatakan "tidak dapat dinilai"'
+class: L3
+status: APPROVED (keputusan pengguna lingkup terbatas; persetujuan tim/pembimbing BELUM ada); urutan penilaian DIUBAH sebagian oleh D-98 (2026-11-10)
+date: '2026-11-09'
+related: [F-A11-0015, F-A11-0016, Q-B1-bg, D-89]
+basis: 'Jawaban pengguna atas AskUserQuestion butir 7 dari 2.3, diteruskan A01'
+alternatives_considered: ['Nyatakan sebagai keterbatasan saja', 'Tetap penanda untuk tim dan pembimbing']
+consequences: 'Kondisi plafon yang tepat (ambang) tidak ditetapkan; angka tetap tertahan D-19. Status F-A11-0015 (HIGH) dan F-A11-0016 tidak diubah A13. Konfirmasi pengguna atas isian a03 di TO DO.md (pemutus butir 7 dan 10) BELUM ada.'
+approval_evidence:
+  question: 'Butir 7 dari 2.3 (F-A11-0015 HIGH, F-A11-0016). ... Bagaimana naskah menanganinya? (teks diringkas pada brief A01)'
+  options_offered: ['Aturan sebelum uji: hasil "tidak dapat dinilai" bila plafon [terpilih]', 'Nyatakan sebagai keterbatasan saja', 'Tetap penanda untuk tim dan pembimbing']
+  user_answer: 'Aturan sebelum uji: hasil "tidak dapat dinilai" bila plafon'
+  answered_at: '2026-11-09'
+  session_ref: 'sesi 2026-11-09, AskUserQuestion butir 7 dari 2.3, diteruskan A01'
+  scope: 'Hanya penanganan plafon (F-A11-0015, F-A11-0016): aturan sebelum uji, hasil "tidak dapat dinilai"'
+```
+
+## D-94
+
+```yaml
+id: D-94
+decision: 'Lima pertentangan antarusulan untuk butir tim diselesaikan sebagai satu paket konsisten, ditandai usulan penulis: satuan episode; agregasi mikro atas episode; 0/0 tidak terdefinisi menjadi "tidak dapat dinilai"; union dengan catatan recall; seluruh jenis ketidaksesuaian tetap usulan'
+class: L3
+status: APPROVED (keputusan pengguna lingkup terbatas, bersifat usulan penulis; persetujuan tim/pembimbing BELUM ada); butir 3 (0/0) DIUBAH oleh D-98 dan butir union DILENGKAPI oleh D-99 (2026-11-10)
+date: '2026-11-09'
+related: [F-A11-0023, F-A11-0024, F-A11-0025, F-A11-0026, F-A11-0027, F-A05-0150, D-72, D-79, D-81]
+basis: 'Jawaban pengguna atas AskUserQuestion butir 8 dari 2.3, diteruskan A01'
+alternatives_considered: ['Biarkan semua tetap penanda untuk tim']
+consequences: 'Paket adalah usulan penulis, bukan keputusan tim. Pembanding manual tetap D-72 (tidak berubah); K1 tetap D-80. Isi paket menurut keterangan A01. Status temuan tidak diubah A13.'
+approval_evidence:
+  question: 'Butir 8 dari 2.3, lima pertentangan antarusulan untuk butir tim (F-A11-0023..0027, F-A05-0150). Bagaimana naskah menyelesaikannya?'
+  options_offered: ['Satu paket konsisten, ditandai usulan penulis [terpilih]', 'Biarkan semua tetap penanda untuk tim']
+  user_answer: 'Satu paket konsisten, ditandai usulan penulis'
+  answered_at: '2026-11-09'
+  session_ref: 'sesi 2026-11-09, AskUserQuestion butir 8 dari 2.3, diteruskan A01'
+  scope: 'Hanya penyelesaian lima pertentangan antarusulan sebagai satu paket usulan penulis'
+```
+
+## D-95
+
+```yaml
+id: D-95
+decision: 'Temuan Dietrich hanya dipakai sebagai latar; kriteria pemilihan kombinasi tetap umum (tidak dibedakan per pasangan komponen) dengan urutan dinyatakan'
+class: L3
+status: APPROVED (keputusan pengguna lingkup terbatas; persetujuan pembimbing BELUM ada)
+date: '2026-11-09'
+related: [Q-B1-ce, Q-B1-cf, F-A05-0142, F-A05-0144, D-61, D-73]
+basis: 'Jawaban pengguna atas AskUserQuestion butir 9 dari 2.3, diteruskan A01'
+alternatives_considered: ['Kriteria dibedakan per pasangan komponen', 'Tetap penanda untuk pembimbing']
+consequences: 'D-61 tidak diubah. Status temuan tidak diubah A13.'
+approval_evidence:
+  question: 'Butir 9 dari 2.3. Bagaimana temuan Dietrich dipakai, dan apakah kriteria pemilihan kombinasi perlu membedakan pasangan komponen? ... (teks diringkas pada brief A01)'
+  options_offered: ['Dietrich hanya latar; kriteria tetap umum, urutan dinyatakan [terpilih]', 'Kriteria dibedakan per pasangan komponen', 'Tetap penanda untuk pembimbing']
+  user_answer: 'Dietrich hanya latar; kriteria tetap umum, urutan dinyatakan'
+  answered_at: '2026-11-09'
+  session_ref: 'sesi 2026-11-09, AskUserQuestion butir 9 dari 2.3, diteruskan A01'
+  scope: 'Hanya fungsi rujukan Dietrich (latar) dan sifat umum kriteria pemilihan kombinasi'
+```
+
+## D-96
+
+```yaml
+id: D-96
+decision: 'Cakupan literatur dirumuskan dengan satu istilah cakupan, didefinisikan sekali di I.1, dan alasan Zhang dinyatakan satu kalimat'
+class: L3
+status: APPROVED (keputusan pengguna lingkup terbatas; persetujuan pembimbing BELUM ada)
+date: '2026-11-09'
+related: [Q-B1-cg, F-A07-0087, F-A09-0235, F-A05-0154, D-85, D-86]
+basis: 'Jawaban pengguna atas AskUserQuestion butir 10 dari 2.3, diteruskan A01'
+alternatives_considered: ['Biarkan dua sebutan seperti sekarang']
+consequences: 'Isi definisi cakupan tidak ditetapkan di sini (dirumuskan penulis). D-85 dan D-86 dipertahankan. Konfirmasi pengguna atas isian a03 di TO DO.md (pemutus butir 7 dan 10) BELUM ada. Status temuan tidak diubah A13.'
+approval_evidence:
+  question: 'Butir 10 dari 2.3 (Q-B1-cg; F-A07-0087, F-A09-0235). ... Bagaimana cakupan itu dirumuskan? (teks diringkas pada brief A01)'
+  options_offered: ['Satu istilah cakupan, definisi sekali di I.1, alasan Zhang satu kalimat [terpilih]', 'Biarkan dua sebutan seperti sekarang']
+  user_answer: 'Satu istilah cakupan, definisi sekali di I.1, alasan Zhang satu kalimat'
+  answered_at: '2026-11-09'
+  session_ref: 'sesi 2026-11-09, AskUserQuestion butir 10 dari 2.3, diteruskan A01'
+  scope: 'Hanya perumusan cakupan literatur (satu istilah, definisi sekali di I.1, alasan Zhang satu kalimat)'
+```
+
+## D-97
+
+```yaml
+id: D-97
+decision: 'Pasangan ibu dan bayi: satu episode = satu unit; pasangan tidak dipisah antar-bagian pada pembagian data'
+class: L3
+status: APPROVED (keputusan pengguna lingkup terbatas; persetujuan tim BELUM ada)
+date: '2026-11-09'
+related: [Q-TEAM butir 6, D-90, D-94]
+basis: 'Jawaban pengguna atas AskUserQuestion butir terakhir (bagian 3), diteruskan A01'
+alternatives_considered: ['Tetap penanda untuk tim']
+consequences: 'Tim belum menyetujui; pemilik penautan ibu-bayi menurut Penyelarasan belum dikonfirmasi.'
+approval_evidence:
+  question: 'Butir terakhir yang perlu keputusan (bagian 3, Q-TEAM butir 6): bagaimana pasangan ibu dan bayi diperlakukan pada pembagian data?'
+  options_offered: ['Satu episode = satu unit; pasangan tidak dipisah antar-bagian [terpilih]', 'Tetap penanda untuk tim']
+  user_answer: 'Satu episode = satu unit; pasangan tidak dipisah antar-bagian'
+  answered_at: '2026-11-09'
+  session_ref: 'sesi 2026-11-09, AskUserQuestion butir terakhir (bagian 3), diteruskan A01'
+  scope: 'Hanya perlakuan pasangan ibu-bayi pada pembagian data (satu episode = satu unit)'
+```
+
+Catatan D-98..D-100 (2026-11-10, brief A01 memory_op record_decisions): keputusan PENGGUNA lingkup terbatas melalui AskUserQuestion, BUKAN persetujuan tim, pembimbing, atau RSIA. Pertanyaan dan deskripsi opsi yang di brief A01 diringkas dengan tanda "..." dicatat apa adanya (kutipan A01, bukan teks penuh). Rekomendasi pada opsi berasal dari A01.
+
+## D-98
+
+```yaml
+id: D-98
+decision: 'Urutan penilaian di I.2/I.3: syarat pertama dinilai lebih dulu; "tidak dapat dinilai" hanya untuk syarat kedua; 0/0 pada penyebut presisi kombinasi dihitung sebagai syarat pertama gagal'
+class: L3
+status: APPROVED (keputusan pengguna lingkup terbatas; persetujuan tim/pembimbing BELUM ada)
+date: '2026-11-10'
+related: [F-A07-0090, F-A07-0091, F-A11-0041, F-A11-0048, F-A11-0049, D-93, D-94, D-79]
+basis: 'Jawaban pengguna atas AskUserQuestion (temuan a07 dan a11 atas paket D-94/D-93), diteruskan A01'
+alternatives_considered: ['Pertahankan paket D-94 apa adanya', 'Bawa ke tim, naskah memuat penanda saja']
+consequences: 'MENGUBAH D-94 butir 3 (0/0 menjadi "tidak dapat dinilai") dan sebagian D-93 (urutan penilaian). Menjawab F-A11-0048 (konflik dengan D-94 butir 3) sebagai keputusan pengguna; status F-A11-0048 tidak diubah A13 (RESOLVED hanya oleh a11). Pengguna BELUM menyebut secara eksplisit dampaknya pada stratum tanpa label (F-A11-0049); butir itu tetap terbuka. D-79 (mikro) tidak disebut pengguna. Isi turunan menurut keterangan A01.'
+approval_evidence:
+  question: 'Temuan a07 (F-A07-0090 HIGH, F-A07-0091) dan a11 (F-A11-0041): usulan paket D-94/D-93 membuat "tidak dapat dinilai" menyerap kegagalan yang sudah pasti. Contoh: kombinasi tanpa temuan sama sekali (presisi 0/0, recall 0) jelas gagal syarat pertama, tetapi dilaporkan "tidak dapat dinilai", bukan "tidak". Bagaimana urutan penilaian ditetapkan di I.2/I.3?'
+  options_offered: ['Syarat pertama dinilai lebih dulu; "tidak dapat dinilai" hanya untuk syarat kedua [terpilih] (deskripsi opsi diringkas A01: 0/0 pada penyebut presisi kombinasi dihitung sebagai syarat pertama gagal; mengubah sebagian D-94 dan D-93)', 'Pertahankan paket D-94 apa adanya', 'Bawa ke tim, naskah memuat penanda saja']
+  user_answer: 'Syarat pertama dinilai lebih dulu; "tidak dapat dinilai" hanya untuk syarat kedua'
+  answered_at: '2026-11-10'
+  session_ref: 'sesi 2026-11-10, AskUserQuestion urutan penilaian (temuan a07/a11), diteruskan A01'
+  scope: 'Hanya urutan penilaian syarat pertama dan kedua di I.2/I.3 (mengubah D-94 butir 3 dan sebagian D-93)'
+```
+
+## D-99
+
+```yaml
+id: D-99
+decision: 'Union tanpa aturan temuan ganda: naskah menyatakan aturan deduplikasi dan akibatnya (presisi kombinasi berada di antara presisi komponen), ditandai usulan penulis'
+class: L3
+status: APPROVED (keputusan pengguna lingkup terbatas, bersifat usulan penulis; persetujuan tim/pembimbing BELUM ada)
+date: '2026-11-10'
+related: [F-A11-0023, D-77, D-94, D-29]
+basis: 'Jawaban pengguna atas AskUserQuestion F-A11-0023, diteruskan A01'
+alternatives_considered: ['Tinjau bentuk syarat presisi (bawa ke tim sebagai penanda)', 'Ganti mekanisme union jadi bentuk lain (irisan/penyaringan)']
+consequences: 'Union (D-77/D-94) tetap usulan penulis; D-29 tidak berubah. Bentuk syarat presisi tidak ditinjau dan mekanisme tidak diganti. Status F-A11-0023 tidak diubah A13 (RESOLVED menurut a11 pada audit ulang terarah dicatat di FINDINGS_LOG).'
+approval_evidence:
+  question: 'F-A11-0023 (HIGH, a11). Pada union tanpa aturan temuan ganda, presisi kombinasi selalu berada di antara presisi kedua komponen, sehingga syarat "presisi kombinasi lebih tinggi daripada masing-masing komponen" tidak mungkin terpenuhi. Bagaimana naskah menanganinya (union itu sendiri adalah usulan Anda, D-77/D-94)?'
+  options_offered: ['Nyatakan aturan deduplikasi dan akibatnya, tanda usulan [terpilih]', 'Tinjau bentuk syarat presisi (bawa ke tim sebagai penanda)', 'Ganti mekanisme union jadi bentuk lain (irisan/penyaringan)']
+  user_answer: 'Nyatakan aturan deduplikasi dan akibatnya, tanda usulan'
+  answered_at: '2026-11-10'
+  session_ref: 'sesi 2026-11-10, AskUserQuestion F-A11-0023, diteruskan A01'
+  scope: 'Hanya penanganan F-A11-0023: aturan deduplikasi dan akibatnya dinyatakan, ditandai usulan penulis'
+```
+
+## D-100
+
+```yaml
+id: D-100
+decision: 'Lingkup revisi terbatas atas DRAF 24 (bukan DRAF 25) yang langsung menghasilkan DOCX: terapkan keputusan pengguna yang ada (termasuk dua isu HIGH dan keputusan editorial terkait D-83), simpan Markdown hasil revisi, migrasikan ke DOCX tanpa format baru, jangan ubah klausa D-85 di p22 dan kalimat verbatim D-90, audit terarah a09/a07/a11'
+class: L3
+status: APPROVED (instruksi pengguna lingkup terbatas; persetujuan tim/pembimbing BELUM ada)
+date: '2026-11-10'
+related: [D-83, D-85, D-90, D-95, D-98, D-99, D-06, D-35, D-36, D-49, Q-B1-aw, Q-B1-al, Q-B1-ax]
+basis: 'Jawaban teks bebas pengguna atas pertanyaan paket usulan A01 setelah empat auditor DRAF 24 selesai (siklus otomatis D-06 habis), diteruskan A01'
+alternatives_considered: ['Paket usulan penulis A01 (plafon satu komponen, satuan unit, episode tanpa dokumen, batas kesimpulan, "tidak diuji"): TIDAK dipilih pengguna; teks lengkap opsi diringkas A01 (tanda "...")']
+consequences: 'Pengguna TIDAK memilih paket usulan A01; temuan terkait (plafon satu komponen, satuan unit, episode tanpa dokumen, batas kesimpulan, "tidak diuji") tetap OPEN. Interpretasi A01 atas "keputusan editorial terkait D-83": Dietrich/Stubbert hanya sebagai latar, tidak dipakai mengualifikasi komponen capstone, tanpa menafsirkan D-61 (D-83/D-95); interpretasi ini BELUM dikonfirmasi pengguna. Jalur DOCX BELUM diputuskan: tools/build_modular.py membangun dari master docx Bab II, Bab I hanya penampung (Q-B1-aw, al, ax TERBUKA); tidak ada eksekusi build tercatat pada brief ini. Output wajib menurut pengguna: Markdown hasil revisi, DOCX siap diperiksa, ringkasan perubahan dan status verifikasi auditor, daftar temuan OPEN dan keputusan menunggu tim/pembimbing. Pemeriksaan di luar cakupan tidak diperbaiki tanpa persetujuan.'
+approval_evidence:
+  question: 'Keempat auditor selesai (a07 FAIL, a11 FAIL, a09 FAIL, a08 PASS_WITH_NOTES). Siklus otomatis D-06 sudah habis, jadi revisi ke DRAF 25 butuh izin Anda. ... setujukah paket usulan penulis berikut ...? (teks diringkas pada brief A01)'
+  options_offered: ['Daftar opsi lengkap TIDAK diterima A13; brief A01 hanya menyebut paket usulan penulis (plafon satu komponen, satuan unit, episode tanpa dokumen, batas kesimpulan, "tidak diuji"); pengguna menjawab dengan teks bebas']
+  user_answer: 'Saya ingin alur kerja langsung menghasilkan DOCX, bukan berhenti di Markdown.Gunakan DRAF 24 sebagai basis. Lakukan revisi terbatas sesuai keputusan yang telah saya berikan, termasuk dua isu HIGH dan keputusan editorial terkait D-83.Setelah revisi Markdown selesai:1. Simpan Markdown hasil revisi sebagai sumber yang dapat ditelusuri.2. Langsung migrasikan Markdown tersebut ke DOCX.3. Pertahankan struktur proposal, hierarki heading, penomoran, tabel, diagram, sitasi, dan format akademik sesuai dokumen sebelumnya. Jangan membuat format baru.4. Jangan mengubah klausa D-85 di p22 dan kalimat verbatim D-90.5. Jalankan pemeriksaan terarah oleh a09, a07, dan a11 pada bagian yang berubah. Jangan mengulang seluruh QA.6. Jika pemeriksaan menemukan masalah, laporkan dan jangan memperbaiki di luar cakupan tanpa persetujuan.**Output wajib:**- Markdown hasil revisi.- DOCX hasil migrasi yang siap diperiksa.- Ringkasan perubahan dan status verifikasi auditor.- Daftar temuan yang masih OPEN dan keputusan yang masih menunggu tim/pembimbing.Jangan membuat DRAF 25. Perlakukan pekerjaan ini sebagai revisi terbatas DRAF 24 yang langsung menghasilkan dokumen DOCX.'
+  answered_at: '2026-11-10'
+  session_ref: 'sesi 2026-11-10, AskUserQuestion paket usulan A01 (jawaban teks bebas), diteruskan A01'
+  scope: 'Lingkup revisi terbatas DRAF 24 dan keluaran Markdown plus DOCX seperti diuraikan; bukan persetujuan paket usulan A01, bukan persetujuan jalur build DOCX, bukan persetujuan tim/pembimbing'
 ```

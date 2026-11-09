@@ -1,10 +1,10 @@
 ---
 file: TASK_TRACKER
-revision: 63
+revision: 65
 status: CURRENT
-updated: 2026-11-09
+updated: 2026-11-10
 updated_by: a13-memory-manager
-based_on_commit: c056d20
+based_on_commit: fd87b6d
 ---
 
 # Task Tracker
@@ -155,6 +155,17 @@ Tugas memakai ID `TSK-xxx` (berbeda dari ID uji teknis `T-xx`). Status: `TODO` �
 | TSK-139 | memory_op A13: record_findings QA terarah DRAF 23, task_close TSK-135, 137, 138, hash `bab1/Bab_I_Draft.md` dan Artifact Map, CONTEXT_TRANSFER (tutup S2) | DONE | A13 | 0 | `memory/FINDINGS_LOG.md`, `memory/OPEN_QUESTIONS.md`, `memory/TASK_TRACKER.md`, `memory/PROJECT_STATE.md`, `memory/CONTEXT_TRANSFER.md` | Brief A01 | Tanpa keputusan baru. Hash DRAF 23 `408410045f85` (sha256sum; tanpa CR, normalisasi CRLF tidak mengubah). `bab1/TO DO.md` tidak berubah (`ad3ac24bbde9`) tetapi USANG sejak DRAF 19 (belum diperbarui; a03 memperbaruinya bila pengguna mengizinkan). Hash S1 lain tidak disentuh. Naskah tidak diubah A13; tanpa Git; commit belum diminta pengguna |
 | TSK-140 | write A03: tulis ulang `bab1/TO DO.md` mencerminkan DRAF 23 (dokumen kerja, bukan naskah) | DONE | A03 | 0 | `bab1/TO DO.md` | Brief A01; izin pengguna 2026-11-09: Q "Apakah a03 memperbarui bab1/TO DO.md agar mencerminkan DRAF 23 (dokumen kerja untuk tim dan pembimbing; bukan naskah proposal)?" Opsi "Perbarui sekarang (Recommended)" / "Jangan, biarkan versi DRAF 19"; A "Perbarui sekarang (Recommended)" | execution COMPLETE, claims_changed false, qa NA. 60 penanda (I.1 14, I.2 15, I.3 9, I.4 7, I.5 15); §2 dipecah 2.1/2.2/2.3 (11 butir masih harus diputuskan); §3-§5 diperbarui; tanpa nama alat atau pengenal pasien. BELUM DIKONFIRMASI pengguna: pemutus butir 7 ("tim dan pembimbing") dan butir 10 ("saya, lalu pembimbing") diisi a03 sendiri; kode Q-B1-o/-r/-by/-bz di butir 8 ditambahkan a03 |
 | TSK-141 | memory_op A13: task_close TSK-140, hash `bab1/TO DO.md`, Artifact Map | DONE | A13 | 0 | `memory/TASK_TRACKER.md`, `memory/PROJECT_STATE.md`, `memory/CONTEXT_TRANSFER.md` | Brief A01 | Hash `bab1/TO DO.md` baru `b0c386672389` (sha256sum; menggantikan `ad3ac24bbde9`); hash `bab1/Bab_I_Draft.md` DRAF 23 `408410045f85` dihitung ulang, cocok. Tanpa keputusan baru; naskah tidak diubah; tanpa Git |
+| TSK-142 | memory_op A13: record_decisions D-87..D-97 (11 keputusan pengguna lingkup terbatas, butir 2.3 dan bagian 3 TO DO) | DONE | A13 | 0 | `memory/DECISION_LOG.md`, `memory/OPEN_QUESTIONS.md`, `memory/TASK_TRACKER.md` | Brief A01; approval_evidence verbatim dari AskUserQuestion 2026-11-09 | D-87 (Q-B1-cm), D-88 (Q-B1-cn), D-89 (Q-B1-bg/q/cc), D-90 (Q-B1-ba), D-91 (Q-B1-f), D-92 (K2), D-93 (F-A11-0015/0016), D-94 (paket F-A11-0023..0027, F-A05-0150), D-95 (Q-B1-ce/cf), D-96 (Q-B1-cg), D-97 (ibu-bayi). Semua keputusan pengguna, BUKAN tim/pembimbing/RSIA; naskah belum diubah. Pembanding manual tetap D-72, K1 tetap D-80. Konfirmasi pengguna atas isian a03 di `bab1/TO DO.md` (pemutus butir 7 dan 10) BELUM ada, jangan ditutup. Pengguna menyatakan sudah commit dan push (HEAD fd87b6d, status git bersih); push TIDAK diverifikasi A13 dan tidak ada approval_evidence G3 lewat A13. Status temuan tidak diubah |
+| TSK-143 | qa_audit A08: Bab I DRAF 24 (sitasi) | DONE | A08 | 0 | `memory/FINDINGS_LOG.md` | Brief A01; ID tugas diberikan A13 | execution COMPLETE, qa PASS_WITH_NOTES: F-A08-0112, 0113 MEDIUM; 0114 LOW; 0115, 0116 INFO. A08 membaca Fig. 3 Zeba hlm. 9 lewat Read(pages) setelah pdftoppm ditolak hook; penilaian A01: bukan jalan memutar, tetapi baris itu bergantung pada pembacaan gambar. Dicatat TSK-152 |
+| TSK-144 | qa_audit A11: Bab I DRAF 24 | DONE | A11 | 0 | `memory/FINDINGS_LOG.md` | Brief A01; ID tugas diberikan A13 | execution COMPLETE, qa FAIL: F-A11-0023 naik HIGH; F-A11-0039..0047 (0040..0043 MEDIUM; 0044..0046 LOW; 0047 INFO). Dicatat TSK-152 |
+| TSK-145 | qa_audit A07: Bab I DRAF 24 | DONE | A07 | 0 | `memory/FINDINGS_LOG.md` | Brief A01; ID tugas diberikan A13 | execution COMPLETE, qa FAIL: F-A07-0090 HIGH; 0091..0097 (MEDIUM kecuali 0097 LOW); 0098 INFO; F-A07-0087 RESOLVED menurut a07; 0088, 0089 tetap OPEN. Dicatat TSK-152 |
+| TSK-146 | qa_audit A09: Bab I DRAF 24 | DONE | A09 | 0 | `memory/FINDINGS_LOG.md` | Brief A01; ID tugas diberikan A13 | execution COMPLETE, qa FAIL: F-A09-0245..0267 (3 MEDIUM: 0245, 0246, 0247). Dicatat TSK-152 |
+| TSK-147 | revise A03: revisi terbatas atas DRAF 24 (tetap DRAF 24, bukan DRAF 25) | DONE | A03 | 0 | `bab1/Bab_I_Draft.md` | Izin pengguna D-100 (2026-11-10); keputusan D-98, D-99 | Menerapkan D-98 (urutan penilaian), D-99 (aturan deduplikasi union, tanda usulan), isu HIGH F-A07-0090 dan F-A11-0023, dan keputusan editorial terkait D-83 (menurut interpretasi A01 yang BELUM dikonfirmasi pengguna: Dietrich/Stubbert hanya latar). D-85 p22 dan kalimat verbatim D-90 tidak diubah (instruksi pengguna). 60 penanda menurut A01. Laporan a03 tidak diterima A13 secara rinci |
+| TSK-148 | write A03: migrasi Markdown revisi ke DOCX (output wajib D-100) | TODO | A03 | 0 | n/a | D-100; D-35, D-36, D-49; Q-B1-al, aw, ax | Jalur DOCX BELUM diputuskan: `tools/build_modular.py` membangun dari master docx Bab II, Bab I hanya penampung (Q-B1-aw, al, ax TERBUKA). Tidak ada eksekusi pada brief ini; pengguna tetap mewajibkan DOCX siap diperiksa, tanpa format baru, struktur dan heading sesuai dokumen sebelumnya |
+| TSK-149 | qa_audit A11: audit ulang terarah revisi terbatas DRAF 24 | DONE | A11 | 0 | `memory/FINDINGS_LOG.md` | Brief A01 | F-A11-0023 dan 0041 RESOLVED (menurut a11); F-A11-0039 tetap OPEN LOW. Baru F-A11-0048 HIGH (konflik dengan D-94 butir 3; kini dijawab D-98), 0049 MEDIUM, 0050 MEDIUM, 0051 MEDIUM, 0052 LOW. Dicatat TSK-152 |
+| TSK-150 | qa_audit A07: audit ulang terarah revisi terbatas DRAF 24 | DONE | A07 | 0 | `memory/FINDINGS_LOG.md` | Brief A01 | F-A07-0090 dan 0091 RESOLVED (menurut a07). Baru F-A07-0099 MEDIUM (cabang "penyebut recall bernilai 0" tidak pernah terpakai), 0100 LOW, 0101 MEDIUM (kasus sedikit hanya menghalangi jalur "ya"; bertentangan dengan "berlaku sama" I.3 p1), 0102 INFO. Dicatat TSK-152 |
+| TSK-151 | qa_audit A09: audit ulang terarah revisi terbatas DRAF 24 | DONE | A09 | 0 | `memory/FINDINGS_LOG.md` | Brief A01 | Baru F-A09-0268..0275 (0268, 0269, 0270 MEDIUM); F-A09-0253, 0257, 0261 tetap OPEN. Dicatat TSK-152 |
+| TSK-152 | memory_op A13: record_decisions D-98..D-100, record_findings QA DRAF 24, task_close TSK-143..147, 149..151, hash dan PROJECT_STATE/CONTEXT_TRANSFER | DONE | A13 | 0 | `memory/DECISION_LOG.md`, `memory/FINDINGS_LOG.md`, `memory/OPEN_QUESTIONS.md`, `memory/TASK_TRACKER.md`, `memory/PROJECT_STATE.md`, `memory/CONTEXT_TRANSFER.md` | Brief A01; approval_evidence verbatim dari AskUserQuestion 2026-11-10 | D-98 (urutan penilaian; mengubah D-94 butir 3 dan sebagian D-93), D-99 (aturan deduplikasi union, usulan), D-100 (lingkup revisi terbatas DRAF 24 plus DOCX). Pengguna TIDAK memilih paket usulan A01; temuan terkait tetap OPEN. Hash baru `bab1/Bab_I_Draft.md` `71e7683087e6`, `bab1/TO DO.md` `2054cdb0907c` (sha256sum; apakah tanpa CR tidak diperiksa). Pengguna sebelumnya menyatakan sudah commit dan push (HEAD fd87b6d); push TIDAK diverifikasi A13, tidak ada approval_evidence G3 lewat A13. Tanpa Git oleh A13 |
 
 Approval evidence TSK-061 (persetujuan operasional per eksekusi, P2-02):
 
@@ -372,6 +383,15 @@ Diisi A13 saat penutupan tugas dari Agent Report dan `.scratch/agent_runs.jsonl`
 | 2026-11-09 | TSK-139 (record_findings QA DRAF 23, task_close TSK-135, 137, 138, hash dan Artifact Map, CONTEXT_TRANSFER) | a13 | 0 | COMPLETE | NA | 0/0/0/0 | n/a | n/a | n/a |
 | 2026-11-09 | TSK-140 (tulis ulang `bab1/TO DO.md` ke DRAF 23) | a03 | 0 | COMPLETE | NA | 0/0/0/0 | n/a | n/a | n/a |
 | 2026-11-09 | TSK-141 (task_close TSK-140, hash, Artifact Map) | a13 | 0 | COMPLETE | NA | 0/0/0/0 | n/a | n/a | n/a |
+| 2026-11-10 | TSK-143 (QA sitasi DRAF 24) | a08 | 0 | COMPLETE | PASS_WITH_NOTES | 0/0/2/1 (+2 INFO) | n/a | n/a | n/a |
+| 2026-11-10 | TSK-144 (QA teknis DRAF 24) | a11 | 0 | COMPLETE | FAIL | 1 HIGH naik (F-A11-0023) + 0040..0046: 0/0/4/3 (+1 INFO) | n/a | n/a | n/a |
+| 2026-11-10 | TSK-145 (QA akademik DRAF 24) | a07 | 0 | COMPLETE | FAIL | 1/0/6/1 (+1 INFO) | n/a | n/a | n/a |
+| 2026-11-10 | TSK-146 (QA editorial DRAF 24) | a09 | 0 | COMPLETE | FAIL | 0/0/3/n/a (F-A09-0245..0267; sisa severity tidak terlihat) | n/a | n/a | n/a |
+| 2026-11-10 | TSK-147 (revisi terbatas DRAF 24) | a03 | 0 | COMPLETE | NA | 0/0/0/0 | n/a | n/a | n/a |
+| 2026-11-10 | TSK-149 (QA teknis terarah) | a11 | 0 | COMPLETE | n/a | 1/3/1/0 baru (F-A11-0048..0052) | n/a | n/a | n/a |
+| 2026-11-10 | TSK-150 (QA akademik terarah) | a07 | 0 | COMPLETE | n/a | 0/0/2/1 baru (F-A07-0099..0101; +1 INFO) | n/a | n/a | n/a |
+| 2026-11-10 | TSK-151 (QA editorial terarah) | a09 | 0 | COMPLETE | n/a | 0/0/3/n/a baru (F-A09-0268..0275) | n/a | n/a | n/a |
+| 2026-11-10 | TSK-152 (record_decisions D-98..D-100, record_findings, task_close, hash, state) | a13 | 0 | COMPLETE | NA | 0/0/0/0 | n/a | n/a | n/a |
 
 Catatan: token = subagent_tokens menurut harness, mungkin kumulatif per instance.
 
