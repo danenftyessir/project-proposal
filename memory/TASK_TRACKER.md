@@ -1,10 +1,10 @@
 ---
 file: TASK_TRACKER
-revision: 43
+revision: 52
 status: CURRENT
-updated: 2026-11-08
+updated: 2026-11-09
 updated_by: a13-memory-manager
-based_on_commit: c875468
+based_on_commit: 4351fe5
 ---
 
 # Task Tracker
@@ -98,6 +98,24 @@ Tugas memakai ID `TSK-xxx` (berbeda dari ID uji teknis `T-xx`). Status: `TODO` �
 | TSK-082 | QA siklus 2 DRAF 13: a07, a09, a11 (qa_audit), a05 (tinjauan ulang) | DONE | A07, A09, A05, A11 | 2 | `memory/FINDINGS_LOG.md` | Brief A01 siklus 2 | a07 PASS_WITH_NOTES; a09 PASS_WITH_NOTES; a05 qa NA; a11 FAIL (0/1/2/2). RESOLVED dinyatakan auditor penemu: F-A07-0049, 0053; F-A09-0106, 0116; F-A05-0025, 0033; F-A11-0013, 0014. Baru 13 temuan (F-A07-0054; F-A09-0118, 0119; F-A05-0034..0037; F-A11-0015..0019); F-A11-0015 HIGH requires_decision. Semua auditor terhenti HTTP 429 sekali, dilanjutkan via SendMessage (retry pertama berhasil). Keputusan pengguna diperlukan: Q-B1-bj, Q-B1-bg, Q-B1-bh |
 | TSK-083 | memory_op A13: record_findings + task_close TSK-081/082 + rujukan Q + butir baru Q-B1-bj | DONE | A13 | 0 | `memory/FINDINGS_LOG.md`, `memory/OPEN_QUESTIONS.md`, `memory/TASK_TRACKER.md` | Brief A01 (tanpa keputusan baru) | Tidak ada Git, hash, atau entri DECISION_LOG |
 | TSK-084 | memory_op A13: session_close sesi 2026-11-08 (PROJECT_STATE, CONTEXT_TRANSFER, hash Bab I DRAF 13, Efisiensi, pemeriksaan check_memory/check_staged) | DONE | A13 | 0 | `memory/PROJECT_STATE.md`, `memory/CONTEXT_TRANSFER.md`, `memory/TASK_TRACKER.md` | Brief A01 /sesi-tutup (tanpa Git oleh A13) | Hash baru `bab1/Bab_I_Draft.md` `d25243687a08` (DRAF 13, dasar TSK-075, 078, 081); hash artefak lain TIDAK diperbarui (WARN tetap). EVIDENCE_REGISTRY tidak diubah (tidak ada bukti baru; a08 belum dijalankan). HEAD 4d76865 dibuat pengguna di luar A13; push tidak terverifikasi. Tugas lama TSK-004..011, 014 tidak ditutup (di luar sesi ini) |
+| TSK-085 | a13 init_reconcile (S1/S12, hash artefak) | DONE | A13 | 0 | `memory/PROJECT_STATE.md` | Brief A01 | COMPLETE; usulan S1/S12 diajukan; pengguna memilih "Konfirmasi asal + catat hash (Recommended)", tetapi pertanyaan asal perubahan dijawab "Langsung masuk lanjut bab 1 nya" (bukan jawaban asal perubahan); tidak ada hash resmi diperbarui; S1 tetap WARN; manifest RSIA tidak dibuat |
+| TSK-086 | R1 a03: paragraf research gap I.1 p16 (DRAF 13 → DRAF 14; 45 penanda) | DONE | A03 | 0 | `bab1/Bab_I_Draft.md` | Brief A01; claims_changed true | Percobaan pertama FAILED (galat autentikasi API); retry 1 COMPLETE. Siklus 1 (DRAF 15) selesai: I.1 p16-17, penanda 46. Siklus 2 (DRAF 16) COMPLETE: I.1 paragraf 16-19, 46 penanda (I.1 = 14); menerapkan D-60 (Dietrich, Skrabic, Zeba, Jaganathan, Li); F-A05-0102, 0109, penanda #13, I.2-I.5 tidak disentuh; siklus otomatis D-06 HABIS. sha256 DRAF 16 `f4416e36f0fe` (dihitung TSK-093); DRAF 14 dan 15 tidak pernah dihitung |
+| TSK-087 | QA sitasi I.1 p16 DRAF 14 (a08) | DONE | A08 | 0 | `memory/FINDINGS_LOG.md` | Brief A01 | COMPLETE PASS_WITH_NOTES; F-A08-0001..0007 (0001, 0002, 0003, 0006 LOW; 0004, 0005, 0007 INFO); Zeba membandingkan modul deterministik dengan verifier LLM (Tabel 9), bukan gabungan. Siklus 1 (DRAF 15) PASS_WITH_NOTES: pemetaan ID putaran 1 ke F-A08-0014..0020 (0014..0016 RESOLVED; 0017, 0018, 0020 INFO OPEN; 0019 LOW sebagian); baru F-A08-0021..0023 (LOW). ID lama F-A08-0001..0007 pada baris TSK-091 dikoreksi. Siklus 2 (DRAF 16) PASS_WITH_NOTES: RESOLVED F-A08-0019, 0021, 0022, 0023; baru LOW F-A08-0024..0026; INFO 0017, 0018, 0020 tetap |
+| TSK-088 | QA akademik I.1 p16 DRAF 14 (a07) | DONE | A07 | 0 | `memory/FINDINGS_LOG.md` | Brief A01 | COMPLETE FAIL; F-A07-0055..0059 (5 MEDIUM); F-A07-0056 requires_decision (ditangani D-59). Siklus 1 (DRAF 15) FAIL: RESOLVED 0055..0059 (0056 oleh keputusan D-59, bukan bukti); baru F-A07-0060 (MEDIUM; IN_PROGRESS rujukan D-60), 0061, 0062 (LOW). Siklus 2 (DRAF 16) PASS_WITH_NOTES: RESOLVED F-A07-0060; OPEN LOW F-A07-0061 (dipersempit), 0062; baru F-A07-0063 (LOW) |
+| TSK-089 | QA editorial I.1 p16 DRAF 14 (a09) | DONE | A09 | 0 | `memory/FINDINGS_LOG.md` | Brief A01 | COMPLETE FAIL; F-A09-0121..0136 (3 MEDIUM, 11 LOW, 2 INFO). Siklus 1 (DRAF 15) FAIL: F-A09-0121 diganti F-A09-0137 (MEDIUM OPEN); RESOLVED 0122, 0123, 0125, 0128, 0131, 0134; baru F-A09-0138..0143 (LOW). Siklus 2 (DRAF 16) PASS_WITH_NOTES: RESOLVED 12 temuan (0124, 0127, 0129, 0130, 0132, 0133, 0137..0141, 0143); OPEN 0126, 0135, 0142 (+0136 INFO sebagian); baru F-A09-0144..0152 (LOW), 0153 INFO |
+| TSK-090 | Tinjauan kritis I.1 p16 DRAF 14 (a05) | DONE | A05 | 0 | `memory/FINDINGS_LOG.md` | Brief A01 | COMPLETE NA; F-A05-0101..0109 (7 MEDIUM, 2 LOW); requires_decision 0101..0105 dan 0109; 0109 menantang D-22. Siklus 1 (DRAF 15) NA: RESOLVED 0101, 0103, 0104, 0105, 0107, 0108; OPEN 0102, 0106 (IN_PROGRESS D-60), 0109; baru F-A05-0110, 0111 (IN_PROGRESS D-60), 0112, 0115 (MEDIUM), 0113, 0114 (LOW). Siklus 2 (DRAF 16) NA: RESOLVED 0106, 0110..0115; OPEN 0102, 0109; baru F-A05-0116, 0117, 0118, 0119 (MEDIUM; 0116 dan 0118 requires_decision), 0120 (LOW) |
+| TSK-091 | memory_op A13: record_decision D-59 (celah (b)) + record_findings TSK-087..090 + task_close TSK-085..091 | DONE | A13 | 0 | `memory/DECISION_LOG.md`, `memory/FINDINGS_LOG.md`, `memory/TASK_TRACKER.md` | Brief A01 dengan approval_evidence | D-59 dicatat; F-A05-0101 dan F-A07-0056 IN_PROGRESS. Tidak ada Git, hash baru, atau perubahan PROJECT_STATE. Ditutup; koreksi pemetaan ID dicatat di TSK-092 |
+| TSK-092 | memory_op A13: record_decision D-60 (celah (a),(c)) + record_findings QA siklus 1 DRAF 15 (TSK-087..090) + task_close TSK-086..091 + butir terbuka Q-B1-bk..bm | DONE | A13 | 0 | `memory/DECISION_LOG.md`, `memory/FINDINGS_LOG.md`, `memory/OPEN_QUESTIONS.md`, `memory/TASK_TRACKER.md` | Brief A01 dengan approval_evidence | D-60 dicatat; F-A07-0060, F-A05-0110, 0111, 0106 IN_PROGRESS (rujukan D-60); koreksi pemetaan ID a08/a09; tanpa Git, hash baru, atau perubahan PROJECT_STATE |
+| TSK-093 | memory_op A13: record_findings QA siklus 2 DRAF 16 (TSK-087..090) + task_close TSK-086 + hash Bab I + butir Q-B1-bn, bo | DONE | A13 | 0 | `memory/FINDINGS_LOG.md`, `memory/OPEN_QUESTIONS.md`, `memory/TASK_TRACKER.md`, `memory/PROJECT_STATE.md` | Brief A01 | Tanpa keputusan baru; hash `bab1/Bab_I_Draft.md` = `f4416e36f0fe` (sha256sum, tanpa CR); hash artefak lain tidak diubah; tanpa Git |
+| TSK-094 | memory_op A13: record_decision D-61 (dasar dan kriteria kombinasi I.1 p18) + update Q-B1-bl + task_open TSK-095 | DONE | A13 | 0 | `memory/DECISION_LOG.md`, `memory/OPEN_QUESTIONS.md`, `memory/TASK_TRACKER.md` | Brief A01 dengan approval_evidence (3 jawaban berantai) | D-61 dicatat (APPROVED lingkup terbatas, bersyarat); Q-B1-bl DIPUTUSKAN sebagian; status temuan tidak diubah; Q-B1-bk tidak diubah; tanpa Git atau hash baru |
+| TSK-095 | qa_audit A08: periksa dukungan literatur Bab II atas karakteristik rule-based dan AI/NLP berbasis RAG (prasyarat revisi I.1 p18, D-61); laporkan kekosongan lebih dulu | DONE | A08 | 0 | `memory/FINDINGS_LOG.md` | D-61 | COMPLETE PASS_WITH_NOTES; P1 parsial (Zeba), P2 parsial dan tidak searah (Dietrich hlm. 99-100), P3 kekosongan; F-A08-0027..0030, 0032 (ID 0031 tidak dipakai), RESOLVED menurut a08 pada pemeriksaan terarah DRAF 17; tanpa referensi baru |
+| TSK-096 | memory_op A13: record_findings pemeriksaan terarah DRAF 17 (TSK-087..090, TSK-095) + task_close TSK-095, TSK-086 terarah + hash Bab I + butir Q-B1-bp..br | DONE | A13 | 0 | `memory/FINDINGS_LOG.md`, `memory/OPEN_QUESTIONS.md`, `memory/TASK_TRACKER.md`, `memory/PROJECT_STATE.md` | Brief A01 | Tanpa keputusan baru; hash `bab1/Bab_I_Draft.md` = `144d332f1fd0` (sha256sum, tanpa CR); hash artefak lain tidak diubah; tanpa Git. TSK-086 terarah (a03, DRAF 17): menerapkan D-61; I.1 p18 dipecah p18 dan p19; 47 penanda (I.1 = 15); perbaikan terarah di luar siklus D-06 atas izin pengguna (menurut brief A01). TSK-087 a08 PASS_WITH_NOTES, TSK-088 a07 PASS_WITH_NOTES, TSK-089 a09 PASS_WITH_NOTES, TSK-090 a05 NA |
+| TSK-097 | memory_op A13: record_decision D-62 (klaim "diuji" dibatasi ke keunggulan menurut D-29; mengubah sebagian D-61) + update Q-B1-bp, Q-B1-bl + record_findings F-A08-0037 + task_open TSK-098 | DONE | A13 | 0 | `memory/DECISION_LOG.md`, `memory/OPEN_QUESTIONS.md`, `memory/FINDINGS_LOG.md`, `memory/TASK_TRACKER.md` | Brief A01 dengan approval_evidence | D-62 dicatat (APPROVED lingkup terbatas, amends D-61 sebagian); Q-B1-bp DIPUTUSKAN → D-62; Q-B1-bl ditambah rujukan; F-A08-0037 (MEDIUM) dicatat; jawaban a08 atas F-A07-0064 dicatat, status temuan tidak diubah; tanpa Git atau hash baru |
+| TSK-098 | write A03: perbaikan terarah kedua I.1 p18-19 (DRAF 17 → DRAF 18) menerapkan D-62; tangani F-A05-0121, F-A07-0065, F-A08-0037, 0035, 0033, 0034, F-A05-0123, 0126, F-A07-0064, gaya F-A09-0156..0160 | DONE | A03 | 0 | `bab1/Bab_I_Draft.md` | D-62, D-61 | COMPLETE menurut laporan a03: DRAF 18; I.1 p18-19 saja; 47 penanda; kalimat kriteria verbatim kecuali frasa "dipilih berdasarkan potensi saling melengkapi"; kualifikasi kekosongan P1/P2; sitasi Dietrich/Li diperbaiki; perbaikan terarah kedua di luar siklus D-06 atas izin pengguna. Tidak ditangani: F-A09-0160, 0153 (opsional pecah p18). Pemeriksaan: a08 PASS_WITH_NOTES, a07 PASS_WITH_NOTES, a09 FAIL (F-A09-0153 MEDIUM), a05 NA; bukan persetujuan |
+| TSK-099 | memory_op A13: record_findings pemeriksaan terarah ketiga DRAF 18 (TSK-087..090) + task_close TSK-098 + hash Bab I + butir Q-B1-bs, bt, update Q-B1-bq | DONE | A13 | 0 | `memory/FINDINGS_LOG.md`, `memory/OPEN_QUESTIONS.md`, `memory/TASK_TRACKER.md`, `memory/PROJECT_STATE.md` | Brief A01 | Tanpa keputusan baru; hash `bab1/Bab_I_Draft.md` = `c5ef5ab9d458` (sha256sum); hash artefak lain tidak diubah; tanpa Git. Koreksi A01 dicatat di F-A05-0129. RESOLVED hanya menurut auditor penemu |
+| TSK-100 | memory_op A13: record_decision D-63, D-64, D-65 + update Q-B1-bq, bs, bt (DIPUTUSKAN) + task_open TSK-101 | DONE | A13 | 0 | `memory/DECISION_LOG.md`, `memory/OPEN_QUESTIONS.md`, `memory/TASK_TRACKER.md` | Brief A01 dengan approval_evidence (3 jawaban) | D-63 (amends D-61, klarifikasi), D-64 (amends D-62 sebagian), D-65 dicatat APPROVED lingkup terbatas; status temuan tidak diubah; tanpa Git atau hash baru |
+| TSK-101 | write A03: perbaikan terarah ketiga I.1 p18-19 (DRAF 18 → DRAF 19) menerapkan D-63, D-64, D-65; pecah p18 (F-A09-0153); rapikan F-A08-0038, F-A09-0156, 0163, 0150, F-A05-0125 | DONE | A03 | 0 | `bab1/Bab_I_Draft.md` | D-63, D-64, D-65 | COMPLETE menurut laporan a03: DRAF 19; p18 lama dipecah p18 (7 kalimat) dan p19 (14 kalimat); p20 Zeba; p21 trade-off dan posisi; 47 penanda (butir 13 di p18, 14 di p20, 15 di p21); perbaikan terarah ketiga di luar siklus D-06 atas izin pengguna (menurut brief A01). Pemeriksaan: a08, a07, a09 PASS_WITH_NOTES, a05 NA; bukan persetujuan |
+| TSK-102 | memory_op A13: record_findings pemeriksaan terarah keempat DRAF 19 (TSK-087..090) + task_close TSK-101 + hash Bab I + butir Q-B1-bu, bv, bw | DONE | A13 | 0 | `memory/FINDINGS_LOG.md`, `memory/OPEN_QUESTIONS.md`, `memory/TASK_TRACKER.md`, `memory/PROJECT_STATE.md` | Brief A01 | Tanpa keputusan baru; hash `bab1/Bab_I_Draft.md` = `0abc269a1b31` (sha256sum); hash artefak lain tidak diubah; tanpa Git. RESOLVED hanya menurut auditor penemu; F-A05-0130..0132 menantang keputusan pengguna (requires_decision) |
 
 Approval evidence TSK-061 (persetujuan operasional per eksekusi, P2-02):
 
@@ -235,6 +253,47 @@ Diisi A13 saat penutupan tugas dari Agent Report dan `.scratch/agent_runs.jsonl`
 | 2026-11-08 | TSK-082 (QA DRAF 13) | a11 | 2 | COMPLETE (setelah 1 retry HTTP 429) | FAIL | 0/1/2/2 (+1 INFO) | n/a | n/a | n/a |
 | 2026-11-08 | TSK-083 | a13 | 0 | COMPLETE | NA | 0/0/0/0 | n/a | n/a | n/a |
 | 2026-11-08 | TSK-084 (session_close) | a13 | 0 | COMPLETE | NA | 0/0/0/0 | n/a | n/a | n/a |
+| 2026-11-08 | TSK-085 (init_reconcile) | a13 | 0 | COMPLETE | NA | 0/0/0/0 | n/a | n/a | n/a |
+| 2026-11-08 | TSK-086 (I.1 p16 DRAF 14) | a03 | 0 | COMPLETE (setelah 1 retry; percobaan pertama galat autentikasi API) | NA | 0/0/0/0 | n/a | n/a | n/a |
+| 2026-11-08 | TSK-087 (QA sitasi DRAF 14) | a08 | 0 | COMPLETE | PASS_WITH_NOTES | 0/0/0/4 (+3 INFO) | n/a | n/a | n/a |
+| 2026-11-08 | TSK-088 (QA akademik DRAF 14) | a07 | 0 | COMPLETE | FAIL | 0/0/5/0 | n/a | n/a | n/a |
+| 2026-11-08 | TSK-089 (QA editorial DRAF 14) | a09 | 0 | COMPLETE | FAIL | 0/0/3/11 (+2 INFO) | n/a | n/a | n/a |
+| 2026-11-08 | TSK-090 (tinjauan kritis DRAF 14) | a05 | 0 | COMPLETE | NA | 0/0/7/2 | n/a | n/a | n/a |
+| 2026-11-08 | TSK-091 (record_decision, record_findings, task_close) | a13 | 0 | COMPLETE | NA | 0/0/0/0 | n/a | n/a | n/a |
+| 2026-11-08 | TSK-086 (I.1 p16-17 DRAF 15) | a03 | 1 | COMPLETE | NA | n/a | n/a | n/a | n/a |
+| 2026-11-08 | TSK-087 (QA sitasi DRAF 15) | a08 | 1 | COMPLETE | PASS_WITH_NOTES | baru 0/0/0/3 | n/a | n/a | n/a |
+| 2026-11-08 | TSK-088 (QA akademik DRAF 15) | a07 | 1 | COMPLETE | FAIL | baru 0/0/1/2 | n/a | n/a | n/a |
+| 2026-11-08 | TSK-089 (QA editorial DRAF 15) | a09 | 1 | COMPLETE | FAIL | baru 0/0/1/6 | n/a | n/a | n/a |
+| 2026-11-08 | TSK-090 (tinjauan kritis DRAF 15) | a05 | 1 | COMPLETE | NA | baru 0/0/4/2 | n/a | n/a | n/a |
+| 2026-11-08 | TSK-092 (record_decision D-60, record_findings, task_close) | a13 | 0 | COMPLETE | NA | 0/0/0/0 | n/a | n/a | n/a |
+| 2026-11-08 | TSK-086 (I.1 p16-19 DRAF 16) | a03 | 2 | COMPLETE | NA | n/a | n/a | n/a | n/a |
+| 2026-11-08 | TSK-087 (QA sitasi DRAF 16) | a08 | 2 | COMPLETE | PASS_WITH_NOTES | baru 0/0/0/3 | n/a | n/a | n/a |
+| 2026-11-08 | TSK-088 (QA akademik DRAF 16) | a07 | 2 | COMPLETE | PASS_WITH_NOTES | baru 0/0/0/1 | n/a | n/a | n/a |
+| 2026-11-08 | TSK-089 (QA editorial DRAF 16) | a09 | 2 | COMPLETE | PASS_WITH_NOTES | baru 0/0/0/9 (+1 INFO) | n/a | n/a | n/a |
+| 2026-11-08 | TSK-090 (tinjauan kritis DRAF 16) | a05 | 2 | COMPLETE | NA | baru 0/0/4/1 | n/a | n/a | n/a |
+| 2026-11-08 | TSK-093 (record_findings, task_close, hash Bab I) | a13 | 0 | COMPLETE | NA | 0/0/0/0 | n/a | n/a | n/a |
+| 2026-11-08 | TSK-094 (record_decision D-61, update Q-B1-bl, task_open TSK-095) | a13 | 0 | COMPLETE | NA | 0/0/0/0 | n/a | n/a | n/a |
+| 2026-11-09 | TSK-095 (a08, dukungan literatur Bab II atas D-61) | a08 | 0 | COMPLETE | PASS_WITH_NOTES | 0/0/3/2 | n/a | n/a | n/a |
+| 2026-11-09 | TSK-086 (I.1 p18-p20 DRAF 17, terarah) | a03 | 0 | COMPLETE | NA | n/a | n/a | n/a | n/a |
+| 2026-11-09 | TSK-087 (QA sitasi DRAF 17, terarah) | a08 | 0 | COMPLETE | PASS_WITH_NOTES | baru 0/0/0/3 (+1 INFO) | n/a | n/a | n/a |
+| 2026-11-09 | TSK-088 (QA akademik DRAF 17, terarah) | a07 | 0 | COMPLETE | PASS_WITH_NOTES | baru 0/0/0/2 | n/a | n/a | n/a |
+| 2026-11-09 | TSK-089 (QA editorial DRAF 17, terarah) | a09 | 0 | COMPLETE | PASS_WITH_NOTES | baru 0/0/0/6 (+2 INFO) | n/a | n/a | n/a |
+| 2026-11-09 | TSK-090 (tinjauan kritis DRAF 17, terarah) | a05 | 0 | COMPLETE | NA | baru 0/0/4/2 | n/a | n/a | n/a |
+| 2026-11-09 | TSK-096 (record_findings, task_close, hash Bab I) | a13 | 0 | COMPLETE | NA | 0/0/0/0 | n/a | n/a | n/a |
+| 2026-11-09 | TSK-097 (a08, pertanyaan lanjutan F-A07-0064) | a08 | 0 | COMPLETE | NA | baru 0/0/1/0 | n/a | n/a | n/a |
+| 2026-11-09 | TSK-097 (record_decision D-62, Q-B1-bp, bl, F-A08-0037, task_open TSK-098) | a13 | 0 | COMPLETE | NA | 0/0/0/0 | n/a | n/a | n/a |
+| 2026-11-09 | TSK-098 (a03, perbaikan terarah kedua DRAF 18) | a03 | 0 | COMPLETE | NA | 0/0/0/0 | n/a | n/a | n/a |
+| 2026-11-09 | TSK-087 (QA sitasi DRAF 18, terarah ketiga) | a08 | 0 | COMPLETE | PASS_WITH_NOTES | baru 0/0/0/1 (+1 INFO) | n/a | n/a | n/a |
+| 2026-11-09 | TSK-088 (QA akademik DRAF 18, terarah ketiga) | a07 | 0 | COMPLETE | PASS_WITH_NOTES | baru 0/0/0/0 | n/a | n/a | n/a |
+| 2026-11-09 | TSK-089 (QA editorial DRAF 18, terarah ketiga) | a09 | 0 | COMPLETE | FAIL | baru 0/0/0/1 (+2 INFO; 0153 naik ke MEDIUM) | n/a | n/a | n/a |
+| 2026-11-09 | TSK-090 (tinjauan kritis DRAF 18, terarah ketiga) | a05 | 0 | COMPLETE | NA | baru 0/0/2/1 | n/a | n/a | n/a |
+| 2026-11-09 | TSK-099 (record_findings, task_close, hash Bab I) | a13 | 0 | COMPLETE | NA | 0/0/0/0 | n/a | n/a | n/a |
+| 2026-11-09 | TSK-101 (perbaikan terarah ketiga I.1, DRAF 19) | a03 | 0 | COMPLETE | NA | n/a | n/a | n/a | n/a |
+| 2026-11-09 | TSK-087 (QA sitasi DRAF 19, terarah keempat) | a08 | 0 | COMPLETE | PASS_WITH_NOTES | baru 0/0/0/1 | n/a | n/a | n/a |
+| 2026-11-09 | TSK-088 (QA akademik DRAF 19, terarah keempat) | a07 | 0 | COMPLETE | PASS_WITH_NOTES | baru 0/0/0/0 | n/a | n/a | n/a |
+| 2026-11-09 | TSK-089 (QA editorial DRAF 19, terarah keempat) | a09 | 0 | COMPLETE | PASS_WITH_NOTES | baru 0/0/0/3 (+2 INFO) | n/a | n/a | n/a |
+| 2026-11-09 | TSK-090 (tinjauan kritis DRAF 19, terarah keempat) | a05 | 0 | COMPLETE | NA | baru 0/0/2/1 | n/a | n/a | n/a |
+| 2026-11-09 | TSK-102 (record_findings, task_close, hash Bab I) | a13 | 0 | COMPLETE | NA | 0/0/0/0 | n/a | n/a | n/a |
 
 Catatan: token = subagent_tokens menurut harness, mungkin kumulatif per instance.
 

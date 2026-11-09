@@ -1,10 +1,10 @@
 ---
 file: DECISION_LOG
-revision: 26
+revision: 32
 status: CURRENT
-updated: 2026-11-08
+updated: 2026-11-09
 updated_by: a13-memory-manager
-based_on_commit: c875468
+based_on_commit: 4351fe5
 ---
 
 # Decision Log
@@ -1298,4 +1298,162 @@ approval_evidence:
   answered_at: '2026-11-08'
   session_ref: 'sesi /sesi-mulai 2026-11-08, AskUserQuestion Aturan D-56'
   scope: 'Hanya bentuk jawaban per pertanyaan (dua jawaban terpisah per jenis perawatan, tanpa penggabungan) dan penyelarasan I.2, I.3, I.5 dengan bentuk itu'
+```
+
+## D-59
+
+```yaml
+id: D-59
+decision: 'Celah (b) di I.1 paragraf 16 dikeluarkan dari daftar celah literatur dan dinyatakan sebagai PILIHAN RANCANGAN capstone (menguji gabungan pemeriksaan berbasis model bahasa besar dan pemeriksaan deterministik), lengkap dengan alasan dan trade-off. Celah (a) dan (c) tetap. Tanpa pencarian literatur hibrida. D-22, D-29, D-31, D-58 tidak berubah'
+class: L3
+status: APPROVED (lingkup terbatas)
+date: '2026-11-08'
+related: [D-22, D-29, D-31, D-58, F-A05-0101, F-A07-0056, F-A08-0001..0007]
+basis: 'Jawaban pengguna atas AskUserQuestion Celah (b), diteruskan A01 (brief TSK-091)'
+alternatives_considered: ['Pertahankan bersyarat + telusuri hibrida', 'Pertahankan, batasi klaim pada dua studi']
+consequences: 'Catatan A13 (bukan keputusan tambahan): F-A05-0101 dan F-A07-0056 dicatat IN_PROGRESS dengan rujukan D-59; RESOLVED hanya oleh a05/a07 setelah pemeriksaan ulang. F-A05-0102..0105 (requires_decision) tetap OPEN. Naskah (I.1 p16, DRAF 14/15) belum diselaraskan menurut catatan A13; revisi siklus 1 (DRAF 15) sedang berjalan saat dicatat.'
+approval_evidence:
+  question: 'Di I.1 paragraf 16 (DRAF 14), celah (b) berbunyi: kedua studi (Dietrich dan Stubbert; Zeba dkk.) "tidak membandingkan gabungan pemeriksaan berbasis model bahasa besar dan pemeriksaan deterministik dengan masing-masing jenis pemeriksaan". a05 (F-A05-0101) menilai celah ini benar dengan sendirinya, karena studi non-hibrida otomatis tidak membandingkan gabungan, jadi ia diturunkan dari rancangan Anda, bukan dari masalah. a07 (F-A07-0056) menilai celah ini belum memenuhi syarat bukti komparatif, karena naskah sendiri menyatakan literatur hibrida belum ditelusuri. a08 mengonfirmasi bahwa Zeba membandingkan modul deterministik dengan verifier LLM (Tabel 9), tetapi bukan gabungannya. Bagaimana celah (b) diperlakukan? Pilihan ini menyentuh klaim utama dan rancangan, sehingga hanya Anda yang dapat memutuskannya.'
+  options_offered: ['Jadikan pilihan rancangan (Recommended)', 'Pertahankan bersyarat + telusuri hibrida', 'Pertahankan, batasi klaim pada dua studi']
+  user_answer: 'Jadikan pilihan rancangan (Recommended)'
+  answered_at: '2026-11-08'
+  session_ref: 'sesi /sesi-mulai 2026-11-08 (lanjutan), AskUserQuestion Celah (b)'
+  scope: 'Hanya perlakuan celah (b) di I.1 paragraf 16: dikeluarkan dari celah literatur dan dinyatakan sebagai pilihan rancangan capstone dengan alasan dan trade-off; celah (a) dan (c) tetap; tanpa pencarian hibrida; D-22, D-29, D-31, D-58 tidak berubah'
+```
+
+## D-60
+
+```yaml
+id: D-60
+decision: 'Rumusan celah (a) dan (c) di I.1 paragraf 16 diperbaiki: paragraf membahas keempat studi Subbab II.5 dan Li dkk. (II.6:178). Celah (a) dirumuskan sebagai belum adanya studi yang memeriksa dua dokumen tulisan tenaga kesehatan dalam satu episode. Celah (c) dipersempit pada pemeriksaan dokumentasi klinis dan menyatakan posisinya terhadap Li dkk. Rumusan masalah, tujuan, I.2-I.5 tidak berubah; D-59 tetap'
+class: L3
+status: APPROVED (lingkup terbatas)
+date: '2026-11-08'
+related: [D-59, D-22, F-A07-0060, F-A05-0110, F-A05-0111, F-A05-0106, F-A05-0109]
+basis: 'Jawaban pengguna atas AskUserQuestion Celah (a),(c), diteruskan A01 (brief TSK-092)'
+alternatives_considered: ['Nyatakan kriteria seleksi saja', 'Pertahankan, catat sebagai keterbatasan']
+consequences: 'Deskripsi opsi (dari brief A01): celah lebih sulit dibantah penguji karena kontra-contoh di Bab II ikut dibahas, tetapi paragraf bertambah rincian dan perlu pengecekan sitasi a08 untuk Skrabic dan Li. Dampak ke I.2, I.3, dan proposal anggota kecil. Catatan A13 (bukan keputusan tambahan): F-A07-0060, F-A05-0110, F-A05-0111, F-A05-0106 dicatat IN_PROGRESS dengan rujukan D-60; RESOLVED hanya oleh auditor penemu. F-A05-0109 (menantang D-22) tidak diputuskan D-60 dan tetap OPEN. Naskah belum diselaraskan menurut catatan A13; revisi siklus 2 (DRAF 16) sedang berjalan saat dicatat.'
+approval_evidence:
+  question: 'Setelah D-59, celah literatur yang tersisa di I.1 paragraf 16 adalah (a) tidak ada studi yang memeriksa kesesuaian dua dokumen tulisan tenaga kesehatan dalam satu episode, dan (c) tidak ada studi yang menjadikan kejelasan alasan dan rujukan temuan sebagai ukuran. Paragraf itu menyebut "dua di antara empat studi pada Subbab II.5" (Dietrich dan Stubbert; Zeba dkk.). Tiga auditor menemukan hal yang sama: a07 (F-A07-0060) dan a05 (F-A05-0110) menemukan Skrabic dkk. (II.5:152) juga memeriksa dokumentasi klinis secara otomatis pada 102 laporan IGD tulisan dokter dan memakai pembanding dokter, tetapi tidak disebut dan tidak dinilai terhadap celah. a05 (F-A05-0111) menemukan Li dkk. (II.6:178) menilai ketepatan bukti kutipan dengan rubrik ahli, sehingga celah (c) bertahan hanya karena dibatasi pada dua studi. a05 dan a08 menemukan celah (a) dan (c) tetap bertahan terhadap seluruh empat studi II.5. Bagaimana rumusan celah diperbaiki? Pilihan ini menyentuh klaim utama (research gap), sehingga hanya Anda yang dapat memutuskannya.'
+  options_offered: ['Libatkan Skrabic dan Li, sempitkan (Recommended)', 'Nyatakan kriteria seleksi saja', 'Pertahankan, catat sebagai keterbatasan']
+  user_answer: 'Libatkan Skrabic dan Li, sempitkan (Recommended)'
+  answered_at: '2026-11-08'
+  session_ref: 'sesi /sesi-mulai 2026-11-08 (lanjutan), AskUserQuestion Celah (a),(c)'
+  scope: 'Hanya rumusan celah (a) dan (c) di I.1 paragraf 16: membahas keempat studi II.5 dan Li dkk.; celah (a) = belum ada studi yang memeriksa dua dokumen tulisan tenaga kesehatan dalam satu episode; celah (c) dipersempit pada pemeriksaan dokumentasi klinis dan menyatakan posisinya terhadap Li dkk.; rumusan masalah, tujuan, I.2-I.5 tidak berubah; D-59 tetap'
+```
+
+## D-61
+
+```yaml
+id: D-61
+decision: 'Dasar kombinasi pemeriksaan (rule-based dan AI/NLP berbasis RAG) di I.1 paragraf 18 dinyatakan sebagai ketetapan rumusan capstone (Penyelarasan:35), dengan kriteria berupa penalaran penulis berlabel: pemeriksaan konsistensi CPPT dan resume medis berpotensi membutuhkan pemeriksaan terhadap kondisi yang dapat dirumuskan secara eksplisit serta penelaahan konteks informasi dalam dokumen; kombinasi dipilih untuk menguji potensi saling melengkapi, tanpa mengasumsikan kombinasi pasti lebih unggul daripada masing-masing komponen'
+class: L3
+status: APPROVED (lingkup terbatas; bersyarat, revisi paragraf 18 belum dijalankan)
+date: '2026-11-08'
+related: [Q-B1-bl, F-A05-0102, F-A05-0116, F-A07-0063, F-A05-0119, D-06, D-22, D-29, D-59, D-60, TSK-095]
+basis: 'Tiga jawaban pengguna berantai (lihat approval_evidence), diteruskan A01 (brief TSK-094)'
+alternatives_considered: ['Nyatakan sebagai keputusan tim (Recommended)', 'Biarkan, bawa ke tim', 'Kelemahan berbeda per komponen (Recommended)', 'Cakupan jenis ketidaksesuaian']
+consequences: 'SYARAT dari pengguna: (1) sebelum merevisi paragraf 18, a08 memeriksa apakah literatur yang sudah tercantum di Bab II mendukung karakteristik masing-masing pendekatan (TSK-095); (2) hanya dukungan yang benar-benar relevan dipakai, temuan literatur dibedakan dari penalaran penulis, hasil studi terdahulu tidak digeneralisasi ke kasus CPPT-resume; (3) bila literatur belum mendukung suatu premis, kekosongan dilaporkan lebih dulu; (4) tanpa referensi baru, tanpa klaim keunggulan, tanpa pembagian jenis ketidaksesuaian tanpa persetujuan pengguna; (5) status persetujuan pembimbing tetap ditandai tertunda (Q-TEAM butir 9). Revisi paragraf 18 BELUM terjadi dan menunggu laporan a08. Q-B1-bl DIPUTUSKAN sebagian (dasar dan kriteria). Catatan A13 (bukan keputusan tambahan): status F-A05-0102, F-A05-0116, F-A07-0063 tidak diubah; hanya auditor penemu yang dapat menetapkan RESOLVED. Revisi atas pilihan ini berjalan sebagai satu perbaikan terarah atas izin pengguna karena siklus otomatis D-06 habis. Jawaban kedua pengguna hanya berupa label opsi tanpa isi kriteria; isi kriteria berasal dari jawaban ketiga.'
+approval_evidence:
+  steps:
+  - question: 'Di Bab I DRAF 16 paragraf 18, dasar penelitian memakai kombinasi pemeriksaan (rule-based dan AI/NLP berbasis RAG) ditulis sebagai "rancangan capstone dan rumusan masalah pada Subbab I.2, bukan kelemahan studi terdahulu". Rumusan pertama capstone di Penyelarasan:35 memang menanyakan kombinasi, tanpa menetapkan mekanismenya (diverifikasi a08 dan a05). Penilaian kedua auditor berbeda. a07 menilai rumusan itu koheren dengan I.2 dan tidak mendahului keputusan. a05 (F-A05-0116) menilainya melingkar, karena rumusan I.2 menanyakan kombinasi sebab rancangan memilih kombinasi, sehingga tidak dapat menjadi alasan rancangan. a05 juga menilai kalimat itu sama dengan menjawab butir terbuka Q-B1-bl (apakah justifikasi kombinasi hanya keputusan tim, atau didukung literatur) sebelum Anda memutuskannya. a07 (F-A07-0063) menambahkan bahwa persetujuan pembimbing atas rumusan capstone masih tertunda (Q-TEAM butir 9) dan statusnya hanya ditandai di I.2. Bagaimana dasar kombinasi dinyatakan di I.1? Ini menyangkut klaim utama dan rancangan, sehingga hanya Anda yang dapat memutuskannya. Siklus revisi otomatis sudah habis (D-06), jadi revisi atas pilihan Anda berjalan sebagai satu perbaikan terarah atas izin Anda.'
+    options_offered: ['Nyatakan sebagai keputusan tim (Recommended)', 'Tambahkan kriteria pilihan', 'Biarkan, bawa ke tim']
+    user_answer: &a1 'Tambahkan kriteria pilihan'
+  - question: 'Anda memilih menambahkan kriteria pilihan kombinasi di Bab I paragraf 18, di samping pernyataan bahwa kombinasi adalah ketetapan rumusan capstone (Penyelarasan:35). Isi kriteria itu belum ditentukan. Agar a03 tidak menciptakan kriteria sendiri, kriteria mana yang boleh ditulis sebagai penalaran penulis berlabel? Catatan dari a05 (F-A05-0119): setiap kriteria memuat premis tersembunyi. Pembagian jenis ketidaksesuaian per komponen belum ditetapkan tim (Q-TEAM butir 1), dan kelemahan Dietrich, Zeba, serta Skrabic berasal dari tugas dan data yang berbeda dari kasus CPPT-resume. Premis itu akan dinyatakan sebagai asumsi.'
+    options_offered: ['Kelemahan berbeda per komponen (Recommended)', 'Cakupan jenis ketidaksesuaian', 'Saya tulis sendiri kriterianya']
+    user_answer: &a2 'Saya tulis sendiri kriterianya'
+  - question: 'Anda memilih menulis kriterianya sendiri, tetapi jawaban yang masuk hanya label opsi dan belum memuat isi kriteria. Saya tidak menebaknya. Yang saya butuhkan: satu atau dua kalimat dari Anda tentang mengapa pemeriksaan penelitian ini memakai kombinasi rule-based dan AI/NLP berbasis RAG. Contoh bentuknya: "Komponen X dipilih untuk Y karena Z".'
+    options_offered: []
+    user_answer: &a3 'Saya menetapkan kriteria pemilihan kombinasi sebagai penalaran penulis bahwa pemeriksaan konsistensi CPPT dan resume medis berpotensi membutuhkan pemeriksaan terhadap kondisi yang dapat dirumuskan secara eksplisit serta penelaahan konteks informasi dalam dokumen. Kombinasi rule-based dan AI/NLP berbasis RAG dipilih untuk menguji potensi saling melengkapi tersebut, tanpa mengasumsikan bahwa kombinasi pasti lebih unggul daripada masing-masing komponen. Sebelum merevisi paragraf 18, minta a08 memeriksa apakah literatur yang sudah tercantum dalam Bab II mendukung karakteristik masing-masing pendekatan tersebut. Gunakan hanya dukungan yang benar-benar relevan, bedakan temuan literatur dari penalaran penulis, dan jangan menggeneralisasi hasil studi terdahulu ke kasus CPPT-resume. Jika literatur yang tersedia belum mendukung suatu premis, laporkan kekosongannya terlebih dahulu. Jangan menambahkan referensi, klaim keunggulan, atau pembagian jenis ketidaksesuaian tanpa persetujuan saya. Status persetujuan pembimbing tetap ditandai sebagai tertunda.'
+  user_answer: [*a1, *a2, *a3]
+  answered_at: '2026-11-08'
+  session_ref: 'sesi /sesi-mulai 2026-11-08 (lanjutan), AskUserQuestion "Dasar kombinasi" dan "Isi kriteria" lalu pesan teks pengguna'
+  scope: 'Dasar kombinasi di I.1 paragraf 18 dinyatakan sebagai ketetapan rumusan capstone (Penyelarasan:35) dengan kriteria penalaran penulis: pemeriksaan konsistensi CPPT-resume berpotensi membutuhkan pemeriksaan kondisi yang dapat dirumuskan eksplisit serta penelaahan konteks informasi dalam dokumen; kombinasi dipilih untuk menguji potensi saling melengkapi, tanpa mengasumsikan keunggulan. SYARAT: sebelum revisi paragraf 18, a08 memeriksa dukungan literatur Bab II dan melaporkan kekosongan lebih dulu; tanpa referensi baru, tanpa klaim keunggulan, tanpa pembagian jenis ketidaksesuaian tanpa persetujuan pengguna; persetujuan pembimbing tetap ditandai tertunda; revisi paragraf 18 belum dijalankan'
+```
+
+## D-62
+
+```yaml
+id: D-62
+decision: 'Klaim "diuji" di I.1 paragraf 18-19 dibatasi pada keunggulan menurut uji D-29: kalimat kriteria D-61 dipertahankan sebagai motivasi pemilihan kombinasi, tetapi yang diuji dalam penelitian ini ialah apakah presisi dan recall kombinasi lebih tinggi daripada tiap komponen; potensi saling melengkapi tidak diukur langsung; tanpa ukuran tumpang tindih atau kontribusi unik'
+class: L3
+status: APPROVED (lingkup terbatas)
+date: '2026-11-09'
+amends: 'D-61 (sebagian: bagian "menguji potensi saling melengkapi")'
+related: [D-61, D-29, D-32, D-33, Q-B1-bp, F-A05-0121, F-A07-0065]
+basis: 'Jawaban pengguna atas AskUserQuestion Klaim "diuji", diteruskan A01 (brief TSK-097)'
+alternatives_considered: ['Tambah ukuran kontribusi unik', 'Pertahankan kata-kata D-61']
+consequences: 'Deskripsi opsi (dari brief A01): klaim jujur terhadap rancangan uji dan menjawab F-A05-0121 dan F-A07-0065 tanpa menambah ukuran baru. Kata-kata D-61 berubah sedikit pada bagian "menguji potensi saling melengkapi". I.2, I.3, I.5, dan proposal anggota tidak berubah; D-29, D-32, D-33 tidak berubah. Revisi berjalan sebagai perbaikan terarah kedua (TSK-098, a03) di luar siklus D-06 atas izin pengguna. Catatan A13 (bukan keputusan tambahan): status F-A05-0121 dan F-A07-0065 tidak diubah; hanya auditor penemu yang dapat menetapkan RESOLVED. Syarat D-61 lain (tanpa referensi baru, tanpa klaim keunggulan, tanpa pembagian jenis ketidaksesuaian, persetujuan pembimbing tertunda) tetap berlaku.'
+approval_evidence:
+  question: 'Kriteria D-61 yang Anda tetapkan menyebut kombinasi rule-based dan AI/NLP berbasis RAG "dipilih untuk menguji potensi saling melengkapi". a05 (F-A05-0121) menilai klaim "diuji" itu tidak dioperasionalkan oleh uji D-29. Uji D-29 hanya menanyakan apakah presisi dan recall kombinasi lebih tinggi daripada masing-masing komponen. Kombinasi yang saling melengkapi tetap bisa gagal D-29, misalnya gabungan menaikkan recall tetapi menurunkan presisi. Jadi jawaban "tidak" tidak membedakan "tidak saling melengkapi" dari "saling melengkapi tetapi presisi terencerkan", dan tumpang tindih temuan per komponen tidak direncanakan di I.5. Bagaimana klaim "diuji" diperlakukan? Ini menyentuh kata-kata D-61 dan klaim utama, sehingga hanya Anda yang dapat memutuskannya. Revisi apa pun berjalan sebagai perbaikan terarah atas izin Anda.'
+  options_offered: ['Batasi ke keunggulan menurut D-29 (Recommended)', 'Tambah ukuran kontribusi unik', 'Pertahankan kata-kata D-61']
+  user_answer: 'Batasi ke keunggulan menurut D-29 (Recommended)'
+  answered_at: '2026-11-09'
+  session_ref: 'sesi /sesi-mulai 2026-11-08 (lanjutan, berlanjut 2026-11-09), AskUserQuestion Klaim "diuji"'
+  scope: 'Hanya klaim "diuji" di I.1 paragraf 18-19: kalimat kriteria D-61 dipertahankan sebagai motivasi pemilihan kombinasi, tetapi frasa "diuji dalam penelitian ini" dibatasi: yang diuji ialah apakah presisi dan recall kombinasi lebih tinggi daripada tiap komponen (D-29); potensi saling melengkapi tidak diukur langsung; tanpa ukuran tumpang tindih atau kontribusi unik; kata-kata D-61 berubah sedikit pada bagian "menguji potensi saling melengkapi"; mengubah sebagian D-61, D-29/D-32/D-33 tidak berubah'
+```
+
+## D-63
+
+```yaml
+id: D-63
+decision: 'Istilah kriteria D-61 ("konteks" dan "eksplisit") di I.1 paragraf 18 ditangani dengan menyatakan bahwa istilah sumber berbeda: a03 menambah satu kalimat bahwa "eksplisit" menurut Dietrich dan "konteks" menurut Li tidak identik dengan istilah kriteria, dan mengganti "tidak sejalan dengan kriteria itu" menjadi pernyataan bahwa arah temuan perlu dibandingkan hati-hati karena maknanya berbeda; kata-kata kriteria D-61 tidak diubah dan tidak ditafsirkan'
+class: L3
+status: APPROVED (lingkup terbatas)
+date: '2026-11-09'
+amends: 'D-61 (klarifikasi uraian literatur; kriteria tetap)'
+related: [D-61, Q-B1-bq, F-A05-0122, F-A05-0128]
+basis: 'Jawaban pengguna atas AskUserQuestion Istilah kriteria, diteruskan A01 (brief TSK-100)'
+alternatives_considered: ['Hapus penilaian kesejajaran', 'Saya tetapkan maknanya sendiri']
+consequences: 'Deskripsi opsi (dari brief A01): jujur terhadap perbedaan makna dan menjawab F-A05-0122 dan 0128 tanpa menetapkan definisi baru. Dampak ke I.2, I.3, dan proposal anggota tidak ada. Revisi berjalan sebagai perbaikan terarah ketiga (TSK-101, a03) di luar siklus D-06 atas izin pengguna; revisi BELUM terjadi saat dicatat. Catatan A13 (bukan keputusan tambahan): status F-A05-0122 dan F-A05-0128 tidak diubah; hanya auditor penemu yang dapat menetapkan RESOLVED. Syarat D-61 lain tetap berlaku.'
+approval_evidence:
+  question: 'Kriteria D-61 Anda memakai dua istilah: "kondisi yang dapat dirumuskan secara eksplisit" dan "penelaahan konteks informasi dalam dokumen". a05 menemukan (F-A05-0122 dan 0128) bahwa uraian literatur di paragraf 18 memakai kata yang sama dengan makna berbeda. Menurut Dietrich, "eksplisit" berarti kesalahan yang jelas dan mudah terlihat, sedangkan kriteria Anda berarti kondisi yang dapat dirumuskan sebagai aturan. Menurut Li, "konteks" berarti pengetahuan yang diambil dari basis eksternal, sedangkan kriteria Anda berarti informasi di dalam dokumen. Penilaian bahwa arah temuan Dietrich "tidak sejalan dengan kriteria itu" bergantung pada penyamaan itu, dan penyamaannya tidak dinyatakan. Bagaimana istilah ini ditangani? Pilihan ini menyangkut kesetiaan terhadap kriteria D-61 yang Anda tetapkan, sehingga hanya Anda yang dapat memutuskannya.'
+  options_offered: ['Nyatakan istilah sumber berbeda (Recommended)', 'Hapus penilaian kesejajaran', 'Saya tetapkan maknanya sendiri']
+  user_answer: 'Nyatakan istilah sumber berbeda (Recommended)'
+  answered_at: '2026-11-09'
+  session_ref: 'sesi /sesi-mulai 2026-11-08 (lanjutan, 2026-11-09), AskUserQuestion Istilah kriteria'
+  scope: 'Hanya penanganan istilah "konteks" dan "eksplisit" di uraian literatur I.1 paragraf 18: satu kalimat bahwa istilah sumber berbeda; "tidak sejalan dengan kriteria itu" diganti pernyataan bahwa arah temuan perlu dibandingkan hati-hati karena maknanya berbeda; kata-kata kriteria D-61 tidak diubah dan tidak ditafsirkan; I.2, I.3, proposal anggota tidak berubah'
+```
+
+## D-64
+
+```yaml
+id: D-64
+decision: 'Kata "secara langsung" dihapus dari kalimat D-62 di I.1 paragraf 18: "Penelitian ini tidak mengukur potensi itu secara langsung; yang diuji ialah ..." menjadi "Penelitian ini tidak mengukur potensi itu; yang diuji ialah apakah presisi dan recall kombinasi lebih tinggi ..."'
+class: L3
+status: APPROVED (lingkup terbatas)
+date: '2026-11-09'
+amends: 'D-62 (sebagian: kata "secara langsung"; perubahan kata minimum)'
+related: [D-62, D-29, Q-B1-bs, F-A05-0127]
+basis: 'Jawaban pengguna atas AskUserQuestion Kata D-62, diteruskan A01 (brief TSK-100)'
+alternatives_considered: ['Pertahankan kata D-62', 'Tambah arti jawaban "ya"']
+consequences: 'Deskripsi opsi (dari brief A01): klaim lebih akurat terhadap uji D-29 dan menjawab F-A05-0127, dengan perubahan kata minimum pada D-62. Dampak ke I.2, I.3, I.5, dan proposal anggota tidak ada. Revisi berjalan di TSK-101 (a03); BELUM terjadi saat dicatat. Catatan A13 (bukan keputusan tambahan): status F-A05-0127 tidak diubah; hanya auditor penemu.'
+approval_evidence:
+  question: 'Kalimat yang diputuskan lewat D-62 di paragraf 18 berbunyi "Penelitian ini tidak mengukur potensi itu secara langsung; yang diuji ialah apakah presisi dan recall kombinasi lebih tinggi daripada ...". a05 (F-A05-0127) menilai kata "secara langsung" menyiratkan bahwa potensi saling melengkapi diukur secara tidak langsung oleh uji D-29. Padahal uji itu tidak mengukurnya, baik langsung maupun tidak: jawaban "ya" hanya menunjukkan keunggulan presisi dan recall, bukan saling melengkapi. Pilihan ini mengubah kata-kata yang Anda putuskan di D-62, sehingga hanya Anda yang dapat memutuskannya. Bagaimana kalimat ini diperlakukan?'
+  options_offered: ['Hapus ''secara langsung'' (Recommended)', 'Pertahankan kata D-62', 'Tambah arti jawaban "ya"']
+  user_answer: 'Hapus ''secara langsung'' (Recommended)'
+  answered_at: '2026-11-09'
+  session_ref: 'sesi /sesi-mulai 2026-11-08 (lanjutan, 2026-11-09), AskUserQuestion Kata D-62'
+  scope: 'Hanya kata "secara langsung" pada kalimat D-62 di I.1 paragraf 18; kalimat menjadi "Penelitian ini tidak mengukur potensi itu; yang diuji ialah apakah presisi dan recall kombinasi lebih tinggi ..."; I.2, I.3, I.5, proposal anggota tidak berubah'
+```
+
+## D-65
+
+```yaml
+id: D-65
+decision: 'Kalimat jawaban "tidak" di I.1 paragraf 18 dilengkapi dengan struktur syarat D-29: jawaban "tidak" tidak membedakan "tidak saling melengkapi" dari "saling melengkapi tetapi hanya salah satu dari presisi atau recall yang naik"; hasil juga bergantung pada mekanisme kombinasi (D-32), tanpa memilih mekanisme'
+class: L3
+status: APPROVED (lingkup terbatas)
+date: '2026-11-09'
+related: [D-29, D-32, D-33, D-62, Q-B1-bt, F-A05-0129, F-A07-0065]
+basis: 'Jawaban pengguna atas AskUserQuestion Jawaban "tidak", diteruskan A01 (brief TSK-100)'
+alternatives_considered: ['Hapus kalimat itu', 'Pertahankan apa adanya']
+consequences: 'Catatan: kalimat itu semula penalaran a03 atas permintaan A01 (bukan isi D-62); kini dilengkapi atas persetujuan pengguna. Deskripsi opsi (dari brief A01): akurat dan menjawab F-A05-0129, tetapi menambah satu alasan penalaran penulis yang harus diperiksa a07 dan a05 lagi. Tidak mengubah D-29, D-32, atau D-33; tanpa memilih mekanisme kombinasi. Revisi di TSK-101 (a03); BELUM terjadi saat dicatat. Catatan A13: status F-A05-0129 tidak diubah; hanya auditor penemu.'
+approval_evidence:
+  question: 'Di paragraf 18 ada kalimat "Jawaban ''tidak'' ... tidak serta-merta berarti kedua komponen tidak saling melengkapi karena hasilnya bergantung pula pada mekanisme kombinasi yang belum ditetapkan". Kalimat ini bukan isi keputusan Anda. Saya meminta a03 menulisnya berdasarkan rekomendasi a07. a05 (F-A05-0129) menilai alasannya salah tempat: ketidakjelasan jawaban "tidak" tetap ada walau mekanisme sudah ditetapkan, karena uji D-29 menuntut presisi dan recall sama-sama naik. Kombinasi yang menaikkan recall tetapi menurunkan presisi gagal uji itu padahal saling melengkapi. Bagaimana kalimat ini diperlakukan?'
+  options_offered: ['Lengkapi dengan struktur syarat D-29 (Recommended)', 'Hapus kalimat itu', 'Pertahankan apa adanya']
+  user_answer: 'Lengkapi dengan struktur syarat D-29 (Recommended)'
+  answered_at: '2026-11-09'
+  session_ref: 'sesi /sesi-mulai 2026-11-08 (lanjutan, 2026-11-09), AskUserQuestion Jawaban "tidak"'
+  scope: 'Hanya kalimat alasan jawaban "tidak" di I.1 paragraf 18: diperluas dengan struktur syarat D-29 dan ketergantungan pada mekanisme kombinasi (D-32) tanpa memilih mekanisme; D-29, D-32, D-33 tidak berubah'
 ```

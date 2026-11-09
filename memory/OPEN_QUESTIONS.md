@@ -1,10 +1,10 @@
 ---
 file: OPEN_QUESTIONS
-revision: 32
+revision: 40
 status: CURRENT
-updated: 2026-11-08
+updated: 2026-11-09
 updated_by: a13-memory-manager
-based_on_commit: c875468
+based_on_commit: 4351fe5
 ---
 
 # Open Questions
@@ -1089,4 +1089,173 @@ status: TERBUKA
 updated: 2026-11-08
 refs: [F-A11-0015, F-A05-0026, D-29, D-58, D-56, D-21, Q-B1-bg, Q-B1-y]
 note: Butir baru dari QA siklus 2 DRAF 13 (TSK-082). Opsi a-d adalah usulan a11, bukan opsi yang ditawarkan ke pengguna; bukan keputusan. Siklus otomatis D-06 habis, sehingga tidak ada revisi otomatis atas butir ini.
+```
+
+```yaml
+id: Q-B1-bk
+question: Bagaimana D-59 ("tanpa pencarian literatur hibrida") ditafsirkan terhadap penanda #13 [PERLU VERIFIKASI SUMBER hibrida] di I.1 p16: keterbatasan permanen atau tugas tertunda?
+affected: [Bab I, I.1 p16]
+class: L3
+pic: Pengguna
+ask_to: Pengguna
+status: TERBUKA
+updated: 2026-11-08
+refs: [D-59, F-A07-0062]
+note: Butir baru dari QA siklus 1 DRAF 15 (TSK-087..090, dicatat TSK-092). Tafsir D-59 menunggu pengguna; bukan keputusan.
+```
+
+```yaml
+id: Q-B1-bl
+question: Apakah justifikasi kombinasi pemeriksaan LLM dan deterministik hanya keputusan tim/penulis (D-22, D-29) atau harus didukung literatur? Atribusi "pilihan rancangan capstone" ke dokumen tim belum dapat diverifikasi (a08 memeriksa Penyelarasan:55: dua komponen disebut, kata "kombinasi" tidak).
+affected: [Bab I, I.1 p16, Penyelarasan]
+class: L3
+pic: Pengguna
+ask_to: Tim
+status: TERBUKA
+updated: 2026-11-08
+refs: [F-A05-0102, F-A05-0112, F-A05-0115, F-A05-0116, F-A07-0063, D-22, D-29, D-59, D-61, D-62]
+note: Butir baru dari TSK-090 siklus 1 (dicatat TSK-092). Bukan keputusan. Pembaruan TSK-093 (siklus 2 DRAF 16): a05 menemukan F-A05-0116 (dasar kombinasi "rancangan capstone dan rumusan I.2" melingkar dan mendahului butir ini; F-A05-0112 dan 0115 RESOLVED menurut a05); a07 menemukan F-A07-0063 (persetujuan pembimbing tertunda, Q-TEAM butir 9). F-A05-0102 RESOLVED bila pengguna mengesahkan rumusan dasar kombinasi. a07 dan a05 berbeda menilai paragraf 18; tidak diselesaikan. Pembaruan TSK-094: DIPUTUSKAN sebagian → D-61 (dasar dan kriteria kombinasi di I.1 p18: ketetapan rumusan capstone Penyelarasan:35 + penalaran penulis berlabel). Bersyarat: a08 memeriksa dukungan literatur Bab II lebih dulu (TSK-095); revisi p18 belum dijalankan; persetujuan pembimbing tetap tertunda (Q-TEAM butir 9). Status temuan F-A05-0102, F-A05-0116, F-A07-0063 tidak diubah (hanya auditor penemu). Status butir tetap TERBUKA (sebagian). Pembaruan TSK-096 (DRAF 17): a03 menerapkan D-61 (TSK-086 terarah, p18-p19, penanda 47); a08 (TSK-095, TSK-087 terarah) PASS_WITH_NOTES: P1 parsial (Zeba), P2 parsial dan tidak searah, P3 kekosongan; menurut auditor penemu RESOLVED: F-A05-0102, F-A05-0116, F-A07-0063. Persetujuan pembimbing tetap tertunda (Q-TEAM butir 9). Tantangan baru atas D-61: Q-B1-bp, Q-B1-bq. Status butir tetap TERBUKA (sebagian). Pembaruan TSK-097: D-62 mengubah sebagian D-61 (klaim "diuji" dibatasi pada keunggulan menurut D-29; lihat Q-B1-bp); Q-B1-bq belum diputuskan.
+```
+
+```yaml
+id: Q-B1-bm
+question: Pembanding pemeriksaan manual di I.1 (:79) terhadap D-22: Skrabic dkk. (II.5:152) membandingkan dengan dokter. Apakah D-22 ditinjau ulang atau dipertahankan?
+affected: [Bab I, I.1, D-22]
+class: L3
+pic: Pengguna
+ask_to: Pengguna
+status: TERBUKA
+updated: 2026-11-08
+refs: [F-A05-0109, D-22, D-60]
+note: F-A05-0109 menantang D-22 (diperkuat II.5:152). D-60 tidak memutuskan butir ini. Bukan keputusan.
+```
+
+```yaml
+id: Q-B1-bn
+question: Bagaimana II.5/II.6 diselaraskan dengan fakta yang dipakai di Bab I DRAF 16 tetapi belum ada di Bab II (Zeba Tabel 9/kosinus hlm. 8, Skrabic skala 1-4 hlm. 3 dan rincian "mutu rekomendasi", Li Tabel 1 hlm. 5, metode ekstraksi proposisi Zeba hlm. 7)?
+affected: [Bab II II.5, Bab II II.6, Bab I I.1]
+class: L3
+pic: Pengguna
+ask_to: Penulis Bab II (a03)
+status: TERBUKA
+updated: 2026-11-08
+refs: [F-A07-0061, F-A05-0117, F-A05-0120]
+note: Butir baru dari QA siklus 2 DRAF 16 (TSK-087..090, dicatat TSK-093). Bukan keputusan. Siklus otomatis D-06 habis.
+```
+
+```yaml
+id: Q-B1-bo
+question: Singkatan LLM di I.5 p4 (F-A09-0126) di luar write scope a03 pada TSK-086; siapa dan kapan memperbaikinya?
+affected: [Bab I, I.5 p4]
+class: L2
+pic: Pengguna
+ask_to: Pengguna
+status: TERBUKA
+updated: 2026-11-08
+refs: [F-A09-0126]
+note: Butir baru dari TSK-089 siklus 2 (dicatat TSK-093). LOW. Bukan keputusan.
+```
+
+```yaml
+id: Q-B1-bp
+question: Apakah klaim "potensi saling melengkapi diuji" di I.1 p18 dipertahankan, dibatasi pada keunggulan menurut D-29, atau diberi ukuran tambahan (uji D-29 tidak mengoperasionalkan saling melengkapi; union dapat menaikkan recall tetapi menurunkan presisi)?
+affected: [Bab I, I.1 p18, I.2, I.5]
+class: L3
+pic: Pengguna
+ask_to: Pengguna
+status: DIPUTUSKAN → D-62
+updated: 2026-11-09
+refs: [F-A05-0121, F-A07-0065, D-29, D-61, D-62]
+note: Butir baru dari TSK-090 terarah DRAF 17 (dicatat TSK-096). F-A05-0121 menantang D-61 (requires_decision). Pembaruan TSK-097: pengguna memilih "Batasi ke keunggulan menurut D-29" → D-62 (mengubah sebagian D-61). Revisi p18-19 dikerjakan TSK-098 (a03, DRAF 18, COMPLETE; pembaruan TSK-099: F-A05-0121 dan F-A07-0065 RESOLVED menurut auditor penemu; tantangan baru F-A05-0127 lihat Q-B1-bs). Status F-A05-0121 dan F-A07-0065 tidak diubah (hanya auditor penemu).
+```
+
+```yaml
+id: Q-B1-bq
+question: Apa satu makna "konteks informasi dalam dokumen" di I.1 p18 dan bagaimana hubungannya dengan RAG yang mengambil dokumen acuan (makna bergeser tiga kali menurut a05)?
+affected: [Bab I, I.1 p18]
+class: L3
+pic: Pengguna
+ask_to: Pengguna
+status: DIPUTUSKAN → D-63
+updated: 2026-11-09
+refs: [F-A05-0122, F-A05-0128, D-61, D-63]
+note: Butir baru dari TSK-090 terarah DRAF 17 (dicatat TSK-096). F-A05-0122 menantang D-61 (requires_decision). Bukan keputusan. Pembaruan TSK-099 (DRAF 18): ditambah F-A05-0128 ("eksplisit" menurut Dietrich = kesalahan jelas vs "kondisi yang dapat dirumuskan secara eksplisit" pada kriteria D-61; MEDIUM, requires_decision, sejenis 0122). Pertanyaan diperluas: satu makna "konteks" (F-A05-0122) dan satu makna "eksplisit" (F-A05-0128) dipakai dan dinyatakan menurut pengguna. Pembaruan TSK-100: pengguna memilih "Nyatakan istilah sumber berbeda" → D-63 (kriteria D-61 tidak diubah). Revisi di TSK-101 (a03, berjalan, hasil belum ada). Status F-A05-0122 dan F-A05-0128 tidak diubah (hanya auditor penemu).
+```
+
+```yaml
+id: Q-B1-br
+question: Apakah a03 diberi izin menulis I.2 p2 dan I.5 p4 untuk menyelaraskan singkatan AI, NLP, RAG, LLM dengan I.1 p18 (a03 tanpa izin menulis I.2; I.5 p4 juga menyangkut Q-B1-bo)?
+affected: [Bab I, I.2 p2, I.5 p4]
+class: L2
+pic: Pengguna
+ask_to: Pengguna
+status: TERBUKA
+updated: 2026-11-09
+refs: [F-A09-0154, F-A09-0126, Q-B1-bo]
+note: Butir baru dari TSK-089 terarah DRAF 17 (dicatat TSK-096). LOW, lintas bagian. Bukan keputusan.
+```
+
+```yaml
+id: Q-B1-bs
+question: Apakah kata "secara langsung" di kalimat I.1 p18 (menurut D-62, potensi saling melengkapi tidak diukur langsung) dihapus atau dipertahankan, mengingat a05 menilai kata itu menyiratkan potensi saling melengkapi diukur secara tidak langsung?
+affected: [Bab I, I.1 p18]
+class: L3
+pic: Pengguna
+ask_to: Pengguna
+status: DIPUTUSKAN → D-64
+updated: 2026-11-09
+refs: [F-A05-0127, D-62, D-64]
+note: Butir baru dari TSK-090 terarah ketiga DRAF 18 (dicatat TSK-099). F-A05-0127 (LOW, requires_decision) menantang D-62. Pembaruan TSK-100: pengguna memilih "Hapus 'secara langsung'" → D-64 (mengubah sebagian D-62). Revisi di TSK-101 (berjalan). Status F-A05-0127 tidak diubah (hanya auditor penemu).
+```
+
+```yaml
+id: Q-B1-bt
+question: Apakah alasan jawaban "tidak" yang tidak informatif di I.1 p18 dilengkapi dengan struktur syarat D-29 (a05 menilai alasan itu ditempatkan pada mekanisme yang belum ditetapkan, padahal sumbernya struktur syarat D-29)?
+affected: [Bab I, I.1 p18]
+class: L3
+pic: Pengguna
+ask_to: Pengguna
+status: DIPUTUSKAN → D-65
+updated: 2026-11-09
+refs: [F-A05-0129, F-A07-0065, D-29, D-62, D-65]
+note: Butir baru dari TSK-090 terarah ketiga DRAF 18 (dicatat TSK-099). Kalimat tentang alasan jawaban "tidak" adalah penalaran a03 atas permintaan A01 (berdasar rekomendasi a07 F-A07-0065), BUKAN isi D-62 (koreksi A01 atas brief ke a05). Pembaruan TSK-100: pengguna memilih "Lengkapi dengan struktur syarat D-29" → D-65. Revisi di TSK-101 (berjalan). Status F-A05-0129 tidak diubah (hanya auditor penemu). Pembaruan TSK-102: a03 menyelesaikan DRAF 19 (COMPLETE); F-A05-0129 RESOLVED menurut a05; F-A05-0127, 0128 juga RESOLVED menurut a05 (Q-B1-bs, Q-B1-bq).
+```
+
+```yaml
+id: Q-B1-bu
+question: Bagaimana menangani F-A05-0130 di I.1 p18-p19 (istilah Dietrich "penafsiran kontekstual" hlm. 100 tidak dibedakan; "perbandingan hati-hati" diumumkan tetapi tidak dijalankan; menantang D-63)?
+affected: [Bab I, I.1 p18-p19]
+class: L3
+pic: Pengguna
+ask_to: Pengguna
+status: TERBUKA
+updated: 2026-11-09
+refs: [F-A05-0130, D-63]
+note: Butir baru dari TSK-090 terarah keempat DRAF 19 (dicatat TSK-102). requires_decision true. Bukan keputusan.
+```
+
+```yaml
+id: Q-B1-bv
+question: Bagaimana menangani F-A05-0131 di I.1 p18 (keadaan ketiga berjawab "tidak": saling melengkapi tetapi kenaikan presisi atau recall di bawah selisih minimum D-29; makna "saling melengkapi" bergeser dari jenis pemeriksaan ke hasil presisi dan recall; menantang D-65)?
+affected: [Bab I, I.1 p18]
+class: L3
+pic: Pengguna
+ask_to: Pengguna
+status: TERBUKA
+updated: 2026-11-09
+refs: [F-A05-0131, D-65, D-29]
+note: Butir baru dari TSK-090 terarah keempat DRAF 19 (dicatat TSK-102). requires_decision true. Bukan keputusan.
+```
+
+```yaml
+id: Q-B1-bw
+question: Kriteria pemilihan kombinasi tidak dapat diperiksa oleh penelitian maupun literatur setelah D-62 dan D-63 (F-A05-0132); apa konsekuensinya bagi simpulan Bab V, dan apakah hal itu dinyatakan terbuka sebagai motivasi rancangan?
+affected: [Bab I, I.1 p18-p19, Bab V]
+class: L3
+pic: Pengguna
+ask_to: Pembimbing
+status: TERBUKA
+updated: 2026-11-09
+refs: [F-A05-0132, D-62, D-63]
+note: Butir baru dari TSK-090 terarah keempat DRAF 19 (dicatat TSK-102). requires_decision true; pic Pengguna, ask_to Pembimbing menurut brief A01. Bukan keputusan.
 ```

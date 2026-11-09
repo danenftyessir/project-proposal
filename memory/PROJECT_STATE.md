@@ -1,10 +1,10 @@
 ---
 file: PROJECT_STATE
-revision: 25
+revision: 29
 status: PENDING_VERIFICATION
-updated: 2026-11-08
+updated: 2026-11-09
 updated_by: a13-memory-manager
-based_on_commit: 4d76865
+based_on_commit: 4351fe5
 ---
 
 # Project State
@@ -33,7 +33,7 @@ Ringkasan kondisi aktual. Bila bertentangan dengan artefak repository, artefak y
 
 | Bab | Berkas utama | Status | Catatan |
 |---|---|---|---|
-| I | `bab1/Bab_I_Draft.md` (sha256 `d25243687a08`, dihitung 2026-11-08 dengan `sha256sum`; berkas tanpa CR; DRAF 10 sebelumnya `e63d253b71cf`) | `DRAF` (DRAF 13 menurut header) | I.4 QA siklus 0-2: a07 PASS_WITH_NOTES, a09 PASS_WITH_NOTES, a05 tinjauan (qa NA), a11 FAIL (siklus 2; F-A11-0015 HIGH); bukan persetujuan; 44 penanda; I.2, I.3, I.5 diselaraskan dengan D-58; I.1 tidak diubah; paragraf research gap I.1 belum ditulis; judul menunggu K2; siklus otomatis habis; tenggat final 10 Nov 2026 (tenggat lunak 6 Nov sudah lewat) |
+| I | `bab1/Bab_I_Draft.md` (sha256 `0abc269a1b31`, dihitung 2026-11-09 dengan `sha256sum` (TSK-102); DRAF 18 sebelumnya `c5ef5ab9d458`, DRAF 17 `144d332f1fd0`, DRAF 16 `f4416e36f0fe`) | `DRAF` (DRAF 19 menurut laporan a03 TSK-101: perbaikan terarah ketiga I.1 di luar siklus D-06 atas izin pengguna, menerapkan D-63, D-64, D-65; p18 lama dipecah p18 (7 kalimat) dan p19 (14 kalimat), p20 Zeba, p21 trade-off dan posisi; 47 penanda; pemeriksaan terarah keempat TSK-087..090: a08, a07, a09 PASS_WITH_NOTES, a05 NA; RESOLVED menurut auditor: F-A08-0038, F-A09-0150, 0153, 0156, 0160, 0163, F-A05-0124, 0125, 0127, 0128, 0129; OPEN baru: F-A08-0040, F-A09-0165, 0166, 0168, F-A05-0130, 0131, 0132 (menantang D-63, D-65, D-62/D-63; requires_decision); butir baru Q-B1-bu, bv, bw; bukan persetujuan). Keterangan DRAF 18 berikut berlaku sebelum DRAF 19: (DRAF 18 menurut laporan a03 TSK-098: perbaikan terarah kedua I.1 p18-19 di luar siklus D-06 atas izin pengguna, menerapkan D-62; 47 penanda; pemeriksaan terarah ketiga TSK-087..090: a08 dan a07 PASS_WITH_NOTES, a09 FAIL hanya karena F-A09-0153 MEDIUM, a05 NA; RESOLVED menurut auditor: F-A08-0033..0035, 0037, F-A07-0064, 0065, F-A09-0155, 0157..0159, F-A05-0121, 0123, 0126; OPEN baru: F-A05-0127 (menantang D-62), 0128, 0129, F-A08-0038, F-A09-0163; butir baru Q-B1-bs, bt, Q-B1-bq diperluas; bukan persetujuan). Keterangan DRAF 17 berikut berlaku sebelum DRAF 18: | I.1 paragraf research gap (p16-20) ditulis TSK-086 (DRAF 14-17; menerapkan D-59, D-60, D-61; DRAF 17 memecah p18 dan p19, perbaikan terarah di luar siklus D-06 atas izin pengguna menurut A01); 47 penanda (I.1 = 15); pemeriksaan terarah DRAF 17 (TSK-095, TSK-087..090): a08, a07, a09 PASS_WITH_NOTES, a05 tinjauan (qa NA); bukan persetujuan; OPEN terpenting F-A05-0121, 0122 (MEDIUM, requires_decision, menantang D-61), 0123, 0124, 0109 (D-22), 0117, 0118, F-A07-0061, 0062; hasil dukungan literatur Bab II atas D-61: P1 parsial, P2 parsial dan tidak searah, P3 kekosongan; butir Q-B1-bk..br; I.4 QA sebelumnya (DRAF 13): a11 FAIL (F-A11-0015 HIGH); siklus otomatis D-06 habis; judul menunggu K2; tenggat final 10 Nov 2026 (tenggat lunak 6 Nov sudah lewat) |
 | II | `bab2/Bab_II_Revisi_Notulensi.md` | `DRAF` (DRAFT 6) | Docx resmi lama `bab2/13523136-…-Draft-Bab2.docx` tidak lagi ada di bab2/ (pernyataan pengguna 2026-11-07); artefak docx resmi ada di `modular/`; docx/pdf bab2/ sementara |
 | III | `bab3/Bahan_Pindahan_dari_Bab_II.md` | Bahan mentah | — |
 | IV | — | Belum ada | — |
@@ -51,7 +51,7 @@ Hash dihitung dari checkout utama pada 2026-11-05 (read-only), dengan line endin
 | `[REVISI] Breakdown Proposal (2).pdf` | Rancangan TA; angka pending menunggu pembahasan tim (D-11, D-19) | P0 | Pengguna | `442ec77e18a6` | 2026-11-05 |
 | `Sumber Literatur Bab 2.pdf` | Daftar literatur awal | P0 | Pengguna | `cfd6dd5183d7` | 2026-11-05 |
 | `source/INDEKS.md` | Indeks sumber tingkat berkas (hash dari checkout utama; worktree 7d59b85 dapat berbeda; hash worktree belum dihitung, menunggu TSK-014) [PENDING_VERIFICATION 2026-11-07: S1 berubah; tanpa tugas pendasar; hash worktree saat ini `f31b17d2590c` belum dicatat sebagai hash resmi] | P0 | Pengguna | `4eadbada866f` | 2026-11-05 |
-| `bab1/Bab_I_Draft.md` | Bab I DRAF 13 (header berkas "DRAF 13"; dasar perubahan TSK-075, TSK-078, TSK-081; hash dihitung 2026-11-08 dengan `sha256sum`, tanpa CR; status DRAF) | P1 | A03 | `d25243687a08` | 2026-11-08 |
+| `bab1/Bab_I_Draft.md` | Bab I DRAF 19 (menurut laporan a03; dasar perubahan TSK-101 setelah DRAF 18; hash dihitung TSK-102 2026-11-09 dengan `sha256sum`; status DRAF) | P1 | A03 | `0abc269a1b31` | 2026-11-09 |
 | `bab2/Bab_II_Revisi_Notulensi.md` | Bab II DRAFT 6 | P1 | A03 | `8cd97bed5345` | 2026-11-05 |
 | `bab2/Kebutuhan_Literatur_Revisi_Bab_II.md` | Kebutuhan literatur revisi Bab II | P1 | A03 | `a6a8171c0704` | 2026-11-05 |
 | `bab3/Bahan_Pindahan_dari_Bab_II.md` | Bahan pindahan Bab II ke Bab I/III | P1 | A03 | `0f8adb3f6b7f` | 2026-11-05 |

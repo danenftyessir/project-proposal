@@ -1,0 +1,50 @@
+flowchart TB
+    U([Pengguna])
+    A01{{"A01 Orchestrator<br/>klasifikasi R1-R9, Task Brief,<br/>gate G1/G2/G3. Tidak menulis berkas"}}
+    U <-->|"permintaan / Approval Request"| A01
+
+    subgraph PREP["Persiapan dan bukti"]
+        A02["A02 Research & Evidence<br/>cari sumber, ekstrak bukti + halaman"]
+    end
+    subgraph WRITE["Penulisan"]
+        A03["A03 Academic Writer<br/>satu-satunya penulis bab1-bab4"]
+    end
+    subgraph REVIEW["Penelaah independen (tidak saling melihat laporan)"]
+        A04["A04 Supervisor<br/>simulasi pembimbing, wawancara"]
+        A05["A05 Critical Reviewer<br/>bantah klaim utama"]
+        A06["A06 Cross-Proposal<br/>konsistensi 12 aspek dengan tim"]
+    end
+    subgraph QA["Auditor QA (hanya audit, tidak memperbaiki)"]
+        A07["A07 Akademik"]
+        A08["A08 Sitasi"]
+        A09["A09 Editorial"]
+        A10["A10 Struktur"]
+        A11["A11 Teknis"]
+        A12["A12 Integritas dokumen"]
+    end
+    subgraph MEM["Memori dan Git"]
+        A13["A13 Memory Manager<br/>satu-satunya penulis memory/**,<br/>Git setelah G3"]
+    end
+
+    A01 -->|Task Brief| A02
+    A01 -->|Task Brief| A03
+    A01 -->|Task Brief| REVIEW
+    A01 -->|"artefak + kriteria saja"| QA
+    A02 -->|"bukti per klaim"| A03
+    A03 -->|artefak| QA
+    QA -->|"temuan, qa_status"| A01
+    REVIEW -->|temuan| A01
+    A01 -->|"hasil, keputusan + approval_evidence, Run Log"| A13
+
+    classDef ctrl fill:#fde68a,stroke:#b45309,color:#000
+    classDef prep fill:#bfdbfe,stroke:#1d4ed8,color:#000
+    classDef write fill:#bbf7d0,stroke:#15803d,color:#000
+    classDef rev fill:#fbcfe8,stroke:#be185d,color:#000
+    classDef qa fill:#e9d5ff,stroke:#7e22ce,color:#000
+    classDef mem fill:#fecaca,stroke:#b91c1c,color:#000
+    class A01 ctrl
+    class A02 prep
+    class A03 write
+    class A04,A05,A06 rev
+    class A07,A08,A09,A10,A11,A12 qa
+    class A13 mem
