@@ -1,10 +1,10 @@
 ---
 file: TASK_TRACKER
-revision: 55
+revision: 56
 status: CURRENT
 updated: 2026-11-09
 updated_by: a13-memory-manager
-based_on_commit: 1d67d75
+based_on_commit: 8a6dd59
 ---
 
 # Task Tracker
@@ -125,6 +125,7 @@ Tugas memakai ID `TSK-xxx` (berbeda dari ID uji teknis `T-xx`). Status: `TODO` Â
 | TSK-109 | memory_op A13: task_close TSK-108 DROPPED + catatan butir I.5 | DONE | A13 | 0 | `memory/TASK_TRACKER.md`, `memory/OPEN_QUESTIONS.md` | Brief A01 | Tanpa keputusan baru, tanpa Git, tanpa hash baru; status temuan tidak diubah |
 | TSK-110 | write A03: dokumen kerja `bab1/TO DO.md` (daftar penanda dan butir terbuka Bab I yang dapat dibaca tim) | DONE | A03 | 0 | `bab1/TO DO.md` | Permintaan pengguna (verbatim): "sekarang kan masih terlalu banyak kode ya, saya ingin agar daftar tersebut bisa dibaca oleh saya yang lainnya, boleh anda buat dalam TO DO.md di bab 1" | Dokumen kerja, bukan bagian naskah Bab I; 138 baris (wc; A01 melaporkan 139). Isi menurut A01: ringkasan penanda per subbab (I.1=15, I.2=11, I.3=7, I.4=6, I.5=8; total 47), 16 butir keputusan, 6 butir pekerjaan penulis, 2 verifikasi, 3 administratif. Kolom "Pemutus" diisi a03 dari ask_to/question di OPEN_QUESTIONS, bukan keputusan; a03 meminta pengguna mengonfirmasi. Definisi "resume medis" adalah penjelasan umum tambahan a03. Ringkasan a03 menyebut penanda I.4 = 4, berkas menulis 6 (sesuai DRAF 19), tanpa tindakan. `bab1/Bab_I_Draft.md` tidak berubah. Berkas untracked |
 | TSK-111 | memory_op A13: task_close TSK-110 + register_artifact `bab1/TO DO.md` | DONE | A13 | 0 | `memory/TASK_TRACKER.md`, `memory/PROJECT_STATE.md` | Brief A01 | Tanpa keputusan baru, tanpa Git; hash `bab1/TO DO.md` = `ad3ac24bbde9` (sha256sum, tanpa CR); hash artefak lain tidak diubah |
+| TSK-112 | memory_op A13: session_close sesi 2026-11-08/09 (TSK-085..111) | DONE | A13 | 0 | `memory/CONTEXT_TRANSFER.md`, `memory/PROJECT_STATE.md`, `memory/TASK_TRACKER.md` | Brief A01 + argumen /sesi-tutup pengguna (verbatim): "dengan catatan saya sudah commit & push seluruh file terbaru" | Tanpa keputusan baru, tanpa Git oleh A13. Fakta (verifikasi A01): working tree bersih; HEAD 8a6dd59 "fix: final to do for bab 1" di atas 1d67d75 dan 4351fe5, dibuat pengguna di luar A13 (tanpa approval_evidence G3). Push TIDAK terverifikasi (tanpa upstream di `git status -sb`); pernyataan pengguna dicatat sebagai pernyataan. Hash A13 (sha256sum) `bab1/Bab_I_Draft.md` 0abc269a1b31 dan `bab1/TO DO.md` ad3ac24bbde9 cocok dengan catatan; `bab1/TO DO.md` kini ter-commit. D-59..D-65 terverifikasi ada di DECISION_LOG. EVIDENCE_REGISTRY tidak diubah: brief tidak memuat halaman PDF terverifikasi a08 (Skrabic, Li, Jaganathan, Zeba, Dietrich, Zhang), jadi B2-52 dan B2-54 tetap "halaman BELUM DIVERIFIKASI" sampai laporan a08 diberikan |
 
 Approval evidence TSK-061 (persetujuan operasional per eksekusi, P2-02):
 
@@ -312,6 +313,7 @@ Diisi A13 saat penutupan tugas dari Agent Report dan `.scratch/agent_runs.jsonl`
 | 2026-11-09 | TSK-109 (task_close TSK-108, catatan butir I.5) | a13 | 0 | COMPLETE | NA | 0/0/0/0 | n/a | n/a | n/a |
 | 2026-11-09 | TSK-110 (dokumen kerja bab1/TO DO.md) | a03 | 0 | COMPLETE | NA | 0/0/0/0 | n/a | n/a | n/a |
 | 2026-11-09 | TSK-111 (task_close TSK-110, register_artifact) | a13 | 0 | COMPLETE | NA | 0/0/0/0 | n/a | n/a | n/a |
+| 2026-11-09 | TSK-112 (session_close 2026-11-08/09) | a13 | 0 | COMPLETE | NA | 0/0/0/0 | n/a | n/a | n/a |
 
 Catatan: token = subagent_tokens menurut harness, mungkin kumulatif per instance.
 
