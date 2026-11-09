@@ -1,10 +1,10 @@
 ---
 file: TASK_TRACKER
-revision: 52
+revision: 55
 status: CURRENT
 updated: 2026-11-09
 updated_by: a13-memory-manager
-based_on_commit: 4351fe5
+based_on_commit: 1d67d75
 ---
 
 # Task Tracker
@@ -116,6 +116,15 @@ Tugas memakai ID `TSK-xxx` (berbeda dari ID uji teknis `T-xx`). Status: `TODO` �
 | TSK-100 | memory_op A13: record_decision D-63, D-64, D-65 + update Q-B1-bq, bs, bt (DIPUTUSKAN) + task_open TSK-101 | DONE | A13 | 0 | `memory/DECISION_LOG.md`, `memory/OPEN_QUESTIONS.md`, `memory/TASK_TRACKER.md` | Brief A01 dengan approval_evidence (3 jawaban) | D-63 (amends D-61, klarifikasi), D-64 (amends D-62 sebagian), D-65 dicatat APPROVED lingkup terbatas; status temuan tidak diubah; tanpa Git atau hash baru |
 | TSK-101 | write A03: perbaikan terarah ketiga I.1 p18-19 (DRAF 18 → DRAF 19) menerapkan D-63, D-64, D-65; pecah p18 (F-A09-0153); rapikan F-A08-0038, F-A09-0156, 0163, 0150, F-A05-0125 | DONE | A03 | 0 | `bab1/Bab_I_Draft.md` | D-63, D-64, D-65 | COMPLETE menurut laporan a03: DRAF 19; p18 lama dipecah p18 (7 kalimat) dan p19 (14 kalimat); p20 Zeba; p21 trade-off dan posisi; 47 penanda (butir 13 di p18, 14 di p20, 15 di p21); perbaikan terarah ketiga di luar siklus D-06 atas izin pengguna (menurut brief A01). Pemeriksaan: a08, a07, a09 PASS_WITH_NOTES, a05 NA; bukan persetujuan |
 | TSK-102 | memory_op A13: record_findings pemeriksaan terarah keempat DRAF 19 (TSK-087..090) + task_close TSK-101 + hash Bab I + butir Q-B1-bu, bv, bw | DONE | A13 | 0 | `memory/FINDINGS_LOG.md`, `memory/OPEN_QUESTIONS.md`, `memory/TASK_TRACKER.md`, `memory/PROJECT_STATE.md` | Brief A01 | Tanpa keputusan baru; hash `bab1/Bab_I_Draft.md` = `0abc269a1b31` (sha256sum); hash artefak lain tidak diubah; tanpa Git. RESOLVED hanya menurut auditor penemu; F-A05-0130..0132 menantang keputusan pengguna (requires_decision) |
+| TSK-103 | qa_audit A11: QA teknis Subbab I.5 DRAF 19 (rancangan evaluasi) | DONE | A11 | 0 | laporan auditor (read-only) | Brief A01 | FAIL: RESOLVED F-A11-0004, 0012, 0019; OPEN F-A11-0015 (HIGH), 0016, 0017, 0018; baru F-A11-0021 (MEDIUM), 0022 (LOW). Kelayakan data tidak dapat dinilai (`.scratch/rsia/agregat/` tidak ada) |
+| TSK-104 | review A05: tinjauan kritis Subbab I.5 DRAF 19 | DONE | A05 | 0 | laporan auditor (read-only) | Brief A01 | qa NA: F-A05-0019 RESOLVED; 0017, 0020 MITIGATED (baris tetap OPEN); 0018, 0034..0037 STILL_OPEN; baru F-A05-0133..0140 (7 MEDIUM, 1 LOW) |
+| TSK-105 | qa_audit A07: QA akademik Subbab I.5 DRAF 19 | DONE | A07 | 0 | laporan auditor (read-only) | Brief A01 | FAIL: baru F-A07-0066..0068 (MEDIUM), 0069..0071 (LOW). Koreksi A01: acuan benar RULES.md §13.5 dan CLAUDE.md §12.5, bukan RULES.md §12.5 |
+| TSK-106 | qa_audit A09: QA editorial Subbab I.5 DRAF 19 | DONE | A09 | 0 | laporan auditor (read-only) | Brief A01 | FAIL hanya karena F-A09-0172 (MEDIUM); baru F-A09-0170..0186; 8 penanda cocok butir 40-47 |
+| TSK-107 | memory_op A13: record_findings TSK-103..106 + butir Q-B1-bx, by, bz, ca + pembaruan Q-B1-bj + fakta commit pengguna | DONE | A13 | 0 | `memory/FINDINGS_LOG.md`, `memory/OPEN_QUESTIONS.md`, `memory/TASK_TRACKER.md` | Brief A01 | Tanpa keputusan baru; naskah tidak berubah (hash artefak tidak diubah); tanpa Git. Fakta operasional: per 2026-11-09 pengguna menyatakan sudah commit dan push progres sebelumnya; git log (A01, read-only): HEAD 1d67d75 "fix: bab 1.4" di atas 4351fe5, working tree bersih, `memory/agent.mmd` tidak lagi untracked. Push tidak terverifikasi (upstream tidak terlihat). Commit dibuat pengguna di luar A13, tanpa approval_evidence G3 |
+| TSK-108 | write A03: revisi tunggal Subbab I.5 tanpa keputusan baru | DROPPED | A03 | 0 | n/a (tanpa edit) | Brief A01 | Dibatalkan atas koreksi pengguna; execution BLOCKED oleh perintah berhenti A01. Tanpa Edit atau Write; `bab1/Bab_I_Draft.md` tetap DRAF 19, 47 penanda, hash 0abc269a1b31 (verifikasi A01: git status dan git diff --stat tanpa perubahan pada berkas itu). Sebab: AskUserQuestion "Kelanjutan I.5" tercatat sistem sebagai "Satu revisi tanpa keputusan baru (Recommended)"; A01 meluncurkan a03; pengguna segera mengirim verbatim "eh saya maunya pilihan 2" (opsi 2: "Berhenti, bawa semuanya ke tim"). Kesalahan A01 (dilaporkan A01): memulai a03 tanpa menanyakan ulang saat jawaban tampak bertentangan dengan maksud pengguna; tanpa akibat pada naskah. Bukan persetujuan revisi |
+| TSK-109 | memory_op A13: task_close TSK-108 DROPPED + catatan butir I.5 | DONE | A13 | 0 | `memory/TASK_TRACKER.md`, `memory/OPEN_QUESTIONS.md` | Brief A01 | Tanpa keputusan baru, tanpa Git, tanpa hash baru; status temuan tidak diubah |
+| TSK-110 | write A03: dokumen kerja `bab1/TO DO.md` (daftar penanda dan butir terbuka Bab I yang dapat dibaca tim) | DONE | A03 | 0 | `bab1/TO DO.md` | Permintaan pengguna (verbatim): "sekarang kan masih terlalu banyak kode ya, saya ingin agar daftar tersebut bisa dibaca oleh saya yang lainnya, boleh anda buat dalam TO DO.md di bab 1" | Dokumen kerja, bukan bagian naskah Bab I; 138 baris (wc; A01 melaporkan 139). Isi menurut A01: ringkasan penanda per subbab (I.1=15, I.2=11, I.3=7, I.4=6, I.5=8; total 47), 16 butir keputusan, 6 butir pekerjaan penulis, 2 verifikasi, 3 administratif. Kolom "Pemutus" diisi a03 dari ask_to/question di OPEN_QUESTIONS, bukan keputusan; a03 meminta pengguna mengonfirmasi. Definisi "resume medis" adalah penjelasan umum tambahan a03. Ringkasan a03 menyebut penanda I.4 = 4, berkas menulis 6 (sesuai DRAF 19), tanpa tindakan. `bab1/Bab_I_Draft.md` tidak berubah. Berkas untracked |
+| TSK-111 | memory_op A13: task_close TSK-110 + register_artifact `bab1/TO DO.md` | DONE | A13 | 0 | `memory/TASK_TRACKER.md`, `memory/PROJECT_STATE.md` | Brief A01 | Tanpa keputusan baru, tanpa Git; hash `bab1/TO DO.md` = `ad3ac24bbde9` (sha256sum, tanpa CR); hash artefak lain tidak diubah |
 
 Approval evidence TSK-061 (persetujuan operasional per eksekusi, P2-02):
 
@@ -294,6 +303,15 @@ Diisi A13 saat penutupan tugas dari Agent Report dan `.scratch/agent_runs.jsonl`
 | 2026-11-09 | TSK-089 (QA editorial DRAF 19, terarah keempat) | a09 | 0 | COMPLETE | PASS_WITH_NOTES | baru 0/0/0/3 (+2 INFO) | n/a | n/a | n/a |
 | 2026-11-09 | TSK-090 (tinjauan kritis DRAF 19, terarah keempat) | a05 | 0 | COMPLETE | NA | baru 0/0/2/1 | n/a | n/a | n/a |
 | 2026-11-09 | TSK-102 (record_findings, task_close, hash Bab I) | a13 | 0 | COMPLETE | NA | 0/0/0/0 | n/a | n/a | n/a |
+| 2026-11-09 | TSK-103 (QA teknis I.5 DRAF 19) | a11 | 0 | COMPLETE | FAIL | baru 0/0/1/1 (F-A11-0021, 0022); lama OPEN termasuk 0015 HIGH | n/a | n/a | n/a |
+| 2026-11-09 | TSK-104 (tinjauan kritis I.5 DRAF 19) | a05 | 0 | COMPLETE | NA | baru 0/0/7/1 | n/a | n/a | n/a |
+| 2026-11-09 | TSK-105 (QA akademik I.5 DRAF 19) | a07 | 0 | COMPLETE | FAIL | baru 0/0/3/3 | n/a | n/a | n/a |
+| 2026-11-09 | TSK-106 (QA editorial I.5 DRAF 19) | a09 | 0 | COMPLETE | FAIL | baru 0/0/1/13 (+4 INFO; 0183 dicatat) | n/a | n/a | n/a |
+| 2026-11-09 | TSK-107 (record_findings, task_close, butir Q, fakta commit) | a13 | 0 | COMPLETE | NA | 0/0/0/0 | n/a | n/a | n/a |
+| 2026-11-09 | TSK-108 (revisi I.5, DROPPED) | a03 | 0 | BLOCKED | NA | 0/0/0/0 | n/a | n/a | n/a |
+| 2026-11-09 | TSK-109 (task_close TSK-108, catatan butir I.5) | a13 | 0 | COMPLETE | NA | 0/0/0/0 | n/a | n/a | n/a |
+| 2026-11-09 | TSK-110 (dokumen kerja bab1/TO DO.md) | a03 | 0 | COMPLETE | NA | 0/0/0/0 | n/a | n/a | n/a |
+| 2026-11-09 | TSK-111 (task_close TSK-110, register_artifact) | a13 | 0 | COMPLETE | NA | 0/0/0/0 | n/a | n/a | n/a |
 
 Catatan: token = subagent_tokens menurut harness, mungkin kumulatif per instance.
 

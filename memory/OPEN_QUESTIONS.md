@@ -1,10 +1,10 @@
 ---
 file: OPEN_QUESTIONS
-revision: 40
+revision: 42
 status: CURRENT
 updated: 2026-11-09
 updated_by: a13-memory-manager
-based_on_commit: 4351fe5
+based_on_commit: 1d67d75
 ---
 
 # Open Questions
@@ -1087,8 +1087,8 @@ pic: Pengguna
 ask_to: Tim / Pembimbing
 status: TERBUKA
 updated: 2026-11-08
-refs: [F-A11-0015, F-A05-0026, D-29, D-58, D-56, D-21, Q-B1-bg, Q-B1-y]
-note: Butir baru dari QA siklus 2 DRAF 13 (TSK-082). Opsi a-d adalah usulan a11, bukan opsi yang ditawarkan ke pengguna; bukan keputusan. Siklus otomatis D-06 habis, sehingga tidak ada revisi otomatis atas butir ini.
+refs: [F-A11-0015, F-A05-0026, D-29, D-58, D-56, D-21, Q-B1-bg, Q-B1-y, F-A07-0067, F-A05-0034]
+note: Pembaruan TSK-107 (2026-11-09): QA I.5 DRAF 19 mencatat I.2/I.3/I.5 tidak memuat penanda Q-B1-bj (F-A11-0015 tetap OPEN HIGH; F-A07-0067; F-A05-0034 diperkuat I.1 p20); belum ada keputusan. Butir asli: butir baru dari QA siklus 2 DRAF 13 (TSK-082). Opsi a-d adalah usulan a11, bukan opsi yang ditawarkan ke pengguna; bukan keputusan. Siklus otomatis D-06 habis, sehingga tidak ada revisi otomatis atas butir ini. Pembaruan TSK-109 (2026-11-09): I.5 dibawa ke pembimbing dan tim tanpa revisi (TSK-108 DROPPED); status tetap TERBUKA.
 ```
 
 ```yaml
@@ -1258,4 +1258,58 @@ status: TERBUKA
 updated: 2026-11-09
 refs: [F-A05-0132, D-62, D-63]
 note: Butir baru dari TSK-090 terarah keempat DRAF 19 (dicatat TSK-102). requires_decision true; pic Pengguna, ask_to Pembimbing menurut brief A01. Bukan keputusan.
+```
+
+## Butir baru dari QA Subbab I.5 DRAF 19 (TSK-103..106, dicatat TSK-107, 2026-11-09)
+
+```yaml
+id: Q-B1-bx
+question: Bagaimana data pengembangan diberi label di I.5 (F-A11-0021): tanpa label, label oleh penulis, atau label sebagian oleh pakar? Saat ini hanya data uji dilabeli dan tahap 3 tidak punya acuan pada data pengembangan.
+affected: [Bab I, I.5]
+class: L3
+pic: Pengguna
+ask_to: Pengguna / Tim
+status: TERBUKA
+updated: 2026-11-09
+refs: [F-A11-0021]
+note: Opsi a, b, c adalah usulan a11, bukan opsi yang ditawarkan ke pengguna. Bukan keputusan. Pembaruan TSK-109 (2026-11-09): I.5 dibawa ke pembimbing dan tim tanpa revisi (revisi TSK-108 DROPPED atas koreksi pengguna); status tetap TERBUKA, tidak ada yang diputuskan.
+```
+
+```yaml
+id: Q-B1-by
+question: Bagaimana kasus uji dipilih (F-A05-0136), dan bagaimana temuan RAG di luar daftar jenis diperlakukan serta apa komposisi daftar jenis, termasuk apakah wajib memuat jenis konteks (F-A05-0138)?
+affected: [Bab I, I.5]
+class: L3
+pic: Pengguna
+ask_to: Pengguna / Tim
+status: TERBUKA
+updated: 2026-11-09
+refs: [F-A05-0136, F-A05-0138]
+note: Butir baru dari TSK-104 (dicatat TSK-107). requires_decision true. Bukan keputusan. Pembaruan TSK-109 (2026-11-09): I.5 dibawa ke pembimbing dan tim tanpa revisi; tetap TERBUKA.
+```
+
+```yaml
+id: Q-B1-bz
+question: Apakah tiap komponen menyasar seluruh daftar jenis atau dibagi per jenis (F-A05-0133)? Bila dibagi per jenis, menurut a05 uji recall D-29 hampir pasti ya dan uji presisi union hampir pasti tidak.
+affected: [Bab I, I.5, I.2]
+class: L3
+pic: Pengguna
+ask_to: Pengguna / Tim
+status: TERBUKA
+updated: 2026-11-09
+refs: [F-A05-0133, D-29, Q-TEAM butir 1]
+note: Butir baru dari TSK-104 (dicatat TSK-107); terkait Q-TEAM butir 1. requires_decision true. Bukan keputusan. Pembaruan TSK-109 (2026-11-09): I.5 dibawa ke pembimbing dan tim tanpa revisi; tetap TERBUKA.
+```
+
+```yaml
+id: Q-B1-ca
+question: Apakah penyusunan jawaban dijadikan tahap tersendiri di I.5 (F-A07-0070)?
+affected: [Bab I, I.5]
+class: L3
+pic: Pengguna
+ask_to: Pengguna
+status: TERBUKA
+updated: 2026-11-09
+refs: [F-A07-0070]
+note: Butir baru dari TSK-105 (dicatat TSK-107). requires_decision true. Bukan keputusan. Pembaruan TSK-109 (2026-11-09): I.5 dibawa ke pembimbing dan tim tanpa revisi; tetap TERBUKA.
 ```

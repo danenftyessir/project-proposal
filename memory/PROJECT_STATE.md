@@ -1,10 +1,10 @@
 ---
 file: PROJECT_STATE
-revision: 29
+revision: 30
 status: PENDING_VERIFICATION
 updated: 2026-11-09
 updated_by: a13-memory-manager
-based_on_commit: 4351fe5
+based_on_commit: 1d67d75
 ---
 
 # Project State
@@ -52,6 +52,7 @@ Hash dihitung dari checkout utama pada 2026-11-05 (read-only), dengan line endin
 | `Sumber Literatur Bab 2.pdf` | Daftar literatur awal | P0 | Pengguna | `cfd6dd5183d7` | 2026-11-05 |
 | `source/INDEKS.md` | Indeks sumber tingkat berkas (hash dari checkout utama; worktree 7d59b85 dapat berbeda; hash worktree belum dihitung, menunggu TSK-014) [PENDING_VERIFICATION 2026-11-07: S1 berubah; tanpa tugas pendasar; hash worktree saat ini `f31b17d2590c` belum dicatat sebagai hash resmi] | P0 | Pengguna | `4eadbada866f` | 2026-11-05 |
 | `bab1/Bab_I_Draft.md` | Bab I DRAF 19 (menurut laporan a03; dasar perubahan TSK-101 setelah DRAF 18; hash dihitung TSK-102 2026-11-09 dengan `sha256sum`; status DRAF) | P1 | A03 | `0abc269a1b31` | 2026-11-09 |
+| `bab1/TO DO.md` | Dokumen kerja (non-naskah; bukan bagian Bab I) berisi daftar penanda dan butir terbuka Bab I untuk dibaca tim (TSK-110); hash dihitung TSK-111 dengan `sha256sum`; belum ter-commit (untracked) | P1 | A03 | `ad3ac24bbde9` | 2026-11-09 |
 | `bab2/Bab_II_Revisi_Notulensi.md` | Bab II DRAFT 6 | P1 | A03 | `8cd97bed5345` | 2026-11-05 |
 | `bab2/Kebutuhan_Literatur_Revisi_Bab_II.md` | Kebutuhan literatur revisi Bab II | P1 | A03 | `a6a8171c0704` | 2026-11-05 |
 | `bab3/Bahan_Pindahan_dari_Bab_II.md` | Bahan pindahan Bab II ke Bab I/III | P1 | A03 | `0f8adb3f6b7f` | 2026-11-05 |
