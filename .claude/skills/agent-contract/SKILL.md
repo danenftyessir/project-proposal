@@ -26,7 +26,7 @@ external_lookup: off      # off | metadata (hanya A02/A08, dengan izin pengguna 
 claims_changed: false     # true bila ada klaim utama baru/berubah (memicu A05 pada R1)
 approval_evidence: null   # hanya untuk A13 saat mencatat keputusan (§5 di bawah)
 budget: {max_findings: 20, report_tokens: 1500}
-cycle: 0                  # 0 = pertama; 1–2 = revisi otomatis; tidak ada siklus ke-3 tanpa pengguna
+cycle: 0                  # 0 = pertama; 1 = revisi otomatis; tidak ada siklus ke-2 tanpa pengguna
 return_to: a01-orchestrator
 ```
 

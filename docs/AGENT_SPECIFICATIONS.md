@@ -128,7 +128,7 @@ Semua panah melewati A01 (§A-5.1). Tidak ada aliran langsung antaragent.
 | 6 | Explicit boundaries | Tidak menulis berkas apa pun. Tidak memberi penilaian substantif (argumen, bahasa, sitasi, metode). Tidak menjawab pertanyaan akademik atas nama pengguna. Tidak memilih di antara temuan agent yang bertentangan. Ringkasannya tidak boleh menambah klaim yang tidak ada di laporan agent |
 | 7 | Input requirements | Permintaan pengguna; hasil `check_memory.py --brief` (lewat hook); `memory/PROJECT_STATE.md`, indeks `DECISION_LOG`, butir terbuka `TASK_TRACKER` dan `OPEN_QUESTIONS`, `memory/CONTEXT_TRANSFER.md` |
 | 8 | Output contract | Ke agent: Task Brief. Ke pengguna: (a) laporan readiness, (b) Approval Request (§A-9.3), (c) ringkasan hasil per tugas berisi agent yang dipanggil, status, temuan tersisa, dan perubahan berkas. Ke A13: brief berisi `approval_evidence` dan hasil tugas |
-| 9 | Allowed tools | `Agent(a02-research-evidence, a03-academic-writer, a04-supervisor, a05-critical-reviewer, a06-cross-proposal, a07-qa-academic, a08-qa-citation, a09-qa-editorial, a10-qa-structure, a11-qa-technical, a12-qa-integrity, a13-memory-manager)`, `SendMessage`, `AskUserQuestion`, `ToolSearch`, `Read`, `Glob`, `Grep`, `Bash` |
+| 9 | Allowed tools | `Agent(a02-research-evidence, a03-academic-writer, a04-supervisor, a05-critical-reviewer, a06-cross-proposal, a07-qa-academic, a08-qa-citation, a09-qa-editorial, a10-qa-structure, a12-qa-integrity, a13-memory-manager)`, `SendMessage`, `AskUserQuestion`, `ToolSearch`, `Read`, `Glob`, `Grep`, `Bash` |
 | 10 | File access | Baca: `memory/**`, `docs/**`, daftar dan heading berkas proposal (untuk menyusun `inputs`). Tulis: tidak ada. Bash: allowlist baca status (§4) |
 | 11 | Invocation conditions | Sesi yang dibuka dengan `claude --agent a01-orchestrator`, atau `/orkestrasi` pada fallback (D-01) |
 | 12 | Dependencies | Semua agent lain; hook `SessionStart`; skill `sesi-mulai` dan `sesi-tutup` |
@@ -157,7 +157,7 @@ Semua panah melewati A01 (§A-5.1). Tidak ada aliran langsung antaragent.
 ---
 name: a01-orchestrator
 description: Agent 01 Project Controller. Jalankan sebagai sesi utama (claude --agent a01-orchestrator) untuk mengorkestrasi penyusunan Proposal Tugas Akhir Capstone IF4091. Tidak menulis berkas; mendelegasikan ke a02–a13.
-tools: Agent(a02-research-evidence, a03-academic-writer, a04-supervisor, a05-critical-reviewer, a06-cross-proposal, a07-qa-academic, a08-qa-citation, a09-qa-editorial, a10-qa-structure, a11-qa-technical, a12-qa-integrity, a13-memory-manager), SendMessage, AskUserQuestion, ToolSearch, Read, Glob, Grep, Bash
+tools: Agent(a02-research-evidence, a03-academic-writer, a04-supervisor, a05-critical-reviewer, a06-cross-proposal, a07-qa-academic, a08-qa-citation, a09-qa-editorial, a10-qa-structure, a12-qa-integrity, a13-memory-manager), SendMessage, AskUserQuestion, ToolSearch, Read, Glob, Grep, Bash
 model: inherit
 effort: high
 skills:
@@ -803,17 +803,16 @@ Ini satu-satunya tempat izin tulis, pembatasan baca, dan allowlist Bash per agen
     ]
   },
   "agents": {
-    "a01-orchestrator": {"write": [], "bash": ["git status", "git log", "git diff --stat", "git diff --name-only", "python scripts/check_memory.py", "python scripts/check_agents.py", "git show", "git rev-parse", "git ls-tree", "git ls-files", "git cat-file", "git merge-base", "git show-ref", "git describe", "git worktree list", "git branch --show-current"]},
+    "a01-orchestrator": {"write": [], "bash": ["git status", "git log", "git diff --stat", "git diff --name-only", "python scripts/check_memory.py", "python scripts/check_agents.py", "python scripts/lint_prose.py", "git show", "git rev-parse", "git ls-tree", "git ls-files", "git cat-file", "git merge-base", "git show-ref", "git describe", "git worktree list", "git branch --show-current"]},
     "a02-research-evidence": {"write": ["tools/claims_*.json", ".scratch/**"], "web": true, "bash": ["pdftotext", "pdfinfo", "python scripts/extract_text.py", "python -I tools/verify_claims.py", "unzip -l", "unzip -p", "unzip -o -d .scratch/rsia/", "sha256sum", "python <SKILL_DIR:pdf>/scripts/convert_pdf_to_images.py"]},
-    "a03-academic-writer": {"write": ["bab1/**/*.md", "bab2/**/*.md", "bab3/**/*.md", "bab4/**/*.md", ".scratch/**"], "bash": ["python -I tools/build_modular.py"]},
+    "a03-academic-writer": {"write": ["bab1/**/*.md", "bab2/**/*.md", "bab3/**/*.md", "bab4/**/*.md", ".scratch/**"], "bash": ["python -I tools/build_modular.py", "python scripts/lint_prose.py"]},
     "a04-supervisor": {"write": [], "bash": []},
     "a05-critical-reviewer": {"write": [], "bash": []},
     "a06-cross-proposal": {"write": [".scratch/**"], "bash": ["python scripts/extract_text.py", "pdftotext", "pdfinfo"]},
     "a07-qa-academic": {"write": [], "bash": []},
     "a08-qa-citation": {"write": [".scratch/**"], "web": true, "bash": ["pdftotext", "pdfinfo", "python scripts/extract_text.py", "python -I tools/verify_claims.py", "unzip -l", "unzip -p"]},
-    "a09-qa-editorial": {"write": [], "bash": []},
+    "a09-qa-editorial": {"write": [], "bash": ["python scripts/lint_prose.py"]},
     "a10-qa-structure": {"write": [".scratch/**"], "bash": ["python scripts/extract_text.py", "pdftotext", "pdfinfo"]},
-    "a11-qa-technical": {"write": [], "bash": []},
     "a12-qa-integrity": {"write": [".scratch/**"], "bash": ["python scripts/extract_text.py", "pdftotext", "pdfinfo", "soffice --headless --convert-to pdf --outdir .scratch", "python <SKILL_DIR:docx>/scripts/office/validate.py", "python <SKILL_DIR:docx>/scripts/office/unpack.py", "mkdir", "cp"], "bash_dest": [".scratch/**"], "skill_scripts": ["docx/scripts/office/validate.py", "docx/scripts/office/unpack.py"]},
     "a13-memory-manager": {"write": ["memory/**", ".scratch/**"], "bash": ["git status", "git diff", "git log", "git show", "git fetch", "git ls-remote", "git rev-parse", "git merge-tree", "git branch --show-current", "git worktree list", "git describe", "git show-ref", "git merge-base", "git cat-file", "git ls-files", "git ls-tree", "git hash-object", "git add --", "git commit -m", "git push origin", "python scripts/check_memory.py", "python scripts/check_staged.py", "sha256sum"]}
   }

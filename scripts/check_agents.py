@@ -1,7 +1,7 @@
-"""Static validation of the 13 fixed agents (docs/AGENT_SPECIFICATIONS.md §6, T-07, T-20).
+"""Static validation of the 12 fixed agents (docs/AGENT_SPECIFICATIONS.md §6, T-07, T-20).
 
-Checks: exactly 13 agent files a01..a13 and no 14th; required frontmatter; subagents have omitClaudeMd and no
-Agent tool; a01's Agent(...) allowlist names exactly a02..a13; each body has '## Batas' and
+Checks: exactly 12 agent files (a01..a13 tanpa a11, digabung ke a07) and no extra; required frontmatter; subagents have omitClaudeMd and no
+Agent tool; a01's Agent(...) allowlist names exactly the roster minus a01; each body has '## Batas' and
 '## Kontrak keluaran'; policy agents match the roster; every 'RULES.md §x' / 'CLAUDE.md §x' reference in the
 rules-map skill resolves to a heading. Exit 1 on any failure.
 """
@@ -11,7 +11,7 @@ from _common import ROOT, POLICY_PATH
 AGENTS = ROOT / ".claude" / "agents"
 ROSTER = ["a01-orchestrator", "a02-research-evidence", "a03-academic-writer", "a04-supervisor",
           "a05-critical-reviewer", "a06-cross-proposal", "a07-qa-academic", "a08-qa-citation",
-          "a09-qa-editorial", "a10-qa-structure", "a11-qa-technical", "a12-qa-integrity", "a13-memory-manager"]
+          "a09-qa-editorial", "a10-qa-structure", "a12-qa-integrity", "a13-memory-manager"]
 RULES_MAP = ROOT / ".claude" / "skills" / "if4091-rules-map" / "SKILL.md"
 
 
@@ -47,7 +47,7 @@ def main():
     if names != ROSTER:
         extra = sorted(set(names) - set(ROSTER))
         missing = [r for r in ROSTER if r not in names]
-        errors.append(f"roster tidak tepat 13: kurang {missing}, berlebih {extra}")
+        errors.append(f"roster tidak tepat 12: kurang {missing}, berlebih {extra}")
     for f in files:
         fm, body = frontmatter(f.read_text(encoding="utf8"))
         if not fm:
@@ -62,7 +62,7 @@ def main():
             agent_tool = [t for t in tools if t.startswith("Agent(")]
             allowed = [a.strip() for a in agent_tool[0][6:-1].split(",")] if agent_tool else []
             if allowed != ROSTER[1:]:
-                errors.append(f"a01: allowlist Agent(...) harus tepat a02–a13, ditemukan {allowed}")
+                errors.append(f"a01: allowlist Agent(...) harus tepat roster tanpa a01, ditemukan {allowed}")
             for t in ("SendMessage", "AskUserQuestion"):
                 if t not in tools:
                     errors.append(f"a01: tool {t} tidak tercantum")
@@ -99,7 +99,7 @@ def main():
         for e in errors:
             print("  - " + e)
         return 1
-    print(f"check_agents: OK (13 agent, {refs} rujukan aturan valid)")
+    print(f"check_agents: OK (12 agent, {refs} rujukan aturan valid)")
     return 0
 
 

@@ -556,6 +556,7 @@ Jangan menganggap sebuah klaim terverifikasi hanya karena sitasi tercantum atau 
 ### 11.3 Kendalikan siklus generasi–pemeriksaan–revisi
 
 - Jangan menganggap teks siap hanya karena terdengar akademis, strukturnya lengkap, atau sudah memiliki sitasi.
+- Batas revisi otomatis adalah satu siklus per subbab. Kunci keputusan substantif sebelum menulis, kerjakan satu draf per subbab, dan hanya temuan HIGH/MEDIUM yang memicu revisi; temuan LOW/INFO dikumpulkan dan dikerjakan sekali di akhir.
 - Sebelum revisi besar, kenali masalah spesifik yang hendak diperbaiki: ketepatan sumber, kekuatan argumen, kedalaman teknis, relevansi konteks, repetisi, bahasa, atau konsistensi.
 - Setelah mengubah sebuah klaim, periksa kembali bukti dan semua bagian yang bergantung padanya. Hindari menghasilkan ulang bagian panjang tanpa alasan yang jelas jika perubahan terarah sudah memadai.
 - Bedakan fakta dari sumber, interpretasi penulis, inferensi yang masih perlu diuji, asumsi kerja, dan informasi yang belum tersedia. Gunakan penanda eksplisit untuk hal yang belum dipastikan.

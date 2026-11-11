@@ -9,6 +9,8 @@ Panduan pemakaian sehari-hari. Rancangan lengkap: `docs/ORCHESTRATION_ARCHITECTU
 | **Sesi orkestrasi** | Menulis/merevisi bab, menilai *research gap*, wawancara kesiapan, QA, konsistensi tim | Di terminal terintegrasi VS Code pada root repo: `claude --agent a01-orchestrator` |
 | **Sesi biasa** | Pekerjaan kecil di luar alur proposal | `claude` atau panel ekstensi VS Code seperti biasa |
 
+Sesi biasa adalah bawaan: `.claude/settings.json` tidak memaksa agent apa pun, sehingga `claude` (dan panel ekstensi VS Code) membuka Claude Code normal dengan semua tool dan system prompt bawaan. Mode orkestrasi hanya aktif bila Anda meluncurkannya sendiri dengan `claude --agent a01-orchestrator`. Hook `SessionStart` (ringkasan `check_memory.py`) tetap berjalan di kedua mode. Perubahan naskah yang dibuat di sesi biasa tidak tercatat di `memory/**`; di sesi orkestrasi berikutnya, `/sesi-mulai` akan melaporkan `READY_WITH_WARNINGS`/`NOT_READY` dan A13 mengusulkan rekonsiliasi, jadi tidak ada yang hilang.
+
 Sesi biasa tetap terkena perlindungan global: berkas asli `RSIA-source/` tidak dapat diubah, Git berbahaya ditolak, dan staging harus eksplisit.
 
 Bila `--agent` tidak berjalan di lingkungan Anda (uji T-01), pakai fallback `/orkestrasi`. Skill ini belum dibuat dan baru dibuat bila T-01 gagal.

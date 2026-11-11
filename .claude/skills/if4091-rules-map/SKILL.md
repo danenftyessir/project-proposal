@@ -26,11 +26,10 @@ Bila bagian yang dirujuk tidak ditemukan, laporkan di `open_questions`; jangan m
 | a04-supervisor | RULES.md §3, §8.2, §8.3, §11.7, §13; CLAUDE.md §12.6 |
 | a05-critical-reviewer | RULES.md §4.2, §8.1, §8.2, §8.4, §12.1 |
 | a06-cross-proposal | RULES.md §12.4; CLAUDE.md §11.4, §11.5 |
-| a07-qa-academic | RULES.md §3, §7, §8.2, §13.6; CLAUDE.md §12.6 |
+| a07-qa-academic | RULES.md §3, §3.5, §3.6, §7, §8.2, §9, §10.3, §13.5, §13.6; CLAUDE.md §12.5, §12.6 |
 | a08-qa-citation | RULES.md §4.4, §11.9, §12.1; CLAUDE.md §3, §5.10, §11.2 |
 | a09-qa-editorial | RULES.md §6.1, §6.2, §6.3, §6.4, §6.5, §6.6, §6.7, §6.8, §6.9, §6.10, §7, §8.5; CLAUDE.md §5.1, §5.2, §5.3, §5.4, §5.5, §5.11, §5.12 |
 | a10-qa-structure | RULES.md §2, §11.3, §11.5, §11.6, §11.7, §11.8, §11.10, §11.11; CLAUDE.md §5.7, §5.8 |
-| a11-qa-technical | RULES.md §3.5, §3.6, §8.2, §9, §10.3, §13.5; CLAUDE.md §12.5 |
 | a12-qa-integrity | RULES.md §11.10, §11.11; CLAUDE.md §5.10 |
 | a13-memory-manager | RULES.md §12.5, §12.8; CLAUDE.md §11.6, §11.7, §11.9 |
 
