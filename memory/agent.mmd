@@ -1,40 +1,53 @@
 flowchart TB
     U([Pengguna])
-    A01{{"A01 Orchestrator<br/>klasifikasi R1-R9, Task Brief,<br/>gate G1/G2/G3. Tidak menulis berkas"}}
-    U <-->|"permintaan / Approval Request"| A01
+    MODE{{"Mode kerja<br/>claude = sesi biasa (bawaan)<br/>claude --agent a01-orchestrator = orkestrasi"}}
+    U --> MODE
+    MODE -->|"orkestrasi"| A01
+
+    GIT[["Git: add, commit, push<br/>dilakukan pengguna sendiri.<br/>Tidak ada agent yang menyentuhnya"]]
+    DOCX[["Docx resmi (sumber kebenaran, D-111)<br/>TA1 bab 1, TA1 bab 2, Draft-Bab1-Bab2<br/>diedit pengguna. Agent tidak menyentuh docx"]]
+    LINT[/"scripts/lint_prose.py<br/>tanpa LLM: ejaan, di/ke, pola AI slop,<br/>heading, tabel, penanda, kebocoran internal"/]
+    U -.->|"commit sendiri"| GIT
+    U -.->|"tempel naskah Markdown ke docx"| DOCX
+    DOCX -.->|"sinkronisasi ke Markdown"| A03
+
+    A01{{"A01 Orchestrator<br/>klasifikasi R1-R9, Task Brief,<br/>gate G1 dan G2 (G3 dihapus).<br/>Tidak menulis berkas.<br/>Revisi otomatis maks 1 siklus,<br/>maks 3 draf per subbab"}}
+    U <-->|"permintaan / Approval Request<br/>(satu batch, maks 4 pertanyaan)"| A01
 
     subgraph PREP["Persiapan dan bukti"]
-        A02["A02 Research & Evidence<br/>cari sumber, ekstrak bukti + halaman"]
+        A02["A02 Research & Evidence<br/>cari sumber, ekstrak bukti + halaman<br/>hanya bila butuh bukti baru"]
     end
     subgraph WRITE["Penulisan"]
-        A03["A03 Academic Writer<br/>satu-satunya penulis bab1-bab4"]
+        A03["A03 Academic Writer<br/>satu-satunya penulis bab1-bab4 (Markdown)<br/>naskah siap-kumpul: tanpa penanda berantai,<br/>maks 10 penanda per bab, sitasi APA"]
     end
     subgraph REVIEW["Penelaah independen (tidak saling melihat laporan)"]
         A04["A04 Supervisor<br/>simulasi pembimbing, wawancara"]
-        A05["A05 Critical Reviewer<br/>bantah klaim utama"]
-        A06["A06 Cross-Proposal<br/>konsistensi 12 aspek dengan tim"]
+        A05["A05 Critical Reviewer<br/>bantah klaim utama,<br/>tidak menantang keputusan APPROVED"]
+        A06["A06 Cross-Proposal<br/>konsistensi dengan proposal anggota,<br/>sekali saja"]
     end
     subgraph QA["Auditor QA (hanya audit, tidak memperbaiki)"]
-        A07["A07 Akademik"]
-        A08["A08 Sitasi"]
-        A09["A09 Editorial"]
+        A07["A07 Akademik + Teknis<br/>(gabungan eks A11)<br/>focus: akademik / teknis"]
+        A08["A08 Sitasi<br/>hanya bila ada sitasi baru,<br/>format APA"]
+        A09["A09 Editorial<br/>jalankan linter dulu, lalu hal<br/>yang tidak bisa ditangkap regex"]
         A10["A10 Struktur"]
-        A11["A11 Teknis"]
         A12["A12 Integritas dokumen"]
     end
-    subgraph MEM["Memori dan Git"]
-        A13["A13 Memory Manager<br/>satu-satunya penulis memory/**,<br/>Git setelah G3"]
+    subgraph MEM["Memori"]
+        A13["A13 Memory Manager<br/>satu-satunya penulis memory/**,<br/>dipanggil berkelompok per tugas/sesi.<br/>Tanpa Git"]
     end
 
     A01 -->|Task Brief| A02
     A01 -->|Task Brief| A03
     A01 -->|Task Brief| REVIEW
-    A01 -->|"artefak + kriteria saja"| QA
+    A01 -->|"bagian berubah + kriteria saja"| QA
     A02 -->|"bukti per klaim"| A03
-    A03 -->|artefak| QA
-    QA -->|"temuan, qa_status"| A01
+    A03 -->|"Markdown"| LINT
+    LINT -->|"hasil mekanis"| A09
+    A03 -->|"Markdown"| QA
+    QA -->|"temuan, qa_status<br/>hanya HIGH/MEDIUM memicu revisi"| A01
     REVIEW -->|temuan| A01
     A01 -->|"hasil, keputusan + approval_evidence, Run Log"| A13
+    A03 -->|"naskah bersih untuk ditempel"| U
 
     classDef ctrl fill:#fde68a,stroke:#b45309,color:#000
     classDef prep fill:#bfdbfe,stroke:#1d4ed8,color:#000
@@ -42,9 +55,11 @@ flowchart TB
     classDef rev fill:#fbcfe8,stroke:#be185d,color:#000
     classDef qa fill:#e9d5ff,stroke:#7e22ce,color:#000
     classDef mem fill:#fecaca,stroke:#b91c1c,color:#000
+    classDef tool fill:#e5e7eb,stroke:#374151,color:#000
     class A01 ctrl
     class A02 prep
     class A03 write
     class A04,A05,A06 rev
-    class A07,A08,A09,A10,A11,A12 qa
+    class A07,A08,A09,A10,A12 qa
     class A13 mem
+    class LINT,GIT,DOCX,MODE tool

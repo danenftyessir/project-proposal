@@ -1,10 +1,10 @@
 ---
 file: DECISION_LOG
-revision: 38
+revision: 42
 status: CURRENT
-updated: 2026-11-10
-updated_by: a13-memory-manager
-based_on_commit: fd87b6d
+updated: 2026-11-12
+updated_by: claude-sesi-biasa (atas permintaan pengguna; bukan A13)
+based_on_commit: a4063ae
 ---
 
 # Decision Log
@@ -109,7 +109,7 @@ approval_evidence:
 id: D-06
 decision: Maksimal dua siklus revisi otomatis
 class: L4
-status: APPROVED
+status: SUPERSEDED by D-106 (sebagian, batas siklus 2 menjadi 1, aturan lain D-06 tetap)
 date: '2026-11-05'
 approval_evidence:
   question: Register keputusan §19 docs/ORCHESTRATION_ARCHITECTURE.md v0.1, baris D-06
@@ -1096,7 +1096,7 @@ approval_evidence:
 id: D-49
 decision: 'Markdown bab1/Bab_I_Draft.md (DRAF 10) adalah sumber kebenaran Bab I untuk modular/. Docx/pdf sementara bab1/Bab1_Revisi1_IF4091.* (hasil migrasi LLM lain) tidak dipakai sebagai sumber; modular/ Bab I dibangun dari Markdown lewat skrip (setelah Q-B1-aw/al). Lingkup: hanya penentuan sumber Bab I; tidak mencakup isi naskah, penghapusan berkas sementara, atau Bab II'
 class: L3
-status: APPROVED
+status: SUPERSEDED by D-111 (sebagian, sumber kebenaran Bab I kini docx resmi, sisa D-49 tentang modular/ tetap tercatat)
 date: '2026-11-07'
 related: [D-29, D-30, Q-B1-ax, Q-B1-aw]
 basis: 'Jawaban pengguna (approval_evidence) atas pertanyaan sumber Bab I (bagian dari Q-B1-ax); audit a12 TSK R5-migrasi-docx-vs-md (F-A12-0001..0004)'
@@ -1306,7 +1306,8 @@ approval_evidence:
 id: D-59
 decision: 'Celah (b) di I.1 paragraf 16 dikeluarkan dari daftar celah literatur dan dinyatakan sebagai PILIHAN RANCANGAN capstone (menguji gabungan pemeriksaan berbasis model bahasa besar dan pemeriksaan deterministik), lengkap dengan alasan dan trade-off. Celah (a) dan (c) tetap. Tanpa pencarian literatur hibrida. D-22, D-29, D-31, D-58 tidak berubah'
 class: L3
-status: APPROVED (lingkup terbatas)
+status: SUPERSEDED by D-115 (sebagian, teks Bab I DRAF 24 yang menjadi objeknya digantikan docx resmi 2026-11-12, tidak mengikat naskah baru)
+status_sebelumnya: APPROVED (lingkup terbatas)
 date: '2026-11-08'
 related: [D-22, D-29, D-31, D-58, F-A05-0101, F-A07-0056, F-A08-0001..0007]
 basis: 'Jawaban pengguna atas AskUserQuestion Celah (b), diteruskan A01 (brief TSK-091)'
@@ -1327,7 +1328,8 @@ approval_evidence:
 id: D-60
 decision: 'Rumusan celah (a) dan (c) di I.1 paragraf 16 diperbaiki: paragraf membahas keempat studi Subbab II.5 dan Li dkk. (II.6:178). Celah (a) dirumuskan sebagai belum adanya studi yang memeriksa dua dokumen tulisan tenaga kesehatan dalam satu episode. Celah (c) dipersempit pada pemeriksaan dokumentasi klinis dan menyatakan posisinya terhadap Li dkk. Rumusan masalah, tujuan, I.2-I.5 tidak berubah; D-59 tetap'
 class: L3
-status: APPROVED (lingkup terbatas)
+status: SUPERSEDED by D-115 (sebagian, teks Bab I DRAF 24 yang menjadi objeknya digantikan docx resmi 2026-11-12, tidak mengikat naskah baru)
+status_sebelumnya: APPROVED (lingkup terbatas)
 date: '2026-11-08'
 related: [D-59, D-22, F-A07-0060, F-A05-0110, F-A05-0111, F-A05-0106, F-A05-0109]
 basis: 'Jawaban pengguna atas AskUserQuestion Celah (a),(c), diteruskan A01 (brief TSK-092)'
@@ -1348,7 +1350,8 @@ approval_evidence:
 id: D-61
 decision: 'Dasar kombinasi pemeriksaan (rule-based dan AI/NLP berbasis RAG) di I.1 paragraf 18 dinyatakan sebagai ketetapan rumusan capstone (Penyelarasan:35), dengan kriteria berupa penalaran penulis berlabel: pemeriksaan konsistensi CPPT dan resume medis berpotensi membutuhkan pemeriksaan terhadap kondisi yang dapat dirumuskan secara eksplisit serta penelaahan konteks informasi dalam dokumen; kombinasi dipilih untuk menguji potensi saling melengkapi, tanpa mengasumsikan kombinasi pasti lebih unggul daripada masing-masing komponen'
 class: L3
-status: APPROVED (lingkup terbatas; bersyarat, revisi paragraf 18 belum dijalankan)
+status: SUPERSEDED by D-115 (sebagian, teks Bab I DRAF 24 yang menjadi objeknya digantikan docx resmi 2026-11-12, tidak mengikat naskah baru)
+status_sebelumnya: APPROVED (lingkup terbatas; bersyarat, revisi paragraf 18 belum dijalankan)
 date: '2026-11-08'
 related: [Q-B1-bl, F-A05-0102, F-A05-0116, F-A07-0063, F-A05-0119, D-06, D-22, D-29, D-59, D-60, TSK-095]
 basis: 'Tiga jawaban pengguna berantai (lihat approval_evidence), diteruskan A01 (brief TSK-094)'
@@ -1377,7 +1380,8 @@ approval_evidence:
 id: D-62
 decision: 'Klaim "diuji" di I.1 paragraf 18-19 dibatasi pada keunggulan menurut uji D-29: kalimat kriteria D-61 dipertahankan sebagai motivasi pemilihan kombinasi, tetapi yang diuji dalam penelitian ini ialah apakah presisi dan recall kombinasi lebih tinggi daripada tiap komponen; potensi saling melengkapi tidak diukur langsung; tanpa ukuran tumpang tindih atau kontribusi unik'
 class: L3
-status: APPROVED (lingkup terbatas)
+status: SUPERSEDED by D-115 (sebagian, teks Bab I DRAF 24 yang menjadi objeknya digantikan docx resmi 2026-11-12, tidak mengikat naskah baru)
+status_sebelumnya: APPROVED (lingkup terbatas)
 date: '2026-11-09'
 amends: 'D-61 (sebagian: bagian "menguji potensi saling melengkapi")'
 related: [D-61, D-29, D-32, D-33, Q-B1-bp, F-A05-0121, F-A07-0065]
@@ -1399,7 +1403,8 @@ approval_evidence:
 id: D-63
 decision: 'Istilah kriteria D-61 ("konteks" dan "eksplisit") di I.1 paragraf 18 ditangani dengan menyatakan bahwa istilah sumber berbeda: a03 menambah satu kalimat bahwa "eksplisit" menurut Dietrich dan "konteks" menurut Li tidak identik dengan istilah kriteria, dan mengganti "tidak sejalan dengan kriteria itu" menjadi pernyataan bahwa arah temuan perlu dibandingkan hati-hati karena maknanya berbeda; kata-kata kriteria D-61 tidak diubah dan tidak ditafsirkan'
 class: L3
-status: APPROVED (lingkup terbatas)
+status: SUPERSEDED by D-115 (sebagian, teks Bab I DRAF 24 yang menjadi objeknya digantikan docx resmi 2026-11-12, tidak mengikat naskah baru)
+status_sebelumnya: APPROVED (lingkup terbatas)
 date: '2026-11-09'
 amends: 'D-61 (klarifikasi uraian literatur; kriteria tetap)'
 related: [D-61, Q-B1-bq, F-A05-0122, F-A05-0128]
@@ -1421,7 +1426,8 @@ approval_evidence:
 id: D-64
 decision: 'Kata "secara langsung" dihapus dari kalimat D-62 di I.1 paragraf 18: "Penelitian ini tidak mengukur potensi itu secara langsung; yang diuji ialah ..." menjadi "Penelitian ini tidak mengukur potensi itu; yang diuji ialah apakah presisi dan recall kombinasi lebih tinggi ..."'
 class: L3
-status: APPROVED (lingkup terbatas)
+status: SUPERSEDED by D-115 (sebagian, teks Bab I DRAF 24 yang menjadi objeknya digantikan docx resmi 2026-11-12, tidak mengikat naskah baru)
+status_sebelumnya: APPROVED (lingkup terbatas)
 date: '2026-11-09'
 amends: 'D-62 (sebagian: kata "secara langsung"; perubahan kata minimum)'
 related: [D-62, D-29, Q-B1-bs, F-A05-0127]
@@ -1443,7 +1449,8 @@ approval_evidence:
 id: D-65
 decision: 'Kalimat jawaban "tidak" di I.1 paragraf 18 dilengkapi dengan struktur syarat D-29: jawaban "tidak" tidak membedakan "tidak saling melengkapi" dari "saling melengkapi tetapi hanya salah satu dari presisi atau recall yang naik"; hasil juga bergantung pada mekanisme kombinasi (D-32), tanpa memilih mekanisme'
 class: L3
-status: APPROVED (lingkup terbatas)
+status: SUPERSEDED by D-115 (sebagian, teks Bab I DRAF 24 yang menjadi objeknya digantikan docx resmi 2026-11-12, tidak mengikat naskah baru)
+status_sebelumnya: APPROVED (lingkup terbatas)
 date: '2026-11-09'
 related: [D-29, D-32, D-33, D-62, Q-B1-bt, F-A05-0129, F-A07-0065]
 basis: 'Jawaban pengguna atas AskUserQuestion Jawaban "tidak", diteruskan A01 (brief TSK-100)'
@@ -1466,7 +1473,8 @@ Catatan A13 untuk D-66 sampai D-75 (brief TSK-114, jawaban pengguna 2026-11-09 l
 id: D-66
 decision: 'Penyusunan jawaban rumusan masalah (mengubah hasil uji menjadi jawaban "ya"/"tidak" per jenis perawatan) di I.5 digabung ke tahap evaluasi; bukan tahap tersendiri; kelima tahap I.5 tetap'
 class: L3
-status: APPROVED (lingkup terbatas)
+status: SUPERSEDED by D-115 (sebagian, teks Bab I DRAF 24 yang menjadi objeknya digantikan docx resmi 2026-11-12, tidak mengikat naskah baru)
+status_sebelumnya: APPROVED (lingkup terbatas)
 date: '2026-11-09'
 related: [Q-B1-ca, F-A07-0070, D-33, D-29]
 basis: 'Jawaban pengguna atas AskUserQuestion Q-B1-ca, diteruskan A01 (brief TSK-114)'
@@ -1487,7 +1495,8 @@ approval_evidence:
 id: D-67
 decision: 'Penanda hibrida di I.1 paragraf 20 diperlakukan sebagai keterbatasan tetap tanpa sumber hibrida: penanda diganti kalimat batas oleh penulis (BELUM dilakukan); Ijadi Maghsoodi dkk. tidak dimasukkan ke telaah; kalimat "tidak satu pun sumber yang ditelaah menyatakan bahwa satu komponen saja tidak cukup" dipertahankan'
 class: L3
-status: APPROVED (lingkup terbatas)
+status: SUPERSEDED by D-115 (sebagian, teks Bab I DRAF 24 yang menjadi objeknya digantikan docx resmi 2026-11-12, tidak mengikat naskah baru)
+status_sebelumnya: APPROVED (lingkup terbatas)
 date: '2026-11-09'
 related: [Q-B1-bk, D-59, F-A07-0062, F-A02-0201, F-A02-0202, F-A02-0203]
 basis: 'Jawaban pengguna atas dua AskUserQuestion Q-B1-bk, diteruskan A01 (brief TSK-114)'
@@ -1508,7 +1517,8 @@ approval_evidence:
 id: D-68
 decision: 'a03 diberi izin menyunting I.2 paragraf 2 dan I.5 paragraf 4 hanya untuk menyelaraskan singkatan AI, NLP, RAG, dan LLM dengan cara I.1 memperkenalkannya; tidak ada perubahan klaim atau keputusan'
 class: L2
-status: APPROVED (lingkup terbatas)
+status: SUPERSEDED by D-115 (sebagian, teks Bab I DRAF 24 yang menjadi objeknya digantikan docx resmi 2026-11-12, tidak mengikat naskah baru)
+status_sebelumnya: APPROVED (lingkup terbatas)
 date: '2026-11-09'
 related: [Q-B1-br, F-A09-0154, F-A09-0126, Q-B1-bo]
 basis: 'Jawaban pengguna atas AskUserQuestion Q-B1-br, diteruskan A01 (brief TSK-114)'
@@ -1529,7 +1539,8 @@ approval_evidence:
 id: D-69
 decision: 'Data pengembangan di I.5 diberi label oleh penulis'
 class: L3
-status: APPROVED (keputusan pengguna; persetujuan tim BELUM ada)
+status: SUPERSEDED by D-115 (sebagian, teks Bab I DRAF 24 yang menjadi objeknya digantikan docx resmi 2026-11-12, tidak mengikat naskah baru)
+status_sebelumnya: APPROVED (keputusan pengguna; persetujuan tim BELUM ada)
 date: '2026-11-09'
 related: [Q-B1-bx, F-A11-0021]
 basis: 'Jawaban pengguna atas AskUserQuestion Q-B1-bx, diteruskan A01 (brief TSK-114)'
@@ -1550,7 +1561,8 @@ approval_evidence:
 id: D-70
 decision: 'Dua bagian Q-B1-by. (1/2) Kasus uji dipilih secara acak dengan benih tetap yang dicatat, terpisah untuk rawat inap dan rawat jalan (per jenis perawatan). (2/2) Temuan komponen AI (RAG) yang berada di luar daftar jenis ketidaksesuaian dihitung terpisah dan tidak masuk presisi/recall utama'
 class: L3
-status: APPROVED (keputusan pengguna, sebagian; persetujuan tim BELUM ada)
+status: SUPERSEDED by D-115 (sebagian, teks Bab I DRAF 24 yang menjadi objeknya digantikan docx resmi 2026-11-12, tidak mengikat naskah baru)
+status_sebelumnya: APPROVED (keputusan pengguna, sebagian; persetujuan tim BELUM ada)
 date: '2026-11-09'
 related: [Q-B1-by, F-A05-0136, F-A05-0138, D-29]
 basis: 'Jawaban pengguna atas dua AskUserQuestion Q-B1-by (1/2) dan (2/2), diteruskan A01 (brief TSK-114)'
@@ -1571,7 +1583,8 @@ approval_evidence:
 id: D-71
 decision: 'Tiap komponen (rule-based dan RAG) menyasar seluruh daftar jenis ketidaksesuaian; jenis tidak dibagi per komponen'
 class: L3
-status: APPROVED (keputusan pengguna; persetujuan tim BELUM ada)
+status: SUPERSEDED by D-115 (sebagian, teks Bab I DRAF 24 yang menjadi objeknya digantikan docx resmi 2026-11-12, tidak mengikat naskah baru)
+status_sebelumnya: APPROVED (keputusan pengguna; persetujuan tim BELUM ada)
 date: '2026-11-09'
 related: [Q-B1-bz, F-A05-0133, D-29, Q-TEAM butir 1]
 basis: 'Jawaban pengguna atas AskUserQuestion Q-B1-bz, diteruskan A01 (brief TSK-114)'
@@ -1592,7 +1605,8 @@ approval_evidence:
 id: D-72
 decision: 'D-22 dipertahankan (pembanding hanya masing-masing komponen: rule-based dan RAG), dengan syarat tambahan bahwa batas perbandingan dinyatakan eksplisit dalam proposal: penelitian tidak menyimpulkan kombinasi lebih baik dari pemeriksaan manual'
 class: L3
-status: APPROVED (keputusan pengguna; persetujuan pembimbing BELUM ada)
+status: SUPERSEDED by D-115 (sebagian, teks Bab I DRAF 24 yang menjadi objeknya digantikan docx resmi 2026-11-12, tidak mengikat naskah baru)
+status_sebelumnya: APPROVED (keputusan pengguna; persetujuan pembimbing BELUM ada)
 date: '2026-11-09'
 related: [Q-B1-bm, F-A05-0109, D-22, D-60]
 basis: 'Jawaban pengguna atas AskUserQuestion Q-B1-bm, diteruskan A01 (brief TSK-114)'
@@ -1613,7 +1627,8 @@ approval_evidence:
 id: D-73
 decision: 'Istilah Dietrich "penafsiran kontekstual" (hlm. 100) dibedakan secara eksplisit dari kriteria yang dipakai Bab I di I.1 paragraf 18-19; D-63 dipertahankan dan diperjelas'
 class: L3
-status: APPROVED (keputusan pengguna; persetujuan pembimbing BELUM ada)
+status: SUPERSEDED by D-115 (sebagian, teks Bab I DRAF 24 yang menjadi objeknya digantikan docx resmi 2026-11-12, tidak mengikat naskah baru)
+status_sebelumnya: APPROVED (keputusan pengguna; persetujuan pembimbing BELUM ada)
 date: '2026-11-09'
 amends: 'D-63 (klarifikasi tambahan; D-63 dipertahankan)'
 related: [Q-B1-bu, F-A05-0130, D-63, D-61]
@@ -1635,7 +1650,8 @@ approval_evidence:
 id: D-74
 decision: 'Makna "saling melengkapi" di I.1 paragraf 18 dipersempit pada jenis pemeriksaan yang berbeda (bukan hasil presisi/recall); keadaan ketiga yang juga berjawab "tidak" (komponen saling melengkapi tetapi kenaikan presisi/recall di bawah selisih minimum D-29) harus ditangani di I.3'
 class: L3
-status: APPROVED (keputusan pengguna; persetujuan pembimbing BELUM ada)
+status: SUPERSEDED by D-115 (sebagian, teks Bab I DRAF 24 yang menjadi objeknya digantikan docx resmi 2026-11-12, tidak mengikat naskah baru)
+status_sebelumnya: APPROVED (keputusan pengguna; persetujuan pembimbing BELUM ada)
 date: '2026-11-09'
 amends: 'D-65 (sebagian: makna "saling melengkapi"; ditandai, D-65 tidak SUPERSEDED)'
 related: [Q-B1-bv, F-A05-0131, D-65, D-29, D-62]
@@ -1657,7 +1673,8 @@ approval_evidence:
 id: D-75
 decision: 'Kenyataan bahwa kriteria pemilihan kombinasi tidak dapat diperiksa oleh penelitian maupun literatur (setelah D-62 dan D-63) dinyatakan terbuka sebagai motivasi rancangan'
 class: L3
-status: APPROVED (keputusan pengguna; persetujuan pembimbing BELUM ada)
+status: SUPERSEDED by D-115 (sebagian, teks Bab I DRAF 24 yang menjadi objeknya digantikan docx resmi 2026-11-12, tidak mengikat naskah baru)
+status_sebelumnya: APPROVED (keputusan pengguna; persetujuan pembimbing BELUM ada)
 date: '2026-11-09'
 related: [Q-B1-bw, F-A05-0132, D-62, D-63, D-61]
 basis: 'Jawaban pengguna atas AskUserQuestion Q-B1-bw, diteruskan A01 (brief TSK-114)'
@@ -1764,7 +1781,8 @@ approval_evidence:
 id: D-80
 decision: 'USUL PENGGUNA: gaya sitasi akhir (K1) adalah APA (adaptasi Indonesia), selaras dengan draf Bab II Abizzar; naskah belum diubah dan format akhir tetap "perlu dikonfirmasi"'
 class: L3
-status: APPROVED (lingkup terbatas, hanya sebagai keputusan pengguna; menunggu tim dan pembimbing, konfirmasi pedoman prodi tetap diperlukan)
+status: SUPERSEDED by D-113 (sebagian, usulan APA menjadi keputusan pengguna sementara)
+status_sebelumnya: APPROVED (lingkup terbatas, hanya sebagai keputusan pengguna; menunggu tim dan pembimbing, konfirmasi pedoman prodi tetap diperlukan)
 date: '2026-11-09'
 related: [K1, TSK-115, F-A10 (tidak ada temuan baru)]
 basis: 'Jawaban pengguna atas AskUserQuestion K1 (putaran ketiga), diteruskan A01 (brief TSK-116)'
@@ -1785,7 +1803,8 @@ approval_evidence:
 id: D-81
 decision: 'Kalimat D-65 di I.1 p19 ("jawaban tidak tidak membedakan dua keadaan: tidak saling melengkapi, atau saling melengkapi tetapi hanya presisi/recall yang lebih tinggi") diselaraskan dengan definisi sempit "saling melengkapi" pada p18 (D-74) dan dengan keadaan ketiga (selisih di bawah minimum, I.3 p2)'
 class: L3
-status: APPROVED (keputusan pengguna lingkup terbatas; persetujuan pembimbing BELUM ada)
+status: SUPERSEDED by D-115 (sebagian, teks Bab I DRAF 24 yang menjadi objeknya digantikan docx resmi 2026-11-12, tidak mengikat naskah baru)
+status_sebelumnya: APPROVED (keputusan pengguna lingkup terbatas; persetujuan pembimbing BELUM ada)
 date: '2026-11-09'
 amends: 'D-65 (sebagian: kalimat p19; ditandai, D-65 tidak SUPERSEDED); D-74 tetap berlaku'
 related: [F-A07-0072, F-A11-0029, F-A05-0141, D-65, D-74, D-29]
@@ -1807,7 +1826,8 @@ approval_evidence:
 id: D-82
 decision: 'I.2 p6 memuat selisih minimum (setelah ditetapkan tim) secara bersyarat sebagai bagian syarat kedua jawaban "tidak"; I.2 menjadi satu-satunya daftar ketentuan jawaban "tidak" yang berwenang'
 class: L3
-status: APPROVED (keputusan pengguna lingkup terbatas; persetujuan pembimbing/tim BELUM ada)
+status: SUPERSEDED by D-115 (sebagian, teks Bab I DRAF 24 yang menjadi objeknya digantikan docx resmi 2026-11-12, tidak mengikat naskah baru)
+status_sebelumnya: APPROVED (keputusan pengguna lingkup terbatas; persetujuan pembimbing/tim BELUM ada)
 date: '2026-11-09'
 related: [F-A07-0073, F-A11-0030, F-A05-0147, D-19, D-29, D-74]
 basis: 'Jawaban pengguna atas AskUserQuestion F-A07-0073/F-A11-0030/F-A05-0147, diteruskan A01 (brief TSK-124)'
@@ -1828,7 +1848,8 @@ approval_evidence:
 id: D-83
 decision: 'Pembedaan "penafsiran kontekstual" Dietrich di I.1 p19 ditulis tanpa menafsirkan kriteria D-61 ("dalam dokumen"); istilah sumber dan kriteria dinyatakan berbeda rumusan tanpa frasa "antara dua dokumen"'
 class: L3
-status: APPROVED (keputusan pengguna lingkup terbatas; persetujuan pembimbing BELUM ada)
+status: SUPERSEDED by D-115 (sebagian, teks Bab I DRAF 24 yang menjadi objeknya digantikan docx resmi 2026-11-12, tidak mengikat naskah baru)
+status_sebelumnya: APPROVED (keputusan pengguna lingkup terbatas; persetujuan pembimbing BELUM ada)
 date: '2026-11-09'
 related: [F-A05-0143, D-61, D-73]
 basis: 'Jawaban pengguna atas AskUserQuestion F-A05-0143, diteruskan A01 (brief TSK-124)'
@@ -1849,7 +1870,8 @@ approval_evidence:
 id: D-84
 decision: 'Simpulan I.1 p21 dibatasi ke konfigurasi yang diuji (tiga konfigurasi) sehingga "terbaik" memiliki pembanding yang disebut; tingkat dukungan literatur terhadap kriteria dinyatakan satu tingkat yang konsisten'
 class: L3
-status: APPROVED (keputusan pengguna lingkup terbatas; persetujuan pembimbing BELUM ada)
+status: SUPERSEDED by D-115 (sebagian, teks Bab I DRAF 24 yang menjadi objeknya digantikan docx resmi 2026-11-12, tidak mengikat naskah baru)
+status_sebelumnya: APPROVED (keputusan pengguna lingkup terbatas; persetujuan pembimbing BELUM ada)
 date: '2026-11-09'
 related: [F-A05-0145, D-75, D-61]
 basis: 'Jawaban pengguna atas AskUserQuestion F-A05-0145, diteruskan A01 (brief TSK-124)'
@@ -1870,7 +1892,8 @@ approval_evidence:
 id: D-85
 decision: 'Kalimat batas di I.1 p20 ("Tidak satu pun sumber yang ditelaah menguji kombinasi pemeriksaan berbasis aturan dan model bahasa besar pada pemeriksaan dokumen") dinyatakan dengan cakupan "sumber yang ditelaah" dan sifat penelusuran yang tidak sistematis'
 class: L3
-status: APPROVED (keputusan pengguna lingkup terbatas; persetujuan pembimbing BELUM ada)
+status: SUPERSEDED by D-115 (sebagian, teks Bab I DRAF 24 yang menjadi objeknya digantikan docx resmi 2026-11-12, tidak mengikat naskah baru)
+status_sebelumnya: APPROVED (keputusan pengguna lingkup terbatas; persetujuan pembimbing BELUM ada)
 date: '2026-11-09'
 related: [F-A05-0146, F-A08-0102, D-67]
 basis: 'Jawaban pengguna atas AskUserQuestion F-A05-0146, diteruskan A01 (brief TSK-124)'
@@ -1891,7 +1914,8 @@ approval_evidence:
 id: D-86
 decision: 'Kalimat penutup I.1 p19 ("Tidak satu pun studi yang ditelaah menguji model bahasa besar atau RAG untuk menelaah konteks antara dua dokumen yang ditulis tenaga kesehatan") berfungsi sebagai pengulangan celah pertama, bukan sebagai batas dukungan kriteria D-61 dan bukan dasar p21'
 class: L3
-status: APPROVED (keputusan pengguna lingkup terbatas; persetujuan pembimbing BELUM ada)
+status: SUPERSEDED by D-115 (sebagian, teks Bab I DRAF 24 yang menjadi objeknya digantikan docx resmi 2026-11-12, tidak mengikat naskah baru)
+status_sebelumnya: APPROVED (keputusan pengguna lingkup terbatas; persetujuan pembimbing BELUM ada)
 date: '2026-11-09'
 related: [F-A07-0077, F-A05-0153, F-A09-0211, D-61, D-83]
 basis: 'Jawaban pengguna atas AskUserQuestion F-A07-0077 / F-A05-0153, diteruskan A01 (brief TSK-131)'
@@ -1914,7 +1938,8 @@ Catatan D-87..D-97 (2026-11-09, brief A01 memory_op record_decisions): semua ada
 id: D-87
 decision: 'D-74 dipertahankan; keberatan auditor tentang istilah "saling melengkapi" (bagian empiris dan hasil bergantung pada cara kombinasi) dinyatakan di Bab I sebagai keterbatasan'
 class: L3
-status: APPROVED (keputusan pengguna lingkup terbatas; persetujuan tim/pembimbing BELUM ada)
+status: SUPERSEDED by D-115 (sebagian, teks Bab I DRAF 24 yang menjadi objeknya digantikan docx resmi 2026-11-12, tidak mengikat naskah baru)
+status_sebelumnya: APPROVED (keputusan pengguna lingkup terbatas; persetujuan tim/pembimbing BELUM ada)
 date: '2026-11-09'
 related: [Q-B1-cm, F-A05-0152, F-A11-0038, D-74, D-81, D-65]
 basis: 'Jawaban pengguna atas AskUserQuestion butir 1 dari 2.3, diteruskan A01'
@@ -1935,7 +1960,8 @@ approval_evidence:
 id: D-88
 decision: 'Pada tahap pertama, ketersediaan dokumen rawat jalan yang setara resume medis dinilai "ada dan memadai" oleh penulis dengan kriteria tertulis; hasil penilaian dilaporkan ke tim'
 class: L3
-status: APPROVED (keputusan pengguna lingkup terbatas; persetujuan tim/pembimbing/RSIA BELUM ada)
+status: SUPERSEDED by D-115 (sebagian, teks Bab I DRAF 24 yang menjadi objeknya digantikan docx resmi 2026-11-12, tidak mengikat naskah baru)
+status_sebelumnya: APPROVED (keputusan pengguna lingkup terbatas; persetujuan tim/pembimbing/RSIA BELUM ada)
 date: '2026-11-09'
 related: [Q-B1-cn, F-A05-0157, F-A11-0033, D-76, Q-B1-f]
 basis: 'Jawaban pengguna atas AskUserQuestion butir 2 dari 2.3, diteruskan A01'
@@ -1956,7 +1982,8 @@ approval_evidence:
 id: D-89
 decision: 'Ambang, selisih minimum, dan satuan hitung dinyatakan di I.2/I.3 sebagai prosedur tanpa angka: ditetapkan sebelum pengujian'
 class: L3
-status: APPROVED (keputusan pengguna lingkup terbatas; persetujuan tim/pembimbing BELUM ada)
+status: SUPERSEDED by D-115 (sebagian, teks Bab I DRAF 24 yang menjadi objeknya digantikan docx resmi 2026-11-12, tidak mengikat naskah baru)
+status_sebelumnya: APPROVED (keputusan pengguna lingkup terbatas; persetujuan tim/pembimbing BELUM ada)
 date: '2026-11-09'
 related: [D-19, Q-B1-bg, Q-B1-q, Q-B1-cc, D-82, D-78]
 basis: 'Jawaban pengguna atas AskUserQuestion butir 3 dari 2.3, diteruskan A01'
@@ -1977,7 +2004,8 @@ approval_evidence:
 id: D-90
 decision: 'Naskah tidak mengasumsikan CPPT dan resume medis sama-sama dikunci setelah pelayanan selesai; berdasarkan keterangan lisan RSIA (disampaikan lewat penulis, belum terkonfirmasi) CPPT yang tercatat tidak dapat diubah dan resume medis masih dapat direvisi; satuan hitung rawat inap adalah satu episode (masuk hingga keluar dan resume episode itu diajukan), resume episode sebelumnya tidak dihitung kembali'
 class: L3
-status: APPROVED (keputusan pengguna lingkup terbatas; persetujuan tim/pembimbing BELUM ada; keterangan RSIA belum terverifikasi)
+status: SUPERSEDED by D-115 (sebagian, teks Bab I DRAF 24 yang menjadi objeknya digantikan docx resmi 2026-11-12, tidak mengikat naskah baru)
+status_sebelumnya: APPROVED (keputusan pengguna lingkup terbatas; persetujuan tim/pembimbing BELUM ada; keterangan RSIA belum terverifikasi)
 date: '2026-11-09'
 related: [Q-B1-ba, D-55, D-56, D-57, D-21, F-A05-0024, F-A11-0004, Q-TEAM butir 5]
 basis: 'Jawaban teks bebas pengguna atas AskUserQuestion butir 4 dari 2.3, diteruskan A01'
@@ -1998,7 +2026,8 @@ approval_evidence:
 id: D-91
 decision: '"Rawat jalan terbatas" di I.4 dinyatakan sebagai cakupan bersyarat, tanpa definisi baru'
 class: L3
-status: APPROVED (keputusan pengguna lingkup terbatas; persetujuan tim/RSIA BELUM ada)
+status: SUPERSEDED by D-115 (sebagian, teks Bab I DRAF 24 yang menjadi objeknya digantikan docx resmi 2026-11-12, tidak mengikat naskah baru)
+status_sebelumnya: APPROVED (keputusan pengguna lingkup terbatas; persetujuan tim/RSIA BELUM ada)
 date: '2026-11-09'
 related: [Q-B1-f, Q-TEAM butir 4, D-21, D-76, D-88]
 basis: 'Jawaban pengguna atas AskUserQuestion butir 5 dari 2.3, diteruskan A01'
@@ -2019,7 +2048,8 @@ approval_evidence:
 id: D-92
 decision: 'Bab I memakai judul baru dari dokumen penyelarasan tim (30 Oktober), ditandai sebagai usulan; K2 tetap menunggu persetujuan pembimbing'
 class: L3
-status: APPROVED (keputusan pengguna lingkup terbatas; persetujuan pembimbing BELUM ada)
+status: SUPERSEDED by D-115 (sebagian, teks Bab I DRAF 24 yang menjadi objeknya digantikan docx resmi 2026-11-12, tidak mengikat naskah baru)
+status_sebelumnya: APPROVED (keputusan pengguna lingkup terbatas; persetujuan pembimbing BELUM ada)
 date: '2026-11-09'
 related: [K2, Q-TEAM butir 9]
 basis: 'Jawaban pengguna atas AskUserQuestion butir 6 dari 2.3, diteruskan A01'
@@ -2040,7 +2070,8 @@ approval_evidence:
 id: D-93
 decision: 'Aturan sebelum uji: bila plafon menghalangi pembedaan, hasil dinyatakan "tidak dapat dinilai"'
 class: L3
-status: APPROVED (keputusan pengguna lingkup terbatas; persetujuan tim/pembimbing BELUM ada); urutan penilaian DIUBAH sebagian oleh D-98 (2026-11-10)
+status: SUPERSEDED by D-115 (sebagian, teks Bab I DRAF 24 yang menjadi objeknya digantikan docx resmi 2026-11-12, tidak mengikat naskah baru)
+status_sebelumnya: APPROVED (keputusan pengguna lingkup terbatas; persetujuan tim/pembimbing BELUM ada); urutan penilaian DIUBAH sebagian oleh D-98 (2026-11-10)
 date: '2026-11-09'
 related: [F-A11-0015, F-A11-0016, Q-B1-bg, D-89]
 basis: 'Jawaban pengguna atas AskUserQuestion butir 7 dari 2.3, diteruskan A01'
@@ -2061,7 +2092,8 @@ approval_evidence:
 id: D-94
 decision: 'Lima pertentangan antarusulan untuk butir tim diselesaikan sebagai satu paket konsisten, ditandai usulan penulis: satuan episode; agregasi mikro atas episode; 0/0 tidak terdefinisi menjadi "tidak dapat dinilai"; union dengan catatan recall; seluruh jenis ketidaksesuaian tetap usulan'
 class: L3
-status: APPROVED (keputusan pengguna lingkup terbatas, bersifat usulan penulis; persetujuan tim/pembimbing BELUM ada); butir 3 (0/0) DIUBAH oleh D-98 dan butir union DILENGKAPI oleh D-99 (2026-11-10)
+status: SUPERSEDED by D-115 (sebagian, teks Bab I DRAF 24 yang menjadi objeknya digantikan docx resmi 2026-11-12, tidak mengikat naskah baru)
+status_sebelumnya: APPROVED (keputusan pengguna lingkup terbatas, bersifat usulan penulis; persetujuan tim/pembimbing BELUM ada); butir 3 (0/0) DIUBAH oleh D-98 dan butir union DILENGKAPI oleh D-99 (2026-11-10)
 date: '2026-11-09'
 related: [F-A11-0023, F-A11-0024, F-A11-0025, F-A11-0026, F-A11-0027, F-A05-0150, D-72, D-79, D-81]
 basis: 'Jawaban pengguna atas AskUserQuestion butir 8 dari 2.3, diteruskan A01'
@@ -2082,7 +2114,8 @@ approval_evidence:
 id: D-95
 decision: 'Temuan Dietrich hanya dipakai sebagai latar; kriteria pemilihan kombinasi tetap umum (tidak dibedakan per pasangan komponen) dengan urutan dinyatakan'
 class: L3
-status: APPROVED (keputusan pengguna lingkup terbatas; persetujuan pembimbing BELUM ada)
+status: SUPERSEDED by D-115 (sebagian, teks Bab I DRAF 24 yang menjadi objeknya digantikan docx resmi 2026-11-12, tidak mengikat naskah baru)
+status_sebelumnya: APPROVED (keputusan pengguna lingkup terbatas; persetujuan pembimbing BELUM ada)
 date: '2026-11-09'
 related: [Q-B1-ce, Q-B1-cf, F-A05-0142, F-A05-0144, D-61, D-73]
 basis: 'Jawaban pengguna atas AskUserQuestion butir 9 dari 2.3, diteruskan A01'
@@ -2103,7 +2136,8 @@ approval_evidence:
 id: D-96
 decision: 'Cakupan literatur dirumuskan dengan satu istilah cakupan, didefinisikan sekali di I.1, dan alasan Zhang dinyatakan satu kalimat'
 class: L3
-status: APPROVED (keputusan pengguna lingkup terbatas; persetujuan pembimbing BELUM ada)
+status: SUPERSEDED by D-115 (sebagian, teks Bab I DRAF 24 yang menjadi objeknya digantikan docx resmi 2026-11-12, tidak mengikat naskah baru)
+status_sebelumnya: APPROVED (keputusan pengguna lingkup terbatas; persetujuan pembimbing BELUM ada)
 date: '2026-11-09'
 related: [Q-B1-cg, F-A07-0087, F-A09-0235, F-A05-0154, D-85, D-86]
 basis: 'Jawaban pengguna atas AskUserQuestion butir 10 dari 2.3, diteruskan A01'
@@ -2124,7 +2158,8 @@ approval_evidence:
 id: D-97
 decision: 'Pasangan ibu dan bayi: satu episode = satu unit; pasangan tidak dipisah antar-bagian pada pembagian data'
 class: L3
-status: APPROVED (keputusan pengguna lingkup terbatas; persetujuan tim BELUM ada)
+status: SUPERSEDED by D-115 (sebagian, teks Bab I DRAF 24 yang menjadi objeknya digantikan docx resmi 2026-11-12, tidak mengikat naskah baru)
+status_sebelumnya: APPROVED (keputusan pengguna lingkup terbatas; persetujuan tim BELUM ada)
 date: '2026-11-09'
 related: [Q-TEAM butir 6, D-90, D-94]
 basis: 'Jawaban pengguna atas AskUserQuestion butir terakhir (bagian 3), diteruskan A01'
@@ -2147,7 +2182,8 @@ Catatan D-98..D-100 (2026-11-10, brief A01 memory_op record_decisions): keputusa
 id: D-98
 decision: 'Urutan penilaian di I.2/I.3: syarat pertama dinilai lebih dulu; "tidak dapat dinilai" hanya untuk syarat kedua; 0/0 pada penyebut presisi kombinasi dihitung sebagai syarat pertama gagal'
 class: L3
-status: APPROVED (keputusan pengguna lingkup terbatas; persetujuan tim/pembimbing BELUM ada)
+status: SUPERSEDED by D-115 (sebagian, teks Bab I DRAF 24 yang menjadi objeknya digantikan docx resmi 2026-11-12, tidak mengikat naskah baru)
+status_sebelumnya: APPROVED (keputusan pengguna lingkup terbatas; persetujuan tim/pembimbing BELUM ada)
 date: '2026-11-10'
 related: [F-A07-0090, F-A07-0091, F-A11-0041, F-A11-0048, F-A11-0049, D-93, D-94, D-79]
 basis: 'Jawaban pengguna atas AskUserQuestion (temuan a07 dan a11 atas paket D-94/D-93), diteruskan A01'
@@ -2168,7 +2204,8 @@ approval_evidence:
 id: D-99
 decision: 'Union tanpa aturan temuan ganda: naskah menyatakan aturan deduplikasi dan akibatnya (presisi kombinasi berada di antara presisi komponen), ditandai usulan penulis'
 class: L3
-status: APPROVED (keputusan pengguna lingkup terbatas, bersifat usulan penulis; persetujuan tim/pembimbing BELUM ada)
+status: SUPERSEDED by D-115 (sebagian, teks Bab I DRAF 24 yang menjadi objeknya digantikan docx resmi 2026-11-12, tidak mengikat naskah baru)
+status_sebelumnya: APPROVED (keputusan pengguna lingkup terbatas, bersifat usulan penulis; persetujuan tim/pembimbing BELUM ada)
 date: '2026-11-10'
 related: [F-A11-0023, D-77, D-94, D-29]
 basis: 'Jawaban pengguna atas AskUserQuestion F-A11-0023, diteruskan A01'
@@ -2189,7 +2226,8 @@ approval_evidence:
 id: D-100
 decision: 'Lingkup revisi terbatas atas DRAF 24 (bukan DRAF 25) yang langsung menghasilkan DOCX: terapkan keputusan pengguna yang ada (termasuk dua isu HIGH dan keputusan editorial terkait D-83), simpan Markdown hasil revisi, migrasikan ke DOCX tanpa format baru, jangan ubah klausa D-85 di p22 dan kalimat verbatim D-90, audit terarah a09/a07/a11'
 class: L3
-status: APPROVED (instruksi pengguna lingkup terbatas; persetujuan tim/pembimbing BELUM ada)
+status: SUPERSEDED by D-115 (sebagian, teks Bab I DRAF 24 yang menjadi objeknya digantikan docx resmi 2026-11-12, tidak mengikat naskah baru)
+status_sebelumnya: APPROVED (instruksi pengguna lingkup terbatas; persetujuan tim/pembimbing BELUM ada)
 date: '2026-11-10'
 related: [D-83, D-85, D-90, D-95, D-98, D-99, D-06, D-35, D-36, D-49, Q-B1-aw, Q-B1-al, Q-B1-ax]
 basis: 'Jawaban teks bebas pengguna atas pertanyaan paket usulan A01 setelah empat auditor DRAF 24 selesai (siklus otomatis D-06 habis), diteruskan A01'
@@ -2202,4 +2240,579 @@ approval_evidence:
   answered_at: '2026-11-10'
   session_ref: 'sesi 2026-11-10, AskUserQuestion paket usulan A01 (jawaban teks bebas), diteruskan A01'
   scope: 'Lingkup revisi terbatas DRAF 24 dan keluaran Markdown plus DOCX seperti diuraikan; bukan persetujuan paket usulan A01, bukan persetujuan jalur build DOCX, bukan persetujuan tim/pembimbing'
+```
+
+Catatan D-101 (2026-11-10, brief A01 memory_op record_decisions): keputusan PENGGUNA lingkup terbatas melalui AskUserQuestion (konfirmasi atas pilihan "2" sebelumnya), BUKAN persetujuan tim, pembimbing, atau RSIA. Tidak ada keputusan lama yang ditandai SUPERSEDED.
+
+## D-101
+
+```yaml
+id: D-101
+decision: 'Tiga entri Daftar Pustaka Kementerian Kesehatan RI (2021, 2022b, 2024: Permenkes 26/2021, Permenkes 24/2022, Kepmenkes 1596/2024) ditambahkan ke docx resmi Bab II (bab2/13523136-Proposal-IF4091-Capstone-Individu-2026-Draft-Bab2.docx), agar Daftar Pustaka DOCX Bab I memuatnya'
+class: L3
+status: APPROVED (keputusan pengguna lingkup terbatas; persetujuan tim/pembimbing BELUM ada)
+date: '2026-11-10'
+related: [F-A12-0001 (versi brief A01), D-100, D-92, Q-B1-aw, Q-B1-al, Q-B1-ax, Q-B1-bf]
+basis: 'Jawaban pengguna atas AskUserQuestion konfirmasi (pilihan "2" sebelumnya dimintakan konfirmasi dengan rincian temuan a12), diteruskan A01'
+alternatives_considered: ['Opsi 1: ubah skrip, ambil 3 entri dari Markdown', 'Opsi 3: bangun dengan 8 entri, tandai 3 yang hilang']
+consequences: 'Menurut brief A01: pengguna/sesi Claude biasa (bukan agent) menambahkan tiga paragraf pustaka Kemenkes ke docx resmi Bab II, teks dari bab2/Bab_II_Revisi_Notulensi.md baris 261, 265, 267, urutan A-Z; tidak ada perubahan Bab II lain. A13 TIDAK memverifikasi isi docx (tidak dibaca) dan tidak memperbarui hash. Menyentuh docx Bab II resmi di luar Bab I; tidak mengubah D-100 (jalur build DOCX tetap BELUM diputuskan: Q-B1-aw, al, ax TERBUKA). D-92 (judul) tidak dipasang. Q-B1-bf (Permenkes 26/2021 hlm. 48-54) tetap BELUM diverifikasi; keputusan ini hanya soal keberadaan entri, bukan kebenaran rujukan atau halaman. Status F-A12-0001 versi brief tidak diubah A13 (RESOLVED hanya oleh a12 setelah pemeriksaan ulang).'
+approval_evidence:
+  question: 'Diagnosis a12 selesai (F-A12-0001, HIGH): 8 dari 11 awalan pustaka Bab I cocok dengan docx resmi Bab II. Tiga entri Kementerian Kesehatan RI (2021, 2022b, 2024: Permenkes 26/2021, Permenkes 24/2022, Kepmenkes 1596/2024) tidak ada di docx resmi (hanya 37 entri, tanpa kelompok institusional), padahal ada di bab2/Bab_II_Revisi_Notulensi.md baris 261, 265, 267. Pilihan Anda sebelumnya "2" saya mintakan konfirmasi dengan rincian ini. Bagaimana tiga entri itu masuk Daftar Pustaka DOCX Bab I?'
+  options_offered: ['Opsi 2: tambahkan 3 entri ke docx resmi Bab II', 'Opsi 1: ubah skrip, ambil 3 entri dari Markdown', 'Opsi 3: bangun dengan 8 entri, tandai 3 yang hilang']
+  user_answer: 'Opsi 2: tambahkan 3 entri ke docx resmi Bab II'
+  answered_at: '2026-11-10'
+  session_ref: 'sesi 2026-11-10, AskUserQuestion konfirmasi F-A12-0001, diteruskan A01'
+  scope: 'Hanya tiga paragraf pustaka Kemenkes (2021, 2022b, 2024) ditambahkan ke bab2/13523136-Proposal-IF4091-Capstone-Individu-2026-Draft-Bab2.docx oleh pengguna/sesi Claude biasa (bukan agent), teks dari bab2/Bab_II_Revisi_Notulensi.md baris 261, 265, 267, urutan A-Z; tidak ada perubahan Bab II lain'
+```
+
+Catatan D-102..D-112 (2026-11-12, rekonsiliasi memory atas permintaan pengguna di sesi biasa tanpa agent): dicatat langsung oleh sesi Claude biasa, bukan A13 (pengecualian atas §A-9.6 butir 'hanya A13 menulis'; dasar: perintah pengguna 'rekonsiliasi semua memory'). D-102..D-105 = baseline resmi sementara dari pengguna, BUKAN persetujuan tim/pembimbing. D-06 dan D-49 ditandai SUPERSEDED (sebagian); tidak ada keputusan lain diubah (instruksi pengguna: jangan mengubah keputusan tanpa persetujuan). Konflik dibawa sebagai Q-REC-a..e.
+
+## D-102
+
+```yaml
+id: D-102
+decision: 'Baseline Bab I: I.1 naratif; I.2 dua rumusan masalah berbentuk ''Bagaimana'' tanpa subbutir; I.3 dua tujuan/ukuran keberhasilan; I.4 batasan berbentuk butir; I.5 lima tahapan metodologi konkret tanpa framework bernama (tahapan input-kegiatan-output). Mekanisme kombinasi, jumlah kasus, ambang, pencocokan hasil, dan komposisi penilai tidak ditentukan tanpa keputusan tim; dokumen Penyelarasan bukan sumber yang boleh diatribusikan di Bab I; informasi belum terverifikasi tidak ditulis sebagai fakta.'
+class: L3
+status: APPROVED (baseline sementara dari pengguna; titik konflik ambang/union/I.3 dikesampingkan oleh D-115; persetujuan tim/pembimbing BELUM ada)
+date: '2026-11-12'
+related:
+- D-21
+- D-29
+- D-34
+- D-77
+- D-78
+- D-79
+- D-24
+- D-111
+- Q-REC-b
+- Q-REC-c
+basis: Bagian 1 CONTEXT TRANSFER yang diserahkan pengguna 2026-11-12
+alternatives_considered:
+- Tanpa alternatif; baseline diberikan pengguna
+consequences: A13/agent memperlakukan butir ini sebagai baseline, bukan izin mengubah substansi sendiri. Tidak ada keputusan lama yang ditandai SUPERSEDED oleh butir ini; ketidakcocokan dengan naskah docx saat ini dan keputusan lama dibawa sebagai Q-REC-b, Q-REC-c, Q-REC-e untuk dikonfirmasi pengguna.
+approval_evidence:
+  question: Pengguna menyerahkan CONTEXT TRANSFER berisi keputusan Bab I dan Bab II sebagai baseline resmi sementara dan meminta rekonsiliasi semua memory
+  options_offered:
+  - Tidak ada opsi; pengguna menyerahkan baseline/arahan sebagai instruksi
+  user_answer:
+  - 'Pesan pengguna 2026-11-12: "sekarang saya mau rekonsiliasi semua memory saat ini. kurleb ini kemajuannya: # CONTEXT TRANSFER — KEPUTUSAN BAB I DAN BAB II CAPSTONE. Gunakan keputusan berikut sebagai baseline resmi sementara untuk melanjutkan pekerjaan proposal IF4091 Capstone."'
+  - '## 1. Bab I
+
+    - Struktur: I.1 naratif; I.2 dua rumusan masalah; I.3 dua tujuan/ukuran keberhasilan; I.4 batasan masalah berbentuk butir; I.5 lima tahapan metodologi.
+
+    - I.2 menggunakan bentuk pertanyaan "Bagaimana", tanpa subbutir a/b.
+
+    - I.2–I.5 menggunakan penomoran butir sesuai kebutuhan.
+
+    - I.5 menjelaskan tahapan konkret, bukan hanya menyebut nama framework.
+
+    - Belum ada framework metodologi bernama yang disetujui.
+
+    - Arah yang pernah direkomendasikan adalah tidak menggunakan framework bernama, tetapi menjelaskan tahapan input–kegiatan–output.
+
+    - Tahapan yang pernah dirumuskan: persiapan data, pelabelan tenaga ahli secara blind, pengembangan AI/NLP-RAG dan rule-based, pengujian tiga konfigurasi, serta evaluasi precision/recall dan kejelasan hasil.
+
+    - Mekanisme kombinasi, jumlah kasus, ambang batas, pencocokan hasil, dan komposisi penilai tidak boleh ditentukan tanpa keputusan tim.
+
+    - Dokumen Penyelarasan Pemahaman Capstone bukan sumber resmi yang boleh diatribusikan dalam Bab I.
+
+    - Informasi yang belum terverifikasi tidak boleh ditulis sebagai fakta yang sudah terbukti.'
+  answered_at: '2026-11-12'
+  session_ref: sesi biasa (tanpa agent) 2026-11-12, pesan pengguna; dicatat langsung atas permintaan pengguna 'rekonsiliasi semua memory'
+  scope: Hanya isi Bagian 1 CONTEXT TRANSFER; bukan persetujuan tim/pembimbing/RSIA
+```
+
+## D-103
+
+```yaml
+id: D-103
+decision: Baseline struktur Bab II (II.1 sampai II.5 beserta sub-subbab seperti pada bagian 2 CONTEXT TRANSFER) dan nama judul sub-subbab menurut baseline.
+class: L3
+status: SUPERSEDED by D-114 (sebagian, hanya judul II.2, II.3.1, II.3.2 dan ejaan II.5.3; struktur lain tetap)
+status_sebelumnya: APPROVED (baseline resmi sementara menurut pengguna; persetujuan tim/pembimbing BELUM ada)
+date: '2026-11-12'
+related:
+- D-111
+- D-112
+- Q-REC-a
+basis: Bagian 2 CONTEXT TRANSFER yang diserahkan pengguna 2026-11-12
+alternatives_considered:
+- Tanpa alternatif; baseline diberikan pengguna
+consequences: 'Judul pada docx resmi yang disinkronkan 2026-11-12 berbeda pada II.2, II.3.1, II.3.2, dan ejaan II.5.3 (lihat Q-REC-a); tidak ada judul diubah oleh rekonsiliasi ini. Ejaan II.5.3: pengguna kemudian menyatakan ''Deidentifikasi'' (D-112), yang lebih baru dan dipakai.'
+approval_evidence:
+  question: Pengguna menyerahkan CONTEXT TRANSFER berisi keputusan Bab I dan Bab II sebagai baseline resmi sementara dan meminta rekonsiliasi semua memory
+  options_offered:
+  - Tidak ada opsi; pengguna menyerahkan baseline/arahan sebagai instruksi
+  user_answer:
+  - 'Pesan pengguna 2026-11-12: "sekarang saya mau rekonsiliasi semua memory saat ini. kurleb ini kemajuannya: # CONTEXT TRANSFER — KEPUTUSAN BAB I DAN BAB II CAPSTONE. Gunakan keputusan berikut sebagai baseline resmi sementara untuk melanjutkan pekerjaan proposal IF4091 Capstone."'
+  - "## 2. Bab II\nGunakan struktur berikut:\n- II.1 Rekam Medis dan Dokumentasi Klinis dalam Konteks Klaim JKN\n  - II.1.1 Kewajiban dan Isi Rekam Medis Elektronik\n  - II.1.2 Catatan Perkembangan Pasien Terintegrasi\n  - II.1.3 Resume Medis\n  - II.1.4 Variabel dan Metadata Rekam Medis Elektronik Rawat Inap\n  - II.1.5 Pengodean dan Verifikasi Klaim INA-CBG\n- II.2 Representasi dan Standardisasi Informasi Klinis\n  - II.2.1 SATUSEHAT dan Profil Rawat Inap Berbasis HL7 FHIR\n  - II.2.2 Adopsi Terminologi Klinis\n  - II.2.3 Bagian SOAP dan Relasi antara Penilaian dan Rencana\n  - II.2.4 Graf Pengetahuan Berbasis Rekam Medis\n- II.3 Pemeriksaan Dokumentasi Klinis dengan Model Bahasa Besar\n  - II.3.1 Pemeriksaan Kesalahan dan Konsistensi Dokumentasi Klinis\n  - II.3.2 Ketahanan Model terhadap Variasi Teks Klinis\n- II.4 Retrieval-Augmented Generation dan Penjangkaran Keluaran pada Bukti\n  - II.4.1 Konsep dan Mekanisme RAG\n  - II.4.2 Penerapan Retrieval dan Penjangkaran Bukti pada Informasi Klinis\n- II.5 Tata Kelola dan Privasi Penggunaan AI Klinis\n  - II.5.1 Pengaturan dan Tata Kelola Penggunaan AI di Indonesia\n  - II.5.2 Rekomendasi Penggunaan LLM dalam Konteks Klinis dan Administratif\n  - II.5.3 De-identifikasi Data Rekam Medis"
+  answered_at: '2026-11-12'
+  session_ref: sesi biasa (tanpa agent) 2026-11-12, pesan pengguna; dicatat langsung atas permintaan pengguna 'rekonsiliasi semua memory'
+  scope: Hanya struktur Bab II pada Bagian 2; bukan persetujuan tim/pembimbing
+```
+
+## D-104
+
+```yaml
+id: D-104
+decision: 'Penyelarasan dan pemindahan: Bab II mengikuti cakupan Bab I (CPPT dan dokumen ringkasan pelayanan untuk rawat inap, rawat jalan, IGD; fokus II.1.4 tetap rawat inap); empat kategori ketidaksesuaian; tiga konfigurasi pembanding; evaluasi precision, recall, kejelasan. II.6 ''Sintesis Penelitian Terdahulu dan Posisi Penelitian'' dihapus dari Bab II; sintesis, perbandingan penelitian, research gap, dan posisi penelitian dipindahkan ke Bab III; Bab II berakhir di II.5.3; tidak ada subbab ''Ketidakpastian Keluaran dan Peringatan Tingkat Kepercayaan''; literatur yang dikeluarkan dari pembahasan Bab II: Susilo, Rotmensch, Ali, Skrabic, Jaganathan, Devanand, Testoni, Griot, Kompa, Rocher, Kudlicki, El Emam, Azzam (Susilo boleh tetap di daftar pustaka gabungan bila disitasi di Bab I).'
+class: L3
+status: APPROVED (baseline resmi sementara menurut pengguna; persetujuan tim/pembimbing BELUM ada)
+date: '2026-11-12'
+related:
+- D-59
+- D-60
+- D-61
+- D-62
+- D-63
+- D-64
+- D-65
+- D-81
+- D-82
+- D-83
+- D-84
+- D-85
+- D-95
+- Q-REC-d
+- Q-REC-e
+basis: Bagian 3 dan 4 CONTEXT TRANSFER yang diserahkan pengguna 2026-11-12
+alternatives_considered:
+- Tanpa alternatif; baseline diberikan pengguna
+consequences: Keputusan lama tentang paragraf research gap di Bab I (D-59..D-65, D-81..D-85, D-95) terkait materi yang menurut baseline pindah ke Bab III; statusnya TIDAK diubah di sini dan ditanyakan pada Q-REC-e. Bab III di docx resmi masih berupa teks templat; `bab3/Bahan_Pindahan_dari_Bab_II.md` belum diselaraskan (Q-REC-d).
+approval_evidence:
+  question: Pengguna menyerahkan CONTEXT TRANSFER berisi keputusan Bab I dan Bab II sebagai baseline resmi sementara dan meminta rekonsiliasi semua memory
+  options_offered:
+  - Tidak ada opsi; pengguna menyerahkan baseline/arahan sebagai instruksi
+  user_answer:
+  - 'Pesan pengguna 2026-11-12: "sekarang saya mau rekonsiliasi semua memory saat ini. kurleb ini kemajuannya: # CONTEXT TRANSFER — KEPUTUSAN BAB I DAN BAB II CAPSTONE. Gunakan keputusan berikut sebagai baseline resmi sementara untuk melanjutkan pekerjaan proposal IF4091 Capstone."'
+  - '## 3. Keputusan penyelarasan Bab I dan Bab II
+
+    - Bab II harus mengikuti cakupan Bab I: CPPT dan dokumen ringkasan pelayanan untuk rawat inap, rawat jalan, dan IGD.
+
+    - Jangan membatasi keseluruhan sistem hanya pada rawat inap.
+
+    - Tetap pertahankan fokus khusus subbab II.1.4 pada variabel dan metadata rawat inap.
+
+    - Kategori ketidaksesuaian: omission, contradiction, unsupported addition, dan contextual/temporal mismatch.
+
+    - Konfigurasi pembanding: rule-based, AI/NLP-RAG, serta kombinasi setelah deduplikasi.
+
+    - Evaluasi mencakup precision, recall, dan penilaian kejelasan hasil serta referensi.
+
+
+    ## 4. Keputusan pemindahan dan penghapusan
+
+    - Hapus II.6 "Sintesis Penelitian Terdahulu dan Posisi Penelitian" dari Bab II.
+
+    - Pindahkan sintesis, perbandingan penelitian, research gap, dan posisi penelitian ke Bab III.
+
+    - Bab II berakhir pada II.5.3.
+
+    - Jangan membuat subbab tersendiri "Ketidakpastian Keluaran dan Peringatan Tingkat Kepercayaan" pada II.5.
+
+    - Literatur berikut dikeluarkan dari pembahasan Bab II: Susilo, Rotmensch, Ali, Skrabic, Jaganathan, Devanand, Testoni, Griot, Kompa, Rocher, Kudlicki, El Emam, dan Azzam.
+
+    - Susilo tetap dapat berada dalam daftar pustaka gabungan jika masih disitasi di Bab I.'
+  answered_at: '2026-11-12'
+  session_ref: sesi biasa (tanpa agent) 2026-11-12, pesan pengguna; dicatat langsung atas permintaan pengguna 'rekonsiliasi semua memory'
+  scope: Hanya Bagian 3 dan 4; bukan persetujuan tim/pembimbing
+```
+
+## D-105
+
+```yaml
+id: D-105
+decision: Prinsip pembahasan literatur (kelompok per tema, bahas substantif, tidak sekadar satu-dua kalimat, tidak menyimpulkan metode pasti cocok karena dipakai penelitian lain, bedakan temuan terdahulu dari rancangan capstone) dan instruksi agent (baseline bukan izin ubah substansi; jangan hidupkan kembali materi yang dihapus/dipindahkan; jangan mengarang keputusan terbuka; laporkan konflik sebelum mengubah; jaga konsistensi Bab I-II; jangan ubah keputusan tanpa persetujuan pengguna).
+class: L3
+status: APPROVED (baseline resmi sementara menurut pengguna; persetujuan tim/pembimbing BELUM ada)
+date: '2026-11-12'
+related:
+- D-103
+- D-104
+- D-110
+basis: Bagian 5 dan 6 CONTEXT TRANSFER yang diserahkan pengguna 2026-11-12
+alternatives_considered:
+- Tanpa alternatif; baseline diberikan pengguna
+consequences: 'Instruksi agent butir 4 dan 6 diterapkan pada rekonsiliasi ini: konflik dilaporkan (Q-REC-a..e) dan tidak ada keputusan lama diubah statusnya kecuali D-06 dan D-49 (sebagian) yang disetujui eksplisit pada D-106 dan D-111.'
+approval_evidence:
+  question: Pengguna menyerahkan CONTEXT TRANSFER berisi keputusan Bab I dan Bab II sebagai baseline resmi sementara dan meminta rekonsiliasi semua memory
+  options_offered:
+  - Tidak ada opsi; pengguna menyerahkan baseline/arahan sebagai instruksi
+  user_answer:
+  - 'Pesan pengguna 2026-11-12: "sekarang saya mau rekonsiliasi semua memory saat ini. kurleb ini kemajuannya: # CONTEXT TRANSFER — KEPUTUSAN BAB I DAN BAB II CAPSTONE. Gunakan keputusan berikut sebagai baseline resmi sementara untuk melanjutkan pekerjaan proposal IF4091 Capstone."'
+  - '## 5. Prinsip pembahasan literatur
+
+    - Kelompokkan penelitian berdasarkan tema yang jelas.
+
+    - Bahas penelitian secara substantif: objek/tujuan, temuan, relevansi, dan alasan penggunaannya.
+
+    - Jangan hanya menjelaskan penelitian penting dalam satu atau dua kalimat.
+
+    - Jangan menyimpulkan suatu metode pasti cocok hanya karena pernah digunakan oleh penelitian terdahulu.
+
+    - Bedakan temuan penelitian terdahulu dengan rancangan capstone yang diusulkan.
+
+
+    ## 6. Instruksi untuk agent
+
+    1. Perlakukan keputusan di atas sebagai baseline, bukan izin untuk mengubah substansi secara mandiri.
+
+    2. Jangan menghidupkan kembali struktur atau materi yang sudah diputuskan untuk dihapus/dipindahkan.
+
+    3. Jangan mengarang keputusan untuk hal-hal yang masih terbuka.
+
+    4. Jika menemukan konflik dengan dokumen sumber atau keputusan yang lebih baru, laporkan konflik tersebut sebelum melakukan perubahan.
+
+    5. Pertahankan konsistensi Bab I dan Bab II.
+
+    6. Jangan mengubah keputusan yang sudah disepakati tanpa persetujuan pengguna.'
+  answered_at: '2026-11-12'
+  session_ref: sesi biasa (tanpa agent) 2026-11-12, pesan pengguna; dicatat langsung atas permintaan pengguna 'rekonsiliasi semua memory'
+  scope: Hanya Bagian 5 dan 6; bukan persetujuan tim/pembimbing
+```
+
+## D-106
+
+```yaml
+id: D-106
+decision: Batas revisi otomatis diturunkan dari 2 menjadi 1 siklus per subbab; tidak ada 'perbaikan terarah' tambahan kecuali diminta pengguna untuk temuan yang disebut; satu subbab maksimal 3 draf; hanya temuan HIGH/MEDIUM memicu revisi, LOW/INFO dikerjakan sekali di akhir; QA hanya atas bagian yang berubah; a05 tidak menantang keputusan APPROVED.
+class: L4
+status: APPROVED
+date: '2026-11-12'
+related:
+- D-06
+- D-110
+basis: Keluhan pengguna tentang pengulangan hingga DRAF 24 untuk Bab I dan jawaban '1' atas usulan langkah 1
+alternatives_considered:
+- Mempertahankan batas 2 siklus (D-06)
+consequences: 'D-06 ditandai SUPERSEDED by D-106 (sebagian: batas siklus 2 -> 1). Diterapkan di .claude/agents/a01-orchestrator.md, .claude/skills/agent-contract/SKILL.md, CLAUDE.md §11.3 dan §3 (commit a4063ae). Draf Bab I yang ada tidak diubah oleh keputusan ini.'
+approval_evidence:
+  question: 'Sesi 2026-11-11/12: sesi Claude menganalisis 13 agent dan mengusulkan tiga langkah penghematan; ''Mau saya mulai merevisinya? Urutan yang saya usulkan: (1) ubah aturan siklus di a01-orchestrator.md dan CLAUDE.md, (2) gabung agent QA, (3) buat skrip linter untuk pola AI slop dan struktur. ... tolong konfirmasi dulu lingkupnya.'''
+  options_offered:
+  - (1) ubah aturan siklus di a01-orchestrator.md dan CLAUDE.md
+  - (2) gabung agent QA
+  - (3) buat skrip linter
+  user_answer:
+  - '... yang mana untuk bab 1 saja memakan hingga 24 draft, menurut anda apa yang perlu di revisi dari agent tersebut dalam membangun proposal'
+  - padahal cuman bab 1 tapi pengulangan draft hingga draft ke 24 yang itu sangat boros waktu dan token, seharusnya ada maksimal revisi draft
+  - '1'
+  answered_at: '2026-11-12'
+  session_ref: sesi biasa (tanpa agent) 2026-11-12, pesan pengguna; dicatat langsung atas permintaan pengguna 'rekonsiliasi semua memory'
+  scope: Aturan siklus dan hemat siklus di a01, agent-contract, CLAUDE.md
+```
+
+## D-107
+
+```yaml
+id: D-107
+decision: 'Roster menjadi 12 agent: a11-qa-technical digabung ke a07-qa-academic (a07 dengan focus: akademik atau teknis); berkas a11 dihapus; penomoran A11 tidak dipakai lagi; a09 menjalankan scripts/lint_prose.py lebih dulu (D-110).'
+class: L4
+status: APPROVED
+date: '2026-11-12'
+related:
+- D-07
+- D-110
+basis: Jawaban 'lanjut langkah 2' dan 'lanjut langkah 3'
+alternatives_considered:
+- Mempertahankan 13 agent
+- Nomori ulang A01..A12 (tidak dipilih; saran A01 tetap menomori)
+consequences: Diterapkan di a07, a01, write_scopes.json, if4091-rules-map, check_agents.py (commit a4063ae). Temuan lama berawalan F-A11-xxxx tetap sah sebagai riwayat; auditor sekarang a07. Narasi docs/ menyebut A11 sebagai historis (blok Pembaruan 11 Nov 2026).
+approval_evidence:
+  question: 'Sesi 2026-11-11/12: sesi Claude menganalisis 13 agent dan mengusulkan tiga langkah penghematan; ''Mau saya mulai merevisinya? Urutan yang saya usulkan: (1) ubah aturan siklus di a01-orchestrator.md dan CLAUDE.md, (2) gabung agent QA, (3) buat skrip linter untuk pola AI slop dan struktur. ... tolong konfirmasi dulu lingkupnya.'''
+  options_offered:
+  - (1) ubah aturan siklus di a01-orchestrator.md dan CLAUDE.md
+  - (2) gabung agent QA
+  - (3) buat skrip linter
+  user_answer:
+  - lanjut langkah 2
+  - lanjut langkah 3
+  answered_at: '2026-11-12'
+  session_ref: sesi biasa (tanpa agent) 2026-11-12, pesan pengguna; dicatat langsung atas permintaan pengguna 'rekonsiliasi semua memory'
+  scope: Penggabungan a11 ke a07 dan skrip linter
+```
+
+## D-108
+
+```yaml
+id: D-108
+decision: 'Git sepenuhnya urusan pengguna: tidak ada agent yang menjalankan git add, git commit, atau git push; gate G3 dihapus; a13 hanya membaca status Git; /sesi-tutup berhenti di laporan berkas yang berubah.'
+class: L4
+status: APPROVED
+date: '2026-11-12'
+related:
+- D-12
+- D-13
+- D-109
+basis: Pernyataan pengguna tidak ingin agent mengurus commit karena boros token
+alternatives_considered:
+- Mempertahankan a13 + G3
+consequences: Diterapkan di a13-memory-manager.md, a01-orchestrator.md, write_scopes.json (kedua salinan), .claude/skills/sesi-tutup/SKILL.md, selftest.py. S7 (memory belum ter-commit) akan terus menjadi NOT_READY sampai pengguna commit; itu perilaku yang diharapkan, bukan galat.
+approval_evidence:
+  question: Sesi Claude menjelaskan bahwa a13 menjalankan git add/commit/push setelah G3 dan menanyakan apakah agent sudah lepas dari urusan commit
+  options_offered:
+  - Mempertahankan G3 dan a13 untuk Git
+  user_answer:
+  - terus buat urusan commit dan sebagainya agent itu udah lepas belum? saya gamau agent ngurus perihal commit karena buang-buang token aja
+  answered_at: '2026-11-12'
+  session_ref: sesi biasa (tanpa agent) 2026-11-12, pesan pengguna; dicatat langsung atas permintaan pengguna 'rekonsiliasi semua memory'
+  scope: Pelepasan Git dari semua agent
+```
+
+## D-109
+
+```yaml
+id: D-109
+decision: 'Sesi biasa (tanpa agent) menjadi bawaan di repo ini: kunci ''agent'' dihapus dari .claude/settings.json; mode orkestrasi hanya lewat ''claude --agent a01-orchestrator''. Perlindungan global (RSIA-source, Git berbahaya, aturan ask) tetap berlaku di sesi biasa.'
+class: L4
+status: APPROVED
+date: '2026-11-12'
+related:
+- D-01
+- D-108
+basis: Pernyataan pengguna tidak selalu ingin memakai agent
+alternatives_considered:
+- Tetap memaksa a01 pada semua sesi
+consequences: D-01 diubah sebagian oleh keputusan ini (a01 tetap main-thread agent bila diluncurkan dengan --agent, tetapi bukan bawaan). Perubahan memory di sesi biasa tidak tercatat otomatis; direkonsiliasi di sesi orkestrasi berikutnya.
+approval_evidence:
+  question: Sesi Claude menemukan bahwa settings.json memaksa semua sesi menjadi a01-orchestrator
+  options_offered:
+  - Tetap memaksa a01
+  user_answer:
+  - terus kan saya ga selamanya pengen selalu pake agent untuk repo ini, misal saya lagi gak pengen make agent jadi cuman sesi biasa di claude codenya itu tolong diantisipasi juga
+  answered_at: '2026-11-12'
+  session_ref: sesi biasa (tanpa agent) 2026-11-12, pesan pengguna; dicatat langsung atas permintaan pengguna 'rekonsiliasi semua memory'
+  scope: settings.json dan USER_GUIDE.md
+```
+
+## D-110
+
+```yaml
+id: D-110
+decision: 'Aturan penanda dan naskah siap-kumpul: penanda hanya untuk data/sumber yang benar-benar belum ada atau keputusan pihak luar; satu topik satu penanda; maksimal 10 penanda per bab; jawaban pengguna dan temuan QA tidak boleh menghasilkan penanda baru; naskah tanpa nomor D-/F-/Q-, label DRAF, ''usulan penulis'', atau riwayat revisi; keputusan dikumpulkan dalam satu batch sebelum penulisan ulang; scripts/lint_prose.py menandai kebocoran internal dan kelebihan penanda.'
+class: L3
+status: APPROVED
+date: '2026-11-12'
+related:
+- D-106
+- D-107
+- D-105
+basis: Penjelasan pengguna bahwa setiap jawaban melahirkan penanda baru hingga DRAF 24
+alternatives_considered:
+- Tidak mengubah agent
+consequences: Diterapkan di a03, a01, a07, a09, CLAUDE.md §3, scripts/lint_prose.py (diverifikasi 157 kebocoran internal dan 59 penanda pada DRAF 24 lama). Naskah baru (D-111) tanpa penanda.
+approval_evidence:
+  question: Sesi Claude melaporkan 59 penanda dan penyebab draf berulang; pertanyaan perbaikan agent
+  options_offered:
+  - Tidak mengubah agent
+  user_answer:
+  - nah masalahnya berpenanda ini ketika saya jawab ia selalu menghasilkan penanda yang baru lagi dan itu terulang hingga draft ke 24 padahal hanya bab 1, alamat file yang saya kirimkan sebelumnya adalah hasil migrasi agent vs hasil migrasi non agent. silahkan anda perbaiki agentnya
+  answered_at: '2026-11-12'
+  session_ref: sesi biasa (tanpa agent) 2026-11-12, pesan pengguna; dicatat langsung atas permintaan pengguna 'rekonsiliasi semua memory'
+  scope: Aturan agent dan linter
+```
+
+## D-111
+
+```yaml
+id: D-111
+decision: 'Artefak resmi sekarang: modular/TA1 bab 1.docx, modular/TA1 bab 2.docx, dan 13523136-Proposal-IF4091-Capstone-Individu-2026-Draft-Bab1-Bab2.docx. Markdown disamakan dengan docx tersebut: bab1/Bab_I_Draft.md ditulis ulang dari docx (tanpa penanda/riwayat), bab2/ memuat Pembuka_Bab_II.md, II.1..II.5, Daftar_Pustaka.md, gambar/; berkas II.1..II.8 dan Pembuka lama dipindah ke bab2/arsip_sebelum_sinkron_docx/.'
+class: L3
+status: APPROVED
+date: '2026-11-12'
+related:
+- D-49
+- D-35
+- D-36
+- D-100
+- D-101
+- Q-B1-al
+- Q-B1-aw
+- Q-B1-ax
+basis: Pernyataan pengguna tentang artefak resmi dan perintah menyamakan draf dengan docx
+alternatives_considered:
+- Tetap memakai Markdown DRAF 24 sebagai sumber
+consequences: 'D-49 ditandai SUPERSEDED by D-111 (sebagian: sumber kebenaran Bab I kini docx resmi, bukan Markdown DRAF 24). tools/build_modular.py untuk Bab I tidak lagi relevan dan akan menolak jalan (hash/jumlah penanda); jalur build modular (Q-B1-al/aw/ax) tidak diputuskan di sini. Teks DRAF 24 lama dan catatan kerjanya tersedia di riwayat Git (commit sebelum 2026-11-12).'
+approval_evidence:
+  question: Sesi Claude membandingkan docx hasil migrasi agent dan non-agent dan menanyakan perbaikan migrasi
+  options_offered:
+  - Tidak ada opsi lain ditawarkan
+  user_answer:
+  - yang versi resmi sekarang itu TA1 bab 1 dan TA2 bab 2 dan 13523136-Proposal-IF4091-Capstone-Individu-2026-Draft-Bab1-Bab2. sesuaikan draft dengan docx tersebut
+  answered_at: '2026-11-12'
+  session_ref: sesi biasa (tanpa agent) 2026-11-12, pesan pengguna; dicatat langsung atas permintaan pengguna 'rekonsiliasi semua memory'
+  scope: Sinkronisasi Markdown Bab I/II dengan ketiga docx; pemindahan berkas lama ke arsip
+```
+
+## D-112
+
+```yaml
+id: D-112
+decision: 'Perbaikan docx resmi: heading II.2.3 ''Rekomendasi Penggunaan LLM...'' diganti ''Bagian SOAP dan Relasi antara Penilaian dan Rencana'' (isi anotasi catatan perkembangan); judul Bab II ''KAJIAN PUSTAKA''; ''Pengodean dan Verifikasi Klaim INA-CBG'' menjadi Heading 3 (II.1.5) di TA1 bab 2; ejaan ''Deidentifikasi''; daftar isi, Daftar Gambar, dan Daftar Tabel TA1 bab 2 dibangun ulang (halaman dari render LibreOffice).'
+class: L3
+status: APPROVED
+date: '2026-11-12'
+related:
+- D-103
+- D-111
+- Q-REC-a
+basis: Jawaban pengguna atas empat butir (1 judul, 2 hierarki, 3 ejaan, 4 daftar gambar/tabel)
+alternatives_considered:
+- Membiarkan dua docx berbeda
+consequences: Diterapkan pada modular/TA1 bab 2.docx, modular/TA1 bab 1.docx (satu 'de-identifikasi'), dan berkas Draft-Bab1-Bab2.docx (heading dan entri daftar isi II.2.3). Cadangan di .scratch/backup_docx_1112/. Nomor halaman perlu Update Field di Word. PDF TA1 bab 1/2 kini tertinggal dari docx.
+approval_evidence:
+  question: Sesi Claude melaporkan dua keanehan docx (judul II.2.3 tertukar, daftar isi TA1 bab 2 basi) dan beda antara TA1 bab 2 dan berkas gabungan; 'Mau saya (a) memperbaiki dua keanehan docx..., atau (b) menjalankan rekonsiliasi memory?' lalu 'Mau saya samakan TA1 bab 2.docx dengan berkas gabungan untuk poin 1 sampai 3, atau dibiarkan berbeda?'
+  options_offered:
+  - (a) perbaiki dua keanehan
+  - (b) rekonsiliasi memory
+  - samakan atau biarkan berbeda
+  user_answer:
+  - lakukan (a) untuk poin 1 itu kesalahan saya, untuk poin 2 silahkan anda perbaiki, untuk poin 3 memang disengaja.
+  - 1. yang bener KAJIAN PUSTAKA, 2. ya, 3. harusnya Deidentifikasi, 4. Lakukan
+  answered_at: '2026-11-12'
+  session_ref: sesi biasa (tanpa agent) 2026-11-12, pesan pengguna; dicatat langsung atas permintaan pengguna 'rekonsiliasi semua memory'
+  scope: Perbaikan judul, hierarki, ejaan, dan daftar pada docx
+```
+
+Catatan D-113..D-116 (2026-11-12, jawaban pengguna atas Q-REC-a..f): dicatat langsung oleh sesi biasa. 37 keputusan DRAF 24 ditandai SUPERSEDED sebagian oleh D-115: D-59, D-60, D-61, D-62, D-63, D-64, D-65, D-66, D-67, D-68, D-69, D-70, D-71, D-72, D-73, D-74, D-75, D-81, D-82, D-83, D-84, D-85, D-86, D-87, D-88, D-89, D-90, D-91, D-92, D-93, D-94, D-95, D-96, D-97, D-98, D-99, D-100. Status lama tiap keputusan disimpan di field status_sebelumnya.
+
+## D-113
+
+```yaml
+id: D-113
+decision: Gaya sitasi akhir sementara adalah APA (adaptasi Indonesia); K1 diputuskan pengguna dengan 'APA dulu'.
+class: L3
+status: APPROVED (keputusan pengguna sementara; konfirmasi tim, pembimbing, dan prodi BELUM ada)
+date: '2026-11-12'
+related:
+- K1
+- D-80
+- Q-REC-f
+basis: Jawaban pengguna atas Q-REC-f
+alternatives_considered:
+- Penulis-tahun dengan hlm. (konvensi DRAFT 6)
+consequences: 'D-80 (usul APA) ditandai SUPERSEDED by D-113 (sebagian: usul menjadi keputusan sementara). Docx resmi masih campuran (''et al.''/''dkk.'', ''p.''/''hlm.''); penyeragaman ke APA BELUM dikerjakan dan butuh tugas tersendiri (a08 menilai format terhadap APA mulai sekarang).'
+approval_evidence:
+  question: 'Rekonsiliasi memory menghasilkan Q-REC-a..f: (a) judul Bab II baseline vs docx, (b) ambang 0,80/80%/union di Bab I docx vs baseline, (c) I.3 dua tujuan vs satu utama + lima khusus, (d) Bab III belum ditulis, (e) keputusan dan temuan lama atas DRAF 24, (f) gaya sitasi campuran. ''Mau jawab Q-REC-b dulu?'''
+  options_offered:
+  - Jawaban teks bebas pengguna atas enam butir
+  user_answer:
+  - gaya sitasi itu APA dulu
+  answered_at: '2026-11-12'
+  session_ref: sesi biasa (tanpa agent) 2026-11-12, jawaban pengguna atas Q-REC-a..f; dicatat langsung atas permintaan pengguna
+  scope: Gaya sitasi akhir sementara; bukan persetujuan tim/pembimbing/prodi
+```
+
+## D-114
+
+```yaml
+id: D-114
+decision: Judul sub-subbab Bab II mengikuti docx resmi (II.2 'Standar Interoperabilitas dan Terminologi Klinis di Indonesia'; II.3.1 'Deteksi Kesalahan pada Dokumentasi Klinis'; II.3.2 'Pemeriksaan Fakta Keluaran terhadap Rekam Medis Sumber'; II.2.3 'Bagian SOAP dan Relasi antara Penilaian dan Rencana'; II.5.3 'Deidentifikasi Data Rekam Medis').
+class: L3
+status: APPROVED
+date: '2026-11-12'
+related:
+- D-103
+- D-111
+- D-112
+- Q-REC-a
+basis: Jawaban pengguna atas Q-REC-a
+alternatives_considered:
+- Mengikuti judul baseline D-103
+consequences: 'D-103 ditandai SUPERSEDED by D-114 (sebagian: hanya judul II.2, II.3.1, II.3.2 dan ejaan II.5.3); struktur lain D-103 tetap. Tidak ada perubahan berkas: Markdown dan docx sudah memakai judul ini.'
+approval_evidence:
+  question: 'Rekonsiliasi memory menghasilkan Q-REC-a..f: (a) judul Bab II baseline vs docx, (b) ambang 0,80/80%/union di Bab I docx vs baseline, (c) I.3 dua tujuan vs satu utama + lima khusus, (d) Bab III belum ditulis, (e) keputusan dan temuan lama atas DRAF 24, (f) gaya sitasi campuran. ''Mau jawab Q-REC-b dulu?'''
+  options_offered:
+  - Jawaban teks bebas pengguna atas enam butir
+  user_answer:
+  - judul bab 2 sesuaikan dengan docx
+  answered_at: '2026-11-12'
+  session_ref: sesi biasa (tanpa agent) 2026-11-12, jawaban pengguna atas Q-REC-a..f; dicatat langsung atas permintaan pengguna
+  scope: Judul sub-subbab Bab II
+```
+
+## D-115
+
+```yaml
+id: D-115
+decision: 'Bab I pada docx resmi dibiarkan apa adanya, termasuk ambang 0,80, 80% skor 4 atau 5, mekanisme union dan deduplikasi, serta struktur I.3 (satu tujuan utama, lima tujuan khusus, tiga ukuran); pada titik-titik itu docx mengalahkan baseline D-102. Keputusan, temuan QA, dan pertanyaan terbuka yang bergantung pada teks Bab I DRAF 24 disesuaikan dengan kondisi docx saat ini: keputusan terkait ditandai SUPERSEDED sebagian, temuan OPEN/IN_PROGRESS atas Bab I DRAF 24 dibebaskan (WAIVED), pertanyaan Q-B1-* yang masih terbuka ditutup.'
+class: L3
+status: APPROVED (keputusan pengguna; persetujuan tim/pembimbing BELUM ada)
+date: '2026-11-12'
+related:
+- D-102
+- D-111
+- Q-REC-b
+- Q-REC-c
+- Q-REC-e
+- D-59..D-75
+- D-81..D-100
+basis: Jawaban pengguna atas Q-REC-b, c, dan e
+alternatives_considered:
+- Ubah Bab I mengikuti baseline
+- Tandai ambang/union sebagai usulan
+consequences: 'Keputusan yang ditandai SUPERSEDED by D-115 (sebagian): D-59..D-75, D-81..D-100 (status sebelumnya disimpan di field status_sebelumnya; substansi research gap/posisi dapat dirujuk saat menulis Bab III tetapi tidak mengikat naskah baru). Temuan FINDINGS_LOG atas Bab I (a02, a04, a05, a07, a08, a09, a10, a11) berstatus OPEN atau IN_PROGRESS menjadi WAIVED dengan bukti D-115; temuan a06 (lintas proposal), a12, a13, dan atas bab2/setup tidak diubah. Butir Q-B1-* berstatus TERBUKA/MENUNGGU ditutup. D-102 tetap APPROVED, tetapi titik konflik ambang/union/I.3 dikesampingkan oleh D-115. Persetujuan tim/pembimbing atas ambang dan union tetap BELUM ada; ini keputusan pengguna.'
+approval_evidence:
+  question: 'Rekonsiliasi memory menghasilkan Q-REC-a..f: (a) judul Bab II baseline vs docx, (b) ambang 0,80/80%/union di Bab I docx vs baseline, (c) I.3 dua tujuan vs satu utama + lima khusus, (d) Bab III belum ditulis, (e) keputusan dan temuan lama atas DRAF 24, (f) gaya sitasi campuran. ''Mau jawab Q-REC-b dulu?'''
+  options_offered:
+  - Jawaban teks bebas pengguna atas enam butir
+  user_answer:
+  - bab 1 biarkan saja ... draf 24 untuk bab 1 sesuaikan saja dengan kondisi docx saat ini
+  answered_at: '2026-11-12'
+  session_ref: sesi biasa (tanpa agent) 2026-11-12, jawaban pengguna atas Q-REC-a..f; dicatat langsung atas permintaan pengguna
+  scope: Bab I docx apa adanya; penyesuaian catatan memory atas DRAF 24
+```
+
+## D-116
+
+```yaml
+id: D-116
+decision: Bab III belum dimulai dan baru dimulai setelah rekonsiliasi ini benar-benar selesai; sampai saat itu tidak ada penulisan Bab III dan bab3/Bahan_Pindahan_dari_Bab_II.md tidak diubah.
+class: L3
+status: APPROVED
+date: '2026-11-12'
+related:
+- D-104
+- Q-REC-d
+basis: Jawaban pengguna atas Q-REC-d
+alternatives_considered:
+- Menulis Bab III sekarang
+consequences: Isi Bab III (sintesis, perbandingan, research gap, posisi penelitian) mengikuti D-104 dan D-105 saat dimulai.
+approval_evidence:
+  question: 'Rekonsiliasi memory menghasilkan Q-REC-a..f: (a) judul Bab II baseline vs docx, (b) ambang 0,80/80%/union di Bab I docx vs baseline, (c) I.3 dua tujuan vs satu utama + lima khusus, (d) Bab III belum ditulis, (e) keputusan dan temuan lama atas DRAF 24, (f) gaya sitasi campuran. ''Mau jawab Q-REC-b dulu?'''
+  options_offered:
+  - Jawaban teks bebas pengguna atas enam butir
+  user_answer:
+  - bab 3 memang belum dimulai dan akan dimulai setelah rekonsiliasi ini benar-benar selesai
+  answered_at: '2026-11-12'
+  session_ref: sesi biasa (tanpa agent) 2026-11-12, jawaban pengguna atas Q-REC-a..f; dicatat langsung atas permintaan pengguna
+  scope: Urutan kerja Bab III
+```
+
+## D-117
+
+```yaml
+id: D-117
+decision: 'Sitasi diseragamkan ke APA (adaptasi Indonesia) pada tiga docx resmi dan Markdown sinkron: ''et al.'' menjadi ''dkk.''; ''p.''/''pp.'' menjadi ''hlm.'' (termasuk daftar pustaka); rentang halaman memakai tanda pisah en; ''Kementerian Kesehatan'' di teks menjadi ''Kementerian Kesehatan Republik Indonesia'' sesuai daftar pustaka; ''Gao dkk., 2023'' pada keterangan Gambar II.4 menjadi ''Gao, Xiong, dkk., 2023'' (membedakan dua sumber Gao 2023); sumber sekunder ''Muroli dkk. (2020, sebagaimana dikutip dalam Simbolon & Gani, 2023)''; daftar pustaka: huruf miring pada judul karya mandiri dan nama jurnal beserta volume, indentasi gantung, urutan Gao (Churpek sebelum Tesch), dan entri Susilo ditambahkan ke daftar pustaka gabungan karena disitasi di Bab I.'
+class: L3
+status: APPROVED (pelaksanaan D-113; konfirmasi tim/pembimbing/prodi atas APA BELUM ada)
+date: '2026-11-12'
+related:
+- D-113
+- D-111
+- D-104
+- K1
+basis: Jawaban pengguna 'seragamkan sitasi ke APA dulu' atas tawaran penyeragaman sitasi
+alternatives_considered:
+- Menunda sampai K1 dikonfirmasi tim
+consequences: 'Diterapkan oleh skrip pada modular/TA1 bab 1.docx, modular/TA1 bab 2.docx, dan Draft-Bab1-Bab2.docx (cadangan di .scratch/backup_docx_1112b/); Markdown dibangkitkan ulang dari docx gabungan. Tidak ada isi substantif diubah. Temuan yang TIDAK diubah dan perlu dicek pengguna: (1) entri Zhang dkk. (2026) berakhir ''105053.3.'' (digit ''3'' tampak berlebih; belum diverifikasi ke sumber); (2) judul Simbolon & Gani (2023) memakai ''memengaruhi'' di Draft-Bab1-Bab2/TA1 bab 2 tetapi ''mempengaruhi'' di TA1 bab 1 (judul sumber harus sesuai terbitan asli, belum diverifikasi); (3) entri berbahasa Inggris tetap memakai ''In'' dan ''(Eds.)''; (4) PDF TA1 bab 1/2 tertinggal; (5) nomor halaman di daftar isi gabungan belum dihitung ulang.'
+approval_evidence:
+  question: Q-REC-f/K1 diputuskan APA (D-113); sesi Claude menawarkan 'menyeragamkan sitasi docx ke APA ... Mau lanjut ke Bab III, atau menyeragamkan sitasi ke APA dulu?'
+  options_offered:
+  - Lanjut ke Bab III
+  - Seragamkan sitasi ke APA dulu
+  user_answer:
+  - seragamkan sitasi ke APA dulu
+  answered_at: '2026-11-12'
+  session_ref: sesi biasa (tanpa agent) 2026-11-12, dicatat langsung atas permintaan pengguna
+  scope: Penyeragaman format sitasi ke APA pada docx resmi dan Markdown; bukan persetujuan tim/pembimbing/prodi
 ```

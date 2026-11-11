@@ -29,7 +29,7 @@ python scripts/check_memory.py --allow-uncommitted
 **Hasil yang diharapkan:**
 
 - `selftest.py`: `N/N lulus`, exit 0.
-- `check_agents.py`: `OK (13 agent, … rujukan aturan valid)`.
+- `check_agents.py`: `OK (12 agent, … rujukan aturan valid)`.
 - `check_memory.py`: tanpa `NOT_READY`.
 
 Selftest **tidak** menjalankan perintah yang diuji. Ia hanya meminta keputusan `guard.py` atas payload tiruan dan memakai berkas sintetis.
@@ -72,7 +72,7 @@ Hook dan agent proyek hanya aktif untuk sesi yang **dibuka** di folder yang memu
 | T-09 | W | Di sesi `claude --agent a01-orchestrator`, minta A01 menggunakan `AskUserQuestion` dan `SendMessage` | Keduanya dapat dipanggil (lewat `ToolSearch` bila *deferred*) | Tool tidak tersedia → catat, aktifkan fallback | **Sebagian:** `AskUserQuestion` berjalan (dialog G3, 5 Nov). `SendMessage` belum diuji |
 | T-10 | W | Panggil satu subagent apa pun, lalu baca `.scratch/agent_runs.jsonl` | Ada pasangan `SubagentStart`/`SubagentStop` dengan `agent_type` terisi | `agent_type` kosong → Run Log memakai data Agent Report saja | **LULUS** (5 Nov: pasangan start/stop a13, 38 detik) |
 | T-11 | W | Simpan `git status --porcelain` checkout utama sebelum kerja di worktree; bandingkan sesudahnya | Identik; worktree tidak memuat `RSIA-source/` | Ada perubahan di checkout utama | LULUS untuk implementasi 5 Nov: 69 entri status identik sebelum dan sesudah; salinan beku `.gitignore` dan dua `docs/*.md` cocok hash; worktree tanpa `RSIA-source/`. Ulangi setelah uji W |
-| T-14 | W | Minta a13 menjalankan `git commit -m "uji"` pada perubahan kosong di sesi auto mode | Prompt persetujuan muncul (aturan `ask`) | Tidak ada prompt → guard ditambah untuk menolak `git commit`/`git push`, `build_modular.py`, dan web untuk semua agent (§A-15.4 butir 2) | BELUM |
+| T-14 | W | Minta a13 menjalankan `git commit -m "uji"` (sejak 11 Nov 2026 Git bukan wewenang agent) | Guard menolak; tidak ada commit (otomatis di `selftest.py`) | Tidak ada prompt → guard ditambah untuk menolak `git commit`/`git push`, `build_modular.py`, dan web untuk semua agent (§A-15.4 butir 2) | BELUM |
 | T-15 | W | Lanjutan T-08: pada giliran lanjutan, minta a04 menulis ke `bab2/x.md` | Ditolak `[guard]` | Penulisan berhasil | BELUM |
 | T-16 | W | Di sesi A01, tanya "jelaskan field qa_status dari kontrak" tanpa memanggil skill | A01 menjawab dari `agent-contract` (preload berlaku) | Tidak tahu → A01 memanggil `agent-contract` lewat tool `Skill` di awal sesi | BELUM |
 | T-17 | W | Minta a13 mencari "orkestrasi" di claude-mem | Tool claude-mem dapat dipanggil | Nama tool berbeda → perbarui frontmatter a13 | BELUM |
@@ -92,7 +92,7 @@ T-12 dibatalkan (D-17).
 
 ### C.1 Agent individual
 
-- [x] Seluruh 13 agent terdefinisi (`check_agents.py`)
+- [x] Seluruh 12 agent terdefinisi (A11 digabung ke A07) (`check_agents.py`)
 - [x] Setiap agent memiliki tanggung jawab spesifik dan batas kewenangan (bagian `## Batas`)
 - [x] Setiap agent memiliki format output (bagian `## Kontrak keluaran` + `agent-contract`)
 - [ ] Agent tidak mengambil alih tugas agent lain: perlu observasi runtime (T-03, T-08)

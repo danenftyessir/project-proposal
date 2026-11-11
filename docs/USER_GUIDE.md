@@ -1,4 +1,4 @@
-# User Guide — Orkestrasi 13 Agent untuk Proposal TA Capstone IF4091
+# User Guide — Orkestrasi 12 Agent untuk Proposal TA Capstone IF4091
 
 Panduan pemakaian sehari-hari. Rancangan lengkap: `docs/ORCHESTRATION_ARCHITECTURE.md`; peran agent: `docs/AGENT_SPECIFICATIONS.md`.
 
@@ -47,7 +47,7 @@ Tulis permintaan seperti biasa, misalnya "revisi II.3 agar celahnya lebih spesif
 
 | Tindakan | Mekanisme |
 |---|---|
-| `git commit`, `git push` | Prompt Claude Code (aturan `ask`) + gate G3 dari A01 |
+| `git commit`, `git push` | Dilakukan pengguna sendiri; agent ditolak guard. Di sesi biasa tetap ada prompt (aturan `ask`) |
 | `python -I tools/build_modular.py` (menimpa docx di `modular/`) | Prompt + Approval Request yang menyebut berkas yang ditimpa |
 | `WebSearch`/`WebFetch` (A02/A08, metadata saja) | Prompt per panggilan + izin per tugas |
 | Membaca data `RSIA-source/` | Hanya bila tugas memerlukannya; A01 mencantumkan scope dan alasan di brief. Akses tercatat (hash) di `.scratch/agent_runs.jsonl` |
@@ -66,17 +66,18 @@ Tulis permintaan seperti biasa, misalnya "revisi II.3 agar celahnya lebih spesif
 
 ## 6. Akhir sesi
 
-1. Ketik `/sesi-tutup`. A13 memperbarui memory dan menjalankan pemeriksaan.
-2. A01 menampilkan gate **G3**: daftar path yang akan di-commit, pesan commit, dan branch. Commit hanya terjadi setelah Anda menyetujui, dan push juga memerlukan persetujuan sendiri.
-3. Bila tidak ingin commit, katakan saja. Memory tetap tersimpan di working tree, dan sesi berikutnya akan memberi peringatan S7.
+1. Ketik `/sesi-tutup`. A13 memperbarui memory dan menjalankan pemeriksaan, lalu A01 melaporkan berkas yang berubah.
+2. Commit dan push Anda lakukan sendiri (agent tidak menyentuh Git, tidak ada gate G3). Gunakan `python scripts/check_staged.py` sebelum commit manual.
+3. Bila belum commit, memory tetap tersimpan di working tree dan sesi berikutnya memberi peringatan S7; itu normal.
 
 ## 7. Pemeriksaan manual kapan saja
 
 ```bash
 python scripts/check_memory.py              # readiness memory
 python scripts/check_memory.py --metrics    # ringkasan efisiensi dari Run Log
-python scripts/check_agents.py              # 13 agent valid
+python scripts/check_agents.py              # 12 agent valid
 python scripts/selftest.py                  # uji regresi deterministik
+python scripts/lint_prose.py bab1/Bab_I_Draft.md --from-heading "## I.1"   # linter ejaan/slop/struktur
 python scripts/check_staged.py              # periksa staging sebelum commit manual
 ```
 

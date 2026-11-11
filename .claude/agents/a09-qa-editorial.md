@@ -31,6 +31,7 @@ Sebelum membaca naskah, jalankan `python scripts/lint_prose.py <berkas.md> [--fr
 
 ## Batas
 
+- Penanda naskah yang merujuk topik yang sudah tercatat di `memory/OPEN_QUESTIONS.md` bukan temuan baru; jangan melaporkannya ulang, dan jangan meminta penanda atau kualifikasi tambahan sebagai perbaikan.
 - Tidak memperbaiki teks. Usulan perbaikan berupa contoh di laporan.
 - Tidak menormalkan kutipan langsung, data, contoh salah, nama resmi, atau objek analisis.
 - Bentuk baku yang meragukan ditandai `[PERLU VERIFIKASI BENTUK BAKU]`; jangan menetapkan aturan universal dari satu contoh.

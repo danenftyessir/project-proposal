@@ -25,11 +25,11 @@ What differs from the official file, on purpose:
 
 Modules are derived views: edits made in a module do not flow back into the official file.
 """
-import argparse, copy, difflib, glob, html, os, re, shutil, subprocess, sys, tempfile, zipfile
+import argparse, copy, difflib, glob, hashlib, html, os, re, shutil, subprocess, sys, tempfile, zipfile
 from lxml import etree
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-MASTER = os.path.join(ROOT, "bab2", "13523136-Proposal-IF4091-Capstone-Individu-2026-Draft-Bab2.docx")
+MASTER = os.path.join(ROOT, "13523136-Proposal-IF4091-Capstone-Individu-2026-Draft-Bab2.docx")
 MD_DIR = os.path.join(ROOT, "bab2")
 OUT_DIR = os.path.join(ROOT, "modular")
 OUT_PREFIX = "13523136-Proposal-IF4091-Capstone-Individu-2026-Modular-Bab-"
@@ -259,6 +259,119 @@ def repair_refs(refs):
         set_text(r, re.sub(r"^(?:cl|ed):", "", run_text(r)))
     return sorted(refs, key=lambda p: re.sub(r"[^a-z0-9 ]", "", text_of(p).lower()))
 
+BAB1_MD = os.path.join(ROOT, "bab1", "Bab_I_Draft.md")
+BAB1_SHA12 = "71e7683087e6"          # DRAF 24; brief A01 2026-11-10. Ganti hanya bila brief baru menyebut hash baru.
+BAB1_MARKS = {True: 60, False: 54}   # editorial: semua penanda; bersih: tanpa 6 penanda BENTUK BAKU
+BODY_STRIP = ("b", "bCs", "i", "iCs", "u", "highlight", "vertAlign")
+# Bab I cites exactly these entries (bab1/Bab_I_Draft.md, Catatan kerja "Sumber yang dirujuk"); prefixes of the official entries
+BAB1_REFS = ("Dietrich, N.", "Jaganathan, G. S.", "Kementerian Kesehatan Republik Indonesia. (2021)",
+             "Kementerian Kesehatan Republik Indonesia. (2022b)", "Kementerian Kesehatan Republik Indonesia. (2024)",
+             "Li, Y., Lv, M.", "Simbolon, F.", "Skrabic, R.", "Susilo, D.", "Zeba, M.", "Zhang, H., Vithanage")
+BAB1_DROP_CLEAN = re.compile(r"\s*\[PERLU VERIFIKASI BENTUK BAKU:[^\]]*\]")
+
+def bab1_blocks():
+    """[(kind, text)] of the "## Naskah" part of bab1/Bab_I_Draft.md: ("h1", ...), ("h2", title), ("p", text)."""
+    raw = open(BAB1_MD, "rb").read()
+    got = hashlib.sha256(raw).hexdigest()[:12]
+    if got != BAB1_SHA12:
+        sys.exit(f"bab1/Bab_I_Draft.md: sha256 {got} != {BAB1_SHA12} (draft changed since the brief); stop")
+    md = raw.decode("utf8").replace("\r\n", "\n")
+    if "\n## Naskah\n" not in md or "\n## Catatan kerja" not in md:
+        sys.exit("bab1/Bab_I_Draft.md: '## Naskah' or '## Catatan kerja' heading not found")
+    naskah = md.split("\n## Naskah\n", 1)[1].split("\n## Catatan kerja", 1)[0].strip()
+    if naskah.endswith("---"):
+        naskah = naskah[:-3].strip()
+    out = []
+    for b in re.split(r"\n\s*\n", naskah):
+        b = " ".join(l.strip() for l in b.strip().split("\n"))
+        if not b:
+            continue
+        if b.startswith("#"):
+            m = re.fullmatch(r"## (?:BAB I PENDAHULUAN|I\.\d (.+))", b)
+            assert m, "unexpected heading in Bab I Naskah: " + b
+            out.append(("h1", "PENDAHULUAN") if m.group(1) is None else ("h2", m.group(1)))
+        else:
+            assert not b.startswith(("|", "- ", ">", "$$", "1. ")), "unsupported block in Bab I Naskah: " + b[:60]
+            out.append(("p", b))
+    assert [k for k, _ in out].count("h1") == 1 and out[0][0] == "h1" and [k for k, _ in out].count("h2") == 5
+    return out
+
+def bab1_run(text, base_rpr, italic=False, highlight=False, strip=BODY_STRIP):
+    rpr = copy.deepcopy(base_rpr) if base_rpr is not None else etree.Element(q("rPr"))
+    for tag in strip:
+        for e in rpr.findall(q(tag)):
+            rpr.remove(e)
+    if italic:
+        early = {q(t) for t in ("rStyle", "rFonts", "b", "bCs")}
+        at = next((k for k, e in enumerate(rpr) if e.tag not in early), len(rpr))
+        rpr.insert(at, etree.Element(q("i"))); rpr.insert(at + 1, etree.Element(q("iCs")))
+    if highlight:
+        later = {q(t) for t in ("u", "effect", "bdr", "shd", "fitText", "vertAlign", "rtl", "cs", "em", "lang", "eastAsianLayout", "specVanish", "oMath")}
+        at = next((k for k, e in enumerate(rpr) if e.tag in later), len(rpr))
+        hl = etree.Element(q("highlight")); hl.set(q("val"), "yellow"); rpr.insert(at, hl)
+    r = etree.Element(q("r")); r.append(rpr)
+    t = etree.SubElement(r, q("t")); t.text = text; t.set(XML_SPACE, "preserve")
+    return r
+
+def bab1_chunk(old, editorial, root):
+    """New bab I chunk: official Heading1 kept; Heading2/body paragraphs cloned from the official bab I paragraphs."""
+    assert style_of(old[0]) == "Heading1" and squash(text_of(old[0])) == "PENDAHULUAN"
+    blocks = bab1_blocks()                          # hash check happens here, before anything is built
+    h2 = next((p for p in old if style_of(p) == "Heading2"), None)
+    body = next((p for p in old if etree.QName(p).localname == "p" and not style_of(p).startswith(("Heading", "Caption", "Title", "TOC"))
+                 and len(text_of(p)) > 80 and p.find(q("pPr") + "/" + q("numPr")) is None and not has_sect(p)), None)
+    if h2 is None or body is None:
+        sys.exit("Bab I: no Heading2 or no body paragraph (>80 chars, not a list) in the official bab I to copy the format from; stop")
+    first_run = lambda p: next((r for r in p.iter(q("r")) if r.find(q("t")) is not None), None)
+    if first_run(body) is None or first_run(h2) is None:
+        sys.exit("Bab I: template paragraph has no text run; stop")
+    body_ppr, body_rpr = body.find(q("pPr")), first_run(body).find(q("rPr"))
+    h2_ppr, h2_rpr = h2.find(q("pPr")), first_run(h2).find(q("rPr"))
+    nid = max(int(b.get(q("id"))) for b in root.iter(q("bookmarkStart"))) + 1
+    names = {b.get(q("name")) for b in root.iter(q("bookmarkStart"))}
+    out, n_mark = [old[0]], 0
+    for kind, text in blocks[1:]:
+        p = etree.Element(q("p"))
+        if kind == "h2":
+            p.append(copy.deepcopy(h2_ppr))
+            name = f"_Toc9{nid:08d}"
+            assert name not in names, "bookmark name clash: " + name
+            names.add(name)
+            bs = etree.SubElement(p, q("bookmarkStart")); bs.set(q("id"), str(nid)); bs.set(q("name"), name)
+            p.append(bab1_run(text, h2_rpr, strip=("highlight",)))   # heading keeps its own bold/caps formatting
+            be = etree.SubElement(p, q("bookmarkEnd")); be.set(q("id"), str(nid)); nid += 1
+        else:
+            if not editorial:
+                text = BAB1_DROP_CLEAN.sub("", text)
+            p.append(copy.deepcopy(body_ppr))
+            for seg in MARK.split(text):
+                if not seg:
+                    continue
+                hl = editorial and bool(MARK.fullmatch(seg)); n_mark += bool(MARK.fullmatch(seg))
+                for k, s in enumerate(re.split(r"\*([^*]+)\*", seg)):
+                    if s:
+                        assert "*" not in s, "stray asterisk in Bab I: " + s[:60]
+                        p.append(bab1_run(s, body_rpr, italic=k % 2 == 1, highlight=hl))
+        out.append(p)
+    kept = [p for p in old[1:] if has_sect(p)]      # keep any section break of the official bab I
+    if any(text_of(p).strip() for p in kept):
+        sys.exit("Bab I: a section-break paragraph of the official bab I carries text; stop (would leak old content)")
+    out += kept
+    if n_mark != BAB1_MARKS[editorial]:
+        sys.exit(f"Bab I ({'editorial' if editorial else 'clean'}): {n_mark} markers, expected {BAB1_MARKS[editorial]}; stop")
+    print(f"Bab I ({'editorial' if editorial else 'clean'}): {len(out) - 1} paragraphs, {n_mark} markers")
+    return out
+
+def bab1_refs(refs):
+    """The official Daftar Pustaka entries that Bab I cites; stop (do not guess) if any is missing or ambiguous."""
+    out = []
+    for key in BAB1_REFS:
+        hit = [p for p in refs if squash(text_of(p)).startswith(key)]
+        if len(hit) != 1:
+            sys.exit(f"Bab I reference '{key}': {len(hit)} matches in the official Daftar Pustaka")
+        out.append(hit[0])
+    return sorted(out, key=lambda p: re.sub(r"[^a-z0-9 ]", "", text_of(p).lower()))
+
 def build_module(parts, ci, editorial, pages, pairs):
     """Bytes of the module .docx for bab ROMAN[ci]; `pages` maps list keys to measured page labels."""
     numeral = ROMAN[ci]
@@ -279,6 +392,8 @@ def build_module(parts, ci, editorial, pages, pairs):
         chunk.pop()
     refs, lamp_tail, final_sect = repair_refs(kids[pus + 2:lamp - 1]), kids[lamp:-1], kids[-1]
     assert has_sect(front[-1])
+    if numeral == "I":
+        chunk = bab1_chunk(chunk, editorial, root)
 
     # --- editorial layer (bab II text and its references)
     if editorial and numeral in REFS_IN:
@@ -292,6 +407,11 @@ def build_module(parts, ci, editorial, pages, pairs):
     # --- Daftar Pustaka entries
     if numeral in REFS_IN:
         ref_paras = list(refs)
+        if editorial:
+            ref_paras.insert(0, placeholder("[Format sitasi sementara (penulis-tahun). Menunggu pedoman program studi. "
+                                            "Hapus catatan ini setelah format ditetapkan.]", mark=True))
+    elif numeral == "I":
+        ref_paras = bab1_refs(refs)
         if editorial:
             ref_paras.insert(0, placeholder("[Format sitasi sementara (penulis-tahun). Menunggu pedoman program studi. "
                                             "Hapus catatan ini setelah format ditetapkan.]", mark=True))
@@ -435,7 +555,14 @@ def main():
                 pages = measured
             else:
                 print("WARNING: page numbers did not settle for", name)
-            open(os.path.join(OUT_DIR, name), "wb").write(data)
+            dst = os.path.join(OUT_DIR, name)
+            if numeral == "I" and os.path.exists(dst):          # backup before overwrite (brief A01 2026-11-10)
+                bak_dir = os.path.join(ROOT, ".scratch", "backup_modular_bab1")
+                os.makedirs(bak_dir, exist_ok=True)
+                bak = os.path.join(bak_dir, name)
+                if not os.path.exists(bak):                     # never overwrite the first backup
+                    shutil.copy2(dst, bak)
+            open(dst, "wb").write(data)
             print(f"{name}: {npages} halaman, nomor halaman daftar stabil setelah {attempt + 1} putaran")
     shutil.rmtree(tmp, ignore_errors=True)
 

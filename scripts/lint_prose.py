@@ -38,6 +38,17 @@ WORD_RULES = [
     (r"\bdaripada pada\b|\bnamun tetapi\b|\bsehingga oleh karena itu\b", "LOW", "kalimat", "pleonasme/konjungsi ganda (§6.7)"),
 ]
 
+# Internal bookkeeping must never reach the manuscript body (a03 rule "naskah siap-kumpul").
+LEAK_RULES = [
+    (r"\bD-\d{1,3}\b", "nomor keputusan (D-xx)"),
+    (r"\bF-A\d{2}-\d{3,4}\b", "nomor temuan (F-Axx-xxxx)"),
+    (r"\bQ-(?:[A-Z]\d?|TEAM|B\d)[-\w]*\b", "nomor pertanyaan terbuka (Q-…)"),
+    (r"\bTSK-\d+\b", "nomor tugas (TSK-…)"),
+    (r"\bDRAF\s*\d+\b", "label draf"),
+    (r"\b(?:usulan penulis|penalaran penulis|brief A01|menurut brief)\b", "bahasa internal agent"),
+]
+MARKER_CAP = 10
+
 SLOP_RULES = [  # §8.5; INFO only, counted per document, a finding only when pervasive.
     (r"\bbukan (?:hanya|sekadar|semata)\b.{0,120}?\b(?:tetapi|melainkan)\b", "ai-slop 01-02", "'bukan hanya... tetapi/melainkan'"),
     (r"\btidak sekadar\b.{0,120}?\bmelainkan\b", "ai-slop 02", "'tidak sekadar... melainkan'"),
@@ -137,6 +148,9 @@ def lint(path, start_heading):
         for pat, sev, cat, note in WORD_RULES:
             for mm in re.finditer(pat, m_line, re.I):
                 hits.append((sev, cat, i, note, mm.group(0)))
+        for pat, note in LEAK_RULES:
+            for mm in re.finditer(pat, m_line):
+                hits.append(("MEDIUM", "bocoran internal", i, note, mm.group(0)))
         for pat, cat, note in SLOP_RULES:
             for mm in re.finditer(pat, m_line, re.I):
                 hits.append(("INFO", cat, i, note, mm.group(0)[:60]))
@@ -193,6 +207,9 @@ def main(argv):
                 print(f"  L{ln}: {note}" + (f" — «{snip}»" if snip else ""))
             if len(group) > max_ex:
                 print(f"  ... +{len(group) - max_ex} lagi")
+        if sum(markers.values()) > MARKER_CAP:
+            print(f"[MEDIUM] penanda: {sum(markers.values())} > pagu {MARKER_CAP} per bab; konsolidasikan topik tertunda")
+            rc = max(rc, 1)
         if markers:
             tot = sum(markers.values())
             print(f"Penanda editorial tersisa: {tot} ({', '.join(f'{k} {v}' for k, v in markers.items())})"

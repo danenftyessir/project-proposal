@@ -1,5 +1,7 @@
 # Arsitektur Orkestrasi 13 Fixed Agents — Proposal Tugas Akhir Capstone IF4091
 
+> **Pembaruan 11 Nov 2026 (menggantikan bagian yang bertentangan di bawah):** roster kini **12 agent** (A11 digabung ke A07 dengan `focus: akademik|teknis`; nomor A11 tidak dipakai lagi); batas revisi otomatis **1 siklus** (mengganti batas 2 pada D-06); **tidak ada agent yang menjalankan `git add`/`commit`/`push` dan gate G3 dihapus** (Git sepenuhnya urusan pengguna; A13 hanya membaca status Git); `scripts/lint_prose.py` dijalankan lebih dulu oleh A09. Sesi biasa (tanpa agent) adalah bawaan; orkestrasi lewat `claude --agent a01-orchestrator`. Diagram terkini: `memory/agent.mmd`. Rujukan A11, G3, dan 13 agent di bawah bersifat historis.
+
 | Atribut | Nilai |
 |---|---|
 | Versi dokumen | 0.6 (catatan implementasi Phase 3; changelog di Lampiran B) |
@@ -99,11 +101,10 @@ flowchart TB
         A06[A06 Cross-Proposal]
     end
     subgraph QA[QA Team — independen]
-        A07[A07 QA Academic]
+        A07[A07 QA Academic + Technical]
         A08[A08 QA Citation]
         A09[A09 QA Editorial]
         A10[A10 QA Structure]
-        A11[A11 QA Technical]
         A12[A12 QA Integrity]
     end
     A13[A13 Project Memory Manager]
@@ -115,7 +116,7 @@ flowchart TB
     end
     SK[[Project skills<br/>agent-contract, if4091-rules-map,<br/>sesi-mulai, sesi-tutup]]
     HK[[Hooks<br/>SessionStart: check_memory.py<br/>PreToolUse: guard.py]]
-    GH[(GitHub origin)]
+    GH[(GitHub origin<br/>diurus pengguna)]
     CM[(claude-mem<br/>recall saja)]
 
     U <--> G
@@ -125,7 +126,7 @@ flowchart TB
     A03 -- tulis Markdown<br/>dalam scope --> PROP
     A02 & A04 & A05 & A06 & QA -. baca saja .-> PROP & SRC
     A13 -- satu-satunya penulis --> MEM
-    A13 -- commit/push setelah izin --> GH
+    U -. commit/push sendiri .-> GH
     SK -. preload .-> SPEC & QA & A13
     HK -. menjaga setiap tool call .-> CC & SPEC & QA & A13
     A13 -. recall, wajib diverifikasi .-> CM
@@ -582,7 +583,7 @@ flowchart LR
     QA --> G2{G2 penerimaan}
     G2 -- terima --> C[A13 task closing]
     G2 -- revisi --> W
-    C --> E[Session closing §12.4<br/>+ gate G3]
+    C --> E[Session closing §12.4<br/>tanpa Git oleh agent]
 ```
 
 **Readiness:**

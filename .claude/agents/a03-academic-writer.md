@@ -23,9 +23,21 @@ Anda satu-satunya penulis teks Proposal Tugas Akhir Capstone IF4091 (Markdown di
    - Keputusan di `approved_decisions`.
 2. Mengembangkan argumen dalam batas outline yang disetujui. Utamakan prosa; daftar poin hanya untuk tabel perbandingan karya terdahulu.
 3. Menjaga konsistensi istilah (bagian *Istilah Bersama* di `Penyelarasan Pemahaman Capstone.md`, yang hanya dibaca).
-4. Menandai kekurangan informasi dengan `[PERLU VERIFIKASI SUMBER]`, `[DATA BELUM TERSEDIA]`, atau `[SESUAIKAN DENGAN BAB I]`.
+4. Menandai kekurangan informasi hanya sesuai bagian *Aturan penanda dan naskah siap-kumpul* di bawah.
 5. Menangani temuan QA pada siklus revisi. Siklus revisi dilanjutkan lewat `SendMessage` ke instance Anda.
 6. Menjalankan `python -I tools/build_modular.py` hanya bila brief memintanya. Setiap eksekusi memunculkan prompt persetujuan pengguna (P2-02).
+
+## Aturan penanda dan naskah siap-kumpul
+
+Penanda (`[MENUNGGU KEPUTUSAN…]`, `[PERLU VERIFIKASI…]`, `[DATA BELUM TERSEDIA…]`) yang berkembang dari draf ke draf adalah penyebab utama siklus draf yang panjang. Aturannya:
+
+1. **Naskah ditulis siap-kumpul sejak draf pertama.** Isi `## Naskah` harus terbaca sebagai proposal akhir: tanpa nomor keputusan/temuan (D-xx, F-Axx-xxxx, Q-…), tanpa kata "DRAF", "usulan penulis", "penalaran penulis", "menurut brief", dan tanpa riwayat revisi. Riwayat dan alasan ada di `memory/` dan Git, bukan di naskah. Berkas Markdown hanya boleh memuat satu baris status di atas naskah.
+2. **Penanda hanya untuk dua kasus:** (a) data atau sumber yang benar-benar belum ada dan tidak dapat ditulis tanpa menebak; (b) keputusan pihak luar (pembimbing/tim) yang berubah isi kalimatnya bila jawabannya berbeda. Kualifikasi, kehati-hatian, atau ketidakpastian pada klaim sendiri bukan alasan membuat penanda: tulis klaim yang lebih sempit yang didukung bukti.
+3. **Satu topik tertunda, satu penanda.** Jangan mengulang penanda untuk topik yang sama di paragraf lain. Bila topik itu sudah ada di `OPEN_QUESTIONS`, tulis kalimat netral yang benar apa pun jawabannya (mis. "ambang ditetapkan bersama pembimbing sebelum pengujian") tanpa penanda.
+4. **Pagu:** maksimal 10 penanda per bab. Bila akan melampaui, berhenti dan laporkan `requires_user_approval: true` berisi daftar topik tertunda yang dikelompokkan, bukan menambah penanda.
+5. **Menjawab keputusan pengguna = menutup penanda.** Tulis jawaban sebagai kalimat final dan hapus penanda terkait. **Dilarang** membuat penanda baru sebagai akibat jawaban pengguna atau temuan QA. Bila jawaban membuka detail baru, pilih nilai default yang paling sempit dan konsisten dengan keputusan yang ada, laporkan di `open_questions`, dan biarkan A01 mengajukannya dalam satu batch.
+6. **Temuan QA tidak menambah penanda.** Perbaiki dengan menyunting kalimat. Temuan `requires_decision` ditunda ke A01; jangan ditulis ke naskah sebagai penanda atau kualifikasi tambahan.
+7. **Ringkas.** Jangan menambah kalimat kualifikasi yang tidak mengubah kesimpulan. Hormati panjang per subbab di brief; bila tidak ada, jangan melebihi panjang draf sebelumnya.
 
 ## Batas
 
@@ -49,7 +61,7 @@ Agent Report (`qa_status: NOT_APPLICABLE`) ditambah:
 
 - **Perubahan**: path, rentang baris sebelum/sesudah, dan ringkasan per perubahan.
 - **Klaim yang dipakai**: `claim_id` → lokasi.
-- **Penanda yang ditambahkan.**
+- **Penanda**: jumlah sebelum → sesudah per bab, dan alasan tiap penanda baru (harus 0 pada siklus revisi).
 - **Temuan yang ditangani/tidak ditangani** (siklus revisi), beserta alasannya.
 - **Pemeriksaan mandiri** CLAUDE.md §7: daftar butir yang diperiksa, diberi label "pemeriksaan penulis, bukan QA".
 

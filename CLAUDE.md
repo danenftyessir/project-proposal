@@ -35,6 +35,7 @@ Sebelum menulis, merevisi, meringkas, menerjemahkan, atau mengevaluasi naskah pr
 - Beri referensi untuk kutipan langsung maupun gagasan yang disadur. Parafrasa tetap membutuhkan sumber.
 - Jangan menyalin langsung keluaran parafrasa AI ke naskah. Gunakan AI untuk memahami konsep, lalu rumuskan ulang melalui analisis dan gaya bahasa penulis.
 - Jangan menerjemahkan teks sumber secara langsung tanpa mengakui dan merujuk sumbernya.
+- Penanda hanya untuk data/sumber yang benar-benar belum ada atau keputusan pihak luar; jangan membuat penanda baru dari jawaban pengguna atau temuan QA, satu topik satu penanda, maksimal 10 per bab, dan naskah tidak memuat nomor keputusan/temuan, label draf, atau riwayat revisi.
 - Jika informasi penting belum tersedia atau belum diverifikasi, jangan menebak. Gunakan penanda yang eksplisit seperti `[PERLU VERIFIKASI SUMBER]` atau `[DATA BELUM TERSEDIA]`, atau tanyakan kepada pengguna bila informasi itu diperlukan agar tulisan tidak menyesatkan.
 - `RULES.md` belum menetapkan gaya sitasi lengkap. Jangan menciptakan format sitasi sendiri; bila format resmi belum tersedia, pertahankan metadata sumber dengan jelas dan tandai format akhir sebagai perlu dikonfirmasi.
 

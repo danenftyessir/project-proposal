@@ -1,5 +1,7 @@
 # Spesifikasi 13 Fixed Agents — Proposal Tugas Akhir Capstone IF4091
 
+> **Pembaruan 11 Nov 2026 (menggantikan bagian yang bertentangan di bawah):** roster kini **12 agent** (A11 digabung ke A07 dengan `focus: akademik|teknis`; nomor A11 tidak dipakai lagi); batas revisi otomatis **1 siklus** (mengganti batas 2 pada D-06); **tidak ada agent yang menjalankan `git add`/`commit`/`push` dan gate G3 dihapus** (Git sepenuhnya urusan pengguna; A13 hanya membaca status Git); `scripts/lint_prose.py` dijalankan lebih dulu oleh A09. Sesi biasa (tanpa agent) adalah bawaan; orkestrasi lewat `claude --agent a01-orchestrator`. Diagram terkini: `memory/agent.mmd`. Rujukan A11, G3, dan 13 agent di bawah bersifat historis.
+
 | Atribut | Nilai |
 |---|---|
 | Versi dokumen | 0.4 (implementasi Phase 3; changelog di Lampiran) |
@@ -102,11 +104,11 @@ flowchart LR
     A02 -- bukti terverifikasi --> A01
     A01 -- brief + bukti + keputusan --> A03
     A03 -- naskah --> A01
-    A01 -- artefak saja --> A07 & A08 & A09 & A10 & A11 & A12
+    A01 -- artefak saja --> A07 & A08 & A09 & A10 & A12
     A04 -- pertanyaan --> A01
     A05 -- serangan argumen --> A01
     A06 -- konflik lintas dokumen --> A01
-    A07 & A08 & A09 & A10 & A11 & A12 -- temuan --> A01
+    A07 & A08 & A09 & A10 & A12 -- temuan --> A01
     A01 -- approval_evidence + hasil --> A13
 ```
 
@@ -133,7 +135,7 @@ Semua panah melewati A01 (§A-5.1). Tidak ada aliran langsung antaragent.
 | 11 | Invocation conditions | Sesi yang dibuka dengan `claude --agent a01-orchestrator`, atau `/orkestrasi` pada fallback (D-01) |
 | 12 | Dependencies | Semua agent lain; hook `SessionStart`; skill `sesi-mulai` dan `sesi-tutup` |
 | 13 | Handoff protocol | Menetapkan `handoff_to` final dan alasannya di brief berikutnya; mengirim temuan relevan saja (bukan laporan mentah) ke agent berikutnya; memakai `SendMessage` untuk siklus revisi dan wawancara, dengan fallback *revision packet* (§A-5.5) |
-| 14 | Approval requirements | Wajib Approval Request untuk L2/L3; G2 untuk penerimaan hasil; G3 untuk Git. Menerapkan aturan penafsiran jawaban (§A-9.4) |
+| 14 | Approval requirements | Wajib Approval Request untuk L2/L3; G2 untuk penerimaan hasil (G3 dihapus 11 Nov 2026; Git urusan pengguna). Menerapkan aturan penafsiran jawaban (§A-9.4) |
 | 15 | Failure handling | Retry operasional sekali per agent; pecah tugas bila konteks terlalu besar; eskalasi bila siklus habis, temuan bertentangan, hook memblokir tindakan yang diperlukan, atau readiness `NOT_READY` (§A-11) |
 | 16 | Optional skills | `sesi-mulai`, `sesi-tutup` (project skill). Tidak memakai skill eksternal |
 
@@ -683,7 +685,7 @@ color: orange
 | 11 | Invocation conditions | Awal sesi bila readiness ≠ `READY`; setiap penutupan tugas (G2 diterima); penutupan sesi; R4 (mencatat konflik); R9 |
 | 12 | Dependencies | `scripts/check_memory.py`, `scripts/check_staged.py`, `sha256sum`, Git, hook `log_run.py` (jejak mentah Run Log) |
 | 13 | Handoff protocol | Konflik dan item `NOT_READY` ke A01 → pengguna. Hasil verifikasi push ke A01 |
-| 14 | Approval requirements | Keputusan apa pun hanya dicatat dengan bukti. Commit dan push hanya setelah G3, dan prompt `ask` muncul untuk `git commit`/`git push` (T-14) |
+| 14 | Approval requirements | Keputusan apa pun hanya dicatat dengan bukti. Tidak menjalankan `git add`/`commit`/`push` (dihapus 11 Nov 2026); hanya membaca status Git |
 | 15 | Failure handling | Hash tidak cocok: perbarui Artifact Map hanya bila perubahan artefak tercatat di `TASK_TRACKER`; bila tidak, tandai `PENDING_VERIFICATION` dan laporkan. Git gagal atau *diverged*: berhenti dan laporkan, tanpa `stash`/`reset`/`rebase`. `check_memory.py --strict` gagal setelah penutupan: jangan commit, dan laporkan |
 | 16 | Optional skills | `sesi-tutup` (prosedur). claude-mem sebagai recall saja |
 
@@ -814,7 +816,7 @@ Ini satu-satunya tempat izin tulis, pembatasan baca, dan allowlist Bash per agen
     "a09-qa-editorial": {"write": [], "bash": ["python scripts/lint_prose.py"]},
     "a10-qa-structure": {"write": [".scratch/**"], "bash": ["python scripts/extract_text.py", "pdftotext", "pdfinfo"]},
     "a12-qa-integrity": {"write": [".scratch/**"], "bash": ["python scripts/extract_text.py", "pdftotext", "pdfinfo", "soffice --headless --convert-to pdf --outdir .scratch", "python <SKILL_DIR:docx>/scripts/office/validate.py", "python <SKILL_DIR:docx>/scripts/office/unpack.py", "mkdir", "cp"], "bash_dest": [".scratch/**"], "skill_scripts": ["docx/scripts/office/validate.py", "docx/scripts/office/unpack.py"]},
-    "a13-memory-manager": {"write": ["memory/**", ".scratch/**"], "bash": ["git status", "git diff", "git log", "git show", "git fetch", "git ls-remote", "git rev-parse", "git merge-tree", "git branch --show-current", "git worktree list", "git describe", "git show-ref", "git merge-base", "git cat-file", "git ls-files", "git ls-tree", "git hash-object", "git add --", "git commit -m", "git push origin", "python scripts/check_memory.py", "python scripts/check_staged.py", "sha256sum"]}
+    "a13-memory-manager": {"write": ["memory/**", ".scratch/**"], "bash": ["git status", "git diff", "git log", "git show", "git fetch", "git ls-remote", "git rev-parse", "git merge-tree", "git branch --show-current", "git worktree list", "git describe", "git show-ref", "git merge-base", "git cat-file", "git ls-files", "git ls-tree", "git hash-object", "python scripts/check_memory.py", "python scripts/check_staged.py", "sha256sum"]}
   }
 }
 ```

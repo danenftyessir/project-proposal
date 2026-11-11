@@ -1,10 +1,10 @@
 ---
 file: EVIDENCE_REGISTRY
-revision: 4
+revision: 6
 status: PENDING_VERIFICATION
-updated: 2026-11-09
-updated_by: a13-memory-manager
-based_on_commit: c056d20
+updated: 2026-11-12
+updated_by: claude-sesi-biasa (atas permintaan pengguna; bukan A13)
+based_on_commit: a4063ae
 ---
 
 # Evidence Registry
@@ -123,3 +123,5 @@ Dibaca dari `source/16_Sistem_Hibrida_Aturan_dan_AI/`. Halaman = halaman cetak. 
 | H-01 | I.1 p20 (penanda hibrida) | Domingues (Nuno Soares Domingues, IJMI 206 (2026) 106144, doi:10.1016/j.ijmedinf.2025.106144): sistem berbasis aturan, "hybrid-ready rather than hybrid-implemented"; 1.236 aturan IF-THEN; n=10 laporan kasus; tanpa LLM; tidak menguji kombinasi | PDF di folder 16 (nama berkas tidak dicatat) | 2 (kutipan); lainnya lihat catatan | TERVERIFIKASI (a02 saja) | Tidak ditemukan konsistensi dokumen medis. Angka hasil tidak konsisten antarhalaman (hlm. 1 konkordansi 0,80 / F1 0,80; hlm. 5 lulus 4 dari 10 (40%), 6 dari 10 gagal; hlm. 7 80%; hlm. 5 §3.4 60% (3 dari 10)); jangan kutip angka tanpa menyebut inkonsistensi (F-A02-0203, INFO) |
 | H-02 | I.1 p20 | Ijadi Maghsoodi dkk. (Health Policy and Technology 15 (2026) 101292, doi:10.1016/j.hlpt.2026.101292): tinjauan naratif kritis 101 sumber; argumen konseptual dan trade-off hibrida; tanpa metrik sendiri | PDF di folder 16 (nama berkas tidak dicatat) | 2, 4, 5, 6, 7, 9, 10 | TERVERIFIKASI (a02 saja); sebagai argumen tinjauan, bukan bukti uji | Rumusan "might" (hlm. 2 "neither approach might be sufficient"; hlm. 9 "symbolic structure is not optional"). Hlm. 10 menegaskan perbandingan hibrida vs asisten tanpa batasan belum ada. Tidak dimasukkan telaah menurut D-67 |
 | H-03 | I.1 p20; P-6 | Tidak ada sumber (di antara yang dibaca a02) yang menguji kombinasi aturan+LLM pada pemeriksaan dokumen | tidak ada di `source/` | — | TIDAK DIDUKUNG (kekosongan) | P-6 tetap BELUM DIVERIFIKASI. F-A02-0201 (kalimat "tidak satu pun sumber ..."), F-A02-0202 (path INDEKS keliru) |
+
+Catatan rekonsiliasi 2026-11-12: tidak ada bukti baru dicatat. Verifikasi halaman yang tercatat di sini mengacu pada sumber di `source/` dan tidak otomatis berlaku untuk kalimat docx resmi yang baru; klaim Bab II docx belum diperiksa a02/a08 (pemeriksaan DRAFT 6 TSK-055 mengacu naskah Markdown lama).

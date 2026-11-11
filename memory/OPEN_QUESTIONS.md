@@ -1,10 +1,10 @@
 ---
 file: OPEN_QUESTIONS
-revision: 50
+revision: 54
 status: CURRENT
-updated: 2026-11-10
-updated_by: a13-memory-manager
-based_on_commit: fd87b6d
+updated: 2026-11-12
+updated_by: claude-sesi-biasa (atas permintaan pengguna; bukan A13)
+based_on_commit: a4063ae
 ---
 
 # Open Questions
@@ -21,8 +21,9 @@ affected: [A03, A08, bab2/Bab_II_Revisi_Notulensi.md]
 class: L3
 pic: Pengguna
 ask_to: Tim / pembimbing
-status: MENUNGGU ANGGOTA
-updated: 2026-11-09
+status: DIPUTUSKAN → D-113
+closed_reason: 'APA sementara (konfirmasi tim/pembimbing/prodi belum ada). Status sebelumnya: MENUNGGU ANGGOTA'
+updated: 2026-11-12
 refs: [D-11, F-A08-0004, F-A08-0005, F-A08-0013, D-80]
 note_2026-11-09: 'USUL PENGGUNA APA (D-80, lingkup terbatas; BUKAN keputusan final): menunggu tim dan pembimbing; konfirmasi pedoman prodi tetap diperlukan; naskah belum diubah. Fakta (laporan A01/a10 TSK-115, PARTIAL, qa BLOCKED; belum diverifikasi A13 ke berkas): templat tidak menetapkan gaya sitasi/format Daftar Pustaka di teks badan, hanya empat contoh entri penulis-tahun alfabetis tanpa nomor, tidak dilabeli aturan; draf Bab II Abizzar (hlm. 8-9, 20-22, dibaca A01) memakai APA adaptasi Indonesia; draf Raihaan belum diperiksa; pedoman prodi di luar templat tidak dicari. Pengamatan a10: templat tidak konsisten internal (acuan "Gambar I.1/Tabel I.1" vs keterangan "II.1").'
 extended: 'Per 2026-11-06 K1 juga menaungi: (1) bentuk sitasi sekunder untuk Muroli dkk. (2020); (2) atribusi dokumen tim Penyelarasan di daftar pustaka; (3) salinan acuan halaman PMK 24/2022 (usulan agent, bukan keputusan: Berita Negara).'
@@ -189,7 +190,8 @@ pic: Abizzar (menurut Penyelarasan)
 ask_to: Tim / RSIA mitra / pembimbing
 status: MENUNGGU ANGGOTA
 updated: 2026-11-09
-refs: [D-90, D-91, D-92, D-94, D-97]
+refs: [D-115]
+note_D-115: 'Pembaruan 2026-11-12: D-90, D-91, D-92, D-94, D-97 (rujukan lama butir ini) ditandai SUPERSEDED sebagian oleh D-115 karena teks DRAF 24 digantikan docx resmi; butir tim di Penyelarasan tetap MENUNGGU ANGGOTA.'
 note_D-87_97: 'Pembaruan 2026-11-09 (TSK-142): pengguna memutuskan (lingkup terbatas; BUKAN keputusan tim/pembimbing/RSIA) pada beberapa butir yang menyentuh Q-TEAM: butir 4 → D-91 (rawat jalan terbatas = cakupan bersyarat; definisi tetap tidak ada); butir 5 → D-90 (penguncian, satuan episode rawat inap; keterangan RSIA belum terverifikasi); butir 6 → D-97 (satu episode = satu unit, pasangan ibu-bayi tidak dipisah); butir 9 → D-92 (judul baru, ditandai usulan); butir tim lain (F-A11-0023..0027, F-A05-0150) → D-94 (paket usulan penulis). Q-TEAM TETAP MENUNGGU ANGGOTA: tim belum menjawab.'
 ```
 
@@ -310,8 +312,9 @@ question: Bentuk baku menurut KBBI untuk capstone (tegak/miring), diinput/pengin
 affected: [Bab I, Bab II]
 class: L4
 pic: Pengguna
-status: TERBUKA
-updated: 2026-11-06
+status: DITUTUP DENGAN ALASAN
+closed_reason: 'D-115 (2026-11-12): teks Bab I DRAF 24 yang menjadi objeknya digantikan docx resmi; Bab I dibiarkan apa adanya oleh pengguna. Status sebelumnya: TERBUKA'
+updated: 2026-11-12
 refs: [F-A09-0006, F-A09-0017, F-A09-0018]
 ```
 
@@ -322,8 +325,9 @@ affected: [Bab I]
 class: L3
 pic: Pengguna
 ask_to: Tim
-status: MENUNGGU ANGGOTA
-updated: 2026-11-06
+status: DITUTUP DENGAN ALASAN
+closed_reason: 'D-115 (2026-11-12): teks Bab I DRAF 24 yang menjadi objeknya digantikan docx resmi; Bab I dibiarkan apa adanya oleh pengguna. Status sebelumnya: MENUNGGU ANGGOTA'
+updated: 2026-11-12
 refs: [F-A07-0001, D-19]
 ```
 
@@ -334,8 +338,9 @@ affected: [Bab I, A06]
 class: L3
 pic: Pengguna
 ask_to: Tim
-status: MENUNGGU ANGGOTA
-updated: 2026-11-06
+status: DITUTUP DENGAN ALASAN
+closed_reason: 'D-115 (2026-11-12): teks Bab I DRAF 24 yang menjadi objeknya digantikan docx resmi; Bab I dibiarkan apa adanya oleh pengguna. Status sebelumnya: MENUNGGU ANGGOTA'
+updated: 2026-11-12
 refs: [D-25, F-A07-0005]
 ```
 
@@ -346,8 +351,9 @@ affected: [Bab I]
 class: L3
 pic: Pengguna
 ask_to: Pembimbing
-status: MENUNGGU PEMBIMBING
-updated: 2026-11-06
+status: DITUTUP DENGAN ALASAN
+closed_reason: 'D-115 (2026-11-12): teks Bab I DRAF 24 yang menjadi objeknya digantikan docx resmi; Bab I dibiarkan apa adanya oleh pengguna. Status sebelumnya: MENUNGGU PEMBIMBING'
+updated: 2026-11-12
 refs: []
 ```
 
@@ -358,8 +364,9 @@ affected: [Bab II]
 class: L3
 pic: Pengguna
 ask_to: Pembimbing
-status: TERBUKA
-updated: 2026-11-06
+status: DITUTUP DENGAN ALASAN
+closed_reason: 'D-115 (2026-11-12): teks Bab I DRAF 24 yang menjadi objeknya digantikan docx resmi; Bab I dibiarkan apa adanya oleh pengguna. Status sebelumnya: TERBUKA'
+updated: 2026-11-12
 refs: [F-A10-0010]
 ```
 
@@ -370,8 +377,9 @@ affected: [Bab I, Bab II]
 class: L3
 pic: Pengguna
 ask_to: Tim / RSIA mitra
-status: MENUNGGU ANGGOTA
-updated: 2026-11-08
+status: DITUTUP DENGAN ALASAN
+closed_reason: 'D-115 (2026-11-12): teks Bab I DRAF 24 yang menjadi objeknya digantikan docx resmi; Bab I dibiarkan apa adanya oleh pengguna. Status sebelumnya: MENUNGGU ANGGOTA'
+updated: 2026-11-12
 refs: [D-21, Q-TEAM, F-A07-0019, F-A04-0010, F-A04-0011, D-76]
 note_2026-11-09_TSK-116: 'Tetap terbuka (fakta RSIA via Abizzar/tim). A01 melaporkan Penyelarasan baris 51 dan 350 menyatakan bentuk dokumen rawat jalan belum dipastikan; baris 13, 49, 279 memasukkan rawat jalan terbatas pada CPPT dan resume atau padanannya (belum diverifikasi A13 ke berkas). Usulan pengguna D-76 bergantung pada butir ini.'
 note_D-91: 'Pembaruan 2026-11-09 (TSK-142): D-91 (pengguna, lingkup terbatas; BUKAN keputusan tim/RSIA): "rawat jalan terbatas" di I.4 dinyatakan sebagai cakupan bersyarat tanpa definisi baru; terkait D-88 (penilaian ketersediaan). Batas operasional dan bentuk dokumen rawat jalan RSIA tetap tidak diketahui; Q-TEAM butir 4 dan butir ini TETAP MENUNGGU ANGGOTA.'
@@ -385,8 +393,9 @@ affected: [Bab I]
 class: L3
 pic: Pengguna
 ask_to: Tim
-status: TERBUKA
-updated: 2026-11-06
+status: DITUTUP DENGAN ALASAN
+closed_reason: 'D-115 (2026-11-12): teks Bab I DRAF 24 yang menjadi objeknya digantikan docx resmi; Bab I dibiarkan apa adanya oleh pengguna. Status sebelumnya: TERBUKA'
+updated: 2026-11-12
 refs: [F-A08-0005]
 ```
 
@@ -397,8 +406,9 @@ affected: [Bab I, A06, A11]
 class: L3
 pic: Pengguna
 ask_to: Tim
-status: MENUNGGU ANGGOTA
-updated: 2026-11-06
+status: DITUTUP DENGAN ALASAN
+closed_reason: 'D-115 (2026-11-12): teks Bab I DRAF 24 yang menjadi objeknya digantikan docx resmi; Bab I dibiarkan apa adanya oleh pengguna. Status sebelumnya: MENUNGGU ANGGOTA'
+updated: 2026-11-12
 refs: [D-30, D-28, Q-TEAM, F-A07-0022]
 ```
 
@@ -412,8 +422,9 @@ question: Susunan Bab II mana yang berlaku, DRAFT 6 (bab2/Bab_II_Revisi_Notulens
 affected: [Bab II]
 class: L4
 pic: Pengguna
-status: TERBUKA
-updated: 2026-11-06
+status: DITUTUP DENGAN ALASAN
+closed_reason: 'D-115 (2026-11-12): teks Bab I DRAF 24 yang menjadi objeknya digantikan docx resmi; Bab I dibiarkan apa adanya oleh pengguna. Status sebelumnya: TERBUKA'
+updated: 2026-11-12
 refs: [Q-B1-e]
 ```
 
@@ -424,8 +435,9 @@ affected: [Bab I, A06]
 class: L3
 pic: Pengguna
 ask_to: Tim
-status: MENUNGGU ANGGOTA
-updated: 2026-11-06
+status: DITUTUP DENGAN ALASAN
+closed_reason: 'D-115 (2026-11-12): teks Bab I DRAF 24 yang menjadi objeknya digantikan docx resmi; Bab I dibiarkan apa adanya oleh pengguna. Status sebelumnya: MENUNGGU ANGGOTA'
+updated: 2026-11-12
 refs: [D-29, D-22, F-A07-0032, F-A07-0037, F-A09-0075]
 ```
 
@@ -436,8 +448,9 @@ affected: [Bab I, A06]
 class: L3
 pic: Pengguna
 ask_to: Tim
-status: MENUNGGU ANGGOTA
-updated: 2026-11-06
+status: DITUTUP DENGAN ALASAN
+closed_reason: 'D-115 (2026-11-12): teks Bab I DRAF 24 yang menjadi objeknya digantikan docx resmi; Bab I dibiarkan apa adanya oleh pengguna. Status sebelumnya: MENUNGGU ANGGOTA'
+updated: 2026-11-12
 refs: [D-22, D-29, D-30, Q-B1-j, F-A06-0001]
 ```
 
@@ -452,8 +465,9 @@ affected: [Bab I]
 class: L3
 pic: Pengguna
 ask_to: Tim
-status: MENUNGGU ANGGOTA
-updated: 2026-11-06
+status: DITUTUP DENGAN ALASAN
+closed_reason: 'D-115 (2026-11-12): teks Bab I DRAF 24 yang menjadi objeknya digantikan docx resmi; Bab I dibiarkan apa adanya oleh pengguna. Status sebelumnya: MENUNGGU ANGGOTA'
+updated: 2026-11-12
 refs: [D-30, Q-B1-j]
 marker: I.3 paragraf 3
 ```
@@ -464,8 +478,9 @@ question: Rujukan maju I.3 paragraf 1 "prosedur pengukurannya diuraikan pada Sub
 affected: [Bab I]
 class: L4
 pic: Pengguna
-status: TERBUKA
-updated: 2026-11-06
+status: DITUTUP DENGAN ALASAN
+closed_reason: 'D-115 (2026-11-12): teks Bab I DRAF 24 yang menjadi objeknya digantikan docx resmi; Bab I dibiarkan apa adanya oleh pengguna. Status sebelumnya: TERBUKA'
+updated: 2026-11-12
 refs: [D-31]
 ```
 
@@ -475,8 +490,9 @@ question: Di mana pengembangan komponen (aturan rule-based dan pemeriksaan AI/NL
 affected: [Bab I]
 class: L3
 pic: Pengguna
-status: TERBUKA
-updated: 2026-11-06
+status: DITUTUP DENGAN ALASAN
+closed_reason: 'D-115 (2026-11-12): teks Bab I DRAF 24 yang menjadi objeknya digantikan docx resmi; Bab I dibiarkan apa adanya oleh pengguna. Status sebelumnya: TERBUKA'
+updated: 2026-11-12
 refs: [D-31, F-A10-0105, D-34]
 ```
 
@@ -491,8 +507,9 @@ affected: [Bab I, I.2, I.3]
 class: L3
 pic: Pengguna
 ask_to: Tim
-status: MENUNGGU ANGGOTA
-updated: 2026-11-09
+status: DITUTUP DENGAN ALASAN
+closed_reason: 'D-115 (2026-11-12): teks Bab I DRAF 24 yang menjadi objeknya digantikan docx resmi; Bab I dibiarkan apa adanya oleh pengguna. Status sebelumnya: MENUNGGU ANGGOTA'
+updated: 2026-11-12
 refs: [D-32, D-29, F-A11-0001, F-A05-0001, F-A06-0006, D-77]
 note_2026-11-09: 'USUL PENGGUNA: union (gabungan semua temuan), D-77 lingkup terbatas; BUKAN keputusan tim, tidak DIPUTUSKAN. Konsekuensi (A01): recall kombinasi tak di bawah komponen terbaik, presisi dapat turun. Menunggu tim.'
 ```
@@ -504,8 +521,9 @@ affected: [Bab I, A06]
 class: L3
 pic: Pengguna
 ask_to: Tim
-status: MENUNGGU ANGGOTA
-updated: 2026-11-06
+status: DITUTUP DENGAN ALASAN
+closed_reason: 'D-115 (2026-11-12): teks Bab I DRAF 24 yang menjadi objeknya digantikan docx resmi; Bab I dibiarkan apa adanya oleh pengguna. Status sebelumnya: MENUNGGU ANGGOTA'
+updated: 2026-11-12
 refs: [D-32, F-A11-0003, F-A06-0006, F-A05-0018]
 ```
 
@@ -516,8 +534,9 @@ affected: [Bab I, I.2]
 class: L3
 pic: Pengguna
 ask_to: Tim / pembimbing
-status: MENUNGGU ANGGOTA
-updated: 2026-11-09
+status: DITUTUP DENGAN ALASAN
+closed_reason: 'D-115 (2026-11-12): teks Bab I DRAF 24 yang menjadi objeknya digantikan docx resmi; Bab I dibiarkan apa adanya oleh pengguna. Status sebelumnya: MENUNGGU ANGGOTA'
+updated: 2026-11-12
 refs: [F-A11-0010, F-A06-0007, D-78, F-A11-0036, F-A05-0155, F-A07-0079, F-A07-0085, F-A07-0086, F-A09-0229]
 note_2026-11-09: 'USUL PENGGUNA: ">=" (selaras tabel Penyelarasan), D-78 lingkup terbatas; BUKAN keputusan tim/pembimbing. Angka ambang tetap tertahan D-19 (dan Q-B1-bg). Naskah masih memakai ">".'
 note_TSK-131: 'Pembaruan 2026-11-09: butir ini kini juga memuat paket F-A11-0036 (operator batas selisih dan saat penetapan; requires_decision), F-A05-0155 (MEDIUM: selisih minimum tak terikat sebelum pengujian; penetap dan bentuk selisih), F-A07-0079 (I.2 tidak mengikat selisih minimum sebelum pengujian). Izin alur DRAF 22 (TSK-130) menyelaraskan I.2 p6 (empat selisih; selisih minimum ditetapkan sebelum pengujian, tanpa angka); itu penyelarasan teks, bukan keputusan operator. Operator dan penetap tetap menunggu tim/pembimbing. Bukan keputusan.'
@@ -533,8 +552,9 @@ affected: [Bab I, I.2]
 class: L3
 pic: Pengguna
 ask_to: Tim
-status: MENUNGGU ANGGOTA
-updated: 2026-11-09
+status: DITUTUP DENGAN ALASAN
+closed_reason: 'D-115 (2026-11-12): teks Bab I DRAF 24 yang menjadi objeknya digantikan docx resmi; Bab I dibiarkan apa adanya oleh pengguna. Status sebelumnya: MENUNGGU ANGGOTA'
+updated: 2026-11-12
 refs: [F-A11-0005, F-A05-0003, Q-A04-d, D-79]
 note_2026-11-09: 'USUL PENGGUNA: agregasi mikro, 0/0 dilaporkan tidak terdefinisi (D-79, lingkup terbatas); BUKAN keputusan tim. Rekomendasi berasal dari A01 (bukan temuan agent); RSIA-source tidak dibuka, tanpa sensitive_access. Bagian "aturan pencocokan temuan-label" dalam butir ini TIDAK dijawab. Menunggu tim.'
 ```
@@ -545,8 +565,9 @@ question: Adakah ringkasan agregat jumlah episode dan sebaran jenis di luar .scr
 affected: [Bab I]
 class: L4
 pic: Pengguna
-status: TERBUKA
-updated: 2026-11-06
+status: DITUTUP DENGAN ALASAN
+closed_reason: 'D-115 (2026-11-12): teks Bab I DRAF 24 yang menjadi objeknya digantikan docx resmi; Bab I dibiarkan apa adanya oleh pengguna. Status sebelumnya: TERBUKA'
+updated: 2026-11-12
 refs: [Q-A04-c]
 ```
 
@@ -567,8 +588,9 @@ question: Apa arti "temuan ganda" (definisi tim; metrik rumusan 3 Abizzar di Pen
 affected: [Bab I]
 class: L3
 pic: Tim
-status: MENUNGGU ANGGOTA
-updated: 2026-11-06
+status: DITUTUP DENGAN ALASAN
+closed_reason: 'D-115 (2026-11-12): teks Bab I DRAF 24 yang menjadi objeknya digantikan docx resmi; Bab I dibiarkan apa adanya oleh pengguna. Status sebelumnya: MENUNGGU ANGGOTA'
+updated: 2026-11-12
 refs: [F-A07-0048, Q-B1-p, F-A06-0005]
 ```
 
@@ -583,8 +605,9 @@ affected: [Bab I, A06]
 class: L3
 pic: Abizzar
 ask_to: Tim
-status: MENUNGGU ANGGOTA
-updated: 2026-11-06
+status: DITUTUP DENGAN ALASAN
+closed_reason: 'D-115 (2026-11-12): teks Bab I DRAF 24 yang menjadi objeknya digantikan docx resmi; Bab I dibiarkan apa adanya oleh pengguna. Status sebelumnya: MENUNGGU ANGGOTA'
+updated: 2026-11-12
 refs: [F-A06-0003, F-A06-0004, Q-B1-l]
 ```
 
@@ -595,8 +618,9 @@ affected: [Bab I, A06]
 class: L3
 pic: Pengguna
 ask_to: Tim
-status: MENUNGGU ANGGOTA
-updated: 2026-11-06
+status: DITUTUP DENGAN ALASAN
+closed_reason: 'D-115 (2026-11-12): teks Bab I DRAF 24 yang menjadi objeknya digantikan docx resmi; Bab I dibiarkan apa adanya oleh pengguna. Status sebelumnya: MENUNGGU ANGGOTA'
+updated: 2026-11-12
 refs: [F-A06-0010, F-A05-0021, D-25]
 ```
 
@@ -607,8 +631,9 @@ affected: [Bab I, A06]
 class: L3
 pic: Pengguna
 ask_to: Tim
-status: MENUNGGU ANGGOTA
-updated: 2026-11-06
+status: DITUTUP DENGAN ALASAN
+closed_reason: 'D-115 (2026-11-12): teks Bab I DRAF 24 yang menjadi objeknya digantikan docx resmi; Bab I dibiarkan apa adanya oleh pengguna. Status sebelumnya: MENUNGGU ANGGOTA'
+updated: 2026-11-12
 refs: [F-A06-0009, D-25, Q-TEAM]
 ```
 
@@ -619,8 +644,9 @@ affected: [Bab I, I.2, I.3]
 class: L3
 pic: Pengguna
 ask_to: Tim
-status: TERBUKA
-updated: 2026-11-06
+status: DITUTUP DENGAN ALASAN
+closed_reason: 'D-115 (2026-11-12): teks Bab I DRAF 24 yang menjadi objeknya digantikan docx resmi; Bab I dibiarkan apa adanya oleh pengguna. Status sebelumnya: TERBUKA'
+updated: 2026-11-12
 refs: [F-A11-0012, F-A05-0017, F-A05-0020, D-29, D-33, F-A11-0015, Q-B1-bj]
 ```
 
@@ -630,8 +656,9 @@ question: Nuansa klaim "tidak ada resource CPPT" pada SATUSEHAT di Bab II:87 (na
 affected: [Bab I, Bab II, Bab III]
 class: L3
 pic: Pengguna
-status: TERBUKA
-updated: 2026-11-06
+status: DITUTUP DENGAN ALASAN
+closed_reason: 'D-115 (2026-11-12): teks Bab I DRAF 24 yang menjadi objeknya digantikan docx resmi; Bab I dibiarkan apa adanya oleh pengguna. Status sebelumnya: TERBUKA'
+updated: 2026-11-12
 refs: [B2-48, EVIDENCE_REGISTRY]
 ```
 
@@ -642,8 +669,9 @@ affected: [A06, PROJECT_STATE Team Docs Manifest]
 class: L3
 pic: Pengguna
 ask_to: Tim
-status: MENUNGGU ANGGOTA
-updated: 2026-11-06
+status: DITUTUP DENGAN ALASAN
+closed_reason: 'D-115 (2026-11-12): teks Bab I DRAF 24 yang menjadi objeknya digantikan docx resmi; Bab I dibiarkan apa adanya oleh pengguna. Status sebelumnya: MENUNGGU ANGGOTA'
+updated: 2026-11-12
 refs: [Q-P2-a, Q-P2-c, F-A06-0014]
 ```
 
@@ -653,8 +681,9 @@ question: source/INDEKS.md usang (menyebut folder 01-12, sedangkan struktur kini
 affected: [source/INDEKS.md]
 class: L4
 pic: A13/Pengguna
-status: TERBUKA
-updated: 2026-11-06
+status: DITUTUP DENGAN ALASAN
+closed_reason: 'D-115 (2026-11-12): teks Bab I DRAF 24 yang menjadi objeknya digantikan docx resmi; Bab I dibiarkan apa adanya oleh pengguna. Status sebelumnya: TERBUKA'
+updated: 2026-11-12
 refs: [TSK-055]
 ```
 
@@ -681,8 +710,9 @@ affected: [Bab I, I.5]
 class: L3
 pic: Pengguna
 ask_to: Tim
-status: MENUNGGU ANGGOTA
-updated: 2026-11-06
+status: DITUTUP DENGAN ALASAN
+closed_reason: 'D-115 (2026-11-12): teks Bab I DRAF 24 yang menjadi objeknya digantikan docx resmi; Bab I dibiarkan apa adanya oleh pengguna. Status sebelumnya: MENUNGGU ANGGOTA'
+updated: 2026-11-12
 refs: [F-A11-0006, F-A11-0012, F-A05-0017, Q-B1-y]
 ```
 
@@ -693,8 +723,9 @@ affected: [Bab I, I.5]
 class: L3
 pic: Pengguna
 ask_to: Tim
-status: MENUNGGU ANGGOTA
-updated: 2026-11-06
+status: DITUTUP DENGAN ALASAN
+closed_reason: 'D-115 (2026-11-12): teks Bab I DRAF 24 yang menjadi objeknya digantikan docx resmi; Bab I dibiarkan apa adanya oleh pengguna. Status sebelumnya: MENUNGGU ANGGOTA'
+updated: 2026-11-12
 refs: [F-A11-0004]
 ```
 
@@ -704,8 +735,9 @@ question: Dua inferensi penulis baru di I.5 perlu dinilai pengguna apakah merupa
 affected: [Bab I, I.5]
 class: L3
 pic: Pengguna
-status: TERBUKA
-updated: 2026-11-06
+status: DITUTUP DENGAN ALASAN
+closed_reason: 'D-115 (2026-11-12): teks Bab I DRAF 24 yang menjadi objeknya digantikan docx resmi; Bab I dibiarkan apa adanya oleh pengguna. Status sebelumnya: TERBUKA'
+updated: 2026-11-12
 refs: [TSK-059, D-34]
 note: Inferensi penulis (a03), belum disetujui; bukan keputusan.
 ```
@@ -717,8 +749,9 @@ affected: [Bab I, I.5, A06]
 class: L3
 pic: Pengguna
 ask_to: Tim
-status: MENUNGGU ANGGOTA
-updated: 2026-11-06
+status: DITUTUP DENGAN ALASAN
+closed_reason: 'D-115 (2026-11-12): teks Bab I DRAF 24 yang menjadi objeknya digantikan docx resmi; Bab I dibiarkan apa adanya oleh pengguna. Status sebelumnya: MENUNGGU ANGGOTA'
+updated: 2026-11-12
 refs: [TSK-059, Penyelarasan:304, Penyelarasan:312, A06]
 ```
 
@@ -730,8 +763,9 @@ question: lxml, LibreOffice, dan pdftotext belum tersedia untuk build_modular (b
 affected: [modular/, tools/build_modular.py]
 class: L4
 pic: Pengguna
-status: TERBUKA
-updated: 2026-11-06
+status: DITUTUP DENGAN ALASAN
+closed_reason: 'D-115 (2026-11-12): teks Bab I DRAF 24 yang menjadi objeknya digantikan docx resmi; Bab I dibiarkan apa adanya oleh pengguna. Status sebelumnya: TERBUKA'
+updated: 2026-11-12
 refs: [TSK-061, TSK-063, P2-02, Q-B1-ac]
 note: Pemasangan paket dilakukan pengguna, bukan agent. Keempat berkas modular tidak tersentuh.
 ```
@@ -742,8 +776,9 @@ question: Jalur pembuatan docx modular dari Markdown Bab I belum ada (build_modu
 affected: [modular/, bab1, tools/]
 class: L3
 pic: Pengguna
-status: TERBUKA
-updated: 2026-11-07
+status: DITUTUP DENGAN ALASAN
+closed_reason: 'D-115 (2026-11-12): teks Bab I DRAF 24 yang menjadi objeknya digantikan docx resmi; Bab I dibiarkan apa adanya oleh pengguna. Status sebelumnya: TERBUKA'
+updated: 2026-11-12
 refs: [TSK-061, P2-02, Q-B1-ac, D-35]
 note: D-35 menetapkan penempatan peran (a03 + perbaikan build_modular) tetapi belum menjawab rincian teknis jalur Markdown; tetap TERBUKA (lihat Q-B1-aj..am)
 ```
@@ -783,8 +818,9 @@ question: Apakah AGENT_SPECIFICATIONS/ORCHESTRATION serta hook guard dan check_a
 affected: [docs/, .claude/]
 class: L4
 pic: Pengguna
-status: TERBUKA
-updated: 2026-11-07
+status: DITUTUP DENGAN ALASAN
+closed_reason: 'D-115 (2026-11-12): teks Bab I DRAF 24 yang menjadi objeknya digantikan docx resmi; Bab I dibiarkan apa adanya oleh pengguna. Status sebelumnya: TERBUKA'
+updated: 2026-11-12
 refs: [D-35, D-36, Q-B1-aj, Q-B1-an]
 note: D-36 menjadikan perubahan AGENT_SPECIFICATIONS, ORCHESTRATION, hook guard, dan check_agents konsekuensi wajib; pelaksanaan dan jalur pengeditnya belum diputuskan (Q-B1-an); tetap TERBUKA
 note_2: D-37 (2026-11-07) memutuskan pelaksana perubahan = pengguna atau sesi Claude Code biasa di luar agent. Butir ini tetap TERBUKA sampai perubahan benar-benar diterapkan dan check_agents lolos (belum terjadi saat dicatat).
@@ -924,8 +960,9 @@ question: Skrip tools/build_modular.py perlu disesuaikan: (i) sumber MASTER, (ii
 affected: [tools/build_modular.py, modular/, bab1/, bab2/]
 class: L3
 pic: Pengguna
-status: TERBUKA
-updated: 2026-11-07
+status: DITUTUP DENGAN ALASAN
+closed_reason: 'D-115 (2026-11-12): teks Bab I DRAF 24 yang menjadi objeknya digantikan docx resmi; Bab I dibiarkan apa adanya oleh pengguna. Status sebelumnya: TERBUKA'
+updated: 2026-11-12
 refs: [D-35, D-36, D-37, D-39, D-40, D-42, D-43, Q-B1-al, Q-B1-ai, Q-B1-ax]
 note: Pengamatan A01 dari pembacaan tools/build_modular.py (bukan keputusan; belum diverifikasi A13): (i) skrip bergantung pada MASTER bab2/13523136-...-Draft-Bab2.docx yang tidak ada lagi di disk, jadi belum dapat dijalankan; (ii) skrip hanya membaca Markdown Bab II lama (bab2/Pembuka_Bab_II.md dan II.[0-9]_*.md; outline II.1-II.8), belum Bab_II_Revisi_Notulensi.md (DRAFT 6) dan belum Bab_I_Draft.md; (iii) modular/ Bab II karena itu masih berasal dari outline lama. Wewenang edit a03 (D-36) belum operasional sampai Q-B1-al diterapkan.
 note_2: Kemajuan 2026-11-07: D-49 menetapkan input Bab I = bab1/Bab_I_Draft.md; D-50 menetapkan PDF Formal/Lengkap dibuat di dalam skrip. Perlu mencakup: sumber MASTER yang hilang, input DRAFT 6 dan Bab I Markdown, varian Lengkap dari template/, PDF Formal/Lengkap. Tetap TERBUKA.
@@ -937,8 +974,9 @@ question: Apakah isi docx sementara di bab1/ dan bab2/ (hasil migrasi LLM lain) 
 affected: [bab1/, bab2/, modular/]
 class: L3
 pic: Pengguna
-status: TERBUKA
-updated: 2026-11-07
+status: DITUTUP DENGAN ALASAN
+closed_reason: 'D-115 (2026-11-12): teks Bab I DRAF 24 yang menjadi objeknya digantikan docx resmi; Bab I dibiarkan apa adanya oleh pengguna. Status sebelumnya: TERBUKA'
+updated: 2026-11-12
 refs: [Q-B1-aw, D-48]
 note: Bergantung pada hasil audit a12 TSK R5 yang sedang berjalan dan pada Q-B1-aw. Pernyataan pengguna 2026-11-07 (verbatim, konteks dua docx bab2/ yang tidak ditemukan): "semua itu di modular/, yang bab1/ dan bab2/ itu baru sementaranya aja docx dan pdf nya". Artefak resmi ada di modular/; docx/pdf bab1/ dan bab2/ sementara hasil migrasi LLM lain.
 note_2: Kemajuan 2026-11-07: D-49 memutuskan sumber Bab I = bab1/Bab_I_Draft.md (DRAF 10). Belum diputuskan: pemindahan Bab II, waktu pemindahan, dan nasib berkas sementara. Tetap TERBUKA.
@@ -977,8 +1015,9 @@ affected: [Bab I, I.1, I.4, Penyelarasan]
 class: L3
 pic: Pengguna
 ask_to: Tim / RSIA mitra
-status: MENUNGGU ANGGOTA
-updated: 2026-11-08
+status: DITUTUP DENGAN ALASAN
+closed_reason: 'D-115 (2026-11-12): teks Bab I DRAF 24 yang menjadi objeknya digantikan docx resmi; Bab I dibiarkan apa adanya oleh pengguna. Status sebelumnya: MENUNGGU ANGGOTA'
+updated: 2026-11-12
 refs: [D-55, D-56, D-57, D-21, D-24, D-27, F-A05-0024, F-A07-0051, F-A11-0004, Q-B1-ae, Q-TEAM butir 5, Q-B1-bb, Q-B1-bc]
 note_2026-11-09_TSK-116: 'Tetap terbuka (fakta RSIA via Abizzar/tim); tidak ada keputusan baru pada TSK-116.'
 note_D-90: 'Pembaruan 2026-11-09 (TSK-142): pengguna menjawab dengan teks bebas (bukan memilih opsi) → D-90 (lingkup terbatas; BUKAN keputusan tim/pembimbing/RSIA): naskah tidak mengasumsikan keduanya terkunci; menurut keterangan lisan RSIA via penulis (BELUM terverifikasi) CPPT tidak dapat diubah dan resume medis masih dapat direvisi; satuan hitung rawat inap = satu episode (masuk hingga keluar dan resume diajukan; resume episode sebelumnya tidak dihitung kembali). Konflik dengan dokumen tim TIDAK diselesaikan A13; konfirmasi RSIA/tim tetap diperlukan; status TETAP MENUNGGU ANGGOTA. Naskah (I.1 baris 75/89, I.4 p6) belum diselaraskan pada pencatatan ini.'
@@ -994,8 +1033,9 @@ affected: [Bab I, I.1, I.4, I.5]
 class: L3
 pic: Pengguna
 ask_to: Tim / RSIA mitra
-status: MENUNGGU ANGGOTA
-updated: 2026-11-08
+status: DITUTUP DENGAN ALASAN
+closed_reason: 'D-115 (2026-11-12): teks Bab I DRAF 24 yang menjadi objeknya digantikan docx resmi; Bab I dibiarkan apa adanya oleh pengguna. Status sebelumnya: MENUNGGU ANGGOTA'
+updated: 2026-11-12
 refs: [Q-B1-ba, Q-B1-ae, F-A11-0004, F-A07-0050, D-55, Q-TEAM butir 5]
 note: Satu butir untuk empat pertanyaan (bukan empat butir), karena jawabannya bersumber sama (tim/RSIA) dan saling bergantung. Hasil pemeriksaan A01 atas Penyelarasan (dibaca A01 2026-11-08; belum diverifikasi A13), hanya fakta teks: (1) TIDAK terjawab; hanya baris 17 (wawancara Direktur RSIA, September 2026) "resume medis disusun ulang secara manual pada akhir masa rawat" dan baris 280 "resume baru bermakna setelah resume ada". (2) TIDAK terjawab untuk RSIA; baris 17 menyebut pemeriksaan kesiapan dokumen masih manual; yang ada hanya jadwal pemeriksaan SISTEM (baris 56, 280). (3) TIDAK terjawab untuk RSIA; baris 21, 130, 142 hanya alur sistem; Q-TEAM butir 5 "Perlu ditanyakan". (4) TIDAK terjawab; baris 61, 290, 297 hanya "data terdeidentifikasi, izin diperoleh, jumlah kasusnya mencukupi, dibagi per pasien"; versi pertama/akhir/riwayat perubahan tidak disebut. Pertanyaan 4 beririsan dengan Q-B1-ae (versi dokumen pada data uji).
 ```
@@ -1035,8 +1075,9 @@ affected: [Bab I, I.4]
 class: L3
 pic: Pengguna
 ask_to: Tim / RSIA mitra
-status: MENUNGGU ANGGOTA
-updated: 2026-11-08
+status: DITUTUP DENGAN ALASAN
+closed_reason: 'D-115 (2026-11-12): teks Bab I DRAF 24 yang menjadi objeknya digantikan docx resmi; Bab I dibiarkan apa adanya oleh pengguna. Status sebelumnya: MENUNGGU ANGGOTA'
+updated: 2026-11-12
 refs: [F-A04-0010, F-A04-0013, F-A07-0052, F-A05-0027, Q-B1-f, Q-TEAM butir 1, Q-TEAM butir 4]
 note: Usulan a03 belum diterapkan; menunggu keputusan. Terkait batas rawat jalan (Q-B1-f) dan daftar jenis ketidaksesuaian (Q-TEAM butir 1).
 ```
@@ -1048,8 +1089,9 @@ affected: [Bab I, I.4 p3, source/01_Regulasi]
 class: L3
 pic: Pengguna
 ask_to: Tim / RSIA mitra
-status: MENUNGGU ANGGOTA
-updated: 2026-11-08
+status: DITUTUP DENGAN ALASAN
+closed_reason: 'D-115 (2026-11-12): teks Bab I DRAF 24 yang menjadi objeknya digantikan docx resmi; Bab I dibiarkan apa adanya oleh pengguna. Status sebelumnya: MENUNGGU ANGGOTA'
+updated: 2026-11-12
 refs: [F-A04-0015, F-A02-0002]
 note: Belum diverifikasi siapa pun: a04 (F-A04-0015, INFO), a05, dan a07 juga tidak memeriksa. Usul A01: tugas a08 (sumber PDF resmi tanpa lapisan teks, lihat F-A02-0002). Butir verifikasi, bukan keputusan akademik.
 ```
@@ -1061,8 +1103,9 @@ affected: [Bab I, I.2, I.3, I.5]
 class: L3
 pic: Pengguna
 ask_to: Tim / RSIA mitra
-status: MENUNGGU ANGGOTA
-updated: 2026-11-08
+status: DITUTUP DENGAN ALASAN
+closed_reason: 'D-115 (2026-11-12): teks Bab I DRAF 24 yang menjadi objeknya digantikan docx resmi; Bab I dibiarkan apa adanya oleh pengguna. Status sebelumnya: MENUNGGU ANGGOTA'
+updated: 2026-11-12
 refs: [D-58, D-29, D-56, Q-TEAM butir 8, Q-B1-y, Q-B1-ad, Q-B1-j, F-A05-0026, F-A11-0015, F-A05-0034, F-A11-0016, F-A11-0017, Q-A04-c, Q-B1-bj]
 note: Tidak diputuskan D-58. Menurut catatan A01, membutuhkan Approval Request lanjutan dan pembahasan tim. Butir turunan dari Q-B1-bd.
 note_2026-11-09_TSK-116: 'Tetap terbuka: tertahan D-19 dan belum adanya data agregat. Usulan pengguna D-78 (operator ">=") dan D-79 (mikro, 0/0 tidak terdefinisi) tidak menetapkan angka ambang, selisih minimum, atau kondisi keabsahan stratum.'
@@ -1076,8 +1119,9 @@ affected: [Bab I, I.2, I.3, Penyelarasan]
 class: L3
 pic: Pengguna
 ask_to: Tim / Pembimbing
-status: MENUNGGU ANGGOTA
-updated: 2026-11-08
+status: DITUTUP DENGAN ALASAN
+closed_reason: 'D-115 (2026-11-12): teks Bab I DRAF 24 yang menjadi objeknya digantikan docx resmi; Bab I dibiarkan apa adanya oleh pengguna. Status sebelumnya: MENUNGGU ANGGOTA'
+updated: 2026-11-12
 refs: [D-58, D-56, D-22, F-A06-0001, Q-B1-k, F-A05-0037, F-A07-0054]
 note: D-58 mengubah arti jawaban rumusan capstone, sehingga perlu pembahasan dengan tim/pembimbing (catatan A01). Bukan keputusan; D-58 berlaku sebagai keputusan pengguna untuk proposal individu ini sampai ada hasil pembahasan.
 ```
@@ -1089,8 +1133,9 @@ affected: [Bab I, I.2 p8, I.4 p6, I.5 p2]
 class: L3
 pic: Pengguna
 ask_to: Tim / RSIA mitra
-status: MENUNGGU ANGGOTA
-updated: 2026-11-08
+status: DITUTUP DENGAN ALASAN
+closed_reason: 'D-115 (2026-11-12): teks Bab I DRAF 24 yang menjadi objeknya digantikan docx resmi; Bab I dibiarkan apa adanya oleh pengguna. Status sebelumnya: MENUNGGU ANGGOTA'
+updated: 2026-11-12
 refs: [F-A05-0032, F-A05-0028, D-57, D-55, D-58, Q-B1-bd, Q-B1-ba]
 note: TIDAK diputuskan D-58; butir turunan dari Q-B1-bd. F-A05-0032 tetap OPEN (diturunkan a05 ke LOW pada siklus 2; DRAF 13 menandai penanda Q-B1-bi di naskah).
 ```
@@ -1102,8 +1147,9 @@ affected: [Bab I, I.2, I.3, I.5]
 class: L3
 pic: Pengguna
 ask_to: Tim / Pembimbing
-status: MENUNGGU ANGGOTA
-updated: 2026-11-09
+status: DITUTUP DENGAN ALASAN
+closed_reason: 'D-115 (2026-11-12): teks Bab I DRAF 24 yang menjadi objeknya digantikan docx resmi; Bab I dibiarkan apa adanya oleh pengguna. Status sebelumnya: MENUNGGU ANGGOTA'
+updated: 2026-11-12
 refs: [F-A11-0015, F-A05-0026, D-29, D-58, D-56, D-21, Q-B1-bg, Q-B1-y, F-A07-0067, F-A05-0034, D-76]
 note_2026-11-09_TSK-116: 'USUL PENGGUNA (D-76, lingkup terbatas; BUKAN keputusan tim/RSIA): rawat jalan tetap dijawab terpisah, bersyarat: bila dokumen setara resume terbukti ada dan memadai; bila tidak, dilaporkan "tidak dapat dinilai", bukan "tidak". Catatan A13: pertanyaan yang diajukan A01 (rawat jalan terpisah dari rawat inap) berbeda rumusan dari pertanyaan butir ini (syarat D-29 bila satu aturan); butir ini TIDAK dianggap terjawab sepenuhnya, opsi (d) a11 sebagian mirip tetapi tidak dipilih secara eksplisit. Q-B1-f dan Q-TEAM butir 4 tetap terbuka. Status diubah dari TERBUKA ke MENUNGGU ANGGOTA karena menunggu tim/RSIA.'
 note: Pembaruan TSK-107 (2026-11-09): QA I.5 DRAF 19 mencatat I.2/I.3/I.5 tidak memuat penanda Q-B1-bj (F-A11-0015 tetap OPEN HIGH; F-A07-0067; F-A05-0034 diperkuat I.1 p20); belum ada keputusan. Butir asli: butir baru dari QA siklus 2 DRAF 13 (TSK-082). Opsi a-d adalah usulan a11, bukan opsi yang ditawarkan ke pengguna; bukan keputusan. Siklus otomatis D-06 habis, sehingga tidak ada revisi otomatis atas butir ini. Pembaruan TSK-109 (2026-11-09): I.5 dibawa ke pembimbing dan tim tanpa revisi (TSK-108 DROPPED); status tetap TERBUKA.
@@ -1129,8 +1175,9 @@ affected: [Bab I, I.1 p16, Penyelarasan]
 class: L3
 pic: Pengguna
 ask_to: Tim
-status: TERBUKA
-updated: 2026-11-08
+status: DITUTUP DENGAN ALASAN
+closed_reason: 'D-115 (2026-11-12): teks Bab I DRAF 24 yang menjadi objeknya digantikan docx resmi; Bab I dibiarkan apa adanya oleh pengguna. Status sebelumnya: TERBUKA'
+updated: 2026-11-12
 refs: [F-A05-0102, F-A05-0112, F-A05-0115, F-A05-0116, F-A07-0063, D-22, D-29, D-59, D-61, D-62]
 note: Butir baru dari TSK-090 siklus 1 (dicatat TSK-092). Bukan keputusan. Pembaruan TSK-093 (siklus 2 DRAF 16): a05 menemukan F-A05-0116 (dasar kombinasi "rancangan capstone dan rumusan I.2" melingkar dan mendahului butir ini; F-A05-0112 dan 0115 RESOLVED menurut a05); a07 menemukan F-A07-0063 (persetujuan pembimbing tertunda, Q-TEAM butir 9). F-A05-0102 RESOLVED bila pengguna mengesahkan rumusan dasar kombinasi. a07 dan a05 berbeda menilai paragraf 18; tidak diselesaikan. Pembaruan TSK-094: DIPUTUSKAN sebagian → D-61 (dasar dan kriteria kombinasi di I.1 p18: ketetapan rumusan capstone Penyelarasan:35 + penalaran penulis berlabel). Bersyarat: a08 memeriksa dukungan literatur Bab II lebih dulu (TSK-095); revisi p18 belum dijalankan; persetujuan pembimbing tetap tertunda (Q-TEAM butir 9). Status temuan F-A05-0102, F-A05-0116, F-A07-0063 tidak diubah (hanya auditor penemu). Status butir tetap TERBUKA (sebagian). Pembaruan TSK-096 (DRAF 17): a03 menerapkan D-61 (TSK-086 terarah, p18-p19, penanda 47); a08 (TSK-095, TSK-087 terarah) PASS_WITH_NOTES: P1 parsial (Zeba), P2 parsial dan tidak searah, P3 kekosongan; menurut auditor penemu RESOLVED: F-A05-0102, F-A05-0116, F-A07-0063. Persetujuan pembimbing tetap tertunda (Q-TEAM butir 9). Tantangan baru atas D-61: Q-B1-bp, Q-B1-bq. Status butir tetap TERBUKA (sebagian). Pembaruan TSK-097: D-62 mengubah sebagian D-61 (klaim "diuji" dibatasi pada keunggulan menurut D-29; lihat Q-B1-bp); Q-B1-bq belum diputuskan.
 ```
@@ -1155,8 +1202,9 @@ affected: [Bab II II.5, Bab II II.6, Bab I I.1]
 class: L3
 pic: Pengguna
 ask_to: Penulis Bab II (a03)
-status: TERBUKA
-updated: 2026-11-08
+status: DITUTUP DENGAN ALASAN
+closed_reason: 'D-115 (2026-11-12): teks Bab I DRAF 24 yang menjadi objeknya digantikan docx resmi; Bab I dibiarkan apa adanya oleh pengguna. Status sebelumnya: TERBUKA'
+updated: 2026-11-12
 refs: [F-A07-0061, F-A05-0117, F-A05-0120]
 note: Butir baru dari QA siklus 2 DRAF 16 (TSK-087..090, dicatat TSK-093). Bukan keputusan. Siklus otomatis D-06 habis.
 ```
@@ -1168,8 +1216,9 @@ affected: [Bab I, I.5 p4]
 class: L2
 pic: Pengguna
 ask_to: Pengguna
-status: TERBUKA
-updated: 2026-11-08
+status: DITUTUP DENGAN ALASAN
+closed_reason: 'D-115 (2026-11-12): teks Bab I DRAF 24 yang menjadi objeknya digantikan docx resmi; Bab I dibiarkan apa adanya oleh pengguna. Status sebelumnya: TERBUKA'
+updated: 2026-11-12
 refs: [F-A09-0126]
 note: Butir baru dari TSK-089 siklus 2 (dicatat TSK-093). LOW. Bukan keputusan.
 ```
@@ -1341,8 +1390,9 @@ affected: [Bab I, I.5]
 class: L3
 pic: Pengguna
 ask_to: Pengguna / Tim
-status: TERBUKA
-updated: 2026-11-09
+status: DITUTUP DENGAN ALASAN
+closed_reason: 'D-115 (2026-11-12): teks Bab I DRAF 24 yang menjadi objeknya digantikan docx resmi; Bab I dibiarkan apa adanya oleh pengguna. Status sebelumnya: TERBUKA'
+updated: 2026-11-12
 refs: [F-A05-0138, D-70, Q-B1-by]
 note: Butir baru dari TSK-114 (turunan Q-B1-by 2/2). requires_decision true. Bukan keputusan.
 ```
@@ -1354,8 +1404,9 @@ affected: [Bab I, I.3, I.5, I.1 p18]
 class: L3
 pic: Pengguna
 ask_to: Penulis / Pembimbing
-status: MENUNGGU DATA
-updated: 2026-11-09
+status: DITUTUP DENGAN ALASAN
+closed_reason: 'D-115 (2026-11-12): teks Bab I DRAF 24 yang menjadi objeknya digantikan docx resmi; Bab I dibiarkan apa adanya oleh pengguna. Status sebelumnya: MENUNGGU DATA'
+updated: 2026-11-12
 refs: [F-A05-0131, D-74, D-65, D-29, D-33, Q-B1-bv, D-81, D-82, F-A07-0072, F-A07-0073, F-A07-0074, F-A07-0075, F-A11-0024, F-A05-0150]
 note: Butir baru dari TSK-114 (turunan D-74). Pembaruan TSK-124 (2026-11-09): bagian teks keadaan ketiga ditangani D-81 (kalimat p19 diselaraskan dengan D-74) dan D-82 (selisih minimum bersyarat masuk I.2 p6); pengerjaan naskah oleh a03 (TSK-123, DRAF 21); persetujuan pembimbing BELUM ada. Bagian yang TETAP TERBUKA: hasil kosong atau tidak terdefinisi (0/0) dan status "tidak dapat dinilai" belum dipetakan ke jawaban (F-A11-0024 MEDIUM, hanya dipicu dokumen rawat jalan; F-A05-0150), serta keabsahan I.3 p1 vs p2 (F-A07-0074, requires_decision) dan rujukan kondisi keabsahan dari I.5 p6/I.3 p3 (F-A07-0075). Bukan keputusan. Pembaruan TSK-131 (2026-11-09): a07 menyatakan F-A07-0072..0075 RESOLVED dan a11 F-A11-0030 RESOLVED (menurut auditor), tetapi bentuk baru terbuka: F-A11-0037 (LOW, requires_decision: keabsahan hanya dinyatakan untuk jawaban "tidak" di I.3 p1), F-A05-0156 (MEDIUM: keabsahan dan kategori ketiga tak terikat sebelum pengujian), F-A11-0024 (membaik sebagian), F-A05-0150 (bentuk berubah). Izin alur DRAF 22 menyelaraskan I.3 (keabsahan sebelum pengujian untuk "ya" maupun "tidak"); itu penyelarasan teks, bukan keputusan akademik.
 ```
@@ -1380,8 +1431,9 @@ affected: [Bab I, I.1 p18]
 class: L3
 pic: Pengguna
 ask_to: Pengguna / pembimbing
-status: TERBUKA
-updated: 2026-11-09
+status: DITUTUP DENGAN ALASAN
+closed_reason: 'D-115 (2026-11-12): teks Bab I DRAF 24 yang menjadi objeknya digantikan docx resmi; Bab I dibiarkan apa adanya oleh pengguna. Status sebelumnya: TERBUKA'
+updated: 2026-11-12
 refs: [F-A05-0142, D-61, D-73]
 note: Butir baru dari TSK-124 (QA DRAF 20, a05 TSK-122). requires_decision true. Dalam cakupan "tidak disentuh" DRAF 21. Bukan keputusan.
 note_D-95: 'Pembaruan 2026-11-09 (TSK-142): D-95 (pengguna, lingkup terbatas; BUKAN keputusan pembimbing): kriteria tetap umum, urutan dinyatakan (opsi "dibedakan per pasangan" tidak dipilih). Status butir TETAP TERBUKA sampai naskah dan auditor; D-61 tidak diubah.'
@@ -1394,8 +1446,9 @@ affected: [Bab I, I.1 p20]
 class: L3
 pic: Pengguna
 ask_to: Pengguna / pembimbing
-status: TERBUKA
-updated: 2026-11-09
+status: DITUTUP DENGAN ALASAN
+closed_reason: 'D-115 (2026-11-12): teks Bab I DRAF 24 yang menjadi objeknya digantikan docx resmi; Bab I dibiarkan apa adanya oleh pengguna. Status sebelumnya: TERBUKA'
+updated: 2026-11-12
 refs: [F-A05-0144]
 note: Butir baru dari TSK-124 (a05 TSK-122). MEDIUM. Dalam cakupan "tidak disentuh" DRAF 21. Bukan keputusan.
 note_D-95: 'Pembaruan 2026-11-09 (TSK-142): D-95 (pengguna, lingkup terbatas; BUKAN keputusan pembimbing): temuan Dietrich hanya latar. Status butir TETAP TERBUKA sampai naskah dan auditor.'
@@ -1408,8 +1461,9 @@ affected: [Bab I, I.1 p20, Bab II]
 class: L3
 pic: Pengguna
 ask_to: Pengguna / a05 / a08
-status: TERBUKA
-updated: 2026-11-09
+status: DITUTUP DENGAN ALASAN
+closed_reason: 'D-115 (2026-11-12): teks Bab I DRAF 24 yang menjadi objeknya digantikan docx resmi; Bab I dibiarkan apa adanya oleh pengguna. Status sebelumnya: TERBUKA'
+updated: 2026-11-12
 refs: [F-A05-0146, F-A08-0101, F-A08-0102, D-67, D-85, F-A09-0235, F-A07-0087]
 note: Butir baru dari TSK-124. Pertanyaan a05 (TSK-122); D-85 menetapkan cakupan dan sifat tidak sistematis harus dinyatakan, tetapi isi cakupan belum ditetapkan. Pembaruan TSK-131 (2026-11-09): D-85 dan kalimat batas p22 DRAF 21 sudah menyatakan cakupan (a08 TSK-127: konsisten dengan H-01..H-03, D-67, D-85), tetapi himpunan rujukan literatur belum diseragamkan (F-A05-0154 LOW; F-A07-0083 INFO: ungkapan cakupan literatur berbeda-beda; F-A08-0108 INFO: cakupan "Bab II"). Bagian itu TETAP TERBUKA; DRAF 22 (TSK-130) tidak mencakupnya. Bukan keputusan.
 note_TSK-136: 'Pembaruan 2026-11-09 (QA DRAF 22): F-A09-0235 (LOW, requires_decision): "studi lain pada Bab II" di I.1 p19 vs "kelima studi"/Zhang; bentuk berasal dari keputusan pengguna D-86. F-A07-0087 (LOW): alasan Zhang tidak dihitung sebagai dukungan p21 setelah kalimat penutup p19 dikeluarkan; alasan harus ditulis tanpa menafsirkan D-61, bila tidak bisa ke pengguna. a08 TSK-134: kalimat penutup p19 DIDUKUNG sumber; F-A08-0112 (INFO): Gao dkk. dan Ali dkk. di batas klaim kekosongan dinilai dari teks Bab II. Bagian himpunan rujukan literatur tetap TERBUKA; DRAF 23 (TSK-135) tidak mencakupnya. Bukan keputusan.'
@@ -1423,8 +1477,9 @@ affected: [Bab I, I.5]
 class: L3
 pic: Pengguna
 ask_to: Pengguna
-status: TERBUKA
-updated: 2026-11-09
+status: DITUTUP DENGAN ALASAN
+closed_reason: 'D-115 (2026-11-12): teks Bab I DRAF 24 yang menjadi objeknya digantikan docx resmi; Bab I dibiarkan apa adanya oleh pengguna. Status sebelumnya: TERBUKA'
+updated: 2026-11-12
 refs: [F-A05-0148, F-A11-0032, D-66]
 note: Butir baru dari TSK-124 (a05 F-A05-0148 LOW, challenges D-66; a11 F-A11-0032 INFO: jawaban menunggu tahap 5, risiko ke mitigasi). Dalam cakupan "tidak disentuh" DRAF 21. Bukan keputusan.
 ```
@@ -1436,8 +1491,9 @@ affected: [Bab I, I.5]
 class: L3
 pic: Pengguna
 ask_to: Tim / pembimbing
-status: MENUNGGU DATA
-updated: 2026-11-09
+status: DITUTUP DENGAN ALASAN
+closed_reason: 'D-115 (2026-11-12): teks Bab I DRAF 24 yang menjadi objeknya digantikan docx resmi; Bab I dibiarkan apa adanya oleh pengguna. Status sebelumnya: MENUNGGU DATA'
+updated: 2026-11-12
 refs: [F-A11-0025, F-A11-0016, Q-B1-bg, Q-A04-c]
 note: Butir baru dari TSK-124 (a11 TSK-121, MEDIUM). Data agregat tidak ada, sehingga ukuran stratum tidak dapat dinilai. Bukan keputusan.
 ```
@@ -1449,8 +1505,9 @@ affected: [Bab I, I.5, Penyelarasan]
 class: L3
 pic: Pengguna
 ask_to: Tim
-status: TERBUKA
-updated: 2026-11-09
+status: DITUTUP DENGAN ALASAN
+closed_reason: 'D-115 (2026-11-12): teks Bab I DRAF 24 yang menjadi objeknya digantikan docx resmi; Bab I dibiarkan apa adanya oleh pengguna. Status sebelumnya: TERBUKA'
+updated: 2026-11-12
 refs: [F-A11-0026, F-A11-0027, D-71, D-79, Q-A04-d]
 note: Butir baru dari TSK-124 (a11 TSK-121: F-A11-0026 MEDIUM, F-A11-0027 LOW). Terkait juga F-A11-0023 (union hanya formal memenuhi D-32; uji D-29 asimetris; bergantung aturan temuan ganda; ke tim) dan F-A07-0076 (INFO). Bukan keputusan.
 ```
@@ -1462,8 +1519,9 @@ affected: [Bab I, I.5, OPEN_QUESTIONS Q-B1-bj]
 class: L3
 pic: Pengguna
 ask_to: Tim
-status: TERBUKA
-updated: 2026-11-09
+status: DITUTUP DENGAN ALASAN
+closed_reason: 'D-115 (2026-11-12): teks Bab I DRAF 24 yang menjadi objeknya digantikan docx resmi; Bab I dibiarkan apa adanya oleh pengguna. Status sebelumnya: TERBUKA'
+updated: 2026-11-12
 refs: [F-A05-0149, F-A05-0151, F-A09-0184, F-A09-0194, Q-B1-bj, D-76, D-78]
 note: Butir baru dari TSK-124. F-A05-0149 (MEDIUM, ke tim), F-A05-0151 (LOW; dasar usulan ">=" bertentangan dengan kalimat sebelumnya), F-A09-0184 (cakupan selisih I.5 p6 taksa), F-A09-0194 (requires_decision). Pengamatan A01: Q-B1-bj di OPEN_QUESTIONS memiliki rumusan berbeda dari pertanyaan yang diajukan A01 (belum direkonsiliasi; tidak diubah A13). Bukan keputusan.
 ```
@@ -1475,8 +1533,9 @@ affected: [Bab II, I.1 p20]
 class: L3
 pic: Pengguna
 ask_to: Pengguna
-status: TERBUKA
-updated: 2026-11-09
+status: DITUTUP DENGAN ALASAN
+closed_reason: 'D-115 (2026-11-12): teks Bab I DRAF 24 yang menjadi objeknya digantikan docx resmi; Bab I dibiarkan apa adanya oleh pengguna. Status sebelumnya: TERBUKA'
+updated: 2026-11-12
 refs: [F-A08-0103, F-A05-0146, Q-B1-bn, D-67]
 note: Butir baru dari TSK-124 (a08 TSK-120, LOW). Bukan keputusan.
 ```
@@ -1488,8 +1547,9 @@ affected: [Bab I, I.1 p18-19, I.3, I.5]
 class: L3
 pic: Pengguna
 ask_to: Pembimbing / tim
-status: TERBUKA
-updated: 2026-11-09
+status: DITUTUP DENGAN ALASAN
+closed_reason: 'D-115 (2026-11-12): teks Bab I DRAF 24 yang menjadi objeknya digantikan docx resmi; Bab I dibiarkan apa adanya oleh pengguna. Status sebelumnya: TERBUKA'
+updated: 2026-11-12
 refs: [F-A05-0152, F-A11-0038, D-74, D-81, D-65, D-32, F-A11-0023]
 note: Butir baru dari TSK-131 (a05 TSK-129: F-A05-0152 MEDIUM, menantang D-74/D-81, requires_decision; a11 TSK-128: F-A11-0038 LOW, requires_decision, ke tim). Di luar cakupan DRAF 22 (TSK-130 tidak menyentuh F-A05-0152/F-A11-0038). Bukan keputusan.
 note_D-87: 'Pembaruan 2026-11-09 (TSK-142): pengguna memilih "Pertahankan D-74, nyatakan keberatan sebagai keterbatasan" → D-87 (lingkup terbatas; BUKAN keputusan tim/pembimbing). Dijawab penulis; D-74/D-81 tetap menunggu pembimbing. Status F-A05-0152 dan F-A11-0038 tidak diubah A13 (RESOLVED hanya oleh auditor penemu); naskah belum diubah.'
@@ -1502,8 +1562,9 @@ affected: [Bab I, I.4, I.5]
 class: L3
 pic: Pengguna
 ask_to: Tim
-status: TERBUKA
-updated: 2026-11-09
+status: DITUTUP DENGAN ALASAN
+closed_reason: 'D-115 (2026-11-12): teks Bab I DRAF 24 yang menjadi objeknya digantikan docx resmi; Bab I dibiarkan apa adanya oleh pengguna. Status sebelumnya: TERBUKA'
+updated: 2026-11-12
 refs: [F-A05-0157, F-A11-0033, Q-B1-ba, Q-B1-bj, Q-B1-ck]
 note: Butir baru dari TSK-131 (a05 F-A05-0157 MEDIUM, requires_decision, ke tim; a11 F-A11-0033 LOW). Di luar cakupan DRAF 22 (TSK-130 tidak menyentuh F-A05-0157). Bukan keputusan.
 note_D-88: 'Pembaruan 2026-11-09 (TSK-142): pengguna memilih "Penulis menilai dengan kriteria tertulis, hasil ke tim" → D-88 (lingkup terbatas; BUKAN keputusan tim/RSIA). Kriteria tertulis belum dirumuskan; bentuk dokumen rawat jalan RSIA tetap tidak diketahui (Q-B1-f). Status F-A05-0157 tidak diubah A13.'
@@ -1516,8 +1577,128 @@ affected: [Bab I, I.1, I.2, I.3, I.5, DOCX]
 class: L3
 pic: Pengguna
 ask_to: Pengguna / tim / pembimbing
-status: TERBUKA
-updated: 2026-11-10
+status: DITUTUP DENGAN ALASAN
+closed_reason: 'D-115 (2026-11-12): teks Bab I DRAF 24 yang menjadi objeknya digantikan docx resmi; Bab I dibiarkan apa adanya oleh pengguna. Status sebelumnya: TERBUKA'
+updated: 2026-11-12
 refs: [D-98, D-99, D-100, D-83, D-95, F-A11-0048, F-A11-0049, F-A07-0099, F-A07-0101, Q-B1-aw, Q-B1-al, Q-B1-ax, Q-B1-cj]
 note: Butir baru dari TSK-152. Bukan keputusan. D-98 menjawab F-A11-0048 sebagai keputusan pengguna, tetapi status F-A11-0048 tetap OPEN sampai a11 memeriksa ulang. D-99: union tetap usulan penulis (Q-B1-cj tetap TERBUKA untuk tim); D-29 tidak berubah. Siklus otomatis D-06 habis; revisi lanjutan butuh izin pengguna.
+note_TSK-153: 'Pembaruan 2026-11-10: D-101 (tiga entri Kemenkes ditambahkan ke docx resmi Bab II) menjawab sebagian butir (3) hanya soal sumber Daftar Pustaka; jalur DOCX secara keseluruhan tetap BELUM diputuskan. Build run3 FAILED di bab1_refs (menurut brief). tools/build_modular.py dimodifikasi pengguna/sesi biasa, isi belum diverifikasi. Perlu build ulang dan pemeriksaan ulang a12 untuk menyatakan F-A12-0001 (versi brief) RESOLVED. Q-B1-bf (Permenkes 26/2021 hlm. 48-54) tetap BELUM diverifikasi. D-92 (judul) tidak dipasang.'
+```
+
+## Rekonsiliasi 2026-11-12 (konflik baseline vs docx resmi vs keputusan lama)
+
+Butir di bawah dibuat oleh rekonsiliasi atas permintaan pengguna; bukan keputusan.
+
+```yaml
+id: Q-REC-a
+question: 'Judul sub-subbab Bab II pada baseline (D-103) berbeda dari docx resmi: II.2 ''Representasi dan Standardisasi Informasi Klinis'' (baseline) vs ''Standar Interoperabilitas dan Terminologi Klinis di Indonesia'' (docx); II.3.1 ''Pemeriksaan Kesalahan dan Konsistensi Dokumentasi Klinis'' vs ''Deteksi Kesalahan pada Dokumentasi Klinis''; II.3.2 ''Ketahanan Model terhadap Variasi Teks Klinis'' vs ''Pemeriksaan Fakta Keluaran terhadap Rekam Medis Sumber''. Mana yang berlaku, dan apakah isi II.3.2 perlu diubah mengikuti baseline? (Ejaan II.5.3 sudah diputuskan ''Deidentifikasi'', D-112.)'
+affected:
+- Bab II
+- TA1 bab 2.docx
+- Draft-Bab1-Bab2.docx
+- bab2/II.2_*.md
+- bab2/II.3_*.md
+class: L3
+pic: Pengguna
+ask_to: Pengguna
+status: DIPUTUSKAN → D-114
+updated: 2026-11-12
+refs:
+- D-103
+- D-111
+- D-112
+note: Dibuat oleh rekonsiliasi 2026-11-12 sesuai instruksi 'laporkan konflik sebelum melakukan perubahan'. Tidak ada judul diubah.
+```
+
+```yaml
+id: Q-REC-b
+question: Naskah Bab I di docx resmi menyatakan ambang 0,80 untuk precision dan recall, 80% penilaian skor 4 atau 5, serta mekanisme union dan deduplikasi, padahal baseline (D-102) melarang menentukan mekanisme kombinasi, ambang, jumlah kasus, pencocokan hasil, dan komposisi penilai tanpa keputusan tim. Apakah angka dan mekanisme itu diberi status usulan, dipertahankan karena sudah disepakati, atau diubah?
+affected:
+- Bab I
+- I.3
+- I.5
+- TA1 bab 1.docx
+class: L3
+pic: Pengguna
+ask_to: Pengguna
+status: DIPUTUSKAN → D-115
+updated: 2026-11-12
+refs:
+- D-102
+- D-77
+- D-78
+- D-79
+- Q-B1-o
+- Q-B1-q
+- Q-B1-r
+note: D-77 (union), D-78 (>=), D-79 (agregasi mikro) tercatat sebagai usulan pengguna yang belum disetujui tim.
+```
+
+```yaml
+id: Q-REC-c
+question: Baseline menyebut I.3 'dua tujuan/ukuran keberhasilan', sedangkan docx I.3 memuat satu tujuan utama, lima tujuan khusus, dan tiga ukuran (dua utama dan satu pendamping, kesepakatan antarpenilai). Disesuaikan ke baseline atau docx yang berlaku?
+affected:
+- Bab I
+- I.3
+class: L3
+pic: Pengguna
+ask_to: Pengguna
+status: DIPUTUSKAN → D-115
+updated: 2026-11-12
+refs:
+- D-102
+note: Tidak ada perubahan dilakukan.
+```
+
+```yaml
+id: Q-REC-d
+question: Baseline memindahkan sintesis, perbandingan penelitian, research gap, dan posisi penelitian ke Bab III, tetapi Bab III di docx resmi masih teks templat dan bab3/Bahan_Pindahan_dari_Bab_II.md belum diselaraskan. Kapan Bab III ditulis, dan apakah bab3/Bahan_Pindahan_dari_Bab_II.md diperbarui lebih dulu?
+affected:
+- Bab III
+- bab3/Bahan_Pindahan_dari_Bab_II.md
+class: L3
+pic: Pengguna
+ask_to: Pengguna
+status: DIPUTUSKAN → D-116
+updated: 2026-11-12
+refs:
+- D-104
+note: Naskah Bab I docx tidak memuat paragraf research gap; materi lama ada di riwayat Git.
+```
+
+```yaml
+id: Q-REC-e
+question: Keputusan lama yang bergantung pada teks DRAF 24 yang sudah tidak ada di Bab I resmi (D-59..D-65 dan D-81..D-85, D-95 tentang paragraf research gap I.1; D-66..D-75, D-88..D-94, D-96, D-97 tentang I.2/I.3/I.5 DRAF 24; D-98..D-100) serta temuan QA terkait di FINDINGS_LOG (F-A05/F-A07/F-A09/F-A11 atas DRAF 24) tetap berstatus lama. Apakah ditandai SUPERSEDED/ditutup dengan alasan 'teks digantikan docx resmi 2026-11-12', dibawa ke Bab III, atau dibiarkan?
+affected:
+- DECISION_LOG
+- FINDINGS_LOG
+- OPEN_QUESTIONS
+class: L3
+pic: Pengguna
+ask_to: Pengguna
+status: DIPUTUSKAN → D-115
+updated: 2026-11-12
+refs:
+- D-111
+- D-104
+- D-105
+note: Tidak ada status diubah (instruksi D-105 butir 6). Q-B1-* yang terkait I.x DRAF 24 belum ditutup.
+```
+
+```yaml
+id: Q-REC-f
+question: Gaya sitasi di docx resmi tidak seragam ('et al.' dan 'dkk.', 'p.' dan 'hlm.'; K1 belum diputuskan, D-80 usul APA). Disamakan sekarang atau menunggu keputusan K1?
+affected:
+- Bab I
+- Bab II
+- K1
+class: L3
+pic: Pengguna
+ask_to: Pengguna
+status: DIPUTUSKAN → D-113
+updated: 2026-11-12
+refs:
+- K1
+- D-80
+note: Pengamatan dari sinkronisasi 2026-11-12; tidak ada perubahan.
 ```

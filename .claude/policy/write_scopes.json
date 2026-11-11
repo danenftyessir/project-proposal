@@ -230,9 +230,6 @@
         "git ls-files",
         "git ls-tree",
         "git hash-object",
-        "git add --",
-        "git commit -m",
-        "git push origin",
         "python scripts/check_memory.py",
         "python scripts/check_staged.py",
         "sha256sum"
