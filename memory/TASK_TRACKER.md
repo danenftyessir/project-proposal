@@ -1,10 +1,10 @@
 ---
 file: TASK_TRACKER
-revision: 71
+revision: 75
 status: CURRENT
 updated: 2026-11-12
 updated_by: a13-memory-manager
-based_on_commit: 80a13ba
+based_on_commit: 5f5d4b9
 ---
 
 # Task Tracker
@@ -186,8 +186,23 @@ Tugas memakai ID `TSK-xxx` (berbeda dari ID uji teknis `T-xx`). Status: `TODO` �
 | TSK-170 | QA editorial III.1 (a09), siklus 0 + siklus 1 terarah | DONE | A09 | 1 | (laporan a09; temuan F-A09-0276..0306 di FINDINGS_LOG) | Brief A01 | Siklus 0 FAIL (4 MEDIUM F-A09-0276..0279; 20 LOW 0280..0299; 4 INFO 0300..0303). Siklus 1 PASS_WITH_NOTES (0276..0279 RESOLVED; LOW baru 0304..0306). Terhenti HTTP 429 pada siklus 0, dilanjutkan via SendMessage (retry pertama berhasil). Bukan persetujuan |
 | TSK-171 | QA akademik III.1 (a07), siklus 0 + siklus 1 terarah | DONE | A07 | 1 | (laporan a07; temuan F-A07-0103..0112 di FINDINGS_LOG) | Brief A01 | Siklus 0 FAIL (MEDIUM 0103..0107; LOW 0108..0110; INFO 0111). Siklus 1: 0103..0107 RESOLVED (0107 lewat opsi A) tetapi FAIL karena MEDIUM baru F-A07-0112 (berkonflik dengan F-A08-0122a; Q-B3-c). Terhenti HTTP 429 pada siklus 0, dilanjutkan via SendMessage |
 | TSK-172 | QA sitasi III.1 (a08), siklus 0 + siklus 1 terarah | DONE | A08 | 1 | (laporan a08; Claim–Evidence Log III.1: 40 sitasi; temuan F-A08-0114..0124 di FINDINGS_LOG) | Brief A01 | Siklus 0 FAIL (HIGH 0114; MEDIUM 0115..0119, 0122; LOW 0120, 0121; INFO 0123, 0124). Siklus 1 PASS_WITH_NOTES (0114..0119, 0122a/b RESOLVED). 40 sitasi: 22 TERVERIFIKASI, 7 DIDUKUNG SEBAGIAN, 1 TIDAK DIDUKUNG (diperbaiki), 2 BELUM DIVERIFIKASI (diperbaiki). Terhenti HTTP 429 pada siklus 0, dilanjutkan via SendMessage |
-| TSK-173 | Tulis III.2 (a03) | DOING | A03 | 0 | `bab3/Bab_III_Draft.md` (III.2, sedang ditulis) | Brief A01; D-104, D-105, D-120 | Menurut brief A01 (2026-11-12 siang); belum ada laporan; status akhir belum diketahui A13 |
-| TSK-174 | memory_op A13: task_close batch TSK-168..172, record TSK-173, record_findings III.1, OPEN_QUESTIONS Q-B3-a..j, state Bab III, catat arahan pengguna | DONE | A13 | 0 | `memory/TASK_TRACKER.md`, `memory/FINDINGS_LOG.md`, `memory/OPEN_QUESTIONS.md`, `memory/PROJECT_STATE.md`, `memory/CONTEXT_TRANSFER.md`, `memory/EVIDENCE_REGISTRY.md` | Brief A01 2026-11-12 siang | Tanpa Git. Arahan pengguna 'lanjut tanpa persetujuan saya untuk saat ini' (verbatim per brief A01) ditafsirkan A01 sebagai pengesampingan gate S7 untuk sesi ini dan arahan tidak menunggu Approval Request pada hal yang dapat diisi dengan jalur paling membatasi klaim; ini BUKAN keputusan D- dan bukan approval_evidence. Semua keputusan substantif dikumpulkan dalam Q-B3-a..j. Hook guard menolak (menurut brief A01): a01 `paste`; a13 `sed`, `python -c`, `cd`; a02 `sed`, `awk`, `for`, command substitution; a03 `sed`, `awk`, `git status`; a08 `which`, `sed`, `for`, `git diff`; a09 `sed`; tidak ada jalan memutar |
+| TSK-173 | Tulis III.2 (a03) | DONE | A03 | 0 | `bab3/Bab_III_Draft.md` | Brief A01; D-104, D-105, D-120 | DONE hanya eksekusi menurut hasil di naskah (III.2.1-III.2.5 ada); laporan a03 awal tidak ada pada A01 |
+| TSK-174 | memory_op A13: task_close batch TSK-168..172, record TSK-173, record_findings III.1, OPEN_QUESTIONS Q-B3-a..j, state Bab III, catat arahan pengguna | DONE | A13 | 0 | `memory/TASK_TRACKER.md`, `memory/FINDINGS_LOG.md`, `memory/OPEN_QUESTIONS.md`, `memory/PROJECT_STATE.md`, `memory/CONTEXT_TRANSFER.md`, `memory/EVIDENCE_REGISTRY.md` | Brief A01 2026-11-12 siang | Tanpa Git. Arahan pengguna 'lanjut tanpa persetujuan saya untuk saat ini' (verbatim per brief A01) ditafsirkan A01 sebagai pengesampingan gate S7 untuk sesi ini dan arahan tidak menunggu Approval Request pada hal yang dapat diisi dengan jalur paling membatasi klaim; ini BUKAN keputusan D- dan bukan approval_evidence. Semua keputusan substantif dikumpulkan dalam Q-B3-a..j. Hook guard menolak (menurut brief A01): a01 `paste`; a13 `sed`, `python -c`, `cd`; a02 `sed`, `awk`, `for`, command substitution; a03 `sed`, `awk`, `git status`; a08 `which`, `sed`, `for`, `git diff`; a09 `sed`; tidak ada jalan memutar. DICABUT oleh pernyataan pengguna 2026-11-12 (lihat TSK-185): arahan 'lanjut tanpa persetujuan saya' tidak berlaku lagi |
+| TSK-175 | QA lama III.2 (sesi sebelumnya) | DROPPED | (a07/a08/a09) | 0 | — | — | DIGANTIKAN oleh TSK-179..181; qa_status n/a; laporan tidak ada pada A01 |
+| TSK-176 | QA lama III.2 (sesi sebelumnya) | DROPPED | (a07/a08/a09) | 0 | — | — | DIGANTIKAN oleh TSK-179..181; qa_status n/a; laporan tidak ada pada A01 |
+| TSK-177 | QA lama III.2 (sesi sebelumnya) | DROPPED | (a07/a08/a09) | 0 | — | — | DIGANTIKAN oleh TSK-179..181; qa_status n/a; laporan tidak ada pada A01 |
+| TSK-178 | memory_op A13: init_reconcile awal sesi 2026-11-12 siang | DONE | A13 | 0 | `memory/PROJECT_STATE.md` | Brief A01 | Dilaporkan A13 sendiri; hash Bab III saat itu `9d619d65889e`, based_on_commit 5f5d4b9 |
+| TSK-179 | QA editorial III.2 siklus 0 (a09) | DONE | A09 | 0 | (laporan a09; F-A09-0401..0420) | Brief A01 | FAIL (0/0/2/18); MEDIUM F-A09-0401, 0402; LOW dijadwalkan akhir bab |
+| TSK-180 | QA teknis III.2 siklus 0 (a07) | DONE | A07 | 0 | (laporan a07; F-A07-0113..0125) | Brief A01 | FAIL (0/0/8/4 +1 INFO); tiga MEDIUM requires_decision dijawab D-122..D-124 |
+| TSK-181 | QA sitasi III.2 siklus 0 (a08) | DONE | A08 | 0 | (laporan a08; F-A08-0001..0005 versi III.2) | Brief A01 | PASS_WITH_NOTES (0/0/0/3 +2 INFO); 21 titik sitasi ke 10 sumber, 26 halaman PDF diperiksa; ID bentrok dengan Bab I |
+| TSK-182 | Revisi III.2 (a03): siklus 1 (draf 2) lalu lanjutan (draf 3) | DONE | A03 | 1 (+ draf 3) | `bab3/Bab_III_Draft.md` | D-122, D-123, D-124 (draf 2); D-125 (draf 3) | Draf 2 menerapkan tiga keputusan dan MEDIUM, draf 3 tiga MEDIUM lokal; batas D-106 (3 draf) TERCAPAI; draf 3 diverifikasi terarah oleh a07/a09 (TSK-183/184 lanjutan, PASS); LOW/INFO di luar batas hanya dengan izin eksplisit pengguna |
+| TSK-183 | QA teknis terarah III.2 siklus 1 (a07) | DONE | A07 | 1 | (laporan a07; F-A07-0126, 0127) | Brief A01 | FAIL; sembilan MEDIUM lama RESOLVED; F-A07-0126 MEDIUM baru, F-A07-0127 INFO, 4 LOW tanpa ID; verifikasi lanjutan selesai: PASS, F-A07-0126 RESOLVED |
+| TSK-184 | QA editorial terarah III.2 siklus 1 (a09) | DONE | A09 | 1 | (laporan a09; F-A09-0421, 0422) | Brief A01 | FAIL; F-A09-0401, 0402 RESOLVED; F-A09-0421, 0422 MEDIUM baru, 14 LOW tanpa ID; verifikasi lanjutan selesai: PASS, F-A09-0421 dan 0422 RESOLVED |
+| TSK-188 | Baca bunyi KMK 1596/2024 hlm. 167-168 (a08, read-only) | DONE | A08 | 0 | — | Brief A01 | COMPLETE, qa n/a; fakta tekstual dicatat di Q-B3-c dan FINDINGS_LOG; tidak mengubah status F-A07-0112/F-A08-0122a |
+| TSK-189 | memory_op A13: session_close 2026-11-12 | DONE | A13 | 0 | `memory/CONTEXT_TRANSFER.md`, `memory/PROJECT_STATE.md`, `memory/TASK_TRACKER.md`, `memory/OPEN_QUESTIONS.md`, `memory/FINDINGS_LOG.md` | Brief A01 (/sesi-tutup dijalankan pengguna sendiri) | Tanpa D- baru dan tanpa Git; Q-B3-c tetap TERBUKA (pengguna tidak memilih opsi); A01 sempat ditolak saat memanggil skill sesi-tutup (disable-model-invocation), fakta saja |
+| TSK-187 | memory_op A13: record_decision D-126 (Q-B3-a), D-127 (Q-B3-d, F-A07-0125 ditutup), D-128 (Q-B3-k) | DONE | A13 | 0 | `memory/DECISION_LOG.md`, `memory/OPEN_QUESTIONS.md`, `memory/FINDINGS_LOG.md`, `memory/TASK_TRACKER.md` | Jawaban pengguna 2026-11-12 (AskUserQuestion, approval_evidence verbatim di D-126..D-128) | Keputusan lingkup terbatas, bukan tim/pembimbing; naskah tidak diubah; Q-B3-b, c, e..j tidak diubah; baris 35 III.1 diperiksa spesifik di TSK-172 belum diverifikasi |
+| TSK-186 | memory_op A13: update_findings (F-A07-0126, F-A09-0421, F-A09-0422 RESOLVED) + task_close verifikasi lanjutan TSK-182..184 + state Bab III | DONE | A13 | 0 | `memory/FINDINGS_LOG.md`, `memory/TASK_TRACKER.md`, `memory/PROJECT_STATE.md`, `memory/CONTEXT_TRANSFER.md` | Brief A01 (tanpa keputusan baru) | RESOLVED dinyatakan auditor penemu; verifikasi terarah, bukan audit penuh; MEDIUM/HIGH III.2 tertutup, LOW/INFO tertunda; Q-B3-* tidak diubah |
+| TSK-185 | memory_op A13: task_close TSK-173, 175..184 + record_decision D-122..D-125 + record_findings III.2 + Q-B3-k, l + state Bab III | DONE | A13 | 0 | `memory/DECISION_LOG.md`, `memory/FINDINGS_LOG.md`, `memory/OPEN_QUESTIONS.md`, `memory/TASK_TRACKER.md`, `memory/PROJECT_STATE.md`, `memory/CONTEXT_TRANSFER.md` | Brief A01; approval_evidence verbatim per keputusan | Tanpa Git. Pernyataan pengguna 2026-11-12 'Lanjutkan tapi jangan otomatis banget, kondisi yang saya kirim sebelumnya sudah tidak berlaku soalnya' = arahan lama 'lanjut tanpa persetujuan saya' DICABUT, gate persetujuan berlaku lagi (fakta arahan, BUKAN keputusan D-). Perbaikan draf 3 (F-A07-0126, F-A09-0421, F-A09-0422) diperiksa A01 hanya lewat linter dan baca ulang, tidak diaudit ulang auditor, jadi status IN_PROGRESS. III.2 BUKAN lolos QA |
 
 Approval evidence TSK-061 (persetujuan operasional per eksekusi, P2-02):
 
@@ -429,6 +444,20 @@ Diisi A13 saat penutupan tugas dari Agent Report dan `.scratch/agent_runs.jsonl`
 | 2026-11-12 | TSK-172 (QA sitasi III.1, siklus 0; HTTP 429 lalu SendMessage) | a08 | 0 | COMPLETE | FAIL | 0/1/6/2 (+2 INFO) | n/a | n/a | n/a |
 | 2026-11-12 | TSK-172 (QA sitasi terarah, siklus 1) | a08 | 1 | COMPLETE | PASS_WITH_NOTES | 0/0/0/0 | n/a | n/a | n/a |
 | 2026-11-12 | TSK-174 (task_close batch, record_findings, Q-B3, state Bab III) | a13 | 0 | COMPLETE | NA | 0/0/0/0 | n/a | n/a | n/a |
+| 2026-11-12 | TSK-173 (tulis III.2) | a03 | 0 | COMPLETE (menurut hasil di naskah) | NA | n/a | n/a | n/a | n/a |
+| 2026-11-12 | TSK-178 (init_reconcile) | a13 | 0 | COMPLETE | NA | 0/0/0/0 | n/a | n/a | n/a |
+| 2026-11-12 | TSK-179 (QA editorial III.2, siklus 0) | a09 | 0 | COMPLETE | FAIL | 0/0/2/18 | n/a | n/a | n/a |
+| 2026-11-12 | TSK-180 (QA teknis III.2, siklus 0) | a07 | 0 | COMPLETE | FAIL | 0/0/8/4 (+1 INFO) | n/a | n/a | n/a |
+| 2026-11-12 | TSK-181 (QA sitasi III.2, siklus 0; 26 halaman PDF) | a08 | 0 | COMPLETE | PASS_WITH_NOTES | 0/0/0/3 (+2 INFO) | n/a | n/a | n/a |
+| 2026-11-12 | TSK-182 (revisi III.2 draf 2 dan draf 3) | a03 | 1 | COMPLETE | NA | n/a | n/a | n/a | n/a |
+| 2026-11-12 | TSK-183 (QA teknis terarah, siklus 1) | a07 | 1 | COMPLETE | FAIL | 0/0/1/0 baru (F-A07-0126; +1 INFO, 4 LOW tanpa ID) | n/a | n/a | n/a |
+| 2026-11-12 | TSK-184 (QA editorial terarah, siklus 1) | a09 | 1 | COMPLETE | FAIL | 0/0/2/14 baru (F-A09-0421, 0422) | n/a | n/a | n/a |
+| 2026-11-12 | TSK-185 (task_close, record_decision D-122..D-125, record_findings III.2) | a13 | 0 | COMPLETE | NA | 0/0/0/0 | n/a | n/a | n/a |
+| 2026-11-12 | TSK-183/184 verifikasi lanjutan draf 3 (a07: F-A07-0126; a09: F-A09-0421, 0422) | a07, a09 | 1 | COMPLETE | PASS | 0/0/0/0 baru | n/a | n/a | n/a |
+| 2026-11-12 | TSK-186 (update_findings, task_close) | a13 | 0 | COMPLETE | NA | 0/0/0/0 | n/a | n/a | n/a |
+| 2026-11-12 | TSK-187 (record_decision D-126..D-128) | a13 | 0 | COMPLETE | NA | 0/0/0/0 | n/a | n/a | n/a |
+| 2026-11-12 | TSK-188 (baca KMK 1596/2024 hlm. 167-168, read-only) | a08 | 0 | COMPLETE | NA | n/a | n/a | n/a | n/a |
+| 2026-11-12 | TSK-189 (session_close) | a13 | 0 | COMPLETE | NA | 0/0/0/0 | n/a | n/a | n/a |
 
 Catatan: token = subagent_tokens menurut harness, mungkin kumulatif per instance.
 

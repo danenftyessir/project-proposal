@@ -1,10 +1,10 @@
 ---
 file: OPEN_QUESTIONS
-revision: 56
+revision: 59
 status: CURRENT
 updated: 2026-11-12
 updated_by: a13-memory-manager
-based_on_commit: 80a13ba
+based_on_commit: 5f5d4b9
 ---
 
 # Open Questions
@@ -1754,12 +1754,15 @@ affected:
 class: L3
 pic: Pengguna
 ask_to: Pengguna
-status: TERBUKA
+status: DIPUTUSKAN → D-126
 updated: 2026-11-12
 refs:
 - TSK-169
 - TSK-168
-note: Ijadi Maghsoodi dkk., Domingues, dan Newton berada di luar daftar pustaka sebelum Bab III (menurut a02). Aturan pengguna menyatakan sumber baru ke daftar referensi hanya atas permintaan.
+- TSK-181
+- D-126
+- TSK-187
+note: Ijadi Maghsoodi dkk., Domingues, dan Newton berada di luar daftar pustaka sebelum Bab III (menurut a02). Aturan pengguna menyatakan sumber baru ke daftar referensi hanya atas permintaan. Pembaruan TSK-185 (2026-11-12) - pengguna memilih "Tunda sampai laporan QA masuk" (arahan alur; BELUM ada keputusan; pertanyaan diulang setelah QA III.2). Catatan a08 (TSK-181): III.2 tidak mengutip Ijadi Maghsoodi maupun Lewis; Ijadi hanya di III.1 baris 35. Status tetap TERBUKA (ditunda). [TSK-187: DIPUTUSKAN → D-126, "Pertahankan dan konfirmasi".] Butir terbuka kecil (bukan keputusan): koreksi A01 - frasa "belum diaudit a08" dalam pertanyaan hanya batas cakupan a08 pada TSK-181; audit sitasi III.1 (TSK-172) sudah dilakukan, tetapi apakah baris 35 (Ijadi Maghsoodi dkk.) diperiksa spesifik di TSK-172 BELUM diverifikasi A01/A13; tidak ada audit tambahan dijalankan.
 ```
 
 ```yaml
@@ -1794,7 +1797,7 @@ refs:
 - F-A09-0304
 - TSK-171
 - TSK-172
-note: Konflik dua auditor, tidak dipilih A01 maupun A13. Perubahan di luar batas siklus otomatis D-106.
+note: Konflik dua auditor, tidak dipilih A01 maupun A13. Perubahan di luar batas siklus otomatis D-106. Pembaruan TSK-188/189 (2026-11-12) - fakta tekstual dari a08 (read-only; cetak = PDF): KMK 1596/2024 hlm. 168 EP c berbunyi "Fokus pengkajian paling sedikit mencakup pada ketepatan waktu, keterbacaan, kelengkapan rekam medis dan isi rekam medis sesuai dengan peraturan perundangan." EP b hlm. 168: "Komite/tim secara berkala melakukan pengkajian rekam medis pasien secara berkala setiap tahun dan menggunakan sampel yang mewakili (rekam medis pasien yang masih dirawat dan pasien yang sudah pulang)." Maksud dan tujuan MRMIK 12 hlm. 167: "Pengkajian berfokus pada ketepatan waktu, kelengkapan, keterbacaan, keabsahan dan ketentuan lainnya ..." (tanpa "paling sedikit"). "setidaknya"/"sekurang-kurangnya" tidak ada di hlm. 167-168. Catatan paket bukti B3-06 yang dipakai a07 (F-A07-0112) tidak sesuai PDF; baris 17 memparafrasakan "isi rekam medis sesuai dengan peraturan perundangan" menjadi "kesesuaian isi dengan peraturan", dan "berdasarkan" berasal dari maksud dan tujuan; EP c ambigu tata bahasanya (fokus keempat atau keterangan atas kelengkapan). Ini fakta tekstual, BUKAN penilaian siapa benar. A01 mengajukan tiga opsi (pertahankan baris 17; pertahankan dan koreksi B3-06 oleh a02; sempurnakan kalimat ke bunyi sumber); pengguna TIDAK memilih (jawabannya hanya perintah /sesi-tutup). Status TETAP TERBUKA; baris 17 tidak diubah.
 ```
 
 ```yaml
@@ -1806,12 +1809,16 @@ affected:
 class: L3
 pic: Pengguna
 ask_to: Pengguna
-status: TERBUKA
+status: DIPUTUSKAN → D-127
 updated: 2026-11-12
 refs:
 - F-A07-0107
 - TSK-171
-note: Opsi A diterapkan atas arahan operasional A01 (jalur yang membatasi klaim); bukan keputusan D-.
+- F-A07-0125
+- D-127
+- TSK-187
+- TSK-180
+note: Opsi A diterapkan atas arahan operasional A01 (jalur yang membatasi klaim); bukan keputusan D-. Pembaruan TSK-185 (2026-11-12) - a07 (F-A07-0125, INFO) mencatat bahwa III.2 kini mendefinisikan sumber retrieval = proposisi dari kedua dokumen (indeks gabungan), sehingga pertanyaan opsi A/B perlu dinilai ulang pengguna. TETAP TERBUKA; bukan keputusan. [TSK-187: DIPUTUSKAN → D-127, "Pertahankan keduanya".]
 ```
 
 ```yaml
@@ -1911,5 +1918,42 @@ refs:
 - TSK-171
 - TSK-172
 - D-106
-note: Usulan A01.
+note: Usulan A01. Pembaruan TSK-185 (2026-11-12) - cakupan diperluas ke temuan LOW/INFO III.2 (F-A07-0121, 0122, 0124, 0125, 0127; F-A08-0001..0005 versi III.2; F-A09-0403..0420 dan 14 LOW tanpa ID dari TSK-184). Pengguna memilih draf ke-3 "Tiga MEDIUM saja (Recommended)" sehingga LOW/INFO ditahan sampai akhir Bab III (arahan alur, bukan keputusan D-); pengerjaannya di luar batas D-106 memerlukan izin eksplisit pengguna. Status tetap TERBUKA.
+```
+
+```yaml
+id: Q-B3-k
+question: Struktur III.2.4 berupa daftar bernomor 10 langkah (9 langkah pada draf awal), sedangkan aturan pengguna mengutamakan prosa dan daftar poin hanya untuk tabel perbandingan karya terdahulu. Apakah langkah teknis III.2.4 dikecualikan, atau diubah menjadi prosa? Usulan a09: routing ke a10.
+affected:
+- bab3/Bab_III_Draft.md
+- III.2.4
+class: L3
+pic: Pengguna
+ask_to: Pengguna
+status: DIPUTUSKAN → D-128
+updated: 2026-11-12
+refs:
+- TSK-179
+- TSK-184
+- D-128
+- TSK-187
+note: Pertanyaan struktur dari a09 (TSK-179). Diputuskan TSK-187 - "Kecualikan, pertahankan daftar" (D-128); tanpa panggilan a10.
+```
+
+```yaml
+id: Q-B3-l
+question: Pengamatan a03 untuk pengguna pada III.2 (draf 3): (1) Langkah 2 tidak menyatakan siapa yang menetapkan isi definisi operasional dan kriteria kelalaian (penulis sendiri, pakar, atau pembimbing) dan tidak ditandai penanda; (2) perbandingan retrieval leksikal/embedding/hybrid (baris 76) hanya bersandar pada penalaran penulis, tanpa sumber terverifikasi untuk teks klinis berbahasa Indonesia; (3) kalimat "Keluaran LLM juga dapat berbeda antarpengulangan..." (baris 175) adalah klaim umum tanpa sumber; (4) Bab I I.4 butir 7 ("kombinasi union setelah deduplikasi") berbeda urutan dari I.5 dan III.2 (F-A07-0127). Bagaimana masing-masing ditangani?
+affected:
+- bab3/Bab_III_Draft.md
+- bab1/Bab_I_Draft.md
+class: L3
+pic: Pengguna
+ask_to: Pengguna
+status: TERBUKA
+updated: 2026-11-12
+refs:
+- TSK-182
+- F-A07-0127
+- F-A07-0128
+note: Pengamatan a03 menurut brief A01; bukan keputusan. Butir (4) menyentuh Bab I yang naskah berlakunya Markdown (D-119); perubahan Bab I butuh keputusan pengguna.
 ```

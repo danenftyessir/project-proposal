@@ -1,10 +1,10 @@
 ---
 file: DECISION_LOG
-revision: 43
+revision: 45
 status: CURRENT
 updated: 2026-11-12
 updated_by: a13-memory-manager
-based_on_commit: 80a13ba
+based_on_commit: 5f5d4b9
 ---
 
 # Decision Log
@@ -2929,4 +2929,220 @@ approval_evidence:
   answered_at: '2026-11-12'
   session_ref: sesi A01 2026-11-12 (/sesi-mulai), AskUserQuestion konflik C4; diteruskan A01 ke A13 dalam brief TSK-165 apply_reconcile
   scope: Akses RSIA 2026-11-12T05:21 diizinkan pasca-fakta; pembuatan manifest; tanpa isi data
+```
+
+## D-122
+
+```yaml
+id: D-122
+decision: 'Segmentasi proposisi di III.2 dilakukan bersama oleh M1 (aturan pemecahan kalimat + LLM) untuk kedua komponen; naskah menyatakan terbuka bahwa konfigurasi berbasis aturan memakai LLM pada tahap segmentasi dan dampaknya pada RQ1/RQ2 (menjawab F-A07-0113).'
+class: L3
+status: APPROVED (keputusan pengguna; persetujuan tim/pembimbing BELUM ada; lingkup hanya III.2 Bab III)
+date: '2026-11-12'
+related:
+- F-A07-0113
+- D-120
+- TSK-179
+- TSK-180
+- TSK-182
+basis: Jawaban pengguna via AskUserQuestion 2026-11-12 (diteruskan A01 ke A13, TSK-185)
+alternatives_considered:
+- Segmentasi hanya dengan aturan
+- Segmentasi terpisah per komponen
+- Belum bisa diputuskan, bawa ke pembimbing
+consequences: 'Naskah III.2 diubah a03 (TSK-182) menurut keputusan ini; a07 menyatakan F-A07-0113 RESOLVED pada TSK-183 (menurut laporan A01). Kontrak antar-blok dengan tim lain tidak disentuh. Isi substantif naskah tidak dinilai A13.'
+approval_evidence:
+  question: 'Langkah 3 di III.2 memecah catatan menjadi proposisi dengan memadukan aturan pemecahan kalimat dan LLM (M1). Keluaran M1 dipakai kedua komponen, termasuk M2a yang disebut "berbasis aturan", sehingga konfigurasi berbasis aturan sebenarnya memuat LLM. Tabel III.2 tidak menyebut hal ini, dan ini mengubah cara RQ1 dan analisis per komponen di RQ2 dibaca (F-A07-0113, ditemukan a07; a07 tidak memberi rekomendasi). Bagaimana segmentasi proposisi dilakukan?'
+  options_offered:
+  - Segmentasi bersama, dinyatakan terbuka
+  - Segmentasi hanya dengan aturan
+  - Segmentasi terpisah per komponen
+  - Belum bisa diputuskan, bawa ke pembimbing
+  user_answer:
+  - Segmentasi bersama, dinyatakan terbuka
+  answered_at: '2026-11-12'
+  session_ref: sesi A01 2026-11-12, AskUserQuestion F-A07-0113 (nomor pesan tidak diteruskan); diteruskan A01 ke A13 dalam brief TSK-185
+  scope: Segmentasi proposisi dilakukan bersama oleh M1 (aturan + LLM) untuk kedua komponen; naskah menyatakan bahwa konfigurasi berbasis aturan memakai LLM pada tahap segmentasi dan dampaknya pada RQ1/RQ2. Hanya III.2 Bab III.
+```
+
+## D-123
+
+```yaml
+id: D-123
+decision: 'Ekstraksi entitas bertipe, tanggal, dan normalisasi (singkatan, sinonim) di III.2 dilakukan di M2a (leksikon dan pola); kontrak proposisi M1 tidak ditambah atribut (menjawab F-A07-0115).'
+class: L3
+status: APPROVED (keputusan pengguna; persetujuan tim/pembimbing BELUM ada; kontrak antar-blok dengan tim lain belum disepakati)
+date: '2026-11-12'
+related:
+- F-A07-0115
+- D-122
+- TSK-180
+- TSK-182
+basis: Jawaban pengguna via AskUserQuestion 2026-11-12 (diteruskan A01 ke A13, TSK-185)
+alternatives_considered:
+- Di M1 (bersama)
+- Belum bisa diputuskan, bawa ke tim
+consequences: 'Naskah III.2 diubah a03 (TSK-182); a07 menyatakan F-A07-0115 RESOLVED pada TSK-183 (menurut laporan A01). Kontrak antar-blok dengan tim lain belum disepakati dan tidak diputuskan di sini.'
+approval_evidence:
+  question: 'Kontrak proposisi di III.2 hanya memuat ID, teks, dokumen, entri, bagian, dan posisi. Aturan M2a seperti "diagnosis tidak muncul di CPPT" atau "tanggal tidak konsisten" membutuhkan entitas bertipe, tanggal, dan normalisasi (singkatan, sinonim). Nilai "objek informasi" dan "konteks kejadian" yang dipakai M3 dan M4 juga dihasilkan dua komponen berbeda (F-A07-0115, ditemukan a07; a07 tidak memberi rekomendasi). Di tahap mana ekstraksi dan normalisasi dilakukan?'
+  options_offered:
+  - Di M1 (bersama)
+  - Di M2a (khusus aturan)
+  - Belum bisa diputuskan, bawa ke tim
+  user_answer:
+  - Di M2a (khusus aturan)
+  answered_at: '2026-11-12'
+  session_ref: sesi A01 2026-11-12, AskUserQuestion F-A07-0115 (nomor pesan tidak diteruskan); diteruskan A01 ke A13 dalam brief TSK-185
+  scope: Ekstraksi entitas bertipe, tanggal, dan normalisasi dilakukan di M2a (leksikon dan pola); kontrak proposisi M1 tidak ditambah atribut. Kontrak antar-blok dengan tim lain belum disepakati.
+```
+
+## D-124
+
+```yaml
+id: D-124
+decision: 'Acuan pada data pengembangan di III.2 = pemeriksaan informal penulis atas sebagian kecil keluaran; angkanya hanya untuk iterasi, tidak dilaporkan sebagai hasil; bias penulis dinyatakan (menjawab F-A07-0118).'
+class: L3
+status: APPROVED (keputusan pengguna; persetujuan tim/pembimbing BELUM ada; lingkup hanya III.2 Bab III)
+date: '2026-11-12'
+related:
+- F-A07-0118
+- D-122
+- TSK-180
+- TSK-182
+basis: Jawaban pengguna via AskUserQuestion 2026-11-12 (diteruskan A01 ke A13, TSK-185)
+alternatives_considered:
+- Set kecil berlabel pakar
+- Hapus pembanding di data pengembangan
+consequences: 'Naskah III.2 diubah a03 (TSK-182); a07 menyatakan F-A07-0118 RESOLVED pada TSK-183 (menurut laporan A01). Label acuan I.5 langkah 2 untuk data uji tidak diubah oleh keputusan ini.'
+approval_evidence:
+  question: 'Label acuan hanya ada untuk data uji (I.5 langkah 2). Namun III.2 menyatakan irisan dan voting dapat dipakai "sebagai pembanding pada data pengembangan", dan langkah 3 sampai 7 diiterasi pada data pengembangan. Keduanya tidak bisa dilakukan tanpa acuan di data pengembangan (F-A07-0118, ditemukan a07; a07 tidak memberi rekomendasi). Apa acuan pada data pengembangan?'
+  options_offered:
+  - Anotasi informal oleh penulis
+  - Set kecil berlabel pakar
+  - Hapus pembanding di data pengembangan
+  user_answer:
+  - Anotasi informal oleh penulis
+  answered_at: '2026-11-12'
+  session_ref: sesi A01 2026-11-12, AskUserQuestion F-A07-0118 (nomor pesan tidak diteruskan); diteruskan A01 ke A13 dalam brief TSK-185
+  scope: Acuan pada data pengembangan = pemeriksaan informal penulis atas sebagian kecil keluaran; angkanya hanya untuk iterasi, tidak dilaporkan sebagai hasil; bias penulis dinyatakan.
+```
+
+## D-125
+
+```yaml
+id: D-125
+decision: 'Kalimat di III.2 baris 78 yang menyebut irisan/voting berbobot sebagai pembanding pada data pengembangan dihapus tanpa pengganti; union dijelaskan hanya dengan alasan pemilihannya (menjawab F-A07-0126).'
+class: L3
+status: APPROVED (keputusan pengguna; persetujuan tim/pembimbing BELUM ada; lingkup hanya III.2 baris 78)
+date: '2026-11-12'
+related:
+- F-A07-0126
+- D-124
+- TSK-183
+- TSK-182
+basis: Jawaban pengguna via AskUserQuestion 2026-11-12 (diteruskan A01 ke A13, TSK-185)
+alternatives_considered:
+- Nyatakan tidak dijalankan
+consequences: 'Perbaikan dilakukan a03 pada draf 3 (TSK-182 lanjutan). Perbaikan diperiksa A01 hanya lewat linter dan baca ulang baris 78; TIDAK diaudit ulang a07, sehingga F-A07-0126 belum RESOLVED.'
+approval_evidence:
+  question: 'Paragraf baris 78 menyebut irisan dan voting berbobot dapat dipakai sebagai pembanding pada data pengembangan. Menurut keputusan Anda, data itu tidak berlabel (hanya pemeriksaan informal penulis), dan voting berbobot menurut paragraf yang sama memerlukan kalibrasi pada data berlabel (F-A07-0126, ditemukan a07; a07 menyebut kedua opsi sama-sama membuat konfigurasi yang dievaluasi, yaitu union, tidak berubah, dan tidak memberi rekomendasi). Bagaimana paragraf itu diperbaiki?'
+  options_offered:
+  - Nyatakan tidak dijalankan
+  - Hapus kalimat pembanding
+  user_answer:
+  - Hapus kalimat pembanding
+  answered_at: '2026-11-12'
+  session_ref: sesi A01 2026-11-12, AskUserQuestion F-A07-0126 (nomor pesan tidak diteruskan); diteruskan A01 ke A13 dalam brief TSK-185
+  scope: Kalimat yang menyebut irisan/voting berbobot sebagai pembanding pada data pengembangan dihapus tanpa pengganti; union dijelaskan hanya dengan alasan pemilihannya. Hanya III.2 baris 78.
+```
+
+## D-126
+
+```yaml
+id: D-126
+decision: 'Ijadi Maghsoodi dkk. (2026) dipertahankan dan dikonfirmasi: tetap dipakai di III.1 dan tetap ada di bab2/Daftar_Pustaka.md. Domingues dan Newton tidak dipakai. Hanya penambahan sumber ini (menjawab Q-B3-a).'
+class: L3
+status: APPROVED (keputusan pengguna; persetujuan tim/pembimbing BELUM ada; lingkup hanya penambahan sumber ini)
+date: '2026-11-12'
+related:
+- Q-B3-a
+- TSK-169
+- TSK-181
+basis: Jawaban pengguna via AskUserQuestion 2026-11-12 (diteruskan A01 ke A13, TSK-187)
+alternatives_considered:
+- Batalkan
+- Tunda lagi, bawa ke pembimbing
+consequences: 'Penambahan oleh a03 atas arahan operasional A01 kini dikonfirmasi pengguna. Naskah tidak diubah. Butir kecil terbuka (bukan keputusan): apakah baris 35 III.1 diperiksa spesifik di audit sitasi TSK-172 belum diverifikasi A01/A13; frasa "belum diaudit a08" dalam pertanyaan dikoreksi A01 sebagai batas cakupan TSK-181.'
+approval_evidence:
+  question: 'Ijadi Maghsoodi dkk. (2026) berada di luar daftar pustaka sebelum Bab III. Sumber ini ditambahkan ke bab2/Daftar_Pustaka.md oleh a03 atas arahan operasional saya tanpa persetujuan Anda, padahal aturan Anda menyatakan sumber baru masuk daftar referensi hanya atas permintaan. Setelah QA III.2: a08 menyatakan III.2 tidak mengutip sumber ini; ia hanya muncul di III.1 baris 35 (belum diaudit a08). Domingues (2026) dan Newton dkk. (2026) tidak dipakai. Apa yang dilakukan dengan Ijadi Maghsoodi dkk.?'
+  options_offered:
+  - Pertahankan dan konfirmasi
+  - Batalkan
+  - Tunda lagi, bawa ke pembimbing
+  user_answer:
+  - Pertahankan dan konfirmasi
+  answered_at: '2026-11-12'
+  session_ref: sesi A01 2026-11-12, AskUserQuestion Q-B3-a (nomor pesan tidak diteruskan); diteruskan A01 ke A13 dalam brief TSK-187
+  scope: Ijadi Maghsoodi dkk. (2026) tetap dipakai di III.1 dan tetap ada di bab2/Daftar_Pustaka.md. Domingues dan Newton tidak dipakai. Hanya penambahan sumber ini.
+```
+
+## D-127
+
+```yaml
+id: D-127
+decision: 'Pernyataan bahwa kontras kelompok 3 (RAG) tidak dijawab penelitian ini (opsi A) dipertahankan berdampingan dengan definisi sumber retrieval di III.2 (opsi B). Tidak ada perubahan naskah (menjawab Q-B3-d; F-A07-0125 ditutup oleh keputusan ini).'
+class: L3
+status: APPROVED (keputusan pengguna; persetujuan tim/pembimbing BELUM ada; lingkup hanya Bab III)
+date: '2026-11-12'
+related:
+- Q-B3-d
+- F-A07-0107
+- F-A07-0125
+- TSK-187
+basis: Jawaban pengguna via AskUserQuestion 2026-11-12 (diteruskan A01 ke A13, TSK-187)
+alternatives_considered:
+- Hanya definisi (opsi B)
+- Tunda ke pembimbing
+consequences: 'F-A07-0125 (INFO) dicatat DITUTUP oleh keputusan pengguna D-127, bukan RESOLVED oleh A13 maupun dinyatakan ulang oleh a07; a07 tidak perlu memeriksa ulang. Naskah tidak diubah.'
+approval_evidence:
+  question: 'Untuk F-A07-0107, naskah sementara memakai opsi A: kontras kelompok 3 (RAG) dinyatakan tidak dijawab penelitian ini. Opsi B, yaitu mendefinisikan sumber retrieval di III.2, kini sudah ada di naskah (indeks gabungan proposisi dari kedua dokumen). a07 (F-A07-0125) mencatat keduanya berdampingan tanpa kontradiksi, tetapi RAG di sini mengambil dari dokumen yang sedang diperiksa, bukan dari pengetahuan eksternal seperti pada sumber Li. Apakah Q-B3-d masih perlu pernyataan opsi A?'
+  options_offered:
+  - Pertahankan keduanya
+  - Hanya definisi (opsi B)
+  - Tunda ke pembimbing
+  user_answer:
+  - Pertahankan keduanya
+  answered_at: '2026-11-12'
+  session_ref: sesi A01 2026-11-12, AskUserQuestion Q-B3-d (nomor pesan tidak diteruskan); diteruskan A01 ke A13 dalam brief TSK-187
+  scope: Pernyataan bahwa kontras kelompok 3 (RAG) tidak dijawab penelitian ini tetap dipertahankan, berdampingan dengan definisi sumber retrieval di III.2. Tidak ada perubahan naskah. F-A07-0125 (INFO) ditutup oleh keputusan ini.
+```
+
+## D-128
+
+```yaml
+id: D-128
+decision: 'Daftar bernomor 10 langkah di III.2.4 dipertahankan sebagai pengecualian satu bagian dari aturan prosa. Tidak ada perubahan naskah dan tidak ada panggilan a10 (menjawab Q-B3-k).'
+class: L3
+status: APPROVED (keputusan pengguna; persetujuan tim/pembimbing BELUM ada; lingkup hanya III.2.4)
+date: '2026-11-12'
+related:
+- Q-B3-k
+- TSK-179
+- TSK-187
+basis: Jawaban pengguna via AskUserQuestion 2026-11-12 (diteruskan A01 ke A13, TSK-187)
+alternatives_considered:
+- Periksa dulu ke templat (a10)
+- Ubah menjadi prosa
+consequences: 'Pengecualian berlaku hanya untuk III.2.4. Hasil audit lain tidak menyebut daftar ini sebagai masalah struktur (menurut pertanyaan A01).'
+approval_evidence:
+  question: 'III.2.4 Langkah Teknis Pengembangan berupa daftar bernomor 10 langkah. Aturan Anda mengutamakan prosa, dan daftar poin hanya untuk tabel perbandingan karya terdahulu (a09, TSK-179). Hasil audit lain tidak menyebut daftar ini sebagai masalah struktur. Apa yang dilakukan dengan bentuk III.2.4?'
+  options_offered:
+  - Kecualikan, pertahankan daftar
+  - Periksa dulu ke templat (a10)
+  - Ubah menjadi prosa
+  user_answer:
+  - Kecualikan, pertahankan daftar
+  answered_at: '2026-11-12'
+  session_ref: sesi A01 2026-11-12, AskUserQuestion Q-B3-k (nomor pesan tidak diteruskan); diteruskan A01 ke A13 dalam brief TSK-187
+  scope: Daftar bernomor 10 langkah di III.2.4 dipertahankan sebagai pengecualian satu bagian dari aturan prosa. Tidak ada perubahan naskah dan tidak ada panggilan a10.
 ```
