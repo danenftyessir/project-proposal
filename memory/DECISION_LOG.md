@@ -1,10 +1,10 @@
 ---
 file: DECISION_LOG
-revision: 42
+revision: 43
 status: CURRENT
 updated: 2026-11-12
-updated_by: claude-sesi-biasa (atas permintaan pengguna; bukan A13)
-based_on_commit: a4063ae
+updated_by: a13-memory-manager
+based_on_commit: 80a13ba
 ---
 
 # Decision Log
@@ -2617,7 +2617,8 @@ approval_evidence:
 id: D-111
 decision: 'Artefak resmi sekarang: modular/TA1 bab 1.docx, modular/TA1 bab 2.docx, dan 13523136-Proposal-IF4091-Capstone-Individu-2026-Draft-Bab1-Bab2.docx. Markdown disamakan dengan docx tersebut: bab1/Bab_I_Draft.md ditulis ulang dari docx (tanpa penanda/riwayat), bab2/ memuat Pembuka_Bab_II.md, II.1..II.5, Daftar_Pustaka.md, gambar/; berkas II.1..II.8 dan Pembuka lama dipindah ke bab2/arsip_sebelum_sinkron_docx/.'
 class: L3
-status: APPROVED
+status: SUPERSEDED by D-119 (sebagian, hanya sumber kebenaran Bab I; Bab II tetap docx)
+status_sebelumnya: APPROVED
 date: '2026-11-12'
 related:
 - D-49
@@ -2736,7 +2737,8 @@ approval_evidence:
 id: D-115
 decision: 'Bab I pada docx resmi dibiarkan apa adanya, termasuk ambang 0,80, 80% skor 4 atau 5, mekanisme union dan deduplikasi, serta struktur I.3 (satu tujuan utama, lima tujuan khusus, tiga ukuran); pada titik-titik itu docx mengalahkan baseline D-102. Keputusan, temuan QA, dan pertanyaan terbuka yang bergantung pada teks Bab I DRAF 24 disesuaikan dengan kondisi docx saat ini: keputusan terkait ditandai SUPERSEDED sebagian, temuan OPEN/IN_PROGRESS atas Bab I DRAF 24 dibebaskan (WAIVED), pertanyaan Q-B1-* yang masih terbuka ditutup.'
 class: L3
-status: APPROVED (keputusan pengguna; persetujuan tim/pembimbing BELUM ada)
+status: SUPERSEDED by D-118 (sebagian, hanya perubahan Bab I pada commit 80a13ba / Paket A; sisanya tetap berlaku)
+status_sebelumnya: APPROVED (keputusan pengguna; persetujuan tim/pembimbing BELUM ada)
 date: '2026-11-12'
 related:
 - D-102
@@ -2815,4 +2817,116 @@ approval_evidence:
   answered_at: '2026-11-12'
   session_ref: sesi biasa (tanpa agent) 2026-11-12, dicatat langsung atas permintaan pengguna
   scope: Penyeragaman format sitasi ke APA pada docx resmi dan Markdown; bukan persetujuan tim/pembimbing/prodi
+```
+
+## D-118
+
+```yaml
+id: D-118
+decision: 'Perubahan Bab I pada commit 80a13ba (revisi Paket A oleh a03, bab1/Bab_I_Draft.md +12/-10 baris) sah sebagai keputusan pengguna dan menggantikan D-115 sebatas perubahan itu; D-115 ditandai SUPERSEDED sebagian.'
+class: L3
+status: APPROVED (keputusan pengguna; persetujuan tim/pembimbing BELUM ada)
+date: '2026-11-12'
+related:
+- D-115
+- D-111
+- D-119
+- TSK-166
+basis: Jawaban pengguna atas konflik C1 (ditemukan a13, TSK-165)
+alternatives_considered:
+- Opsi lain yang ditawarkan tidak tercatat lengkap di brief A01 (hanya opsi terpilih yang diteruskan)
+consequences: 'D-115 tetap berlaku untuk bagian lain (penyesuaian keputusan/temuan/pertanyaan DRAF 24 dengan kondisi Bab I saat itu); lingkup supersede hanya perubahan Bab I di 80a13ba. Isi substantif perubahan Paket A tidak dinilai oleh A13; bila perubahan menyentuh rumusan masalah/tujuan/kontribusi, kecocokan dengan D-102 belum diverifikasi dan menjadi catatan untuk A01. Persetujuan tim/pembimbing tetap BELUM ada. TSK-166 dicatat DONE dengan jawaban ini sebagai approval_evidence.'
+approval_evidence:
+  question: 'Konflik C1 (ditemukan a13): memory mencatat D-115 "Bab I docx dibiarkan apa adanya" dan CONTEXT_TRANSFER melarang menulis revisi Bab I sebelum Approval Request, tetapi commit 80a13ba (Anda) sudah mengubah bab1/Bab_I_Draft.md (+12/-10 baris) lewat Paket A pada 12 Nov dini hari. Bagaimana status perubahan Bab I di 80a13ba?'
+  options_offered:
+  - 'Opsi terpilih (diteruskan A01): revisi Paket A sah; D-115 ditandai SUPERSEDED sebagian; TSK-166 DONE dengan jawaban ini sebagai approval_evidence'
+  user_answer:
+  - Keputusan saya, gantikan D-115
+  answered_at: '2026-11-12'
+  session_ref: sesi A01 2026-11-12 (/sesi-mulai), AskUserQuestion konflik C1; diteruskan A01 ke A13 dalam brief TSK-165 apply_reconcile
+  scope: Perubahan Bab I pada commit 80a13ba menggantikan D-115 sebatas perubahan itu
+```
+
+## D-119
+
+```yaml
+id: D-119
+decision: 'Naskah Bab I yang berlaku adalah Markdown bab1/Bab_I_Draft.md (sumber kebenaran Bab I); docx resmi Bab I (modular/TA1 bab 1.docx dan bagian Bab I pada 13523136-Proposal-IF4091-Capstone-Individu-2026-Draft-Bab1-Bab2.docx) berstatus USANG sampai diperbarui. Pembaruan docx menunggu Approval Request P2-02 tersendiri. Bab II tetap docx.'
+class: L3
+status: APPROVED (keputusan pengguna; persetujuan tim/pembimbing BELUM ada)
+date: '2026-11-12'
+related:
+- D-111
+- D-118
+- D-49
+- P2-02
+basis: Jawaban pengguna atas konflik C2 (ditemukan a13, TSK-165)
+alternatives_considered:
+- Opsi lain yang ditawarkan tidak tercatat lengkap di brief A01 (hanya opsi terpilih yang diteruskan)
+consequences: 'D-111 ditandai SUPERSEDED by D-119 sebagian (hanya sumber kebenaran Bab I). D-49 (sumber kebenaran Bab I = Markdown) sudah SUPERSEDED by D-111 sebagian; efeknya untuk Bab I kini sejalan lagi dengan D-119, tetapi status D-49 TIDAK diubah karena tidak ada instruksi eksplisit pengguna; diserahkan ke A01/pengguna bila ingin memulihkan secara formal. Build docx tidak disetujui oleh keputusan ini; P2-02 tetap berlaku. Butir baru di OPEN_QUESTIONS: pembaruan docx Bab I menunggu P2-02.'
+approval_evidence:
+  question: 'Konflik C2: setelah Paket A, bab1/Bab_I_Draft.md (Markdown) berbeda dari docx resmi Bab I (modular/TA1 bab 1.docx dan Draft-Bab1-Bab2.docx) yang di memory tercatat "sinkron" (D-111). Mana yang menjadi naskah Bab I yang berlaku sekarang?'
+  options_offered:
+  - 'Opsi terpilih (diteruskan A01): Markdown jadi sumber kebenaran Bab I; docx resmi Bab I ditandai USANG sampai diperbarui; build docx perlu Approval Request P2-02 tersendiri; D-111 sebagian SUPERSEDED untuk Bab I; Bab II tetap docx'
+  user_answer:
+  - Markdown berlaku, docx menyusul
+  answered_at: '2026-11-12'
+  session_ref: sesi A01 2026-11-12 (/sesi-mulai), AskUserQuestion konflik C2; diteruskan A01 ke A13 dalam brief TSK-165 apply_reconcile
+  scope: Sumber kebenaran Bab I = Markdown; docx Bab I USANG; Bab II tidak berubah
+```
+
+## D-120
+
+```yaml
+id: D-120
+decision: 'Pengumpulan bukti Bab III (PKT-B-A02, a02; .scratch/a02/bab3_evidence.md, status PARTIAL) sah dan Bab III resmi dibuka; syarat D-116 ("setelah rekonsiliasi selesai") dianggap terpenuhi setelah rekonsiliasi TSK-165 diterapkan. a02 dapat diminta melengkapi sisa scope sekali sebelum a03 menulis Bab III.'
+class: L3
+status: APPROVED (keputusan pengguna; persetujuan tim/pembimbing BELUM ada)
+date: '2026-11-12'
+related:
+- D-116
+- D-104
+- D-105
+- TSK-168
+basis: Jawaban pengguna atas konflik C3 (ditemukan a13, TSK-165)
+alternatives_considered:
+- Opsi lain yang ditawarkan tidak tercatat lengkap di brief A01 (hanya opsi terpilih yang diteruskan)
+consequences: 'D-116 tetap APPROVED dan kini terpenuhi. Isi Bab III mengikuti D-104 dan D-105. Bukti a02 berstatus PARTIAL: sebagian klaim TIDAK DIPERIKSA; halaman prosiding Lewis dan halaman cetak Wong belum diverifikasi; kualitas isi belum diaudit (belum ada laporan a02 ataupun QA). Tidak ada penulisan Bab III oleh keputusan ini.'
+approval_evidence:
+  question: 'Konflik C3: D-116 menyatakan Bab III dimulai "setelah rekonsiliasi selesai", tetapi pengumpulan bukti Bab III (PKT-B-A02, a02) sudah berjalan 12 Nov dan menghasilkan .scratch/a02/bab3_evidence.md (status PARTIAL ...). Bagaimana statusnya?'
+  options_offered:
+  - 'Opsi terpilih (diteruskan A01): TSK-168 PARTIAL sebagai pekerjaan sah; D-116 dianggap terpenuhi setelah rekonsiliasi ini diterapkan; a02 dapat diminta melengkapi sisa scope sekali sebelum a03 menulis Bab III'
+  user_answer:
+  - Sah; Bab III resmi dibuka
+  answered_at: '2026-11-12'
+  session_ref: sesi A01 2026-11-12 (/sesi-mulai), AskUserQuestion konflik C3; diteruskan A01 ke A13 dalam brief TSK-165 apply_reconcile
+  scope: Pekerjaan PKT-B-A02 sah; Bab III dibuka; D-116 terpenuhi
+```
+
+## D-121
+
+```yaml
+id: D-121
+decision: 'Akses berkas RSIA oleh sesi A01 pada 2026-11-12T05:21 (event rsia_access, target_hash 19e167c7bdb2) diizinkan pengguna secara pasca-fakta; dicatat tanpa isi data; manifest integritas RSIA dibuat. Tujuan akses tidak dinyatakan. Akses berikutnya tetap wajib brief sensitive_access.'
+class: L3
+status: APPROVED (keputusan pengguna; persetujuan tim/pembimbing BELUM ada)
+date: '2026-11-12'
+related:
+- D-11
+- D-17
+- D-19
+- TSK-165
+basis: Jawaban pengguna atas konflik C4 (ditemukan a13, TSK-165)
+alternatives_considered:
+- Opsi lain yang ditawarkan tidak tercatat lengkap di brief A01 (hanya opsi terpilih yang diteruskan)
+consequences: 'Isi berkas dan pengenal tidak dicatat di memory (S11). Tujuan akses: tidak dinyatakan. Aturan D-11/D-17/D-19 tidak berubah. Manifest dibuat lewat check_memory.py --init-rsia-manifest (hasil di TSK-165).'
+approval_evidence:
+  question: 'Konflik C4: log hook mencatat satu akses berkas RSIA (rsia_access, hash target 19e167c7bdb2) oleh sesi A01 pada 2026-11-12 pukul 05:21 tanpa brief sensitive_access ... Apakah akses itu Anda izinkan, dan bagaimana mencatatnya (tanpa memuat isi data)?'
+  options_offered:
+  - 'Opsi terpilih (diteruskan A01): izinkan, catat, dan buat manifest'
+  user_answer:
+  - Diizinkan; catat + buat manifest
+  answered_at: '2026-11-12'
+  session_ref: sesi A01 2026-11-12 (/sesi-mulai), AskUserQuestion konflik C4; diteruskan A01 ke A13 dalam brief TSK-165 apply_reconcile
+  scope: Akses RSIA 2026-11-12T05:21 diizinkan pasca-fakta; pembuatan manifest; tanpa isi data
 ```

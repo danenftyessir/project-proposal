@@ -1,10 +1,10 @@
 ---
 file: EVIDENCE_REGISTRY
-revision: 6
+revision: 7
 status: PENDING_VERIFICATION
 updated: 2026-11-12
-updated_by: claude-sesi-biasa (atas permintaan pengguna; bukan A13)
-based_on_commit: a4063ae
+updated_by: a13-memory-manager
+based_on_commit: 80a13ba
 ---
 
 # Evidence Registry
@@ -123,5 +123,11 @@ Dibaca dari `source/16_Sistem_Hibrida_Aturan_dan_AI/`. Halaman = halaman cetak. 
 | H-01 | I.1 p20 (penanda hibrida) | Domingues (Nuno Soares Domingues, IJMI 206 (2026) 106144, doi:10.1016/j.ijmedinf.2025.106144): sistem berbasis aturan, "hybrid-ready rather than hybrid-implemented"; 1.236 aturan IF-THEN; n=10 laporan kasus; tanpa LLM; tidak menguji kombinasi | PDF di folder 16 (nama berkas tidak dicatat) | 2 (kutipan); lainnya lihat catatan | TERVERIFIKASI (a02 saja) | Tidak ditemukan konsistensi dokumen medis. Angka hasil tidak konsisten antarhalaman (hlm. 1 konkordansi 0,80 / F1 0,80; hlm. 5 lulus 4 dari 10 (40%), 6 dari 10 gagal; hlm. 7 80%; hlm. 5 §3.4 60% (3 dari 10)); jangan kutip angka tanpa menyebut inkonsistensi (F-A02-0203, INFO) |
 | H-02 | I.1 p20 | Ijadi Maghsoodi dkk. (Health Policy and Technology 15 (2026) 101292, doi:10.1016/j.hlpt.2026.101292): tinjauan naratif kritis 101 sumber; argumen konseptual dan trade-off hibrida; tanpa metrik sendiri | PDF di folder 16 (nama berkas tidak dicatat) | 2, 4, 5, 6, 7, 9, 10 | TERVERIFIKASI (a02 saja); sebagai argumen tinjauan, bukan bukti uji | Rumusan "might" (hlm. 2 "neither approach might be sufficient"; hlm. 9 "symbolic structure is not optional"). Hlm. 10 menegaskan perbandingan hibrida vs asisten tanpa batasan belum ada. Tidak dimasukkan telaah menurut D-67 |
 | H-03 | I.1 p20; P-6 | Tidak ada sumber (di antara yang dibaca a02) yang menguji kombinasi aturan+LLM pada pemeriksaan dokumen | tidak ada di `source/` | — | TIDAK DIDUKUNG (kekosongan) | P-6 tetap BELUM DIVERIFIKASI. F-A02-0201 (kalimat "tidak satu pun sumber ..."), F-A02-0202 (path INDEKS keliru) |
+
+## Bukti Bab III (a02, TSK-168; Claim–Evidence Log III.1, a08 TSK-172; dicatat TSK-174, 2026-11-12)
+
+Paket bukti Bab III ada di `.scratch/a02/bab3_evidence.md` (81 baris; tidak di-commit, isinya tidak disalin ke sini): TERVERIFIKASI 59, DIDUKUNG SEBAGIAN 15, TIDAK DITEMUKAN 3, TIDAK DIDUKUNG 4 (B3-36a Domingues, B3-36g Newton, B3-49i Faustini, B3-64c AHIMA), TIDAK DIPERIKSA 0. Catatan: Lewis di repo hanya arXiv v4 (daftar pustaka mengutip prosiding NeurIPS; Q-B3-b); Wong offset halaman +1446 terkonfirmasi; tiga sumber di luar daftar pustaka (Domingues 2026, Ijadi Maghsoodi dkk. 2026, Newton dkk. 2026); B3-40, B3-19, B3-22 perlu dikoreksi (F-A08-0123); B3-06 berkonflik dengan kutipan a08 (F-A07-0112 vs F-A08-0122a).
+
+Claim–Evidence Log III.1 ada di laporan a08 TSK-172 (tidak dimigrasikan baris per baris): 40 sitasi; 22 TERVERIFIKASI, 7 DIDUKUNG SEBAGIAN, 1 TIDAK DIDUKUNG (diperbaiki), 2 BELUM DIVERIFIKASI (diperbaiki), sisanya tidak dirinci pada brief. Hanya a02 dan a08; bukan persetujuan.
 
 Catatan rekonsiliasi 2026-11-12: tidak ada bukti baru dicatat. Verifikasi halaman yang tercatat di sini mengacu pada sumber di `source/` dan tidak otomatis berlaku untuk kalimat docx resmi yang baru; klaim Bab II docx belum diperiksa a02/a08 (pemeriksaan DRAFT 6 TSK-055 mengacu naskah Markdown lama).

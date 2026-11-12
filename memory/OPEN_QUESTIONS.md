@@ -1,10 +1,10 @@
 ---
 file: OPEN_QUESTIONS
-revision: 54
+revision: 56
 status: CURRENT
 updated: 2026-11-12
-updated_by: claude-sesi-biasa (atas permintaan pengguna; bukan A13)
-based_on_commit: a4063ae
+updated_by: a13-memory-manager
+based_on_commit: 80a13ba
 ---
 
 # Open Questions
@@ -190,8 +190,8 @@ pic: Abizzar (menurut Penyelarasan)
 ask_to: Tim / RSIA mitra / pembimbing
 status: MENUNGGU ANGGOTA
 updated: 2026-11-09
-refs: [D-115]
-note_D-115: 'Pembaruan 2026-11-12: D-90, D-91, D-92, D-94, D-97 (rujukan lama butir ini) ditandai SUPERSEDED sebagian oleh D-115 karena teks DRAF 24 digantikan docx resmi; butir tim di Penyelarasan tetap MENUNGGU ANGGOTA.'
+refs: []
+note_D-115: '(D-115 kini SUPERSEDED sebagian oleh D-118, hanya untuk perubahan Bab I di 80a13ba; bagian D-115 yang dirujuk di sini tidak terpengaruh. Rujukan dipindah dari refs ke catatan agar S4 tidak salah menandai.) Pembaruan 2026-11-12: D-90, D-91, D-92, D-94, D-97 (rujukan lama butir ini) ditandai SUPERSEDED sebagian oleh D-115 karena teks DRAF 24 digantikan docx resmi; butir tim di Penyelarasan tetap MENUNGGU ANGGOTA.'
 note_D-87_97: 'Pembaruan 2026-11-09 (TSK-142): pengguna memutuskan (lingkup terbatas; BUKAN keputusan tim/pembimbing/RSIA) pada beberapa butir yang menyentuh Q-TEAM: butir 4 → D-91 (rawat jalan terbatas = cakupan bersyarat; definisi tetap tidak ada); butir 5 → D-90 (penguncian, satuan episode rawat inap; keterangan RSIA belum terverifikasi); butir 6 → D-97 (satu episode = satu unit, pasangan ibu-bayi tidak dipisah); butir 9 → D-92 (judul baru, ditandai usulan); butir tim lain (F-A11-0023..0027, F-A05-0150) → D-94 (paket usulan penulis). Q-TEAM TETAP MENUNGGU ANGGOTA: tim belum menjawab.'
 ```
 
@@ -1663,7 +1663,8 @@ status: DIPUTUSKAN → D-116
 updated: 2026-11-12
 refs:
 - D-104
-note: Naskah Bab I docx tidak memuat paragraf research gap; materi lama ada di riwayat Git.
+- D-120
+note: Naskah Bab I docx tidak memuat paragraf research gap; materi lama ada di riwayat Git. D-120 (2026-11-12): Bab III resmi dibuka, D-116 terpenuhi.
 ```
 
 ```yaml
@@ -1701,4 +1702,214 @@ refs:
 - K1
 - D-80
 note: Pengamatan dari sinkronisasi 2026-11-12; tidak ada perubahan.
+```
+
+```yaml
+id: Q-REC-g
+question: Docx resmi Bab I (modular/TA1 bab 1.docx dan bagian Bab I Draft-Bab1-Bab2.docx) USANG terhadap bab1/Bab_I_Draft.md (D-119). Kapan dan bagaimana docx diperbarui (Approval Request P2-02 tersendiri; build_modular.py atau penyuntingan manual)?
+affected:
+- Bab I
+- modular/TA1 bab 1.docx
+- Draft-Bab1-Bab2.docx
+class: L3
+pic: Pengguna
+ask_to: Pengguna
+status: TERBUKA
+updated: 2026-11-12
+refs:
+- D-119
+- P2-02
+note: Berkaitan dengan D-111 (SUPERSEDED sebagian oleh D-119). Tidak ada build disetujui oleh D-119. Status formal D-49 (Markdown sumber kebenaran Bab I; SUPERSEDED sebagian oleh D-111) tidak diubah; apakah dipulihkan formal diserahkan ke pengguna.
+```
+
+```yaml
+id: Q-REC-h
+question: Revisi Paket A (TSK-166) dan QA a09 terarah (TSK-167) tidak punya laporan agent di memory. Apakah perubahan substantif Bab I di 80a13ba (mis. I.2/I.3) selaras dengan D-102, dan apakah hasil QA a09 perlu dicatat ke FINDINGS_LOG bila laporannya ada?
+affected:
+- Bab I
+- FINDINGS_LOG
+class: L3
+pic: Pengguna
+ask_to: Pengguna
+status: TERBUKA
+updated: 2026-11-12
+refs:
+- D-118
+- D-102
+- TSK-166
+- TSK-167
+note: A13 tidak menilai isi substantif; tidak ada temuan dicatat tanpa laporan.
+```
+
+## Butir baru dari penulisan dan QA III.1 (TSK-168..172, dicatat TSK-174, 2026-11-12)
+
+Dibuat dari brief A01; bukan keputusan. Batch untuk pengguna.
+
+```yaml
+id: Q-B3-a
+question: Konfirmasi atau batalkan pemakaian Ijadi Maghsoodi dkk. (2026) di Bab III dan penambahannya ke bab2/Daftar_Pustaka.md (sudah dilakukan a03 atas arahan operasional A01); Domingues (2026) dan Newton dkk. (2026) tidak dipakai.
+affected:
+- bab3/Bab_III_Draft.md
+- bab2/Daftar_Pustaka.md
+class: L3
+pic: Pengguna
+ask_to: Pengguna
+status: TERBUKA
+updated: 2026-11-12
+refs:
+- TSK-169
+- TSK-168
+note: Ijadi Maghsoodi dkk., Domingues, dan Newton berada di luar daftar pustaka sebelum Bab III (menurut a02). Aturan pengguna menyatakan sumber baru ke daftar referensi hanya atas permintaan.
+```
+
+```yaml
+id: Q-B3-b
+question: Lewis dkk.: daftar pustaka mengutip prosiding NeurIPS (hlm. 9459-9474) tetapi repo hanya punya arXiv v4. Kutip arXiv atau sediakan PDF prosiding?
+affected:
+- bab2/Daftar_Pustaka.md
+- bab3/Bab_III_Draft.md
+class: L3
+pic: Pengguna
+ask_to: Pengguna
+status: TERBUKA
+updated: 2026-11-12
+refs:
+- TSK-168
+note: Menurut a02 (TSK-168).
+```
+
+```yaml
+id: Q-B3-c
+question: F-A07-0112 vs F-A08-0122a: frasa "paling sedikit mencakup" (KMK 1596/2024 hlm. 168 EP c menurut a08; "kata setidaknya tidak ada di sumber" menurut catatan paket bukti B3-06 yang dipakai a07). Bagaimana rumusan di bab3/Bab_III_Draft.md baris 17 diputuskan (F-A09-0304 mengusulkan "sekurang-kurangnya pada")?
+affected:
+- bab3/Bab_III_Draft.md
+class: L3
+pic: Pengguna
+ask_to: Pengguna
+status: TERBUKA
+updated: 2026-11-12
+refs:
+- F-A07-0112
+- F-A08-0122
+- F-A09-0304
+- TSK-171
+- TSK-172
+note: Konflik dua auditor, tidak dipilih A01 maupun A13. Perubahan di luar batas siklus otomatis D-106.
+```
+
+```yaml
+id: Q-B3-d
+question: F-A07-0107 diterapkan sementara lewat opsi A (kontras kelompok 3/RAG dinyatakan tidak dijawab penelitian ini). Opsi B (definisikan sumber retrieval di III.2) tetap terbuka; pilih A tetap atau B?
+affected:
+- bab3/Bab_III_Draft.md
+- III.2
+class: L3
+pic: Pengguna
+ask_to: Pengguna
+status: TERBUKA
+updated: 2026-11-12
+refs:
+- F-A07-0107
+- TSK-171
+note: Opsi A diterapkan atas arahan operasional A01 (jalur yang membatasi klaim); bukan keputusan D-.
+```
+
+```yaml
+id: Q-B3-e
+question: Penanda [MENUNGGU KEPUTUSAN TIM: pemilik komponen rule-based] (bab3/Bab_III_Draft.md baris 49). Dokumen Penyelarasan baris 55 dan 169 menyatakan pengguna membangun rule-based dan AI/NLP; apakah itu final sehingga penanda ditutup?
+affected:
+- bab3/Bab_III_Draft.md
+class: L3
+pic: Pengguna
+ask_to: Pengguna
+status: TERBUKA
+updated: 2026-11-12
+refs:
+- TSK-169
+- Q-TEAM
+note: Pembagian pemilik komponen belum disahkan tim menurut penanda. Pengamatan baris Penyelarasan berasal dari brief A01, tidak diverifikasi A13.
+```
+
+```yaml
+id: Q-B3-f
+question: Bab II II.1.1 menulis "sekurang-kurangnya setiap tahun" (KMK 1596) yang perlu diselaraskan dengan temuan a02/a08 pada Bab III. Diperbarui di Markdown dan docx resmi Bab II, atau dibiarkan?
+affected:
+- bab2/II.1_Rekam_Medis_dan_Dokumentasi_Klinis_dalam_Konteks_Klaim_JKN.md
+- modular/TA1 bab 2.docx
+- Draft-Bab1-Bab2.docx
+class: L3
+pic: Pengguna
+ask_to: Pengguna
+status: TERBUKA
+updated: 2026-11-12
+refs:
+- Q-B3-c
+note: Bergantung pada jawaban Q-B3-c. Docx adalah naskah resmi Bab II (pernyataan pengguna 2026-11-12).
+```
+
+```yaml
+id: Q-B3-g
+question: Keselarasan antarbab dan daftar pustaka: heading bab2/Daftar_Pustaka.md masih "(Bab I dan Bab II)"; Bab I baris 23 dan Bab III tidak mengeja ICD-10/ICD-9-CM; pasangan "presisi"/"precision" antarbab belum seragam. Diseragamkan oleh siapa dan kapan?
+affected:
+- bab2/Daftar_Pustaka.md
+- bab1/Bab_I_Draft.md
+- bab3/Bab_III_Draft.md
+class: L3
+pic: Pengguna
+ask_to: Pengguna
+status: TERBUKA
+updated: 2026-11-12
+refs:
+- TSK-169
+note: Pengamatan dari brief A01; tidak diverifikasi A13.
+```
+
+```yaml
+id: Q-B3-h
+question: Wong dkk. 2025 (pedoman onkologi ESMO) dipakai untuk pernyataan umum tentang keluaran AI di Bab III. Dipertahankan dengan konteks atau diganti?
+affected:
+- bab3/Bab_III_Draft.md
+class: L3
+pic: Pengguna
+ask_to: Pengguna
+status: TERBUKA
+updated: 2026-11-12
+refs:
+- TSK-168
+- TSK-172
+note: Wong offset halaman +1446 terkonfirmasi a02.
+```
+
+```yaml
+id: Q-B3-i
+question: source/INDEKS.md usang (folder Domingues/Ijadi 16_, Faustini 14_, Newton 15_ tidak sesuai). Diperbaiki oleh pengguna atau sesi biasa?
+affected:
+- source/INDEKS.md
+class: L3
+pic: Pengguna
+ask_to: Pengguna
+status: TERBUKA
+updated: 2026-11-12
+refs:
+- TSK-168
+- F-A08-0123
+note: Menurut a02. Paket bukti B3-40 (halaman 0,74 = 5490), B3-19, dan B3-22 (klaim bahasa tanpa halaman) perlu dikoreksi a02 (F-A08-0123).
+```
+
+```yaml
+id: Q-B3-j
+question: Jadwal pengerjaan temuan LOW/INFO Bab III (F-A07-0108..0111, F-A09-0280..0306, F-A08-0120, 0121, 0124) sekali di akhir bab; F-A07-0111 (batas blok "Cross-Episode Reconciliation") untuk a06. Disetujui?
+affected:
+- bab3/Bab_III_Draft.md
+class: L3
+pic: Pengguna
+ask_to: Pengguna
+status: TERBUKA
+updated: 2026-11-12
+refs:
+- TSK-170
+- TSK-171
+- TSK-172
+- D-106
+note: Usulan A01.
 ```

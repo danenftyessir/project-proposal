@@ -1,10 +1,10 @@
 ---
 file: FINDINGS_LOG
-revision: 39
+revision: 40
 status: CURRENT
 updated: 2026-11-12
-updated_by: claude-sesi-biasa (atas permintaan pengguna; bukan A13)
-based_on_commit: a4063ae
+updated_by: a13-memory-manager
+based_on_commit: 80a13ba
 ---
 
 # Findings Log
@@ -344,6 +344,21 @@ Temuan QA lintas sesi (format §A-5.3), hanya yang non-`INFO`. `RESOLVED` hanya 
 | F-A09-0268, 0269, 0270 | a09 | `bab1/Bab_I_Draft.md` (revisi terbatas DRAF 24) | Baru TSK-151 (audit ulang a09; rincian di laporan a09); F-A09-0271..0275 (severity tidak terlihat pada brief) tidak dicatat per baris di sini | MEDIUM | WAIVED (D-115: teks DRAF 24 digantikan docx resmi 2026-11-12; status sebelumnya OPEN) | D-115 |
 | F-A09-0236, 0240; F-A08-0111..0113 | a09, a08 | `bab1/Bab_I_Draft.md` (DRAF 22) | Baru, INFO (dicatat di sini agar tidak hilang; lihat Catatan TSK-130, 132..136): F-A09-0236 (p18 14 kalimat), F-A09-0240 (header baris 16 dua kurung berurutan); F-A08-0111 (p19 tanpa kualifikasi "dalam satu episode" dari p17), 0112 (Gao dkk. dan Ali dkk. di batas klaim kekosongan; dinilai dari teks Bab II), 0113 ("label tanpa penjelasan" Zeba tidak mencakup kode kegagalan internal) | INFO | WAIVED (D-115: teks DRAF 24 digantikan docx resmi 2026-11-12; status sebelumnya OPEN) | D-115 |
 | F-A12-0001 (versi brief A01 TSK-153; BENTROK ID dengan baris F-A12-0001 di atas) | a12 | DOCX Bab I (Daftar Pustaka) vs docx resmi Bab II | Diagnosis a12: 8 dari 11 awalan pustaka Bab I cocok dengan docx resmi Bab II; tiga entri Kemenkes RI (2021, 2022b, 2024) tidak ada di docx resmi (37 entri, tanpa kelompok institusional) padahal ada di bab2/Bab_II_Revisi_Notulensi.md baris 261, 265, 267. Dijawab keputusan pengguna D-101 (tiga entri ditambahkan ke docx resmi Bab II oleh pengguna/sesi biasa; tidak diverifikasi A13). Build run3 FAILED di bab1_refs menurut brief | HIGH | OPEN (RESOLVED hanya oleh a12 setelah pemeriksaan ulang) | — |
+| F-A07-0103, 0104, 0105, 0106, 0107 | a07 | `bab3/Bab_III_Draft.md` (III.1) | TSK-171 siklus 0 (rincian di laporan a07; ringkasan satu kalimat per butir tidak tersedia pada brief). Siklus 1 terarah: kelimanya dinyatakan RESOLVED oleh a07; F-A07-0107 lewat opsi A (kontras kelompok 3/RAG dinyatakan tidak dijawab penelitian ini; opsi B terbuka, Q-B3-d) | MEDIUM | RESOLVED (dinyatakan a07, siklus 1) | — |
+| F-A07-0108, 0109, 0110 | a07 | `bab3/Bab_III_Draft.md` (III.1) | TSK-171 siklus 0; LOW editorial/akademik; dijadwalkan sekali di akhir bab (Q-B3-j) | LOW | OPEN | — |
+| F-A07-0111 | a07 | `bab3/Bab_III_Draft.md` (III.1) | INFO: batas blok "Cross-Episode Reconciliation"; untuk a06 (Q-B3-j) | INFO | OPEN | — |
+| F-A07-0112 | a07 | `bab3/Bab_III_Draft.md:17` | Baru pada siklus 1 TSK-171: frasa "paling sedikit mencakup" (KMK 1596/2024) ditandai tidak ada di sumber karena paket bukti B3-06 menyatakan kata "setidaknya" tidak ada di sumber; BERKONFLIK dengan F-A08-0122a (a08 mengutip KMK 1596/2024 hlm. 168 EP c "paling sedikit mencakup" langsung dari PDF). Konflik tidak diselesaikan A13/A01; keputusan rumusan di Q-B3-c. requires_decision: true | MEDIUM | OPEN | — |
+| F-A09-0276, 0277, 0278, 0279 | a09 | `bab3/Bab_III_Draft.md` (III.1) | TSK-170 siklus 0 (rincian di laporan a09); siklus 1 terarah: keempatnya dinyatakan RESOLVED oleh a09 | MEDIUM | RESOLVED (dinyatakan a09, siklus 1) | — |
+| F-A09-0280..0299 | a09 | `bab3/Bab_III_Draft.md` (III.1) | TSK-170 siklus 0: 20 temuan LOW redaksional (rincian di laporan a09; tidak dirinci per baris pada brief); dijadwalkan sekali di akhir bab (Q-B3-j) | LOW | OPEN | — |
+| F-A09-0300..0303 | a09 | `bab3/Bab_III_Draft.md` (III.1) | TSK-170 siklus 0: empat catatan INFO (rincian di laporan a09) | INFO | OPEN | — |
+| F-A09-0304, 0305, 0306 | a09 | `bab3/Bab_III_Draft.md` (III.1) | Baru pada siklus 1 TSK-170; F-A09-0304 mengusulkan "sekurang-kurangnya pada" untuk baris 17 (terkait F-A07-0112/F-A08-0122a, Q-B3-c); rincian 0305, 0306 di laporan a09 | LOW | OPEN | — |
+| F-A08-0114 | a08 | `bab3/Bab_III_Draft.md` (III.1) | TSK-172 siklus 0: temuan HIGH sitasi (rincian di laporan a08; tidak dirinci pada brief); siklus 1 terarah RESOLVED oleh a08 | HIGH | RESOLVED (dinyatakan a08, siklus 1) | — |
+| F-A08-0115, 0116, 0117, 0118, 0119, 0122 | a08 | `bab3/Bab_III_Draft.md` (III.1) | TSK-172 siklus 0: MEDIUM sitasi (rincian di laporan a08). Siklus 1: 0115..0119 dan 0122a/0122b RESOLVED oleh a08; 0122a berkonflik dengan F-A07-0112 (lihat baris itu) | MEDIUM | RESOLVED (dinyatakan a08, siklus 1; 0122a berkonflik dengan F-A07-0112, tidak diselesaikan) | — |
+| F-A08-0120, 0121 | a08 | `bab3/Bab_III_Draft.md` (III.1) | TSK-172 siklus 0: LOW sitasi (rincian di laporan a08); dijadwalkan di akhir bab (Q-B3-j) | LOW | OPEN | — |
+| F-A08-0123 | a08 | `.scratch/a02/bab3_evidence.md` (B3-40, B3-19, B3-22) | INFO: B3-40 (halaman 0,74 = 5490), B3-19 dan B3-22 (klaim bahasa tanpa halaman) perlu dikoreksi a02 | INFO | OPEN | — |
+| F-A08-0124 | a08 | `bab3/Bab_III_Draft.md` (III.1) | TSK-172: catatan INFO sitasi (rincian di laporan a08) | INFO | OPEN | — |
+
+Catatan TSK-174 (2026-11-12, pencatatan QA III.1; TSK-169..172): (1) Hasil siklus 1: a08 PASS_WITH_NOTES, a09 PASS_WITH_NOTES, a07 FAIL hanya karena F-A07-0112 (MEDIUM baru, berkonflik dengan F-A08-0122a). Batas D-106 (1 siklus revisi) tercapai; tidak ada revisi otomatis lagi. (2) RESOLVED di atas dinyatakan auditor penemu menurut brief A01; A13 tidak menetapkan RESOLVED. (3) Konflik F-A07-0112 vs F-A08-0122a TIDAK diselesaikan: a07 bersandar pada catatan paket bukti B3-06; a08 pada KMK 1596/2024 hlm. 168 EP c langsung dari PDF. (4) Isi temuan di laporan auditor tidak dibaca A13; baris di atas memuat apa yang ada pada brief. (5) Tiga auditor sempat terhenti HTTP 429 pada siklus 0 dan dilanjutkan via SendMessage. (6) Paket bukti a02 (TSK-168): TIDAK DIDUKUNG B3-36a Domingues, B3-36g Newton, B3-49i Faustini, B3-64c AHIMA; TIDAK DITEMUKAN 3. PASS_WITH_NOTES bukan persetujuan Supervisor atau pengguna.
 
 Catatan TSK-153 (2026-11-10): tabrakan ID: baris F-A12-0001 versi brief (HIGH, pustaka Kemenkes) memakai ID yang sama dengan F-A12-0001 lama (MEDIUM, placeholder SKILL_DIR). Tidak diselesaikan A13; mohon a12/A01 menetapkan penomoran ulang. Isi tools/build_modular.py yang dimodifikasi pengguna/sesi biasa belum diverifikasi.
 

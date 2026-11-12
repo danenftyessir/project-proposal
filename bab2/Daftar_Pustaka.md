@@ -22,6 +22,8 @@ Heryawan, L., Mori, Y., Yamamoto, G., Kume, N., Lazuardi, L., Fuad, A., & Kuroda
 
 HHS Office for Civil Rights. (2012). *Guidance regarding methods for de-identification of protected health information in accordance with the Health Insurance Portability and Accountability Act (HIPAA) Privacy Rule*. U.S. Department of Health and Human Services.
 
+Ijadi Maghsoodi, A., Kurz, J., Lawrenson, R., Parsons, M., Walker, C., O’Sullivan, M., & Rouse, P. (2026). Artificial intelligence for decision-making in healthcare: A critical review of decision-maker-governed hybrid systems across clinical, operational, and policy settings. *Health Policy and Technology, 15*, 101292. https://doi.org/10.1016/j.hlpt.2026.101292
+
 Kementerian Kesehatan Republik Indonesia. (2021). Peraturan Menteri Kesehatan Republik Indonesia Nomor 26 Tahun 2021 tentang Pedoman Indonesian Case Base Groups (INA-CBG) dalam Pelaksanaan Jaminan Kesehatan.
 
 Kementerian Kesehatan Republik Indonesia. (2022a). Keputusan Menteri Kesehatan Republik Indonesia Nomor HK.01.07/MENKES/1423/2022 tentang Pedoman Variabel dan Meta Data pada Penyelenggaraan Rekam Medis Elektronik.
@@ -56,4 +58,4 @@ Xiao, G., Pfaff, E., Prud’hommeaux, E., Booth, D., Sharma, D. K., Huo, N., Yu,
 
 Zeba, M., Al Mamun, A., Tithee, K. J., Sutradhar, D., Raiaan, M. A. K., Mukta, S., Mohamed, R. E., Islam, M. R., Sebastian, Y., Hussain, M., & Azam, S. (2026). Mitigating hallucinations in healthcare LLMs with granular fact-checking and domain-specific adaptation. *Expert Systems with Applications, 329*, 132966.
 
-Zhang, H., Vithanage, D., Deng, C., & Yu, P. (2026). Optimising clinical information extraction: A comparative study of retrieval-augmented generation techniques in clinical notes. *Journal of Biomedical Informatics, 180*, 105053.3.
+Zhang, H., Vithanage, D., Deng, C., & Yu, P. (2026). Optimising clinical information extraction: A comparative study of retrieval-augmented generation techniques in clinical notes. *Journal of Biomedical Informatics, 180*, 105053.
