@@ -12,7 +12,7 @@ Nomor halaman daftar isi/gambar/tabel diisi lewat dua tahap: docx dibuat,
 dirender ke PDF dengan LibreOffice, lalu nomor halaman dibaca dari PDF.
 
 Pemakaian:
-    python tools/build_bab34_docx.py 3 --figure path/ke/gambar-III-1.png
+    python tools/build_bab34_docx.py 3 --figure bab3/gambar/gambar-III-1.png --figure-width 14.6
     python tools/build_bab34_docx.py 4
 """
 import argparse
@@ -44,8 +44,8 @@ CHAPTERS = {
 
 # Lebar kolom (dxa, total 8325) dan ukuran huruf (half-point) per tabel.
 TABLE_LAYOUT = {
-    "III.1": ([1450, 2150, 1500, 3225], 20),
-    "III.2": ([1450, 3550, 1700, 1625], 20),
+    "III.1": ([1400, 1900, 5025], 20),
+    "III.2": ([1500, 4925, 1900], 20),
     "III.3": ([2100, 6225], 20),
     "IV.1": ([2725] + [280] * 20, 16),
     "IV.2": ([560, 1900, 860, 1950, 3055], 20),
@@ -55,23 +55,10 @@ TABLE_LAYOUT = {
 BIB_KEYS = {
     3: [
         "Dietrich, N., & Stubbert, B. (2026)",
-        "Gao, Y., Dligach, D., Miller, T., Churpek",
-        "Gao, Y., Dligach, D., Miller, T., Tesch",
         "Gao, Y., Xiong, Y.",
-        "HHS Office for Civil Rights. (2012)",
         "Ijadi Maghsoodi, A.",
-        "Kementerian Kesehatan Republik Indonesia. (2021)",
-        "Kementerian Kesehatan Republik Indonesia. (2022b)",
-        "Kementerian Kesehatan Republik Indonesia. (2024)",
-        "Li, Y., Lv, M.",
         "Murali, L.",
-        "Nadi, D. T., & Fortunandha",
-        "Oktavia Az, I. S., & Sonia",
-        "Republik Indonesia. (2022)",
-        "Wong, E. Y. T.",
-        "Xiao, G.",
         "Zeba, M.",
-        "Zhang, H., Vithanage",
     ],
     4: [],
 }
@@ -288,7 +275,7 @@ def bib_paragraph_from_md(text, ppr_tpl):
 # ---------------------------------------------------------------------------
 # Pembangunan dokumen
 # ---------------------------------------------------------------------------
-def build(chap, figure, pages=None):
+def build(chap, figure, pages=None, fig_width=13.5):
     cfg = CHAPTERS[chap]
     R = cfg["roman"]
     doc = Document(str(BASE))
@@ -400,7 +387,7 @@ def build(chap, figure, pages=None):
                          inline_runs(item)))
         elif kind == "figure":
             tmp = doc.add_paragraph()
-            tmp.add_run().add_picture(str(figure), width=Cm(13.5))
+            tmp.add_run().add_picture(str(figure), width=Cm(fig_width))
             r_el = tmp._p.find(qn("w:r"))
             body.remove(tmp._p)
             put(para(fimg_ppr, [r_el]))
@@ -424,6 +411,15 @@ def build(chap, figure, pages=None):
             else:
                 raise RuntimeError(f"Kunci pustaka ganda: {k}")
         entries.sort(key=lambda x: x[0].lower())
+        # Daftar pustaka mulai di halaman baru agar judulnya tidak tertinggal
+        # sendirian di kaki halaman terakhir isi bab.
+        dp_ppr = dp_title.find(qn("w:pPr"))
+        if dp_ppr is None:
+            dp_ppr = make_el("w:pPr")
+            dp_title.insert(0, dp_ppr)
+        if dp_ppr.find(qn("w:pageBreakBefore")) is None:
+            pos = 1 if dp_ppr.find(qn("w:pStyle")) is not None else 0
+            dp_ppr.insert(pos, make_el("w:pageBreakBefore", **{"w:val": 1}))
         a = dp_title
         for _, el in entries:
             a.addnext(el)
@@ -473,6 +469,26 @@ def render_pdf(docx_path, outdir):
     return Path(outdir) / (docx_path.stem + ".pdf")
 
 
+def render_pdf_word(docx_path, outdir):
+    """Render lewat Microsoft Word (COM). Dipakai untuk nomor halaman dan
+    pengukuran panjang bab karena LibreOffice merender badan teks berkas ini
+    dengan spasi tunggal, bukan 1,5 seperti Word."""
+    import win32com.client
+    tmp = Path(outdir) / "render_copy.docx"
+    shutil.copyfile(docx_path, tmp)
+    pdf = Path(outdir) / "render_copy.pdf"
+    word = win32com.client.DispatchEx("Word.Application")
+    word.Visible = False
+    word.DisplayAlerts = 0
+    try:
+        doc = word.Documents.Open(str(tmp), ReadOnly=True, AddToRecentFiles=False)
+        doc.ExportAsFixedFormat(str(pdf), 17)
+        doc.Close(False)
+    finally:
+        word.Quit()
+    return pdf
+
+
 def norm(s):
     return re.sub(r"\s+", " ", s).strip()
 
@@ -507,13 +523,18 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("chapter", type=int, choices=[3, 4])
     ap.add_argument("--figure", type=Path, help="PNG untuk blok ```mermaid (Bab III)")
+    ap.add_argument("--figure-width", type=float, default=13.5,
+                    help="lebar gambar pada halaman, cm (lebar teks 14,68 cm)")
+    ap.add_argument("--renderer", choices=["lo", "word"], default="lo",
+                    help="perender untuk nomor halaman: LibreOffice (bawaan) atau Microsoft Word")
     a = ap.parse_args()
     cfg = CHAPTERS[a.chapter]
-    toc, figs, tabs = build(a.chapter, a.figure)
+    toc, figs, tabs = build(a.chapter, a.figure, fig_width=a.figure_width)
     with tempfile.TemporaryDirectory() as td:
-        pdf = render_pdf(cfg["out"], td)
+        render = render_pdf_word if a.renderer == "word" else render_pdf
+        pdf = render(cfg["out"], td)
         pages = page_map(pdf, a.chapter, toc, figs, tabs)
-    build(a.chapter, a.figure, pages)
+    build(a.chapter, a.figure, pages, fig_width=a.figure_width)
     for k, v in pages.items():
         print(f"{v:>3}  {k[:90]}")
     print("Tersimpan:", cfg["out"])
