@@ -10,8 +10,8 @@ sebagai pengganti teks panduan templat pada kerangka. Lalu:
     pembaruan nomor halaman entri Bab I-II.
 
 Pemakaian (dari akar repositori):
-    python tools/build_gabungan.py 3 --figure bab3/gambar/gambar-III-1.png --figure-width 14.6
-    python tools/build_gabungan.py 4 --figure bab3/gambar/gambar-III-1.png --figure-width 14.6
+    python tools/build_gabungan.py 3 --figure bab3/gambar/gambar-III-1.png
+    python tools/build_gabungan.py 4 --figure bab3/gambar/gambar-III-1.png --figure4 bab4/gambar/gambar-IV-1.png
 Hasil: docx dan PDF `...-Draft-Bab1-Bab2-Bab3` atau `...-Draft-Bab1-Bab2-Bab3-Bab4` di akar repositori.
 """
 import argparse
@@ -89,15 +89,18 @@ def chapter_block(chap, tpl_h2, tpl_h3):
     return out
 
 
-def put_figure(block, doc, figure):
-    """Daftarkan gambar pada dokumen gabungan dan arahkan blip blok Bab III ke sana."""
-    rid, _ = doc.part.get_or_add_image(str(figure))
+def put_figure(block, doc, figure, docpr_id):
+    """Daftarkan gambar pada dokumen gabungan dan arahkan blip blok bab ke sana."""
     blips = [b for e in block for b in e.iter(qn("a:blip"))]
-    assert len(blips) == 1, f"jumlah gambar pada blok Bab III: {len(blips)}"
+    if figure is None:
+        assert not blips, "blok bab memuat gambar, tetapi berkas gambarnya tidak diberikan"
+        return
+    rid, _ = doc.part.get_or_add_image(str(figure))
+    assert len(blips) == 1, f"jumlah gambar pada blok bab: {len(blips)}"
     blips[0].set(qn("r:embed"), rid)
     for e in block:
         for dp in e.iter("{http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing}docPr"):
-            dp.set("id", "9001")
+            dp.set("id", str(docpr_id))
 
 
 def add_bibliography(els):
@@ -169,7 +172,7 @@ def entry_text(p):
     return norm("".join(ts[:-1]))
 
 
-def build(chap_max, figure, pages, out_path):
+def build(chap_max, figure, pages, out_path, figure4=None):
     doc = Document(str(BASE))
     body = doc.element.body
     els = list(body)
@@ -181,8 +184,10 @@ def build(chap_max, figure, pages, out_path):
     tpl_h2 = next(e for e in els if style(e) == "Heading2" and ptext(e).startswith("Rekam Medis dan"))
     tpl_h3 = next(e for e in els if style(e) == "Heading3" and ptext(e).startswith("Kewajiban dan Isi"))
     new3 = chapter_block(3, tpl_h2, tpl_h3)
-    put_figure(new3, doc, figure)
+    put_figure(new3, doc, figure, 9001)
     new4 = chapter_block(4, tpl_h2, tpl_h3) if chap_max >= 4 else None
+    if new4:
+        put_figure(new4, doc, figure4, 9002)
     for e in els[i3 + 1:i4] + (els[i4 + 1:i_dp] if new4 else els[i4 + 1:i4 + 1]):
         body.remove(e)
     a = els[i3]
@@ -304,14 +309,15 @@ def locate_pages(pdf, keys):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("upto", type=int, choices=[3, 4], help="bab terakhir yang disertakan")
-    ap.add_argument("--figure", type=Path, required=True)
+    ap.add_argument("--figure", type=Path, required=True, help="gambar Bab III")
+    ap.add_argument("--figure4", type=Path, help="gambar Bab IV (Gantt chart)")
     a = ap.parse_args()
     out = OUT[a.upto]
     with tempfile.TemporaryDirectory() as td:
-        heads, figs, tabs, old = build(a.upto, a.figure, {}, out)
+        heads, figs, tabs, old = build(a.upto, a.figure, {}, out, a.figure4)
         pdf = B.render_pdf_word(out, td)
         pages = locate_pages(pdf, heads + figs + tabs + old)
-        build(a.upto, a.figure, pages, out)
+        build(a.upto, a.figure, pages, out, a.figure4)
         pdf = B.render_pdf_word(out, td)
         shutil.copyfile(pdf, out.with_suffix(".pdf"))
     for k in heads + figs + tabs:

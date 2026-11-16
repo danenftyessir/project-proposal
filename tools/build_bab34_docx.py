@@ -47,8 +47,8 @@ TABLE_LAYOUT = {
     "III.1": ([1400, 1900, 5025], 20),
     "III.2": ([1500, 4925, 1900], 20),
     "III.3": ([2100, 6225], 20),
-    "IV.1": ([2725] + [280] * 20, 16),
-    "IV.2": ([560, 1900, 860, 1950, 3055], 20),
+    "IV.1": ([1300, 1200, 2925, 1500, 1400], 18),
+    "IV.2": ([500, 1550, 820, 1450, 1450, 2555], 18),
 }
 
 # Sumber yang dikutip Bab III -> awalan entri daftar pustaka (APA).
@@ -378,7 +378,7 @@ def build(chap, figure, pages=None, fig_width=13.5):
         elif kind == "table":
             widths, size = TABLE_LAYOUT[pending_table]
             put(build_table(val, tblpr_tpl, widths, size,
-                            allow_split=(pending_table == "IV.2")))
+                            allow_split=pending_table.startswith("IV.")))
             pending_table = None
         elif kind == "ol":
             for item in val:
