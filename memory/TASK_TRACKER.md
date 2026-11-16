@@ -1,10 +1,10 @@
 ---
 file: TASK_TRACKER
-revision: 75
+revision: 78
 status: CURRENT
-updated: 2026-11-12
+updated: 2026-11-13
 updated_by: a13-memory-manager
-based_on_commit: 5f5d4b9
+based_on_commit: c1dd46e
 ---
 
 # Task Tracker
@@ -203,6 +203,20 @@ Tugas memakai ID `TSK-xxx` (berbeda dari ID uji teknis `T-xx`). Status: `TODO` �
 | TSK-187 | memory_op A13: record_decision D-126 (Q-B3-a), D-127 (Q-B3-d, F-A07-0125 ditutup), D-128 (Q-B3-k) | DONE | A13 | 0 | `memory/DECISION_LOG.md`, `memory/OPEN_QUESTIONS.md`, `memory/FINDINGS_LOG.md`, `memory/TASK_TRACKER.md` | Jawaban pengguna 2026-11-12 (AskUserQuestion, approval_evidence verbatim di D-126..D-128) | Keputusan lingkup terbatas, bukan tim/pembimbing; naskah tidak diubah; Q-B3-b, c, e..j tidak diubah; baris 35 III.1 diperiksa spesifik di TSK-172 belum diverifikasi |
 | TSK-186 | memory_op A13: update_findings (F-A07-0126, F-A09-0421, F-A09-0422 RESOLVED) + task_close verifikasi lanjutan TSK-182..184 + state Bab III | DONE | A13 | 0 | `memory/FINDINGS_LOG.md`, `memory/TASK_TRACKER.md`, `memory/PROJECT_STATE.md`, `memory/CONTEXT_TRANSFER.md` | Brief A01 (tanpa keputusan baru) | RESOLVED dinyatakan auditor penemu; verifikasi terarah, bukan audit penuh; MEDIUM/HIGH III.2 tertutup, LOW/INFO tertunda; Q-B3-* tidak diubah |
 | TSK-185 | memory_op A13: task_close TSK-173, 175..184 + record_decision D-122..D-125 + record_findings III.2 + Q-B3-k, l + state Bab III | DONE | A13 | 0 | `memory/DECISION_LOG.md`, `memory/FINDINGS_LOG.md`, `memory/OPEN_QUESTIONS.md`, `memory/TASK_TRACKER.md`, `memory/PROJECT_STATE.md`, `memory/CONTEXT_TRANSFER.md` | Brief A01; approval_evidence verbatim per keputusan | Tanpa Git. Pernyataan pengguna 2026-11-12 'Lanjutkan tapi jangan otomatis banget, kondisi yang saya kirim sebelumnya sudah tidak berlaku soalnya' = arahan lama 'lanjut tanpa persetujuan saya' DICABUT, gate persetujuan berlaku lagi (fakta arahan, BUKAN keputusan D-). Perbaikan draf 3 (F-A07-0126, F-A09-0421, F-A09-0422) diperiksa A01 hanya lewat linter dan baca ulang, tidak diaudit ulang auditor, jadi status IN_PROGRESS. III.2 BUKAN lolos QA |
+| TSK-190 | memory_op A13: init_reconcile sesi 2026-11-13 (S7) | DONE | A13 | 0 | (laporan a13; tanpa perubahan berkas) | Brief A01 | COMPLETE; tanpa konflik; S7 NOT_READY hanya karena 7 berkas belum ter-commit; hash Bab III cocok (0f613ebb482c). Setelah pengguna meng-commit (HEAD c1dd46e): READY. Jawaban pengguna (verbatim): "Segala urusan git sudah saya urus. Saya ingin Anda untuk lanjutkan saja pekerjaan terakhir dan karena saat ini sedang dalam kondisi khusus, saya ingin Anda untuk mengerjakannya saja tanpa menanyakan kepada saya hingga saya minta untuk kembali ke kondisi normal." = arahan alur yang mengesampingkan gate pertanyaan sampai dicabut pengguna; BUKAN approval_evidence dan BUKAN keputusan D-; tidak ada D- baru |
+| TSK-191 | Penutupan Bab III (a03), siklus 0 dan 1 | DONE | A03 | 0-1 | `bab3/Bab_III_Draft.md` | Pilihan sementara A01 (arahan TSK-190), bukan D- | COMPLETE; hanya `bab3/Bab_III_Draft.md` diubah. Pilihan sementara menunggu konfirmasi: Q-B3-c (baris 17 mengutip EP c KMK 1596/2024 hlm. 168 tanpa memihak tafsir), Q-B3-h (Wong dibatasi ke konteks pedoman ESMO, baris 25 dan 183), Q-B3-l (2) dan (3) dinyatakan sebagai pertimbangan/alasan rancangan, Q-B3-g bagian Bab III (ICD dieja lengkap; "presisi" → "*precision*"), Q-B3-j batch LOW/INFO III.2 dikerjakan (di luar batas D-106, atas dasar arahan TSK-190), F-A07-0132 Bab III (final F-A07-0148) opsi (b) keterbatasan retrieval. Q-B3-f tetap TERBUKA. Terhenti rate limit 5 jam lalu dilanjutkan pada instance sama |
+| TSK-192 | Tulis Bab IV baru (a03): draf 1 dan draf 2 (siklus 1) | DONE | A03 | 0-1 | `bab4/Bab_IV_Draft.md` | Pilihan sementara A01/A03; sumber arahan pengguna `Rencana Bab 3 dan Revisi Bab 1.pdf` hlm. 10-13 (belum disahkan D-) | COMPLETE; satu retry sisa scope (brief A01 tidak memuat teks temuan a09). Isi: IV.1 Tahapan (T1-T7 dipetakan ke lima tahap I.5), IV.2 Jadwal (Tabel IV.1, 20 minggu, gerbang minggu 13, satu penanda kalender), IV.3 Risiko (R1-R5; R5 positif). Pilihan sementara: M4 di T4; definisi kategori, panduan pelabelan, dan pembagian data di T1; minggu 12 cadangan; istilah "gerbang pembekuan pengaturan sistem". Draf ke-3 menunggu keputusan R5 |
+| TSK-193 | QA editorial Bab IV (a09), siklus 0 dan 1 | DONE | A09 | 0-1 | (laporan a09; F-A09-1931..1959 menurut brief) | Brief A01 | Siklus 0 PASS_WITH_NOTES 0/0/13/5; siklus 1 PASS_WITH_NOTES. 1932 dan 1946 sebagian OPEN; baru 1949-1958 LOW dan 1959 INFO. Terhenti rate limit 5 jam lalu dilanjutkan |
+| TSK-194 | QA struktur Bab IV (a10) | DONE | A10 | 0 | (laporan a10; F-A10-0001..0005 versi Bab IV) | Brief A01 | PASS_WITH_NOTES 0/0/3/2; F-A10-0004 dan 0005 tertangani di siklus 1 tetapi belum diverifikasi ulang a10. ID bentrok dengan F-A10-0001, 0002 lama (lihat FINDINGS_LOG Catatan TSK-199) |
+| TSK-195 | QA akademik Bab IV (a07), siklus 0 dan 1 | DONE | A07 | 0-1 | (laporan a07; F-A07-0132..0147 versi Bab IV) | Brief A01 | Siklus 0 FAIL 0/0/4 MEDIUM/6 LOW (+4 INFO); siklus 1 PASS_WITH_NOTES. Empat MEDIUM dan 0136-0141, 0143-0145 RESOLVED; 0142 OPEN (requires_decision, R5); baru 0146 LOW, 0147 INFO. Terhenti rate limit 5 jam lalu dilanjutkan |
+| TSK-196 | QA sitasi Bab III (a08) | DONE | A08 | 1 | (laporan a08; F-A08-0001, 0002, 0005 versi III.2; F-A08-0601) | Brief A01 | PASS_WITH_NOTES. F-A08-0001, 0002, 0005 (versi III.2) RESOLVED; 0003 dan 0004 OPEN; baru F-A08-0601 INFO (Zeba hlm. 2) |
+| TSK-197 | QA akademik Bab III (a07), siklus 0 dan 1 | DONE | A07 | 0-1 | (laporan a07; ID asal F-A07-0121..0138) | Brief A01 | Siklus 0 FAIL; siklus 1 FAIL hanya karena satu MEDIUM requires_decision (unit klaster bootstrap, ID asal F-A07-0133, final F-A07-0149). ID asal bentrok dengan Bab IV; pemetaan final di FINDINGS_LOG Catatan TSK-199 |
+| TSK-198 | QA editorial Bab III (a09) | DONE | A09 | 1 | (laporan a09; F-A09-0437..0450) | Brief A01 | PASS_WITH_NOTES. 0437-0444, 0448, 0449 RESOLVED; 0445 sebagian (L140 dibekukan); 0446 (precision vs presisi lintas bab) dan 0447 OPEN; baru 0450 LOW |
+| TSK-199 | memory_op A13: task_close batch TSK-190..198 | DONE | A13 | 0 | `memory/TASK_TRACKER.md`, `memory/FINDINGS_LOG.md`, `memory/OPEN_QUESTIONS.md`, `memory/PROJECT_STATE.md`, `memory/CONTEXT_TRANSFER.md` | Brief A01 | Tanpa Git, tanpa D- baru. Penomoran ulang ID bentrok F-A07 Bab III dilakukan A13; ID auditor asli tercatat |
+| TSK-200 | Draf ketiga Bab IV (a03), batch LOW/INFO akhir bab | DONE | A03 | 1 | `bab4/Bab_IV_Draft.md` | Arahan alur TSK-190; pilihan sementara, bukan D- | a03 draf ketiga Bab IV, batch LOW/INFO akhir bab; COMPLETE; linter MEDIUM 0/LOW 0/INFO 0; baris R5 tidak disentuh. Batas 3 draf tercapai; draf berikutnya hanya atas permintaan eksplisit pengguna (mis. setelah keputusan R5). Auditor tidak dipanggil ulang (hemat siklus) |
+| TSK-201 | memory_op A13: close_task TSK-200 | DONE | A13 | 0 | `memory/TASK_TRACKER.md`, `memory/FINDINGS_LOG.md`, `memory/PROJECT_STATE.md`, `memory/CONTEXT_TRANSFER.md` | Brief A01 (arahan alur TSK-190; pesan pengguna "lanjut") | Tanpa Git, tanpa D- baru. Hash Bab IV belum dihitung (perintah hash ditolak untuk a13; tidak dicari jalan memutar). Hook guard juga menolak `sha256sum` untuk a03 (catatan operasional) |
+| TSK-202 | Audit integritas Markdown Bab III dan IV (a12, read-only) | DONE | A12 | 0 | — (read-only) | Arahan alur TSK-190; pesan pengguna "lanjut" | a12 audit integritas Markdown Bab III dan IV; COMPLETE, PASS_WITH_NOTES, tanpa temuan blocking. Temuan dipetakan ke F-A12-0004..0009 (ID asal F-A12-0001..0005 bentrok). Hook guard menolak heredoc `python -I` untuk a12 (catatan operasional) |
+| TSK-203 | memory_op A13: close_task TSK-202 | DONE | A13 | 0 | `memory/TASK_TRACKER.md`, `memory/FINDINGS_LOG.md` | Brief A01 (arahan alur TSK-199; pesan pengguna "lanjut") | Tanpa Git, tanpa D- baru. PROJECT_STATE tidak diubah |
 
 Approval evidence TSK-061 (persetujuan operasional per eksekusi, P2-02):
 
@@ -458,6 +472,20 @@ Diisi A13 saat penutupan tugas dari Agent Report dan `.scratch/agent_runs.jsonl`
 | 2026-11-12 | TSK-187 (record_decision D-126..D-128) | a13 | 0 | COMPLETE | NA | 0/0/0/0 | n/a | n/a | n/a |
 | 2026-11-12 | TSK-188 (baca KMK 1596/2024 hlm. 167-168, read-only) | a08 | 0 | COMPLETE | NA | n/a | n/a | n/a | n/a |
 | 2026-11-12 | TSK-189 (session_close) | a13 | 0 | COMPLETE | NA | 0/0/0/0 | n/a | n/a | n/a |
+| 2026-11-13 | TSK-190 (init_reconcile S7) | a13 | 0 | COMPLETE | NA | 0/0/0/0 | n/a | n/a | n/a |
+| 2026-11-13 | TSK-191 (penutupan Bab III, siklus 0 dan 1; rate limit 5 jam, dilanjutkan pada instance sama) | a03 | 0-1 | COMPLETE | NA | n/a | n/a | n/a | n/a |
+| 2026-11-13 | TSK-192 (tulis Bab IV, draf 1 dan 2; satu retry sisa scope) | a03 | 1 | COMPLETE | NA | n/a | n/a | n/a | n/a |
+| 2026-11-13 | TSK-193 (QA editorial Bab IV, siklus 0 dan 1; rate limit 5 jam, dilanjutkan) | a09 | 0-1 | COMPLETE | PASS_WITH_NOTES | siklus 0: 0/0/13/5; siklus 1: baru 0/0/0/10 LOW (1949-1958) +1 INFO | n/a | n/a | n/a |
+| 2026-11-13 | TSK-194 (QA struktur Bab IV) | a10 | 0 | COMPLETE | PASS_WITH_NOTES | 0/0/3/2 | n/a | n/a | n/a |
+| 2026-11-13 | TSK-195 (QA akademik Bab IV, siklus 0 dan 1; rate limit 5 jam, dilanjutkan) | a07 | 0-1 | COMPLETE | siklus 0 FAIL; siklus 1 PASS_WITH_NOTES | siklus 0: 0/0/4/6 (+4 INFO); siklus 1 baru: 0146 LOW, 0147 INFO | n/a | n/a | n/a |
+| 2026-11-13 | TSK-196 (QA sitasi Bab III) | a08 | 1 | COMPLETE | PASS_WITH_NOTES | baru F-A08-0601 INFO | n/a | n/a | n/a |
+| 2026-11-13 | TSK-197 (QA akademik Bab III, siklus 0 dan 1) | a07 | 0-1 | COMPLETE | siklus 0 FAIL; siklus 1 FAIL (1 MEDIUM requires_decision) | siklus 1 baru: 0/0/0/2 LOW (ID asal 0137, 0138 Bab III) | n/a | n/a | n/a |
+| 2026-11-13 | TSK-198 (QA editorial Bab III) | a09 | 1 | COMPLETE | PASS_WITH_NOTES | baru F-A09-0450 LOW | n/a | n/a | n/a |
+| 2026-11-13 | TSK-199 (task_close batch TSK-190..198) | a13 | 0 | COMPLETE | NA | 0/0/0/0 | n/a | n/a | n/a |
+| 2026-11-13 | TSK-200 (draf ketiga Bab IV, batch LOW/INFO) | a03 | 1 | COMPLETE | NA | linter 0/0/0 | n/a | n/a | n/a |
+| 2026-11-13 | TSK-201 (close_task TSK-200) | a13 | 0 | COMPLETE | NA | 0/0/0/0 | n/a | n/a | n/a |
+| 2026-11-13 | TSK-202 (audit integritas Bab III dan IV) | a12 | 0 | COMPLETE | PASS_WITH_NOTES | 0/0/0/2 LOW, 4 INFO (ID dipetakan F-A12-0004..0009) | n/a | n/a | n/a |
+| 2026-11-13 | TSK-203 (close_task TSK-202) | a13 | 0 | COMPLETE | NA | 0/0/0/0 | n/a | n/a | n/a |
 
 Catatan: token = subagent_tokens menurut harness, mungkin kumulatif per instance.
 

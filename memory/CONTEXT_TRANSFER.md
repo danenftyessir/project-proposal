@@ -1,10 +1,10 @@
 ---
 file: CONTEXT_TRANSFER
-revision: 48
+revision: 50
 status: CURRENT
-updated: 2026-11-12
+updated: 2026-11-13
 updated_by: a13-memory-manager
-based_on_commit: 5f5d4b9
+based_on_commit: c1dd46e
 ---
 
 # Context Transfer
@@ -25,7 +25,14 @@ Handoff untuk sesi berikutnya. **Bukan** sumber keputusan: keputusan ada di `DEC
 
 - D-113: gaya sitasi APA sementara (K1). D-114: judul Bab II mengikuti docx. D-115: Bab I docx dibiarkan apa adanya; item DRAF 24 disesuaikan (keputusan SUPERSEDED sebagian, temuan Bab I WAIVED, Q-B1-* ditutup). D-116: Bab III dimulai setelah rekonsiliasi selesai.
 
-## Penutupan sesi 2026-11-12 (TSK-189; paling baru)
+## Pembaruan sesi 2026-11-13 (TSK-199; paling baru)
+
+- HEAD c1dd46e (pengguna commit sendiri; READY). Arahan pengguna "kondisi khusus: kerjakan tanpa bertanya sampai diminta kembali normal" (verbatim di TASK_TRACKER TSK-190): arahan alur, BUKAN approval_evidence dan BUKAN keputusan D-. Pilihan A01 di bawah arahan itu SEMENTARA dan menunggu konfirmasi; arahan ini berlaku sampai pengguna mencabutnya.
+- Bab III ditutup (TSK-191): Q-B3-c, h, j, l(2)(3) DITANGANI SEMENTARA; Q-B3-g hanya bagian Bab III; Q-B3-f tetap TERBUKA. QA: a08 dan a09 PASS_WITH_NOTES, a07 FAIL karena F-A07-0149 (unit klaster bootstrap, Q-B3-m).
+- Bab IV baru (TSK-192, `bab4/Bab_IV_Draft.md`, draf 2) dari `Rencana Bab 3 dan Revisi Bab 1.pdf` hlm. 10-13 (belum D-); QA a09, a10, a07 PASS_WITH_NOTES. Draf 3 menunggu Q-B3-o (R5 risiko positif). [PEMBARUAN TSK-201: draf 3 sudah ditulis a03 (TSK-200), batch LOW/INFO; linter 0/0/0; R5 tidak disentuh; batas 3 draf tercapai, draf berikutnya hanya atas permintaan eksplisit pengguna. Temuan LOW/INFO berstatus DITANGANI PENULIS, belum diverifikasi auditor. Hash Bab IV belum dihitung (ditolak untuk a13). Bab IV SIAP DITINJAU kecuali R5 (Q-B3-o) dan F-A10-0205 (MENUNGGU ANGGOTA); pekerjaan otomatis tersisa tanpa keputusan pengguna: tidak ada.]
+- ID bentrok dipetakan A13: F-A07 Bab III 0132..0138 → 0148..0154; F-A10 Bab IV 0001..0005 → 0201..0205 (FINDINGS_LOG Catatan TSK-199). Butir baru Q-B3-m..s. Perintah 0 di bawah (penomoran ulang F-A08-0001..0005 versi III.2) belum selesai. Pengguna perlu commit `memory/**`, `bab3/`, `bab4/` (S7).
+
+## Penutupan sesi 2026-11-12 (TSK-189; sebelumnya paling baru)
 
 - Keputusan sesi: D-122..D-125 (III.2) dan D-126..D-128 (Q-B3-a, d, k diputuskan). Q-B3-c TETAP TERBUKA: a08 (TSK-188) membaca KMK 1596/2024 hlm. 167-168 ("paling sedikit mencakup" tertulis di EP c hlm. 168; catatan bukti B3-06 tidak sesuai PDF; EP c ambigu tata bahasanya); tiga opsi A01 tidak dijawab pengguna. Fakta ada di Q-B3-c dan FINDINGS_LOG, bukan penilaian. Baris 17 tidak diubah.
 - Tidak ditanyakan sesi ini: Q-B3-b, e (penanda baris 49), f, g, h, i, j. Pertanyaan A01 belum diajukan: penyelarasan Bab I I.4 butir 7 dengan urutan union lalu deduplikasi (F-A07-0127); apakah baris 35 III.1 (Ijadi) diperiksa spesifik di TSK-172.

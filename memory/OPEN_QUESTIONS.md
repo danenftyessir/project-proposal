@@ -1,10 +1,10 @@
 ---
 file: OPEN_QUESTIONS
-revision: 59
+revision: 60
 status: CURRENT
-updated: 2026-11-12
+updated: 2026-11-13
 updated_by: a13-memory-manager
-based_on_commit: 5f5d4b9
+based_on_commit: c1dd46e
 ---
 
 # Open Questions
@@ -1789,15 +1789,15 @@ affected:
 class: L3
 pic: Pengguna
 ask_to: Pengguna
-status: TERBUKA
-updated: 2026-11-12
+status: DITANGANI SEMENTARA (menunggu konfirmasi pengguna)
+updated: 2026-11-13
 refs:
 - F-A07-0112
 - F-A08-0122
 - F-A09-0304
 - TSK-171
 - TSK-172
-note: Konflik dua auditor, tidak dipilih A01 maupun A13. Perubahan di luar batas siklus otomatis D-106. Pembaruan TSK-188/189 (2026-11-12) - fakta tekstual dari a08 (read-only; cetak = PDF): KMK 1596/2024 hlm. 168 EP c berbunyi "Fokus pengkajian paling sedikit mencakup pada ketepatan waktu, keterbacaan, kelengkapan rekam medis dan isi rekam medis sesuai dengan peraturan perundangan." EP b hlm. 168: "Komite/tim secara berkala melakukan pengkajian rekam medis pasien secara berkala setiap tahun dan menggunakan sampel yang mewakili (rekam medis pasien yang masih dirawat dan pasien yang sudah pulang)." Maksud dan tujuan MRMIK 12 hlm. 167: "Pengkajian berfokus pada ketepatan waktu, kelengkapan, keterbacaan, keabsahan dan ketentuan lainnya ..." (tanpa "paling sedikit"). "setidaknya"/"sekurang-kurangnya" tidak ada di hlm. 167-168. Catatan paket bukti B3-06 yang dipakai a07 (F-A07-0112) tidak sesuai PDF; baris 17 memparafrasakan "isi rekam medis sesuai dengan peraturan perundangan" menjadi "kesesuaian isi dengan peraturan", dan "berdasarkan" berasal dari maksud dan tujuan; EP c ambigu tata bahasanya (fokus keempat atau keterangan atas kelengkapan). Ini fakta tekstual, BUKAN penilaian siapa benar. A01 mengajukan tiga opsi (pertahankan baris 17; pertahankan dan koreksi B3-06 oleh a02; sempurnakan kalimat ke bunyi sumber); pengguna TIDAK memilih (jawabannya hanya perintah /sesi-tutup). Status TETAP TERBUKA; baris 17 tidak diubah.
+note: Konflik dua auditor, tidak dipilih A01 maupun A13. Perubahan di luar batas siklus otomatis D-106. Pembaruan TSK-188/189 (2026-11-12) - fakta tekstual dari a08 (read-only; cetak = PDF): KMK 1596/2024 hlm. 168 EP c berbunyi "Fokus pengkajian paling sedikit mencakup pada ketepatan waktu, keterbacaan, kelengkapan rekam medis dan isi rekam medis sesuai dengan peraturan perundangan." EP b hlm. 168: "Komite/tim secara berkala melakukan pengkajian rekam medis pasien secara berkala setiap tahun dan menggunakan sampel yang mewakili (rekam medis pasien yang masih dirawat dan pasien yang sudah pulang)." Maksud dan tujuan MRMIK 12 hlm. 167: "Pengkajian berfokus pada ketepatan waktu, kelengkapan, keterbacaan, keabsahan dan ketentuan lainnya ..." (tanpa "paling sedikit"). "setidaknya"/"sekurang-kurangnya" tidak ada di hlm. 167-168. Catatan paket bukti B3-06 yang dipakai a07 (F-A07-0112) tidak sesuai PDF; baris 17 memparafrasakan "isi rekam medis sesuai dengan peraturan perundangan" menjadi "kesesuaian isi dengan peraturan", dan "berdasarkan" berasal dari maksud dan tujuan; EP c ambigu tata bahasanya (fokus keempat atau keterangan atas kelengkapan). Ini fakta tekstual, BUKAN penilaian siapa benar. A01 mengajukan tiga opsi (pertahankan baris 17; pertahankan dan koreksi B3-06 oleh a02; sempurnakan kalimat ke bunyi sumber); pengguna TIDAK memilih (jawabannya hanya perintah /sesi-tutup). Status TETAP TERBUKA; baris 17 tidak diubah. Pembaruan TSK-199 (2026-11-13) - pilihan sementara A01 (arahan alur TSK-190, BUKAN keputusan D- dan BUKAN approval_evidence): TSK-191 mengubah baris 17 agar mengutip langsung EP c KMK 1596/2024 hlm. 168 tanpa memihak tafsir. Menunggu konfirmasi pengguna; opsi lain (pertahankan lama, sempurnakan ke bunyi sumber) tetap dapat dipilih. Status konflik F-A07-0112 vs F-A08-0122a tidak diubah.
 ```
 
 ```yaml
@@ -1868,7 +1868,8 @@ status: TERBUKA
 updated: 2026-11-12
 refs:
 - TSK-169
-note: Pengamatan dari brief A01; tidak diverifikasi A13.
+- TSK-191
+note: Pengamatan dari brief A01; tidak diverifikasi A13. Pembaruan TSK-199 (2026-11-13) - pilihan sementara A01 (arahan TSK-190; bukan keputusan D-), hanya untuk Bab III: ICD dieja lengkap dan "presisi" diganti "*precision*" oleh TSK-191. Bab I, Bab II, dan heading Daftar_Pustaka tidak disentuh; keselarasan lintas bab menjadi Q-B3-n. Status tetap TERBUKA.
 ```
 
 ```yaml
@@ -1879,12 +1880,13 @@ affected:
 class: L3
 pic: Pengguna
 ask_to: Pengguna
-status: TERBUKA
-updated: 2026-11-12
+status: DITANGANI SEMENTARA (menunggu konfirmasi pengguna)
+updated: 2026-11-13
 refs:
 - TSK-168
 - TSK-172
-note: Wong offset halaman +1446 terkonfirmasi a02.
+- TSK-191
+note: Wong offset halaman +1446 terkonfirmasi a02. Pembaruan TSK-199 (2026-11-13) - pilihan sementara A01 (arahan TSK-190; bukan keputusan D-): TSK-191 membatasi Wong ke konteks pedoman ESMO (baris 25 dan 183 `bab3/Bab_III_Draft.md`); opsi "ganti sumber" tidak diambil. Menunggu konfirmasi.
 ```
 
 ```yaml
@@ -1911,14 +1913,15 @@ affected:
 class: L3
 pic: Pengguna
 ask_to: Pengguna
-status: TERBUKA
-updated: 2026-11-12
+status: DITANGANI SEMENTARA (menunggu konfirmasi pengguna)
+updated: 2026-11-13
 refs:
 - TSK-170
 - TSK-171
 - TSK-172
 - D-106
-note: Usulan A01. Pembaruan TSK-185 (2026-11-12) - cakupan diperluas ke temuan LOW/INFO III.2 (F-A07-0121, 0122, 0124, 0125, 0127; F-A08-0001..0005 versi III.2; F-A09-0403..0420 dan 14 LOW tanpa ID dari TSK-184). Pengguna memilih draf ke-3 "Tiga MEDIUM saja (Recommended)" sehingga LOW/INFO ditahan sampai akhir Bab III (arahan alur, bukan keputusan D-); pengerjaannya di luar batas D-106 memerlukan izin eksplisit pengguna. Status tetap TERBUKA.
+- TSK-191
+note: Pembaruan TSK-199 (2026-11-13) - pilihan sementara A01 atas dasar arahan alur TSK-190 (BUKAN izin eksplisit D-106 dan BUKAN keputusan D-): batch LOW/INFO III.2 dikerjakan TSK-191, di luar batas D-106. Rincian LOW/INFO III.1 (F-A07-0108..0110, F-A09-0280..0306, F-A08-0120, 0121, 0124) tidak ada di repo sehingga tidak dikerjakan (lihat Q-B3-p). Menunggu konfirmasi pengguna. Teks sebelumnya: Usulan A01. Pembaruan TSK-185 (2026-11-12) - cakupan diperluas ke temuan LOW/INFO III.2 (F-A07-0121, 0122, 0124, 0125, 0127; F-A08-0001..0005 versi III.2; F-A09-0403..0420 dan 14 LOW tanpa ID dari TSK-184). Pengguna memilih draf ke-3 "Tiga MEDIUM saja (Recommended)" sehingga LOW/INFO ditahan sampai akhir Bab III (arahan alur, bukan keputusan D-); pengerjaannya di luar batas D-106 memerlukan izin eksplisit pengguna. Status tetap TERBUKA.
 ```
 
 ```yaml
@@ -1949,11 +1952,136 @@ affected:
 class: L3
 pic: Pengguna
 ask_to: Pengguna
-status: TERBUKA
-updated: 2026-11-12
+status: TERBUKA (butir (2) dan (3) DITANGANI SEMENTARA; (1) dan (4) terbuka)
+updated: 2026-11-13
 refs:
 - TSK-182
 - F-A07-0127
 - F-A07-0128
-note: Pengamatan a03 menurut brief A01; bukan keputusan. Butir (4) menyentuh Bab I yang naskah berlakunya Markdown (D-119); perubahan Bab I butuh keputusan pengguna.
+- TSK-191
+note: Pembaruan TSK-199 (2026-11-13) - pilihan sementara A01 (arahan TSK-190; bukan keputusan D-): TSK-191 menyatakan butir (2) dan (3) sebagai pertimbangan atau alasan rancangan penulis; menunggu konfirmasi. Butir (1) dan (4) tidak diubah (butir 4 menyentuh Bab I). Teks sebelumnya: Pengamatan a03 menurut brief A01; bukan keputusan. Butir (4) menyentuh Bab I yang naskah berlakunya Markdown (D-119); perubahan Bab I butuh keputusan pengguna.
+```
+
+```yaml
+id: Q-B3-m
+question: Unit klaster bootstrap di `bab3/Bab_III_Draft.md` baris 140 tidak sama dengan I.5 Bab I yang menyebut "pasien" (F-A07-0149; ID asal laporan F-A07-0133). Opsi a/b/c ada di laporan a07. Mana yang dipilih? Menyentuh Bab I I.5.
+affected:
+- bab3/Bab_III_Draft.md
+- bab1/Bab_I_Draft.md
+class: L3
+pic: Pengguna
+ask_to: Pengguna (kandidat pembimbing)
+status: TERBUKA
+updated: 2026-11-13
+refs:
+- F-A07-0149
+- TSK-197
+note: Satu-satunya penyebab FAIL a07 TSK-197 siklus 1. Opsi a/b/c tidak ada di brief; lihat laporan a07. A13 tidak memilih.
+```
+
+```yaml
+id: Q-B3-n
+question: Keselarasan "precision" vs "presisi" lintas Bab I, Bab II, Bab III, dan dokumen Penyelarasan (F-A09-0446). Bab III memakai "*precision*" (TSK-191). Bagaimana Bab I dan II diselaraskan, atau Bab III dikembalikan?
+affected:
+- bab1/Bab_I_Draft.md
+- bab2/
+- bab3/Bab_III_Draft.md
+class: L3
+pic: Pengguna
+ask_to: Pengguna
+status: TERBUKA
+updated: 2026-11-13
+refs:
+- F-A09-0446
+- F-A07-0153
+- Q-B3-g
+- TSK-198
+note: Menyentuh Bab I/II dan docx; tidak dikerjakan di bawah arahan alur TSK-190.
+```
+
+```yaml
+id: Q-B3-o
+question: R5 pada `bab4/Bab_IV_Draft.md` IV.3 ditulis sebagai risiko positif (F-A10-0203, F-A07-0142). Dipertahankan sebagai risiko positif, diubah menjadi risiko biasa, atau dihapus?
+affected:
+- bab4/Bab_IV_Draft.md
+class: L3
+pic: Pengguna
+ask_to: Pengguna
+status: TERBUKA
+updated: 2026-11-13
+refs:
+- F-A07-0142
+- F-A10-0203
+- TSK-192
+- TSK-195
+note: Sumber Bab IV adalah `Rencana Bab 3 dan Revisi Bab 1.pdf` hlm. 10-13 (arahan pengguna, belum disahkan sebagai D-). Draf ketiga Bab IV menunggu jawaban ini.
+```
+
+```yaml
+id: Q-B3-p
+question: Rincian temuan LOW/INFO III.1 (F-A07-0108..0110, F-A09-0280..0306, F-A08-0120, 0121, 0124) tidak ada di repo (hanya di laporan auditor). Dari mana rinciannya dikumpulkan agar dapat dikerjakan?
+affected:
+- bab3/Bab_III_Draft.md
+class: L3
+pic: Pengguna
+ask_to: Pengguna
+status: TERBUKA
+updated: 2026-11-13
+refs:
+- Q-B3-j
+- TSK-191
+note: Fakta menurut brief A01: tidak dapat dikerjakan karena rincian tidak tersedia.
+```
+
+```yaml
+id: Q-B3-q
+question: Istilah "sistem analisis semantik" (Bab III) vs "komponen analisis semantik" (Bab I I.3 dan Gambar III.1). a09 (F-A09-0438) dan a07 (F-A07-0154) berbeda rekomendasi. Mana yang dipakai?
+affected:
+- bab3/Bab_III_Draft.md
+- bab1/Bab_I_Draft.md
+class: L3
+pic: Pengguna
+ask_to: Pengguna
+status: TERBUKA
+updated: 2026-11-13
+refs:
+- F-A09-0438
+- F-A07-0154
+- TSK-197
+- TSK-198
+note: Konflik dua auditor, tidak dipilih A01 maupun A13.
+```
+
+```yaml
+id: Q-B3-r
+question: Sisa LOW Bab IV (a09 F-A09-1932, 1946, 1949..1958; a07 F-A07-0146, 0147) ditunda ke draf ketiga Bab IV yang menunggu Q-B3-o. Disetujui menunggu, atau dikerjakan sekarang?
+affected:
+- bab4/Bab_IV_Draft.md
+class: L3
+pic: Pengguna
+ask_to: Pengguna
+status: TERBUKA
+updated: 2026-11-13
+refs:
+- Q-B3-o
+- TSK-193
+- TSK-195
+- D-106
+note: Batas D-106 (siklus revisi) pada Bab IV tercapai menurut brief (draf 2 = siklus 1).
+```
+
+```yaml
+id: Q-B3-s
+question: F-A07-0122 (alternatif NLI pralatih siap pakai belum ditimbang, `bab3/Bab_III_Draft.md:72`) tidak dikerjakan karena menyentuh keputusan substantif. Perlu ditimbang di Bab III, atau dibiarkan?
+affected:
+- bab3/Bab_III_Draft.md
+class: L3
+pic: Pengguna
+ask_to: Pengguna
+status: TERBUKA
+updated: 2026-11-13
+refs:
+- F-A07-0122
+- Q-B3-j
+note: LOW; tidak dikerjakan TSK-191.
 ```
